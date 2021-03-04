@@ -5,16 +5,16 @@ ms.date: 06/05/2020
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8260e3b5e529f3d54678d9d6e11aebb2795e27fd
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: c839f9dc7e403412c0e3d936392d45a43bc63545
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643697"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269988"
 ---
 # <a name="connector-for-facebook-ads-manager-preview"></a>Conector para o Gestor de Anúncios do Facebook (pré-visualização)
 
@@ -62,7 +62,16 @@ Exportar segmentos de perfis de cliente unificados para o Gestor de Anúncios do
 
 Pode [exportar dados a pedido](export-destinations.md). A exportação também será executada com cada [atualização agendada](system.md#schedule-tab).
 
+## <a name="known-limitations"></a>Limitações conhecidas
+
+- Até 10 milhões de perfis de clientes por exportação para o Gestor de Anúncios do Facebook 
+- A exportação para o Gestor de Anúncios do Facebook está limitada a segmentos
+- Exportar segmentos com um total de 10 milhões de perfis podem levar até 90 minutos para completar
+
 ## <a name="data-privacy-and-compliance"></a>Privacidade e conformidade de dados
 
 Quando ativa Dynamics 365 Customer Insights para transmitir dados ao Gestor de Anúncios do Facebook, permite a transferência de dados fora dos limites de conformidade para Dynamics 365 Customer Insights, incluindo dados potencialmente sensíveis, tais como Dados Pessoais. A Microsoft transferirá tais dados sob as suas instruções, mas o utilizador é responsável por assegurar que os Anúncios do Facebook cumprem quaisquer obrigações de privacidade ou segurança que possa ter. Para obter mais informações, consulte [Declaração de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 O seu administrador Dynamics 365 Customer Insights pode remover este destino de exportação em qualquer altura para descontinuar a utilização desta funcionalidade.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

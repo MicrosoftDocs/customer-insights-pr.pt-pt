@@ -4,17 +4,17 @@ description: Trabalhe com dados do Common Data Model utilizando Azure Data Lake 
 ms.date: 05/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 25de23e615704a72f6b41d98ae9418beb338e77e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 247e4d9c47ff2373065ebf3c6d554323e45a120b
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643472"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267874"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Ligar a uma pasta do Common Data Model com uma conta Azure Data Lake
 
@@ -38,17 +38,25 @@ Este artigo fornece informações sobre como ingerir dados a partir de uma pasta
 
 1. Selecione **Adicionar origem de dados**.
 
-1. Selecione **Ligar a uma pasta Common Data Model**, introduza um **Nome** para a origem de dados e selecione **Seguinte**.
+1. Selecione **Ligar a uma pasta Common Data Model**, introduza um **Nome** para a origem de dados e selecione **Seguinte**. Nomear diretrizes: 
+   - Comece com uma letra.
+   - Utilize apenas letras e números. Não são permitidos carateres especiais e espaços.
+   - Utilize entre 3 e 64 carateres.
 
 1. Pode escolher entre usar uma opção baseada em recursos e uma opção baseada em subscrição para autenticação. Para obter mais informações, consulte [ligar informações de audiência a uma conta Gen2 do Azure Data Lake Storage com um principal de serviço Azure](connect-service-principal.md). Introduza as informações do **Recipiente** e selecione **Seguinte**.
    > [!div class="mx-imgBorder"]
-   > ![Caixa de diálogo para introduzir detalhes de ligação para o Azure Data Lake](media/enter-new-storage-details.png)
-
-1. No diálogo **Selecionar uma pasta Common Data Model**, selecione o ficheiro model.json para importar dados e selecione **Seguinte**.
+   > ![Caixa de diálogo para introduzir detalhes da nova ligação para o Azure Data Lake](media/enter-new-storage-details.png)
    > [!NOTE]
-   > Qualquer ficheiro model.json associado a outra origem de dados no ambiente não aparecerá na lista.
+   > Precisa de uma das seguintes funções, quer no recipiente, quer na conta de armazenamento acima referida, para poder ligar-se e criar uma origem de dados:
+   >  - Leitor de Dados de Blobs de Armazenamento
+   >  - Proprietário de Dados de Blobs de Armazenamento
+   >  - Contribuidor de Dados de Blobs de Armazenamento
 
-1. Irá receber uma lista de entidades disponíveis no ficheiro model.json selecionado. Pode rever e selecionae da lista de entidades disponíveis e selecione **Guardar**. Todas as entidades selecionadas serão ingeridas a partir da nova origem de dados.
+1. No diálogo **Selecionar uma pasta Common Data Model**, selecione o ficheiro model.json ou manifest.json para importar dados e selecione **Seguinte**.
+   > [!NOTE]
+   > Qualquer ficheiro model.json ou manifest.json associado a outra origem de dados no ambiente não aparecerá na lista.
+
+1. Irá receber uma lista de entidades disponíveis no ficheiro model.json ou manifest.json selecionado. Pode rever e selecionae da lista de entidades disponíveis e selecione **Guardar**. Todas as entidades selecionadas serão ingeridas a partir da nova origem de dados.
    > [!div class="mx-imgBorder"]
    > ![Caixa de diálogo que mostra uma lista de entidades a partir de um ficheiro model.json](media/review-entities.png)
 
@@ -59,11 +67,11 @@ Este artigo fornece informações sobre como ingerir dados a partir de uma pasta
 9. Depois de guardar as seleções, é aberta a página **Origens de dados**. Deverá ver agora a ligação de pasta do Common Data Model como uma origem de dados.
 
 > [!NOTE]
-> Um ficheiro model.json só pode associar-se a um origem de dados no mesmo ambiente. No entanto, o mesmo ficheiro model.json pode ser usado para origens de dados em vários ambientes.
+> Um ficheiro model.json ou manifest.json só pode associar-se a um origem de dados no mesmo ambiente. No entanto, o mesmo ficheiro model.json ou manifest.json pode ser usado para origens de dados em vários ambientes.
 
 ## <a name="edit-a-common-data-model-folder-data-source"></a>Editar uma origem de dados do Common Data Model
 
-Pode atualizar a chave de acesso para a conta de armazenamento que contém a pasta Common Data Model. Também poderá alterar o ficheiro model.json. Para ligar a um contentor diferente da conta de armazenamento ou alterar o nome da conta, tem de [criar uma nova ligação à origem de dados](#connect-to-a-common-data-model-folder).
+Pode atualizar a chave de acesso para a conta de armazenamento que contém a pasta Common Data Model. Também pode alterar o ficheiro model.json ou manifest.json. Para ligar a um contentor diferente da conta de armazenamento ou alterar o nome da conta, tem de [criar uma nova ligação à origem de dados](#connect-to-a-common-data-model-folder).
 
 1. Em informações de audiência, aceda a **Dados** > **Origens de dados**.
 
@@ -77,13 +85,24 @@ Pode atualizar a chave de acesso para a conta de armazenamento que contém a pas
 
 5. Opcionalmente, pode atualizar a partir de uma ligação chave de conta a uma ligação baseada em recursos ou baseada em subscrição. Para obter mais informações, consulte [ligar informações de audiência a uma conta Gen2 do Azure Data Lake Storage com um principal de serviço Azure](connect-service-principal.md). Não é possível alterar as informações do **Recipiente** ao atualizar a ligação.
    > [!div class="mx-imgBorder"]
-   > ![Caixa de diálogo para introduzir detalhes de ligação para o Azure Data Lake](media/enter-existing-storage-details.png)
 
-6. Opcionalmente, escolha um ficheiro model.json diferente com um conjunto de entidades diferente do contentor.
+   > ![Caixa de diálogo para introduzir detalhes de ligação para o Azure Data Lake para uma conta de armazenamento existente](media/enter-existing-storage-details.png)
+
+   > [!NOTE]
+   > Precisa de uma das seguintes funções, quer no recipiente, quer na conta de armazenamento acima referida, para poder ligar-se e criar uma origem de dados:
+   >  - Leitor de Dados de Blobs de Armazenamento
+   >  - Proprietário de Dados de Blobs de Armazenamento
+   >  - Contribuidor de Dados de Blobs de Armazenamento
+
+
+6. Opcionalmente, escolha outro ficheiro model.json ou manifest.json com um conjunto diferente de entidades do recipiente.
 
 7. Opcionalmente, pode selecionar entidades adicionais para ingerir. Também pode remover quaisquer entidades já selecionadas se não houver dependências.
 
    > [!IMPORTANT]
-   > Se existirem dependências no ficheiro model.json e no conjunto de entidades, verá uma mensagem de erro e não poderá selecionar um ficheiro model.json diferente. Remova estas dependências antes de alterar o ficheiro model.json ou criar uma nova origem de dados com o ficheiro model.json que pretende utilizar para evitar a remoção das dependências.
+   > Se houver dependências do ficheiro model.json ou manifest.json existente e do conjunto de entidades, verá uma mensagem de erro e não poderá selecionar um ficheiro model.json ou manifest.json diferente. Remova essas dependências antes de alterar o ficheiro model.json ou manifest.json ou criar uma nova origem de dados com o ficheiro model.json ou manifest.json que pretende utilizar para evitar a remoção das dependências.
 
 8. Opcionalmente, pode selecionar atributos ou entidades adicionais para possibilitar a criação de perfis de dados ou desativar os já selecionados.   
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

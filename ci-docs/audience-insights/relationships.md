@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 295c372bb452e7c40aa950506dc494d4a2de1108
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 292da986faa7f62d8aa73ed7214075612178e2e1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406651"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269895"
 ---
 # <a name="relationships-between-entities"></a>Relação entre entidades
 
@@ -28,8 +28,8 @@ Durante os processos de correspondência e intercalação, as relações do sist
 > ![Criação da relação](media/relationships-entities-merge.png "Criação da relação")
 
 - A **relação *CustomerToContact*** foi criada entre a entidade Cliente e a entidade Contacto. A entidade Cliente obtém o campo de chave **Contact_contactId** para estabelecer relação com o campo de chave da entidade Contacto **contactId**.
-- A **relação _CustomerToAccount_** foi criada entre a entidade Cliente e a entidade Conta. A entidade Cliente obtém o campo de chave **Account_accountId** para estabelecer relação com o campo de chave da entidade Conta **accountId**.
-- A **relação _CustomerToWebAccount_** foi criada entre a entidade Cliente e a entidade WebAccount. A entidade Cliente obtém o campo de chave **WebAccount_webaccountId** para estabelecer relação com o campo de chave da entidade WebAccount **webaccountId**.
+- A **relação *CustomerToAccount*** foi criada entre a entidade Cliente e a entidade Conta. A entidade Cliente obtém o campo de chave **Account_accountId** para estabelecer relação com o campo de chave da entidade Conta **accountId**.
+- A **relação *CustomerToWebAccount*** foi criada entre a entidade Cliente e a entidade WebAccount. A entidade Cliente obtém o campo de chave **WebAccount_webaccountId** para estabelecer relação com o campo de chave da entidade WebAccount **webaccountId**.
 
 ## <a name="create-a-relationship"></a>Criar uma relação
 
@@ -69,3 +69,6 @@ Defina relações personalizadas na página **Relações**. Cada relação consi
 ## <a name="next-step"></a>Passo seguinte
 
 As relações do sistema e personalizadas são utilizadas para criar segmentos baseados em várias origens de dados que já não estão repartidas em silos. Para mais informações, consulte [Segmentos](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

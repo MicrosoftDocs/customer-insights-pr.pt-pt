@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 5a03e916676800afdd8692da865a1060952d5c4f
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: 966db1a22e7dece1bcd89733880bce059151157f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689144"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267538"
 ---
 # <a name="work-with-customer-insights-apis"></a>Trabalhar com APIs no Customer Insights
 
@@ -140,3 +140,6 @@ Saiba como começar a usar as bibliotecas de clientes C# a partir de NuGet.org. 
 
 1. A resposta será provavelmente do tipo `object` porque o método pode devolver vários tipos (por exemplo, `IList<InstanceInfo>` e `ApiErrorResult`). Para verificar o tipo de devolução, pode converter os objetos com segurança nos tipos de resposta especificados na [página de detalhes da API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) para essa operação.    
    Se forem necessárias mais informações sobre o pedido, utilize os **métodos de mensagem http** para aceder ao objeto de resposta bruta.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

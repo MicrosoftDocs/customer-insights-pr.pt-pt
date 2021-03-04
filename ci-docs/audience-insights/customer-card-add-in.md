@@ -1,7 +1,7 @@
 ---
 title: Instale e configure o Suplemento Ficha de Cliente
 description: Instalar e configurar o suplemento Ficha de Cliente para o Dynamics 365 Customer Insights.
-ms.date: 08/04/2020
+ms.date: 01/20/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: aab5deaf89b4b019f6688a1bca950ec2277ad5fb
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a6d5b49380ed129cf147698a16f5f3f597bf7fbc
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644057"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268058"
 ---
 # <a name="customer-card-add-in-preview"></a>Suplemento de Cartões de Cliente (pré-visualização)
 
@@ -28,7 +28,7 @@ Obtenha uma visão de 360 graus dos seus clientes diretamente nas aplicações D
 - Perfis de clientes [ingerido a partir da aplicação Dynamics 365 utilizando Common Data Service](connect-power-query.md).
 - Os utilizadores do Suplemento Cartão de Cliente têm de ser [adicionados como utilizadores](permissions.md) em insights da audiência.
 - [Capacidades de pesquisa e filtragem configuradas](search-filter-index.md).
-- Controlo demográfico: Campos demográficos, tais como idade ou sexo, estão disponíveis no perfil unificado do cliente.
+- Controlo demográfico: Campos demográficos (tais como idade ou sexo) estão disponíveis no perfil unificado do cliente.
 - Controlo do enriquecimento: Requer [enriquecimentos](enrichment-hub.md) ativos aplicados aos perfis do cliente.
 - Controlo da inteligência: Necessita de dados gerados através do Azure Machine Learning ([Predições](predictions.md) ou [Modelos Personalizados](custom-models.md))
 - Controlo das medidas: Requer [medidas configuradas](measures.md).
@@ -92,10 +92,26 @@ Poderá demorar algum tempo a instalar a solução no seu ambiente.
 
 1. Na caixa de diálogo **Propriedades do Campo**, desmarque a caixa de verificação **Apresentar etiqueta no formulário**.
 
-1. Selecione a opção **Web** para o controlo. Para o controlo de Enriquecimento, selecione o tipo de enriquecimento que pretende visualizar configurando o campo **enrichmentType**. É necessário adicionar um controlo de enriquecimento separado para cada tipo de enriquecimento.
+1. Selecione a opção **Web** para o controlo. Para o controlo de Enriquecimento, selecione o tipo de enriquecimento que pretende visualizar configurando o campo **enrichmentType**. Adicione um controlo de melhoramento separado para cada tipo de melhoramento.
 
 1. Selecione **Guardar** e **Publicar** para publicar o formulário de contacto atualizado.
 
 1. Vá para o formulário de contacto publicado. Verá o controlo adicionado recentemente. Poderá ter de iniciar sessão quando o utiliza pela primeira vez.
 
 1. Para personalizar o que pretende mostrar no controlo personalizado, selecione o botão de editação no canto superior direito.
+
+## <a name="upgrade-customer-card-add-in"></a>Atualizar Versão do Suplemento Ficha de Cliente
+O Suplemento da Ficha de Cliente não atualiza a versão automaticamente. Para atualizar para a versão mais recente, siga este procedimento na aplicação Dynamics 365 que tem o Suplemento instalado.
+
+1. Na aplicação Dynamics 365, vá a **Definições** > **Personalização** e selecione **Soluções**.
+
+1. Na tabela de suplementos, procure **CustomerInsightsCustomerCard** e selecione a linha.
+
+1. Selecione a **Aplicar Atualização da Versão da Solução** na barra de ação.
+
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Atualize a versão da solução na área Personalização das aplicações Dynamics 365":::
+
+1. Depois de iniciar o processo de atualização de versão, verá um indicador de carregamento até que a atualização esteja concluída. Se não houver uma versão mais recente, a atualização mostrará uma mensagem de erro.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

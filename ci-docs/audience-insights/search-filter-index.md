@@ -1,7 +1,7 @@
 ---
 title: Pesquisar e filtrar perfis de clientes
 description: Encontre rapidamente informações sobre perfis de cliente unificados e filtre por atributos especificados.
-ms.date: 04/16/2020
+ms.date: 01/19/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1842ad333c23bb155abc89167556163ae79cdd34
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d675738c43cbdb5f9b478d53d6124db38ba3004d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406652"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270080"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Perfis de clientes: índice de pesquisa e de filtro
 
@@ -28,14 +28,6 @@ O resultado da unificação dos dados dos clientes é uma entidade Perfil do Cli
 Se for a primeira vez que define atributos pesquisáveis enquanto administrador, primeiro tem de definir campos indexados. Sugerimos que escolha todos os atributos pelos quais os utilizadores podem procurar e filtrar clientes na página **Clientes**. Só pode especificar os atributos existentes na entidade Perfil de Cliente que criou durante o processo de unificação de dados.
 
 1. Abra a página **Clientes** e selecione **Índice de pesquisa e filtro**.
-
-> [!NOTE]
-> Criamos uma configuração de índice de pesquisa predefinida nos atributos disponíveis na entidade Cliente a partir dos seguintes tipos semânticos, tal como definidos na página do Mapa.
-> - Nome próprio, Apelido, Segundo nome, Nome Completo da pessoa
-> - Nome da Organização
-> - Endereço de Correio Eletrónico
-> - Número de telefone
-> - Informações de localização
 
 2. Selecione **+ Adicionar** para especificar os campos indexados.
 
@@ -65,3 +57,10 @@ O menu **Filtro** na página **Clientes** pode incluir um número variável de n
 2. Selecione **Guardar** para aplicar as alterações.
 
 3. Selecione **Executar** quando estiver pronto para aplicar as suas definições.
+
+## <a name="next-steps"></a>Passos seguintes
+
+Vá à página **Clientes** para procurar perfis de clientes ou utilize os campos indexados para ver um subconjunto de todos os perfis de clientes.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

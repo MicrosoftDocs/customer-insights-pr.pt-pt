@@ -1,7 +1,7 @@
 ---
 title: Configuração do sistema em informações de audiência
 description: Saiba mais sobre as configurações do sistema na capacidade das informações de audiência do Dynamics 365 Customer Insights.
-ms.date: 06/02/2020
+ms.date: 02/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,25 +9,30 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: nimagen
 manager: shellyha
-ms.openlocfilehash: 7dd72e6512cd87ac70235d21667399298408db21
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: a9c9e258da49b8f452550794539962d48b856829
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406649"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267354"
 ---
 # <a name="system-configuration"></a>Configuração do sistema
 
-A página **Sistema** inclui quatro separadores: **Estado**, **Agendar**, **Sobre** e **Geral**.
+A página **Sistema** inclui os seguintes separadores:
+- [Estado](#status-tab)
+- [Agenda](#schedule-tab)
+- [Utilização da API](#api-usage-tab)
+- [Acerca de](#about-tab)
+- [Geral](#general-tab)
 
 > [!div class="mx-imgBorder"]
 > ![Página do sistema](media/system-tabs.png "Página do sistema")
 
 ## <a name="status-tab"></a>Separador Estado
 
-O **separador Estado** permite monitorizar o progresso da ingestão de dados, exportações de dados e vários processos de produto importantes. Rever a informação neste separador para garantir a abrangência dos processos ativos.
+O separador **Estado** permite-lhe acompanhar o progresso da ingestão de dados, exportações de dados e vários outros processos importantes do produto. Rever a informação neste separador para garantir a abrangência dos processos ativos.
 
-Este separador inclui tabelas de estado para **Origens de dados**, **Processos do sistema** e **Preparação de dados**. Cada tabela monitoriza o **Nome** da tarefa e a sua entidade correspondente, o **Estado** da sua execução mais recente, e quando foi **Atualizada pela última vez**.
+Este separador inclui tabelas com informações de estado e processamento para vários processos. Cada tabela monitoriza o **Nome** da tarefa e a sua entidade correspondente, o **Estado** da sua execução mais recente, e quando foi **Atualizada pela última vez**.
 
 Ver os detalhes das últimas várias execuções das tarefas ao selecionar o respetivo nome.
 
@@ -40,7 +45,7 @@ Há seis tipos de estados para tarefas. Os seguintes tipos de estado também sã
 - **Ignorada:** A tarefa foi ignorada. Um ou mais dos processos a jusante de que esta tarefa depende estão a falhar ou foram ignorados.
 - **Falha:** o processamento da tarefa falhou.
 - **Cancelada:** o processamento foi cancelado pelo utilizador antes de ser concluído.
-- **Em fila:** o processamento foi colocado em fila e será iniciado após a conclusão de todas as tarefas a jusante. Para mais informações, consulte [Políticas de atualização](#refresh-policies).
+- **Em fila:** o processamento está em fila e começará assim que todas as tarefas a montante estiverem concluídas. Para mais informações, consulte [Políticas de atualização](#refresh-policies).
 
 ### <a name="refresh-policies"></a>Políticas de atualização
 
@@ -89,4 +94,17 @@ Selecione **Guardar** para confirmar as suas seleções.
 
 ## <a name="api-usage-tab"></a>Separador de utilização da API
 
-Encontre detalhes sobre o uso da API em tempo real e veja quais os eventos que ocorreram num determinado intervalo de tempo. Para mais informações, consulte [Ingestão de dados em tempo real](real-time-data-ingestion.md).
+Encontre detalhes sobre a utilização da API em tempo real e veja quais os eventos que ocorreram num dado período de tempo. Escolha o intervalo de tempo no menu pendente **Selecionar um intervalo de tempo**. 
+
+A **Utilização da API** contém três secções: 
+- **Chamadas à API** – um gráfico que visualiza o número agregado de chamadas à API no intervalo de tempo selecionado.
+
+- **Transferência de dados** – um gráfico que mostra a quantidade de dados que foram transferidos através da API no intervalo de tempo selecionado.
+
+-  **Operações** – uma tabela com filas para cada operação disponível da API e detalhes sobre a utilização das operações. Pode selecionar um nome de operação para ir [à referência API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
+
+   As operações que utilizam [a ingestão de dados em tempo real](real-time-data-ingestion.md) contêm um botão com um símbolo binocular para visualizar a utilização da API em tempo real. Selecione o botão para abrir um painel lateral contendo detalhes de utilização para a utilização da API em tempo real no ambiente atual.   
+   Utilize a caixa **Agrupar por** no painel **Utilização da API em tempo real** para escolher como melhor apresentar as suas interações em tempo real. Pode agrupar os dados pelo método de API, nome qualificado de entidade (entidade ingerida), criado por (origem do evento), resultado (sucesso ou falha) ou códigos de erro. Os dados estão disponíveis como gráfico histórico e como tabela.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

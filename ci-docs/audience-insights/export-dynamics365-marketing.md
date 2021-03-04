@@ -1,20 +1,20 @@
 ---
 title: Exportar dados Customer Insights para o Dynamics 365 Marketing
 description: Saiba como configurar a ligação ao Dynamics 365 Marketing.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 163387779b64bd78ef08e2d96a5f1c9615062f28
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a06920b8ff25d7102ccd14ae68cf42fe91fa1ee6
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643787"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269068"
 ---
 # <a name="connector-for-dynamics-365-marketing-preview"></a>Conector para Dynamics 365 Marketing (pré-visualização)
 
@@ -24,7 +24,10 @@ Utilize os [segmentos](segments.md) para gerar campanhas e contactar grupos espe
 
 ## <a name="prerequisite"></a>Pré-requisito
 
-Registos de contacto [do Dynamics 365 Marketing ingeriram o Common Data Service](connect-power-query.md).
+- Os registos de contacto têm de estar presentes no Dynamics 365 Marketing antes de poder exportar um segmento do Customer Insights para o Marketing. Leia mais sobre como ingerir contactos no [Dynamics 365 Marketing utilizando o Common Data Services](connect-power-query.md).
+
+  > [!NOTE]
+  > A exportação de segmentos a partir de informações da audiência para o Marketing não criarão novos registos de contacto nas instâncias do Marketing. Os registos de contacto do Marketing têm de ser ingeridos nas informações da audiência e utilizados como origem de dados. Também precisam de ser incluídos na entidade unificada do Cliente para mapear IDs de cliente para contactar IDs antes que os segmentos possam ser exportados.
 
 ## <a name="configure-the-connector-for-marketing"></a>Configurar o conector para o Marketing
 
@@ -49,3 +52,6 @@ Registos de contacto [do Dynamics 365 Marketing ingeriram o Common Data Service]
 ## <a name="export-the-data"></a>Exportar os dados
 
 Pode [exportar dados a pedido](export-destinations.md). A exportação também será executada com cada [atualização agendada](system.md#schedule-tab).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

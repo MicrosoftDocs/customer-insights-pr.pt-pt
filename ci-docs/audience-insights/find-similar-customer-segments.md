@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: jimsonc
 manager: shellyha
-ms.openlocfilehash: 8cdec4edd599b0249fcf144b5e5c0124504e1e14
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: b9b2e7fa862b595c6a364a7208e42295b4f9df83
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406637"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268884"
 ---
 # <a name="similar-customers-preview"></a>Clientes semelhantes (pré-visualização)
 
@@ -79,3 +79,6 @@ O modelo de machine learning de classificação binária atribui uma pontuação
 - Pontuações de semelhança entre 0,85 e 1 são clientes que o sistema classifica como *muito semelhantes*
 
 Os clientes com pontuações de semelhança inferiores a 0,4 não estão incluídos na saída do modelo. O sistema não os considera semelhantes o suficiente ao segmento de origem.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

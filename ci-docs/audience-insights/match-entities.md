@@ -4,17 +4,17 @@ description: Fazer corresponder entidades para criar perfis unificados de client
 ms.date: 10/14/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 78549037f9c9e59329f5423c36eeb058128802c0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406646"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267492"
 ---
 # <a name="match-entities"></a>Fazer corresponder entidades
 
@@ -22,7 +22,7 @@ Depois de concluir a fase de correspondência, está pronto para fazer a corresp
 
 ## <a name="specify-the-match-order"></a>Especificar a ordem de correspondência
 
-Vá para **Unificar** > **Corresponder** e selecione **Definir ordem** para iniciar a fase de correspondência.
+Vá a **Dados** > **Unificar** > **Corresponder** e selecione **Definir ordem** para iniciar a fase de correspondência.
 
 Cada correspondência unifica duas ou mais entidades numa única entidade, mantendo cada registo de cliente exclusivo. No exemplo seguinte, selecionámos três entidades: **ContactCSV: TestData** como entidade **Primária**, **WebAccountCSV: TestData** como **Entidade 2** e **CallRecordSmall: TestData** como **Entidade 3**. O diagrama acima das seleções ilustra a forma como a ordem de correspondência será executada.
 
@@ -136,7 +136,7 @@ Após identificação de um registo duplicado, esse registo será utilizado no p
 
 1. A execução do processo de correspondência agrupa agora os registos com base nas condições definidas nas regras de duplicação. Após agrupar os registos, a política de fusão é aplicada para identificar o registo vencedor.
 
-1. Este registo vencedor é então passado para a correspondência entre entidades.
+1. Este registo de vencedores é então passado para a correspondência de entidade cruzada, juntamente com os registos de não vencedor (por exemplo, IDs alternativos) para melhorar a qualidade de correspondência.
 
 1. Quaisquer regras de correspondência personalizadas definidas para coincidir sempre e nunca se sobrepor às regras de duplicação. Se uma regra de duplicação identificar registos correspondentes, e uma regra de correspondência personalizada for definida para nunca corresponder a esses registos, então estes dois registos não terão correspondência.
 
@@ -157,6 +157,17 @@ O primeiro processo de correspondência resulta na criação de uma entidade pri
 
 > [!TIP]
 > Há [seis tipos de estados](system.md#status-types) para tarefas/processos. Além disso, a maior parte dos processos [depende de outros processos a jusante](system.md#refresh-policies). Poderá selecionar o estado de um processo para ver os detalhes do progresso de toda a tarefa. Depois de selecionar **Ver detalhes** de uma das tarefas do trabalho, encontra informações adicionais: tempo de processamento, última data de processamento e todos os erros e avisos associados à tarefa.
+
+## <a name="deduplication-output-as-an-entity"></a>Saída de eliminação de duplicados como uma entidade
+Além da entidade mestre unificada criada como parte da correspondência entre entidades, o processo de eliminação de duplicados gera também uma nova entidade para cada entidade a partir da ordem de correspondência para identificar os registos de eliminação de duplicados. Estas entidades podem ser encontradas juntamente com **ConflationMatchPairs:CustomerInsights** na secção **Sistema** na página **Entidades**, com o nome **Deduplication_Datasource_Entity**.
+
+Uma entidade de saída de eliminação de duplicados contém as seguintes informações:
+- IDs / Chaves
+  - Campo de chave primária e o respetivo campo de IDs alternativos. O campo de IDs alternativos consiste em todos os IDs alternativos identificados para um registo.
+  - O campo Deduplication_GroupId mostra o grupo ou o cluster identificado dentro de uma entidade que agrupa todos os registos semelhantes com base nos campos de eliminação de duplicados especificados. Isto é utilizado para fins de processamento do sistema. Se não existirem regras de eliminação de duplicados manuais especificadas e se aplicarem regras de eliminação de duplicados definidas pelo sistema, poderá não encontrar este campo na entidade de saída de eliminação de duplicados.
+  - Deduplication_WinnerId: este campo contém o ID de vencedor dos grupos ou clusters identificados. Se Deduplication_WinnerId é o mesmo que o valor da Chave primária para um registo, significa que o registo é o registo vencedor.
+- Campos usados para definir as regras de eliminação de duplicados.
+- Campos Regra e Pontuação para denotar quais as regras de eliminação de duplicados foram aplicadas e a pontuação devolvida pelo algoritmo correspondente.
 
 ## <a name="review-and-validate-your-matches"></a>Rever e validar as suas correspondências
 
@@ -200,6 +211,11 @@ Aumente a qualidade ao reconfigurar alguns dos parâmetros de correspondência:
   > [!div class="mx-imgBorder"]
   > ![Duplicar uma regra](media/configure-data-duplicate-rule.png "Duplicar uma regra")
 
+- **Desativar uma regra** para manter uma regra de correspondência, excluindo-a do processo de correspondência.
+
+  > [!div class="mx-imgBorder"]
+  > ![Desativar uma regra](media/configure-data-deactivate-rule.png "Desativar uma regra")
+
 - **Editar as suas regras** ao selecionar o símbolo **Editar**. Pode aplicar as seguintes alterações:
 
   - Alterar os atributos para uma condição: selecione novos atributos na linha de condição específica.
@@ -229,10 +245,12 @@ Pode especificar as condições que determinados registos devem corresponder sem
     - Entity2Key: 34567
 
    O mesmo ficheiro de modelo pode especificar registos de correspondência personalizados de várias entidades.
+   
+   Se pretender especificar a correspondência personalizada para a eliminação de duplicados numa entidade, forneça a mesma entidade que a Entidade1 e a Entidade2 e defina os diferentes valores chave primários.
 
 5. Depois de adicionar todas as substituições que pretende aplicar, guarde o ficheiro de modelo.
 
-6. Vá a **Dados** > **Origens de dados** e ingerir os ficheiros modelo como novas entidades. Depois de ingeridos, pode utilizá-los para especificar a configuração Corresponder.
+6. Aceda a **Dados** > **Origens de dados** e ingere os ficheiros do modelo como novas entidades. Depois de ingeridos, pode utilizá-los para especificar a configuração Corresponder.
 
 7. Após o carregamento dos ficheiros e de as entidades estarem disponíveis, selecione novamente a opção **Correspondência personalizada**. Verá opções para especificar as entidades que pretende incluir. Selecione as entidades obrigatórias a partir do menu pendente.
 
@@ -250,3 +268,6 @@ Pode especificar as condições que determinados registos devem corresponder sem
 ## <a name="next-step"></a>Passo seguinte
 
 Depois de concluir o processo de correspondência para, pelo menos, um par de correspondência, poderá resolver as possíveis contradições nos seus dados através do tópico [**Intercalar**](merge-entities.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

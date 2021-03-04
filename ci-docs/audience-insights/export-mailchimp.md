@@ -5,16 +5,16 @@ ms.date: 10/26/2020
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: edff494f6edf26a8b641cb1d788a715389ddb346
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 2b465b32fa956e3f45a23f471dc3a3183def16ef
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406611"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267187"
 ---
 # <a name="connector-for-mailchimp-preview"></a>Ligação para Mailchimp (pré-visualização)
 
@@ -74,3 +74,6 @@ Pode [exportar dados a pedido](export-destinations.md). A exportação também s
 
 Quando ativa Dynamics 365 Customer Insights para transmitir dados à Mailchimp, permite a transferência de dados fora dos limites de conformidade para Dynamics 365 Customer Insights, incluindo dados potencialmente sensíveis, tais como Dados Pessoais. A Microsoft transferirá tais dados sob as suas instruções, mas o utilizador é responsável por assegurar que a Mailchimp cumpre quaisquer obrigações de privacidade ou segurança que possa ter. Para obter mais informações, consulte [Declaração de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 O seu administrador Dynamics 365 Customer Insights pode remover este destino de exportação em qualquer altura para descontinuar a utilização desta funcionalidade.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

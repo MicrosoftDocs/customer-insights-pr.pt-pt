@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 9032d99357db86e66588eda544211a5f8eb2f23b
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 63caa2ebdd7d637d14ac9c9cc7972095803aee2f
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643877"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477147"
 ---
-# <a name="export-destinations-preview"></a>Destinos de exportação (pré-visualização)
+# <a name="export-destinations-preview-overview"></a>Descrição geral de destinos de exportação (pré-visualização)
 
 A página **Exportar destinos** mostra-lhe todos os locais que configurou para onde exportar dados. Também pode adicionar novos destinos para exportação. Além disso, mostra as opções de exportação atualmente disponíveis. Obtenha uma descrição geral rápida e saiba o que pode fazer com cada opção de extensibilidade. Exporte perfis, medidas e segmentos unificados para aplicações suportadas relevantes para o seu negócio.
 
@@ -27,10 +27,13 @@ Aceda a **Administração** > **Exportar destinos** para localizar as seguintes 
 - [Conector do Power Automate](export-power-automate.md)
 - [Conector do Power Apps](export-power-apps.md)
 - [Conector do Power BI](export-power-bi.md)
+- [Autopilot](export-autopilot.md)
 - [DotDigital](export-dotdigital.md)
-- [Vendas do Dynamics 365](export-dynamics365-sales.md)
+- [Dynamics 365 Sales](export-dynamics365-sales.md)
 - [Dynamics 365 Marketing](export-dynamics365-marketing.md)
 - [Armazenamento de Blobs do Azure](export-azure-blob-storage.md)
+- [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
+- [SendGrid](export-sendgrid.md)
 - [Conector do LiveRamp&reg;](export-liveramp.md)
 - [Bot para o Microsoft Teams](export-teams-bot.md)
 - [Mailchimp](export-mailchimp.md)
@@ -95,3 +98,6 @@ Para remover um destino de Exportação, inicie a partir da página principal **
 2. Selecione **Remover** no menu pendente.
 
 3. Confirme a remoção selecionando **Remover** no ecrã de confirmação.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

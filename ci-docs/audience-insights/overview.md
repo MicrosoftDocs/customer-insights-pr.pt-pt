@@ -1,30 +1,26 @@
 ---
-title: Capacidade de informações de audiência
-description: Visão geral da capacidade de informações de audiência do Dynamics 365 Customer Insights.
-ms.date: 02/05/2020
+title: Descrição geral de informações da audiência para o Dynamics 365 Customer Insights
+description: Descrição geral de informações da audiência para o Dynamics 365 Customer Insights.
+ms.date: 01/18/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 82763b294484cca4a3982f4ebef6f914a02f5cca
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 735aae12abebd2d6d9b6aedb5835164834f480c0
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406639"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477009"
 ---
-# <a name="dynamics-365-customer-insights-audience-insights-capability"></a>Capacidade de informações de audiência do Dynamics 365 Customer Insights
+# <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Descrição geral de informações da audiência para o Dynamics 365 Customer Insights
 
-A experiência dos clientes encontra-se na essência das ambições de transformação digital de cada organização. Para competir no mercado de hoje, as organizações devem criar relações significativas com os clientes a um nível pessoal. Personalizar de forma efetiva em escala requer uma vista unificada e completa do cliente.
+As informações de audiência ajudam-no a obter uma compreensão mais profunda dos seus clientes. Ligar dados de várias origens transacionais, comportamentais e de observação para criar uma vista de 360 graus de um cliente. Utilize estes conhecimentos para conduzir experiências e processos centrados nos clientes. Unificar e compreender os dados dos clientes e aproveitá-los para informações e ações inteligentes.
 
-As informações de audiência ajudam-no a obter uma compreensão mais profunda dos seus clientes. Ligar dados de várias origens transacionais, comportamentais e de observação para criar uma vista de 360 graus de um cliente. Utilize estes conhecimentos para conduzir experiências e processos centrados nos clientes.
-
-**Unificar e compreender os dados dos clientes e aproveitá-los para informações e ações inteligentes.**
-
-Com a informações de audiência, as organizações podem:  
+## <a name="main-benefits"></a>Principais benefícios 
 
 - **Eliminar silos de dados e unificar dados de clientes**
 
@@ -33,15 +29,15 @@ Com a informações de audiência, as organizações podem:
 
 - **Enriquecer com a inteligência de audiência contida no Microsoft Graph**
 
-  - Crie perfis de cliente mais sofisticados incorporando inteligência de audiência contida no Microsoft Graph.  
+  - Crie perfis de cliente mais sofisticados [incorporando inteligência de audiência contida no Microsoft Graph](enrichment-microsoft-graph.md).  
 
 - **Dê poder aos seus processos de negócio e às experiências personalizadas dos clientes**
 
   - Impulsionar a cativação personalizada entre os canais — capacite profissionais de marketing, vendas e serviços com o Customer Insights de origem e cartões de perfil de clientes personalizados, incorporados nas aplicações de negócio que estes já utilizam diariamente
   - Automatize as experiências e processos centrados no cliente com base em perfis, medidas de negócio e segmentos personalizáveis.
-  - Ativar e ampliar experiências de linha de negócio incorporadas no Microsoft Power Platform. Construir rapidamente aplicações com informações incorporadas utilizando uma poderosa abordagem de baixo código a partir do PowerApps.  
+  - Ative e amplie experiências de linha de negócio incorporadas no [Microsoft Power Platform](https://powerplatform.microsoft.com/). Construir rapidamente aplicações com informações incorporadas utilizando uma poderosa abordagem de baixo código a partir do PowerApps.  
 
-As informações de audiência incluem capacidades para os seguintes utilizadores-chave:
+## <a name="key-audiences"></a>Audiências principais
 
 - **Analistas/administradores de dados:**
 
@@ -58,5 +54,8 @@ As informações de audiência incluem capacidades para os seguintes utilizadore
 
 - **Analistas de negócio:**
 
-  - Crie perfis personalizáveis, defina medidas e crie segmentos para obter uma vista de 360 graus do cliente, específica da sua organização.  
-  - Utilização de conetores fora de caixa para PowerApps ou Microsoft Power BI ou APIs para dar a conhecer as suas aplicações comerciais ou soluções de BI.  
+  - Crie perfis personalizáveis, defina medidas, crie segmentos e beneficie de análise preditiva para obter uma vista de 360 graus do cliente, específica da sua organização.  
+  - Utilize conectores de origem para várias aplicações ou APIs da Microsoft e de terceiros para processar as informações.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

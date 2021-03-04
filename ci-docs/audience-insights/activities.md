@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1c95cba333266a73959de0a3afe1c8677130a3ec
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
+ms.openlocfilehash: dcef8f0547009e1488f1abe91423fa0bf5b061de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667243"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267446"
 ---
 # <a name="customer-activities"></a>Atividades do cliente
 
@@ -44,13 +44,13 @@ As suas origens de dados incluem entidades com dados transacionais e de atividad
 
 1. Na secção **Configurar relação**, configure os detalhes para ligar os seus dados de atividade ao seu cliente correspondente.
 
-   > [!div class="mx-imgBorder"]
-   > ![Definir A relação entre entidades](media/activities-entities-define.png "Definir a relação entre entidades")
-
     - **Campo de entidade de atividade**: selecione o campo na sua entidade de atividade que será utilizado para estabelecer uma relação com outra entidade.
     - **Entidade Cliente** : selecione a entidade Cliente de origem correspondente com a qual a sua entidade Atividade terá uma relação. Só poderá ter relação com as entidades Cliente de origem utilizadas no processo de unificação de dados.
     - **Campo Entidade cliente**: este campo mostra a chave primária da entidade Cliente de origem, conforme selecionada no processo de correspondência. Este campo de chave primária na entidade Cliente de origem é utilizado para estabelecer uma relação com a entidade Atividade.
     - **Nome** : se já existir uma relação entre esta entidade Atividade e a entidade Cliente de origem selecionada, o nome da relação estará em modo só de leitura. Se esta relação não existir, será criada uma nova relação com o nome aqui fornecido.
+   
+   > [!div class="mx-imgBorder"]
+   > ![Definir A relação entre entidades](media/activities-entities-define.png "Definir a relação entre entidades")
 
 1. Selecione **Guardar** para aplicar as alterações.
 
@@ -82,3 +82,6 @@ As suas origens de dados incluem entidades com dados transacionais e de atividad
 3. Selecione o ícone **Eliminar**.
 
 4. Confirme a eliminação.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

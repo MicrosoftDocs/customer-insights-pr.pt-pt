@@ -1,20 +1,20 @@
 ---
 title: Ligue-se a uma conta Gen2 do Azure Data Lake Storage com um principal de serviço
-description: utilize um principal de serviço do Azure para informações sobre a audiência para ligar ao seu próprio data lake quando o ligar às informações sobre a audiência.
-ms.date: 11/24/2020
+description: Utilize um principal de serviço do Azure para informações sobre a audiência para ligar ao seu próprio data lake quando o ligar às informações sobre a audiência.
+ms.date: 02/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c2fae278d34fa02b9168ac70dfa8dd351653245e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644102"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267736"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Ligue-se a uma conta Gen2 do Azure Data Lake Storage com um principal de serviço do Azure para informações sobre a audiência
 
@@ -22,7 +22,9 @@ As ferramentas automatizadas que utilizam os serviços Azure devem ter sempre pe
 
 Pode utilizar o principal de serviço para [adicionar ou editar uma pasta Common Data Model como origem de dados](connect-common-data-model.md) de forma segura, ou [criar um ambiente novo ou atualizar um ambiente existente](manage-environments.md#create-an-environment-in-an-existing-organization).
 
-Precisa de permissões de admin para a sua subscrição Azure para criar o principal de serviço.
+> [!IMPORTANT]
+> - A conta de armazenamento do Azure Data Lake Gen2 que pretende utilizar o principal de serviço tem de ter o [Espaço de Nome Hierárquico (HNS) ativado](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - Precisa de permissões de admin para a sua subscrição Azure para criar o principal de serviço.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Criar o principal do serviço Azure para informações sobre a audiência
 
@@ -83,7 +85,7 @@ Anexar uma conta de armazenamento do Azure Data Lake nas informações de audiê
 
 Siga os passos abaixo para fornecer as informações necessárias sobre a abordagem selecionada.
 
-### <a name="resounce-based-storage-account-connection"></a>Ligação da conta de armazenamento baseada em recursos
+### <a name="resource-based-storage-account-connection"></a>Ligação da conta de armazenamento baseada em recursos
 
 1. Aceda ao [portal de administração do Azure](https://portal.azure.com), inicie sessão na sua subscrição e abra a conta de armazenamento.
 
@@ -108,7 +110,8 @@ Siga os passos abaixo para fornecer as informações necessárias sobre a aborda
 1. Reveja a **Subscrição**, **Grupo de recursos**, e o **Nome** da conta de armazenamento para se certificar de que seleciona os valores coretos nas informações de audiência.
 
 1. Em informações de audiência, escolha os valores ou os campos correspondentes ao anexar a conta de armazenamento.
-
-   :::image type="content" source="media/ADLS-SP-SubscriptionConnection.png" alt-text="Introduza as informações de ID do recurso da conta de armazenamento.":::
    
 1. Continue com os passos restantes nas informações de audiência para anexar a conta de armazenamento.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

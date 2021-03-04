@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689189"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270294"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Ingestão de dados em tempo real (pré-visualização)
 
@@ -83,6 +83,7 @@ Detalhes desta API, incluindo parâmetros e respostas, podem ser encontrados na 
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Compreenda a sua utilização em tempo real com telemetria
 
-Obtenha uma visão geral do volume de pedidos para o API em tempo real e informações sobre questões que o sistema possa encontrar. Pode [aceder à telemetria em tempo real](system.md#api-usage-tab) indo para **Administração** > **Sistema** > **Utilização da API**. Na tabela **Operações**, as linhas para operações API que utilizam os métodos em tempo real contêm um botão para visualizar a utilização da API em tempo real. O botão é visualizado com um símbolo binocular. Selecione o botão para abrir um painel lateral contendo detalhes de utilização para a utilização da API em tempo real no ambiente atual.
+Obtenha uma visão geral do volume de pedidos para o API em tempo real e informações sobre questões que o sistema possa encontrar. Pode [aceder à telemetria em tempo real](system.md#api-usage-tab). 
 
-Utilize o seletor **Agrupar por** para escolher como melhor apresentar as suas interações em tempo real numa linha temporal que vai das últimas 24 horas aos últimos 30 dias. Pode agrupar os dados pelo método de API, nome qualificado de entidade (entidade ingerida), criado por (origem do evento), resultado (sucesso ou falha) ou códigos de erro. Os dados estão disponíveis como gráfico histórico e como tabela.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

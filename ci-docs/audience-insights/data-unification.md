@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 24321e9e11f9fd4e800526673726e5146ed33674
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 44f97696ec91dc488dd6a7528e186abb99c8288b
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406613"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269666"
 ---
-# <a name="data-unification"></a>Unificação de dados
+# <a name="data-unification-overview"></a>Descrição geral da unificação de dados
 
 Após [definir as origens dos dados](data-sources.md), é possível unificar os dados. A unificação dos dados inclui três passos: **Mapear**, **Corresponder** e **Intercalar**.
 
@@ -31,3 +31,6 @@ Depois de concluir a unificação dos dados, pode
 - [configurar as relações entre entidades](relationships.md) para criar segmentos sofisticados
 - [enriquecer os dados](enrichment-hub.md) para obter uma gama mais vasta de informações sobre os seus clientes
 - [definir atividades](activities.md) a partir de alguns dos atributos ingeridos
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

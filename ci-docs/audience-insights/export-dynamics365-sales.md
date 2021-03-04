@@ -1,20 +1,20 @@
 ---
 title: Exportar dados Customer Insights para o Dynamics 365 Sales
 description: Saiba como configurar a ligação ao Dynamics 365 Sales.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: af0824e69dfdf620a0ac756e32a9bd3dd85e5151
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 0013c4e6a96401d6cdbea55ed38f85f5e10dcc56
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643832"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269022"
 ---
 # <a name="connector-for-dynamics-365-sales-preview"></a>Conector para Dynamics 365 Sales (pré-visualização)
 
@@ -24,7 +24,10 @@ Utilize os dados dos seus clientes para criar listas de marketing, dar seguiment
 
 ## <a name="prerequisite"></a>Pré-requisito
 
-Registos de contacto [do Dynamics 365 Sales ingeridos usando o Common Data Service](connect-power-query.md).
+1. Os registos de contacto têm de estar presentes no Dynamics 365 Sales antes de poder exportar um segmento do Customer Insights para o Sales. Leia mais sobre como ingerir contactos no [Dynamics 365 Sales utilizando o Common Data Services](connect-power-query.md).
+
+   > [!NOTE]
+   > A exportação de segmentos a partir de informações da audiência para o Sales não criarão novos registos de contacto nas instâncias do Sales. Os registos de contacto do Sales têm de ser ingeridos nas informações da audiência e utilizados como origem de dados. Também precisam de ser incluídos na entidade unificada do Cliente para mapear IDs de cliente para contactar IDs antes que os segmentos possam ser exportados.
 
 ## <a name="configure-the-connector-for-sales"></a>Configurar o conector para o Sales
 
@@ -49,3 +52,6 @@ Registos de contacto [do Dynamics 365 Sales ingeridos usando o Common Data Servi
 ## <a name="export-the-data"></a>Exportar os dados
 
 Pode [exportar dados a pedido](export-destinations.md). A exportação também será executada com cada [atualização agendada](system.md#schedule-tab).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,14 +9,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: a720641f7499fc71ff5bceeba48d296c51f77242
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 68aa1b56fb634da80a0c64db72f778d57507104d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643967"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269712"
 ---
-# <a name="overview-about-data-sources"></a>Descrição geral sobre origens de dados
+# <a name="data-sources-overview"></a>Descrição geral das origens de dados
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
@@ -49,7 +49,7 @@ Verá o nome de cada origem de dados ingerido, o seu estado, e a última vez que
 |A atualizar    |A ingestão de dados está em curso. Poderá cancelar esta operação ao selecionar **Parar de atualizar** na coluna **Ações**. Parar a atualização de um origem de dados irá revertê-lo para o último estado de atualização.       |
 |Falha     |A ingestão de dados encontrou erros.         |
 
-Selecione **Atualizar estado** para rever mais detalhes sobre o estado de atualização, incluindo detalhes de erro e atualizações do processo a jusante.
+Selecione o valor na coluna **Estado** de qualquer origem de dados para rever mais detalhes. No painel **Detalhes do progresso**, expanda **Origens de dados**. Selecione **Ver detalhes** para obter mais informações sobre o estado da atualização, incluindo detalhes de erro e atualizações do processo a jusante.
 
 O carregamento dos dados pode demorar algum tempo. Após uma atualização bem-sucedida, os dados ingeridos podem ser revistos na página **Entidades**. Para mais informações, consulte [Entidades](entities.md).
 
@@ -76,3 +76,6 @@ Para atualizar uma origem de dados a pedido, siga estes passos:
 2. Selecione as reticências verticais junto à origem de dados que pretende remover e selecione **Eliminar** a partir do menu pendente.
 
 3. Confirme a eliminação.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
