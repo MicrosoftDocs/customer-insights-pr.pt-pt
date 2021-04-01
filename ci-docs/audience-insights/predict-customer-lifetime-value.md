@@ -2,19 +2,19 @@
 title: Predição de valor vitalício do cliente (CLV)
 description: Prever o potencial de receita para clientes ativos no futuro.
 ms.date: 02/05/2021
-ms.reviewer: wameng
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 363a46c81b5bb737d274998f9a699dc662e38d7c
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268608"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595823"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Predição do valor vitalício do cliente (CLV) (Pré-visualização)
 
@@ -194,11 +194,11 @@ Existem três secções primárias de dados dentro da página de resultados.
   
   - **Taxa de sucesso na predição de clientes de valor elevado**
 
-  Veja a diferença na predição de clientes de alto valor utilizando o modelo de IA em comparação com o modelo de base. Por exemplo, uma taxa de sucesso de 84% significa que de todos os clientes de alto valor nos dados de preparação, o modelo de IA foi capaz de capturar com precisão 84%. Em seguida, comparamos esta taxa de sucesso com a taxa de sucesso do modelo de base para reportar a mudança relativa. Este valor é usado para atribuir um nível ao modelo.
+    Veja a diferença na predição de clientes de alto valor utilizando o modelo de IA em comparação com o modelo de base. Por exemplo, uma taxa de sucesso de 84% significa que de todos os clientes de alto valor nos dados de preparação, o modelo de IA foi capaz de capturar com precisão 84%. Em seguida, comparamos esta taxa de sucesso com a taxa de sucesso do modelo de base para reportar a mudança relativa. Este valor é usado para atribuir um nível ao modelo.
 
   - **Métricas de erro**
     
-  Outra métrica permite rever o desempenho geral do modelo em termos de erro na predição de valores futuros. Utilizamos a métrica geral do Erro do Desvio da Raiz Quadrada Média (RMSE) para avaliar este erro. A RMSE é uma forma padrão de medir o erro de um modelo na predição de dados quantitativos. A RMSE do modelo de IA é comparado com a RMSE do modelo de base e a diferença relativa é reportada.
+    Outra métrica permite rever o desempenho geral do modelo em termos de erro na predição de valores futuros. Utilizamos a métrica geral do Erro do Desvio da Raiz Quadrada Média (RMSE) para avaliar este erro. A RMSE é uma forma padrão de medir o erro de um modelo na predição de dados quantitativos. A RMSE do modelo de IA é comparado com a RMSE do modelo de base e a diferença relativa é reportada.
 
   O modelo de IA dá prioridade à classificação precisa dos clientes de acordo com o valor que trazem para o seu negócio. Assim, apenas a taxa de sucesso da predição de clientes de alto valor é usada para obter o nível final do modelo. A métrica RMSE é sensível a valores atípicos. Em cenários em que tem uma pequena percentagem de clientes com valores de compra extraordinariamente elevados, a métrica geral da RMSE pode não dar a imagem completa do desempenho do modelo.   
 

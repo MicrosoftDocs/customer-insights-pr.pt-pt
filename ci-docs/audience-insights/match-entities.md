@@ -1,133 +1,137 @@
 ---
 title: Fazer corresponder entidades para unificação de dados
 description: Fazer corresponder entidades para criar perfis unificados de clientes.
-ms.date: 10/14/2020
+ms.date: 02/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: adkuppa
+author: adkuppa
+ms.author: adkuppa
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267492"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595578"
 ---
 # <a name="match-entities"></a>Fazer corresponder entidades
 
-Depois de concluir a fase de correspondência, está pronto para fazer a correspondência das suas entidades. A fase de correspondência especifica como combinar os seus conjuntos de dados num conjunto de dados de perfil do cliente unificado. A fase de correspondência exige pelo menos [duas entidades correspondidas](map-entities.md).
+A fase de correspondência especifica como combinar os seus conjuntos de dados num conjunto de dados de perfil do cliente unificado. Depois de concluir o [passo de mapeamento](map-entities.md) no processo de unificação de dados, está pronto para corresponder as suas entidades. A fase de correspondência exige pelo menos duas entidades correspondidas.
+
+A página de correspondência é composta por três secções: 
+- Métricas-chave que resumem o número de registos correspondidos
+- Ordem de correspondência e regras para correspondência entre entidades
+- Regras para a eliminação de duplicados de entidades correspondidas
 
 ## <a name="specify-the-match-order"></a>Especificar a ordem de correspondência
 
 Vá a **Dados** > **Unificar** > **Corresponder** e selecione **Definir ordem** para iniciar a fase de correspondência.
 
-Cada correspondência unifica duas ou mais entidades numa única entidade, mantendo cada registo de cliente exclusivo. No exemplo seguinte, selecionámos três entidades: **ContactCSV: TestData** como entidade **Primária**, **WebAccountCSV: TestData** como **Entidade 2** e **CallRecordSmall: TestData** como **Entidade 3**. O diagrama acima das seleções ilustra a forma como a ordem de correspondência será executada.
+Cada correspondência unifica duas ou mais entidades numa única entidade consolidada. Ao mesmo tempo, mantém os registos exclusivos dos clientes. Por exemplo, selecionámos duas entidades: **eCommerce:eCommerceContacts** como entidade principal e **LoyaltyScheme:loyCustomers** como segunda entidade. A ordem das entidades especifica em que ordem o sistema tentará corresponder os registos.
 
-> [!div class="mx-imgBorder"]
-> ![Editar a ordem de correspondência dos dados](media/configure-data-match-order-edit-page.png "Editar a ordem de correspondência dos dados")
+:::image type="content" source="media/match-page.png" alt-text="Captura de ecrã da página Correspondência na área Unificar do processo de unificação de dados.":::
   
-É feita a correspondência da entidade **Primária** com a **Entidade 2**. O conjunto de dados resultante da primeira correspondência é correspondido com a **Entidade 3**.
-Neste exemplo, selecionámos apenas duas correspondências, mas o sistema suporta mais.
+A entidade principal *eCommerce:eCommerceContacts* é correpondida com a entidade seguinte *LoyaltyScheme:loyCustomers*. O conjunto de dados que resulta do primeiro passo de correspondência é combinado com a seguinte entidade se tiver mais de duas entidades.
 
 > [!IMPORTANT]
-> A entidade que escolher como entidade **Primária** servirá como base para o seu conjunto de dados principal unificado. As entidades adicionais selecionadas durante a fase de correspondência serão adicionadas a esta entidade. Ao mesmo tempo, isto não significa que a entidade unificada irá incluir *todos* os dados incluídos nesta entidade.
+> A entidade que escolher como entidade principal servirá como base para o seu conjunto de dados de perfis unificados. As entidades adicionais selecionadas durante a fase de correspondência serão adicionadas a esta entidade. Isto não significa que a entidade unificada incluirá *todos* os dados incluídos nesta entidade.
 >
 > Existem duas considerações que podem ajudá-lo a escolher a hierarquia das entidades:
 >
-> - Qual a entidade que considera ter os dados mais completos e fiáveis sobre os seus clientes?
-> - A entidade que acabou de identificar tem atributos que também são partilhados por outras entidades (por exemplo, nome, número de telefone ou endereço de e-mail)? Caso contrário, escolha a segunda entidade mais fiável.
+> - Escolha a entidade com os dados de perfil mais completos e fiáveis sobre os seus clientes como entidade principal.
+> - Escolha a entidade que tem vários atributos em comum com outras entidades (por exemplo, nome, número de telefone ou endereço de e-mail) como entidade principal.
 
-Selecione **Concluído** para guardar a ordem de correspondência.
+Depois de especificar a ordem de correspondência, irá ver os pares de correspondência definidos na secção **Detalhes dos registos correspondidos** em **Dados** > **Unificar** > **Corresponder**. As métricas-chave ficarão vazias até que o processo de correspondência esteja concluído.
 
-## <a name="define-rules-for-your-first-match-pair"></a>Definir regras para o primeiro par de correspondência
+## <a name="define-rules-for-match-pairs"></a>Definir regras para pares de correspondência
 
-Depois de especificar a ordem de correspondência, verá as correspondências definidas na página **Corresponder**. Os mosaicos na parte superior do ecrã ficarão vazios até executar a ordem de correspondência.
+As regras de correspondência especificam a lógica pela qual será feita a correspondência de um par de entidades específico.
 
-> [!div class="mx-imgBorder"]
-> ![Definir regras](media/configure-data-match-need-rules.png "Definir regras")
+O aviso **Necessita de regras** junto a um nome de entidade sugere que não existe nenhuma regra de correspondência definida para um par de correspondência. 
 
-O aviso **Necessita de Regras** sugere que não está definida nenhuma regra de correspondência para um par de correspondência. As regras de correspondência especificam a lógica pela qual será feita a correspondência de um par de entidades específico.
+:::image type="content" source="media/match-rule-add.png" alt-text="Captura de ecrã da secção de detalhes de registos de correspondência com controlo para adicionar regras realçadas.":::
 
-1. Para definir a sua primeira regra, abra o painel **Definição de Regra** ao selecionar a linha de correspondência correspondente na tabela de correspondências (1) e, depois, selecionar **Criar nova regra** (2).
+1. Selecione **Adicionar regras** numa entidade na secção **Detalhes dos registos correspondidos** para definir as regras de correspondência.
 
-   > [!div class="mx-imgBorder"]
-   > ![Criar nova regra](media/configure-data-match-new-rule2.png "Criar nova regra")
+1. No painel **Criar regra**, configure as condições para a regra.
 
-2. No painel **Editar Regra**, configure as condições para essa regra. Cada condição é representada por duas linhas que incluem as seleções obrigatórias.
+   :::image type="content" source="media/match-rule-conditions.png" alt-text="Captura de ecrã de uma regra de correspondência aberta com condições adicionadas.":::
 
-   > [!div class="mx-imgBorder"]
-   > ![Painel Nova regra](media/configure-data-match-new-rule-condition.png "Painel Nova regra")
+   - **Entidade/Campo (primeira linha)**: escolha uma entidade relacionada e um atributo para especificar uma propriedade de registo que seja provavelmente única para um cliente. Por exemplo, um número de telefone ou endereço de e-mail. Evite corresponder por atributos do tipo de atividade. Por exemplo, um ID de compra provavelmente não encontrará correspondência noutros tipos de registo.
 
-   Entidade/Campo (primeiro) - um atributo que será utilizado para a correspondência da primeira entidade de par de correspondência. Os exemplos podem incluir um número de telefone ou um endereço de e-mail. Escolha um atributo que provavelmente seja exclusivo do cliente.
+   - **Entidade/Campo (segunda linha)**: escolha um atributo que se relacione com o atributo da entidade especificada na primeira linha.
 
-   > [!TIP]
-   > Evite fazer a correspondência com base nos atributos do tipo atividade. Por outras palavras, se um atributo parecer ser uma atividade, poderá ser um critério fraco para fazer a correspondência.  
+   - **Normalizar**: selecione a partir das seguintes opções de normalização para os atributos selecionados. 
+     - Espaço em branco: remove todos os espaços. *Olá   Mundo* torna-se *OláMundo*.
+     - Símbolos: remove todos os símbolos e caracteres especiais. *Head&Shoulder* torna-se *HeadShoulder*.
+     - Texto para minúscula: converte todos os caracteres em minúsculas. *TODAS MAIÚSCULAS e Título* torna-se *todas maiúsculas e título*.
+     - Unicode para ASCII: converte a notação unicode para caracteres ASCII. */u00B2* torna-se *2*.
+     - Números: converte outros sistemas numéricos, como a numeração romana em algarismos árabes. *VIII* torna-se *8*.
+     - Tipos de semântica: normaliza nomes, títulos, números de telefone, endereços, etc. 
 
-   Entidade/Campo (Segundo) - um atributo que será utilizado para a correspondência da segunda entidade de par de correspondência.
+   - **Precisão**: defina o nível de precisão para aplicar esta condição. 
+     - **Básico**: escolha entre *Baixo*, *Médio*, *Alto* e *Exato*. Selecione **Exato** para fazer a correspondências apenas dos registos com uma correspondência de 100%. Selecione um dos outros níveis para fazer a correspondência dos registos que não são 100% idênticos.
+     - **Personalizar**: defina uma percentagem que os registos têm de corresponder. O sistema só vai corresponder os registos que ultrapassam este limiar.
 
-   Normalizar - **Método de normalização**: estão disponíveis várias opções de normalização para os atributos selecionados. Por exemplo, remover a pontuação ou os espaços
+1. Forneça um **Nome** para a regra.
 
-   Para a normalização do Nome da Organização (Pré-visualização), poderá selecionar **Tipo (Telemóvel, Nome, Organização)**
+1. [Adicione mais condições](#add-conditions-to-a-rule) ou selecione **Concluído** para finalizar a regra.
 
-   > [!div class="mx-imgBorder"]
-   > ![Normalização-B2B](media/match-normalization-b2b.png "Normalização-B2B")
+1. Opcionalmente, [adicione mais regras](#add-rules-to-a-match-pair).
 
-   Nível de precisão - o nível de precisão que será utilizado para esta condição. A definição de um nível de precisão para uma condição de correspondência pode ter dois tipos: **Básico** e **Personalizado**.  
-   - Básico: fornece quatro opções para selecionar: Baixo, Médio, Alto e Exato. Selecione **Exato** para fazer a correspondências apenas dos registos com uma correspondência de 100%. Selecione um dos outros níveis para fazer a correspondência dos registos que não são 100% idênticos.
-   - Personalizado: utilize o controlo de deslize para definir a percentagem personalizada com que os registos têm de corresponder ou introduza um valor no campo **Personalizado**. O sistema só irá fazer a correspondência com os registos que ultrapassam este limiar como pares de correspondência uniformes. Os valores no controlo de deslize variam entre 0 e 1. Assim, 0,64 representa 64%.
+1. Selecione **Guardar** para aplicar as alterações.
 
-3. Selecione **Concluído** para guardar a regra.
+### <a name="add-conditions-to-a-rule"></a>Adicionar condições a uma regra
 
-### <a name="add-multiple-conditions"></a>Adicionar múltiplas condições
+Para corresponder entidades apenas se os atributos satisfaçam várias condições, adicione mais condições a uma regra de correspondência. As condições estão ligadas a um operador E lógico e, portanto, só são executadas se todas as condições forem satisfeitas.
 
-Para fazer a correspondência apenas se forem satisfeitas várias condições, adicione mais condições que estejam ligadas através de um operador AND.
+1. Aceda a **Dados** > **Unificar** > **Corresponder** e selecione **Editar** na regra a que pretende adicionar condições.
 
-1. No painel **Editar regra**, selecione **Adicionar condição**. Também pode eliminar condições ao selecionar o botão para remover junto a uma condição existente.
+1. No painel **Editar regra**, selecione **Adicionar condição**.
 
-2. Selecione **Concluído** para guardar a regra.
+1. Selecione **Concluído** para guardar a regra.
 
-## <a name="add-multiple-rules"></a>Adicionar múltiplas regras
+### <a name="add-rules-to-a-match-pair"></a>Adicionar regras a um par de correspondências
 
-Cada condição aplica-se a um único par de atributos, enquanto as regras representam conjuntos de condições. Para fazer a correspondência das suas entidades por diferentes conjuntos de atributos, poderá adicionar mais regras.
+As regras de correspondência representam conjuntos de condições. Para corresponder entidades por condições com base em vários atributos, adicione mais regras
 
-1. Nas informações de audiência, vá a **Dados** > **Unificar** > **Fazer corresponder**.
+1.  Aceda a **Dados** > **Unificar** > **Corresponder** e selecione **Adicionar regra** na entidade a que pretende adicionar regras.
 
-2. Selecione a entidade que pretende atualizar e selecione **Adicionar regras**.
-
-3. Siga o procedimento conforme descrito em [Definir regras para o primeiro par de correspondência](#define-rules-for-your-first-match-pair).
+2. Siga os passos em [Definir regras para pares de correspondência](#define-rules-for-match-pairs).
 
 > [!NOTE]
-> A ordem das regras é importante. O algoritmo de correspondência tenta fazer a correspondência com base na primeira regra e avança para a segunda regra apenas se não forem identificadas correspondências na primeira regra.
+> A ordem das regras é importante. O algoritmo de correspondência tenta corresponder com base na sua primeira regra e continua para a segunda regra apenas se não forem identificadas correspondências com a primeira regra.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Definir a duplicação sobre uma entidade correspondente
 
-Juntamente com a especificação de regras de correspondência entre entidades, conforme descrito nas secções acima, também se podem especificar regras de duplicação. A *duplicação* é um processo. Identifica registos duplicados, funde-os num único registo, e liga todos os registos de origem a este registo fundido com identificações alternativas ao registo fundido.
+Além das [regras de correspondência entre entidades](#define-rules-for-match-pairs), também pode especificar regras de eliminação de duplicados. A *eliminação de duplicados* é outro processo de correspondência de registos. Identifica registos duplicados e intercala-os num único registo. Os registos de origem ligam-se ao registo intercalado com ID alternativos.
 
-Após identificação de um registo duplicado, esse registo será utilizado no processo de correspondência entre entidades. A duplicação é implementada ao nível da entidade e pode ser aplicada a todas as entidades utilizadas no processo de Correspondência.
+Os registos não duplicados serão utilizados no processo de correspondência entre entidades. A eliminação de duplicados ocorre em entidades individuais e pode ser configurada em todas as entidades utilizadas em pares de correspondência.
+
+A especificação das regras de duplicação não é obrigatória. Se tais regras não forem configuradas, são aplicadas as regras definidas pelo sistema. Combinam todos os registos num único registo antes de transmitir os dados da entidade para a correspondência entre entidades para um maior desempenho.
 
 ### <a name="add-deduplication-rules"></a>Adicionar regras de duplicação
 
-1. Nas informações de audiência, vá a **Dados** > **Unificar** > **Fazer corresponder**.
+1. Aceda a **Dados** > **Unificar** > **Corresponder**.
 
-1. Na secção **Duplicados fundidos**, selecione **Definir entidades**.
+1. Na secção **Duplicados fundidos**, selecione **Definir entidades**. Caso já estejam criadas regras de eliminação de duplicados, selecione **Editar**.
 
-1. Na secção **Preferências de fusão**, selecione as entidades a que pretende aplicar a duplicação.
+1. No painel **Preferências de intercalação**, escolha as entidades em que pretende realizar a eliminação de duplicados.
 
-1. Especificar como fundir os registos duplicados e escolher uma das três opções de fusão:
-   - *Mais preenchidos*: Identifica o registo com os atributos mais preenchidos como o registo vencedor. Esta é a opção de fusão predefinida.
-   - *Mais recentes*: Identifica o registo vencedor com base no mais recente. Requer uma data ou um campo numérico para definir a atualidade.
-   - *Menos recente*: Identifica o registo vencedor com base no menos recente. Requer uma data ou um campo numérico para definir a atualidade.
+1. Especifique como combinar os registos duplicados e escolha uma das três opções:
+   - **Mais preenchido**: identifica o registo com os campos de atributos mais povoados como registo vencedor. É a opção de intercalação predefinida.
+   - **Mais recentes**: Identifica o registo vencedor com base no mais recente. Requer uma data ou um campo numérico para definir a atualidade.
+   - **Menos recente**: Identifica o registo vencedor com base no menos recente. Requer uma data ou um campo numérico para definir a atualidade.
  
    > [!div class="mx-imgBorder"]
    > ![Regras de duplicação etapa 1](media/match-selfconflation.png "Regras de duplicação etapa 1")
  
-1. Uma vez selecionadas as entidades e estabelecida a sua preferência de fusão, selecionar **Criar nova regra** para definir as regras de duplicação a nível de entidade.
-   - **Campo selecionado** lista todos os campos disponíveis dessa entidade em que pretende deduplicar os dados de origem.
-   - Especificar as definições de normalização e precisão de forma semelhante à especificada na correspondência entre entidades cruzadas.
-   - Pode definir condições adicionais, selecionando **Adicionar condição**.
+1. Assim que as entidades forem selecionadas e a sua preferência de intercalação for definida, selecione **Adicionar regra** para definir as regras de eliminação de duplicados a nível da entidade.
+   - **Selecionar campo** apresenta todos os campos disponíveis dessa entidade. Escolha o campo que pretende verificar se existem duplicados. Escolha os campos que sejam provavelmente únicos para cada cliente. Por exemplo, um endereço de e-mail ou a combinação de nome, cidade e número de telefone.
+   - Especifique as definições de normalização e precisão.
+   - Defina mais condições selecionando **Adicionar condição**.
  
    > [!div class="mx-imgBorder"]
    > ![Regras de duplicação etapa 2](media/match-selfconflation-rules.png "Regras de duplicação etapa 2")
@@ -138,107 +142,86 @@ Após identificação de um registo duplicado, esse registo será utilizado no p
 
 1. Este registo de vencedores é então passado para a correspondência de entidade cruzada, juntamente com os registos de não vencedor (por exemplo, IDs alternativos) para melhorar a qualidade de correspondência.
 
-1. Quaisquer regras de correspondência personalizadas definidas para coincidir sempre e nunca se sobrepor às regras de duplicação. Se uma regra de duplicação identificar registos correspondentes, e uma regra de correspondência personalizada for definida para nunca corresponder a esses registos, então estes dois registos não terão correspondência.
+1. As regras de correspondência personalizadas definidas substituem as regras de eliminação de duplicados. Se uma regra de duplicação identificar registos correspondentes, e uma regra de correspondência personalizada for definida para nunca corresponder a esses registos, então estes dois registos não terão correspondência.
 
-1. Depois de executar o processo de correspondência, verá as estatísticas de duplicação.
-   
-> [!NOTE]
-> A especificação das regras de duplicação não é obrigatória. Se tais regras não forem configuradas, são aplicadas as regras definidas pelo sistema. Colapsam todos os registos que partilham a mesma combinação de valores (correspondência exata) da chave primária e os campos das regras de correspondência num único registo antes de passar os dados da entidade à correspondência entre entidades para um melhor desempenho e sanidade do sistema.
+1. Após [a execução do processo de correspondência](#run-the-match-process), irá ver as estatísticas de eliminação de duplicados nos mosaicos das principais métricas.
 
-## <a name="run-your-match-order"></a>Executar a ordem de correspondência
+### <a name="deduplication-output-as-an-entity"></a>Saída de eliminação de duplicados como uma entidade
 
-Após definir as regras de correspondência, incluindo as regras de correspondência entre entidades e de duplicação, pode executar a ordem de correspondência. Na página **Corresponder**, selecione **Executar** para iniciar o processo. A execução do algoritmo de correspondência poderá demorar algum tempo. Não poderá alterar as propriedades na página **Corresponder** até o processo de correspondência ser concluído. Encontrará a entidade de perfil do cliente unificado que foi criada na página **Entidades**. A sua entidade de cliente unificada é denominada **ConflationMatchPairs : CustomerInsights**.
-
-Para efetuar alterações adicionais e executar novamente o passo, poderá cancelar uma correspondência em curso. Selecione o texto **A atualizar...** e selecione **Cancelar tarefa** na parte inferior do painel lateral apresentado.
-
-Quando o processo de correspondência estiver concluído, o texto **A atualizar...** mudará para **Com êxito** e poderá voltar a utilizar toda a funcionalidade da página.
-
-O primeiro processo de correspondência resulta na criação de uma entidade principal unificada. Todas as execuções de correspondência subsequentes resultam na expansão dessa entidade.
-
-> [!TIP]
-> Há [seis tipos de estados](system.md#status-types) para tarefas/processos. Além disso, a maior parte dos processos [depende de outros processos a jusante](system.md#refresh-policies). Poderá selecionar o estado de um processo para ver os detalhes do progresso de toda a tarefa. Depois de selecionar **Ver detalhes** de uma das tarefas do trabalho, encontra informações adicionais: tempo de processamento, última data de processamento e todos os erros e avisos associados à tarefa.
-
-## <a name="deduplication-output-as-an-entity"></a>Saída de eliminação de duplicados como uma entidade
-Além da entidade mestre unificada criada como parte da correspondência entre entidades, o processo de eliminação de duplicados gera também uma nova entidade para cada entidade a partir da ordem de correspondência para identificar os registos de eliminação de duplicados. Estas entidades podem ser encontradas juntamente com **ConflationMatchPairs:CustomerInsights** na secção **Sistema** na página **Entidades**, com o nome **Deduplication_Datasource_Entity**.
+O processo de eliminação de duplicados cria uma nova entidade para cada entidade a partir dos pares de correspondência para identificar os registos não duplicados. Estas entidades podem ser encontradas juntamente com **ConflationMatchPairs:CustomerInsights** na secção **Sistema** na página **Entidades**, com o nome **Deduplication_DataSource_Entity**.
 
 Uma entidade de saída de eliminação de duplicados contém as seguintes informações:
 - IDs / Chaves
   - Campo de chave primária e o respetivo campo de IDs alternativos. O campo de IDs alternativos consiste em todos os IDs alternativos identificados para um registo.
-  - O campo Deduplication_GroupId mostra o grupo ou o cluster identificado dentro de uma entidade que agrupa todos os registos semelhantes com base nos campos de eliminação de duplicados especificados. Isto é utilizado para fins de processamento do sistema. Se não existirem regras de eliminação de duplicados manuais especificadas e se aplicarem regras de eliminação de duplicados definidas pelo sistema, poderá não encontrar este campo na entidade de saída de eliminação de duplicados.
+  - O campo Deduplication_GroupId mostra o grupo ou o cluster identificado dentro de uma entidade que agrupa todos os registos semelhantes com base nos campos de eliminação de duplicados especificados. É utilizado para fins de processamento do sistema. Se não existirem regras de eliminação de duplicados manuais especificadas e se aplicarem regras de eliminação de duplicados definidas pelo sistema, poderá não encontrar este campo na entidade de saída de eliminação de duplicados.
   - Deduplication_WinnerId: este campo contém o ID de vencedor dos grupos ou clusters identificados. Se Deduplication_WinnerId é o mesmo que o valor da Chave primária para um registo, significa que o registo é o registo vencedor.
 - Campos usados para definir as regras de eliminação de duplicados.
 - Campos Regra e Pontuação para denotar quais as regras de eliminação de duplicados foram aplicadas e a pontuação devolvida pelo algoritmo correspondente.
+   
+## <a name="run-the-match-process"></a>Executar o processo de correspondência
+
+Com as regras de correspondência configuradas, incluindo regras de correspondência e eliminação de duplicados entre entidades, pode executar o processo de correspondência. 
+
+Aceda a **Dados** > **Unificar** > **Corresponder** e selecione **Executar** para iniciar o processo. O algoritmo de correspondência demora algum tempo a ser concluído e não é possível alterar a configuração até que esteja concluído. Para efetuar alterações, pode cancelar a execução. Selecione o estado da tarefa e selecione **Cancelar tarefa** no painel **Detalhes do progresso**.
+
+Encontrará o resultado de uma execução bem-sucedida, a entidade unificada de perfil do cliente, na página **Entidades**. A sua entidade de cliente unificada chama-se **Clientes** na secção **Perfis**. A primeira execução de correspondência bem-sucedida cria a entidade unificada de *Cliente*. Todas as execuções de correspondência subsequentes expandem essa entidade.
+
+> [!TIP]
+> Há [seis tipos de estados](system.md#status-types) para tarefas/processos. Além disso, a maior parte dos processos [depende de outros processos a jusante](system.md#refresh-policies). Poderá selecionar o estado de um processo para ver os detalhes do progresso de toda a tarefa. Depois de selecionar **Ver detalhes** de uma das tarefas do trabalho, encontra informações adicionais: tempo de processamento, última data de processamento e todos os erros e avisos associados à tarefa.
 
 ## <a name="review-and-validate-your-matches"></a>Rever e validar as suas correspondências
 
-Avalie a qualidade dos seus pares de correspondência e refine-os:
+Aceda a **Dados** > **Unificar** > **Corresponder** para avaliar a qualidade dos seus pares de correspondência e refiná-los se necessário.
 
-- Na página **Corresponder**, encontrará dois mosaicos a mostrar as informações iniciais sobre os seus dados.
+Os mosaicos na parte superior da página mostram as métricas-chave, resumindo o número de registos e duplicados correspondidos.
 
-  - **Clientes exclusivos**: mostra o número de perfis exclusivos que o sistema identificou.
-  - **Registos correspondidos**: mostra o número de correspondências em todos os seus pares de correspondência.
+:::image type="content" source="media/match-KPIs.png" alt-text="Captura de ecrã recortada das métricas-chave na página Corresponder com números e detalhes.":::
 
-- Na tabela **Ordem de correspondência**, poderá avaliar os resultados de cada par de correspondência ao comparar o número de registos com origem nesta entidade de pares de correspondência com a percentagem de registos correspondidos com êxito.
+- **Registos de origem exclusivos** mostra o número de registos de origem individuais que foram processados na última execução de correspondência.
+- **Registos correspondidos e não correspondidos** destaca quantos registos únicos permanecem após o processamento das regras de correspondência.
+- **Apenas registos correspondidos** mostra o número de correspondências em todos os seus pares de correspondências.
 
-- Na secção **Regras** de uma entidade na tabela **Ordem de correspondência**, encontrará a percentagem de registos correspondidos com êxito a nível da regra. Ao selecionar o símbolo de tabela junto a uma regra, poderá ver todos estes registos a nível da regra. Recomendamos que reveja um subconjunto dos registos para validar que foram correspondidos corretamente.
+Pode avaliar os resultados de cada par de correspondência e as suas regras na tabela **Detalhes dos registos correspondidos**. Compare o número de registos que vieram de um par de correspondência com a percentagem de registos correspondidos com sucesso.
 
-- Experimente com diferentes limiares de precisão à volta das suas condições para identificar o valor ideal.
+Reveja as regras de um par de correspondência para ver a percentagem de registos correspondidos com sucesso ao nível das regras. Selecione as reticências (...) e, em seguida, selecione **Pré-visualizar correspondência** para ver todos estes registos ao nível da regra. Recomendamos que veja alguns registos para validar se foram corretamente correspondidos.
 
-  1. Selecione as reticências (...) da regra do par de correspondência que pretende experimentar e selecione **Editar**.
+Experimente limiares de precisão diferentes em condições para encontrar o valor ideal.
 
-  2. Selecione a condição com a qual pretende experimentar. Cada critério é representado por uma linha no painel **Regra de correspondência**.
+  1. Selecione as reticências (...) para a regra que pretende experimentar e selecione **Editar**.
 
-  3. O que verá na página **Pré-visualização de critérios** depende do nível de precisão selecionado para uma condição. Localize o número de registos correspondidos e não correspondidos para a condição selecionada.
+  2. Altere os valores de precisão nas condições que pretende rever.
 
-     Compreenda os efeitos de diferentes níveis de limiar. Pode comparar o número de registos que serão correspondidos em cada um dos níveis de limiar e ver os registos em cada opção. Selecione cada um dos mosaicos e reveja os dados na secção de tabela.
+  3. Selecione **Pré-visualizar** para ver o número de registos correspondidos e não correspondidos para a condição selecionada.
 
-## <a name="optimize-your-matches"></a>Otimizar as suas correspondências
+## <a name="manage-match-rules"></a>Gerir regras de correspondência
 
-Aumente a qualidade ao reconfigurar alguns dos parâmetros de correspondência:
+Pode reconfigurar e aperfeiçoar a maioria dos parâmetros de correspondência.
 
-- **Alterar a ordem de correspondência** ao selecionar **Editar** e alterar os campos de ordem de correspondência.
+:::image type="content" source="media/match-rules-management.png" alt-text="Captura de ecrã do menu pendente com as opções de regras de correspondência.":::
 
-  > [!div class="mx-imgBorder"]
-  > ![Editar a ordem de correspondência dos dados](media/configure-data-match-order-edit.png "Editar a ordem de correspondência dos dados")
+- **Alterar a ordem das suas regras** se definiu várias regras. Pode reordenar as regras de correspondência selecionando as opções **Mover para cima** e **Mover para baixo** arrastando e largando.
 
-- **Alterar a ordem das suas regras** se definiu várias regras. Pode reordenar as regras de correspondência ao selecionar as opções **Mover Para Cima** e **Mover Para Baixo** na grelha de regras de correspondência.
-
-  > [!div class="mx-imgBorder"]
-  > ![Alterar ordem das regras](media/configure-data-change-rule-order.png "Alterar ordem das regras")
-
-- **Duplicar as regras** se definiu uma regra de correspondência e pretende criar uma regra semelhante com modificações. Poderá fazê-lo ao selecionar **Duplicar**.
-
-  > [!div class="mx-imgBorder"]
-  > ![Duplicar uma regra](media/configure-data-duplicate-rule.png "Duplicar uma regra")
+- **Altere as condições da regra** selecionando **Editar** e escolha campos diferentes.
 
 - **Desativar uma regra** para manter uma regra de correspondência, excluindo-a do processo de correspondência.
 
-  > [!div class="mx-imgBorder"]
-  > ![Desativar uma regra](media/configure-data-deactivate-rule.png "Desativar uma regra")
+- **Duplique as suas regras** se tiver definido uma regra de correspondência e quiser criar uma regra semelhante com modificações, selecione **Duplicar**.
 
-- **Editar as suas regras** ao selecionar o símbolo **Editar**. Pode aplicar as seguintes alterações:
+- **Elimine uma regra** selecionando o símbolo **Eliminar**.
 
-  - Alterar os atributos para uma condição: selecione novos atributos na linha de condição específica.
-  - Alterar o limiar para uma condição: ajuste o controlo de deslize de precisão.
-  - Alterar o método de normalização de uma condição: atualize o método de normalização.
+## <a name="specify-custom-match-conditions"></a>Especificar condições de correspondência personalizadas
 
-## <a name="specify-your-custom-match-records"></a>Especificar os seus registos de correspondência personalizados
+Pode especificar as condições que determinados registos devem corresponder sempre ou nunca. Estas regras podem ser carregadas para substituir o processo padrão de correspondência. Por exemplo, se houver John Doe I e John Doe II nos nossos registos, o sistema pode correspondê-los como uma pessoa. As regras de correspondência personalizadas permitem-lhe especificar que os seus perfis se referem a pessoas diferentes. 
 
-Pode especificar as condições que determinados registos devem corresponder sempre ou nunca. Estas regras podem ser carregadas em massa para o processo de correspondência.
+1. Aceda a **Dados** > **Unificar** > **Corresponder** e selecione **Correspondência personalizada** na secção **Detalhes dos registos correspondidos**.
 
-1. Selecione a opção **Correspondência personalizada** no ecrã **Ordem de correspondência**.
+  :::image type="content" source="media/custom-match-create.png" alt-text="Captura de ecrã da secção de regras de correspondência com o controlo de Correspondência personalizada realçado.":::
 
-   > [!div class="mx-imgBorder"]
-   > ![Criar uma correspondência personalizada](media/custom-match-create.png "Criar uma correspondência personalizada")
+1. Se não tiver regras de correspondência personalizadas definidas, irá ver um novo painel **Correspondência personalizada** com mais detalhes.
 
-2. Se não tiver entidades carregadas, verá uma nova caixa de diálogo **Correspondência personalizada** que exige o preenchimento de alguns detalhes. Se forneceu estes detalhes anteriormente, avance para o passo 8.
+1. Selecione **Preencher o modelo** para obter um ficheiro de modelo que especifique os registos a partir dos quais as entidades devem corresponder sempre ou nunca corresponder. Terá de preencher separadamente os registos "corresponder sempre" e "nunca corresponder" em dois ficheiros diferentes.
 
-   > [!div class="mx-imgBorder"]
-   > ![Caixa de diálogo Nova correspondência personalizada](media/custom-match-new-dialog-box.png "Caixa de diálogo Nova correspondência personalizada")
-
-3. Selecione **Preencher o modelo** para obter um ficheiro de modelo que especifique os registos a partir dos quais as entidades devem corresponder sempre ou nunca corresponder. Terá de preencher separadamente os registos "corresponder sempre" e "nunca corresponder" em dois ficheiros diferentes.
-
-4. O modelo contém campos para especificar a entidade e os valores de chave primária da entidade que serão utilizados na correspondência personalizada. Por exemplo, se pretende que a chave primária 12345 da entidade Vendas faça sempre a correspondência com a chave primária 34567 da entidade Contacto, terá de especificar o seguinte:
+1. O modelo contém campos para especificar a entidade e os valores de chave primária da entidade que serão utilizados na correspondência personalizada. Por exemplo, se pretender que a chave primária *12345* da entidade *Vendas* corresponda sempre à chave primária *34567* da entidade *Contacto*, preencha o modelo:
     - Entidade1: Vendas
     - Entity1Key: 12345
     - Entidade2: Contacto
@@ -248,22 +231,22 @@ Pode especificar as condições que determinados registos devem corresponder sem
    
    Se pretender especificar a correspondência personalizada para a eliminação de duplicados numa entidade, forneça a mesma entidade que a Entidade1 e a Entidade2 e defina os diferentes valores chave primários.
 
-5. Depois de adicionar todas as substituições que pretende aplicar, guarde o ficheiro de modelo.
+1. Depois de adicionar todas as substituições que pretende aplicar, guarde o ficheiro de modelo.
 
-6. Aceda a **Dados** > **Origens de dados** e ingere os ficheiros do modelo como novas entidades. Depois de ingeridos, pode utilizá-los para especificar a configuração Corresponder.
+1. Aceda a **Dados** > **Origens de dados** e ingere os ficheiros do modelo como novas entidades. Depois de ingeridos, pode utilizá-los para especificar a configuração Corresponder.
 
-7. Após o carregamento dos ficheiros e de as entidades estarem disponíveis, selecione novamente a opção **Correspondência personalizada**. Verá opções para especificar as entidades que pretende incluir. Selecione as entidades obrigatórias a partir do menu pendente.
+1. Após o carregamento dos ficheiros e de as entidades estarem disponíveis, selecione novamente a opção **Correspondência personalizada**. Verá opções para especificar as entidades que pretende incluir. Selecione as entidades obrigatórias a partir do menu pendente.
 
-   > [!div class="mx-imgBorder"]
-   > ![Substituições de correspondências personalizadas](media/custom-match-overrides.png "Substituições de correspondências personalizadas")
+   :::image type="content" source="media/custom-match-overrides.png" alt-text="Captura de ecrã da caixa de diálogo para escolher substituições para um cenário de correspondência personalizada.":::
 
-8. Selecione as entidades que pretende utilizar para **Corresponder sempre** e **Nunca corresponder**, e selecione **Concluído**.
+1. Selecione as entidades que pretende utilizar para **Corresponder sempre** e **Nunca corresponder**, e selecione **Concluído**.
 
-9. Selecione **Guardar** na página **Corresponder** para a configuração da correspondência personalizada que acabou de configurar.
+1. Selecione **Guardar** na página **Corresponder** para aplicar a configuração de correspondência personalizada.
 
-10. Selecione **Executar** na página **Corresponder** para iniciar o processo de correspondência e para a configuração da correspondência personalizada entrar em vigor. Quaisquer regras correspondentes do sistema são substituídas pelo conjunto de configurações.
+1. Selecione **Executar** na página **Corresponder** para iniciar o processo de correspondência. As outras regras de correspondência especificadas são substituídas pela configuração de correspondência personalizada.
 
-11. Depois de concluída a correspondência, pode verificar a entidade **ConflationMatchPair** para confirmar se as substituições são aplicadas nas correspondências de combinação.
+> [!TIP]
+> Aceda a **Dados** > **Entidades** e reveja a entidade **ConflationMatchPair** para confirmar que as substituições são aplicadas.
 
 ## <a name="next-step"></a>Passo seguinte
 

@@ -1,31 +1,31 @@
 ---
 title: Idiomas suportados para as informações de audiência
 description: Compreender e configurar o apoio ao idioma.
-ms.date: 04/27/2020
+ms.date: 02/26/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: philk
+author: pkieffer
+ms.author: philk
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 84c4011e61058729a0ed0b7123df8a9227b0f083
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: cbf37b55ea6c54d912200a1f7167126925b35443
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268194"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595486"
 ---
 # <a name="supported-languages-for-audience-insights-capability"></a>Idiomas suportados para a capacidade das informações de audiência
 
-A capacidade das informações de audiência do Dynamics 365 Customer Insights suporta diversos idiomas. Este tópico lista os idiomas disponíveis e fornece suporte para alternar entre eles, bem como uma descrição geral do conteúdo que é traduzido.
+As informações da audiência para o Dynamics 365 Customer Insights estão traduzidas para muitos idiomas. A lista que se segue contém os idiomas disponíveis e as informações sobre o que é traduzido. Também pode saber mais sobre como alterar as definições de idiomas. 
 
 ## <a name="languages"></a>Idiomas
 
 | Nome do idioma (Inglês)|  Nome do Idioma (idioma nativo) |
 | ------------- | ------------- |
 | Basco | euskara |
-| Búlgaro | Български |
+| Búlgaro | български |
 | Catalão | català |
 | Chinês (Simplificado) | 中文(简体) |
 | Chinês (Tradicional) | 中文(繁體) |
@@ -42,20 +42,20 @@ A capacidade das informações de audiência do Dynamics 365 Customer Insights s
 | Grego | Ελληνικά |
 | Hindi | हिंदी |
 | Húngaro | magyar |
-| Indonésio | Bahasa Indonesia |
+| Indonésio | Indonésia |
 | Italiano | italiano |
 | Japonês | 日本語 |
-| Cazaque | Қазақ |
+| Cazaquistanês | қазақ тілі |
 | Coreano | 한국어 |
 | Letão | latviešu |
 | Lituano | lietuvių |
-| Malaio | Bahasa Melayu |
-| Norueguês (Bokmål) | norsk (bokmål) |
-| Polaco | Polski |
+| Malaio | Melayu |
+| Norueguês (Bokmål) | norsk bokmål |
+| Polaco | polski |
 | Português (Brasil) | português |
 | Português (Portugal) | português |
 | Romeno | română |
-| Russo | Русский |
+| Russo | pусский |
 | Sérvio (Cirílico) | српски |
 | Sérvio (Latim) | srpski |
 | Eslovaco | slovenčina |

@@ -2,23 +2,23 @@
 title: Ingerir dados através de um conector Power Query
 description: Conectores para origens de dados com base no Power Query.
 ms.date: 09/29/2020
-ms.reviewer: adkuppa
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: b9a1b30e37c3792aa7bdfcfc177da9e8a32c324d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267786"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596927"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Ligue-se a uma origem de dados do Power Query
 
-O Power Query oferece um vasto conjunto de conectores para ingerir dados. A maioria destes conectores são suportados pelo Dynamics 365 Customer Insights. A adição de origens de dados com base em conectores Power Query geralmente segue os passos descritos na secção seguinte. No entanto, dependendo do conector que utiliza, são necessárias informações diferentes. Para obter mais informações, consulte a documentação sobre os conectores individuais na [referência do conector Power Query](https://docs.microsoft.com/power-query/connectors/).
+O Power Query oferece um vasto conjunto de conectores para ingerir dados. A maioria destes conectores são suportados pelo Dynamics 365 Customer Insights. A adição de origens de dados com base em conectores Power Query geralmente segue os passos descritos na secção seguinte. No entanto, dependendo do conector que utiliza, são necessárias informações diferentes. Para obter mais informações, consulte a documentação sobre os conectores individuais na [referência do conector Power Query](/power-query/connectors/).
 
 ## <a name="create-a-new-data-source"></a>Criar uma nova origem de dados
 
@@ -44,7 +44,7 @@ O Power Query oferece um vasto conjunto de conectores para ingerir dados. A maio
    > [!div class="mx-imgBorder"]
    > ![Diálogo Editar consultas](media/data-manager-configure-edit-queries.png "Diálogo Editar consultas")
 
-1. Também pode transformar os seus dados. Selecione uma entidade para edição ou transformação. Utilize as opções na janela do Power Query para aplicar transformações. Cada transformação é listada em **Passos aplicados**. O Power Query fornece inúmeras opções de transformação pré-criadas. Para obter mais informações, veja [Transformações do Power Query](https://docs.microsoft.com/power-query/power-query-what-is-power-query#transformations).
+1. Também pode transformar os seus dados. Selecione uma entidade para edição ou transformação. Utilize as opções na janela do Power Query para aplicar transformações. Cada transformação é listada em **Passos aplicados**. O Power Query fornece inúmeras opções de transformação pré-criadas. Para obter mais informações, veja [Transformações do Power Query](/power-query/power-query-what-is-power-query#transformations).
 
 1. Poderá adicionar entidades adicionar à sua origem de dados ao selecionar **Obter dados** na caixa de diálogo **Editar consultas**.
 
@@ -59,7 +59,7 @@ O Power Query oferece um vasto conjunto de conectores para ingerir dados. A maio
 
 ## <a name="available-power-query-data-sources"></a>Origens de dados do Power Query disponíveis
 
-Consulte a [referência do conector Power Query](https://docs.microsoft.com/power-query/connectors/) para obter uma lista atualizada de conectores que pode selecionar para importar dados para o Customer Insights. 
+Consulte a [referência do conector Power Query](/power-query/connectors/) para obter uma lista atualizada de conectores que pode selecionar para importar dados para o Customer Insights. 
 
 Os conectores com uma marca de verificação na coluna **Customer Insights (Fluxos de dados)** estão disponíveis para criar novas origens de dados com base no Power Query. Reveja a documentação de um conector específico para saber mais sobre os seus pré-requisitos, limitações e outros detalhes.
 

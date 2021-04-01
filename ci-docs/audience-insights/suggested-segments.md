@@ -2,19 +2,19 @@
 title: Segmentos sugeridos com tecnologia de aprendizagem automática
 description: Deixe que a aprendizagem automática o ajude a encontrar segmentos novos e interessantes com base nos atributos do cliente.
 ms.date: 02/01/2021
-ms.reviewer: jimsonc
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: JimsonChalissery
+ms.author: jimsonc
 manager: shellyha
-ms.openlocfilehash: 54655d57f4f0f723b497fe47891fd397ccb9dbf4
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: bbc22adcd7b6e756fa6128abd855795de7480f2d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268240"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597111"
 ---
 # <a name="suggested-segments-preview"></a>Segmentos sugeridos (pré-visualização)
 

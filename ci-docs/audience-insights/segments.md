@@ -1,20 +1,20 @@
 ---
 title: Criar e gerir segmentos
 description: Crie segmentos de clientes para agrupá-los com base em vários atributos.
-ms.date: 10/15/2020
+ms.date: 03/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: jimsonc
+author: JimsonChalissery
+ms.author: jimsonc
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1308f07ac3ba7d4b09931bab3d19b6dfaf479ee
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 4a6e8a3216a2c0738d60247054afa9fc18412f55
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270370"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597069"
 ---
 # <a name="create-and-manage-segments"></a>Criar e gerir segmentos
 
@@ -35,19 +35,19 @@ Os segmentos são geridos na página **Segmentos**.
 
 1. Nas informações de audiência, vá à página **Segmentos**.
 
-2. Selecione **Novo** > **Segmento em branco**.
+1. Selecione **Novo** > **Segmento em branco**.
 
-3. No painel **Novo segmento**, escolha um tipo de segmento e atribua um **Nome**.
+1. No painel **Novo segmento**, escolha um tipo de segmento e atribua um **Nome**.
 
    Opcionalmente, forneça um nome a apresentar e uma descrição que ajude a identificar o segmento.
 
-4. Selecione **Seguinte** para ir para a página **Construtor de segmentos** onde define um grupo. Um grupo é um conjunto de clientes.
+1. Selecione **Seguinte** para ir para a página **Construtor de segmentos** onde define um grupo. Um grupo é um conjunto de clientes.
 
-5. Escolha a entidade que inclui o atributo pelo qual pretende segmentar.
+1. Escolha a entidade que inclui o atributo pelo qual pretende segmentar.
 
-6. Escolha o atributo pelo qual pretende segmentar. Este atributo pode ter um de quatro tipos de valor: numérico, cadeia de caracteres, data ou booleano.
+1. Escolha o atributo pelo qual pretende segmentar. Este atributo pode ter um de quatro tipos de valor: numérico, cadeia de caracteres, data ou booleano.
 
-7. Escolha um operador e um valor para o atributo selecionado.
+1. Escolha um operador e um valor para o atributo selecionado.
 
    > [!div class="mx-imgBorder"]
    > ![Filtro de grupo personalizado](media/customer-group-numbers.png "Filtro de grupo do cliente")
@@ -64,9 +64,14 @@ Os segmentos são geridos na página **Segmentos**.
    > [!div class="mx-imgBorder"]
    > ![Caminho da relação durante a criação do segmento](media/segments-multiple-relationships.png "Caminho da relação durante a criação do segmento")
 
-9. Selecione **Guardar** para guardar o segmento. O seu segmento será guardado e processado se todos os requisitos forem validados. Caso contrário, será guardado como rascunho.
+1. Por predefinição, os segmentos geram uma entidade de saída que contém todos os atributos dos perfis de cliente que correspondem aos filtros definidos. Se um segmento se basear noutras entidades diferentes da entidade *Cliente*, pode adicionar mais atributos destas entidades à entidade de saída. Selecione **Atributos do projeto** para escolher os atributos que serão acrescentados à entidade de saída.  
 
-10. Selecione **Regressar a segmentos** para regressar à página **Segmentos**.
+   
+   Exemplo: Um segmento baseia-se numa entidade que contém os dados de atividade do cliente que estão relacionados com a entidade *Cliente*. O segmento procura todos os clientes que ligaram para o suporte técnico nos últimos 60 dias. Pode optar por acrescentar a duração da chamada e o número de chamadas a todos os registos de clientes correspondentes na entidade de saída. Esta informação pode ser útil para enviar um e-mail com ligações úteis para artigos de ajuda online e FAQs aos clientes que ligaram com frequência.
+
+1. Selecione **Guardar** para guardar o segmento. O seu segmento será guardado e processado se todos os requisitos forem validados. Caso contrário, será guardado como rascunho.
+
+1. Selecione **Regressar a segmentos** para regressar à página **Segmentos**.
 
 ## <a name="manage-existing-segments"></a>Gerir segmentos existentes
 
@@ -85,6 +90,7 @@ A seguinte ação está disponível quando seleciona um segmento:
 
 - **Ver** os detalhes do segmento, incluindo a tendência da contagem de membros e uma pré-visualização dos membros do segmento.
 - **Editar** o segmento para alterar as respetivas propriedades.
+- **Criar duplicado** de um segmento. Pode optar por editar as suas propriedades imediatamente ou simplesmente guardar o duplicado.
 - **Atualizar** o segmento para incluir os dados mais recentes.
 - **Ativar** ou **desativar** o segmento. Os segmentos têm dois estados possíveis – ativos ou inativos. Estes estados são úteis ao editar um segmento. Para segmentos inativos, a definição de segmento existe, mas ainda não contém nenhum cliente. Quando ativa um segmento, o seu estado muda de "inativo" para "ativo" e começa a procurar clientes que correspondam à definição do segmento. Se uma [atualização agendada](system.md#schedule-tab) for configurada, os segmentos inativos têm o **Estado** listado como **Ignorado** indicando que uma atualização nem sequer foi tentada. Quando um segmento inativo é ativado, ele irá atualizar e será incluído em atualizações agendadas.
   Em alternativa, pode utilizar a funcionalidade **Agendar mais tarde** no menu pendente **Ativar/Desativar** para especificar uma data e hora futuras para ativação e desativação de um determinado segmento.

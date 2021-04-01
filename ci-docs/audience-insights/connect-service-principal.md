@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267736"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596513"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Ligue-se a uma conta Gen2 do Azure Data Lake Storage com um principal de serviço do Azure para informações sobre a audiência
 
@@ -23,7 +23,7 @@ As ferramentas automatizadas que utilizam os serviços Azure devem ter sempre pe
 Pode utilizar o principal de serviço para [adicionar ou editar uma pasta Common Data Model como origem de dados](connect-common-data-model.md) de forma segura, ou [criar um ambiente novo ou atualizar um ambiente existente](manage-environments.md#create-an-environment-in-an-existing-organization).
 
 > [!IMPORTANT]
-> - A conta de armazenamento do Azure Data Lake Gen2 que pretende utilizar o principal de serviço tem de ter o [Espaço de Nome Hierárquico (HNS) ativado](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - A conta de armazenamento do Azure Data Lake Gen2 que pretende utilizar o principal de serviço tem de ter o [Espaço de Nome Hierárquico (HNS) ativado](/azure/storage/blobs/data-lake-storage-namespace).
 > - Precisa de permissões de admin para a sua subscrição Azure para criar o principal de serviço.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Criar o principal do serviço Azure para informações sobre a audiência
@@ -48,7 +48,7 @@ Antes de criar um novo principal de serviço para as informações sobre a audi�
 
 ### <a name="create-a-new-service-principal"></a>Criar um novo principal de serviço
 
-1. Instale a versão mais recente do **Azure Active Directory PowerShell for Graph**. Para obter mais informações, consulte [Instalar Azure Active Directory PowerShell for Graph](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2).
+1. Instale a versão mais recente do **Azure Active Directory PowerShell for Graph**. Para obter mais informações, consulte [Instalar Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2).
    - No seu PC, selecione a tecla Windows no seu teclado e procure o **Windows PowerShell** e **Execute como Administrador**.
    
    - Na janela PowerShell que se abre, introduza `Install-Module AzureAD`.

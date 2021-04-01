@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: ameetj
+ms.author: ameetj
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270218"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598353"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Utilize os modelos com base no Azure Machine Learning Studio (clássico)
 
@@ -37,7 +37,7 @@ Num primeiro passo, precisamos de criar uma área de trabalho para e abrir o Mac
 
 1. Procure **Área de Trabalho do Machine Learning Studio** e selecione **Criar**.
 
-1. Introduza os detalhes necessários para [criar a área de trabalho](https://docs.microsoft.com/azure/machine-learning/studio/create-workspace). Escolha o **Plano de preços do plano de serviço Web** com base na quantidade de dados que pretende importar. Para melhor desempenho, selecione a **Localização** que é geograficamente mais próxima de si.
+1. Introduza os detalhes necessários para [criar a área de trabalho](/azure/machine-learning/studio/create-workspace). Escolha o **Plano de preços do plano de serviço Web** com base na quantidade de dados que pretende importar. Para melhor desempenho, selecione a **Localização** que é geograficamente mais próxima de si.
 
 1. Depois de criar o recurso, aparecerá o dashboard da área de trabalho do Machine Learning Studio. Selecione **Iniciar Machine Learning Studio**.
 
@@ -65,7 +65,7 @@ Pode agora criar uma nova experimentação, ou importar um modelo de experimento
 
    ![Criar um serviço Web preditivo](media/predictive-webservice-control.png)
 
-1. Uma vez que o experimento de serviço Web preditivo seja bem sucedido, pode implementá-lo para agendamento automático. Para que o serviço Web funcione com o Customer Insights, selecione **Implementar o Serviço Web** > **Implementar o Serviço Web [Novo] Pré-visualização**. [Obter mais informações sobre implementar o serviço Web](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
+1. Uma vez que o experimento de serviço Web preditivo seja bem sucedido, pode implementá-lo para agendamento automático. Para que o serviço Web funcione com o Customer Insights, selecione **Implementar o Serviço Web** > **Implementar o Serviço Web [Novo] Pré-visualização**. [Obter mais informações sobre implementar o serviço Web](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
    ![Implementar um serviço Web preditivo](media/predictive-webservice-deploy.png)
 
@@ -116,7 +116,7 @@ A imagem a seguir mostra o pipeline de formação e avaliação do modelo do Azu
 
 ![Modelo de abandono do Azure Machine Learning Studio](media/azure-machine-learning-model.png)
 
-Também aplicamos uma técnica chamada **Importância de Permutação De Funcionalidades**, um aspeto importante da otimização do modelo. Os modelos incorporados têm pouca ou nenhuma informação sobre o impacto de qualquer funcionalidade específica na predição final. A calculadora de importância de funcionalidades usa um algoritmo personalizado, para calcular a influência das funcionalidades individuais no resultado de um modelo específico. A importância de funcionalidades é normalizada entre +1 e -1. Uma influência negativa significa que a funcionalidade correspondente tem influência contraintuitiva no resultado e deve ser removida do modelo. Uma influência positiva indica que a funcionalidade está a contribuir fortemente para a predição. Estes valores não são coeficientes de correlação, pois são métricas diferentes. Para mais informações, consulte [Importância da Permutação de Funcionalidades](https://docs.microsoft.com/azure/machine-learning/studio-module-reference/permutation-feature-importance).
+Também aplicamos uma técnica chamada **Importância de Permutação De Funcionalidades**, um aspeto importante da otimização do modelo. Os modelos incorporados têm pouca ou nenhuma informação sobre o impacto de qualquer funcionalidade específica na predição final. A calculadora de importância de funcionalidades usa um algoritmo personalizado, para calcular a influência das funcionalidades individuais no resultado de um modelo específico. A importância de funcionalidades é normalizada entre +1 e -1. Uma influência negativa significa que a funcionalidade correspondente tem influência contraintuitiva no resultado e deve ser removida do modelo. Uma influência positiva indica que a funcionalidade está a contribuir fortemente para a predição. Estes valores não são coeficientes de correlação, pois são métricas diferentes. Para mais informações, consulte [Importância da Permutação de Funcionalidades](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
 Toda a [experiência de abandono está disponível na Azure AI Gallery](https://gallery.azure.ai/Experiment/Hotel-Churn-Predictive-Exp).
 
@@ -168,7 +168,7 @@ Toda a [experiência de recomendação do produto pode ser acedida no Azure AI G
 
 ## <a name="integrate-custom-models"></a>Integrar modelos personalizados
 
-Para utilizar estas previsões no Customer Insights, é necessário **exportar** as previsões juntamente com os IDs de cliente. [Exporte-os para o mesmo local de armazenamento de Blobs do Azure](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs) para o qual exporta os dados de origem. O serviço Web preditivo pode ser programado para ser executado regularmente e atualizar as classificações.
+Para utilizar estas previsões no Customer Insights, é necessário **exportar** as previsões juntamente com os IDs de cliente. [Exporte-os para o mesmo local de armazenamento de Blobs do Azure](/azure/storage/common/storage-import-export-data-from-blobs) para o qual exporta os dados de origem. O serviço Web preditivo pode ser programado para ser executado regularmente e atualizar as classificações.
 
 Os dados gerados pelo modelo personalizado podem ser utilizados para melhorar ainda mais os dados dos seus clientes. Para mais informações, consulte [Modelos personalizados de aprendizagem automática](custom-models.md).
 
