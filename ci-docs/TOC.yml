@@ -19,13 +19,13 @@
     - name: Módulos de aprendizagem
       items:
         - name: Ingerir dados
-          href: 'https://docs.microsoft.com/learn/modules/ingest-data-customer-insights/'
+          href: /learn/modules/ingest-data-customer-insights/
         - name: Criar um perfil de cliente unificado
-          href: 'https://docs.microsoft.com/learn/modules/unified-customer-profile/'
+          href: /learn/modules/unified-customer-profile/
         - name: Trabalhar com a aplicação
-          href: 'https://docs.microsoft.com/learn/modules/working-with-customer-insights/'
+          href: /learn/modules/working-with-customer-insights/
         - name: Melhorar dados e predições
-          href: 'https://docs.microsoft.com/learn/modules/enrich-data/'
+          href: /learn/modules/enrich-data/
     - name: Origens de dados
       items:
         - name: Descrição geral das origens de dados
@@ -114,6 +114,12 @@
       items:
         - name: Descrição dos destinos de exportação
           href: audience-insights/export-destinations.md
+        - name: AdRoll
+          href: audience-insights/export-adroll.md
+        - name: Adobe Campaign Standard
+          href: audience-insights/export-adobe-campaign-standard.md
+        - name: Plataforma de Experiência do Adobe
+          href: audience-insights/export-adobe-experience-platform.md
         - name: Autopilot
           href: audience-insights/export-autopilot.md
         - name: Armazenamento de Blobs do Azure
