@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: wameng
+ms.author: wameng
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5bcee3b4c51880740715575b18fd7a4dbf87e6d0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
+ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269942"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "5654746"
 ---
 # <a name="define-and-manage-measures"></a>Definir e gerir medidas
 
@@ -72,8 +72,8 @@ Esta secção acompanha-o através da criação de uma nova medida a partir do z
    1. Selecione **Editar dimensões** para adicionar atributos de dados pelos quais pretende agrupar os valores da medida. Por exemplo, cidade ou sexo. Por predefinição, a dimensão *CustomerID* é selecionada para criar *medidas ao nível do cliente*. Pode remover a dimensão predefinida se pretender criar *medidas ao nível do negócio*.
    1. Selecione **Concluído** para adicionar as dimensões à medida.
 
-1. Se existirem múltiplos caminhos entre a entidade de dados que mapeou e a entidade Cliente, tem de escolher um dos [caminhos de relação entre entidades](relationships.md) identificados. Os resultados da medida podem variar dependendo do caminho selecionado.
-   1. Selecione **Preferências de dados** e escolha o caminho da entidade que deve ser usado para identificar a sua medida.
+1. Se existirem múltiplos caminhos entre a entidade de dados que mapeou e a entidade *Cliente*, tem de escolher um dos [caminhos de relação entre entidades identificados](relationships.md). Os resultados da medida podem variar dependendo do caminho selecionado. 
+   1. Selecione **Preferências de dados** e escolha o caminho da entidade que deve ser usado para identificar a sua medida. Se houver apenas um único caminho para a entidade *Cliente*, este controlo não aparecerá.
    1. Selecione **Concluído** para aplicar a sua seleção. 
 
    :::image type="content" source="media/measures-data-preferences.png" alt-text="Selecionar o caminho da entidade para a medida.":::
