@@ -1,7 +1,7 @@
 ---
 title: Exportar dados do Customer Insights para o AdRoll
-description: Aprenda a configurar a ligação ao AdRoll.
-ms.date: 02/15/2021
+description: Aprenda a configurar a ligação e exportar para o AdRoll.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,32 +9,40 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6fedd549c2e7de362f36e3fb23d363200bb92a04
-ms.sourcegitcommit: d24e52150fe5a4fab45128e12d6a03637771d9b9
+ms.openlocfilehash: e8f4d4ee6b2c6cdec513b700641db568fa16076d
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "5697088"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5895973"
 ---
-# <a name="connector-for-adroll-preview"></a>Conector para o AdRoll (pré-visualização)
+# <a name="export-segment-lists-to-adroll-preview"></a>Exportar listas de segmentos para o AdRoll (pré-visualização)
 
 Exportar segmentos de perfis de clientes unificados para o AdRoll e usá-los para publicidade. 
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites-for-a-connection"></a>Pré-requisitos para uma ligação
 
 -   Tem uma [conta do AdRoll](https://www.adroll.com/) e credenciais de administrador correspondentes.
 -   Tem [segmentos configurados](segments.md) nos insights da audiência.
 -   Os perfis unificados dos clientes nos segmentos exportados contêm um campo que representam um endereço de correio eletrónico.
 
-## <a name="connect-to-adroll"></a>Ligar à AdRoll
+## <a name="known-limitations"></a>Limitações conhecidas
 
-1. Aceda a **Administrador** > **Destinos de exportação**.
+- Pode exportar até 250.000 perfis por exportação para o AdRoll.
+- Não pode exportar segmentos com menos de 100 perfis para o AdRoll. 
+- A exportação para o AdRoll está limitada a segmentos.
+- Exportar até 250.000 perfis para o AdRoll pode demorar até 10 minutos para ser concluído. 
+- O número de perfis que pode exportar para o AdRoll é dependente e limitado no seu contrato com o AdRoll.
 
-1. Sob **AdRoll**, selecione **Configurar**.
+## <a name="set-up-connection-to-adroll"></a>Configure a ligação para o AdRoll
 
-1. Forneça um nome reconhecível ao destino de exportação no campo **Nome a apresentar**.
+1. Aceda a **Admin** > **Ligações**.
 
-   :::image type="content" source="media/AdRoll_config.PNG" alt-text="Painel de configuração para a ligação ao AdRoll.":::
+1. Selecione **Adicionar ligação** e escolha **AdRoll** para configurar a ligação.
+
+1. Forneça um nome reconhecível à ligação no campo **Nome a apresentar**. O nome e o tipo de ligação descrevem esta ligação. Recomendamos a escolha de um nome que explique o propósito e o destino da ligação.
+
+1. Escolher quem pode utilizar esta ligação. Se não tomar nenhuma ação, a predefinição será Administradores. Para mais informações, consulte [Permitir que os contribuidores utilizem uma ligação para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Selecione **Concordo** para confirmar a **Privacidade e conformidade dos dados**.
 
@@ -44,29 +52,30 @@ Exportar segmentos de perfis de clientes unificados para o AdRoll e usá-los par
 
 1. Selecione **Adicione-se como utilizador de exportação** e fornecer as suas credenciais Customer Insights.
 
-1. Introduza o seu **ID de anunciante do AdRoll** [AdRoll para publicidade](https://help.adroll.com/hc/en-us/articles/212011838-Advertiser-Profiles).
+1. Selecione **Guardar** para concluir a ligação.
 
-1. Selecione **Seguinte** para configurar a exportação.
+## <a name="configure-an-export"></a>Configurar uma exportação
 
-## <a name="configure-the-connector"></a>Configurar o conector
+Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Para obter mais informações, consulte [Permissões necessárias para configurar uma exportação](export-destinations.md#set-up-a-new-export).
 
-1. Na secção **Correspondência de dados**, no campo **E-mail**, selecione o campo no seu perfil unificado de cliente que representa o endereço de correio eletrónico de um cliente. É necessário exportar segmentos para o AdRoll.
+1. Aceda a **Dados** > **Exportações**.
+
+1. Para criar uma nova exportação, selecione **Adicionar destino**.
+
+1. No campo **Ligação para a exportação**, escolha uma ligação a partir da secção AdRoll. Se não vir este nome de secção, não existem ligações deste tipo disponíveis para si.
+
+1. Introduza o seu **ID do Anunciante do AdRoll**. Para mais informações, consulte [Perfis do Anunciante do AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+
+3. Na secção **Correspondência de dados**, no campo **E-mail**, selecione o campo no seu perfil unificado de cliente que representa o endereço de correio eletrónico de um cliente. É necessário exportar segmentos para o AdRoll.
 
 1. Selecione os segmentos que quer exportar. Selecione um segmento com, pelo menos, 100 membros. Não pode exportar segmentos menores. Além disso, o tamanho máximo de um segmento para exportar é de 250.000 membros por exportação. 
 
 1. Selecione **Guardar**.
 
-## <a name="export-the-data"></a>Exportar os dados
+Guardar uma exportação não executa a exportação imediatamente.
 
-Pode [exportar dados a pedido](export-destinations.md). A exportação também será executada com cada [atualização agendada](system.md#schedule-tab).
+A exportação é executada com cada [atualização agendada](system.md#schedule-tab). Também pode [exportar dados a pedido](export-destinations.md#run-exports-on-demand). 
 
-## <a name="known-limitations"></a>Limitações conhecidas
-
-- Pode exportar até 250.000 perfis por exportação para o AdRoll.
-- Não pode exportar segmentos com menos de 100 perfis para o AdRoll. 
-- A exportação para o AdRoll está limitada a segmentos.
-- Exportar até 250.000 perfis para o AdRoll pode demorar até 10 minutos para ser concluído. 
-- O número de perfis que pode exportar para o AdRoll é dependente e limitado no seu contrato com o AdRoll.
 
 ## <a name="data-privacy-and-compliance"></a>Privacidade e conformidade de dados
 

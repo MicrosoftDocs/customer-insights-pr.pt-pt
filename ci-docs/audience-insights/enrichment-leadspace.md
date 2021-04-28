@@ -1,7 +1,7 @@
 ---
 title: Melhoramento dos perfis de empresas com o melhoramento de terceiros Leadspace
 description: Informação geral sobre o melhoramento de terceiros Leadspace.
-ms.date: 11/24/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,46 +9,67 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 41c56aece043c2d7658fd2655713e1e98775edec
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: ccf4f661ecffb281556a4545b1f26ee809c697cd
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597663"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5895927"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Enriquecimento de perfis da empresa com Leadspace (pré-visualização)
 
-A Leadspace é uma empresa de ciência de dados que fornece uma Plataforma de Dados de Clientes B2B. Permite que os clientes com perfis de clientes unificados para as empresas enriqueçam os seus dados. Os melhoramentos incluem atributos adicionais tais como tamanho da empresa, localização, indústria, e muito mais.
+A Leadspace é uma empresa de ciência de dados que fornece uma Plataforma de Dados de Clientes B2B. Permite que os clientes com perfis de clientes unificados para as empresas enriqueçam os seus dados. Os enriquecimentos incluem mais atributos, como o tamanho da empresa, a localização, o setor e muito mais.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 Para configurar o Leadspace, devem ser cumpridos os seguintes pré-requisitos:
 
-- Tem uma licença Leadspace ativa e a "chave perpétua" (referida como **token Leadspace**). Contacte diretamente a [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) para obter mais detalhes sobre o seu produto.
-- Tem permissões de [Administrador](permissions.md#administrator).
+- Tem uma licença de Leadspace ativa.
 - Tem [perfis de clientes unificados](customer-profiles.md) para empresas.
+- Uma ligação Leadspace já foi configurada por um administrador ou tem permissões de [administrador](permissions.md#administrator) e a "chave perpétua" (designada por **token Leadspace**). Contacte a [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) diretamente para obter mais detalhes sobre o respetivo produto.
 
-## <a name="configuration"></a>Configuração
+## <a name="configure-the-enrichment"></a>Configurar o enriquecimento
 
 1. Nos insights de audiência, vá a **Dados** > **Melhoramento**.
 
-1. Selecione **Enriquecer os meus dados** no mosaico Leadspace.
+1. Selecione **Enriquecer os meus dados** no mosaico da Leadspace e selecione **Começar**.
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Captura de ecrã do mosaico Leadscape.":::
 
-1. Selecione **Iniciar** e depois introduzir um **token Leadspace** ativo (chave perpétua). Reveja e forneça o seu consentimento para a **Privacidade e conformidade de dados** selecionando a caixa de verificação **Concordo**. Confirmar ambas as entradas, selecionando **Ligar a Leadspace**.
+1. Selecione uma [ligação](connections.md) na lista pendente. Contacte um administrador se não houver nenhuma ligação disponível. Se for um administrador, pode criar uma ligação selecionando **Adicionar ligação** e escolhendo a **Leadspace**. 
 
-1. Selecione **Mapear dados** e escolha o conjunto de dados que pretende melhorar com os dados da empresa a partir do Leadspace. Pode selecionar a entidade *Cliente* para melhorar todos os seus perfis de cliente ou selecionar uma entidade de segmento para melhorar apenas os perfis de cliente contidos nesse segmento.
+1. Selecione **Ligar à Leadspace** para confirmar a ligação.
 
-   :::image type="content" source="media/enrichment-leadspace-select-segment.png" alt-text="Escolha entre o perfil do cliente e o melhoramento do segmento.":::
+1. Selecione **Seguinte** e escolha o **Conjunto de dados de cliente** que pretende enriquecer com os dados da empresa da Leadspace. Pode selecionar a entidade **Cliente** para melhorar todos os seus perfis de cliente ou selecionar uma entidade de segmento para melhorar apenas os perfis de cliente contidos nesse segmento.
 
-1. Clique em **Seguinte** e defina quais os campos dos seus perfis unificados que devem ser usados para procurar dados da empresa correspondentes a partir do Leadspace. O campo **Nome da empresa** é necessário. Para uma maior precisão de correspondência, podem ser adicionados até dois outros campos, **Website da empresa** e **Localização da empresa**.
+    :::image type="content" source="media/enrichment-Leadspace-configuration-customer-data-set.png" alt-text="Captura de ecrã de quando escolhe o conjunto de dados do cliente.":::
+
+1. Selecione **Seguinte** e defina que campos dos seus perfis unificados são utilizados para procurar dados da empresa correspondentes a partir da Leadspace. O campo **Nome da empresa** é necessário. Para uma maior precisão de correspondência, podem ser adicionados até dois outros campos, **Website da empresa** e **Localização da empresa**.
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Painel de mapeamento de campo Leadspace.":::
-   
-1. Selecione **Aplicar** para completar o mapeamento de campo.
 
-1. Selecione **Executar** para enriquecer os perfis da empresa. A duração de um melhoramento depende do número de perfis unificados de clientes.
+1. Selecione **Seguinte** para concluir o mapeamento de campos.
+
+1. Forneça um nome para o enriquecimento e selecione **Guardar enriquecimento** depois de rever as suas escolhas.
+
+
+## <a name="configure-the-connection-for-leadspace"></a>Configurar a ligação para a Leadspace 
+
+Tens de ser um administrador para configurar ligações. Selecione **Adicionar ligação** ao configurar um enriquecimento *ou* vá a **Admin** > **Ligações** e selecione **Configurar** no mosaico da Leadspace.
+
+1. Selecione **Começar** 
+
+1. Introduza um nome para a ligação na caixa **Nome a Apresentar**.
+
+1. Forneça um token da Leadspace válido.
+
+1. Reveja e forneça o seu consentimento para a **Privacidade e conformidade de dados** selecionando a caixa de verificação **Concordo**
+
+1. Selecione **Verificar** para validar a configuração.
+
+1. Depois de concluir a verificação, selecione **Guardar**.
+   
+   :::image type="content" source="media/enrichment-Leadspace-connection.png" alt-text="Página de configuração de ligação à Leadspace.":::
 
 ## <a name="enrichment-results"></a>Resultados do enriquecimento
 

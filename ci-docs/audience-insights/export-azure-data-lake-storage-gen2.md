@@ -1,7 +1,7 @@
 ---
 title: Exportar dados do Customer Insights para o Azure Data Lake Storage Gen2
 description: Aprenda a configurar a ligação ao Azure Data Lake Storage Gen2.
-ms.date: 02/04/2021
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,35 +9,47 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 7c0eef575f745efa6312d7141a6dd96607f9797e
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f431b707e1d65ffe47f8b3aa1c52abaa964e871a
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596652"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760065"
 ---
-# <a name="connector-for-azure-data-lake-storage-gen2-preview"></a>Conector para o Azure Data Lake Storage Gen2 (pré-visualização)
+# <a name="set-up-the-connection-to-azure-data-lake-storage-gen2-preview"></a>Configure a ligação ao Azure Data Lake Storage Gen2 (pré-visualização)
 
-Armazene os seus dados do Customer Insights no Azure Data Lake Storage Gen2 ou utilize-os para transferir os seus dados para outras aplicações.
+1. Aceda a **Admin** > **Ligações**.
 
-## <a name="configure-the-connector-for-azure-data-lake-storage-gen2"></a>Configure o conector para o Azure Data Lake Storage Gen2
+1. Selecione **Adicionar ligação** e escolha **Azure Data Lake Gen 2** para configurar a ligação.
 
-1. Nos insights de audiência, vá a **Admin** > **Destinos de exportação**.
+1. Forneça um nome reconhecível à ligação no campo **Nome a apresentar**. O nome e o tipo de ligação descrevem esta ligação. Recomendamos a escolha de um nome que explique o propósito e o destino da ligação.
 
-1. Sob **Azure Data Lake Storage Gen2**, selecione **Configurar**.
-
-1. Forneça um nome reconhecível ao destino no campo **Nome a apresentar**.
+1. Escolher quem pode utilizar esta ligação. Se não tomar nenhuma ação, a predefinição será Administradores. Para mais informações, consulte [Permitir que os contribuidores utilizem uma ligação para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Introduza o **Nome da conta**, a **Chave da conta** e o **Recipiente** para o seu Azure Data Lake Storage Gen2.
     - Para aprender a criar uma conta de armazenamento a utilizar com o Azure Data Lake Storage Gen2, consulte [Criar conta de armazenamento](/azure/storage/blobs/create-data-lake-storage-account). 
-    - Para saber mais sobre como encontrar o nome da conta de armazenamento e a chave da conta do Azure Data Lake Gen2, consulte [Gerir definições da conta de armazenamento no portal do Azure](/azure/storage/common/storage-account-manage).
+    - Para saber mais sobre o nome da conta de armazenamento do Azure Data Lake Gen2 e a chave da conta, consulte [Gerir definições da conta de armazenamento no portal do Azure](/azure/storage/common/storage-account-manage).
 
-1. Selecione **Seguinte**.
+1. Selecione **Guardar** para concluir a ligação. 
+
+## <a name="configure-an-export"></a>Configurar uma exportação
+
+Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Para obter mais informações, consulte [Permissões necessárias para configurar uma exportação](export-destinations.md#set-up-a-new-export).
+
+1. Aceda a **Dados** > **Exportações**.
+
+1. Para criar um nova exportação, selecione **Adicionar exportação**.
+
+1. No campo **Ligação para a exportação**, escolha uma ligação a partir da secção **Azure Data Lake**. Se não vir este nome de secção, não existem ligações deste tipo disponíveis para si.
 
 1. Selecione a caixa junto de cada uma das entidades que pretende exportar para este destino.
 
 1. Selecione **Guardar**.
 
-## <a name="export-the-data"></a>Exportar os dados
+Guardar uma exportação não executa a exportação imediatamente.
 
-Pode [exportar dados a pedido](export-destinations.md#export-data-on-demand). A exportação também será executada com cada [atualização agendada](system.md#schedule-tab).
+A exportação é executada com cada [atualização agendada](system.md#schedule-tab). Também pode [exportar dados a pedido](export-destinations.md#run-exports-on-demand). 
+
+Os dados exportados são armazenados no contentor do Azure Data Lake Gen 2 que configurou. 
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

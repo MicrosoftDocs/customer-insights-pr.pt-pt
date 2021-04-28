@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 75f5f9f8f56a33b2a43a605595a463ca2e937c6b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595670"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906916"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Previsão de abandono de subscrição (pré-visualização)
 
@@ -49,6 +49,12 @@ A previsão de abandono de subscrição ajuda a prever se um cliente está em ri
         - **Carimbo de data/hora:** A data e a hora do evento identificadas pela chave primária.
         - **Evento:** o nome do evento que pretende utilizar. Por exemplo, um campo chamado "UserAction" num serviço de vídeo de transmissão em fluxo pode ter o valor de "Visualizado".
         - **Detalhes:** Informações detalhadas sobre o evento. Por exemplo, um campo chamado "ShowTitle" num serviço de vídeo de transmissão em fluxo pode ter o valor de um vídeo que o cliente visualizou.
+- Características de dados sugeridos:
+    - Dados históricos suficientes: dados de subscrição para, pelo menos, o dobro da janela de tempo selecionada. De preferência, dois a três anos de dados de subscrição.
+    - Estado de subscrição: os dados incluem subscrições ativas e inativas para cada cliente, pelo que existem múltiplas entradas por ID de cliente.
+    - Número de clientes: pelo menos, 10 perfis de clientes, de preferência mais de 1.000 clientes exclusivos. O modelo falhará com menos de 10 clientes e dados históricos insuficientes.
+    - Totalidade dos dados: menos de 20% de valores em falta no campo de dados da entidade fornecida.
+   
    > [!NOTE]
    > Vai precisar de, pelo menos, dois registos de atividade para 50% dos clientes para os quais pretende calcular o abandono.
 
@@ -67,7 +73,7 @@ A previsão de abandono de subscrição ajuda a prever se um cliente está em ri
 ### <a name="define-customer-churn"></a>Definir abandono de clientes
 
 1. Insira o número de **Dias desde que a subscrição terminou** que o seu negócio considera um cliente em estado de abandono. Este período é tipicamente comparado a atividades empresariais como ofertas ou outros esforços de marketing tentando evitar a perda do cliente.
-1. Insira o número de **Dias para investigar o futuro para prever o abandono** para definir uma janela para prever o qual prever o abandono. Por exemplo, para prever o risco de abandono para os seus clientes nos próximos 90 dias para se alinhar com os seus esforços de retenção de marketing. Prever o risco de abandono por períodos de tempo mais longos ou mais curtos pode dificultar a abordagem dos fatores do seu perfil de risco, mas isso está altamente dependente dos seus requisitos específicos de negócio. Selecione **Seguinte** para continuar
+1. Insira o número de **Dias para investigar o futuro para prever o abandono** para definir uma janela para prever o qual prever o abandono. Por exemplo, para prever o risco de abandono para os seus clientes nos próximos 90 dias para se alinhar com os seus esforços de retenção de marketing. Prever o risco de abandono por períodos de tempo mais longos ou mais curtos pode dificultar o processamento dos fatores do seu perfil de risco de abandono, dependendo dos requisitos específicos do seu negócio. Selecione **Seguinte** para continuar
    >[!TIP]
    > Pode selecionar **Guardar e fechar** a qualquer momento para guardar a previsão como rascunho. Vais encontrar o rascunho de previsão no separador **Minhas previsões** para continuar.
 
@@ -113,7 +119,8 @@ A previsão de abandono de subscrição ajuda a prever se um cliente está em ri
 1. Selecione a predição que pretende rever.
    - **Nome da previsão:** O nome da previsão fornecida ao criá-la.
    - **Tipo de previsão:** O tipo de modelo utilizado para a previsão
-   - **Entidade de saída:** Nome da entidade para armazenar a saída da previsão. Pode encontrar uma entidade com este nome em **Dados** > **Entidades**.
+   - **Entidade de saída:** Nome da entidade para armazenar a saída da previsão. Pode encontrar uma entidade com este nome em **Dados** > **Entidades**.    
+     Na entidade de saída, *ChurnScore* é a probabilidade prevista de abandono e *IsChurn* é uma etiqueta binária baseada em *ChurnScore* com limiar de 0,5. O limiar predefinido pode não funcionar para o seu cenário. [Crie um novo segmento](segments.md#create-a-new-segment) com o seu limiar preferido.
    - **Campo previsto:** Este campo é povoado apenas para alguns tipos de previsões, e não é usado na previsão de abandono de subscrição.
    - **Estado:** O estado atual da execução da previsão.
         - **Em fila:** a previsão está neste momento à espera que outros processos sejam executados.

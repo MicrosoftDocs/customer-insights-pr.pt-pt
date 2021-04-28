@@ -1,7 +1,7 @@
 ---
 title: Exportar dados Customer Insights para o Facebook Ads Manager
-description: Saiba como configurar a ligação ao Gestor de Anúncios do Facebook.
-ms.date: 06/05/2020
+description: Aprenda a configurar a ligação e exportar para o Gestor de Anúncios do Facebook.
+ms.date: 04/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,64 +9,83 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3e2b52fe743563e4bf61d870cbf1718e6c752a67
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: ca32906a98bc734639fb369d6f5a92e8888fd850
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596697"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906824"
 ---
-# <a name="connector-for-facebook-ads-manager-preview"></a>Conector para o Gestor de Anúncios do Facebook (pré-visualização)
+# <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Lista de segmentos de exportação para o Gestor de Anúncios do Facebook (pré-visualização)
 
 Exportar segmentos de perfis de cliente unificados para o Gestor de Anúncios do Facebook para criar campanhas no Facebook e no Instagram.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites-for-connection"></a>Pré-requisitos para a ligação
 
-- Precisa de ter uma [**Conta de Anúncio do Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) que inclua uma [**Conta Comercial do Facebook**](https://business.facebook.com/).
+- Necessita de ter uma [**Conta de Publicidade do Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) que inclua uma [**Conta Empresarial do Facebook**](https://business.facebook.com/).
 - Tem de ser um administrador na [**Conta De Anúncio do Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
 
-## <a name="connect-to-facebook-ads-manager"></a>Ligar ao Gestor de Anúncios do Facebook
+## <a name="known-limitations"></a>Limitações conhecidas
 
-1. Aceda a **Administrador** > **Destinos de exportação**.
+- Até 10 milhões de perfis de clientes por exportação para o Gestor de Anúncios do Facebook.
+- A exportação para o Gestor de Anúncios do Facebook está limitada a segmentos.
+- Crie ou atualize audiências personalizadas apenas no Facebook do tipo *lista de clientes* apenas.
+- Exportar segmentos com um total de 10 milhões de perfis podem levar até 90 minutos para completar.
 
-1. Em **Gestor de Anúncios do Facebook**, selecione **Configurar**.
+## <a name="set-up-connection-to-facebook-ads-manager"></a>Configurar ligação ao Gestor de Anúncios do Facebook
 
-1. Forneça um nome reconhecível ao destino de exportação no campo **Nome a apresentar**.
+Antes de os utilizadores poderem criar uma exportação, um administrador tem de configurar a ligação ao serviço e permitir que os contribuidores utilizem a ligação.
 
-1. Selecione **Continuar com o Facebook** para iniciar sessão na sua Conta de Anúncio do Facebook.
+1. Aceda a **Admin** > **Ligações**.
 
-1. Permitir a permissão **ads_management** após autenticação com o Facebook.
+1. Selecione **Adicionar ligação** e escolha **Gestor de Anúncios do Facebook** para configurar a ligação.
 
-1. Selecione a **Conta de Anúncios do Facebook** com que pretende trabalhar.
+1. Forneça um nome reconhecível à ligação no campo **Nome a apresentar**. O nome e o tipo de ligação descrevem esta ligação. Recomendamos a escolha de um nome que explique o propósito e o destino da ligação.
 
-1. Selecione uma **Audiência personalizada existente** na lista pendente ou crie uma **Nova audiência personalizada**. Para mais informações, consulte [**Audiências no Gestor de Anúncios do Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
+1. Escolher quem pode utilizar esta ligação. Se não tomar nenhuma ação, a predefinição será **Administradores**. Para mais informações, consulte [Permitir que os contribuidores utilizem uma ligação para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Selecione **Concordo** para confirmar a **Privacidade e conformidade dos dados**.
+1. Autenticar com os Anúncios do Facebook: 
 
-1. Selecione **Seguinte** para configurar a exportação.
+   1. Selecione **Continuar com o Facebook** para iniciar sessão na sua Conta de Anúncio do Facebook.
 
-## <a name="configure-the-connector"></a>Configurar o conector
+   1. Permitir a permissão **ads_management** após autenticação com o Facebook.
 
-1. Em **Escolher o campo de identificador de chave**, selecione **E-mail**, **Nome e endereço** ou **Telefone** para enviar para o Gestor de Anúncios do Facebook.
+   1. Selecione a **Conta de Anúncios do Facebook** com que pretende trabalhar.
+
+   1. Selecione uma **Audiência personalizada existente** na lista pendente ou crie uma **Nova audiência personalizada**. Para mais informações, consulte [**Audiências no Gestor de Anúncios do Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
+      > [!NOTE]
+      > Com esta exportação, só é possível criar ou atualizar audiências personalizadas no Facebook do tipo *lista de clientes*. Em alguns casos, vê audiências personalizadas de diferentes tipos na lista pendente. A seleção de um tipo diferente de *lista de clientes* resultará numa exportação falhada. 
+
+1. Reveja a **Privacidade e conformidade dos dados** e selecione **Concordo**.
+
+1. Selecione **Guardar** para concluir a ligação.
+
+## <a name="configure-an-export"></a>Configurar uma exportação
+
+Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Para obter mais informações, consulte [Permissões necessárias para configurar uma exportação](export-destinations.md#set-up-a-new-export).
+
+1. Aceda a **Dados** > **Exportações**.
+
+1. Para criar uma nova exportação, selecione **Adicionar destino**. 
+
+1. Em **Ligação para a exportação**, escolha uma ligação a partir da secção **Gestor de Anúncios do Facebook**. Se não vir este nome de secção, não existem ligações deste tipo disponíveis para si.
+
+1. Em **Escolher o campo de identificador de chave**, selecione **E-mail**, **Nome e endereço** ou **Telefone** para enviar para o Gestor de Anúncios do Facebook. 
+
+1. Forneça um nome reconhecível à ligação no campo **Nome a apresentar**.
 
 1. Mapeie os atributos correspondentes da entidade de cliente unificada para o identificador-chave selecionado.
    > [DICA] As melhores hipóteses para que uma correspondência ocorra é se selecionar **E-mail** como identificador de chave. A adição de identificadores adicionais pode melhorar a correspondência.
 
-1. Selecione **Adicionar atributo** para mapear atributos adicionais para enviar para o Gestor de Anúncios do Facebook. Atributos do Gestor de Anúncios do Facebook estão a mapear para os seguintes nomes amigáveis de utilizador: **NP** = **Nome Próprio**, **AP** = **Apelido**, **PI** = **Primeira Inicial**, **TELEFONE** = **Telefone**, **SEX** = **Sexo**, **DN** = **Data de nascimento**, **EST** = **Estado**, **CD** = **Cidade**, **CP** = **Código postal**, **PAÍS** = **País / Região**
+1. Selecione **Adicionar atributo** para mapear mais atributos para enviar para o Gestor de Anúncios do Facebook. Atributos do Gestor de Anúncios do Facebook estão a mapear para os seguintes nomes amigáveis de utilizador: **NP** = **Nome Próprio**, **AP** = **Apelido**, **PI** = **Primeira Inicial**, **TELEFONE** = **Telefone**, **SEX** = **Sexo**, **DN** = **Data de nascimento**, **EST** = **Estado**, **CD** = **Cidade**, **CP** = **Código postal**, **PAÍS** = **País / Região**
 
 1. Selecione os segmentos que quer exportar.
 
 1. Selecione **Guardar**.
 
-## <a name="export-the-data"></a>Exportar os dados
+Guardar uma exportação não executa a exportação imediatamente.
 
-Pode [exportar dados a pedido](export-destinations.md). A exportação também será executada com cada [atualização agendada](system.md#schedule-tab).
-
-## <a name="known-limitations"></a>Limitações conhecidas
-
-- Até 10 milhões de perfis de clientes por exportação para o Gestor de Anúncios do Facebook 
-- A exportação para o Gestor de Anúncios do Facebook está limitada a segmentos
-- Exportar segmentos com um total de 10 milhões de perfis podem levar até 90 minutos para completar
+A exportação é executada com cada [atualização agendada](system.md#schedule-tab). Também pode [exportar dados a pedido](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Privacidade e conformidade de dados
 

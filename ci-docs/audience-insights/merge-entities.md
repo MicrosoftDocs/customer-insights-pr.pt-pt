@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 737c593353878a5e322488d00de5dc5db5befda9
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 4ad06a0baf57e612fc0e0214dfd23d28e7d2b6be
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597847"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896525"
 ---
 # <a name="merge-entities"></a>Unir entidades
 
@@ -83,7 +83,7 @@ Se não foi a primeira vez que executou uma intercalação com êxito, todos os 
 
 ## <a name="next-step"></a>Passo Seguinte
 
-Configure [atividades](activities.md), [melhoramento](enrichment-microsoft-graph.md) ou [relações](relationships.md) para obter mais informações sobre os seus clientes.
+Configure [atividades](activities.md), [melhoramento](enrichment-hub.md) ou [relações](relationships.md) para obter mais informações sobre os seus clientes.
 
 Se já tiver configurado atividades, enriquecimento ou relações, ou se tiver definido segmentos, estes serão processados automaticamente para utilizar os dados mais recentes do cliente.
 

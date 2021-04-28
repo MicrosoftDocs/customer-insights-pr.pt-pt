@@ -1,7 +1,7 @@
 ---
 title: Funcionalidades novas e para breve
 description: Informações sobre as novas funcionalidades, melhoramentos e correções de erros.
-ms.date: 03/08/2021
+ms.date: 04/07/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2159481f9355de738a7b457dcf0849a45c3e08db
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598467"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896249"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>O que há de novo na capacidade de informações de audiência do Dynamics 365 Customer Insights
 
@@ -22,14 +22,51 @@ ms.locfileid: "5598467"
 
 É com entusiasmo que anunciamos as nossas mais recentes atualizações! Este artigo resume as funcionalidades de pré-visualização públicas, melhorias gerais de disponibilidade e atualizações de funcionalidades. Para conhecer os planos de funcionalidades a longo prazo, consulte os [Planos de versão do Dynamics 365 e do Power Platform](/dynamics365/release-plans/).
 
-Também pode ver o vídeo seguinte para saber mais sobre as capacidades planeadas para os últimos seis meses.
-
-> [!VIDEO https://www.youtube.com/embed/jQh-7pscH30]
-
 Implementamos as atualizações numa base por região. Assim, certas regiões podem ver características antes de outras. A menos que seja especificado de forma diferente, não precisa de tomar nenhuma ação e atualizaremos a aplicação automaticamente sem tempo de inatividade.
 
 > [!TIP]
 > Para enviar e votar em pedidos de funcionalidades e sugestões para produtos, vá para o [portal de ideias de aplicação do Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="march-2021-updates"></a>Atualizações de março de 2021
+
+As atualizações em março de 2021 incluem várias atualizações de versão de funcionalidades e de desempenho, bem como correções de erros.
+
+### <a name="activities"></a>Atividades
+
+- **Assistente de atividade e tipos semânticos** Melhorámos e atualizámos a nossa experiência de mapeamento de atividades para orientar e simplificar a criação do mapeamento de atividades. Nesta nova experiência, os utilizadores obtêm uma experiência guiada para ajudar a completar cada passo do processo. No passo de mapeamento de atividades, além de escolher entre muitos tipos de atividade, o utilizador pode optar por mapear semanticamente dados para *Subscription* e/ou *SalesOrderLine* para esquemas de norma do setor, que podem ser usados para consumo a jusante.    
+  Para mais informações, veja [Atividades de cliente](activities.md).
+
+### <a name="data-ingestion"></a>Ingestão de dados
+
+- **Ligar a origens de dados no local utilizando fluxos de dados e gateways do Power Platform** Temos o prazer de anunciar a pré-visualização de fluxos de dados e conectividade no local do Power Platform utilizando gateways no Customer Insights com um ambiente Power Platform ou Dataverse associado. Quaisquer novas origens de dados criadas num ambiente do Customer Insights com um ambiente Dataverse associado irão assumir a predefinição dos fluxos de dados do Power Platform que trazem a conectividade de dados no local e um rico conjunto de conectores e capacidades de transformação.
+
+### <a name="extensibility"></a>Extensibilidade
+
+- **Exportações organizadas em ligações e exportações** Mudámos o nome da página **Exportar destinos** para **Ligações** e adicionámos uma página separada para **Exportações**. Como parte desta atualização, vamos transitar as exportações existentes para pares de uma ligação e uma exportação utilizando essa ligação. Os administradores têm agora mais clareza sobre os dados de saída na página **Ligações**. Todas as funções de utilizador têm acesso à página **Exportações**, mas apenas os administradores podem optar por permitir que os contribuidores editem exportações específicas com ligações partilhadas.     
+  Para mais informações, consulte [Descrição geral das ligações](connections.md) e [Descrição geral das exportações](export-destinations.md).
+
+- **Exportar segmentos para a Campaign Monitor** Alargámos os nossos destinos de exportação para incluir a Campaign Monitor. Agora, pode exportar segmentos do Customer Insights para listas da Campaign Monitor e utilizá-los como a linha de base para as suas campanhas de marketing.    
+   Para mais informações, consulte [Exportar para a Campaign Monitor](export-campaign-monitor.md).
+
+- **Exportar segmentos para a Constant Contact** Alargámos os nossos destinos de exportação para incluir a Constant Contact. Agora, pode exportar segmentos do Customer Insights para listas da Constant Contact e utilizá-los como a linha de base para as suas campanhas de marketing.   
+   Para mais informações, consulte [Exportar para a Constant Contact](export-constant-contact.md).
+
+- **Exportar segmentos para o RollWorks** Alargámos os nossos destinos de exportação para incluir o RollWorks. Agora, pode exportar segmentos do Customer Insights para audiências do RollWorks e utilizá-los como a linha de base para a sua publicidade B2B.    
+   Para mais informações, consulte [Exportar para o RollWorks](export-rollworks.md).
+
+- **Exportar segmentos para o Snapchat** Alargámos os nossos destinos de exportação para incluir o Snapchat. Agora, pode exportar segmentos do Customer Insights para audiências do Snapchat e utilizá-los como a linha de base para a sua publicidade.     
+   Para mais informações, consulte [Exportar para o Snapchat](export-snapchat.md).
+
+### <a name="predictions"></a>Predições
+
+- **Utilizar filtros de produtos em recomendações de produtos preditivas** Adicionámos a capacidade de utilização de filtros de produtos no nosso modelo de recomendação de produtos. Agora, pode criar um predição que utiliza apenas um subconjunto dos seus produtos.    
+   Para obter mais informações, consulte [Configurar filtros de produtos](predict-product-recommendation.md#configure-product-filters).
+
+- **Criar segmentos a partir de predições de modelos** Adicionámos uma forma rápida de criar segmentos utilizando os resultados de um modelo de predição. A partir da página de resultados do modelo, pode facilmente criar um novo segmento selecionando a nova opção **Criar segmento**.    
+  Para obter mais informações, consulte [Criar um segmento baseado num modelo de predição](prediction-based-segment.md).
+
+- **Explicações para recomendações de produtos** Adicionámos informações que explicam os fatores principais aprendidos pelo modelo de IA para gerar recomendações de produtos e até que ponto esses fatores contribuem para as recomendações de produtos. Estas informações são adicionadas ao ecrã de resultados do modelo.    
+   Para obter mais informações, consulte [Rever um estado de predição e resultados](predict-product-recommendation.md#review-a-prediction-status-and-results).
 
 ## <a name="february-2021-updates"></a>Atualizações de fevereiro de 2021
 
@@ -107,7 +144,7 @@ As atualizações em dezembro de 2020 incluem várias atualizações de versão 
 
   Além disso, adicionámos novas opções de configuração para controlar melhor a forma como pretende que os perfis do seu cliente sejam melhorados. 
 
-  Para mais informações, consulte [Enriquecer perfis de clientes com afinidades de marca e interesse](enrichment-microsoft-graph.md).
+  Para mais informações, consulte [Enriquecer perfis de clientes com afinidades de marca e interesse](enrichment-microsoft.md).
 
 - **Controle que perfis melhorar**
 
@@ -309,8 +346,8 @@ As atualizações em agosto de 2020 incluem várias funcionalidades, atualizaç�
 
 - **Melhoramento de afinidades de interesses disponível em mais mercados**
 
-  Estamos a alargar a disponibilidade do melhoramento de afinidades de interesses para além dos Estados Unidos para outros cinco mercados: Canadá, Austrália, Reino Unido, França e Alemanha. Com esta extensão, pode melhorar os dados do seu cliente com mais interesses aplicáveis a estes mercados. Também enriqueceremos os perfis dos seus clientes localizados nestes mercados utilizando dados de propriedade local do Microsoft Graph.
-  Para mais informações, consulte [Enriquecer perfis de clientes com afinidades de marca e interesse](enrichment-microsoft-graph.md)
+  Estamos a alargar a disponibilidade do melhoramento de afinidades de interesses para além dos Estados Unidos para outros cinco mercados: Canadá, Austrália, Reino Unido, França e Alemanha. Com esta extensão, pode melhorar os dados do seu cliente com mais interesses aplicáveis a estes mercados. Também enriqueceremos os perfis dos seus clientes localizados nestes mercados utilizando dados de propriedade da Microsoft locais.
+  Para mais informações, consulte [Enriquecer perfis de clientes com afinidades de marca e interesse](enrichment-microsoft.md)
 
 
 ## <a name="july-2020-updates"></a>Atualizações de julho de 2020
@@ -330,8 +367,8 @@ As atualizações em julho de 2020 incluem várias funcionalidades, atualizaçõ
 
 - **Melhoramento de afinidades de marcas disponível em mais mercados**
 
-  Estamos a alargar a disponibilidade do melhoramento de afinidades de marcas para além dos Estados Unidos para outros cinco mercados: Canadá, Austrália, Reino Unido, França e Alemanha. Com esta extensão, pode enriquecer os dados dos seus clientes com marcas locais nestes mercados. Também enriqueceremos os perfis dos seus clientes localizados nestes mercados utilizando dados de propriedade local do Microsoft Graph.
-  Para mais informações, consulte [Enriquecer perfis de clientes com afinidades de marca e interesse](enrichment-microsoft-graph.md)
+  Estamos a alargar a disponibilidade do melhoramento de afinidades de marcas para além dos Estados Unidos para outros cinco mercados: Canadá, Austrália, Reino Unido, França e Alemanha. Com esta extensão, pode enriquecer os dados dos seus clientes com marcas locais nestes mercados. Também enriqueceremos os perfis dos seus clientes localizados nestes mercados utilizando dados de propriedade da Microsoft locais.
+  Para mais informações, consulte [Enriquecer perfis de clientes com afinidades de marca e interesse](enrichment-microsoft.md)
 
 ## <a name="june-2020-updates"></a>Atualizações de junho de 2020
 
@@ -355,7 +392,7 @@ As atualizações em junho de 2020 incluem várias funcionalidades, atualizaçõ
 - **Enriquecimento de afinidade de marca e interesse em separado**
 
   As marcas e interesses estão agora disponíveis como dois enriquecimentos independentes. Os enriquecimentos separados conferem-lhe a flexibilidade para os configurar e gerir individualmente, dependendo dos requisitos ou necessidades do seu negócio.    
-  Para mais informações, consulte [Enriquecer perfis de clientes com afinidades de marca e interesse](enrichment-microsoft-graph.md).
+  Para mais informações, consulte [Enriquecer perfis de clientes com afinidades de marca e interesse](enrichment-microsoft.md).
 
 #### <a name="extensibility"></a>Extensibilidade
 

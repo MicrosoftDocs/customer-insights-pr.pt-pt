@@ -1,7 +1,7 @@
 ---
 title: Exportar dados do Customer Insights para o Adobe Campaign Standard
 description: Saiba como usar segmentos de informações da audiência no Adobe Campaign Standard.
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: a5d0154c3d7c473dcba03fac0847bafcf97de2f2
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596329"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760295"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Usar segmentos do Customer Insights no Adobe Campaign Standard (pré-visualização)
 
@@ -48,15 +48,21 @@ O e-mail de oferta que pretende enviar irá conter o nome próprio, apelido e a 
 
 ## <a name="export-your-target-audience"></a>Exportar a audiência alvo
 
+### <a name="configure-a-connection"></a>Configurar uma ligação
+
 Com a nossa audiência alvo identificada, podemos configurar a exportação das informações da audiência para uma conta de Armazenamento de Blobs do Azure.
 
-1. Nos insights de audiência, vá a **Admin** > **Destinos de exportação**.
+1. No Audience Insights, vá a **Admin** > **Ligações**.
 
-1. No mosaico **Adobe Campaign**, selecione **Configurar**.
+1. Selecione **Adicionar ligação** e escolha a **Adobe Campaign** para configurar a ligação ou selecione **Configurar** no mosaico **Adobe Campaign**
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Mosaico de configuração do Adobe Campaign Standard.":::
 
-1. Forneça um **Nome a apresentar** para este novo destino de exportação e, em seguida, introduza o **Nome da conta**, **Chave da conta** e **Recipiente** da conta de Armazenamento de Blobs do Azure para onde pretende exportar o segmento.  
+1. Forneça um nome reconhecível à ligação no campo **Nome a apresentar**. O nome e o tipo de ligação descrevem esta ligação. Recomendamos a escolha de um nome que explique o propósito e o destino da ligação.
+
+1. Escolher quem pode utilizar esta ligação. Se não tomar nenhuma ação, a predefinição será Administradores. Para obter mais informações, consulte [Permissões necessárias para configurar uma exportação](export-destinations.md#set-up-a-new-export).
+
+1. Introduza o **Nome da conta**, a **Chave da conta** e o **Contentor** da conta de Armazenamento de Blobs do Azure para onde pretende exportar o segmento.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Captura de ecrã da configuração da conta de armazenamento. "::: 
 
@@ -64,7 +70,17 @@ Com a nossa audiência alvo identificada, podemos configurar a exportação das 
 
    - Para saber mais sobre como criar um contentor, consulte [Criar um contentor](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. Selecione **Seguinte**.
+1. Selecione **Guardar** para concluir a ligação.
+
+### <a name="configure-an-export"></a>Configurar uma exportação
+
+Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Para obter mais informações, consulte [Permissões necessárias para configurar uma exportação](export-destinations.md#set-up-a-new-export).
+
+1. Aceda a **Dados** > **Exportações**.
+
+1. Para criar um nova exportação, selecione **Adicionar exportação**.
+
+1. No campo **Ligação para a exportação**, escolha uma ligação a partir da secção Adobe Campaign. Se não vir este nome de secção, não existem ligações deste tipo disponíveis para si.
 
 1. Escolha o segmento que pretende exportar. Neste exemplo, é **ChurnProneCustomers**.
 
@@ -83,11 +99,9 @@ Com a nossa audiência alvo identificada, podemos configurar a exportação das 
 
 1. Selecione **Guardar**.
 
-Depois de guardar o destino de exportação, encontra-o em **Administrador** > **Exportações** > **Os meus destinos de exportação**.
+Depois de guardar o destino de exportação, encontra-o em **Dados** > **Exportações**.
 
-:::image type="content" source="media/export-destination-adobe-campaign-standard.png" alt-text="Captura de ecrã com lista de exportações e segmento de exemplo em destaque.":::
-
-Agora pode [exportar o segmento a pedido](export-destinations.md#export-data-on-demand). A exportação também será executada com cada [atualização agendada](system.md).
+Agora pode [exportar o segmento a pedido](export-destinations.md#run-exports-on-demand). A exportação também será executada com cada [atualização agendada](system.md).
 
 > [!NOTE]
 > Certifique-se de que o número de registos no segmento exportado está dentro do limite permitido da sua licença de Adobe Campaign Standard.

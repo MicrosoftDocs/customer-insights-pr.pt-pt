@@ -1,7 +1,7 @@
 ---
 title: Exportar dados Customer Insights para a DotDigital
-description: Saiba como configurar a ligação a DotDigital.
-ms.date: 11/14/2020
+description: Aprenda a configurar a ligação e exportar para a DotDigital.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,33 +9,40 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 51a28bdf0de34f0555d8ad7e3d13b2ef8911d417
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 235bcdfa4a7c4c1a382778bd4f66c1a9f5b7beb1
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598031"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759973"
 ---
-# <a name="connector-for-dotdigital-preview"></a>Ligação para DotDigital (pré-visualização)
+# <a name="export-segment-lists-to-dotdigital-preview"></a>Exportar listas de segmentos para a DotDigital (pré-visualização)
 
 Exportar segmentos de perfis unificados de clientes para a DotDigital e utilizá-los em campanhas, marketing por e-mail, e construir segmentos de clientes com a DotDigital. 
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites-for-a-connection"></a>Pré-requisitos para uma ligação
 
 -   Tem uma [conta DotDigital](https://dotdigital.com/) e as correspondentes credenciais de administrador.
 -   Existem livros de endereços na DotDigital e os IDs correspondentes. A ID pode ser encontrada no URL ao selecionar e abrir um livro de endereços. Para mais informações, ver [livros de endereços DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 -   Tem [segmentos configurados](segments.md) nos insights da audiência.
 -   Os perfis unificados dos clientes nos segmentos exportados contêm um campo que representam um endereço de correio eletrónico.
 
-## <a name="connect-to-dotdigital"></a>Ligar a DotDigital
+## <a name="known-limitations"></a>Limitações conhecidas
 
-1. Aceda a **Administrador** > **Destinos de exportação**.
+- Até 1 milhão de perfis por exportar para a DotDigital.
+- A exportação para a DotDigital é limitada a segmentos.
+- A exportação de segmentos com um total de 1 milhão de perfis pode demorar até 3 horas devido a limitações do lado do fornecedor. 
+- O número de perfis que pode exportar para a DotDigital está dependente e limitado ao seu contrato com a DotDigital.
 
-1. Em **DotDigital**, selecione **Configurar**.
+## <a name="set-up-connection-to-dotdigital"></a>Configurar ligação à DotDigital
 
-1. Forneça um nome reconhecível ao destino de exportação no campo **Nome a apresentar**.
+1. Aceda a **Admin** > **Ligações**.
 
-   :::image type="content" source="media/DotDigital_config.PNG" alt-text="Painel de configuração para exportação DotDigital.":::
+1. Selecione **Adicionar ligação** e escolha **DotDigital** para configurar a ligação.
+
+1. Forneça um nome reconhecível à ligação no campo **Nome a apresentar**. O nome e o tipo de ligação descrevem esta ligação. Recomendamos a escolha de um nome que explique o propósito e o destino da ligação.
+
+1. Escolher quem pode utilizar esta ligação. Se não tomar nenhuma ação, a predefinição será Administradores. Para mais informações, consulte [Permitir que os contribuidores utilizem uma ligação para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Introduza o seu **nome de utilizador e a palavra-passe DotDigital**.
 
@@ -47,9 +54,18 @@ Exportar segmentos de perfis unificados de clientes para a DotDigital e utilizá
 
 1. Selecione **Adicione-se como utilizador de exportação** e fornecer as suas credenciais Customer Insights.
 
-1. Selecione **Seguinte** para configurar a exportação.
+1. Selecione **Guardar** para concluir a ligação. 
 
-## <a name="configure-the-connector"></a>Configurar o conector
+## <a name="configure-an-export"></a>Configurar uma exportação
+
+Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Para obter mais informações, consulte [Permissões necessárias para configurar uma exportação](export-destinations.md#set-up-a-new-export).
+
+1. Aceda a **Dados** > **Exportações**.
+
+1. Para criar uma nova exportação, selecione **Adicionar destino**.
+
+1. No campo **Ligação para a exportação**, escolha uma ligação a partir da secção DotDigital. Se não vir este nome de secção, não existem ligações deste tipo disponíveis para si.
+
 
 1. Na secção **Correspondência de dados**, no campo **E-mail**, selecione o campo no seu perfil unificado de cliente que representa o endereço de correio eletrónico de um cliente. Repita os mesmos passos para outros campos opcionais, tais como **nome próprio**, **nome próprio**, **nome completo**, **género**, e **código postal**.
 
@@ -57,16 +73,12 @@ Exportar segmentos de perfis unificados de clientes para a DotDigital e utilizá
 
 1. Selecione **Guardar**.
 
-## <a name="export-the-data"></a>Exportar os dados
+Guardar uma exportação não executa a exportação imediatamente.
 
-Pode [exportar dados a pedido](export-destinations.md). A exportação também será executada com cada [atualização agendada](system.md#schedule-tab). Na DotDigital, pode agora encontrar os seus segmentos nos [livros de endereços DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
+A exportação é executada com cada [atualização agendada](system.md#schedule-tab). Também pode [exportar dados a pedido](export-destinations.md#run-exports-on-demand). 
+ 
+Na DotDigital, pode agora encontrar os seus segmentos nos [livros de endereços DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 
-## <a name="known-limitations"></a>Limitações conhecidas
-
-- Até 1 milhão de perfis por exportar para a DotDigital.
-- A exportação para a DotDigital é limitada a segmentos.
-- A exportação de segmentos com um total de 1 milhão de perfis pode demorar até 3 horas devido a limitações do lado do fornecedor. 
-- O número de perfis que pode exportar para a DotDigital está dependente e limitado ao seu contrato com a DotDigital.
 
 ## <a name="data-privacy-and-compliance"></a>Privacidade e conformidade de dados
 

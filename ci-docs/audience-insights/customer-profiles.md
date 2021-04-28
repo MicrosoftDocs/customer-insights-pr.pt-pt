@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: d6a9e7872a488b6d68afce35b547f93cc4a7c652
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596881"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896341"
 ---
 # <a name="customer-profiles"></a>Perfis de cliente
 
@@ -59,7 +59,7 @@ Detalhes do cliente incluem:
 
 -   **Mosaico de perfil de cliente:** Este mosaico mostra os diferentes valores da entidade unificada de perfil de cliente. Estes detalhes podem incluir endereço de e-mail, nome, cidade, e assim por diante. 
 
--   **Potenciais interesses, potenciais marcas:** Mostra se foi configurado um enriquecimento de primera parte. Representa interesses e afinidades potenciais para marcas que um cliente com um perfil semelhante a este cliente possa ter. Para mais informações, consulte [Enriquecer perfis de clientes com afinidades de marca e interesse](enrichment-microsoft-graph.md).
+-   **Potenciais interesses, potenciais marcas:** Mostra se foi configurado um enriquecimento de primera parte. Representa interesses e afinidades potenciais para marcas que um cliente com um perfil semelhante a este cliente possa ter. Para mais informações, consulte [Enriquecer perfis de clientes com afinidades de marca e interesse](enrichment-microsoft.md).
 
 -   **Medidas:** Mostra se configurou uma ou mais medidas de um tipo específico: medidas de atributos do cliente. Incluem os KPIs calculados em torno dos seus clientes a nível do cliente individual. Para mais informações, consulte [Definir e gerir medidas](measures.md).
 
