@@ -1,7 +1,7 @@
 ---
 title: Exportar dados Customer Insights para anfitriões SFTP
-description: Saiba como configurar a ligação a um anfitrião SFTP.
-ms.date: 01/27/2021
+description: Aprenda a configurar a ligação e exportar para uma localização SFTP.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,61 +9,70 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 9ec14fafa8f99e34b95349371298082e166535d0
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 96c6026aded315008439740646827ca910cead90
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598399"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760433"
 ---
-# <a name="connector-for-sftp-preview"></a><span data-ttu-id="ce1ec-103">Conector para SFTP (pré-visualização)</span><span class="sxs-lookup"><span data-stu-id="ce1ec-103">Connector for SFTP (preview)</span></span>
+# <a name="export-segment-lists-and-other-data-to-sftp-preview"></a><span data-ttu-id="e89d3-103">Exportar listas de segmentos e outros dados para o SFTP (pré-visualização)</span><span class="sxs-lookup"><span data-stu-id="e89d3-103">Export segment lists and other data to SFTP (preview)</span></span>
 
-<span data-ttu-id="ce1ec-104">Utilize os seus dados de clientes em aplicações de terceiros, exportando-os para um anfitrião SFTP (Secure File Transfer Protocol).</span><span class="sxs-lookup"><span data-stu-id="ce1ec-104">Use your customer data in third-party applications by exporting them to a Secure File Transfer Protocol (SFTP) host.</span></span>
+<span data-ttu-id="e89d3-104">Utilize os dados dos seus clientes em aplicações de terceiros exportando-os para uma localização do SFTP (Secure File Transfer Protocol).</span><span class="sxs-lookup"><span data-stu-id="e89d3-104">Use your customer data in third-party applications by exporting them to a Secure File Transfer Protocol (SFTP) location.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="ce1ec-105">Pré-requisitos</span><span class="sxs-lookup"><span data-stu-id="ce1ec-105">Prerequisites</span></span>
+## <a name="prerequisites-for-connection"></a><span data-ttu-id="e89d3-105">Pré-requisitos para a ligação</span><span class="sxs-lookup"><span data-stu-id="e89d3-105">Prerequisites for connection</span></span>
 
-- <span data-ttu-id="ce1ec-106">Disponibilidade de um anfitrião SFTP e credenciais correspondentes.</span><span class="sxs-lookup"><span data-stu-id="ce1ec-106">Availability of an SFTP host and corresponding credentials.</span></span>
+- <span data-ttu-id="e89d3-106">Disponibilidade de um anfitrião SFTP e credenciais correspondentes.</span><span class="sxs-lookup"><span data-stu-id="e89d3-106">Availability of an SFTP host and corresponding credentials.</span></span>
 
-## <a name="connect-to-sftp"></a><span data-ttu-id="ce1ec-107">Ligar à SFTP</span><span class="sxs-lookup"><span data-stu-id="ce1ec-107">Connect to SFTP</span></span>
+## <a name="known-limitations"></a><span data-ttu-id="e89d3-107">Limitações conhecidas</span><span class="sxs-lookup"><span data-stu-id="e89d3-107">Known limitations</span></span>
 
-1. <span data-ttu-id="ce1ec-108">Aceda a **Administrador** > **Destinos de exportação**.</span><span class="sxs-lookup"><span data-stu-id="ce1ec-108">Go to **Admin** > **Export destinations**.</span></span>
+- <span data-ttu-id="e89d3-108">O runtime de uma exportação depende do desempenho do seu sistema.</span><span class="sxs-lookup"><span data-stu-id="e89d3-108">The runtime of an export depends on your system performance.</span></span> <span data-ttu-id="e89d3-109">Recomendamos dois núcleos CPU e 1 Gb de memória como configuração mínima do seu servidor.</span><span class="sxs-lookup"><span data-stu-id="e89d3-109">We recommend two CPU cores and 1 Gb of memory as minimal configuration of your server.</span></span> 
+- <span data-ttu-id="e89d3-110">As entidades exportadoras com até 100 milhões de perfis de clientes podem demorar 90 minutos quando utilizam a configuração mínima recomendada de dois núcleos CPU e 1 Gb de memória.</span><span class="sxs-lookup"><span data-stu-id="e89d3-110">Exporting entities with up to 100 million customer profiles can take 90 minutes when using the recommended minimal configuration of two CPU cores and 1 Gb of memory.</span></span> 
 
-1. <span data-ttu-id="ce1ec-109">Em **SFTP**, selecione **Configurar**.</span><span class="sxs-lookup"><span data-stu-id="ce1ec-109">Under **SFTP**, select **Set up**.</span></span>
+## <a name="set-up-connection-to-sftp"></a><span data-ttu-id="e89d3-111">Configurar ligação ao SFTP</span><span class="sxs-lookup"><span data-stu-id="e89d3-111">Set up connection to SFTP</span></span>
 
-1. <span data-ttu-id="ce1ec-110">Forneça um nome reconhecível ao destino no campo **Nome a apresentar**.</span><span class="sxs-lookup"><span data-stu-id="ce1ec-110">Give your destination a recognizable name in the **Display name** field.</span></span>
+1. <span data-ttu-id="e89d3-112">Aceda a **Admin** > **Ligações**.</span><span class="sxs-lookup"><span data-stu-id="e89d3-112">Go to **Admin** > **Connections**.</span></span>
 
-1. <span data-ttu-id="ce1ec-111">Forneça um **Nome de utilizador**, **Palavra-passe**, **Nome do anfitrião** e **Pasta de exportação** para a sua conta SFTP.</span><span class="sxs-lookup"><span data-stu-id="ce1ec-111">Provide a **Username**, **Password**, **Hostname**, and **Export folder** for your SFTP account.</span></span>
+1. <span data-ttu-id="e89d3-113">Selecione **Adicionar ligação** e escolha **SFTP** para configurar a ligação.</span><span class="sxs-lookup"><span data-stu-id="e89d3-113">Select **Add connection** and choose **SFTP** to configure the connection.</span></span>
 
-1. <span data-ttu-id="ce1ec-112">Selecione **Verificar** para testar a ligação.</span><span class="sxs-lookup"><span data-stu-id="ce1ec-112">Select **Verify** to test the connection.</span></span>
+1. <span data-ttu-id="e89d3-114">Forneça um nome reconhecível à ligação no campo **Nome a apresentar**.</span><span class="sxs-lookup"><span data-stu-id="e89d3-114">Give your connection a recognizable name in the **Display name** field.</span></span> <span data-ttu-id="e89d3-115">O nome e o tipo de ligação descrevem esta ligação.</span><span class="sxs-lookup"><span data-stu-id="e89d3-115">The name and the type of the connection describe this connection.</span></span> <span data-ttu-id="e89d3-116">Recomendamos a escolha de um nome que explique o propósito e o destino da ligação.</span><span class="sxs-lookup"><span data-stu-id="e89d3-116">We recommend choosing a name that explains the purpose and target of the connection.</span></span>
 
-1. <span data-ttu-id="ce1ec-113">Após uma verificação bem sucedida, escolha se pretende exportar os seus dados **Comprimidos por G** ou **Não comprimidos** e selecione o **delimitador de campo** para os ficheiros exportados.</span><span class="sxs-lookup"><span data-stu-id="ce1ec-113">After successful verification, choose if you want to export your data **Gzipped** or **Unzipped**, and select the **field delimiter** for the exported files.</span></span>
+1. <span data-ttu-id="e89d3-117">Escolher quem pode utilizar esta ligação.</span><span class="sxs-lookup"><span data-stu-id="e89d3-117">Choose who can use this connection.</span></span> <span data-ttu-id="e89d3-118">Se não tomar nenhuma ação, a predefinição será Administradores.</span><span class="sxs-lookup"><span data-stu-id="e89d3-118">If you take no action, the default will be Administrators.</span></span> <span data-ttu-id="e89d3-119">Para mais informações, consulte [Permitir que os contribuidores utilizem uma ligação para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).</span><span class="sxs-lookup"><span data-stu-id="e89d3-119">For more information, see [Allow contributors to use a connection for exports](connections.md#allow-contributors-to-use-a-connection-for-exports).</span></span>
 
-1. <span data-ttu-id="ce1ec-114">Selecione **Concordo** para confirmar a **Privacidade e conformidade dos dados**.</span><span class="sxs-lookup"><span data-stu-id="ce1ec-114">Select **I agree** to confirm the **Data privacy and compliance**.</span></span>
+1. <span data-ttu-id="e89d3-120">Forneça um **Nome de utilizador**, **Palavra-passe**, **Nome do anfitrião** e **Pasta de exportação** para a sua conta SFTP.</span><span class="sxs-lookup"><span data-stu-id="e89d3-120">Provide a **Username**, **Password**, **Hostname**, and **Export folder** for your SFTP account.</span></span>
 
-1. <span data-ttu-id="ce1ec-115">Selecione **Seguinte** para começar aconfigurar a exportação.</span><span class="sxs-lookup"><span data-stu-id="ce1ec-115">Select **Next** to start configuring the export.</span></span>
+1. <span data-ttu-id="e89d3-121">Selecione **Verificar** para testar a ligação.</span><span class="sxs-lookup"><span data-stu-id="e89d3-121">Select **Verify** to test the connection.</span></span>
 
-## <a name="configure-the-export"></a><span data-ttu-id="ce1ec-116">Configurar a exportação</span><span class="sxs-lookup"><span data-stu-id="ce1ec-116">Configure the export</span></span>
+1. <span data-ttu-id="e89d3-122">Escolha se pretende exportar os seus dados em **Gzip** ou **Deszipados** e o **delimitador de campo** para os ficheiros exportados.</span><span class="sxs-lookup"><span data-stu-id="e89d3-122">Choose if you want to export your data **Gzipped** or **Unzipped** and the **field delimiter** for the exported files.</span></span>
 
-1. <span data-ttu-id="ce1ec-117">Selecione as entidades, para segmentos de exemplo, que quer exportar.</span><span class="sxs-lookup"><span data-stu-id="ce1ec-117">Select the entities, for example segments, you want to export.</span></span>
+1. <span data-ttu-id="e89d3-123">Selecione **Concordo** para confirmar a **Privacidade e conformidade dos dados**.</span><span class="sxs-lookup"><span data-stu-id="e89d3-123">Select **I agree** to confirm the **Data privacy and compliance**.</span></span>
+
+1. <span data-ttu-id="e89d3-124">Selecione **Guardar** para concluir a ligação.</span><span class="sxs-lookup"><span data-stu-id="e89d3-124">Select **Save** to complete the connection.</span></span>
+
+## <a name="configure-an-export"></a><span data-ttu-id="e89d3-125">Configurar uma exportação</span><span class="sxs-lookup"><span data-stu-id="e89d3-125">Configure an export</span></span>
+
+<span data-ttu-id="e89d3-126">Pode configurar esta exportação se tiver acesso a uma ligação deste tipo.</span><span class="sxs-lookup"><span data-stu-id="e89d3-126">You can configure this export if you have access to a connection of this type.</span></span> <span data-ttu-id="e89d3-127">Para obter mais informações, consulte [Permissões necessárias para configurar uma exportação](export-destinations.md#set-up-a-new-export).</span><span class="sxs-lookup"><span data-stu-id="e89d3-127">For more information, see [Permissions needed to configure an export](export-destinations.md#set-up-a-new-export).</span></span>
+
+1. <span data-ttu-id="e89d3-128">Aceda a **Dados** > **Exportações**.</span><span class="sxs-lookup"><span data-stu-id="e89d3-128">Go to **Data** > **Exports**.</span></span>
+
+1. <span data-ttu-id="e89d3-129">Para criar uma nova exportação, selecione **Adicionar destino**.</span><span class="sxs-lookup"><span data-stu-id="e89d3-129">To create a new export, select **Add destination**.</span></span>
+
+1. <span data-ttu-id="e89d3-130">No campo **Ligação para a exportação**, escolha uma ligação a partir da secção SFTP.</span><span class="sxs-lookup"><span data-stu-id="e89d3-130">In the **Connection for export** field, choose a connection from the SFTP section.</span></span> <span data-ttu-id="e89d3-131">Se não vir este nome de secção, não existem ligações deste tipo disponíveis para si.</span><span class="sxs-lookup"><span data-stu-id="e89d3-131">If you don't see this section name, there are no connections of this type available to you.</span></span>
+
+1. <span data-ttu-id="e89d3-132">Selecione as entidades, para segmentos de exemplo, que quer exportar.</span><span class="sxs-lookup"><span data-stu-id="e89d3-132">Select the entities, for example segments, you want to export.</span></span>
 
    > [!NOTE]
-   > <span data-ttu-id="ce1ec-118">Cada entidade selecionada terá até cinco ficheiros de saída quando exportado.</span><span class="sxs-lookup"><span data-stu-id="ce1ec-118">Each selected entity will be up to five output files when exported.</span></span> 
+   > <span data-ttu-id="e89d3-133">Cada entidade selecionada será dividida em até cinco ficheiros de saída quando exportada.</span><span class="sxs-lookup"><span data-stu-id="e89d3-133">Each selected entity will be split up into up to five output files when exported.</span></span> 
 
-1. <span data-ttu-id="ce1ec-119">Selecione **Guardar**.</span><span class="sxs-lookup"><span data-stu-id="ce1ec-119">Select **Save**.</span></span>
+1. <span data-ttu-id="e89d3-134">Selecione **Guardar**.</span><span class="sxs-lookup"><span data-stu-id="e89d3-134">Select **Save**.</span></span>
 
-## <a name="export-the-data"></a><span data-ttu-id="ce1ec-120">Exportar os dados</span><span class="sxs-lookup"><span data-stu-id="ce1ec-120">Export the data</span></span>
+<span data-ttu-id="e89d3-135">Guardar uma exportação não executa a exportação imediatamente.</span><span class="sxs-lookup"><span data-stu-id="e89d3-135">Saving an export doesn't run the export immediately.</span></span>
 
-<span data-ttu-id="ce1ec-121">Pode [exportar dados a pedido](export-destinations.md).</span><span class="sxs-lookup"><span data-stu-id="ce1ec-121">You can [export data on demand](export-destinations.md).</span></span> <span data-ttu-id="ce1ec-122">A exportação também será executada com cada [atualização agendada](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="ce1ec-122">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+<span data-ttu-id="e89d3-136">A exportação é executada com cada [atualização agendada](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="e89d3-136">The export runs with every [scheduled refresh](system.md#schedule-tab).</span></span> <span data-ttu-id="e89d3-137">Também pode [exportar dados a pedido](export-destinations.md#run-exports-on-demand).</span><span class="sxs-lookup"><span data-stu-id="e89d3-137">You can also [export data on demand](export-destinations.md#run-exports-on-demand).</span></span> 
 
-## <a name="known-limitations"></a><span data-ttu-id="ce1ec-123">Limitações conhecidas</span><span class="sxs-lookup"><span data-stu-id="ce1ec-123">Known limitations</span></span>
+## <a name="data-privacy-and-compliance"></a><span data-ttu-id="e89d3-138">Privacidade e conformidade de dados</span><span class="sxs-lookup"><span data-stu-id="e89d3-138">Data privacy and compliance</span></span>
 
-- <span data-ttu-id="ce1ec-124">O runtime de uma exportação depende do desempenho do seu sistema.</span><span class="sxs-lookup"><span data-stu-id="ce1ec-124">The runtime of an export depends on your system performance.</span></span> <span data-ttu-id="ce1ec-125">Recomendamos dois núcleos CPU e 1 Gb de memória como configuração mínima do seu servidor.</span><span class="sxs-lookup"><span data-stu-id="ce1ec-125">We recommend two CPU cores and 1 Gb of memory as minimal configuration of your server.</span></span> 
-- <span data-ttu-id="ce1ec-126">As entidades exportadoras com até 100 milhões de perfis de clientes podem demorar 90 minutos quando utilizam a configuração mínima recomendada de dois núcleos CPU e 1 Gb de memória.</span><span class="sxs-lookup"><span data-stu-id="ce1ec-126">Exporting entities with up to 100 million customer profiles can take 90 minutes when using the recommended minimal configuration of two CPU cores and 1 Gb of memory.</span></span> 
-
-## <a name="data-privacy-and-compliance"></a><span data-ttu-id="ce1ec-127">Privacidade e conformidade de dados</span><span class="sxs-lookup"><span data-stu-id="ce1ec-127">Data privacy and compliance</span></span>
-
-<span data-ttu-id="ce1ec-128">Quando ativa Dynamics 365 Customer Insights para transmitir dados através de SFTP, permite a transferência de dados fora dos limites de conformidade para Dynamics 365 Customer Insights, incluindo dados potencialmente sensíveis, tais como Dados Pessoais.</span><span class="sxs-lookup"><span data-stu-id="ce1ec-128">When you enable Dynamics 365 Customer Insights to transmit data via SFTP, you allow transfer of data outside of the compliance boundary for Dynamics 365 Customer Insights, including potentially sensitive data such as Personal Data.</span></span> <span data-ttu-id="ce1ec-129">A Microsoft transferirá tais dados sob as suas instruções, mas o utilizador é responsável por assegurar que o destino de exportação cumpre quaisquer obrigações de privacidade ou segurança que possa ter.</span><span class="sxs-lookup"><span data-stu-id="ce1ec-129">Microsoft will transfer such data at your instruction, but you are responsible for ensuring that the export destination meets any privacy or security obligations you may have.</span></span> <span data-ttu-id="ce1ec-130">Para obter mais informações, consulte [Declaração de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).</span><span class="sxs-lookup"><span data-stu-id="ce1ec-130">For more information, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=396732).</span></span>
-<span data-ttu-id="ce1ec-131">O seu administrador Dynamics 365 Customer Insights pode remover este destino de exportação em qualquer altura para descontinuar a utilização desta funcionalidade.</span><span class="sxs-lookup"><span data-stu-id="ce1ec-131">Your Dynamics 365 Customer Insights Administrator can remove this export destination at any time to discontinue use of this functionality.</span></span>
-
+<span data-ttu-id="e89d3-139">Quando ativa Dynamics 365 Customer Insights para transmitir dados através de SFTP, permite a transferência de dados fora dos limites de conformidade para Dynamics 365 Customer Insights, incluindo dados potencialmente sensíveis, tais como Dados Pessoais.</span><span class="sxs-lookup"><span data-stu-id="e89d3-139">When you enable Dynamics 365 Customer Insights to transmit data via SFTP, you allow transfer of data outside of the compliance boundary for Dynamics 365 Customer Insights, including potentially sensitive data such as Personal Data.</span></span> <span data-ttu-id="e89d3-140">A Microsoft transferirá tais dados sob as suas instruções, mas o utilizador é responsável por assegurar que o destino de exportação cumpre quaisquer obrigações de privacidade ou segurança que possa ter.</span><span class="sxs-lookup"><span data-stu-id="e89d3-140">Microsoft will transfer such data at your instruction, but you are responsible for ensuring that the export destination meets any privacy or security obligations you may have.</span></span> <span data-ttu-id="e89d3-141">Para obter mais informações, consulte [Declaração de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).</span><span class="sxs-lookup"><span data-stu-id="e89d3-141">For more information, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=396732).</span></span>
+<span data-ttu-id="e89d3-142">O seu administrador Dynamics 365 Customer Insights pode remover este destino de exportação em qualquer altura para descontinuar a utilização desta funcionalidade.</span><span class="sxs-lookup"><span data-stu-id="e89d3-142">Your Dynamics 365 Customer Insights Administrator can remove this export destination at any time to discontinue use of this functionality.</span></span>
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
