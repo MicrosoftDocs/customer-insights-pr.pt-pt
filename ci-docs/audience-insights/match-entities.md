@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595578"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085636"
 ---
 # <a name="match-entities"></a>Fazer corresponder entidades
 
@@ -103,6 +103,18 @@ As regras de correspondência representam conjuntos de condições. Para corresp
 
 > [!NOTE]
 > A ordem das regras é importante. O algoritmo de correspondência tenta corresponder com base na sua primeira regra e continua para a segunda regra apenas se não forem identificadas correspondências com a primeira regra.
+
+### <a name="change-the-entity-order-in-match-rules"></a>Alterar a ordem da entidade nas regras de correspondência
+
+Pode reordenar entidades para que as regras de correspondência alterem a ordem em que são processadas. As regras que estão em conflito por causa de uma ordem alterada serão removidas. Tem de recriar regras removidas com uma configuração atualizada.
+
+1. Vá a **Dados** > **Unificar** > **Corresponder** e selecione **Editar**.
+
+1. No painel **Editar regra**, selecione o controlo **Mover para cima/baixo** ou arraste e largue entidades para alterar a ordem.
+
+   :::image type="content" source="media/reorder-match-rules.png" alt-text="Opções para alterar em que ordem as entidades são processadas na fase de correspondência.":::
+
+1. Selecione **Concluído** para guardar a regra.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Definir a duplicação sobre uma entidade correspondente
 

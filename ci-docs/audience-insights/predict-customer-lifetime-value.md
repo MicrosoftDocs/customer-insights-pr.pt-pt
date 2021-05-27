@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
+ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595823"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "5954593"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Predição do valor vitalício do cliente (CLV) (Pré-visualização)
 
@@ -38,11 +38,11 @@ São necessários os seguintes dados, e onde marcados como opcionais, recomendad
 - Identificador de Cliente: identificador exclusivo para combinar transações com um cliente individual
 
 - Histórico de Transações: registo de transações históricas com esquema de dados semânticos abaixo
-    - ID da transação: identificador exclusivo de cada transação
-    - Data da transação: data, de preferência um carimbo de hora de cada transação
-    - Montante da transação: valor monetário (por exemplo, receitas ou margem de lucro) de cada transação
-    - Etiqueta atribuída a devoluções (opcional): valor booleano significando se a transação é uma devolução 
-    - ID do produto (opcional): ID do produto envolvido na transação
+    - **ID da Transação**: identificador exclusivo de cada transação
+    - **Data da transação**: data, de preferência um carimbo de hora de cada transação
+    - **Montante da transação**: valor monetário (por exemplo, receitas ou margem de lucro) de cada transação
+    - **Etiqueta atribuída a devoluções** (opcional): valor booleano significando se a transação é uma devolução 
+    - **ID do produto** (opcional): ID do produto envolvido na transação
 
 - Dados adicionais (opcional), por exemplo
     - Atividades Web: histórico de visitas ao site, histórico de e-mails
@@ -53,10 +53,20 @@ São necessários os seguintes dados, e onde marcados como opcionais, recomendad
     - Identificadores de clientes para mapear atividades para os seus clientes
     - Informações de atividade que contêm o nome e a data da atividade
     - O esquema de dados semânticos para atividades inclui: 
-        - Chave primária: um identificador exclusivo para uma atividade
-        - Carimbo de data/hora: A data e a hora do evento identificadas pela chave primária
-        - Evento (nome da atividade): o nome do evento que pretende utilizar
-        - Detalhes (montante ou valor): detalhes sobre a atividade do cliente
+        - **Chave primária**: um identificador exclusivo para uma atividade
+        - **Carimbo de data/hora**: a data e a hora do evento identificadas pela chave primária
+        - **Evento (nome da atividade)**: o nome do evento que pretende utilizar
+        - **Detalhes (montante ou valor)**: detalhes sobre a atividade do cliente
+
+- Características de dados sugeridos:
+    - Dados históricos suficientes: pelo menos, um ano de dados transacionais. De preferência, dois a três anos de dados transacionais para prever CLV por um ano.
+    - Compras múltiplas por cliente: idealmente, pelo menos, duas a três transações por ID de cliente, de preferência em várias datas.
+    - Número de clientes: pelo menos, 100 clientes exclusivos, de preferência mais de 10.000 clientes. O modelo falhará com menos de 100 clientes e dados históricos insuficientes
+    - Conclusão de dados: menos de 20% dos valores em falta nos campos obrigatórios nos dados de entrada   
+
+> [!NOTE]
+> - O modelo requer o histórico de transações dos seus clientes. Atualmente, apenas uma entidade de histórico de transações pode ser configurada. Se houver várias entidades de compra/transação, pode uni-las no Power Query antes da ingestão de dados.
+> - Para dados de atividade de cliente adicionais (opcional), no entanto, pode adicionar as entidades de atividade de cliente que quiser para consideração pelo modelo.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Criar um predição do Valor Vitalício do Cliente
 
@@ -76,7 +86,7 @@ São necessários os seguintes dados, e onde marcados como opcionais, recomendad
    Por predefinição, a unidade é definida como meses. Pode mudá-lo para anos para que seja mais longe no futuro.
 
    > [!TIP]
-   > Para prever com precisão o CLV para o período de tempo definido, precisa de um período comparável de dados históricos. Por exemplo, se quiser prever para os próximos 12 meses, recomenda-se que tenha pelo menos 18 a 24 meses de dados históricos.
+   > Para prever com precisão o CLV para o período de tempo definido, precisa de um período comparável de dados históricos. Por exemplo, se quiser prever CLV para os próximos 12 meses, recomenda-se que tenha pelo menos 18 a 24 meses de dados históricos.
 
 1. Especifique o que **Clientes ativos** significa para o seu negócio. Defina o intervalo de tempo em que um cliente deve ter tido pelo menos uma transação a considerar ativa. O modelo apenas irá prever o CLV para clientes ativos. 
    - **Deixe o modelo calcular o intervalo de compra (recomendado)**: o modelo analisa os seus dados e determina um período de tempo baseado em compras históricas.
@@ -181,14 +191,14 @@ Existem três secções primárias de dados dentro da página de resultados.
   Utilizando a definição de clientes de alto valor fornecidos ao configurar a predição, o sistema avalia o desempenho do modelo de IA na predição dos clientes de alto valor em comparação com um modelo de base.    
 
   Os níveis são determinados com base nas seguintes regras:
-  - A quando o modelo previu com precisão, pelo menos, 5% mais clientes de alto valor em comparação com o modelo de base.
-  - B quando o modelo previu com precisão entre a 0% a 5% mais clientes de alto valor em comparação com o modelo de base.
-  - C quando o modelo previu com precisão menos clientes de alto valor em comparação com o modelo de base.
+  - **A** quando o modelo previu com precisão, pelo menos, 5% mais clientes de alto valor em comparação com o modelo de base.
+  - **B** quando o modelo previu com precisão entre a 0% a 5% mais clientes de alto valor em comparação com o modelo de base.
+  - **C** quando o modelo previu com precisão menos clientes de alto valor em comparação com o modelo de base.
 
   O painel **Classificação do modelo** mostra mais detalhes sobre o desempenho do modelo de IA e o modelo de base. O modelo de base utiliza uma abordagem não baseada em IA para calcular o valor vitalício do cliente baseado principalmente em compras históricas feitas pelos clientes.     
   A fórmula padrão utilizada para calcular o CLV pelo modelo de base:    
 
-  *CLV para cada cliente = Compra média mensal feita pelo cliente na janela de cliente ativo * Número de meses no período de predição de CLV * Taxa de retenção geral de todos os clientes*
+  _**CLV para cada cliente** = Compra média mensal feita pelo cliente na janela de cliente ativo * Número de meses no período de predição de CLV * Taxa de retenção geral de todos os clientes*_
 
   O modelo de IA é comparado com o modelo de base com base em duas métricas de desempenho do modelo.
   

@@ -6,15 +6,15 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e973bb11b31c9e70b695ebec8aa2700fdaa5e44f
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: ce2477d957a1792e0436a0dfc15a33621b1c89a9
+ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597939"
+ms.lasthandoff: 05/04/2021
+ms.locfileid: "5976102"
 ---
 # <a name="power-automate-connector-preview"></a>Conector do Power Automate (pré-visualização)
 
@@ -27,7 +27,7 @@ Utilize acionadores para criar fluxos de cloud e automatizar tarefas repetitivas
 - É acionado quando uma atualização de origem de dados falha. 
 - É acionado quando uma atualização de origem de dados é bem sucedida.
 - É acionado quando um limiar é ultrapassado num segmento. O acionador limita-se a passar acima do limiar.
-- É acionado quando um limiar é ultrapassado numa medida empresarial. O acionador limita-se a passar acima do limiar.
+- É acionado quando um limiar é ultrapassado numa medida empresarial. Apenas as medidas de negócio sem uma dimensão são suportadas. O acionador limita-se a passar acima do limiar.
 - Acionar quando uma atualização completa de ( origens de dados, segmentos, medidas,...) é completada.
 - Acionar quando uma atualização do processo de unificação (mapa, correspondência, união) estiver concluída.
 

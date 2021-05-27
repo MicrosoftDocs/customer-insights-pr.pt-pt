@@ -6,15 +6,15 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 01290d5fae7af1737b73373d75e334ae1ed67d37
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: b5a644e286bd44d4ebf7d1837255326c005b48d6
+ms.sourcegitcommit: 74cd4fa9cbb784d9dff174c0eec7b4dcb408d66b
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5759835"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059330"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Exportar segmentos para a Marketo (pré-visualização)
 
@@ -44,7 +44,7 @@ Exportar segmentos de perfis unificados de clientes para gerar campanhas, fornec
 
 1. Escolher quem pode utilizar esta ligação. Se não tomar nenhuma ação, a predefinição será Administradores. Para mais informações, consulte [Permitir que os contribuidores utilizem uma ligação para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Introduza a sua **[ID de cliente da Marketo, segredo do cliente e nome do ponto final REST](https://developers.marketo.com/rest-api/authentication/)**.
+1. Introduza a sua **[ID de cliente da Marketo, segredo do cliente e nome do ponto final REST](https://developers.marketo.com/rest-api/authentication/)**. O Nome do Anfitrião do Ponto Final REST é apenas o nome de anfitrião, sem `https://`. Exemplo: `xyz-abc-123.mktorest.com`. 
 
 1. Selecione **Concordo** para confirmar a **Privacidade e conformidade dos dados** e selecione **Ligar** para iniciar a ligação a Marketo.
 
@@ -62,7 +62,7 @@ Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Pa
 
 1. No campo **Ligação para a exportação**, escolha uma ligação a partir da secção Marketo. Se não vir este nome de secção, não existem ligações deste tipo disponíveis para si.
 
-1. Introduza a sua **[Id da lista Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** 
+1. Introduza o seu **[ID da lista Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. O ID da lista é um valor puramente numérico. Por exemplo, se o seu ID da lista de Marketo for ST12345A7, remova o caráter antes e depois dos algarismos e introduza `12345`. 
 
 1. Na secção **Correspondência de dados**, no campo **E-mail**, selecione o campo no seu perfil unificado de cliente que representa o endereço de correio eletrónico de um cliente. 
 
@@ -74,7 +74,7 @@ Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Pa
 
 Guardar uma exportação não executa a exportação imediatamente.
 
-A exportação é executada com cada [atualização agendada](system.md#schedule-tab). Também pode [exportar dados a pedido](export-destinations.md#run-exports-on-demand). Na Marketo, pode agora encontrar os seus segmentos nas [listas da Marketo](ttps://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
+A exportação é executada com cada [atualização agendada](system.md#schedule-tab). Também pode [exportar dados a pedido](export-destinations.md#run-exports-on-demand). Na Marketo, pode agora encontrar os seus segmentos nas [listas da Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
 
 
 ## <a name="data-privacy-and-compliance"></a>Privacidade e conformidade de dados

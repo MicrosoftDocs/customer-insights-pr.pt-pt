@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887908"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085544"
 ---
 # <a name="data-sources-overview"></a>Descrição geral das origens de dados
 
@@ -36,11 +36,9 @@ Pode adicionar uma origem de dados de três formas principais:
 
 Ingerir dados de origens de dados no local em Audience Insights é suportado com base em fluxos de dados do Power Platform. Os fluxos de dados podem ser ativados no Customer Insights [fornecendo o URL do ambiente Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) ao configurar o ambiente.
 
-Por predefinição, as origens de dados criadas após a associação de um ambiente Dataverse ao Customer Insights utilizarão [fluxos de dados do Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Os fluxos de dados suportam conectividade no local utilizando os gateways de dados. Remova e recrie origens de dados que existiam antes de um ambiente Dataverse ser associado a utilizar os gateways de dados no local.
+Por predefinição, as origens de dados criadas após a associação de um ambiente Dataverse ao Customer Insights utilizarão [fluxos de dados do Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Os fluxos de dados suportam conectividade no local utilizando o gateway de dados. Remova e recrie origens de dados que existiam antes de um ambiente Dataverse ser associado a [utilizar os gateways de dados no local](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md).
 
 Os gateways de dados de um ambiente Power BI ou Power Apps existente serão visíveis e poderá reutilizá-los no Customer Insights. A página de origens de dados mostra ligações para ir para o ambiente Power Platform onde pode ver e configurar gateways de dados no local.
-
-:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Captura de ecrã da página de origens de dados a mostrar ligações que apontam para o ambiente Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Rever dados ingeridos
 
