@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 20072d14b160e54f5ad044adc1de6c079bf790e4
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
+ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595287"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6129913"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Guia de exemplos de predição de recomendações de produtos (pré-visualização)
 
@@ -22,7 +22,7 @@ Iremos acompanhá-lo do princípio ao fim num exemplo de predição de recomenda
 
 ## <a name="scenario"></a>Cenário
 
-Contoso é uma empresa que produz café e máquinas de café de alta qualidade, que vendem através do seu site Contoso Coffee. O objetivo é compreender quais os produtos que devem recomendar aos seus clientes recorrentes. Saber quais os clientes mais **propensos a comprar**, pode ajudá-los a economizar esforços de marketing, focando-se em itens específicos.
+A Contoso é uma empresa que produz café e máquinas de café de alta qualidade, que vende através do seu site Contoso Coffee. O objetivo é compreender quais os produtos que devem recomendar aos seus clientes recorrentes. Saber quais os clientes mais **propensos a comprar**, pode ajudá-los a economizar esforços de marketing, focando-se em itens específicos.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -65,7 +65,7 @@ Rever os artigos [sobre ingestão de dados](data-sources.md) e [importar origens
 
 1. No campo **Nome** no painel lateral, mude o nome da sua origem de dados de **Consulta** para **eCommercePurchases**.
 
-1. Guardar a origem dos dados.
+1. **Guardar** a origem dos dados.
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Ingerir dados de clientes a partir do esquema de fidelidade
@@ -83,11 +83,11 @@ Rever os artigos [sobre ingestão de dados](data-sources.md) e [importar origens
 
 1. No campo **Nome** no painel da direita, altere o nome da sua origem de dados de **Consulta** para **loyCustomers**.
 
-1. Guardar a origem dos dados.
+1. **Guardar** a origem dos dados.
 
 ## <a name="task-2---data-unification"></a>Tarefa 2 - Unificação de dados
 
-Depois de ingerirmos os dados, iniciamos agora o processo **Mapear, Corresponder, Intercalar** para criar um perfil de cliente unificado. Para mais informações, consulte [Unificação de dados](data-unification.md).
+Depois de ingerir os dados, iniciamos agora o processo de unificação de dados para criar um perfil de cliente unificado. Para mais informações, consulte [Unificação de dados](data-unification.md).
 
 ### <a name="map"></a>Mapear
 
@@ -156,7 +156,7 @@ Com os perfis unificados de clientes em vigor, podemos agora executar a prediç�
 
    - **Número de produtos**: defina este valor para **5**. Esta definição define quantos produtos pretende recomendar aos seus clientes.
 
-   - **Sugerir produtos que os clientes compraram recentemente?**: selecione **Sim** para indicar que pretende incluir produtos na recomendação que os seus clientes já compraram anteriormente.
+   - **Repetir compras esperadas**: selecione **Sim** para indicar que pretende incluir produtos na recomendação que os seus clientes já compraram anteriormente.
 
    - **Janela de recuo:** selecione, pelo menos, **365 dias**. Esta definição define o período passado que o modelo irá observar a atividade do cliente para a utilizar como entrada para as respetivas recomendações.
    

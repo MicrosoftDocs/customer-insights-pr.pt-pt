@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e46e31131a2dd5235af8221eafcd2e1d1394f3d4
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906778"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095570"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predição de recomendação de produtos (pré-visualização)
 
@@ -205,33 +205,9 @@ Por vezes, apenas determinados produtos são benéficos ou adequados para o tipo
        > [!div class="mx-imgBorder"]
        > ![Lista que mostra sugestões de alta confiança para um conjunto selecionado de clientes individuais](media/product-recommendation-highconfidence.PNG "Lista que mostra sugestões de alta confiança para um conjunto selecionado de clientes individuais")
 
-## <a name="fix-a-failed-prediction"></a>Corrigir uma previsão falhada
+## <a name="manage-predictions"></a>Gerir predições
 
-1. Vá para o separador **Minhas previsões** em **Informações** > **Previsões**.
-
-1. Selecione a previsão para visualizar registos de erros e selecione **Registos**.
-
-1. Rever todos os erros. Existem vários tipos de erros que podem ocorrer, e estes descrevem que condição causou o erro. Por exemplo, um erro que não há dados suficientes para prever com precisão é normalmente resolvido carregando mais dados no Customer Insights.
-
-## <a name="refresh-a-prediction"></a>Atualizar uma previsão
-
-As predições atualizam-se automaticamente na mesma [agenda em que os seus dados são atualizados](system.md#schedule-tab), como configurados nas definições.
-
-1. Vá para o separador **Minhas previsões** em **Informações** > **Previsões**.
-
-1. Selecione as reticências verticais ao lado da previsão que pretende atualizar.
-
-1. Selecione **Atualizar**.
-
-## <a name="delete-a-prediction"></a>Eliminar uma previsão
-
-A eliminação de uma predição também removerá a sua entidade de saída.
-
-1. Vá para o separador **Minhas previsões** em **Informações** > **Previsões**.
-
-1. Selecione as reticências verticais ao lado da previsão que pretende eliminar.
-
-1. Selecione **Eliminar**.
+É possível otimizar, resolver problemas, atualizar ou eliminar predições. Reveja um relatório de capacidade de utilização de dados de entrada para saber como tornar uma predição mais rápida e fiável. Para mais informações, consulte [Gerir predições](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

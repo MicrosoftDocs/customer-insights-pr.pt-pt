@@ -1,7 +1,7 @@
 ---
 title: Criar e gerir ambientes
 description: Saiba como se inscrever no serviço e como gerir ambientes.
-ms.date: 03/26/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
+ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5888000"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6259113"
 ---
 # <a name="manage-environments"></a>Gerir ambientes
 
@@ -76,9 +76,9 @@ Para criar um ambiente:
    > Apoiamos apenas contas de armazenamento Azure Data Lake Gen2 da mesma região Azure que selecionou ao criar o ambiente.
    > Só oferecemos suporte a contas de armazenamento com o Espaço de Nome Hierárquico (HNS) do Azure Data Lake Gen2 ativadas.
 
-   - Para a opção Azure Data Lake Storage Gen2, pode escolher entre uma opção baseada em recursos e uma opção baseada em subscrições para autenticação. Para obter mais informações, consulte [ligar informações de audiência a uma conta Gen2 do Azure Data Lake Storage com um principal de serviço Azure](connect-service-principal.md). O nome do **Recepiente** não pode ser alterado e será "customerinsights".
+   - Para a opção Azure Data Lake Storage Gen2, pode escolher entre uma opção baseada em recursos e uma opção baseada em subscrições para autenticação. Para obter mais informações, consulte [ligar informações de audiência a uma conta Gen2 do Azure Data Lake Storage com um principal de serviço Azure](connect-service-principal.md). O nome do **Contentor** não pode ser alterado e será `customerinsights`.
    
-   - Se pretender utilizar [predições](predictions.md), configurar a partilha de dados com aplicações e soluções com base no Microsoft Dataverse ou ativar a ingestão de dados a partir de origens de dados no local, forneça o URL do ambiente Microsoft Dataverse sob **Configurar partilha de dados com o Microsoft Dataverse e ativar capacidades adicionais**. Selecione **Ativar partilha de dados** para partilhar dados de saída do Customer Insights com um Data Lake Gerido do Microsoft Dataverse.
+   - Se pretender utilizar [predições](predictions.md), configurar a partilha de dados com o Microsoft Dataverse ou ativar a ingestão de dados a partir de origens de dados no local, forneça o URL do ambiente Microsoft Dataverse sob **Configurar partilha de dados com o Microsoft Dataverse e ativar capacidades adicionais**. Selecione **Ativar partilha de dados** para partilhar dados de saída do Customer Insights com um Data Lake Gerido do Microsoft Dataverse.
 
      > [!NOTE]
      > - A partilha de dados com o Data Lake Gerido do Microsoft Dataverse não é atualmente suportada quando guarda todos os dados para o seu próprio Azure Data Lake Storage.
@@ -87,7 +87,7 @@ Para criar um ambiente:
      > [!div class="mx-imgBorder"]
      > ![Opções de configuração para ativar a partilha de dados com o Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
 
-   Quando executa processos, tais como ingestão de dados ou criação de segmentos, as pastas correspondentes serão criadas na conta de armazenamento que especificou acima. Os ficheiros de dados e os ficheiros model.json serão criados e adicionados às respetivas subpastas com base no processo que é executado.
+   Quando executa processos, tais como ingestão de dados ou criação de segmentos, as pastas correspondentes serão criadas na conta de armazenamento que especificou acima. Os ficheiros de dados e os ficheiros model.json serão criados e adicionados a pastas baseada no nome do processo.
 
    Se criar vários ambientes de Customer Insights e optar por guardar as entidades de saída desses ambientes na sua conta de armazenamento, serão criadas pastas separadas para cada ambiente com ci_<environmentid> no recipiente.
 
@@ -140,13 +140,13 @@ Pode editar alguns dos detalhes de ambientes existentes.
 
 5. Opcionalmente, pode atualizar a partir de uma ligação baseada em chave de conta para uma ligação baseada em recursos ou em subscrição. Uma vez atualizado, não se pode voltar à chave de conta após a atualização. Para obter mais informações, consulte [ligar informações de audiência a uma conta Gen2 do Azure Data Lake Storage com um principal de serviço Azure](connect-service-principal.md). Não é possível alterar as informações do **Recipiente** ao atualizar a ligação.
 
-6. Opcionalmente, pode fornecer um URL de ambiente Microsoft Dataverse sob **Configurar partilha de dados com o Microsoft Dataverse e ativar capacidades adicionais**. Estas capacidades incluem a partilha de dados com aplicações e soluções baseadas no Microsoft Dataverse, ingestão de dados a partir de origens de dados no local ou a utilização de [predições](predictions.md). Selecione **Ativar partilha de dados** para partilhar dados de saída do Customer Insights com um Data Lake Gerido do Microsoft Dataverse.
+6. Opcionalmente, pode fornecer um URL de ambiente Microsoft Dataverse sob **Configurar partilha de dados com o Microsoft Dataverse e ativar capacidades adicionais**. Estas capacidades incluem a partilha de dados com aplicações e soluções baseadas no Microsoft Dataverse, a ingestão de dados a partir de origens de dados no local ou a utilização de [predições](predictions.md). Selecione **Ativar partilha de dados** para partilhar dados de saída do Customer Insights com um Data Lake Gerido do Microsoft Dataverse.
 
    > [!NOTE]
    > - A partilha de dados com o Data Lake Gerido do Microsoft Dataverse não é atualmente suportada quando guarda todos os dados para o seu próprio Azure Data Lake Storage.
    > - Atualmente, a [Predição de valores em falta numa entidade](predictions.md) não é suportado quando permite a partilha de dados com Data Lake Gerido do Microsoft Dataverse.
 
-   Quando ativar a partilha de dados com o Microsoft Dataverse, será acionada uma atualização completa das origens de dados e outros processos. Se os processos estiverem atualmente em execução e na fila, não verá a opção de permitir a partilha de dados com o Microsoft Dataverse. Pode esperar que esses processos sejam concluídos ou cancele-os para ativar a partilha de dados. 
+   Depois de ativar a partilha de dados com o Microsoft Dataverse, começará uma atualização completa das origens de dados e outros processos. Se os processos estiverem atualmente em execução, não vê a opção de permitir a partilha de dados com o Microsoft Dataverse. Espere que esses processos sejam concluídos ou cancele-os para ativar a partilha de dados. 
    
    :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Opções de configuração para ativar a partilha de dados com o Microsoft Dataverse.":::
    

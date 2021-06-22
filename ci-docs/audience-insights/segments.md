@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a7fa6515bd6e79dedfb21aa0f0b8e24b873a6771
-ms.sourcegitcommit: 8341fa964365c185b65bc4b71fc0c695ea127dc0
+ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
+ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/14/2021
-ms.locfileid: "6034026"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "6111401"
 ---
 # <a name="segments-overview"></a>Descrição geral dos segmentos
 
@@ -32,22 +32,13 @@ Existem várias formas de criar um novo segmento:
 - Sugestões com tecnologia de IA baseadas em medidas ou atributos: [Segmentos sugeridos para melhorar medidas](suggested-segments.md)
 - Sugestões baseadas em atividades: [Segmentos sugeridos baseados em atividades de cliente](suggested-segments-activity.md)
 
-## <a name="get-insights-on-existing-segments"></a>Obter informações sobre segmentos existentes
-
-Descubra informações adicionais em torno dos segmentos existentes com [Informações de segmentos](segment-insights.md). Descubra o que diferencia dois segmentos ou o que têm em comum.
-
-## <a name="find-similar-customers"></a>Encontrar clientes semelhantes
-
-Encontre clientes semelhantes aos membros de um segmento selecionado com a ajuda de inteligência artificial. Para mais informações, consulte [clientes semelhantes](find-similar-customer-segments.md).
-
 ## <a name="manage-existing-segments"></a>Gerir segmentos existentes
 
 Vá à página **Segmentos**, para ver todos os seus segmentos guardados e geri-los.
 
 Cada segmento é representado por uma linha que inclui informações adicionais sobre o segmento.
 
-> [!div class="mx-imgBorder"]
-> ![Opções para gerir um segmento existente](media/segments-selected-segment.png "Opções para gerir um segmento existente")
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Segmento selecionado com lista pendente de opções e opções disponíveis.":::
 
 A seguinte ação está disponível quando seleciona um segmento:
 
@@ -59,7 +50,7 @@ A seguinte ação está disponível quando seleciona um segmento:
   Em alternativa, pode utilizar a funcionalidade **Agendar mais tarde** no menu pendente **Ativar/Desativar** para especificar uma data e hora futuras para ativação e desativação de um determinado segmento.
 - **Mudar nome** do segmento.
 - **Transferir** a lista de membros como um ficheiro .CSV.
-- A opção **Adicionar a** envia a lista de IDs do cliente no segmento para processamento noutra aplicação.
+- **Faça a gestão de exportações** para ver o segmento relacionado com as exportações e geri-las. [Saber mais sobre exportações.](export-destinations.md)
 - **Eliminar** o segmento.
 
 ## <a name="refresh-segments"></a>Atualizar segmentos
@@ -68,6 +59,24 @@ Pode atualizar todos os segmentos de uma só vez selecionando **Atualizar tudo**
 
 > [!TIP]
 > Há [seis tipos de estados](system.md#status-types) para tarefas/processos. Além disso, a maior parte dos processos [depende de outros processos a jusante](system.md#refresh-policies). Poderá selecionar o estado de um processo para ver os detalhes do progresso de toda a tarefa. Depois de selecionar **Ver detalhes** de uma das tarefas do trabalho, encontra informações adicionais: tempo de processamento, última data de processamento e todos os erros e avisos associados à tarefa.
+
+## <a name="export-segments"></a>Exportar segmentos
+
+Pode exportar um segmento a partir da página de segmentos ou da [página de exportações](export-destinations.md). 
+
+1. Ir para a página **Segmentos**.
+
+1. Selecione **Mostrar mais [...]** para o segmento que pretende exportar.
+
+1. Selecione **Gerir exportações** na lista pendente de ações.
+
+1. A página **Exportações (pré-visualização) para segmento** abre-se. Pode ver todas as exportações configuradas agrupadas por exportações que contêm o segmento atual ou não o contêm.
+
+   1. Para adicionar o segmento selecionado a uma exportação, selecione a exportação na lista e selecione **Adicionar segmento**.
+
+   1. Para criar uma nova exportação com o segmento selecionado, selecione **Adicionar exportação**. Para mais informações sobre a criação de exportações, consulte [Configurar uma nova exportação](export-destinations.md#set-up-a-new-export).
+
+1. Selecione **Anterior** para a regressar à página principal para segmentos.
 
 ## <a name="view-processing-history-and-segment-members"></a>Ver histórico de processamento e membros do segmento
 

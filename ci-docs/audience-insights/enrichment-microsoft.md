@@ -1,7 +1,7 @@
 ---
 title: Enriquecer perfis de clientes com dados da Microsoft
 description: Utilize dados proprietários da Microsoft para enriquecer os dados dos seus clientes com afinidades de marcas e interesses.
-ms.date: 04/09/2021
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
+ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064905"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6245721"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Melhorar perfis de cliente com afinidades de marca e interesse (pré-visualização)
 
@@ -69,12 +69,10 @@ Uma experiência guiada ajuda-o através da configuração dos enriquecimentos.
 
 ### <a name="define-your-brands-or-interests"></a>Definir as suas marcas ou interesses
 
-Selecione uma das seguintes opções:
+Escolha até cinco marcas ou interesses utilizando uma ou ambas as opções:
 
-- **Setor** : o sistema identifica as principais marcas ou interesses relevantes para o seu setor e melhora os dados do seu cliente com eles.
-- **Escolher os seus próprios**: selecione até cinco itens a partir da lista de marcas ou interesses que são mais relevantes para a sua organização.
-
-Para adicionar uma marca ou um interesse, introduza-o na área de introdução para obter sugestões em função da correspondência de termos. Se não listarmos uma marca ou um interesse que procura, envie-nos comentários com a ligação **Sugerir**.
+- **Setor**: selecione o seu setor na lista pendente e, em seguida, escolha entre as principais marcas ou interesses para este setor.
+- **Escolha o seu**: introduza uma marca ou interesse que seja relevante para a sua organização e, em seguida, escolha entre as sugestões correspondentes. Se não listarmos uma marca ou um interesse que procura, envie-nos comentários com a ligação **Sugerir**.
 
 ### <a name="review-enrichment-preferences"></a>Rever preferências de melhoramento
 
