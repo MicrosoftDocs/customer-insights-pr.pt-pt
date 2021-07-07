@@ -9,12 +9,12 @@ ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b935be08199f20e83bceb3317985b0e1dc120016
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: dccb8dcca8f65f64973e46fed9d83034d58282e2
+ms.sourcegitcommit: bcc47d15d4f0eacf008e4dbc09baac7f062b3ca8
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095740"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6315892"
 ---
 # <a name="manage-predictions"></a>Gerir predições
 
@@ -35,9 +35,6 @@ Este artigo apresenta algumas tarefas que a maioria dos cenários de predição 
 O relatório de capacidade de utilização de dados de entrada fornece uma vista consolidada dos erros e avisos que as suas predições fornecidas com o programa podem estar a gerar. Também apresenta recomendações sobre como melhorar o desempenho do modelo.
 
 O relatório está disponível depois de um modelo ter concluído o seu processo de preparação. É criado para cada modelo separadamente, independentemente de ter sido concluído com sucesso ou não.
-
-> [!NOTE]
-> Atualmente, esta funcionalidade só funciona para o modelo Abandono de Transações.
 
 ### <a name="view-the-input-data-usability-report"></a>Ver o relatório de capacidade de utilização de dados de entrada
 

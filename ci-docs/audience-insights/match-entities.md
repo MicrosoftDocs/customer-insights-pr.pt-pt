@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085636"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306042"
 ---
 # <a name="match-entities"></a>Fazer corresponder entidades
 
@@ -209,7 +209,7 @@ Experimente limiares de precisão diferentes em condições para encontrar o val
 
 Pode reconfigurar e aperfeiçoar a maioria dos parâmetros de correspondência.
 
-:::image type="content" source="media/match-rules-management.png" alt-text="Captura de ecrã do menu pendente com as opções de regras de correspondência.":::
+:::image type="content" source="media/match-rules-management.png" alt-text="Captura de ecrã do menu pendente com opções de regras de correspondência.":::
 
 - **Alterar a ordem das suas regras** se definiu várias regras. Pode reordenar as regras de correspondência selecionando as opções **Mover para cima** e **Mover para baixo** arrastando e largando.
 
@@ -247,7 +247,7 @@ Pode especificar as condições que determinados registos devem corresponder sem
 
 1. Aceda a **Dados** > **Origens de dados** e ingere os ficheiros do modelo como novas entidades. Depois de ingeridos, pode utilizá-los para especificar a configuração Corresponder.
 
-1. Após o carregamento dos ficheiros e de as entidades estarem disponíveis, selecione novamente a opção **Correspondência personalizada**. Verá opções para especificar as entidades que pretende incluir. Selecione as entidades obrigatórias a partir do menu pendente.
+1. Após o carregamento dos ficheiros e de as entidades estarem disponíveis, selecione novamente a opção **Correspondência personalizada**. Verá opções para especificar as entidades que pretende incluir. Selecione as entidades necessárias no menu pendente.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Captura de ecrã da caixa de diálogo para escolher substituições para um cenário de correspondência personalizada.":::
 

@@ -9,22 +9,22 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a2d450635c19432bdd88db74b61c17febdeb568d
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896295"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304664"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Enriquecer perfis de clientes com dados personalizados (pré-visualização)
 
-A importação personalizada do SFTP (Secure File Transfer Protocol) permite-lhe importar dados que não tenham de passar pelo processo de unificação de dados. É uma forma flexível, segura, e fácil de trazer os seus dados. A importação personalizada SFTP pode ser utilizada em combinação com a [exportação SFTP](export-sftp.md) que lhe permite exportar os dados do perfil do cliente que são necessários para o melhoramento. Os dados podem então ser processados, enriquecidos e a importação personalizada de SFTP pode ser utilizada para trazer os dados enriquecidos de volta à capacidade de insights da audiência do Dynamics 365 Customer Insights.
+A importação personalizada do Secure File Transfer Protocol (SFTP) permite importar dados que não têm de passar pelo processo de unificação de dados. É uma forma flexível, segura, e fácil de trazer os seus dados. A importação personalizada SFTP pode ser utilizada em combinação com a [exportação SFTP](export-sftp.md) que lhe permite exportar os dados do perfil do cliente que são necessários para o melhoramento. Os dados podem então ser processados e melhorados e a importação SFTP personalizada pode ser usada para trazer os dados melhorados de volta para a capacidade de informações de audiência do Dynamics 365 Customer Insights.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 Para configurar a importação personalizada do SFTP, devem ser cumpridos os seguintes pré-requisitos:
 
-- Tem o nome de ficheiro e a localização (caminho) do ficheiro a ser importado no anfitrião SFTP.
+- Tem o nome do ficheiro e a localização (caminho) do ficheiro a ser importado no anfitrião do SFTP.
 - Existe um ficheiro *model.json* que especifica [o esquema do Common Data Model](/common-data-model/) para os dados a serem importados. Este ficheiro deve estar no mesmo diretório do ficheiro a importar.
 - Uma ligação SFTP já foi configurada por um administrador *ou* tem permissões de [administrador](permissions.md#administrator). Precisará das credenciais, URL e número de porta do utilizador para a localização SFTP de onde pretende importar dados.
 
@@ -41,7 +41,7 @@ Para configurar a importação personalizada do SFTP, devem ser cumpridos os seg
 
 1. Selecione **Ligar à Importação Personalizada** para confirmar a ligação selecionada.
 
-1.  Selecione **Seguinte** e insira o **Nome de ficheiro** e o **Caminho** do ficheiro de dados que pretende importar.
+1.  Selecione **Seguinte** e introduza o **Caminho** e o **Nome do ficheiro** do ficheiro de dados que pretende importar.
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Captura de ecrã ao introduzir a localização dos dados.":::
 
@@ -55,21 +55,21 @@ Tens de ser um administrador para configurar ligações. Selecione **Adicionar l
 
 1. Introduza um nome para a ligação na caixa **Nome a Apresentar**.
 
-1. Introduza o nome de utilizador, a palavra-passe e o URL válidos do anfitrião para o servidor STFP onde residem os dados a importar.
+1. Introduza um nome de utilizador, palavra-passe e URL de anfitrião válidos para o servidor SFTP em que os dados a importar residem.
 
 1. Reveja e forneça o seu consentimento para a **Privacidade e conformidade de dados** selecionando a caixa de verificação **Concordo**.
 
 1. Selecione **Verificar** para validar a configuração.
 
-1. Uma vez concluída a verificação, a ligação pode ser guardada clicando em **Guardar**.
+1. Uma vez concluída a verificação, a ligação pode ser guardada selecionando **Guardar**.
 
-> [!div class="mx-imgBorder"]
-   > ![Página de configuração de ligação à Experian](media/enrichment-SFTP-connection.png "Página de configuração de ligação à Experian")
+   > [!div class="mx-imgBorder"]
+   > ![Página de configuração da ligação à Experian](media/enrichment-SFTP-connection.png "Página de configuração da ligação à Experian")
 
 
 ## <a name="defining-field-mappings"></a>Definir mapeamentos de campo 
 
-O diretório que contém o ficheiro a importar no servidor SFTP também deve conter um ficheiro *model.json*. Este ficheiro define o esquema a utilizar para a importação dos dados. O esquema tem de utilizar [o Common Data Model](/common-data-model/) para especificar o mapeamento de campo. Um exemplo simples de um ficheiro model.json parece-se com isto:
+O diretório que contém o ficheiro a importar no servidor SFTP também deve conter um ficheiro *model.json*. Este ficheiro define o esquema a utilizar para a importação dos dados. O esquema tem de utilizar o [Common Data Model](/common-data-model/) para especificar o mapeamento de campos. Um exemplo simples de um ficheiro model.json parece-se com isto:
 
 ```
 {
@@ -123,6 +123,6 @@ Pode aceder a uma visão detalhada de cada perfil enriquecido selecionando **Ver
 
 ## <a name="next-steps"></a>Passos seguintes
 
-Desenvolva a partir dos seus dados de clientes melhorados. Criar [segmentos](segments.md), [medidas](measures.md), e [exportar os dados](export-destinations.md) para proporcionar experiências personalizadas aos seus clientes.
+Desenvolva a partir dos seus dados de clientes melhorados. Crie [segmentos](segments.md), [medidas](measures.md) e [exporte os dados](export-destinations.md) para fornecer experiências personalizadas aos seus clientes.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 90ebcaab896c628b04e751ad9857e924749895e7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595348"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306088"
 ---
 # <a name="segment-insights-preview"></a>Informações de segmentos (pré-visualização)
 
@@ -50,7 +50,7 @@ Selecione uma informação para ver os resultados da análise:
 
 - O número de membros que se sobrepõem aos segmentos selecionados para análise.
 - O número de membros incluídos num dos segmentos, mas não nos restantes segmentos.
-- Se selecionar campos enquanto configura a análise de sobreposição, irá encontrá-los nos separadores correspondentes. Pode utilizar o filtro para selecionar qualquer nível de interesse do atributo e a tabela na parte inferior mostrará os dados correspondentes.
+- Se selecionar campos enquanto configura a análise de sobreposição, irá encontrá-los nos separadores correspondentes. Pode utilizar a lista pendente de filtros para selecionar qualquer nível de atributo de interesse e a tabela na parte inferior mostrará os dados correspondentes.
 
 ## <a name="segment-differentiators"></a>Diferenciadores de segmentos
 

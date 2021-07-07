@@ -9,18 +9,18 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
-ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
+ms.openlocfilehash: 28563e3a76535cb0c92bfcda4ef5037430d00cfa
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6253054"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305492"
 ---
 # <a name="exports-preview-overview"></a>Descrição geral de exportações (pré-visualização)
 
 A página **Exportações** mostra todas as exportações configuradas. As exportações partilham dados específicos com várias aplicações. Podem incluir perfis de clientes ou entidades, esquemas e detalhes de mapeamento. Cada exportação requer uma [ligação, configurada por um administrador, para gerir a autenticação e o acesso](connections.md).
 
-Vá a **Dados** > **Exportações** para ver a página de exportações. Todas as funções de utilizador têm acesso a ver exportações configuradas. Utilização do campo de pesquisa na barra de comandos para encontrar exportações pelo nome, nome da ligação ou tipo de ligação.
+Vá a **Dados** > **Exportações** para ver a página de exportações. Todas as funções de utilizador podem ver exportações configuradas. Utilize o campo de pesquisa na barra de comando para encontrar exportações pelo nome, nome da ligação ou tipo de ligação.
 
 ## <a name="set-up-a-new-export"></a>Configurar uma nova exportação
 
@@ -73,7 +73,7 @@ Depois de criar destinos de exportação, são listados em **Dados** > **Exporta
 
 Cada exportação que configura tem uma agenda de atualização. Durante uma atualização, o sistema procura dados novos ou atualizados a incluir numa exportação. Por predefinição, as exportações são executadas como parte de cada [atualização de sistema agendada](system.md#schedule-tab). Pode personalizar a agenda de atualização ou desativá-la para executar exportações manualmente.
 
-As agendas de exportação dependem do estado do seu ambiente. Se existirem atualizações sobre [dependências](system.md#refresh-policies) em curso quando uma exportação agendada deve começar, o sistema completará primeiro as dependências e, em seguida, executará a exportação. Pode ver quando uma exportação foi atualizada pela última vez na coluna **Atualizadas**.
+As agendas de exportação dependem do estado do seu ambiente. Se houver atualizações em curso sobre as [dependências](system.md#refresh-policies) quando uma exportação agendada deveria começar, o sistema completará primeiro as atualizações e, em seguida, executará a exportação. Pode ver quando uma exportação foi atualizada pela última vez na coluna **Atualizadas**.
 
 ### <a name="schedule-exports"></a>Agendar exportações
 

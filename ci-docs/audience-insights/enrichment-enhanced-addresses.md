@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
-ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
+ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "5965592"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305446"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enriquecimento de perfis de clientes com endereços melhorados
 
@@ -22,7 +22,7 @@ Os endereços nos seus dados podem não estar estruturados, estar incompletos ou
 
 ## <a name="how-we-enhance-addresses"></a>Como melhoramos endereços
 
-O nosso modelo passa por um processo em dois passos para melhorar um endereço. Em primeiro lugar, analisa o endereço para identificar os seus componentes e coloca-os num formato estruturado. Depois, utilizamos inteligência artificial para corrigir, completar e uniformizar os valores no endereço.
+O nosso modelo passa por um processo em dois passos para melhorar um endereço. Em primeiro lugar, analisa o endereço para identificar os seus componentes e coloca-os num formato estruturado. Em seguida, utilizamos IA para corrigir, preencher e uniformizar os valores no endereço.
 
 ### <a name="example"></a>Exemplo
 
@@ -50,7 +50,7 @@ Os endereços melhorados apenas funcionam com os valores que já existem nos dad
 2. Verifica se algum dos valores, tais como códigos postais ou nomes de rua, são válidos.
 3. Muda valores que não reconhece.
 
-O modelo utiliza técnicas baseadas em aprendizagem automática para melhorar endereços. Embora apliquemos um limiar de confiança elevado para quando o modelo muda um valor de entrada, como em qualquer modelo baseado em ML, a precisão de 100% não é garantida.
+O modelo utiliza técnicas baseadas em aprendizagem automática para melhorar endereços. Embora apliquemos um limiar de confiança elevado para quando o modelo muda um valor de entrada, como em qualquer modelo baseado em aprendizagem automática, a precisão de 100 por cento não é garantida.
 
 ## <a name="supported-countries-or-regions"></a>Países ou regiões suportados
 
@@ -76,7 +76,7 @@ Os endereços têm de conter um valor de país/região. Não processamos endere�
 1. Selecionar a forma como os endereços estão formatados no seu conjunto de dados. Escolha **Endereço de atributo único** se os endereços dos seus dados utilizarem um único campo. Escolha **Endereço de vários atributos** se os endereços dos seus dados utilizarem mais do que um campo de dados.
 
    > [!NOTE]
-   > País/Região é obrigatório tanto no endereço de atributo único como no endereço de vários atributos. Endereços que não contenham valores válidos ou valores de país/região suportados não serão enriquecidos
+   > País/Região é obrigatório em endereços de atributo único e de múltiplos atributos. Endereços que não contenham valores válidos ou valores de país/região suportados não serão melhorados.
 
 1.  Mapeie os campos de endereço da sua entidade de cliente unificado.
 

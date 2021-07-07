@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 37d25aa038ea32b98f2d1850d7b42b701292438d
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: e20c7b7fd3989d7621cb7765f38b85c8ab4adfcb
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976056"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305124"
 ---
 # <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Lista de segmentos de exportação para o Gestor de Anúncios do Facebook (pré-visualização)
 
@@ -22,8 +22,8 @@ Exportar segmentos de perfis de cliente unificados para o Gestor de Anúncios do
 
 ## <a name="prerequisites-for-connection"></a>Pré-requisitos para a ligação
 
-- Necessita de ter uma [**Conta de Publicidade do Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) que inclua uma [**Conta Empresarial do Facebook**](https://business.facebook.com/).
-- Tem de ser um administrador na [**Conta De Anúncio do Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- Necessita de ter uma [**Conta Facebook Ads**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) que inclua uma [**Conta Empresarial do Facebook**](https://business.facebook.com/).
+- Tem de ser um administrador na [**Conta Facebook Ads**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
@@ -42,11 +42,11 @@ Antes de os utilizadores poderem criar uma exportação, um administrador tem de
 
 1. Forneça um nome reconhecível à ligação no campo **Nome a apresentar**. O nome e o tipo de ligação descrevem esta ligação. Recomendamos a escolha de um nome que explique o propósito e o destino da ligação.
 
-1. Escolher quem pode utilizar esta ligação. Se não tomar nenhuma ação, a predefinição será **Administradores**. Para mais informações, consulte [Permitir que os contribuidores utilizem uma ligação para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Escolher quem pode utilizar esta ligação. Se não tomar nenhuma ação, a predefinição será Administradores. Para mais informações, consulte [Permitir que os contribuidores utilizem uma ligação para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Autenticar com os Anúncios do Facebook: 
 
-   1. Selecione **Continuar com o Facebook** para iniciar sessão na sua Conta de Anúncio do Facebook.
+   1. Selecione **Continuar com o Facebook** para iniciar sessão na sua conta Facebook Ads.
 
    1. Permitir a permissão **ads_management** após autenticação com o Facebook.
 
@@ -68,14 +68,15 @@ Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Pa
 
 1. Para criar uma nova exportação, selecione **Adicionar destino**. 
 
-1. Em **Ligação para a exportação**, escolha uma ligação a partir da secção **Gestor de Anúncios do Facebook**. Se não vir este nome de secção, não existem ligações deste tipo disponíveis para si.
+1. Em **Ligação para a exportação**, escolha uma ligação a partir da secção **Gestor de Anúncios do Facebook**. Se não vir este nome de secção, não há ligações deste tipo disponíveis para si.
 
 1. Em **Escolher o campo de identificador de chave**, selecione **E-mail**, **Nome e endereço** ou **Telefone** para enviar para o Gestor de Anúncios do Facebook. 
 
 1. Forneça um nome reconhecível à ligação no campo **Nome a apresentar**.
 
 1. Mapeie os atributos correspondentes da entidade de cliente unificada para o identificador-chave selecionado.
-   > [DICA] As melhores hipóteses para que uma correspondência ocorra é se selecionar **E-mail** como identificador de chave. A adição de identificadores adicionais pode melhorar a correspondência.
+   > [!TIP]
+   > As melhores hipóteses para que uma correspondência ocorra é se selecionar **E-mail** como identificador de chave. A adição de identificadores adicionais pode melhorar a correspondência.
 
 1. Selecione **Adicionar atributo** para mapear mais atributos para enviar para o Gestor de Anúncios do Facebook. Atributos do Gestor de Anúncios do Facebook estão a mapear para os seguintes nomes amigáveis de utilizador: **NP** = **Nome Próprio**, **AP** = **Apelido**, **PI** = **Primeira Inicial**, **TELEFONE** = **Telefone**, **SEX** = **Sexo**, **DN** = **Data de nascimento**, **EST** = **Estado**, **CD** = **Cidade**, **CP** = **Código postal**, **PAÍS** = **País / Região**
 
@@ -85,12 +86,14 @@ Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Pa
 
 Guardar uma exportação não executa a exportação imediatamente.
 
-A exportação é executada com cada [atualização agendada](system.md#schedule-tab). Também pode [exportar dados a pedido](export-destinations.md#run-exports-on-demand). 
+A exportação é executada com cada [atualização agendada](system.md#schedule-tab). 
+
+Também pode [exportar dados a pedido](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Privacidade e conformidade de dados
 
 Quando ativa Dynamics 365 Customer Insights para transmitir dados ao Gestor de Anúncios do Facebook, permite a transferência de dados fora dos limites de conformidade para Dynamics 365 Customer Insights, incluindo dados potencialmente sensíveis, tais como Dados Pessoais. A Microsoft transferirá tais dados sob as suas instruções, mas o utilizador é responsável por assegurar que os Anúncios do Facebook cumprem quaisquer obrigações de privacidade ou segurança que possa ter. Para obter mais informações, consulte [Declaração de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-O seu administrador Dynamics 365 Customer Insights pode remover este destino de exportação em qualquer altura para descontinuar a utilização desta funcionalidade.
+O seu administrador do Dynamics 365 Customer Insights pode remover este destino de exportação em qualquer altura para descontinuar a utilização desta funcionalidade.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
-ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
+ms.openlocfilehash: 336cab8619c0b80b7b8a38035cae99620baf2873
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "6111401"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306271"
 ---
 # <a name="segments-overview"></a>Descrição geral dos segmentos
 
@@ -68,7 +68,7 @@ Pode exportar um segmento a partir da página de segmentos ou da [página de exp
 
 1. Selecione **Mostrar mais [...]** para o segmento que pretende exportar.
 
-1. Selecione **Gerir exportações** na lista pendente de ações.
+1. Selecione **Gerir exportações** da lista pendente de ações.
 
 1. A página **Exportações (pré-visualização) para segmento** abre-se. Pode ver todas as exportações configuradas agrupadas por exportações que contêm o segmento atual ou não o contêm.
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 106dbc26f95b309821d738e1484b1eaa79dd225b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896111"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304986"
 ---
 # <a name="connections-preview-overview"></a>Descrição geral das ligações (pré-visualização)
 
@@ -42,7 +42,7 @@ Para adicionar ligações, precisa de ter [permissões de administrador](permiss
 
 1. Vá ao separador **Ligações**.
 
-1. Selecione **Adicionar ligação** para criar uma nova ligação. Escolha do menu suspenso que tipo de ligação pretende criar.
+1. Selecione **Adicionar ligação** para criar uma nova ligação. Escolha do menu pendente que tipo de ligação pretende criar.
 
 1. No painel **Configurar ligação**, forneça os detalhes necessários. 
    1. O **Nome a Apresentar** e o tipo de ligação descrevem uma ligação. Recomendamos a escolha de um nome que explique o propósito e o destino desta ligação.
@@ -74,7 +74,9 @@ Ao definir ou editar uma ligação de exportação, escolha que utilizadores est
 
 ## <a name="remove-a-connection"></a>Remover uma ligação
 
-Se a ligação que está a remover for utilizada por enriquecimentos ou exportações, tem de os separar ou remover primeiro. O diálogo de remoção irá guiá-lo para os enriquecimentos ou exportações relevantes. Enriquecimentos e exportações separados tornam-se inativos. Reativa-os adicionando-lhes outra ligação na página [Enriquecimentos](enrichment-hub.md) ou [Exportações](export-destinations.md).
+Se a ligação que está a remover for utilizada por enriquecimentos ou exportações, tem de os separar ou remover primeiro. O diálogo de remoção irá guiá-lo para os enriquecimentos ou exportações relevantes. 
+
+Enriquecimentos e exportações separados tornam-se inativos. Reativa-os adicionando-lhes outra ligação na página [Enriquecimentos](enrichment-hub.md) ou [Exportações](export-destinations.md).
 
 1. Aceda a **Admin** > **Ligações (pré-visualização)**.
 

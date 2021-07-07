@@ -9,27 +9,26 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 73f3257a3ae6e8423f45410546535df5e3b400ce
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: c23c8b4e6758df08e04bf1e3ae0cba4dee06fe2b
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976332"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305354"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Exportar segmentos para o Google Ads (pré-visualização)
 
-Exportar segmentos de perfis unificados de clientes para a lista de audiências do Google Ads e utilizá-los para fazer publicidade na Pesquisa Google, Gmail, YouTube, e Google Display Network. 
+Exporte segmentos de perfis de clientes unificados para uma lista de audiência do Google Ads e utilizá-los para anunciar no Google Search, Gmail, YouTube e Google Display Network. 
 
 ## <a name="prerequisites-for-connection"></a>Pré-requisitos para a ligação
 
 -   Tem uma [conta Google Ads](https://ads.google.com/) e as correspondentes credenciais de administrador.
--   Tem um [token de programador do Google Ads aprovado](https://developers.google.com/google-ads/api/docs/first-call/dev-token) 
--   Cumpre os requisitos da [Política de Correspondência de Clientes](https://support.google.com/adspolicy/answer/6299717)
--   Cumpre os requisitos dos [tamanhos da lista de remarketing](https://support.google.com/google-ads/answer/7558048) 
-
+-   Tem um [token de Programador do Google Ads aprovado](https://developers.google.com/google-ads/api/docs/first-call/dev-token). 
+-   Cumpre os requisitos da [Política de Correspondência de Clientes](https://support.google.com/adspolicy/answer/6299717).
+-   Cumpre os requisitos dos [tamanhos da lista de remarketing](https://support.google.com/google-ads/answer/7558048).
 -   Existem audiências no Google Ads e os IDs correspondentes. Para mais informações, consulte [audiências do Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
--   Tem [segmentos configurados](segments.md)
--   Os perfis unificados dos clientes nos segmentos exportados contêm campos que representam um endereço de correio eletrónico, nome e apelido
+-   Tem [segmentos configurados](segments.md).
+-   Os perfis unificados dos clientes nos segmentos exportados contêm campos que representam um endereço de e-mail, nome próprio e apelido.
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
@@ -68,22 +67,24 @@ Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Pa
 
 1. Para criar uma nova exportação, selecione **Adicionar destino**.
 
-1. No campo **Ligação para a exportação**, escolha uma ligação a partir da secção Google Ads. Se não vir este nome de secção, não existem ligações deste tipo disponíveis para si.
+1. No campo **Ligação para a exportação**, escolha uma ligação a partir da secção Google Ads. Se não vir este nome de secção, não há ligações deste tipo disponíveis para si.
 
 1. Introduza a sua **[ID de audiência do Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** e selecione **Ligar** para iniciar a ligação ao Google Ads.
 
-1. Na secção **Correspondência de dados**, no campo **E-mail**, selecione o campo no seu perfil unificado de cliente que representa o endereço de correio eletrónico de um cliente. Repita os mesmos passos para os campos **nome próprio** e **apelido**.
+1. Na secção **Correspondência de dados**, no campo **E-mail**, selecione o campo no seu perfil unificado de cliente que representa o endereço de correio eletrónico de um cliente. Repita os mesmos passos para os campos **Nome próprio** e **Apelido**.
 
 1. Selecione os segmentos que quer exportar. Pode exportar até 1 milhão de perfis de clientes no total para o Google Ads.
 
 Guardar uma exportação não executa a exportação imediatamente.
 
-A exportação é executada com cada [atualização agendada](system.md#schedule-tab). Também pode [exportar dados a pedido](export-destinations.md#run-exports-on-demand). 
+A exportação é executada com cada [atualização agendada](system.md#schedule-tab). 
+
+Também pode [exportar dados a pedido](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Privacidade e conformidade de dados
 
 Quando ativa Dynamics 365 Customer Insights para transmitir dados ao Google Ads, permite a transferência de dados fora dos limites de conformidade para Dynamics 365 Customer Insights, incluindo dados potencialmente sensíveis, tais como Dados Pessoais. A Microsoft transferirá tais dados sob as suas instruções, mas o utilizador é responsável por assegurar que o Google Ads cumprem quaisquer obrigações de privacidade ou segurança que possa ter. Para obter mais informações, consulte [Declaração de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-O seu administrador Dynamics 365 Customer Insights pode remover este destino de exportação em qualquer altura para descontinuar a utilização desta funcionalidade.
+O seu administrador do Dynamics 365 Customer Insights pode remover este destino de exportação em qualquer altura para descontinuar a utilização desta funcionalidade.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

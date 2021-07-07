@@ -1,5 +1,5 @@
 ---
-title: Enriquecimento com o enriquecimento de terceiros HERE Technologies
+title: Melhoramento com o melhoramento de terceiros da HERE Technologies
 description: Informação geral sobre o enriquecimento de terceiros HERE Technologies.
 ms.date: 04/09/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 5d1f037377010153045c9255d2d01f98ebf1fdfd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896065"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305308"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Enriquecimento de perfis de clientes com HERE Technologies (pré-visualização)
 
@@ -26,7 +26,7 @@ Para configurar o enriquecimento com a HERE Technologies, devem ser cumpridos os
 
 - Tem de ter uma subscrição ativa da HERE Technologies. Para obter uma subscrição, pode [inscreva-se aqui](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) ou [contacte a HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) diretamente. [Saiba mais sobre o enriquecimento da localização da HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- Existe uma [ligação](connections.md) HERE disponível *ou* tem permissões de [administrador](permissions.md#administrator) e a chave de API da HERE Technologies.
+- Uma [ligação](connections.md) à HERE está disponível *ou* tem permissões de [administrador](permissions.md#administrator) e chave de API da HERE Technologies.
 
 ## <a name="configure-the-enrichment"></a>Configurar o enriquecimento
 
@@ -37,7 +37,7 @@ Para configurar o enriquecimento com a HERE Technologies, devem ser cumpridos os
    > [!div class="mx-imgBorder"]
    > ![Mosaico HERE Technologies](media/HERE-tile.png "Mosaico HERE Technologies")
 
-1. Selecione uma [ligação](connections.md) na lista pendente. Contacte um administrador se não houver nenhuma ligação disponível. Se for um administrador, pode criar uma ligação selecionando **Adicionar ligação**. Escolha **HERE Technologies** na lista pendente. 
+1. Selecione uma [ligação](connections.md) na lista pendente. Contacte um administrador se não houver nenhuma ligação disponível. Se for um administrador, pode criar uma ligação selecionando **Adicionar ligação**. Escolha **HERE Technologies** da lista pendente. 
 
 1. Selecione **Ligar à HERE Technologies** para confirmar a seleção da ligação.
 
@@ -58,7 +58,7 @@ Para configurar o enriquecimento com a HERE Technologies, devem ser cumpridos os
 
 1. Selecione **Guardar enriquecimento** depois de rever as suas escolhas.
 
-## <a name="configure-the-connection-for-here-technologies"></a>Configurar a ligação para a HERE technologies 
+## <a name="configure-the-connection-for-here-technologies"></a>Configurar a ligação para a HERE Technologies 
 
 Tens de ser um administrador para configurar ligações. Selecione **Adicionar ligação** ao configurar um enriquecimento *ou* vá a **Admin** > **Ligações** e selecione **Configurar** no mosaico da HERE Technologies.
 
@@ -66,13 +66,13 @@ Tens de ser um administrador para configurar ligações. Selecione **Adicionar l
 
 1. Forneça uma chave de API válida da HERE Technologies.
 
-1. Reveja e forneça o seu consentimento para a **Privacidade e conformidade de dados** selecionando a caixa de verificação **Concordo**
+1. Reveja e forneça o seu consentimento para a **Privacidade e conformidade dos dados** selecionando **Concordo**.
 
 1. Selecione **Verificar** para validar a configuração.
 
 1. Depois de concluir a verificação, selecione **Guardar**.
 
-> [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"]
    > ![Página de configuração de ligação à HERE Technologies](media/enrichment-HERE-connection.png "Página de configuração de ligação à HERE Technologies")
 
 ## <a name="enrichment-results"></a>Resultados do enriquecimento
@@ -90,7 +90,7 @@ Desenvolva a partir dos seus dados de clientes melhorados. Crie [segmentos](segm
 ## <a name="data-privacy-and-compliance"></a>Privacidade e conformidade de dados
 
 Quando ativa Dynamics 365 Customer Insights para transmitir dados à HERE Technologies, permite a transferência de dados fora dos limites de conformidade para Dynamics 365 Customer Insights, incluindo dados potencialmente sensíveis, tais como Dados Pessoais. A Microsoft transferirá tais dados sob as suas instruções, mas o utilizador é responsável por assegurar que a HERE Technologies cumpre quaisquer obrigações de privacidade ou segurança que possa ter. Para obter mais informações, consulte [Declaração de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-O seu administrador Dynamics 365 Customer Insights pode remover este melhoramento em qualquer altura para descontinuar a utilização desta funcionalidade.
+O seu administrador do Dynamics 365 Customer Insights pode remover este melhoramento em qualquer altura para descontinuar a utilização desta funcionalidade.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

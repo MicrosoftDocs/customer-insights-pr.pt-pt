@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
-ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
+ms.openlocfilehash: a83caf2428f3dbd9791b9f746d00d370362a508c
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049264"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304816"
 ---
 # <a name="define-and-manage-measures"></a>Definir e gerir medidas
 
-As medidas ajudam-no a compreender melhor os comportamentos dos clientes e o desempenho do negócio. Olham para os valores relevantes dos [perfis unificados](data-unification.md). Por exemplo, uma empresa quer ver o *gasto total por cliente* para entender o histórico de compras de cada cliente ou medir as *vendas totais da empresa* para entender a receita agregada de todo o negócio.  
+As medidas ajudam-no a compreender melhor os comportamentos dos clientes e o desempenho do negócio. Olham para os valores relevantes dos [perfis unificados](data-unification.md). Por exemplo, uma empresa quer ver o *gasto total por cliente* para entender o histórico de compras de um cliente individual ou medir as *vendas totais da empresa* para entender a receita ao nível agregado de todo o negócio.  
 
 As medidas são criadas utilizando o criador de medidas, uma plataforma de consulta de dados com vários operadores e opções simples de mapeamento. Permite filtrar os dados, agrupar os resultados, detetar [caminhos de relações entres entidades](relationships.md) e pré-visualizar a saída.
 
@@ -34,7 +34,7 @@ Esta secção acompanha-o através da criação de uma nova medida a partir do z
 
 1. Selecione **Editar nome** e forneça um **Nome** para a medida. 
    > [!NOTE]
-   > Se a sua nova configuração de medidas tiver apenas dois campos, por exemplo, CustomerID e um cálculo, a saída será adicionada como uma nova coluna à entidade gerada pelo sistema chamada Customer_Measure. E poderá ver o valor da medida no perfil de cliente unificado. Outras medidas irão gerar as suas próprias entidades.
+   > Se a sua nova configuração de medidas tiver apenas dois campos – por exemplo, CustomerID e um cálculo – a saída será adicionada como uma nova coluna à entidade gerada pelo sistema chamada Customer_Measure. E poderá ver o valor da medida no perfil de cliente unificado. Outras medidas irão gerar as suas próprias entidades.
 
 1. Na área de configuração, escolha a função de agregação no menu pendente **Selecionar Função**. As funções de agregação incluem: 
    - **Sum**
@@ -64,17 +64,19 @@ Esta secção acompanha-o através da criação de uma nova medida a partir do z
 
 1. Para adicionar filtros, selecione **Filtro** na área de configuração. 
   
-   1. Na secção **Adicionar atributos** do painel **Filtros**, selecione o atributo que pretende utilizar para criar filtros.
+   1. Na secção **Adicionar atributo** do painel **Filtros**, selecione o atributo que pretende utilizar para criar filtros.
    1. Defina os operadores de filtro para definir o filtro para cada atributo selecionado.
    1. Selecione **Aplicar** para adicionar os filtros à medida.
 
 1. Para adicionar dimensões, selecione **Dimensão** na área de configuração. Dimensões mostrarão como colunas na entidade de saída da medida.
+ 
    1. Selecione **Editar dimensões** para adicionar atributos de dados pelos quais pretende agrupar os valores da medida. Por exemplo, cidade ou sexo. Por predefinição, a dimensão *CustomerID* é selecionada para criar *medidas ao nível do cliente*. Pode remover a dimensão predefinida se pretender criar *medidas ao nível do negócio*.
    1. Selecione **Concluído** para adicionar as dimensões à medida.
 
-1. Se houver valores nos seus dados que precisa de substituir por um número inteiro, por exemplo, substitua *nulo* por *0*, selecione **Regras**. Configure a regra e certifique-se de que escolhe apenas números inteiros como substitutos.
+1. Se houver valores nos seus dados que precisa de substituir por um número inteiro – por exemplo, substitua *nulo* por *0* – selecione **Regras**. Configure a regra e certifique-se de que escolhe apenas números inteiros como substitutos.
 
 1. Se existirem múltiplos caminhos entre a entidade de dados que mapeou e a entidade *Cliente*, tem de escolher um dos [caminhos de relação entre entidades identificados](relationships.md). Os resultados da medida podem variar dependendo do caminho selecionado. 
+   
    1. Selecione **Preferências de dados** e escolha o caminho da entidade que deve ser usado para identificar a sua medida. Se houver apenas um único caminho para a entidade *Cliente*, este controlo não aparecerá.
    1. Selecione **Concluído** para aplicar a sua seleção. 
 
@@ -113,7 +115,7 @@ O procedimento a seguir descreve os passos para criar uma nova medida utilizando
 
 1. Selecione **Novo** e, em seguida, selecione **Escolher um modelo**.
 
-   :::image type="content" source="media/measure-use-template.png" alt-text="Captura de ecrã do menu suspenso ao criar uma nova medida com o modelo realçado.":::
+   :::image type="content" source="media/measure-use-template.png" alt-text="Captura de ecrã do menu pendente ao criar uma nova medida com destaque no modelo.":::
 
 1. Encontre o modelo que se adequa à sua necessidade e selecione **Escolher modelo**.
 
@@ -123,7 +125,7 @@ O procedimento a seguir descreve os passos para criar uma nova medida utilizando
 
 1. Selecione **Concluído**.
 
-1. Na secção **Definir período de tempo**, defina o período de tempo dos dados a utilizar. Escolha se pretende que a nova medida cubra todo o conjunto de dados selecionando **De Sempre**. Ou se quiser que a medida se concentre num **Período de tempo específico**.
+1. Na secção **Definir período de tempo**, defina o período de tempo dos dados a utilizar. Escolha se pretende que a nova medida cubra todo o conjunto de dados selecionando **Sempre** ou se pretende que a medida se concentre num **Período de tempo específico**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Captura de ecrã a mostrar a secção do período de tempo ao configurar uma medida a partir de um modelo.":::
 
@@ -142,12 +144,12 @@ O procedimento a seguir descreve os passos para criar uma nova medida utilizando
 
 Pode encontrar a lista de medidas na página **Medidas**.
 
-Encontrará informações sobre o tipo de medida, o criador, data de criação e estado. Quando seleciona uma medida da lista, pode pré-visualizar a saída e transferir um ficheiro .CSV.
+Encontrará informações sobre o tipo de medida, o criador, data de criação e estado. Quando selecionar uma medida da lista, pode pré-visualizar a saída e transferir um ficheiro CSV.
 
 Para atualizar todas as suas medidas ao mesmo tempo, selecione **Atualizar tudo** sem selecionar uma medida específica.
 
 > [!div class="mx-imgBorder"]
-> ![Ações para gerir medidas únicas](media/measure-actions.png "Ações para gerir medidas únicas")
+> ![Ações para gerir medidas únicas.](media/measure-actions.png "Ações para gerir medidas únicas.")
 
 Selecione uma medida da lista para as seguintes opções:
 
@@ -159,7 +161,7 @@ Selecione uma medida da lista para as seguintes opções:
 - **Ativar** ou **Desativar**. As medidas inativas não serão atualizadas durante uma [atualização agendada](system.md#schedule-tab).
 
 > [!TIP]
-> Há [seis tipos de estados](system.md#status-types) para tarefas/processos. Além disso, a maior parte dos processos [depende de outros processos a jusante](system.md#refresh-policies). Poderá selecionar o estado de um processo para ver os detalhes do progresso de toda a tarefa. Depois de selecionar **Ver detalhes** de uma das tarefas do trabalho, encontra informações adicionais: tempo de processamento, última data de processamento e todos os erros e avisos associados à tarefa.
+> Há [seis tipos de estados](system.md#status-types) para tarefas/processos. Além disso, a maior parte dos processos [depende de outros processos a jusante](system.md#refresh-policies). Poderá selecionar o estado de um processo para ver os detalhes do progresso de toda a tarefa. Depois de selecionar **Ver detalhes** para uma das tarefas do trabalho, encontrará informações adicionais: tempo de processamento, data do último processamento e todos os erros e avisos associados à tarefa.
 
 ## <a name="next-step"></a>Passo seguinte
 

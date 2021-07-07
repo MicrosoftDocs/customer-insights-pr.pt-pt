@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: 0c728fad4ed00d1bf085fed60057211861b3a195
-ms.sourcegitcommit: f0855bd7762b1f0a1d3dd5259e23c95e1b0a6a93
+ms.openlocfilehash: 342aeb33f652d5d60cd25e13969766954bf56370
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "5866421"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304940"
 ---
 # <a name="customer-activities"></a>Atividades do cliente
 
@@ -45,7 +45,7 @@ As suas origens de dados podem incluir entidades com dados transacionais e de at
 
    - **Primeiro**: campo estrangeiro na sua entidade de atividade que será utilizado para estabelecer uma relação com outra entidade.
    - **Segundo**: entidade de cliente de origem correspondente com a qual a sua entidade de atividade estará em relacionamento. Só pode relacionar-se com entidades de clientes de origem que são utilizadas no processo de unificação de dados.
-   - **Terceiro**: se já existir uma relação entre esta entidade de atividade e a entidade de cliente de origem selecionada, o nome da relação estará apenas em modo de leitura. Se não existir essa relação, será criada uma nova relação com o nome que fornecer nesta caixa.
+   - **Terceiro**: se já existir uma relação entre esta entidade de atividade e a entidade de cliente de origem selecionada, o nome da relação estará apenas em modo de leitura. Se não existir essa relação, uma nova relação será criada com o nome que fornecer nesta caixa.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Definir a relação entre entidades.":::
 
@@ -53,19 +53,19 @@ As suas origens de dados podem incluir entidades com dados transacionais e de at
 
 1. No passo **Unificação de atividades**, escolha o evento de atividade e a hora de início da sua atividade. 
    - **Campos necessários**
-      1. **Atividade do evento**: campo que é o evento para esta atividade
-      2. **Carimbo de data/hora**: campo que representa a hora de início da sua atividade.
+      - **Atividade do evento**: campo que é o evento para esta atividade.
+      - **Carimbo de data/hora**: campo que representa a hora de início da sua atividade.
 
    - **Campos opcionais**
-      1. **Detalhe adicional**: campo com informações relevantes para esta atividade.
-      2. **Ícone**: ícone que melhor representa este tipo de atividade.
-      3. **Endereço Web**: campo que contém um URL com informações sobre esta atividade. Por exemplo, o sistema transacional que fornece esta atividade. Este URL pode ser qualquer campo da origem de dados, ou pode ser construído como um novo campo usando uma transformação Power Query. Os dados de URL serão armazenados na entidade de *Atividade Unificada*, que pode ser consumida a jusante utilizando [APIs](apis.md).
+      - **Detalhe adicional**: campo com informações relevantes para esta atividade.
+      - **Ícone**: ícone que melhor representa este tipo de atividade.
+      - **Endereço Web**: campo que contém um URL com informações sobre esta atividade. Por exemplo, o sistema transacional que fornece esta atividade. Este URL pode ser qualquer campo da origem de dados, ou pode ser construído como um novo campo usando uma transformação Power Query. Os dados de URL serão armazenados na entidade de *Atividade Unificada*, que pode ser consumida a jusante utilizando [APIs](apis.md).
    
    :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Especificar os dados de atividade do cliente numa entidade de Atividade Unificada.":::
 
 1. Selecione **Seguinte** para avançar para o passo seguinte. Pode selecionar **Terminar e rever** para guardar a atividade agora com o tipo de atividade definido como **Outro**. 
 
-1. No passo **Tipo de Atividade**, escolha o tipo de atividade e selecione opcionalmente se pretende mapear semântica alguns dos tipos de atividade para utilização noutras áreas do Customer Insights. Atualmente, os tipos de atividade *Subscription* & *SalesOrderLine* podem ser mapeados semanticamente depois de concordar em mapear os campos. Se um tipo de atividade não for relevante para a nova atividade, pode escolher *Outro* ou *Criar novo* para um tipo de atividade personalizada.
+1. No passo **Tipo de Atividade**, escolha o tipo de atividade e selecione opcionalmente se pretende mapear semântica alguns dos tipos de atividade para utilização noutras áreas do Customer Insights. Atualmente, os tipos de atividade *Subscription* e *SalesOrderLine* podem ser semanticamente mapeados depois de concordar em mapear os campos. Se um tipo de atividade não for relevante para a nova atividade, pode escolher *Outro* ou *Criar novo* para um tipo de atividade personalizada.
 
 1. Selecione **Seguinte** para avançar para o passo seguinte. 
 
@@ -89,7 +89,7 @@ As seguintes ações estão disponíveis quando seleciona uma atividade.
 
 - **Editar**: abre a configuração da atividade no passo de revisão. Pode alterar parte ou toda a configuração atual a partir deste passo. Depois de alterar a configuração, selecione **Guardar atividade** e, em seguida, selecione **Executar** para processar as alterações.
 
-- **Mudar o nome:** abre um diálogo onde introduzir um nome diferente para a atividade selecionada. Selecione **Guardar** para aplicar as alterações.
+- **Mudar o nome**: abre um diálogo onde pode introduzir um nome diferente para a atividade selecionada. Selecione **Guardar** para aplicar as alterações.
 
 - **Eliminar**: abre um diálogo para confirmar a eliminação da atividade selecionada. Também pode eliminar mais do que uma atividade ao mesmo tempo selecionando as atividades e, em seguida, selecionando o ícone de eliminação. Selecione **Eliminar** para confirmar a eliminação.
 

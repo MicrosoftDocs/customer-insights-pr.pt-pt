@@ -72,7 +72,7 @@
           href: audience-insights/enrichment-here.md
         - name: Enriqueça com o Leadspace
           href: audience-insights/enrichment-leadspace.md
-        - name: Enriqueça com o Experian
+        - name: Melhorar com a Experian
           href: audience-insights/enrichment-experian.md
         - name: Melhorar com a importação personalizada SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
@@ -136,6 +136,8 @@
           items:
             - name: Descrição geral de exportações
               href: audience-insights/export-destinations.md
+            - name: Campanha Ativa
+              href: audience-insights/export-active-campaign.md
             - name: AdRoll
               href: audience-insights/export-adroll.md
             - name: Autopilot
@@ -144,7 +146,7 @@
               href: audience-insights/export-azure-blob-storage.md
             - name: Azure Data Lake Storage Gen2
               href: audience-insights/export-azure-data-lake-storage-gen2.md
-            - name: Análise do Azure Synapse
+            - name: Azure Synapse Analytics
               href: audience-insights/export-azure-synapse-analytics.md
             - name: Adobe Campaign Standard
               href: audience-insights/export-adobe-campaign-standard.md
@@ -178,8 +180,12 @@
               href: audience-insights/export-omnisend.md
             - name: RollWorks
               href: audience-insights/export-rollworks.md
+            - name: Marketing Cloud da Salesforce
+              href: audience-insights/export-salesforce.md
             - name: SendGrid
               href: audience-insights/export-sendgrid.md
+            - name: SendInBlue
+              href: audience-insights/export-sendinblue.md
             - name: Snapchat
               href: audience-insights/export-snapchat.md
             - name: SFTP
@@ -240,8 +246,8 @@
           href: engagement-insights/get-started.md
         - name: Criar uma área de trabalho
           href: engagement-insights/create-workspace.md
-        - name: Instrumentalize o seu website
-          href: engagement-insights/instrument-website.md
+        - name: Capturar eventos de sites e de aplicações móveis
+          href: engagement-insights/developer-resources.md
         - name: Conceitos e terminologia
           href: engagement-insights/glossary.md
     - name: Eventos
@@ -272,10 +278,18 @@
       items:
         - name: Visão geral dos recursos para programadores
           href: engagement-insights/developer-resources.md
-        - name: Tutorial Web SDK
+        - name: Tutorial do Web SDK
           href: engagement-insights/advanced-SDK-implementation.md
         - name: Exemplo da SDK Web
           href: engagement-insights/websdk-sample.md
+        - name: Tutorial da SDK Android
+          href: engagement-insights/get-started-android.md
+        - name: Exemplo de SDK Android
+          href: engagement-insights/androidsdk-sample.md
+        - name: Tutorial do SDK do iOS
+          href: engagement-insights/get-started-ios.md
+        - name: Exemplo de SDK iOS
+          href: engagement-insights/iossdk-sample.md
     - name: Administração
       items:
         - name: Funções e permissões

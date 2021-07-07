@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: a85ee598ec747d0594755314e83a127ce0f2af95
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129913"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306180"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Guia de exemplos de predição de recomendações de produtos (pré-visualização)
 
@@ -105,9 +105,9 @@ Depois de ingerir os dados, iniciamos agora o processo de unificação de dados 
 
 1. Aceda ao separador **Corresponder** e selecione **Definir encomenda**.
 
-2. Na lista pendente **Primária**, escolher **eCommerceContacts : eCommerce** como a origem primária e incluir todos os registos.
+2. Na lista pendente **Primário**, escolha **eCommerceContacts : eCommerce** como a origem primária e inclua todos os registos.
 
-3. Na lista pendente **Entidade 2**, escolher **loyCustomers : LoyaltyScheme** e incluir todos os registos.
+3. Na lista pendente **Entidade 2**, escolha **loyCustomers : LoyaltyScheme** e inclua todos os registos.
 
    ![Unificar corresponder comércio eletrónico e fidelidade.](media/unify-match-order.png)
 
@@ -115,16 +115,16 @@ Depois de ingerir os dados, iniciamos agora o processo de unificação de dados 
 
 5. Adicione a sua primeira condição usando FullName.
 
-   - Para eCommerceContacts selecione **FullName** na lista pendente.
-   - Para loyCustomers selecione **FullName** na lista pendente.
+   - Para eCommerceContacts, selecione **FullName** na lista pendente.
+   - Para loyCustomers, selecione **FullName** na lista pendente.
    - Selecione a lista pendente **Normalizar** e escolha **Tipo (Telefone, Nome, Morada, ...)**.
    - Definir **Nível de precisão**: **Básico** e **Valor**: **Elevado**.
 
 6. Introduzir o nome **FullName, Email** para a nova regra.
 
    - Acrescentar uma segunda condição para o endereço de correio eletrónico, selecionando **Adicionar condição**
-   - Para a entidade eCommerceContacts, escolha **EMail** na lista pendente.
-   - Para a entidade loyCustomers, escolha **EMail** na lista pendente.
+   - Para a entidade eCommerceContacts, escolha **E-mail** na lista pendente.
+   - Para a entidade loyCustomers, escolha **E-mail** na lista pendente.
    - Deixar em branco Normalizar.
    - Definir **Nível de precisão**: **Básico** e **Valor**: **Elevado**.
 

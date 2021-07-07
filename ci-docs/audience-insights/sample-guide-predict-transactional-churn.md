@@ -9,20 +9,20 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 251bc26246cee16952e8e4cb08e2ed7aa4d18488
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595440"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306134"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Guia de amostra de predição de abandono transacional (pré-visualização)
 
-Este guia irá guiá-lo através de um exemplo da predição de abandono transacional no Customer Insights, utilizando os dados fornecidos abaixo Todos os dados utilizados neste guia não são dados reais do cliente e fazem parte do conjunto de dados Contoso que se encontram no ambiente de *Demonstração* na sua subscrição do Customer Insights.
+Este guia irá guiá-lo através de um exemplo da predição de abandono transacional no Customer Insights, utilizando os dados fornecidos abaixo Todos os dados utilizados neste guia não são dados reais de clientes e fazem parte do conjunto de dados da Contoso encontrados no ambiente de *Demonstração* da sua Subscrição do Customer Insights.
 
 ## <a name="scenario"></a>Cenário
 
-Contoso é uma empresa que produz café e máquinas de café de alta qualidade, que vendem através do seu site Contoso Coffee. O seu objetivo é saber quais os clientes que normalmente adquirem os seus produtos regularmente deixarão de ser clientes ativos nos próximos 60 dias. Saber qual dos seus clientes os pode **abandonar** pode ajudá-los a poupar esforços de marketing, concentrando-se em mantê-los.
+A Contoso é uma empresa que produz café e máquinas de café de alta qualidade, que vende através do seu site Contoso Coffee. O seu objetivo é saber quais os clientes que normalmente adquirem os seus produtos regularmente deixarão de ser clientes ativos nos próximos 60 dias. Saber qual dos seus clientes os pode **abandonar** pode ajudá-los a poupar esforços de marketing, concentrando-se em mantê-los.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -109,9 +109,9 @@ Depois de ingerirmos os dados, iniciamos agora o processo **Mapear, Corresponder
 
 1. Aceda ao separador **Corresponder** e selecione **Definir encomenda**.
 
-1. Na lista pendente **Primária**, escolher **eCommerceContacts : eCommerce** como a origem primária e incluir todos os registos.
+1. Na lista pendente **Primário**, escolha **eCommerceContacts : eCommerce** como a origem primária e inclua todos os registos.
 
-1. Na lista pendente **Entidade 2**, escolher **loyCustomers : LoyaltyScheme** e incluir todos os registos.
+1. Na lista pendente **Entidade 2**, escolha **loyCustomers : LoyaltyScheme** e inclua todos os registos.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Unificar corresponder comércio eletrónico e fidelidade.":::
 
@@ -119,16 +119,16 @@ Depois de ingerirmos os dados, iniciamos agora o processo **Mapear, Corresponder
 
 1. Adicione a sua primeira condição usando FullName.
 
-   * Para eCommerceContacts selecione **FullName** na lista pendente.
-   * Para loyCustomers selecione **FullName** na lista pendente.
+   * Para eCommerceContacts, selecione **FullName** na lista pendente.
+   * Para loyCustomers, selecione **FullName** na lista pendente.
    * Selecione a lista pendente **Normalizar** e escolha **Tipo (Telefone, Nome, Morada, ...)**.
    * Definir **Nível de precisão**: **Básico** e **Valor**: **Elevado**.
 
 1. Introduzir o nome **FullName, Email** para a nova regra.
 
    * Acrescentar uma segunda condição para o endereço de correio eletrónico, selecionando **Adicionar condição**
-   * Para a entidade eCommerceContacts, escolha **EMail** na lista pendente.
-   * Para a entidade loyCustomers, escolha **EMail** na lista pendente. 
+   * Para a entidade eCommerceContacts, escolha **E-mail** na lista pendente.
+   * Para a entidade loyCustomers, escolha **E-mail** na lista pendente. 
    * Deixar em branco Normalizar. 
    * Definir **Nível de precisão**: **Básico** e **Valor**: **Elevado**.
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c8e4a7247ccf575a62440038180010916b09d51b
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954501"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305262"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquecimento para perfis de clientes (pré-visualização)
 
@@ -22,7 +22,8 @@ Utilize dados de origens como a Microsoft e outros parceiros para enriquecer os 
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Página do Hub de enriquecimento":::
 
-Nos insights de audiência, vá a **Dados** > **Melhoramento** para trabalhar com opções de melhoramento.    
+Nos insights de audiência, vá a **Dados** > **Melhoramento** para trabalhar com opções de melhoramento.  
+
 É preciso ter permissões de Contribuidor ou Administrador para criar ou editar enriquecimentos. Para mais informações, consulte [Permissões](permissions.md).
 
 No separador **Descobrir**, encontrará os seguintes enriquecimentos:
@@ -31,7 +32,7 @@ No separador **Descobrir**, encontrará os seguintes enriquecimentos:
 - [Interesses](enrichment-microsoft.md) fornecidos pela Microsoft
 - [Endereços melhorados](enrichment-enhanced-addresses.md) fornecidos pela Microsoft
 - [Dados da empresa](enrichment-leadspace.md) fornecidos pela Leadspace
-- [Dados demográficos](enrichment-experian.md) fornecidos pela Experian
+- [Informações demográficas](enrichment-experian.md) fornecidas pela Experian
 - [Dados de localização](enrichment-here.md) fornecidos pela HERE Technologies
 - [Dados personalizados](enrichment-SFTP-custom-import.md) através de Secure File Transfer Protocol (SFTP)
 
@@ -39,7 +40,7 @@ No separador **Meus enriquecimentos**, pode ver os enriquecimentos que configuro
 
 ## <a name="manage-existing-enrichments"></a>Gerir enriquecimentos existentes
 
-Vá a **Meus enriquecimentos** para ver todos os enriquecimentos configurados. Cada enriquecimento é representado como uma linha que inclui informações adicionais sobre o enriquecimento.
+Aceda ao separador **Os meus melhoramentos** para ver todos os melhoramentos configurados. Cada enriquecimento é representado como uma linha que inclui informações adicionais sobre o enriquecimento.
 
 Selecione um enriquecimento para ver as opções disponíveis. Também pode selecionar as reticências (...) num item de lista para ver as opções.
 
@@ -59,6 +60,6 @@ Os enriquecimentos de terceiros são configurados através de [ligações](conne
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Múltiplos enriquecimentos do mesmo tipo
 
-A entidade a enriquecer é especificada durante a configuração do enriquecimento, o que lhe permite enriquecer apenas um subconjunto dos seus perfis. Por exemplo, enriqueça dados apenas para um segmento específico. Pode configurar vários enriquecimentos do mesmo tipo e reutilizar a mesma ligação. Alguns enriquecimentos terão limites ao número de enriquecimentos do mesmo tipo que podem ser criados. Os limites e a utilização atual podem ser vistos na página de **Enriquecimento**.
+A entidade a enriquecer é especificada durante a configuração do enriquecimento, o que lhe permite enriquecer apenas um subconjunto dos seus perfis. Por exemplo, melhorar dados apenas para um segmento específico. Pode configurar vários enriquecimentos do mesmo tipo e reutilizar a mesma ligação. Alguns enriquecimentos terão limites ao número de enriquecimentos do mesmo tipo que podem ser criados. Os limites e a utilização atual podem ser vistos na página de **Enriquecimento**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

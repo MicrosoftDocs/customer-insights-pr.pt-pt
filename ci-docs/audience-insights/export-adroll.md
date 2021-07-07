@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: dbebc3ee3978ca6ee9d1ad1c15c226479876709f
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: 67bfa23d56b26ae592efa4d7197713664bb02623
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124379"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304847"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Exportar segmentos para o AdRoll (pré-visualização)
 
@@ -28,11 +28,11 @@ Exportar segmentos de perfis de clientes unificados para o AdRoll e usá-los par
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
-- Pode exportar até 250.000 perfis por exportação para o AdRoll.
+- Pode exportar até 250.000 perfis de cada vez para o AdRoll.
 - Não pode exportar segmentos com menos de 100 perfis para o AdRoll. 
 - A exportação para o AdRoll está limitada a segmentos.
 - Exportar até 250.000 perfis para o AdRoll pode demorar até 10 minutos para ser concluído. 
-- O número de perfis que pode exportar para o AdRoll é dependente e limitado no seu contrato com o AdRoll.
+- O número de perfis que pode exportar para o AdRoll está dependente do seu contrato com o AdRoll.
 
 ## <a name="set-up-connection-to-adroll"></a>Configure a ligação para o AdRoll
 
@@ -62,9 +62,9 @@ Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Pa
 
 1. Para criar uma nova exportação, selecione **Adicionar destino**.
 
-1. No campo **Ligação para a exportação**, escolha uma ligação a partir da secção AdRoll. Se não vir este nome de secção, não existem ligações deste tipo disponíveis para si.
+1. No campo **Ligação para a exportação**, escolha uma ligação a partir da secção AdRoll. Se não vir este nome de secção, não há ligações deste tipo disponíveis para si.
 
-1. Introduza o seu **ID do Anunciante do AdRoll**. Para mais informações, consulte [Perfis do Anunciante do AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+1. Introduza o seu **ID do Anunciante do AdRoll**. Para obter mais informações, consulte [Perfis de Anunciante do AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
 3. Na secção **Correspondência de dados**, no campo **E-mail**, selecione o campo no seu perfil unificado de cliente que representa o endereço de correio eletrónico de um cliente. É necessário exportar segmentos para o AdRoll.
 
@@ -74,11 +74,13 @@ Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Pa
 
 Guardar uma exportação não executa a exportação imediatamente.
 
-A exportação é executada com cada [atualização agendada](system.md#schedule-tab). Também pode [exportar dados a pedido](export-destinations.md#run-exports-on-demand). 
+A exportação é executada com cada [atualização agendada](system.md#schedule-tab). 
+
+Também pode [exportar dados a pedido](export-destinations.md#run-exports-on-demand). 
 
 
 ## <a name="data-privacy-and-compliance"></a>Privacidade e conformidade de dados
 
 Quando ativa o Dynamics 365 Customer Insights para transmitir dados para o AdRoll, permite a transferência de dados fora do limite de conformidade para o Dynamics 365 Customer Insights, incluindo dados potencialmente sensíveis, como Dados Pessoais. A Microsoft transferirá esses dados a seu pedido, mas o utilizador responsável por garantir que o AdRoll cumpre quaisquer obrigações de privacidade ou segurança que possa ter. Para obter mais informações, consulte [Declaração de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 
-O seu administrador Dynamics 365 Customer Insights pode remover este destino de exportação em qualquer altura para descontinuar a utilização desta funcionalidade.
+O seu administrador do Dynamics 365 Customer Insights pode remover este destino de exportação em qualquer altura para descontinuar a utilização desta funcionalidade.

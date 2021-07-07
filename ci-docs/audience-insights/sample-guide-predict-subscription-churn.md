@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 324e5c19778230dd978b2f4e9156a2dd82b3d2bd
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595532"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306317"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Guia de predição de abandono da subscrição (pré-visualização)
 
@@ -22,7 +22,7 @@ Iremos acompanhá-lo através de um exemplo de predição de abandono de subscri
 
 ## <a name="scenario"></a>Cenário
 
-Contoso é uma empresa que produz café e máquinas de café de alta qualidade, que vendem através do seu site Contoso Coffee. Iniciaram recentemente um negócio de subscrições para que os seus clientes pudessem tomar café com regularidade. O seu objetivo é compreender, quais os clientes subscritores que poderão cancelar a sua subscrição nos próximos meses. Saber qual dos seus clientes os pode **abandonar** pode ajudá-los a poupar esforços de marketing, concentrando-se em mantê-los.
+A Contoso é uma empresa que produz café e máquinas de café de alta qualidade, que vende através do seu site Contoso Coffee. Iniciaram recentemente um negócio de subscrições para que os seus clientes pudessem tomar café com regularidade. O seu objetivo é compreender, quais os clientes subscritores que poderão cancelar a sua subscrição nos próximos meses. Saber qual dos seus clientes os pode **abandonar** pode ajudá-los a poupar esforços de marketing, concentrando-se em mantê-los.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -128,9 +128,9 @@ Depois de ingerirmos os dados, iniciamos agora o processo **Mapear, Corresponder
 
 1. Aceda ao separador **Corresponder** e selecione **Definir encomenda**.
 
-1. Na lista pendente **Primária**, escolher **eCommerceContacts : eCommerce** como a origem primária e incluir todos os registos.
+1. Na lista pendente **Primário**, escolha **eCommerceContacts : eCommerce** como a origem primária e inclua todos os registos.
 
-1. Na lista pendente **Entidade 2**, escolher **loyCustomers : LoyaltyScheme** e incluir todos os registos.
+1. Na lista pendente **Entidade 2**, escolha **loyCustomers : LoyaltyScheme** e inclua todos os registos.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Unificar corresponder comércio eletrónico e fidelidade.":::
 
@@ -138,16 +138,16 @@ Depois de ingerirmos os dados, iniciamos agora o processo **Mapear, Corresponder
 
 1. Adicione a sua primeira condição usando FullName.
 
-   * Para eCommerceContacts selecione **FullName** na lista pendente.
-   * Para loyCustomers selecione **FullName** na lista pendente.
+   * Para eCommerceContacts, selecione **FullName** na lista pendente.
+   * Para loyCustomers, selecione **FullName** na lista pendente.
    * Selecione a lista pendente **Normalizar** e escolha **Tipo (Telefone, Nome, Morada, ...)**.
    * Definir **Nível de precisão**: **Básico** e **Valor**: **Elevado**.
 
 1. Introduzir o nome **FullName, Email** para a nova regra.
 
    * Acrescentar uma segunda condição para o endereço de correio eletrónico, selecionando **Adicionar condição**
-   * Para a entidade eCommerceContacts, escolha **EMail** na lista pendente.
-   * Para a entidade loyCustomers, escolha **EMail** na lista pendente. 
+   * Para a entidade eCommerceContacts, escolha **E-mail** na lista pendente.
+   * Para a entidade loyCustomers, escolha **E-mail** na lista pendente. 
    * Deixar em branco Normalizar. 
    * Definir **Nível de precisão**: **Básico** e **Valor**: **Elevado**.
 

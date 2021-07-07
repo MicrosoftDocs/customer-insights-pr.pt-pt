@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896341"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304618"
 ---
 # <a name="customer-profiles"></a>Perfis de cliente
 
@@ -57,13 +57,13 @@ Selecione qualquer um dos mosaicos do cliente para abrir a **Página de detalhes
 
 Detalhes do cliente incluem:
 
--   **Mosaico de perfil de cliente:** Este mosaico mostra os diferentes valores da entidade unificada de perfil de cliente. Estes detalhes podem incluir endereço de e-mail, nome, cidade, e assim por diante. 
+-   **Mosaico de perfil de cliente**: este mosaico mostra os diferentes valores da entidade unificada de perfil de cliente. Estes detalhes podem incluir endereço de e-mail, nome, cidade, e assim por diante. 
 
--   **Potenciais interesses, potenciais marcas:** Mostra se foi configurado um enriquecimento de primera parte. Representa interesses e afinidades potenciais para marcas que um cliente com um perfil semelhante a este cliente possa ter. Para mais informações, consulte [Enriquecer perfis de clientes com afinidades de marca e interesse](enrichment-microsoft.md).
+-   **Potenciais interesses, potenciais marcas**: mostra se foi configurado um melhoramento de primeira parte. Representa interesses e afinidades potenciais para marcas que um cliente com um perfil semelhante a este cliente possa ter. Para mais informações, consulte [Enriquecer perfis de clientes com afinidades de marca e interesse](enrichment-microsoft.md).
 
--   **Medidas:** Mostra se configurou uma ou mais medidas de um tipo específico: medidas de atributos do cliente. Incluem os KPIs calculados em torno dos seus clientes a nível do cliente individual. Para mais informações, consulte [Definir e gerir medidas](measures.md).
+-   **Medidas**: mostra se configurou uma ou mais medidas de um tipo específico: medidas de atributos do cliente. Incluem os KPIs calculados em torno dos seus clientes a nível do cliente individual. Para mais informações, consulte [Definir e gerir medidas](measures.md).
 
--   **Cronologia da actividade:** Mostra se tem atividades configuradas. A vista da cronologia contém as atividades deste cliente ordenadas cronologicamente, começando pela atividade mais recente. Para mais informações, veja [Atividades de cliente](activities.md).
+-   **Cronologia da atividade**: mostra se tem atividades configuradas. A vista da cronologia contém as atividades deste cliente ordenadas cronologicamente, começando pela atividade mais recente. Para mais informações, veja [Atividades de cliente](activities.md).
 
 Selecione **Voltar aos clientes** para voltar à página de pesquisa de clientes.
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: b9a1b30e37c3792aa7bdfcfc177da9e8a32c324d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596927"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305905"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Ligue-se a uma origem de dados do Power Query
 
@@ -72,7 +72,7 @@ Os conectores com uma marca de verificação na coluna **Customer Insights (Flux
 
 1. Em informações de audiência, aceda a **Dados** > **Origens de dados**.
 
-2. Selecione as reticências verticais junto à origem de dados que pretende alterar e selecione **Editar** a partir do menu pendente.
+2. Selecione as reticências verticais junto da origem de dados que pretende alterar e selecione **Editar** no menu pendente.
 
    > [!div class="mx-imgBorder"]
    > ![Opção Editar](media/edit-option-data-sources.png "Opção Editar")
