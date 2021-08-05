@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7c82fe92b3351a782a4fa6510300d870b742d042
-ms.sourcegitcommit: 42b3bce1e20e7cc707d232844dacfeed3d6fc096
+ms.openlocfilehash: abe9ee447745081e3c462d44e5901b6dac919adf
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/28/2021
-ms.locfileid: "6309834"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555367"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Melhore perfis do cliente com demografia a partir da Experian (pré-visualização)
 
@@ -39,7 +39,7 @@ Atualmente, suportamos apenas o melhoramento de perfis de clientes nos Estados U
 1. Selecione **Melhorar os meus dados** no mosaico da Experian.
 
    > [!div class="mx-imgBorder"]
-   > ![mosaico Experian](media/experian-tile.png "Experian tile")
+   > ![Mosaico da Experian.](media/experian-tile.png "Experian tile")
    > 
 
 1. Selecione uma [ligação](connections.md) na lista pendente. Contacte um administrador se não houver nenhuma ligação disponível. Se for um administrador, pode criar uma ligação selecionando **Adicionar ligação** e escolhendo a Experian na lista pendente. 

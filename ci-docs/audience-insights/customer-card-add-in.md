@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
-ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
+ms.openlocfilehash: 6a7137730ab8cc43bc93daf647d9d55d02d96cd8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/18/2021
-ms.locfileid: "6059602"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692219"
 ---
 # <a name="customer-card-add-in-preview"></a>Suplemento de Cartões de Cliente (pré-visualização)
 
@@ -25,7 +25,7 @@ Obtenha uma visão de 360 graus dos seus clientes diretamente nas aplicações D
 ## <a name="prerequisites"></a>Pré-requisitos
 
 - O suplemento funciona apenas com aplicações condicionadas por modelo do Dynamics 365, como o Sales ou o Customer Service, versão 9.0 e posterior.
-- Para que os seus dados do Dynamics 365 mapeiem para perfis de clientes de informações de audiência, precisam de ser [ingeridos a partir da aplicação Dynamics 365 usando o conector do Common Data Service](connect-power-query.md).
+- Para que os seus dados do Dynamics 365 mapeiem para perfis de clientes de informações de audiência, precisam de ser [ingeridos a partir da aplicação Dynamics 365 usando o conector do Microsoft Dataverse](connect-power-query.md).
 - Todos os utilizadores do Dynamics 365 do Suplemento de Cartões de Cliente têm de ser [adicionados como utilizadores](permissions.md) nas informações de audiência para ver os dados.
 - As [capacidades de pesquisa e de filtragem configuradas](search-filter-index.md) nas informações de audiência são necessárias para que a pesquisa de dados funcione.
 - Cada controlo de suplemento baseia-se em dados específicos em informações de audiência:
@@ -50,7 +50,7 @@ Poderá demorar algum tempo a instalar a solução no seu ambiente.
 1. Selecione a ligação **Nome a Apresentar** para a solução **Suplemento de Cartões de Cliente do Dynamics 365 Customer Insights (Pré-visualização)**.
 
    > [!div class="mx-imgBorder"]
-   > ![Selecionar nome a apresentar](media/select-display-name.png "Selecionar nome a apresentar")
+   > ![Selecionar nome a apresentar.](media/select-display-name.png "Selecionar nome a apresentar")
 
 1. Selecione **Iniciar sessão** e introduza as credenciais da conta de administrador que utiliza para configurar o Customer Insights.
 
@@ -64,7 +64,7 @@ Poderá demorar algum tempo a instalar a solução no seu ambiente.
    - Para mapear com uma conta, selecione o campo na entidade Cliente que corresponda à identificação da sua entidade da conta.
 
    > [!div class="mx-imgBorder"]
-   > ![Campo ID do Contacto](media/contact-id-field.png "Campo ID do Contacto")
+   > ![Campo ID do Contacto.](media/contact-id-field.png "Campo ID do Contacto")
 
 1. Selecione **Guardar configuração** para guardar as definições.
 
@@ -83,7 +83,7 @@ Poderá demorar algum tempo a instalar a solução no seu ambiente.
 1. Selecione o formulário de contacto ao qual pretende adicionar controlos da Ficha de Cliente.
 
     > [!div class="mx-imgBorder"]
-    > ![Selecionar formulário Contacto](media/contact-active-forms.png "Selecionar formulário Contacto")
+    > ![Selecionar formulário Contacto.](media/contact-active-forms.png "Selecionar formulário Contacto")
 
 1. Para adicionar um controlo, no editor de formulários, arraste qualquer campo do **Explorador de Campos** para onde pretende que o controlo seja apresentado.
 
@@ -110,7 +110,7 @@ O Suplemento da Ficha de Cliente não atualiza a versão automaticamente. Para a
 
 1. Selecione a **Aplicar Atualização da Versão da Solução** na barra de ação.
 
-   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Atualize a versão da solução na área Personalização das aplicações Dynamics 365":::
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Atualize a versão da solução na área Personalização das aplicações Dynamics 365.":::
 
 1. Depois de iniciar o processo de atualização de versão, verá um indicador de carregamento até que a atualização esteja concluída. Se não houver uma versão mais recente, a atualização mostrará uma mensagem de erro.
 

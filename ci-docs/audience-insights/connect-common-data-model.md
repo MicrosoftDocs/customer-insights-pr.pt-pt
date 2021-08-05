@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 385406b706890d741fec2694c190c0fada7809d7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49bab0605197912cd4b81ff193b914599a092792
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596559"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554908"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Ligar a uma pasta do Common Data Model com uma conta Azure Data Lake
 
@@ -45,7 +45,7 @@ Este artigo fornece informações sobre como ingerir dados a partir de uma pasta
 
 1. Pode escolher entre usar uma opção baseada em recursos e uma opção baseada em subscrição para autenticação. Para obter mais informações, consulte [ligar informações de audiência a uma conta Gen2 do Azure Data Lake Storage com um principal de serviço Azure](connect-service-principal.md). Introduza as informações do **Recipiente** e selecione **Seguinte**.
    > [!div class="mx-imgBorder"]
-   > ![Caixa de diálogo para introduzir detalhes da nova ligação para o Azure Data Lake](media/enter-new-storage-details.png)
+   > ![Caixa de diálogo para introduzir detalhes da nova ligação para o Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
    > Precisa de uma das seguintes funções, quer no recipiente, quer na conta de armazenamento acima referida, para poder ligar-se e criar uma origem de dados:
    >  - Leitor de Dados de Blobs de Armazenamento
@@ -58,11 +58,11 @@ Este artigo fornece informações sobre como ingerir dados a partir de uma pasta
 
 1. Irá receber uma lista de entidades disponíveis no ficheiro model.json ou manifest.json selecionado. Pode rever e selecionae da lista de entidades disponíveis e selecione **Guardar**. Todas as entidades selecionadas serão ingeridas a partir da nova origem de dados.
    > [!div class="mx-imgBorder"]
-   > ![Caixa de diálogo que mostra uma lista de entidades a partir de um ficheiro model.json](media/review-entities.png)
+   > ![Caixa de diálogo que mostra uma lista de entidades a partir de um ficheiro model.json.](media/review-entities.png)
 
 8. Indique as entidades de dados para as quais pretende ativar a criação de perfis de dados e selecione **Guardar**. A criação de perfis de dados permite utilizar análise e outras capacidades. Pode selecionar toda a entidade, o que seleciona todos os atributos da entidade, ou selecionar certos atributos à sua escolha. Por defeito, nenhuma entidade está habilitada para a criação de perfis de dados.
    > [!div class="mx-imgBorder"]
-   > ![Caixa de diálogo que mostra a criação de perfis de dados](media/dataprofiling-entities.png)
+   > ![Caixa de diálogo que mostra a criação de perfis de dados.](media/dataprofiling-entities.png)
 
 9. Depois de guardar as seleções, é aberta a página **Origens de dados**. Deverá ver agora a ligação de pasta do Common Data Model como uma origem de dados.
 
@@ -81,12 +81,12 @@ Pode atualizar a chave de acesso para a conta de armazenamento que contém a pas
 
 4. Opcionalmente, atualize a **Chave de acesso** e selecione **Seguinte**.
 
-   ![Diálogo para editar e atualizar uma tecla de acesso para uma origem de dados existente](media/edit-access-key.png)
+   ![Diálogo para editar e atualizar uma tecla de acesso para uma origem de dados existente.](media/edit-access-key.png)
 
 5. Opcionalmente, pode atualizar a partir de uma ligação chave de conta a uma ligação baseada em recursos ou baseada em subscrição. Para obter mais informações, consulte [ligar informações de audiência a uma conta Gen2 do Azure Data Lake Storage com um principal de serviço Azure](connect-service-principal.md). Não é possível alterar as informações do **Recipiente** ao atualizar a ligação.
    > [!div class="mx-imgBorder"]
 
-   > ![Caixa de diálogo para introduzir detalhes de ligação para o Azure Data Lake para uma conta de armazenamento existente](media/enter-existing-storage-details.png)
+   > ![Caixa de diálogo para introduzir detalhes de ligação para o Azure Data Lake para uma conta de armazenamento existente.](media/enter-existing-storage-details.png)
 
    > [!NOTE]
    > Precisa de uma das seguintes funções, quer no recipiente, quer na conta de armazenamento acima referida, para poder ligar-se e criar uma origem de dados:

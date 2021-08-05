@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: b37bb5dfeed2326784ef276a93a04bec626aaf6e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305905"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554700"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Ligue-se a uma origem de dados do Power Query
 
@@ -42,7 +42,7 @@ O Power Query oferece um vasto conjunto de conectores para ingerir dados. A maio
 1. A caixa de diálogo **Power Query – Editar consultas** permite-lhe rever e refinar os dados. As entidades que os sistemas identificaram na sua origem de dados ligada aparecem no painel esquerdo.
 
    > [!div class="mx-imgBorder"]
-   > ![Diálogo Editar consultas](media/data-manager-configure-edit-queries.png "Diálogo Editar consultas")
+   > ![Diálogo Editar consultas.](media/data-manager-configure-edit-queries.png "Diálogo Editar consultas")
 
 1. Também pode transformar os seus dados. Selecione uma entidade para edição ou transformação. Utilize as opções na janela do Power Query para aplicar transformações. Cada transformação é listada em **Passos aplicados**. O Power Query fornece inúmeras opções de transformação pré-criadas. Para obter mais informações, veja [Transformações do Power Query](/power-query/power-query-what-is-power-query#transformations).
 
@@ -75,7 +75,7 @@ Os conectores com uma marca de verificação na coluna **Customer Insights (Flux
 2. Selecione as reticências verticais junto da origem de dados que pretende alterar e selecione **Editar** no menu pendente.
 
    > [!div class="mx-imgBorder"]
-   > ![Opção Editar](media/edit-option-data-sources.png "Opção Editar")
+   > ![Opção Editar.](media/edit-option-data-sources.png "Opção Editar")
 
 3. Aplique as suas alterações e transformações no diálogo **Power Query – Editar consultas** como descrito na secção [Criar uma nova origem de dados](#create-a-new-data-source).
 
