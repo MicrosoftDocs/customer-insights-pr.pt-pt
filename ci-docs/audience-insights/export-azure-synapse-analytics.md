@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 822082d661863e737ea3d3a749a6c878db766967
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
+ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5977391"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6327378"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportar dados para a Análise do Azure Synapse (Pré-visualização)
 
@@ -74,8 +74,10 @@ Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Pa
 1. Forneça um **Nome a apresentar** reconhecível para a sua exportação e um **Nome de base de dados**.
 
 1. Selecione que entidades pretende exportar para a Análise do Azure Synapse.
+   > [!NOTE]
+   > As origens de dados baseadas numa [pasta Common Data Model](connect-common-data-model.md) não são suportadas.
 
-1. Selecione **Guardar**.
+2. Selecione **Guardar**.
 
 Guardar uma exportação não executa a exportação imediatamente.
 

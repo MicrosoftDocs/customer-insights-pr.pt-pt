@@ -1,7 +1,7 @@
 ---
 title: Criar e gerir ambientes
 description: Saiba como se inscrever no serviço e como gerir ambientes.
-ms.date: 06/15/2021
+ms.date: 07/22/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,125 +9,24 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 904ce68336cba4b7a4d5a37692b72d091400559d
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 2f115269b9d07dd118ec18cc48b55de8aea9b5bb
+ms.sourcegitcommit: 98267da3f3eddbdfbc89600a7f54e5e664a8f069
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304894"
+ms.lasthandoff: 07/28/2021
+ms.locfileid: "6683487"
 ---
 # <a name="manage-environments"></a>Gerir ambientes
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Este artigo explica como criar uma nova organização e como providenciar um ambiente.
+## <a name="switch-environments"></a>Mudar de ambientes
 
-## <a name="sign-up-and-create-an-organization"></a>Inscreva-se e crie uma organização
+Selecione o controlo **Ambiente** no canto superior direito da página para mudar de ambiente.
 
-1. Aceder ao site [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/).
+:::image type="content" source="media/home-page-environment-switcher.png" alt-text="Captura de ecrã do controlo para mudar de ambiente.":::
 
-2. Selecione **Começar**.
-
-3. Escolha o cenário de inscrição preferencial e selecione a ligação correspondente.
-
-4. Aceite os termos e condições e selecione **Continuar** para começar a criar a organização.
-
-5. Após a criação do ambiente, será redirecionado para o [Customer Insights](https://home.ci.ai.dynamics.com).
-
-6. Use o ambiente de demonstração para explorar a aplicação ou crie um novo ambiente seguindo os passos na secção seguinte.
-
-7. Depois de especificar as definições de ambiente, selecione **Criar**.
-
-8. Será registado depois de o ambiente ter sido criado com sucesso.
-
-## <a name="create-an-environment-in-an-existing-organization"></a>Criar um ambiente numa organização existente
-
-Existem duas formas de criar um novo ambiente. Pode especificar uma configuração totalmente nova ou pode copiar algumas definições de configuração a partir de um ambiente existente.
-
-> [!NOTE]
-> As organizações podem criar *dois* ambientes para cada licença do Customer Insights. Se a sua organização comprar mais de uma licença, [contacte a nossa equipa de suporte](https://go.microsoft.com/fwlink/?linkid=2079641) para aumentar o número de ambientes disponíveis. Para obter mais informações sobre capacidade e capacidade de suplementos, transfira o [Guia de licenciamento do Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
-
-Para criar um ambiente:
-
-1. Selecione o seletor **Ambiente** no cabeçalho da aplicação.
-
-1. Selecione **Novo**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Definições de ambiente.](media/environment-settings-dialog.png)
-
-1. No diálogo **Criar um ambiente**, selecione **Novo ambiente**.
-
-   Se pretender [copiar dados do ambiente atual](#considerations-for-copy-configuration-preview), selecione **Copiar do ambiente atual**. Verá uma lista de todos os ambientes disponíveis na sua organização de onde pode copiar dados.
-
-1. Forneça os seguintes detalhes:
-   - **Nome**: O nome para este ambiente. Este campo já está preenchido se copiou de um ambiente existente, mas pode alterá-lo.
-   - **Tipo**: selecione se pretende criar um ambiente de Produção ou Sandbox.
-   - **Região**: a região na qual o serviço é implementado e hospedado.
-   
-1. Opcionalmente, pode selecionar **Definições avançadas**:
-
-   - **Guardar todos os dados para**: Especifica onde pretende armazenar os dados de saída gerados a partir do Customer Insights. Terá duas opções: **Armazenamento do Customer Insights** (um Azure Data Lake gerido pela equipa do Customer Insights) e **Azure Data Lake Storage** (o seu próprio Azure Data Lake Storage). Por predefinição, a opção de armazenamento do Customer Insights está selecionada.
-
-     > [!NOTE]
-     > Ao guardar dados no Azure Data Lake Storage, aceita que os dados serão transferidos e armazenados na localização geográfica adequada para essa apropriada para essa conta de armazenamento do Azure, que pode ser diferente daquela na qual os dados estão armazenados no Dynamics 365 Customer Insights. [Saber mais no Centro de Fidedignidade da Microsoft.](https://www.microsoft.com/trust-center)
-     >
-     > Atualmente, as entidades incluídas são sempre armazenadas no Data Lake Gerido pelo Customer Insights. 
-     > 
-     > Suportamos apenas contas do Azure Data Lake Storage da mesma região do Azure que selecionou na criação do ambiente. 
-     > 
-     > Suportamos apenas as contas do Azure Data Lake Storage que tenham o espaço de nomes hierárquico ativado.
-
-
-   - Para a opção do Azure Data Lake Storage, pode escolher entre uma opção baseada em recursos e uma opção baseada em subscrições para autenticação. Para obter mais informações, consulte [ligar informações de audiência a uma conta Gen2 do Azure Data Lake Storage com um principal de serviço Azure](connect-service-principal.md). O nome do **Contentor** não pode ser alterado e será `customerinsights`.
-   
-   - Se pretender utilizar [predições](predictions.md), configurar a partilha de dados com o Microsoft Dataverse ou ativar a ingestão de dados a partir de origens de dados no local, forneça o URL do ambiente Microsoft Dataverse sob **Configurar partilha de dados com o Microsoft Dataverse e ativar capacidades adicionais**. Selecione **Ativar partilha de dados** para partilhar dados de saída do Customer Insights com um Data Lake Gerido do Microsoft Dataverse.
-
-     > [!NOTE]
-     > - A partilha de dados com o Data Lake Gerido do Microsoft Dataverse não é atualmente suportada quando guarda todos os dados para o seu próprio Azure Data Lake Storage.
-     > - [Predição de valores em falta numa entidade](predictions.md) não é atualmente suportado quando ativa a partilha de dados com o Data Lake Gerido do Microsoft Dataverse.
-
-     > [!div class="mx-imgBorder"]
-     > ![Opções de configuração para ativar a partilha de dados com o Microsoft Dataverse.](media/datasharing-with-DataverseMDL.png)
-
-   Quando executa processos, tais como ingestão de dados ou criação de segmentos, as pastas correspondentes serão criadas na conta de armazenamento que especificou acima. Os ficheiros de dados e os ficheiros model.json serão criados e adicionados a pastas baseada no nome do processo.
-
-   Se criar vários ambientes de Customer Insights e optar por guardar as entidades de saída desses ambientes na sua conta de armazenamento, serão criadas pastas separadas para cada ambiente com ci_<environmentid> no recipiente.
-
-### <a name="considerations-for-copy-configuration-preview"></a>Considerações para a configuração de cópias (pré-visualização)
-
-As seguintes definições de configuração são copiadas:
-
-- Configurações de funcionalidades
-- Origens de dados ingeridas/importadas
-- Configuração de unificação de dados (Mapa, Corresponder, Unir)
-- Segmentos
-- Medições
-- Relações
-- Atividades
-- Índice de pesquisas e filtros
-- Destinos de exportação
-- Atualização agendada
-- Melhoramentos
-- Gestão de modelos
-- Atribuições de funções
-
-As seguintes definições *não* são copiadas:
-
-- Perfis de cliente.
-- Credenciais da origem de dados. Terá de fornecer as credenciais para cada origem de dados e atualizar manualmente as origens de dados.
-- Origens de dados da pasta do Common Data Model e do Data Lake gerido do Dataverse. Terá de criar manualmente essas origens de dados com o mesmo nome que no ambiente de origem.
-
-Quando copia um ambiente, verá uma mensagem de confirmação de que o novo ambiente foi criado. Selecione **Ir para origens de dados** para ver a lista de origens de dados.
-
-Todas as origens de dados apresentarão um estado de **Credenciais Obrigatórias**. Edite as origens de dados e introduza as credenciais para as atualizar.
-
-> [!div class="mx-imgBorder"]
-> ![Origens de dados copiadas.](media/data-sources-copied.png)
-
-Depois de atualizar as fontes de dados, aceda ao **Dados** > **Unificar**. Aqui encontrará definições do ambiente de origem. Edite-as conforme necessário ou selecione **Executar** para iniciar o processo de unificação de dados e criar a entidade de cliente unificada.
-
-Quando a unificação de dados estiver concluída, aceda a **Medidas** e **Segmentos** para atualizá-los também.
+Os administradores podem [criar](get-started-paid.md) e gerir ambientes.
 
 ## <a name="edit-an-existing-environment"></a>Editar um ambiente existente
 
@@ -147,13 +46,52 @@ Pode editar alguns dos detalhes de ambientes existentes.
 
    > [!NOTE]
    > - A partilha de dados com o Data Lake Gerido do Microsoft Dataverse não é atualmente suportada quando guarda todos os dados para o seu próprio Azure Data Lake Storage.
-   > - Atualmente, a [Predição de valores em falta numa entidade](predictions.md) não é suportado quando permite a partilha de dados com Data Lake Gerido do Microsoft Dataverse.
+   > - [Predição de valores em falta numa entidade](predictions.md) e relatórios Incorporados do PowerBI em informações de audiência (se ativados no seu ambiente) não são atualmente suportados quando ativa a partilha de dados com o data lake gerido da Microsoft Dataverse.
 
    Depois de ativar a partilha de dados com o Microsoft Dataverse, começará uma atualização completa das origens de dados e outros processos. Se os processos estiverem atualmente em execução, não vê a opção de permitir a partilha de dados com o Microsoft Dataverse. Espere que esses processos sejam concluídos ou cancele-os para ativar a partilha de dados. 
    
    :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Opções de configuração para ativar a partilha de dados com o Microsoft Dataverse.":::
    
    Quando executa processos, tais como ingestão de dados ou criação de segmentos, as pastas correspondentes serão criadas na conta de armazenamento que especificou acima. Os ficheiros de dados e os ficheiros model.json serão criados e adicionados às respetivas subpastas, dependendo do processo que executar.
+
+## <a name="copy-the-environment-configuration"></a>Copiar a configuração do ambiente
+
+Quando criar um novo ambiente, pode optar por copiar a configuração a partir de um ambiente existente. 
+
+:::image type="content" source="media/environment-settings-dialog.png" alt-text="Captura de ecrã das opções de definições nas definições do ambiente.":::
+
+Verá uma lista de todos os ambientes disponíveis na sua organização de onde pode copiar dados.
+
+As seguintes definições de configuração são copiadas:
+
+- Origens de dados ingeridas/importadas
+- Configuração de unificação de dados (Mapa, Corresponder, Unir)
+- Segmentos
+- Medições
+- Relações
+- Atividades
+- Índice de pesquisas e filtros
+- Destinos de exportação
+- Atualização agendada
+- Melhoramentos
+- Gestão de modelos
+- Atribuições de funções
+
+Os dados seguintes *não* são copiados:
+
+- Perfis de cliente.
+- Credenciais da origem de dados. Terá de fornecer as credenciais para cada origem de dados e atualizar manualmente as origens de dados.
+- Origens de dados da pasta do Common Data Model e do Data Lake gerido do Dataverse. Terá de criar manualmente essas origens de dados com o mesmo nome que no ambiente de origem.
+
+Quando copia um ambiente, verá uma mensagem de confirmação de que o novo ambiente foi criado. Selecione **Ir para origens de dados** para ver a lista de origens de dados.
+
+Todas as origens de dados apresentarão um estado de **Credenciais Obrigatórias**. Edite as origens de dados e introduza as credenciais para as atualizar.
+
+:::image type="content" source="media/data-sources-copied.png" alt-text="Lista de origens de dados que foram copiadas e precisam de autenticação.":::
+
+Depois de atualizar as fontes de dados, aceda ao **Dados** > **Unificar**. Aqui encontrará definições do ambiente de origem. Edite-as conforme necessário ou selecione **Executar** para iniciar o processo de unificação de dados e criar a entidade de cliente unificada.
+
+Quando a unificação de dados estiver concluída, aceda a **Medidas** e **Segmentos** para atualizá-los também.
 
 ## <a name="reset-an-existing-environment"></a>Repor um ambiente existente
 

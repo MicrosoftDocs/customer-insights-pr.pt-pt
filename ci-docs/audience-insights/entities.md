@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
-ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
+ms.openlocfilehash: ac8b0671b20123091bef64e672fc53398fe8955a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049408"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6553989"
 ---
 # <a name="entities-in-audience-insights"></a>Entidades em insight da audiência
 
@@ -30,19 +30,19 @@ A página **Entidades** lista as entidades e inclui várias colunas:
 - **Última atualização**: data e hora da última atualização da entidade
 - **Última atualização**: data e hora da última atualização de dados
 
-## <a name="exploring-a-specific-entitys-data"></a>Explorar os dados de uma entidade específica
+## <a name="explore-a-specific-entitys-data"></a>Explorar os dados de uma entidade específica
 
 Selecione uma entidade para explorar os diferentes campos e registos incluídos nessa entidade.
 
 > [!div class="mx-imgBorder"]
-> ![Selecione uma entidade](media/data-manager-entities-data.png "Selecionar uma entidade")
+> ![Selecione uma entidade.](media/data-manager-entities-data.png "Selecione uma entidade")
 
 - O separador **Dados** mostra uma tabela que lista detalhes sobre registos individuais da entidade.
 
 > [!div class="mx-imgBorder"]
-> ![Tabela de campos](media/data-manager-entities-fields.PNG "Tabela de campos")
+> ![Tabela de campos.](media/data-manager-entities-fields.PNG "Tabela de campos")
 
-- Por predefinição, o separador **Atributos** está selecionado e mostra uma tabela para obter detalhes para a entidade selecionada, tais como nomes de campo, tipos de dados e tipos. A coluna **Tipo** mostra os tipos associados do Common Data Model, que são identificados automaticamente pelo sistema ou [mapeados manualmente](map-entities.md) pelos utilizadores. Estes são tipos semânticos que podem ser diferentes dos tipos de dados dos atributos. Por exemplo, o campo *E-mail* abaixo tem um tipo de dados *Texto*, mas o respetivo tipo (semântico) de Common Data Model pode ser *E-mail* ou *Endereço de E-mail*.
+- Por predefinição, o separador **Atributos** está selecionado e mostra uma tabela para obter detalhes para a entidade selecionada, tais como nomes de campo, tipos de dados e tipos. A coluna **Tipo** mostra os tipos associados do Common Data Model, que são identificados automaticamente pelo sistema ou [mapeados manualmente](map-entities.md) pelos utilizadores. Estes tipos são tipos semânticos que podem diferir dos tipos de dados dos atributos. Por exemplo, o campo *E-mail* abaixo tem um *Texto* tipo de dados, mas o seu tipo de Common Data Model (semântico) pode ser *Email* ou *EmailAddress*.
 
 > [!NOTE]
 > Ambas as tabelas mostram apenas um exemplo dos dados da sua entidade. Para ver o conjunto de dados completo, vá para a página **Origens de dados**, selecione uma entidade, selecione **Editar** e, em seguida, veja os dados desta entidade com o editor do Power Query, tal como explicado em [Origens de dados](data-sources.md).
@@ -52,11 +52,28 @@ Para saber mais sobre os dados ingeridos na entidade, a coluna **Resumo** fornec
 Selecione o ícone de gráfico para ver o resumo dos dados.
 
 > [!div class="mx-imgBorder"]
-> ![Símbolo de resumo](media/data-manager-entities-summary.png "Tabela de resumo de dados")
+> ![Símbolo de resumo.](media/data-manager-entities-summary.png "Tabela de resumo de dados")
 
-### <a name="next-step"></a>Passo seguinte
+## <a name="entity-specific-information"></a>Informações específicas de entidade
 
-Consulte o tópico [Unificar](data-unification.md) para saber mais sobre como *mapear*, *corresponder* e *intercalar* os dados ingeridos.
+A secção seguinte fornece informações sobre algumas entidades criadas pelo sistema.
+
+### <a name="corrupted-data-sources"></a>Origens de dados danificadas
+
+Campos de uma origem de dados ingerida podem conter dados danificados. Os registos com campos danificados estão expostos em entidades criadas pelo sistema. Conhecer registos danificados ajuda a identificar que dados rever e atualizar no sistema de origem. Após a próxima atualização da origem de dados, os registos corrigidos são ingeridos para o Customer Insights e transmitidos para processos a jusante. 
+
+Por exemplo, uma coluna de "aniversário" tem o tipo de dados definido como "data". Um registo de cliente tem o seu aniversário introduzido como "01/01/19777". O sistema vai sinalizar este registo como danificado. Alguém pode agora mudar o aniversário no sistema de origem para "1977". Após uma atualização automatizada de origens de dados, o campo tem agora um formato válido e o registo será removido da entidade danificada. 
+
+Aceda a **Dados** > **Entidades** e procure as entidades danificadas na secção **Sistema**. Nomeação de esquema de entidades danificadas: "DataSourceName_EntityName_corrupt".
+
+O Customer Insights ainda processa registos danificados. No entanto, podem causar problemas ao trabalhar com os dados unificados.
+
+As verificações que se seguem são executadas nos dados ingeridos para expor registos danificados: 
+
+- O valor de um campo não corresponde ao tipo de dados da sua coluna.
+- Os campos contêm carateres que fazem com que as colunas não correspondam ao esquema esperado. Por exemplo: aspas mal formatadas, aspas não fechadas ou carateres de nova linha.
+- Se existirem colunas de datetime/data/datetimeoffset, o seu formato tem de ser especificado no modelo se não seguir o formato ISO padrão.
+
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

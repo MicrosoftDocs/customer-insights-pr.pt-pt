@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 24b523786158ff36c314601846ee25ea64cfabbe
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305666"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650240"
 ---
 # <a name="merge-entities"></a>Unir entidades
 
@@ -109,7 +109,7 @@ Algumas entidades contêm mais detalhes do que outras. Se uma entidade incluir o
 Quer intercale manualmente os atributos ou deixe que o sistema o faça, poderá sempre executar a intercalação. Selecione **Executar** na página **Intercalar** para iniciar o processo.
 
 > [!div class="mx-imgBorder"]
-> ![Guardar e Executar a intercalação de dados](media/configure-data-merge-save-run.png "Guardar e Executar a intercalação de dados")
+> ![Guardar e Executar a união de dados.](media/configure-data-merge-save-run.png "Guardar e Executar a intercalação de dados")
 
 Escolha **Executar apenas União** se pretender apenas ver a saída refletida na entidade de cliente unificado. Os processos a jusante serão atualizados conforme [definido na agenda de atualização](system.md#schedule-tab).
 
@@ -118,7 +118,9 @@ Escolha **Executar processos de União e a jusante** para atualizar o sistema co
 Para fazer mais alterações e voltar a executar o passo, pode cancelar uma união em curso. Selecione **A atualizar...** e selecione **Cancelar tarefa** no painel lateral apresentado.
 
 > [!TIP]
-> Há [seis tipos de estados](system.md#status-types) para tarefas/processos. Além disso, a maior parte dos processos [depende de outros processos a jusante](system.md#refresh-policies). Poderá selecionar o estado de um processo para ver os detalhes do progresso de toda a tarefa. Depois de selecionar **Ver detalhes** de uma das tarefas do trabalho, encontra informações adicionais: tempo de processamento, última data de processamento e todos os erros e avisos associados à tarefa.
+> Depois de executar o processo de união, selecione o estado do processo para abrir o painel de **Detalhes da tarefa**. Fornece uma descrição geral sobre o tempo de processamento, a última data de processamento e todos os erros e avisos associados à tarefa. Selecione **Ver detalhes** para ver quais as entidades que participaram no processo de correspondência, se a resolução de conflitos for bem sucedida e se as atualizações foram publicadas com sucesso.  
+> Há [seis tipos de estados](system.md#status-types) para tarefas/processos. Além disso, a maior parte dos processos [depende de outros processos a jusante](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Caminho de desagregação para chegar aos detalhes do processo a partir da ligação do estado da tarefa.":::
 
 ## <a name="next-step"></a>Passo Seguinte
 

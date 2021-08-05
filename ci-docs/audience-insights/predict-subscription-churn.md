@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 9eb0593f93d713124e4113dcb62c588819f5b97b
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095662"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556321"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Previsão de abandono de subscrição (pré-visualização)
 
@@ -63,7 +63,7 @@ A previsão de abandono de subscrição ajuda a prever se um cliente está em ri
 1. Nas informações de audiência, vá a **Inteligência** > **Predições**.
 1. Selecione o mosaico **Modelo de abandono de subscrição (pré-visualização)** e selecione **Utilizar este modelo**.
    > [!div class="mx-imgBorder"]
-   > ![Mosaico do modelo de abandono da subscrição com o botão Utilizar este modelo](media/subscription-churn-usethismodel.PNG "Mosaico do modelo de abandono da subscrição com o botão Utilizar este modelo")
+   > ![Mosaico do modelo de abandono da subscrição com o botão Utilizar este modelo.](media/subscription-churn-usethismodel.PNG "Mosaico do modelo de abandono da subscrição com o botão Utilizar este modelo")
 
 ### <a name="name-model"></a>Atribuir nome ao modelo
 
@@ -86,11 +86,11 @@ A previsão de abandono de subscrição ajuda a prever se um cliente está em ri
     1. Selecione a **entidade Cliente** que corresponde à sua entidade principal de cliente.
     1. Introduza um nome que descreva a relação.
        > [!div class="mx-imgBorder"]
-       > ![Página de histórico de subscrições mostrando a criação de uma relação com o cliente](media/subscription-churn-subscriptionhistoryrelationship.PNG "Página de histórico de subscrições mostrando a criação de uma relação com o cliente")
+       > ![Página de histórico de subscrições mostrando a criação de uma relação com o cliente.](media/subscription-churn-subscriptionhistoryrelationship.PNG "Página de histórico de subscrições mostrando a criação de uma relação com o cliente")
 1. Selecione **Seguinte**.
 1. Mapear os campos semânticos para atributos dentro da sua entidade de histórico de subscrições e selecione **Guardar**. Para descrições dos campos, veja os [pré-requisitos](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Página de histórico de subscrições mostrando atributos semânticos que são mapeados para campos na entidade de histórico de subscrições selecionada](media/subscription-churn-subscriptionhistorymapping.PNG "Página de histórico de subscrições mostrando atributos semânticos que são mapeados para campos na entidade de histórico de subscrições selecionada")
+   > ![Página de histórico de subscrições mostrando atributos semânticos que são mapeados para campos na entidade de histórico de subscrições selecionada.](media/subscription-churn-subscriptionhistorymapping.PNG "Página de histórico de subscrições mostrando atributos semânticos que são mapeados para campos na entidade de histórico de subscrições selecionada")
 1. Selecione **Adicionar dados** para as **Atividades do cliente** e selecione a entidade que fornece as informações de atividades do cliente, conforme descrito nos pré-requisitos.
 1. Selecione um tipo de atividade que corresponda ao tipo de atividade do cliente que está a configurar.  Selecione **Criar nova** e forneça um nome se não vir uma opção que corresponda ao tipo de atividade de que necessita.
 1. Terá de configurar a relação da sua entidade de atividade do cliente com a entidade Cliente.
@@ -101,7 +101,7 @@ A previsão de abandono de subscrição ajuda a prever se um cliente está em ri
 1. Mapear os campos semânticos para atributos dentro da sua entidade de atividades do cliente e selecione **Guardar**. Para descrições dos campos, veja os [pré-requisitos](#prerequisites).
 1. (Opcional) Se tiver outras atividades de cliente que gostaria de incluir, repita os passos acima.
    > [!div class="mx-imgBorder"]
-   > ![Definir A relação entre entidades](media/subscription-churn-customeractivitiesmapping.PNG "Página de atividades do cliente mostrando atributos semânticos que são mapeados para campos na entidade de atividades do cliente selecionada")
+   > ![Definir a relação entre entidades.](media/subscription-churn-customeractivitiesmapping.PNG "Página de atividades do cliente mostrando atributos semânticos que são mapeados para campos na entidade de atividades do cliente selecionada")
 1. Selecione **Seguinte**.
 
 ### <a name="set-schedule-and-review-configuration"></a>Definir agenda e rever configuração
@@ -115,7 +115,7 @@ A previsão de abandono de subscrição ajuda a prever se um cliente está em ri
 
 1. Vá para o separador **Minhas previsões** em **Informações** > **Previsões**.
    > [!div class="mx-imgBorder"]
-   > ![Vista da página Minhas Previsões](media/subscription-churn-mypredictions.PNG "Vista da página Minhas Previsões")
+   > ![Vista da página Minhas Previsões.](media/subscription-churn-mypredictions.PNG "Vista da página Minhas Previsões")
 1. Selecione a predição que pretende rever.
    - **Nome da previsão:** O nome da previsão fornecida ao criá-la.
    - **Tipo de previsão:** O tipo de modelo utilizado para a previsão
@@ -131,7 +131,7 @@ A previsão de abandono de subscrição ajuda a prever se um cliente está em ri
    - **Última atualização:** A data em que a previsão foi atualizada resulta na entidade de saída.
 1. Selecione as reticências verticais ao lado da previsão que pretende rever os resultados e selecione **Ver**.
    > [!div class="mx-imgBorder"]
-   > ![Vista das opções no menu de reticências verticais para uma previsão, incluindo Editar, Atualizar, Ver, Registos e Eliminar](media/subscription-churn-verticalellipses.PNG "Vista das opções no menu de reticências verticais para uma previsão, incluindo Editar, Atualizar, Ver, Registos e Eliminar")
+   > ![Vista das opções no menu de reticências verticais para uma previsão, incluindo Editar, Atualizar, Ver, Registos e Eliminar.](media/subscription-churn-verticalellipses.PNG "Vista das opções no menu de reticências verticais para uma previsão, incluindo Editar, Atualizar, Ver, Registos e Eliminar")
 1. Existem três secções primárias de dados dentro da página de resultados:
     1. **Desempenho do modelo de preparação:** A, B ou C são possíveis pontuações. Esta pontuação indica o desempenho da previsão, e pode ajudá-lo a tomar a decisão de usar os resultados armazenados na entidade de saída.
         - As pontuações são determinadas com base nas seguintes regras:
@@ -139,13 +139,13 @@ A previsão de abandono de subscrição ajuda a prever se um cliente está em ri
             - **B** quando o modelo previu com precisão pelo menos 50% do total das previsões, e quando a percentagem de previsões precisas para os clientes que abandonaram é até 10% superior à taxa média histórica de taxa abandono da taxa média histórica.
             - **C** quando o modelo previu com precisão menos 50% das previsões totais, ou quando a percentagem de previsões precisas para os clientes que se abandonaram é inferior à taxa de abandono média histórica.
                > [!div class="mx-imgBorder"]
-               > ![Vista do resultado do desempenho do modelo](media/subscription-churn-modelperformance.PNG "Vista do resultado do desempenho do modelo")
+               > ![Vista do resultado do desempenho do modelo.](media/subscription-churn-modelperformance.PNG "Vista do resultado do desempenho do modelo")
     1. **Probabilidade de abandono (número de clientes):** Grupos de clientes com base no risco previsto de abandono. Estes dados podem ajudá-lo mais tarde se quiser criar um segmento de clientes com elevado risco de abandono. Estes segmentos ajudam a entender onde o seu limite dever ser para a adesão ao segmento.
        > [!div class="mx-imgBorder"]
-       > ![Gráfico mostrando distribuição dos resultados de abandono, divididos em intervalos de 0 a 100%](media/subscription-churn-resultdistribution.PNG "Gráfico mostrando distribuição dos resultados de abandono, divididos em intervalos de 0 a 100%")
+       > ![Gráfico mostrando distribuição dos resultados de abandono, divididos em intervalos de 0 a 100%.](media/subscription-churn-resultdistribution.PNG "Gráfico mostrando distribuição dos resultados de abandono, divididos em intervalos de 0 a 100%")
     1. **Fatores mais influentes:** Há muitos fatores que são tidos em conta na criação da sua previsão. Cada um dos fatores tem a sua importância calculada para as previsões agregadas que um modelo cria. Pode utilizar estes fatores para ajudar a validar os resultados da sua previsão. Ou pode usar estas informações mais tarde para [criar segmentos](segments.md) que possam ajudar a influenciar o risco de abandono para os clientes.
        > [!div class="mx-imgBorder"]
-       > ![Lista mostrando fatores influentes e a sua importância na previsão do resultado](media/subscription-churn-influentialfactors.PNG "Lista mostrando fatores influentes e a sua importância na previsão do resultado")
+       > ![Lista a mostrar fatores influentes e a sua importância na previsão do resultado.](media/subscription-churn-influentialfactors.PNG "Lista mostrando fatores influentes e a sua importância na previsão do resultado")
 
 ## <a name="manage-predictions"></a>Gerir predições
 

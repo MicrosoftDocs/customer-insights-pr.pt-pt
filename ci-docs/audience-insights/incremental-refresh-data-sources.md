@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 03f76bcfc7336d8430146e8a26ffa649c6a17db0
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 1af2e4c42dc5890556c90bb3e5ef1aeb0621fda0
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596835"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554173"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Atualização incremental para origens de dados baseadas no Power Query
 
@@ -45,7 +45,7 @@ Os insights da audiência permitem uma atualização incremental para origens de
 1. Nas **Definições de atualização incremental**, irá configurar a atualização incremental para todas as entidades que tiver selecionado ao criar a origem de dados.
 
    > [!div class="mx-imgBorder"]
-   > ![Configurar entidades numa origem de dados para atualização incremental](media/incremental-refresh-settings.png "Configurar entidades numa origem de dados para atualização incremental")
+   > ![Configurar entidades numa origem de dados para atualização incremental.](media/incremental-refresh-settings.png "Configurar entidades numa origem de dados para atualização incremental")
 
 1. Selecione uma entidade e forneça os seguintes detalhes:
 

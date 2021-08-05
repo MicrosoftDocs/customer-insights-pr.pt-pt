@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: ameetj
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2eb44604e72b32292f971754d4f8c4fd1988c697
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598353"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555183"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Utilize os modelos com base no Azure Machine Learning Studio (clássico)
 
@@ -41,7 +41,7 @@ Num primeiro passo, precisamos de criar uma área de trabalho para e abrir o Mac
 
 1. Depois de criar o recurso, aparecerá o dashboard da área de trabalho do Machine Learning Studio. Selecione **Iniciar Machine Learning Studio**.
 
-   ![Interface de utilizador do Azure Machine Learning Studio](media/azure-machine-learning-studio.png)
+   ![Interface de utilizador do Azure Machine Learning Studio.](media/azure-machine-learning-studio.png)
 
 ## <a name="work-with-azure-machine-learning-studio"></a>Trabalhar com o Azure Machine Learning Studio
 
@@ -55,7 +55,7 @@ Pode agora criar uma nova experimentação, ou importar um modelo de experimento
 
 1. Se criar um novo experimento ou utilizar um modelo de experimento a partir da galeria, tem de configurar as propriedades de **Importar Dados**. Utilize a experiência guiada ou forneça diretamente detalhes para aceder ao Armazenamento de Blobs do Azure que contém os seus dados.  
 
-   ![Experimento do Azure Machine Learning Studio](media/azure-machine-learning-studio-experiment.png)
+   ![Experimento do Azure Machine Learning Studio.](media/azure-machine-learning-studio-experiment.png)
 
 1. Agora pode criar um pipeline de processamento personalizado para limpar e pré-processar os dados, extrair funcionalidades e treinar um modelo adequado.
 
@@ -63,15 +63,15 @@ Pode agora criar uma nova experimentação, ou importar um modelo de experimento
 
 1. Quando estiver satisfeito com a qualidade de um modelo, selecione **Configurar serviço Web** > **Serviço Web Preditivo**. Esta opção importa o modelo treinado e o pipeline de personalização da experimentação de preparação para um serviço preditivo. O serviço preditivo pode levar outro conjunto de dados de entrada com o esquema usado na experimentação de preparação para fazer previsões.
 
-   ![Criar um serviço Web preditivo](media/predictive-webservice-control.png)
+   ![Criar um serviço Web preditivo.](media/predictive-webservice-control.png)
 
 1. Uma vez que o experimento de serviço Web preditivo seja bem sucedido, pode implementá-lo para agendamento automático. Para que o serviço Web funcione com o Customer Insights, selecione **Implementar o Serviço Web** > **Implementar o Serviço Web [Novo] Pré-visualização**. [Obter mais informações sobre implementar o serviço Web](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
-   ![Implementar um serviço Web preditivo](media/predictive-webservice-deploy.png)
+   ![Implementar um serviço Web preditivo.](media/predictive-webservice-deploy.png)
 
 ## <a name="sample-models-from-the-gallery"></a>Modelos de exemplo da galeria
 
-Vamos usar um cenário fictício do Hotel Contoso para os modelos deste artigo. O Hotel Contoso reúne os seguintes dados:
+Utilizaremos um cenário fictício do Hotel Contoso para os modelos deste artigo. O Hotel Contoso reúne os seguintes dados:
 
 - Dados de CRM que consistem na atividade de estadia no hotel. O conjunto de dados inclui informações sobre as datas de estadia para cada cliente registado. Também contém informações sobre a reserva, tipos de quartos, detalhes de gastos, e assim por diante. Os dados estendem-se por quatro anos, de janeiro de 2014 a janeiro de 2018.
 - Perfis de clientes de hóspedes do hotel. Estes perfis contêm informações sobre cada cliente, incluindo o seu nome, data de nascimento, endereço postal, sexo e número de telefone.
@@ -87,13 +87,13 @@ A definição de abandono pode diferir com base no cenário. Neste exemplo, um h
 
 O modelo de experiência pode ser importado da galeria. Em primeiro lugar, certifique-se de que importa os dados para **Atividade de Estadia no Hotel**, **Dados de cliente** e **Dados de Utilização de Serviços** do Armazenamento de Blobs do Azure.
 
-   ![Importar dados para o modelo de abandono](media/import-data-azure-blob-storage.png)
+   ![Importar dados para o modelo de abandono.](media/import-data-azure-blob-storage.png)
 
 ### <a name="featurization"></a>Caracterização
 
 Com base na definição de abandono, identificamos primeiro as funcionalidades não processadas que influenciarão a etiqueta. Em seguida, processamos estas funcionalidades não processadas em funcionalidades numéricas que podem ser usadas com modelos de aprendizagem automática. A integração de dados acontece no Customer Insights para que possamos juntar-nos a estas tabelas, utilizando o *ID de cliente*.
 
-   ![Unir dados importados](media/join-imported-data.png)
+   ![Unir dados importados.](media/join-imported-data.png)
 
 A caracterização para a criação do modelo de análise de abandono pode ser um pouco complicada. Os dados são uma função do tempo com a nova atividade hoteleira registada diariamente. Durante a caracterização, queremos gerar funcionalidades estáticas a partir dos dados dinâmicos. Neste caso, geramos múltiplas funcionalidades da atividade hoteleira com uma janela deslizante de um ano. Também expandimos as funcionalidades categóricas, como o tipo de quarto ou o tipo de reserva, em funcionalidades separadas usando codificação de uma frequência.  
 
@@ -114,7 +114,7 @@ Agora, temos de escolher o algoritmo ideal a usar. Neste caso, a maioria das fun
 
 A imagem a seguir mostra o pipeline de formação e avaliação do modelo do Azure Machine Learning Studio:
 
-![Modelo de abandono do Azure Machine Learning Studio](media/azure-machine-learning-model.png)
+![Modelo de abandono do Azure Machine Learning Studio.](media/azure-machine-learning-model.png)
 
 Também aplicamos uma técnica chamada **Importância de Permutação De Funcionalidades**, um aspeto importante da otimização do modelo. Os modelos incorporados têm pouca ou nenhuma informação sobre o impacto de qualquer funcionalidade específica na predição final. A calculadora de importância de funcionalidades usa um algoritmo personalizado, para calcular a influência das funcionalidades individuais no resultado de um modelo específico. A importância de funcionalidades é normalizada entre +1 e -1. Uma influência negativa significa que a funcionalidade correspondente tem influência contraintuitiva no resultado e deve ser removida do modelo. Uma influência positiva indica que a funcionalidade está a contribuir fortemente para a predição. Estes valores não são coeficientes de correlação, pois são métricas diferentes. Para mais informações, consulte [Importância da Permutação de Funcionalidades](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
@@ -148,7 +148,7 @@ Definimos o objetivo como maximizando a quantidade de dólares de uso do serviç
 
 Tal como o modelo de abandono, estamos a juntar ServiceCustomerID aoCustomerID de forma a criar recomendações de forma consistente por CustomerID.
 
-![Caracterização do modelo de recomendação](media/azure-machine-learning-model-featurization.png)
+![Caracterização do modelo de recomendação.](media/azure-machine-learning-model-featurization.png)
 
 Os dados são provenientes de três entidades diferentes e as funcionalidades são derivadas deles. A caracterização para o problema da recomendação é diferente em comparação com os cenários de abandono ou CLTV. O modelo de recomendação necessita de dados de entrada sob a forma de três conjuntos de funcionalidades.
 
@@ -156,13 +156,13 @@ Os dados são provenientes de três entidades diferentes e as funcionalidades s�
 
 Prevemos produtos ou serviços usando o algoritmo chamado **Train Matchbox Recommender** para treinar o modelo de recomendação.
 
-![Algoritmo de recomendação de produtos](media/azure-machine-learning-model-recommendation-algorithm.png)
+![Algoritmo de recomendação de produtos.](media/azure-machine-learning-model-recommendation-algorithm.png)
 
 As três portas de entrada para o modelo **Train Matchbox Recommender** requerem os dados de utilização do serviço de formação, a descrição do cliente (opcional) e a descrição do serviço. Há três maneiras diferentes de classificar o modelo. Uma delas é para avaliação de modelos onde uma pontuação de Ganho Cumulativo Com Desconto Normalizado (NDCG) é calculada para classificar os itens classificados. Nesta experiência, temos a pontuação NDCG como 0,97. As outras duas opções são classificar o modelo em todo o catálogo de serviços recomendável, ou classificar apenas em itens que os utilizadores não utilizaram antes.
 
 Olhando mais adiante sobre as distribuições das recomendações em todo o catálogo de serviços, notamos que telefone, Wi-Fi e correio são os principais serviços a recomendar. Isto é consistente com o que encontramos a partir das distribuições dos dados de consumo de serviço:
 
-![Saída do modelo de recomendação](media/azure-machine-learning-model-output.png)
+![Saída do modelo de recomendação.](media/azure-machine-learning-model-output.png)
 
 Toda a [experiência de recomendação do produto pode ser acedida no Azure AI Gallery.](https://gallery.azure.ai/Experiment/Recommendation-4)
 

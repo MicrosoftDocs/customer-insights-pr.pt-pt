@@ -1,7 +1,7 @@
 ---
 title: Exportar dados do Customer Insights para um Armazenamento de Blobs do Azure
 description: Aprenda a configurar a ligação e exportar para o Armazenamento de Blobs.
-ms.date: 03/03/2021
+ms.date: 06/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,18 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3c19dc6d4956a33a5bd3cea706f8a154198d487f
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: e38fc06a948178fcbc62c08a4cf4816e1d030e79
+ms.sourcegitcommit: 656b1a6cdff37ba4f808311fd0327ab38e02ed13
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976195"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6318313"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Exportar lista de segmentos e outros dados para o Armazenamento de Blobs do Azure (pré-visualização)
 
 Armazene os seus dados do Customer Insights num Armazenamento de Blobs ou utilize-os para transferir os seus dados para outras aplicações.
 
-## <a name="set-up-the-connection-to-blob-storage"></a>Configure a ligação para o Armazenamento de Blobs
+## <a name="set-up-the-connection-to-blob-storage"></a>Configurar a ligação ao Armazenamento de Blobs
 
 1. Aceda a **Admin** > **Ligações**.
 
@@ -40,11 +40,14 @@ Armazene os seus dados do Customer Insights num Armazenamento de Blobs ou utiliz
 
 Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Para obter mais informações, consulte [Permissões necessárias para configurar uma exportação](export-destinations.md#set-up-a-new-export).
 
+> [!IMPORTANT]
+> Se tiver ativar a definição de eliminação de forma recuperável para a conta de Armazenamento de Blobs do Azure, as exportações falharão. Desative a eliminação de forma recuperável para exportar dados para blobs. Para obter mais informações, consulte [Ativar eliminação de forma recuperável de blobs](/azure/storage/blobs/soft-delete-blob-enable.md)
+
 1. Aceda a **Dados** > **Exportações**.
 
 1. Para criar uma nova exportação, selecione **Adicionar destino**.
 
-1. No campo **Ligação para a exportação**, escolha uma ligação a partir da secção Armazenamento de Blobs do Azure. Se não vir este nome de secção, não existem ligações deste tipo disponíveis para si.
+1. No campo **Ligação para a exportação**, escolha uma ligação a partir da secção Armazenamento de Blobs do Azure. Se não vir este nome de secção, não há ligações deste tipo disponíveis para si.
 
 1. Selecione a caixa junto de cada uma das entidades que pretende exportar para este destino.
 
@@ -53,13 +56,16 @@ Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Pa
 Guardar uma exportação não executa a exportação imediatamente.
 
 A exportação é executada com cada [atualização agendada](system.md#schedule-tab).     
+
 Também pode [exportar dados a pedido](export-destinations.md#run-exports-on-demand). 
 
 Os dados exportados são armazenados no contentor de Armazenamento de Blobs que configurou. Os seguintes caminhos de pastas são criados automaticamente no seu contentor:
 
-- Para entidades de origem e entidades geradas pelo sistema: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`
+- Para entidades de origem e entidades geradas pelo sistema:   
+  `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`  
   - Exemplo: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
-- O model.json para as entidades exportadas estará ao nível de %ExportDestinationName%
+ 
+- O model.json para as entidades exportadas estará ao nível de %ExportDestinationName%.  
   - Exemplo: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

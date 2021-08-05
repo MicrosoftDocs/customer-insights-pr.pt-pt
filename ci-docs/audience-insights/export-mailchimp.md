@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7922a6a69f863caae5401549ed6f88a61aa77d39
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: ac6642c0ce02f1a92458a16250fd3b4cdef5fd1c
+ms.sourcegitcommit: adb9c43ddaba25e511535d78a4bcf8815f154a7b
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124241"
+ms.lasthandoff: 07/06/2021
+ms.locfileid: "6362523"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Exportar segmentos para o Mailchimp (pré-visualização)
 
@@ -38,7 +38,7 @@ Exportar segmentos de perfis unificados de clientes para Mailchimp para criar bo
 
 1. Aceda a **Admin** > **Ligações**.
 
-1. Selecione **Adicionar ligação** e escolha **Autopilot** para configurar a ligação.
+1. Selecione **Adicionar ligação** e escolha **Mailchimp** para configurar a ligação.
 
 1. Forneça um nome reconhecível à ligação no campo **Nome a apresentar**. O nome e o tipo de ligação descrevem esta ligação. Recomendamos a escolha de um nome que explique o propósito e o destino da ligação.
 

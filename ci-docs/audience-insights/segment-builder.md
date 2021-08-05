@@ -1,7 +1,7 @@
 ---
 title: Criar e gerir segmentos
 description: Crie segmentos de clientes para agrupá-los com base em vários atributos.
-ms.date: 05/03/2021
+ms.date: 07/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,14 +9,24 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 550e509a24701fe5fcdeb9d54311872dc954156c
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
+ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064951"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "6685476"
 ---
 # <a name="create-and-manage-segments"></a>Criar e gerir segmentos
+
+> [!IMPORTANT]
+> Há várias alterações a serem lançadas para a experiência de criação de segmentos em setembro de 2021: 
+> - O construtor de segmentos será ligeiramente diferente com elementos remodelados e um melhor fluxo de utilizador.
+> - Novos operadores datetime e um seletor de datas melhorado estão ativados no construtor de segmentos.
+> - Poderá adicionar ou remover condições e regras dos segmentos. 
+> - As regras aninhadas que começam com uma condição OR ficarão disponíveis. Já não precisa de uma condição AND na camada mais externa.
+> - Um painel lateral para selecionar atributos estará constantemente disponível.
+> - Uma opção para selecionar caminhos de relação de entidade.
+> Para experimentar o novo construtor de segmentos, envie um e-mail com o assunto "Request to enable the new segment builder" ("Pedido para ativar o novo construtor de segmentos") para cihelp [at] microsoft.com. Inclua o nome da sua organização e o ID do ambiente de sandbox.
 
 Defina filtros complexos em torno da entidade de cliente unificado e as suas entidades relacionadas. Cada segmento, após o processamento, cria um conjunto de registos de clientes que pode exportar e tomar medidas. Os segmentos são geridos na página **Segmentos**. 
 
@@ -50,11 +60,11 @@ Ao criar um segmento, pode guardar um rascunho. Será guardado como um segmento 
 1. Escolha um operador e um valor para o atributo selecionado.
 
    > [!div class="mx-imgBorder"]
-   > ![Filtro de grupo personalizado](media/customer-group-numbers.png "Filtro de grupo do cliente")
+   > ![Filtro de grupo personalizado.](media/customer-group-numbers.png "Filtro de grupo do cliente")
 
    |Número |Definição  |
    |---------|---------|
-   |1     |Entity          |
+   |5     |Entity          |
    |2     |Atributo          |
    |3    |Operador         |
    |4    |valor         |
@@ -66,7 +76,7 @@ Ao criar um segmento, pode guardar um rascunho. Será guardado como um segmento 
       - Operador **OR**: qualquer uma das condições tem de ser satisfeita como parte do processo de segmentação. Esta opção é mais útil quando define múltiplas condições para a mesma entidade.
 
       > [!div class="mx-imgBorder"]
-      > ![Operador OR onde qualquer condição tem de ser satisfeita](media/segmentation-either-condition.png "Operador OR onde qualquer condição tem de ser satisfeita")
+      > ![Operador OR onde qualquer condição tem de ser satisfeita.](media/segmentation-either-condition.png "Operador OR onde qualquer condição tem de ser satisfeita")
 
       Atualmente, é possível aninhar um operador **OR** num operador **AND**, mas não o contrário.
 
@@ -74,12 +84,12 @@ Ao criar um segmento, pode guardar um rascunho. Será guardado como um segmento 
    Selecione **Adicionar Grupo**.
 
       > [!div class="mx-imgBorder"]
-      > ![Grupo de clientes - adicionar grupo](media/customer-group-add-group.png "Grupo de clientes - adicionar grupo")
+      > ![Grupo de clientes – adicionar grupo.](media/customer-group-add-group.png "Grupo de clientes - adicionar grupo")
 
    1. Selecione um dos operadores definidos: **União**, **Intersetar** ou **Exceto**.
 
    > [!div class="mx-imgBorder"]
-   > ![Grupo de clientes - adicionar união](media/customer-group-union.png "Grupo de clientes - adicionar união")
+   > ![Grupo de clientes – adicionar união.](media/customer-group-union.png "Grupo de clientes - adicionar união")
 
    - **União** une os dois grupos.
 
@@ -90,7 +100,7 @@ Ao criar um segmento, pode guardar um rascunho. Será guardado como um segmento 
 1. Se a entidade estiver ligada à entidade de cliente unificada através das [relações](relationships.md), terá de definir o caminho da relação para criar um segmento válido. Adicione as entidades a partir do caminho da relação até poder selecionar a entidade **Customer : CustomerInsights** a partir da lista pendente. Em seguida, escolha **Todos os registos** para cada passo.
 
    > [!div class="mx-imgBorder"]
-   > ![Caminho da relação durante a criação do segmento](media/segments-multiple-relationships.png "Caminho da relação durante a criação do segmento")
+   > ![Caminho da relação durante a criação do segmento.](media/segments-multiple-relationships.png "Caminho da relação durante a criação do segmento")
 
 1. Por predefinição, os segmentos geram uma entidade de saída que contém todos os atributos dos perfis de cliente que correspondem aos filtros definidos. Se um segmento se basear noutras entidades diferentes da entidade *Cliente*, pode adicionar mais atributos destas entidades à entidade de saída. Selecione **Atributos do projeto** para escolher os atributos que serão acrescentados à entidade de saída.  
   
@@ -127,7 +137,7 @@ Segmentos rápidos permitem criar segmentos simples com um único operador rapid
 4. O sistema fornecerá um **Tamanho do segmento estimado**. Poderá selecionar se pretende gerar ou não o segmento que definiu ou, primeiro, revisitá-lo para obter um tamanho de segmento diferente.
 
     > [!div class="mx-imgBorder"]
-    > ![Nome e estimativa para um segmento rápido](media/quick-segment-name.png "Nome e estimativa para um segmento rápido")
+    > ![Nome e estimativa para um segmento rápido.](media/quick-segment-name.png "Nome e estimativa para um segmento rápido")
 
 5. Indique um **Nome** para o seu segmento. Opcionalmente, indique um **Nome a apresentar**.
 

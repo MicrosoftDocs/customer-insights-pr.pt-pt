@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: de53927f7ed1f58176a7ba83f89be7c39064947c
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306042"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650332"
 ---
 # <a name="match-entities"></a>Fazer corresponder entidades
 
@@ -138,7 +138,7 @@ A especificação das regras de duplicação não é obrigatória. Se tais regra
    - **Menos recente**: Identifica o registo vencedor com base no menos recente. Requer uma data ou um campo numérico para definir a atualidade.
  
    > [!div class="mx-imgBorder"]
-   > ![Regras de duplicação etapa 1](media/match-selfconflation.png "Regras de duplicação etapa 1")
+   > ![Regras de duplicação – passo 1.](media/match-selfconflation.png "Regras de duplicação etapa 1")
  
 1. Assim que as entidades forem selecionadas e a sua preferência de intercalação for definida, selecione **Adicionar regra** para definir as regras de eliminação de duplicados a nível da entidade.
    - **Selecionar campo** apresenta todos os campos disponíveis dessa entidade. Escolha o campo que pretende verificar se existem duplicados. Escolha os campos que sejam provavelmente únicos para cada cliente. Por exemplo, um endereço de e-mail ou a combinação de nome, cidade e número de telefone.
@@ -146,7 +146,7 @@ A especificação das regras de duplicação não é obrigatória. Se tais regra
    - Defina mais condições selecionando **Adicionar condição**.
  
    > [!div class="mx-imgBorder"]
-   > ![Regras de duplicação etapa 2](media/match-selfconflation-rules.png "Regras de duplicação etapa 2")
+   > ![Regras de duplicação – passo 2.](media/match-selfconflation-rules.png "Regras de duplicação etapa 2")
 
   Pode criar múltiplas regras de duplicação para uma entidade. 
 
@@ -179,7 +179,9 @@ Aceda a **Dados** > **Unificar** > **Corresponder** e selecione **Executar** par
 Encontrará o resultado de uma execução bem-sucedida, a entidade unificada de perfil do cliente, na página **Entidades**. A sua entidade de cliente unificada chama-se **Clientes** na secção **Perfis**. A primeira execução de correspondência bem-sucedida cria a entidade unificada de *Cliente*. Todas as execuções de correspondência subsequentes expandem essa entidade.
 
 > [!TIP]
-> Há [seis tipos de estados](system.md#status-types) para tarefas/processos. Além disso, a maior parte dos processos [depende de outros processos a jusante](system.md#refresh-policies). Poderá selecionar o estado de um processo para ver os detalhes do progresso de toda a tarefa. Depois de selecionar **Ver detalhes** de uma das tarefas do trabalho, encontra informações adicionais: tempo de processamento, última data de processamento e todos os erros e avisos associados à tarefa.
+> Depois de executar o processo de correspondência, selecione o estado do processo para abrir o painel de **Detalhes da tarefa**. Fornece uma descrição geral sobre o tempo de processamento, a última data de processamento e todos os erros e avisos associados à tarefa. Selecione **Ver detalhes** para ver quais as entidades que participaram no processo de correspondência, quais as regras que lhes foram aplicadas e se as atualizações foram publicadas com sucesso.  
+> Há [seis tipos de estados](system.md#status-types) para tarefas/processos. Além disso, a maior parte dos processos [depende de outros processos a jusante](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Caminho de desagregação para chegar aos detalhes do processo a partir da ligação do estado da tarefa.":::
 
 ## <a name="review-and-validate-your-matches"></a>Rever e validar as suas correspondências
 

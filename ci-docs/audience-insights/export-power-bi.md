@@ -1,7 +1,7 @@
 ---
 title: Conector do Power BI
 description: Saiba como utilizar o conector do Dynamics 365 Customer Insights no Power BI.
-ms.date: 09/21/2020
+ms.date: 07/23/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: faeb95bd7d2fe3cb220308cdee559b3347c5af54
+ms.sourcegitcommit: f98b6b2058f384365f222d1f9ba0cc9ce801f09d
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596053"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6661116"
 ---
 # <a name="connector-for-power-bi-preview"></a>Conector para Power BI (pré-visualização)
 
@@ -39,7 +39,7 @@ Crie visualizações para os seus dados com o Power BI Desktop. Gere informaçõ
 
 1. Na caixa de diálogo **Navegador**. vê a lista de todos os ambientes a que tem acesso. Expandir um ambiente e abrir qualquer uma das pastas (entidades, medidas, segmentos, melhoramentos). Por exemplo, abra a pasta **Entidades**, para ver todas as entidades que pode importar.
 
-   ![Navegador do Conetor do Power BI](media/power-bi-navigator.png "Navegador do Conetor do Power BI")
+   ![Navegador do Conetor do Power BI.](media/power-bi-navigator.png "Navegador do Conetor do Power BI")
 
 1. Selecione as caixas de verificação junto às entidades que pretende incluir e **Carregar**. Pode selecionar várias entidades de vários ambientes.
 
@@ -68,5 +68,11 @@ Pode identificar e remover as relações duplicadas.
 3. Remova quaisquer relações duplicadas identificadas.
 
 Após a remoção das relações duplicadas, tente configurar novamente o conector do Power BI. O ambiente deve estar agora disponível.
+
+### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Erros em campos de data ao carregar entidades no Power BI Desktop
+
+Ao carregar entidades que contenham campos com um formato de data como MM/DD/AAAA, pode encontrar erros devido a formatos locais sem correspondência. Esta falta de correspondência acontece quando o seu ficheiro do Power BI Desktop está definido para outra região que não o Inglês (Estados Unidos), porque os campos de data em informações de audiência são guardados em formato dos EUA.
+
+O ficheiro do Power BI Desktop tem uma única definição de região, que é aplicada ao obter dados. Para fazer com que estes campos de data sejam interpretados corretamente, defina a região do ficheiro .BPI para Inglês (Estados Unidos). [Aprenda a alterar a região de um ficheiro de ambiente de trabalho do Power BI](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

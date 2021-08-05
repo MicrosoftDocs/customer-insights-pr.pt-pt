@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 28c89693239393d93b7a816535b8c3fffe353935
+ms.sourcegitcommit: e57d51ae3cc233f7b6185c074c66efd9800c02c1
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095616"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6559419"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Predição de abandono transacional (pré-visualização)
 
@@ -47,7 +47,7 @@ A previsão de abandono transacional ajuda a prever se um cliente não comprará
         - **Evento:** o nome do evento que pretende utilizar. Por exemplo, um campo chamado "UserAction" numa mercearia pode ser um cupão de utilização pelo cliente.
         - **Detalhes:** Informações detalhadas sobre o evento. Por exemplo, um campo chamado "CouponValue" numa mercearia pode ser o valor monetário do cupão.
 - Características de dados sugeridos:
-    - Dados históricos suficientes: dados de transação para, pelo menos, o dobro da janela de tempo selecionada. De preferência, dois a três anos de dados de subscrição. 
+    - Dados históricos suficientes: dados de transação para, pelo menos, o dobro da janela de tempo selecionada. De preferência, dois a três anos de histórico de transações. 
     - Compras múltiplas por cliente: idealmente, pelo menos, duas transações por cliente.
     - Número de clientes: pelo menos, 10 perfis de clientes, de preferência mais de 1.000 clientes exclusivos. O modelo falhará com menos de 10 clientes e dados históricos insuficientes.
     - Totalidade dos dados: menos de 20% de valores em falta no campo de dados da entidade fornecida.

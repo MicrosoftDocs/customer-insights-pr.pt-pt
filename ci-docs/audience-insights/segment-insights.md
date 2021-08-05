@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 0803be651662480ddf1fd22952f6a69ee1603001
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306088"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554999"
 ---
 # <a name="segment-insights-preview"></a>Informações de segmentos (pré-visualização)
 
@@ -44,7 +44,7 @@ Também pode analisar como a sobreposição muda para atributos específicos.
 Após completar a análise, encontre detalhes sobre esta informação em **Segmentos** > **Informações (pré-visualização)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Detalhes de informações de sobreposição de segmentos":::
+> :::image type="content" source="media/segment-overlap.png" alt-text="Detalhes de informações de sobreposição de segmentos.":::
 
 Selecione uma informação para ver os resultados da análise:
 
@@ -77,7 +77,7 @@ Os diferenciadores de segmento ajudam-no a descobrir o que diferencia um segment
 Após completar a análise, encontre detalhes sobre esta informação em **Segmentos** > **Informações (pré-visualização)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Detalhes de informações de diferenciador de segmentos":::
+> :::image type="content" source="media/segment-differentiators.png" alt-text="Detalhes de informações de diferenciador de segmentos.":::
 
 Selecione uma informação para ver os resultados da análise. Uma análise diferenciadora inclui dois separadores. O separador **Atributos** lista atributos de perfil considerados diferenciadores. O separador **Medidas** lista diferenciadores. Cada separador inclui os seguintes detalhes:
 
