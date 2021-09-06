@@ -1,7 +1,7 @@
 ---
 title: Descrição geral de informações da audiência para o Dynamics 365 Customer Insights
 description: Descrição geral de informações da audiência para o Dynamics 365 Customer Insights.
-ms.date: 01/18/2021
+ms.date: 08/04/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,16 +10,16 @@ author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 19fc79873d32f268e194c4ebac4cf469a8b9b09f
-ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
+ms.openlocfilehash: 15cc495359af1faefe32225ae490fd7e7b6b08cc7a411e0a9804da6ec704099c
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "6539129"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034374"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Descrição geral de informações da audiência para o Dynamics 365 Customer Insights
 
-As informações de audiência ajudam-no a obter uma compreensão mais profunda dos seus clientes. Ligar dados de várias origens transacionais, comportamentais e de observação para criar uma vista de 360 graus de um cliente. Utilize estes conhecimentos para conduzir experiências e processos centrados nos clientes. Unificar e compreender os dados dos clientes e aproveitá-los para informações e ações inteligentes.
+[Informações de audiência, uma capacidade do Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/) ajuda-o a criar uma compreensão mais profunda dos seus clientes. Ligar dados de várias origens transacionais, comportamentais e de observação para criar uma vista de 360 graus de um cliente. Utilize estes conhecimentos para conduzir experiências e processos centrados nos clientes. Unificar e compreender os dados dos clientes e aproveitá-los para informações e ações inteligentes.
 
 ## <a name="main-benefits"></a>Principais benefícios 
 
@@ -34,9 +34,9 @@ As informações de audiência ajudam-no a obter uma compreensão mais profunda 
 
 - **Dê poder aos seus processos de negócio e às experiências personalizadas dos clientes**
 
-  - Impulsionar a cativação personalizada entre os canais — capacite profissionais de marketing, vendas e serviços com o Customer Insights de origem e cartões de perfil de clientes personalizados, incorporados nas aplicações de negócio que estes já utilizam diariamente
-  - Automatize as experiências e processos centrados no cliente com base em perfis, medidas de negócio e segmentos personalizáveis.
-  - Ative e amplie experiências de linha de negócio incorporadas no [Microsoft Power Platform](https://powerplatform.microsoft.com/). Construir rapidamente aplicações com informações incorporadas utilizando uma poderosa abordagem de baixo código a partir do PowerApps.  
+  - Impulsione a cativação personalizada em todos os canais – capacite os profissionais de marketing, de vendas e serviços. Utilize cartões de perfil de cliente de origem, de informações e personalizados que se integram com aplicações empresariais que já utilizam.
+  - Automatize as experiências e processos com base em perfis, medidas de negócio e segmentos personalizáveis.
+  - Ative e amplie experiências de linha de negócio incorporadas no [Microsoft Power Platform](https://powerplatform.microsoft.com/). Construir rapidamente aplicações com informações incorporadas utilizando uma poderosa abordagem de baixo código a partir do Power Apps.  
 
 ## <a name="key-audiences"></a>Audiências principais
 
@@ -50,13 +50,18 @@ As informações de audiência ajudam-no a obter uma compreensão mais profunda 
 
 - **Utilizadores empresariais:**
 
-  - Informações sobre os perfis de cliente de 360 graus e vistas ponto-a-ponto do percurso do cliente.
-  - Ver dados do cliente 360 graus nos processos de negócio do Dynamics 365 com pacotes de pré-compilação.
+  - Informações sobre os perfis de cliente de 360 graus e percursos do cliente.
+  - Ver dados do cliente 360 graus nos processos de negócio do Dynamics 365 com pacotes de pré-criados.
 
 - **Analistas de negócio:**
 
   - Crie perfis personalizáveis, defina medidas, crie segmentos e beneficie de análise preditiva para obter uma vista de 360 graus do cliente, específica da sua organização.  
-  - Utilize conectores de origem para várias aplicações ou APIs da Microsoft e de terceiros para processar as informações.
+  - Utilize conectores de origem para várias aplicações da Microsoft e de terceiros ou APIs para processar as informações.
 
+## <a name="pricing-and-licensing"></a>Definição de preços e licenças
+
+O Customer Insights é licenciado por inquilino e inclui múltiplas capacidades. As capacidades com direitos incluem um conjunto de perfis, atualizações diárias do sistema, pedidos do Power Platform e dois ambientes. Pode adquirir capacidade e licenças adicionais para aumentar a quota predefinida. 
+- Capacidade e direitos detalhados: [Guia de Licenciamento do Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
+- Descrição geral dos preços: [Preços do Dynamics 365](https://dynamics.microsoft.com/pricing/#CustomerDataPlatform)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

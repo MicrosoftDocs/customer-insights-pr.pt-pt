@@ -3,21 +3,21 @@ title: Descrição geral do produto
 author: m-hartmann
 description: Obtenha uma descrição geral do Dynamics 365 Customer Insights e das suas capacidades.
 ms.author: mhart
-ms.date: 02/16/2021
+ms.date: 07/30/2021
 ms.service: customer-insights
 ms.topic: overview
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 1bc75959229fd2ffef9a5fd5617889888eb72e55
-ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
+ms.openlocfilehash: 651bd151a77b9d7f44d5fcca15da0f131b9fb3f07ffc89bfac9c0aa6f799e9b1
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "6539403"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036525"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Descrição geral do produto para o Dynamics 365 Customer Insights
 
-Dynamics 365 Customer Insights é parte da plataforma de dados de clientes (CDP) da Microsoft que ajuda a proporcionar experiências personalizadas aos clientes. As capacidades da plataforma fornecem informações sobre quem são os seus clientes e como se envolvem com a sua plataforma. Una os dados dos clientes em várias origens de dados para obter uma única vista dos clientes.
+O [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) é parte da plataforma de dados de clientes (CDP) da Microsoft que ajuda a proporcionar experiências personalizadas aos clientes. As capacidades da plataforma fornecem informações sobre quem são os seus clientes e como se envolvem com a sua plataforma. Una os dados dos clientes em várias origens de dados para obter uma única vista dos clientes.
 
 
 - [Informações da audiência](audience-insights/overview.md) ajuda-o a transformar o seu negócio numa organização centrada no cliente. Os profissionais de marketing, vendas e serviços têm as informações necessárias para personalizar experiências. Ligue dados de origens transacionais, comportamentais e observacionais para criar uma vista de cliente de 360 graus. Veja os resultados mais rapidamente com um CDP concebido para fornecer conhecimentos que podem ser aplicados. 

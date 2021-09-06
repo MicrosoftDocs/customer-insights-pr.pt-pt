@@ -150,7 +150,7 @@
               href: audience-insights/export-azure-synapse-analytics.md
             - name: Adobe Campaign Standard
               href: audience-insights/export-adobe-campaign-standard.md
-            - name: Plataforma de Experiência do Adobe
+            - name: Adobe Experience Platform
               href: audience-insights/export-adobe-experience-platform.md
             - name: Campaign Monitor
               href: audience-insights/export-campaign-monitor.md
@@ -166,6 +166,8 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: Klaviyo
+              href: audience-insights/export-klaviyo.md
             - name: LinkedIn Ads
               href: audience-insights/export-linkedin-ads.md
             - name: LiveRamp
@@ -310,5 +312,13 @@
       href: engagement-insights/regional-availability.md
     - name: Limites de serviço
       href: engagement-insights/quotas.md
-- name: Contactar o suporte
-  href: 'https://admin.powerplatform.microsoft.com/support'
+- name: Integrar informações de audiência e de cativação
+  items:
+    - name: Ligar informações de audiência e informações de cativação
+      href: engagement-insights/integrate-audience-insights-engagement-insights.md
+    - name: Utilize segmentos de informações de audiência em relatórios de informações de cativação
+      href: engagement-insights/integrate-audience-insights-segments.md
+    - name: Utilizar dimensões demográficas para dividir dados comportamentais
+      href: engagement-insights/curate-dimensions.md
+- name: Obtenha suporte
+  href: 'https://dynamics.microsoft.com/en-us/support/'

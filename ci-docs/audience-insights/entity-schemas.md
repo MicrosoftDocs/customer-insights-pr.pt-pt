@@ -1,7 +1,7 @@
 ---
 title: Esquema de entidades do Customer Insights no Common Data Model
 description: Trabalhar com entidades no Common Data Model.
-ms.date: 04/17/2020
+ms.date: 08/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: 66d846c3e9404ca7993cae742ea6e16833233fba
+ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692319"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7380757"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Esquema de entidades no Common Data Model
 
@@ -42,7 +42,7 @@ Para mais informações, consulte a documentação sobre os [Esquemas de entidad
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Ver entidades utilizando o Navegador de Entidades do Common Data Model
 
-Pode visualizar entidades no [Navegador de Entidades do Common Data Model](https://microsoft.github.io/CDM/). Selecione o botão **Carregar a partir do GitHub!** e navegue para **foundationCommon** > **crmCommon** > **solutions** > **customerInsights** onde encontrará a lista de entidades do Customer Insights e as respetivas definições.
+Pode visualizar entidades no [Navegador de Entidades do Common Data Model](https://microsoft.github.io/CDM/). Selecione uma entidade na secção Informações da Aplicação para obter a lista de entidades do Customer Insights e respetivas definições.
 > [!div class="mx-imgBorder"]
 > ![Navegador de Entidades do CDM que mostra a entidade CustomerActivity.](media/CDM-entity-navigator.png "Navegador de Entidades do CDM que mostra a entidade CustomerActivity")
 
