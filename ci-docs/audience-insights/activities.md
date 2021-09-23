@@ -1,20 +1,20 @@
 ---
 title: Atividades do cliente
-description: Defina as atividades do cliente e veja-as na linha cronológica do cliente.
-ms.date: 04/07/2021
+description: Defina as atividades dos clientes e veja-as numa linha cronológica nos perfis dos clientes.
+ms.date: 09/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 6ebe899d3e3da43c4108678cd2e4f9a986e18ab35e839044becab4619adb0f14
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033645"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494425"
 ---
 # <a name="customer-activities"></a>Atividades do cliente
 
@@ -60,12 +60,15 @@ As suas origens de dados podem incluir entidades com dados transacionais e de at
       - **Detalhe adicional**: campo com informações relevantes para esta atividade.
       - **Ícone**: ícone que melhor representa este tipo de atividade.
       - **Endereço Web**: campo que contém um URL com informações sobre esta atividade. Por exemplo, o sistema transacional que fornece esta atividade. Este URL pode ser qualquer campo da origem de dados, ou pode ser construído como um novo campo usando uma transformação Power Query. Os dados de URL serão armazenados na entidade de *Atividade Unificada*, que pode ser consumida a jusante utilizando [APIs](apis.md).
-   
-   :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Especificar os dados de atividade do cliente numa entidade de Atividade Unificada.":::
+
+   - **Mostrar na linha cronológica**
+      - Escolha se pretende mostrar esta atividade na vista de linha cronológica dos perfis dos clientes. Selecione **Sim** para mostrar a atividade na linha cronológica ou **Não** para ocultá-la.
+
+      :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Especificar os dados de atividade do cliente numa entidade de Atividade Unificada.":::
 
 1. Selecione **Seguinte** para avançar para o passo seguinte. Pode selecionar **Terminar e rever** para guardar a atividade agora com o tipo de atividade definido como **Outro**. 
 
-1. No passo **Tipo de Atividade**, escolha o tipo de atividade e selecione opcionalmente se pretende mapear semântica alguns dos tipos de atividade para utilização noutras áreas do Customer Insights. Atualmente, os tipos de atividade *Subscription* e *SalesOrderLine* podem ser semanticamente mapeados depois de concordar em mapear os campos. Se um tipo de atividade não for relevante para a nova atividade, pode escolher *Outro* ou *Criar novo* para um tipo de atividade personalizada.
+1. No passo **Tipo de Atividade**, escolha o tipo de atividade e selecione opcionalmente se pretende mapear semântica alguns dos tipos de atividade para utilização noutras áreas do Customer Insights. Atualmente, os tipos de atividade *Comentários*, *Lealdade*, *SalesOrder*, *SalesOrderLine* e *Subscrição* podem ser semanticamente mapeados depois de concordar em mapear os campos. Se um tipo de atividade não for relevante para a nova atividade, pode escolher *Outro* ou *Criar novo* para um tipo de atividade personalizada.
 
 1. Selecione **Seguinte** para avançar para o passo seguinte. 
 

@@ -4,17 +4,17 @@ description: Como criar, renomear e eliminar áreas de trabalho e ambientes.
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 07/01/2021
+ms.date: 09/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: bf310b1a50ba7baac5d11d5f22ff42003fbba516efd7d165c00b59adc958da2e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034056"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486049"
 ---
 # <a name="manage-environments-and-workspaces"></a>Gerir ambientes e áreas de trabalho
 
@@ -85,13 +85,11 @@ A eliminação de uma área de trabalho removerá permanentemente todo o respeti
 
 1. Selecione **Adicionar membros** para dar acesso e [atribuir funções](user-roles.md). Atualmente, apenas **Administrador de área de trabalho** está disponível.
 
-1. Se configurar uma [ligação para informações de audiência](configure-connections.md), pode selecionar **Permitir o acesso aos dados do perfil** para permitir que o membro veja relatórios baseados nos [perfis do utilizador](profile-reports.md).
-
 1. Selecione **Adicionar membros** para os adicionar à sua área de trabalho.
 
 ## <a name="manage-an-environment"></a>Gerir um ambiente
 
-Como administrador do Ambiente, pode aceder a um ambiente a partir do painel de navegação à esquerda. Pode configurar configurações de ambiente, outros administradores de ambiente, áreas de trabalho e [ligações a informações de audiência](configure-connections.md). Selecione separadores para se mover entre diferentes áreas no centro de administração.
+Como administrador do Ambiente, pode aceder a um ambiente a partir do painel de navegação à esquerda. Pode configurar definições de ambiente, outros admins de ambiente e áreas de trabalho. Selecione separadores para se mover entre diferentes áreas no centro de administração.
 
 :::image type="content" source="media/New-environment.png" alt-text="Centro de administração do ambiente.":::
 
@@ -123,8 +121,6 @@ Como administrador do Ambiente, pode aceder a um ambiente a partir do painel de 
 
 1. Selecione **Adicionar membros** para atualizar membros e [atribuir funções](user-roles.md). Atualmente, apenas **Administrador de ambiente** está disponível.
 
-1. Se configurar uma [ligação para informações de audiência](configure-connections.md), pode selecionar **Permitir o acesso aos dados do perfil** para permitir que o membro veja relatórios baseados nos [perfis do utilizador](profile-reports.md).
-
 1. Selecione **Adicionar membros** para os adicionar ao seu ambiente.
 
 ### <a name="delete-an-environment"></a>Eliminar um ambiente
@@ -143,7 +139,7 @@ Os admins de ambientes podem eliminar ambientes. Antes de eliminar um ambiente, 
 
 Estabelecer ligações com informações de audiência permite-lhe ver relatórios em informações de cativação baseados em perfis de clientes unificados. 
 
-Para obter mais informações, ver [Configure ligações](configure-connections.md).
+Para mais informações, consulte [Criar uma ligação entre as informações de audiência e as informações de cativação](integrate-audience-insights-engagement-insights.md).
 
 ## <a name="manage-personal-data"></a>Gerir dados pessoais
 

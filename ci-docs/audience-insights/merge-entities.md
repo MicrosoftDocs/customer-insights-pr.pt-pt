@@ -1,7 +1,7 @@
 ---
 title: Fundir entidades na unificação de dados
 description: Fundir entidades para criar perfis unificados de clientes.
-ms.date: 05/10/2021
+ms.date: 09/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6e64154dc58f679d13033fa55a60cd0c306f62f31548b8ce98ea1ed5f423b3e9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035016"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494333"
 ---
 # <a name="merge-entities"></a>Unir entidades
 
@@ -66,7 +66,7 @@ Altere o nome a apresentar dos atributos unidos. Não é possível alterar o nom
 
 Excluir um atributo do perfil de cliente unificado. Se o campo for utilizado noutros processos, por exemplo num segmento, remova-o destes processos antes de o excluir do perfil do cliente. 
 
-1. Selecione o campo unido.
+1. Selecione um campo unido.
   
 1. Selecione **Mostrar mais** e escolha **Excluir**.
 
@@ -76,17 +76,40 @@ Excluir um atributo do perfil de cliente unificado. Se o campo for utilizado nou
 
 Na página **Unir**, selecione **Campos excluídos** para ver a lista de todos os campos excluídos. Este painel permite-lhe adicionar novamente campos excluídos.
 
+## <a name="edit-a-merged-field"></a>Editar um campo unido
+
+1.  Selecione um campo unido.
+
+1.  Selecione **Mostrar mais** e escolha **Editar**.
+
+1.  Especifique como combinar ou unir os campos a partir de uma de três opções:
+    - **Importância**: identifica o valor vencedor com base na classificação de importância especificado para os campos participantes. É a opção de intercalação predefinida. Selecione **Mover para cima/para baixo** para definir a classificação de importância.
+    :::image type="content" source="media/importance-merge-option.png" alt-text="Opção de importância no diálogo de campos de união."::: 
+    - **Mais recente**: identifica o valor vencedor com base na recência. Requer um campo de data ou numérico para cada entidade participante no âmbito dos campos de união para definir a recência.
+    :::image type="content" source="media/recency-merge-option.png" alt-text="Opção de recência no diálogo de campos de união.":::
+    - **Menos recente**: identifica o valor vencedor com base na recência menor. Requer um campo de data ou numérico para cada entidade participante no âmbito dos campos de união para definir a recência.
+
+1.  Pode adicionar campos adicionais para participar no processo de união.
+
+1.  Pode mudar o nome do campo unido.
+
+1. Selecione **Concluído** para aplicar as alterações.
+
+1. Selecione **Guardar** e **Executar** para processar as alterações. 
+
 ## <a name="manually-combine-fields"></a>Combinar campos manualmente
 
 Especifique manualmente um atributo unido. 
 
 1. Na página **Unir**, selecione **Combinar campos**.
 
-1. Forneça um **Nome** e um **Nome de campo de saída**.
+1. Especifique a política vencedora de união no menu pendente **Combinar campos por**.
 
 1. Escolha um campo a adicionar. Selecione **Adicionar campos** para combinar mais campos.
 
-1. Confirme a exclusão.
+1. Forneça um **Nome** e um **Nome de campo de saída**.
+
+1. Selecione **Concluído** para aplicar as alterações.
 
 1. Selecione **Guardar** e **Executar** para processar as alterações. 
 
@@ -103,6 +126,27 @@ Algumas entidades contêm mais detalhes do que outras. Se uma entidade incluir o
 1. Confirme a alteração.
 
 1. Selecione **Guardar** e **Executar** para processar as alterações.
+
+## <a name="configure-customer-id-generation"></a>Configurar a geração de ID de Cliente 
+
+Depois de configurar campos de união, pode definir como gerar valores CustomerId, os identificadores de perfil de cliente exclusivos. O passo de união no processo de unificação de dados gera o identificador de perfil de cliente exclusivo. O identificador é o CustomerId na entidade *Cliente* que resulta do processo de unificação de dados. 
+
+O CustomerId na entidade Cliente baseia-se num hash do primeiro valor das chaves primárias vencedoras não nulas. Estas chaves provêm das entidades utilizadas na fase de correspondência e união e são influenciadas pela ordem da correspondência. Assim, o CustomerID gerado pode mudar quando um valor de chave primária muda na entidade primária da ordem de correspondência. Consequentemente, o valor de chave primária pode nem sempre representar o mesmo cliente.
+
+Configurar um ID de cliente estável permite-lhe evitar esse comportamento.
+
+**Configurar um ID de cliente exclusivo**
+
+1. Aceda a **Unificar** > **Unir**.
+
+1. Na página **Unir**, selecione o separador **Chaves**. 
+
+1. Passe o cursor sobre a linha **CustomerId** e selecione a opção **Configurar**.
+   :::image type="content" source="media/customize-stable-id.png" alt-text="Controlo para personalizar a geração de ID.":::
+
+1. Selecione até cinco campos que incluirão um ID exclusivo do cliente e são mais estáveis. Os registos que não correspondem à sua configuração utilizam um ID configurado pelo sistema.  
+
+1. Selecione **Concluído** e execute o processo de união para aplicar as suas alterações.
 
 ## <a name="run-your-merge"></a>Executar a intercalação
 

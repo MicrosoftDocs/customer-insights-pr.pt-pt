@@ -4,17 +4,17 @@ description: Como usar relatórios de funil para entender como a audiência toma
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 06/23/2021
+ms.date: 09/17/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7c6b7b7285556f8a531ce9e29f0d1de162562be6fb43dd826a65fd9e00d87b30
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
+ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032269"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "7498656"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Criar e gerir relatórios de funil
 
@@ -158,4 +158,21 @@ Pode alterar o nome de um relatório de funil, eliminá-lo ou modificar os passo
 1. Selecione um nome para abrir o relatório.
 
 1. Selecione o passo que pretende remover e selecione **Eliminar**.
+
+## <a name="funnel-insights"></a>Informações de funil 
+
+As informações de cativação oferecem agora informações de funil para os clientes. Use informações de funil para obter informações mais aprofundadas do comportamento do cliente sobre os passos no seu relatório de funil. Quando cria e guarda um novo relatório de funil, as informações de funil são geradas automaticamente para o seu relatório. 
+
+Pode ver informações de funil das seguintes categorias, tanto ao nível principal como ao nível dos passos: 
+
+ - Taxa de conversão 
+ - Tempo de transição 
+ - Hora de conclusão 
+
+Use estas informações para explorar mais profundamente o comportamento do cliente e compreender melhor os pontos de entrega e conversões para o seu relatório de funil. 
+
+As informações de funil são recalculadas a cada 24 horas ou quando **Guarda** o seu relatório de funil. 
+
+> [!NOTE]
+> Para ver informações do funil, tem de guardar o seu relatório sempre que fizer alterações. 
 

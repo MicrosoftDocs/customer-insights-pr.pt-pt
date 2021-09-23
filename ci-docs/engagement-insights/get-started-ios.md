@@ -4,17 +4,17 @@ description: Aprenda a personalizar e a executar a SDK iOS
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/15/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: de8291fc429ae6433301a47bfdf9a3271b1b77294fd58448c7aa6bd0783edc97
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f05929435eeee9cf3f891ab18842c5861e39d5ba
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036887"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494244"
 ---
 # <a name="get-started-with-the-ios-sdk"></a>Começar a trabalhar com a SDK iOS
 
@@ -45,11 +45,36 @@ Inicie o processo selecionando uma área de trabalho onde trabalhar, selecionand
 
 - Se não tiver uma área de trabalho existente, selecione **Nova Área de Trabalho** e siga os passos para criar uma [nova área de trabalho](create-workspace.md).
 
+- Depois de criar uma área de trabalho, aceda a **Admin** > **Área de Trabalho** e, em seguida, selecione **Guia de instalação**.
+
 ## <a name="configure-the-sdk"></a>Configure a SDK
 
-Uma vez transferida a SDK, pode trabalhar com ela no Xcode para ativar e definir eventos.
+Uma vez transferida a SDK, pode trabalhar com ela no Xcode para ativar e definir eventos. Existem duas formas de o fazer
 
-1. Depois de criar uma área de trabalho, aceda a **Admin** > **Área de Trabalho** e, em seguida, selecione **Guia de instalação**.
+### <a name="option-1-using-cocoapods-recommended"></a>Opção 1: Utilizar o CocoaPods (recomendado)
+O CocoaPods é um gestor de dependências para projetos Swift e Objective-C Cocoa. A sua utilização facilita a integração do SDK de informações de cativação para iOS. O CocoaPods também permite atualizar para a versão mais recente do SDK de informações de cativação. Eis como usar o CocoaPods para integrar o SDK de informações de cativação no seu projeto Xcode. 
+
+1. Instale o CocoaPods. 
+
+1. Crie um novo ficheiro chamado Podfile dentro do diretório de raiz do seu projeto e adicione-lhe as seguintes instruções. Substitua YOUR_TARGET_PROJECT_NAME pelo nome do seu projeto Xcode. 
+```objectivec
+platform :ios, '9.0'  
+
+ target '${YOUR_TARGET_PROJECT_NAME}' do 
+
+     use_frameworks!   
+
+     pod 'EIObjC.framework.debug' 
+
+     pod 'EIObjC.framework.release' 
+
+ end 
+```
+A configuração da cápsula acima contém as versões de depuração e de lançamento do SDK. Escolha o que for a melhor para o seu projeto.
+
+1. Instale a cápsula executando o seguinte comando: `pod install --repo-update `
+
+### <a name="option-2-using-download-link"></a>Opção 2: Utilizar a ligação de transferência
 
 1. Transfira a [SDK iOS de informações de cativação](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-ios-sdk.zip) e coloque o ficheiro `EIObjC.xcframework` na pasta `Frameworks`.
 

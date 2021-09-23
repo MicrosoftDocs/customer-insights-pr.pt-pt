@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 3aa9599fc780098a2f7f31f0210d76ed2ef27ece774dd6212b5cb2a599ad537e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: bf2ec67c9fb99918b87841d3c0b131934e31b58b
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033966"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486134"
 ---
 # <a name="out-of-box-profile-reports"></a>Relatórios de perfil fora da caixa
 
@@ -31,7 +31,7 @@ Se estiver a utilizar uma versão experimental da capacidade de informações de
 
 ## <a name="enable-the-customer-profile-report"></a>Ativar o relatório do perfil do cliente
 
-Um administrador de ambiente deve [criar uma ligação a informações de audiência](configure-connections.md).
+Um admin de ambiente tem de [associar informações de cativação e informações de audiência](integrate-audience-insights-engagement-insights.md).
 
 Depois de especificar os detalhes da ligação, o administrador pode conceder acesso a outras pessoas da organização para ver o relatório. O administrador de ambiente que configura a ligação tem acesso automaticamente ao relatório. 
 

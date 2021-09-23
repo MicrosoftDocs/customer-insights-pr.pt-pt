@@ -1,19 +1,19 @@
 ---
 title: Criar uma ligação entre as informações de audiência e as informações de cativação
 description: Crie uma ligação ativa entre as informações audiência e as informações de cativação para permitir a partilha bidirecional de dados.
-ms.date: 07/22/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 870209a7e19fec464ec41462a02365771bd653bd
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
+ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461027"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "7487121"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Criar uma ligação entre as informações de audiência e as informações de cativação
 
@@ -26,14 +26,14 @@ Utilize perfis e segmentos unificados a partir de informações de audiência pa
 ## <a name="prerequisites"></a>Pré-requisitos
 
 - Os perfis de informações de audiência têm de ser armazenados numa conta Azure Data Lake Storage que possui ou num data lake gerido pelo [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). 
-
+- O seu ambiente de informações de audiência deve ter um ambiente do Dataverse associado. E se esse ambiente também estiver a utilizar o Dataverse para armazenamento de dados, certifique-se de que marca a opção **Ativar a partilha de dados** em informações de audiência. Para mais informações, consulte [Criar e configurar um ambiente pago em informações de audiência](../audience-insights/get-started-paid.md).
 - Precisa de permissões administrador para ambos os ambientes de informações de cativação e de informações de audiência.
-
 - Os ambientes ligados têm de estar na mesma região geográfica.
 
 > [!NOTE]
-> - Se a subscrição de informações de audiência for uma versão de avaliação, a qual utiliza um data lake de informações de audiência gerido internamente, contacte [pirequest@microsoft.com](mailto:pirequest@microsoft.com) para obter assistência. 
-> - Se o seu ambiente de informações de audiência utilizar o seu próprio Azure Data Lake Storage para armazenar dados, tem de adicionar um principal de serviço de informações de cativação do Azure à sua conta de armazenamento. Para mais detalhes, vá a [Ligar a uma conta do Azure Data Lake Storage com um principal de serviço do Azure para informações de audiência](../audience-insights/connect-service-principal.md). Além disso, o seu ambiente de informações de audiência deve ter um [ambiente do Dataverse associado](../audience-insights/get-started-paid.md). 
+> - Se a subscrição de informações de audiência for uma versão de avaliação que utiliza um data lake de informações de audiência gerido internamente, contacte [pirequest@microsoft.com](mailto:pirequest@microsoft.com) para obter assistência. 
+> - Se o seu ambiente de informações de audiência utilizar o seu próprio Azure Data Lake Storage para armazenar dados, tem de adicionar um principal de serviço de informações de cativação do Azure à sua conta de armazenamento. Para mais detalhes, vá a [Ligar a uma conta do Azure Data Lake Storage com um principal de serviço do Azure para informações de audiência](../audience-insights/connect-service-principal.md). 
+
 
 ## <a name="create-an-environment-link"></a>Criar uma ligação ao ambiente
 
@@ -75,6 +75,7 @@ Depois de ligar ambientes, pode selecionar funcionalidades opcionais para os amb
 
    > [!IMPORTANT]
    > Se não adicionar explicitamente utilizadores neste passo, os dados serão ocultados dos utilizadores em informações de cativação.
+   > Para que os segmentos de informações de audiência apareçam em informações de cativação, tem primeiro de [executar processos de união e a jusante](../audience-insights/merge-entities.md). Os processos a jusante são importantes porque geram uma tabela única que prepara segmentos de informações de audiência para serem partilhados com informações de cativação. (Se estiver agendada uma atualização de sistema, esta incluirá automaticamente processos a jusante.)
 
 1. Reveja a sua seleção e selecione **Concluir**.
 

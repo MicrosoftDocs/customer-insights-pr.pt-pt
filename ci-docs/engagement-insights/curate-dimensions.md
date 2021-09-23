@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 8a3d7f9276330a6daacbe9428d84a371b81bbefe
+ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461117"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "7466362"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Utilizar dimensões demográficas para dividir dados comportamentais
 
@@ -29,7 +29,7 @@ Ao utilizar dimensões demográficas de perfil unificado, os utilizadores podem 
 - Um ambiente de informações de cativação em que tem dados de perfil de cliente ligados ao ambiente de informações de audiência onde os perfis de clientes são criados. Mais informações: [Criar uma ligação entre as informações de audiência e as informações de cativação](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Depois de criar uma ligação entre os ambientes de informações de audiência e de informações de cativação, poderá só querer dados específicos das propriedades de perfil de cliente, o que pode ser útil como dimensões em informações de cativação. Para obter mais informações, vá a [Capacitar atributos e segmentos de perfis unificados de informações de audiência](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
+> Depois de criar uma ligação entre os ambientes de informações de audiência e de informações de cativação, poderá só querer dados específicos das propriedades de perfil de cliente, o que pode ser útil como dimensões em informações de cativação. Para obter mais informações, vá a [Capacitar atributos e segmentos de perfis unificados de informações de audiência](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
 
 ## <a name="create-a-new-custom-report"></a>Criar um novo relatório personalizado
 

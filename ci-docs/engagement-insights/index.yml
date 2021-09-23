@@ -1,5 +1,5 @@
 ### YamlMime:Landing
-title: Capacidade de informações de cativação (pré-visualização) no Dynamics 365 Customer Insights
+title: Capacidade de informações de cativação no Dynamics 365 Customer Insights (pré-visualização)
 summary: Recolher dados para os seus websites. Compreender as interações do cliente e o uso em todos os seus sites, interativamente. Usar a integração profunda entre informações de cativação e informações de audiência para enriquecer a sua análise comportamental em tempo real com relatórios de perfil do cliente. Enriquecer os perfis do cliente com atividades web para obter dados comportamentais em tempo real ao lado de dados relevantes do cliente. Transforme o seu negócio para obter valor imediato a partir dos dados do seu cliente.
 metadata:
   title: Documentação de informações de cativação (pré-visualização)
@@ -10,24 +10,24 @@ metadata:
   author: m-hartmann
   ms.author: mhart
   ms.reviewer: mhart
-  ms.date: 07/30/2021
-  ms.openlocfilehash: 9951b1834d18acf0c4961a776d9d6247d4ae3505b5721a41314266e41f8ae928
-  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.date: 09/15/2021
+  ms.openlocfilehash: bf2e40b1ca304e7b26687eaff298d2e70615cd2b
+  ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
   ms.translationtype: HT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 08/10/2021
-  ms.locfileid: "7036252"
+  ms.lasthandoff: 09/15/2021
+  ms.locfileid: "7494198"
 landingContent:
 - title: Acerca de
   linkLists:
   - linkListType: overview
     links:
-    - text: Descrição geral das capacidades
+    - text: Benefícios da capacidade
       url: overview.md
-    - text: Termos e conceitos
+    - text: Glossário de termos
       url: glossary.md
-    - text: Descobrir informações de cativação
-      url: https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/
+    - text: Funcionalidades novas e atualizadas
+      url: /dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
 - title: Integração
   linkLists:
   - linkListType: how-to-guide
@@ -38,28 +38,30 @@ landingContent:
       url: create-workspace.md
     - text: Instrumentalize o seu website
       url: instrument-website.md
-- title: Relatórios
+- title: Ver e filtrar relatórios
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Ver relatórios
       url: view-reports.md
-    - text: Criar relatórios personalizados
-      url: custom-reports.md
     - text: Ver relatório de perfis unificados
       url: profile-reports.md
-    - text: Criar relatórios de funil
-      url: funnel-reports.md
-- title: Eventos
+    - text: Utilizar segmentos de audiência para filtrar relatórios
+      url: integrate-audience-insights-segments.md
+- title: Analisar
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Criar relatórios de funil
+      url: funnel-reports.md
+    - text: Analisar dados comportamentais
+      url: curate-dimensions.md
+    - text: Criar relatórios personalizados
+      url: custom-reports.md
     - text: Criar eventos refinados
       url: refined-events.md
     - text: Exportar eventos
       url: export-events.md
-    - text: Eliminar e exportar dados pessoais
-      url: delete-export-personal-data.md
 - title: Recursos para programadores
   linkLists:
   - linkListType: reference
@@ -81,6 +83,10 @@ landingContent:
     - text: Gerir ambientes e áreas de trabalho
       url: manage-environments-workspaces.md
     - text: Ligar às informações de audiência
-      url: configure-connections.md
+      url: integrate-audience-insights-engagement-insights.md
     - text: Gerir cookies e consentimentos de utilizadores
       url: user-consent-storage.md
+    - text: Eliminar e exportar dados pessoais
+      url: delete-export-personal-data.md
+    - text: Limites de serviço
+      url: ../service-limits.md
