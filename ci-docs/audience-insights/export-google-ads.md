@@ -1,7 +1,7 @@
 ---
 title: Exportar dados Customer Insights para o Google Ads
 description: Aprenda a configurar a ligação e exportar para o Google Ads.
-ms.date: 03/03/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,16 +9,19 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5977b3de9fbb0d97c0912e2ada6a313b0ab92498adf9cdbed48191c0e5143567
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c958f58c927b76364f305dad8f524dde29b2a638
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031671"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558986"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Exportar segmentos para o Google Ads (pré-visualização)
 
 Exporte segmentos de perfis de clientes unificados para uma lista de audiência do Google Ads e utilizá-los para anunciar no Google Search, Gmail, YouTube e Google Display Network. 
+
+> [!IMPORTANT]
+> Atualmente, só pode criar uma nova ligação e exportar dados para o Google Ads se já tiver um token de Programador do Google Ads aprovado. Devido a mudanças de política, atualizaremos a exportação do Google Ads em breve e forneceremos uma opção de exportação que não exigirá um token de programador para garantir a continuidade da sua experiência e simplificar a exportação para o Google Ads. Recomendamos que não configure mais ligações com o Google Ads para facilitar uma mudança mais fácil para a nova opção de exportação.
 
 ## <a name="prerequisites-for-connection"></a>Pré-requisitos para a ligação
 

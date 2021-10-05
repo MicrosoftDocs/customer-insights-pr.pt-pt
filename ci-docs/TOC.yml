@@ -242,7 +242,7 @@
   items:
     - name: Centro de ajuda
       href: engagement-insights/index.yml
-    - name: Descrição geral das capacidades
+    - name: Acerca das informações de cativação
       href: engagement-insights/overview.md
     - name: Introdução
       items:
@@ -306,7 +306,7 @@
           href: engagement-insights/user-consent-storage.md
     - name: Disponibilidade regional
       href: engagement-insights/regional-availability.md
-- name: Integrar informações de audiência e de cativação
+- name: Partilhar dados entre capacidades
   items:
     - name: Ligar informações de audiência e informações de cativação
       href: engagement-insights/integrate-audience-insights-engagement-insights.md
@@ -318,5 +318,3 @@
   href: service-limits.md
 - name: Direitos e pedidos de DSR
   href: dsr-rights-requests.md
-- name: Obtenha suporte
-  href: 'https://dynamics.microsoft.com/support/'

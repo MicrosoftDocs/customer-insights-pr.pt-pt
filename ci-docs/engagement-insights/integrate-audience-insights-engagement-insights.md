@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
-ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
+ms.openlocfilehash: 8d93a49a29c29103e189a6d4a42294c18dc28abd
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "7487121"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7559032"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Criar uma ligação entre as informações de audiência e as informações de cativação
 
@@ -54,6 +54,9 @@ Pode criar uma ligação ao ambiente atualizando as definições **Admin** > **A
 ## <a name="enable-audience-insights-unified-profiles-attributes-and-segments"></a>Capacitar atributos e segmentos de perfis unificados de informações de audiência
 
 Depois de ligar ambientes, pode selecionar funcionalidades opcionais para os ambientes ligados. Estas funcionalidades permitem a análise interativa de dados de clientes dos atributos e segmentos de perfil unificados a partir de informações de audiência.
+
+> [!IMPORTANT]
+> Para que os segmentos de informações de audiência apareçam em informações de cativação, tem primeiro de [executar processos de união e a jusante](../audience-insights/merge-entities.md). Os processos a jusante são importantes porque geram uma tabela única que prepara segmentos de informações de audiência para serem partilhados com informações de cativação. (Se estiver agendada uma atualização de sistema, esta incluirá automaticamente processos a jusante.)
 
 **Para analisar dados Web em informações de cativação**
 

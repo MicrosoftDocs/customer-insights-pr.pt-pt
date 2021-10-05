@@ -4,17 +4,17 @@ description: Como usar relatórios de funil para entender como a audiência toma
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 09/17/2021
+ms.date: 09/21/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
-ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
+ms.openlocfilehash: efb10f2664630a5851d9582ff09c378c01777b96
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/17/2021
-ms.locfileid: "7498656"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558956"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Criar e gerir relatórios de funil
 
@@ -163,13 +163,23 @@ Pode alterar o nome de um relatório de funil, eliminá-lo ou modificar os passo
 
 As informações de cativação oferecem agora informações de funil para os clientes. Use informações de funil para obter informações mais aprofundadas do comportamento do cliente sobre os passos no seu relatório de funil. Quando cria e guarda um novo relatório de funil, as informações de funil são geradas automaticamente para o seu relatório. 
 
+:::image type="content" source="media/funnel-insights.png" alt-text="Informações de funil.":::
+
+> [!NOTE]
+> As informações de funil só podem ser geradas para passos de funil que **não** incluam dimensões personalizadas. Para gerar informações de funil para todos os passos do seu funil, use dimensões de origem de informações de cativação para criar os seus passos de funil. 
+
 Pode ver informações de funil das seguintes categorias, tanto ao nível principal como ao nível dos passos: 
 
- - Taxa de conversão 
+ - Taxa de conversão
+ -    A taxa de conversão entre Finalizar Compra e Comprar é 22%.
  - Tempo de transição 
+ -    O tempo médio de transição entre Carrinho e Finalizar Compra é 23 minutos. 
  - Hora de conclusão 
+ -    A quantidade média de tempo que os clientes demoram a concluir o funil é 47 minutos. 
 
 Use estas informações para explorar mais profundamente o comportamento do cliente e compreender melhor os pontos de entrega e conversões para o seu relatório de funil. 
+
+Para comparar informações em diferentes passos, selecione **Ver discriminação de passos** ou **Comparar com outros passos** a partir dos cartões de informações. Estes apresentarão um gráfico de barras comparando métricas para cada passo do funil. 
 
 As informações de funil são recalculadas a cada 24 horas ou quando **Guarda** o seu relatório de funil. 
 

@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: f038dedd369ac9e623146b66528efa87c47a8c23769037d8709fa9b804a0b723
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3a235e924395a606b9332de3d205289288a597a9
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035429"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558837"
 ---
 # <a name="set-up-a-trial-environment"></a>Configurar um ambiente de avaliação 
 
@@ -95,7 +95,7 @@ Pode agora utilizar os dados ingeridos para adaptar o Customer Insights ao seu c
 
 - Por predefinição, as versões de avaliação estão ativas por 30 dias. No entanto, pode prolongá-la após o dia 23 quando iniciar sessão na sua versão de avaliação.
 - Não pode usar a sua própria conta de armazenamento do Azure Data Lake para armazenar dados de produção durante uma avaliação. No entanto, pode ingerir dados a partir de uma conta de armazenamento do Data Lake.
-- Pode armazenar dados de até 3 GB no ambiente Dataverse que é aprovisionado automaticamente quando iniciar uma versão de avaliação do Customer Insights.
+- Pode armazenar até 3 GB de dados no ambiente do Dataverse que são aprovisionados automaticamente quando inicia uma versão de avaliação do Customer Insights.
 
 ## <a name="copy-data-from-a-trial-to-a-paid-subscription"></a>Copiar dados de uma versão de avaliação para uma subscrição paga
 
