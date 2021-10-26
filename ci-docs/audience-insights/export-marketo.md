@@ -1,7 +1,7 @@
 ---
 title: Exportar dados Customer Insights para a Marketo
 description: Aprenda a configurar a ligação e exportar para a Marketo.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0d5eaa769973c861d89287bba0ed29509ab2efc653bdd8e177cc49b3560c698e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 71a16bd71a58b5cc0a6a2ed421561d91f782dd8e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033507"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619179"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Exportar segmentos para a Marketo (pré-visualização)
 
@@ -29,10 +29,10 @@ Exportar segmentos de perfis unificados de clientes para gerar campanhas, fornec
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
-- Até 1 milhão de perfis por exportar para a Marketo.
+- Até 1 milhão de perfis de clientes por exportação para o Marketo.
 - A exportação para a Marketo é limitada a segmentos.
-- A exportação de segmentos com um total de 1 milhão de perfis pode demorar até 3 horas. 
-- O número de perfis que pode exportar para a Marketo está dependente e limitado ao seu contrato com a Marketo.
+- A exportação de segmentos com um total de 1 milhão de perfis de clientes pode levar até 3 horas. 
+- O número de perfis de clientes que pode exportar para o Marketo está dependente e limitado no seu contrato com o Marketo.
 
 ## <a name="set-up-connection-to-marketo"></a>Configure a ligação para a Marketo
 
@@ -64,7 +64,7 @@ Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Pa
 
 1. Introduza o seu **[ID da lista Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. O ID da lista é um valor puramente numérico. Por exemplo, se o seu ID da lista de Marketo for ST12345A7, remova o caráter antes e depois dos algarismos e introduza `12345`. 
 
-1. Na secção **Correspondência de dados**, no campo **E-mail**, selecione o campo no seu perfil unificado de cliente que representa o endereço de correio eletrónico de um cliente. 
+1. Na secção **Correspondência de dados**, no campo **E-mail**, selecione o campo que representa o endereço de e-mail de um cliente. 
 
 1. Opcionalmente, pode exportar **Nome próprio**, **Apelido**, **Cidade**, **Estado** e **País/Região** para criar e-mails mais personalizados. Selecione **Adicionar atributo** para mapear estes campos.
 

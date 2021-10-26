@@ -1,7 +1,7 @@
 ---
 title: Página inicial em insights da audiência
 description: Comece a explorar a aplicação na página inicial.
-ms.date: 08/26/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 55c0313d1dbf7fb6774c058a6784cf02821d9133
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 4ab5497024cb15b103e96b0fc9a2e0739fd4691c
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7470017"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617708"
 ---
 # <a name="explore-audience-insights"></a>Explorar informações de audiência
 
@@ -23,7 +23,7 @@ A página **Home Page** mostra uma descrição geral de segmentos, medidas e dad
 
 :::image type="content" source="media/home-page.png" alt-text="Captura de ecrã do ecrã Base a mostrar informações de exemplo.":::
 
-1 – Alterne entre as capacidades do Customer Insights 2 – Utilize o painel esquerdo para navegar entre diferentes áreas 3 – Descubra em que ambiente trabalha e gere ambientes como um administrador 4 – Especifique as definições pessoais para o Customer Insights
+1 - Alternar entre as capacidades do Customer Insights 2 - Utilizar o painel esquerdo para navegar entre as diferentes áreas e escolher a audiência alvo principal 3 - Descobrir em que ambiente trabalha e gerir os ambientes como administrador 4 - Especificar as definições pessoais para o Customer Insights
 
 Em **Segmentos recentes** vê grupos de clientes baseados em atributos demográficos, comportamentais ou transacionais que definiu. [Criar segmentos](segments.md) ajuda-o a agrupar a sua base de clientes e a direcionar melhor as suas atividades empresariais.
 

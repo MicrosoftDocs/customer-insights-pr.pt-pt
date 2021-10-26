@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
-ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
+ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7557366"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623183"
 ---
 # <a name="relationships-between-entities"></a>Relação entre entidades
 
@@ -68,6 +68,20 @@ A relação consiste numa *entidade fornecida com o programa* que contém a chav
 
 4. Selecione **Guardar** para criar a relação personalizada.
 
+## <a name="set-up-account-hierarchies"></a>Configurar hierarquias de contas
+
+Os ambientes configurados para utilizar contas empresariais como audiência alvo principal podem configurar hierarquias de contas para contas empresariais relacionadas. Por exemplo, uma empresa que tem unidades de negócio separadas. 
+
+As organizações criam hierarquias de contas para gerir melhor as contas e as suas relações entre si. A capacidade de informações de audiência suporta hierarquias de contas principais e subordinadas que já existem nos dados do cliente ingeridos. Por exemplo, contas do Dynamics 365 Sales. Estas hierarquias podem ser configuradas na página **Relações** nas informações de audiência, sob o separador de hierarquia de contas.
+
+1. Aceda a **Dados** > **Relações**.
+1. Selecione o separador **Hierarquia de contas**.
+1. Selecione **Nova hierarquia de contas**. 
+1. No painel **Hierarquia de contas**, forneça um nome para a hierarquia. O sistema cria um nome para a entidade de saída. Pode alterar o nome da entidade do nome de saída.
+1. Selecione a entidade que contém a sua hierarquia de contas. Encontra-se geralmente na mesma entidade que contém as contas.
+1. Selecione o **ID da Conta** e o **ID Principal da Conta** da entidade selecionada 
+1. Selecione **Guardar** para aplicar as definições e finalizar a hierarquia de contas.
+
 ## <a name="view-relationships"></a>Ver relações
 
 A página Relações lista todas as relações que foram criadas. Cada linha representa uma relação, que inclui também detalhes sobre a entidade fornecida com o programa, a entidade de destino e a cardinalidade. 
@@ -105,7 +119,7 @@ Por exemplo, a entidade *eCommerce_eCommercePurchases* tem a seguinte relação 
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Cliente
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Cliente 
 
-Um caminho de relação determina que entidades pode usar ao criar regras para medidas ou segmentos. Escolher a opção com o caminho de relação mais longo provavelmente produzirá menos resultados porque os registos correspondentes precisam de fazer parte de todas as entidades. Neste exemplo, um cliente tem de ter comprado bens através de e-commerce (eCommerce_eCommercePurchases), num ponto de venda (POS_posPurchases) e participar no nosso programa de fidelização (loyaltyScheme_loyCustomers). Ao escolher a primeira opção, provavelmente obteria mais resultados porque os clientes só precisam de existir numa entidade adicional.
+Um caminho de relação determina que entidades pode usar ao criar regras para medidas ou segmentos. Escolher a opção com o caminho de relação mais longo provavelmente produzirá menos resultados porque os registos correspondentes precisam de fazer parte de todas as entidades. Neste exemplo, um cliente tem de ter comprado bens através de comércio eletrónico (eCommerce_eCommercePurchases), num ponto de venda (POS_posPurchases) e participar no nosso programa de fidelização (loyaltyScheme_loyCustomers). Ao escolher a primeira opção, provavelmente obteria mais resultados porque os clientes só precisam de existir numa entidade adicional.
 
 ### <a name="direct-relationship"></a>Relação direta
 

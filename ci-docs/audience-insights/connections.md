@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 37c5d152a4cc91a90df8db387d25923ed150e238bc6b54c54f7bba59fbd48c82
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3689c7016454ed44e22b4d4ff5a338836a8fe288
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033232"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7605963"
 ---
 # <a name="connections-preview-overview"></a>Descrição geral das ligações (pré-visualização)
 
@@ -47,6 +47,7 @@ Para adicionar ligações, precisa de ter [permissões de administrador](permiss
 1. No painel **Configurar ligação**, forneça os detalhes necessários. 
    1. O **Nome a Apresentar** e o tipo de ligação descrevem uma ligação. Recomendamos a escolha de um nome que explique o propósito e o destino desta ligação.
    1. Os campos exatos dependem do serviço a que se está a ligar. Pode aprender sobre detalhes de um tipo de ligação específico no artigo sobre o serviço de destino.
+   1. Se [utilizar o seu próprio Key Vault](use-azure-key-vault.md) para armazenar segredos, ative **Utilizar Key Vault** e escolha o segredo da lista.
 
 1. Para criar a ligação, selecione **Guardar**.
 
@@ -93,3 +94,6 @@ Enriquecimentos e exportações separados tornam-se inativos. Reativa-os adicion
 
 1. Para confirmar a eliminação, selecione **Remover**.
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Configurar ligações com segredos geridos pelo seu próprio Key Vault
+
+Algumas ligações precisam de segredos como chaves de API ou palavras-passe. Algumas ligações suportam segredos armazenados no seu próprio Key Vault. Saiba mais sobre as ligações suportadas e como configurar no [seu próprio Key Vault para informações de audiência](use-azure-key-vault.md).

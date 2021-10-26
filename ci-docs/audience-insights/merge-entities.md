@@ -1,7 +1,7 @@
 ---
 title: Fundir entidades na unificação de dados
 description: Fundir entidades para criar perfis unificados de clientes.
-ms.date: 09/14/2021
+ms.date: 10/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,14 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+searchScope:
+- ci-merge
+ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494333"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648268"
 ---
 # <a name="merge-entities"></a>Unir entidades
 
@@ -89,7 +91,7 @@ Na página **Unir**, selecione **Campos excluídos** para ver a lista de todos o
     :::image type="content" source="media/recency-merge-option.png" alt-text="Opção de recência no diálogo de campos de união.":::
     - **Menos recente**: identifica o valor vencedor com base na recência menor. Requer um campo de data ou numérico para cada entidade participante no âmbito dos campos de união para definir a recência.
 
-1.  Pode adicionar campos adicionais para participar no processo de união.
+1.  Pode adicionar mais campos para participar no processo de intercalação.
 
 1.  Pode mudar o nome do campo unido.
 
@@ -131,7 +133,7 @@ Algumas entidades contêm mais detalhes do que outras. Se uma entidade incluir o
 
 Depois de configurar campos de união, pode definir como gerar valores CustomerId, os identificadores de perfil de cliente exclusivos. O passo de união no processo de unificação de dados gera o identificador de perfil de cliente exclusivo. O identificador é o CustomerId na entidade *Cliente* que resulta do processo de unificação de dados. 
 
-O CustomerId na entidade Cliente baseia-se num hash do primeiro valor das chaves primárias vencedoras não nulas. Estas chaves provêm das entidades utilizadas na fase de correspondência e união e são influenciadas pela ordem da correspondência. Assim, o CustomerID gerado pode mudar quando um valor de chave primária muda na entidade primária da ordem de correspondência. Consequentemente, o valor de chave primária pode nem sempre representar o mesmo cliente.
+O CustomerId na entidade Cliente baseia-se num hash do primeiro valor das chaves primárias vencedoras não nulas. Estas chaves provêm das entidades utilizadas na fase de correspondência e união e são influenciadas pela ordem da correspondência. Assim, o CustomerID gerado pode mudar quando um valor de chave primária muda na entidade primária da ordem de correspondência. Assim, o valor da chave primária pode nem sempre representar o mesmo cliente.
 
 Configurar um ID de cliente estável permite-lhe evitar esse comportamento.
 
@@ -139,7 +141,7 @@ Configurar um ID de cliente estável permite-lhe evitar esse comportamento.
 
 1. Aceda a **Unificar** > **Unir**.
 
-1. Na página **Unir**, selecione o separador **Chaves**. 
+1. Selecione o separador **Chaves**. 
 
 1. Passe o cursor sobre a linha **CustomerId** e selecione a opção **Configurar**.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Controlo para personalizar a geração de ID.":::
@@ -147,6 +149,30 @@ Configurar um ID de cliente estável permite-lhe evitar esse comportamento.
 1. Selecione até cinco campos que incluirão um ID exclusivo do cliente e são mais estáveis. Os registos que não correspondem à sua configuração utilizam um ID configurado pelo sistema.  
 
 1. Selecione **Concluído** e execute o processo de união para aplicar as suas alterações.
+
+## <a name="group-profiles-into-households-or-clusters"></a>Agrupar perfis em agregados familiares ou clusters
+
+Como parte do processo de configuração da geração de perfis de clientes, pode definir regras para agrupar perfis relacionados num cluster. Existem atualmente dois tipos de clusters disponíveis – agregado familiar e clusters personalizados. O sistema escolhe automaticamente um agregado familiar com regras predefinidas se a entidade *Cliente* contiver os campos semânticos *Person.LastName* e *Location.Address*. Também pode criar um cluster com as suas próprias regras e condições, semelhantes às [regras de correspondência](match-entities.md#define-rules-for-match-pairs).
+
+**Definir um agregado familiar ou um cluster**
+
+1. Aceda a **Unificar** > **Unir**.
+
+1. No separador **Intercalar**, selecione **Avançado** > **Criar cluster**.
+
+   :::image type="content" source="media/create-cluster.png" alt-text="Controle para criar um novo cluster.":::
+
+1. Escolha entre um **Agregado familiar** ou um cluster **Personalizado**. Se os campos semânticos *Person.LastName* e *Location.Address* existirem na entidade *Cliente*, o agregado familiar é automaticamente selecionado.
+
+1. Forneça um nome ao cluster e selecione **Concluído**.
+
+1. Selecione o separador **Clusters** para encontrar o cluster que criou.
+
+1. Especifique as regras e as condições para definir o seu cluster.
+
+1. Selecione **Executar** para executar o processo de intercalação e criar o cluster.
+
+Após a execução do processo de intercalação, os identificadores do cluster são adicionados como novos campos à entidade *Cliente*.
 
 ## <a name="run-your-merge"></a>Executar a intercalação
 

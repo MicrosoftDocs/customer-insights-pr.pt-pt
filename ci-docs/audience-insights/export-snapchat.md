@@ -1,7 +1,7 @@
 ---
 title: Exportar dados do Customer Insights para o Snapchat
 description: Aprenda a configurar a ligação e exportar para o Snapchat.
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 421dcd5ba5421597cf9dea71a9f9f25c7972a4f26fb49d4b042f8667a317ab5d
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b7a929d65a730b60e77ae111b458c68d3cce2020
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033415"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618697"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Exportar segmentos para o Snapchat (pré-visualização)
 
@@ -29,7 +29,7 @@ Exporte segmentos de perfis de clientes unificados para o Snapchat e utilize-os 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
 - A exportação para o Snapchat limita-se a segmentos.
-- Exportar até 1 milhão de perfis para o Snapchat pode levar até 15 minutos a ser concluído. 
+- A exportação de até 1 milhão de perfis de clientes para o Snapchat pode levar até 15 minutos para ficar concluída. 
 
 ## <a name="set-up-connection-to-snapchat"></a>Configurar ligação ao Snapchat
 
@@ -63,7 +63,7 @@ Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Pa
 
 1. Introduza o [**ID de Audiência do Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
 
-1. Na secção **Correspondência de dados**, no campo **E-mail**, selecione o campo no seu perfil unificado de cliente que representa o endereço de correio eletrónico de um cliente. É obrigatório exportar segmentos para o Snapchat.
+1. Na secção **Correspondência de dados**, no campo **E-mail**, selecione o campo que representa o endereço de e-mail de um cliente. É obrigatório exportar segmentos para o Snapchat.
 
 1. Selecione os segmentos que quer exportar. 
 

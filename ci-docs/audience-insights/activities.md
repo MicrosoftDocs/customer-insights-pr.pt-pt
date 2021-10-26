@@ -1,7 +1,7 @@
 ---
 title: Atividades do cliente
 description: Defina as atividades dos clientes e veja-as numa linha cronológica nos perfis dos clientes.
-ms.date: 09/12/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: c250efcd54ec126c0726b22a971cdedd89760d6b
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494425"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617983"
 ---
 # <a name="customer-activities"></a>Atividades do cliente
 
@@ -24,8 +24,7 @@ Combine as atividades de clientes de [várias origens de dados](data-sources.md)
 
 As suas origens de dados podem incluir entidades com dados transacionais e de atividade a partir de várias origens de dados. Identifique estas entidades e selecione as atividades que pretende ver na linha cronológica do cliente. Escolha a entidade que inclui as atividades ou atividades de destino.
 
-> [!NOTE]
-> Uma entidade tem de ter, pelo menos, um atributo do tipo **Data** a ser incluído na linha cronológica do cliente e não é possível adicionar entidades sem campos de **Data**. O controlo **Adicionar atividade** está desativado se não for encontrada nenhuma entidade.
+Uma entidade tem de ter, pelo menos, um atributo do tipo **Data** a ser incluído na linha cronológica do cliente e não é possível adicionar entidades sem campos de **Data**. O controlo **Adicionar atividade** está desativado se não for encontrada nenhuma entidade.
 
 1. Em informações de audiência, aceda a **Dados** > **Atividades**.
 
@@ -41,13 +40,16 @@ As suas origens de dados podem incluir entidades com dados transacionais e de at
 
 1. Selecione **Seguinte** para avançar para o passo seguinte.
 
-1. No passo **Relação**, configure os detalhes para ligar os dados da sua atividade ao cliente correspondente. Este passo visualiza a ligação entre entidades.  
+1. No passo **Relação**, configure os detalhes para ligar os dados da sua atividade ao respetivo registo de clientes. Este passo visualiza a ligação entre entidades.  
 
    - **Primeiro**: campo estrangeiro na sua entidade de atividade que será utilizado para estabelecer uma relação com outra entidade.
    - **Segundo**: entidade de cliente de origem correspondente com a qual a sua entidade de atividade estará em relacionamento. Só pode relacionar-se com entidades de clientes de origem que são utilizadas no processo de unificação de dados.
    - **Terceiro**: se já existir uma relação entre esta entidade de atividade e a entidade de cliente de origem selecionada, o nome da relação estará apenas em modo de leitura. Se não existir essa relação, uma nova relação será criada com o nome que fornecer nesta caixa.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Definir a relação entre entidades.":::
+
+   > [!TIP]
+   > Em ambientes B2B, pode selecionar entre entidades de conta e outras entidades. Se selecionar uma entidade de conta, o caminho da relação é automaticamente definido. Para outras entidades, tem de definir o caminho de relação sobre uma ou mais entidades intermediárias até chegar a uma entidade de conta.
 
 1. Selecione **Seguinte** para avançar para o passo seguinte. 
 
@@ -95,5 +97,34 @@ As seguintes ações estão disponíveis quando seleciona uma atividade.
 - **Mudar o nome**: abre um diálogo onde pode introduzir um nome diferente para a atividade selecionada. Selecione **Guardar** para aplicar as alterações.
 
 - **Eliminar**: abre um diálogo para confirmar a eliminação da atividade selecionada. Também pode eliminar mais do que uma atividade ao mesmo tempo selecionando as atividades e, em seguida, selecionando o ícone de eliminação. Selecione **Eliminar** para confirmar a eliminação.
+
+## <a name="view-activity-timelines-on-customer-profiles"></a>Ver linhas cronológicas de atividades nos perfis de clientes
+
+Depois de configurar as atividades do cliente, selecione **Mostrar na linha cronológica da atividade** na configuração da atividade para encontrar todas as atividades do seu cliente no perfil do cliente.
+
+Para abrir a linha cronológica para um cliente, aceda a **Clientes** e escolha o perfil do cliente que pretende visualizar.
+
+Se um cliente tiver participado numa atividade que tenha configurado, irá encontrá-la na secção **Linha cronológica da atividade**.
+
+:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Veja as atividades configuradas nos Perfis de Clientes.":::
+
+Existem várias formas de filtrar as atividades na linha cronológica da atividade:
+
+- Pode selecionar um ou muitos dos ícones de atividade para refinar os seus resultados apenas para incluir os tipos selecionados.
+
+  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Filtre as atividades por tipo utilizando os ícones.":::
+
+- Pode selecionar **Filtro** para abrir um painel de filtros para configurar os filtros da linha cronológica.
+
+   1. Pode filtrar por *ActivityType* e *Date*
+   1. Selecione **Aplicar** para utilizar os filtros na linha cronológica da atividade.
+
+   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Utilize o painel de filtros para configurar as condições do filtro.":::
+
+Para remover os filtros, selecione o **x** ao lado de cada filtro aplicado na linha cronológica ou selecione **Limpar filtros**.
+
+
+> [!NOTE]
+> Os filtros de atividades são removidos quando deixa o perfil do cliente. Tem de aplicá-los sempre que abrir um perfil do cliente.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

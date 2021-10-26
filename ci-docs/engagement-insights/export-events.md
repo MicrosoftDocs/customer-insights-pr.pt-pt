@@ -4,23 +4,23 @@ description: Como exportar eventos refinados e eventos base.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 04/30/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: faa0c3afb08d1c0282b2164ed914637ce9aad88117af37ba44fdb81e7610e574
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7881f8f63134170a7f76e3c75dcfc5fa8930754b
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032399"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606254"
 ---
 # <a name="export-events"></a>Exportar eventos
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Um evento representa o comportamento do utilizador. Regista quando um utilizador vê uma página (ver evento) ou interage com conteúdo (evento de ação). Quando pode decidir quais as propriedades dos dados que pretende apresentar num relatório, esta visão virtual dos dados é chamada de *evento refinado*. 
+Um evento representa o comportamento do utilizador. Regista quando um utilizador vê uma página (ver evento) ou interage com conteúdo (evento de ação). Quando pode decidir quais as propriedades dos dados que pretende apresentar num relatório, esta visão virtual dos dados é chamada de *evento refinado*. Para mais informações, consulte [Criar e modificar eventos](refined-events.md).
 
 - Pode exportar eventos e eventos refinados para armazenamento externo. 
 - As exportações são um fluxo de dados a prazo. Não pode encher o fluxo. 
@@ -45,26 +45,28 @@ Antes de configurar uma exportação, precisa de ter acesso e uma subscrição a
 
 ## <a name="export-events"></a>Exportar eventos
 
-Existem duas formas de exportar eventos: 
+Há duas formas de abrir o diálogo **Exportar eventos**: 
 - Vá a **Dados** > **Exportações** e selecione **Nova exportação**.
 - Aceda a **Dados** > **Eventos**, selecione **Mais [...]** junto do evento que pretende exportar e selecione **Exportar** no menu pendente. 
 
+:::image type="content" source="media/new-export.png" alt-text="Crie uma nova exportação.":::
+
 É guiado através dos passos para criar uma exportação:
 
-1. Indique um **Nome de exportação**.
+1. Forneça um **Nome da exportação** e, em seguida, selecione **Seguinte**.
 
 1. Na lista pendente **Seleção de eventos**, escolha os eventos base e eventos refinados a incluir na exportação. 
 
-1. Na **Estrutura de ficheiros**, selecione a cadência para criar novos ficheiros no armazenamento do destino. Os eventos são exportados continuamente à medida que chegam.
+1. Na secção **Estrutura do ficheiro**, selecione a cadência (de hora a hora ou diariamente) para criar novos ficheiros no armazenamento de destino e, em seguida, selecione **Seguinte**. Os eventos são exportados continuamente à medida que chegam.
 
-1. Selecione o formato para a sua exportação. Pode escolher entre os formatos **Common Data Model**, **CSV** e **JSON**. Para utilizar a exportação com outras aplicações do Dynamics 365, recomendamos a utilização do formato Common Data Model.
+1. No diálogo **Escolher formato**, selecione o formato para a sua exportação. Escolha entre os formatos **Common Data Model**, **CSV** e **JSON**. Para utilizar a exportação com outras aplicações do Dynamics 365, recomendamos o formato **Common Data Model**.
 
-1. No passo **Escolher destino** especifique a localização Azure Data Lake Storage Gen 2.
+1. No diálogo **Escolher destino**, especifique a localização do Azure Data Lake Storage Gen 2.
     1. **Nome da conta ADLS Gen 2** é o nome da conta de armazenamento para a qual pretende guardar a exportação. 
     1. **O caminho da pasta** define onde a exportação deve ser armazenada no sistema de ficheiros e na estrutura do diretório da conta de armazenamento.
     1. **Chave partilhada** está disponível no portal do Azure para a conta de armazenamento.
 
-1. Rever e confirmar as suas seleções.
+1. Reveja e confirme as suas seleções para concluir.
 
 ## <a name="view-and-manage-exports"></a>Ver e gerir páginas exportações
 

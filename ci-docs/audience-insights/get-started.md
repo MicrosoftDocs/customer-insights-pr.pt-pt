@@ -10,12 +10,12 @@ ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: aaaf1848df175469d8af07754ac153b777781ffb
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.openlocfilehash: 5e8545bc9bf0d953150248fa859c6ca71a12f9cf
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466591"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645278"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Começar com a capacidade de informações de audiência do Dynamics 365 Customer Insights
 
@@ -23,7 +23,7 @@ As informações de audiência podem ajudá-lo a criar uma compreensão mais pro
 
 ## <a name="step-1-create-an-environment"></a>Passo 1: Criar um ambiente
 
-Para começar, primeiro tem de criar um ambiente em que trabalhar. Se a sua organização já adquiriu uma licença, consulte [Começar com uma subscrição paga](get-started-paid.md). Para iniciar uma versão de avaliação para informações de audiência, consulte [Configurar um ambiente de avaliação](get-started-trial.md). 
+Para começar, primeiro tem de criar um ambiente em que trabalhar. Se a sua organização já tiver comprado uma licença, consulte [Criar um ambiente](create-environment.md). Para iniciar uma versão de avaliação para informações de audiência, consulte [Configurar um ambiente de avaliação](../trial-signup.md). 
 
 ## <a name="step-2-explore-audience-insights"></a>Passo 2: Explorar informações de audiência
 

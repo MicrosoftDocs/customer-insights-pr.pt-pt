@@ -1,7 +1,7 @@
 ---
 title: Criar e gerir ambientes
 description: Saiba como se inscrever no serviço e como gerir ambientes.
-ms.date: 07/22/2021
+ms.date: 10/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e3f99f8f151aea5f120084382babd5e46e109545a4f63aafc51c3ecb1400cc33
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034191"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645140"
 ---
 # <a name="manage-environments"></a>Gerir ambientes
 
@@ -26,7 +26,7 @@ Selecione o controlo **Ambiente** no canto superior direito da página para muda
 
 :::image type="content" source="media/home-page-environment-switcher.png" alt-text="Captura de ecrã do controlo para mudar de ambiente.":::
 
-Os administradores podem [criar](get-started-paid.md) e gerir ambientes.
+Os administradores podem [criar](create-environment.md) e gerir ambientes.
 
 ## <a name="edit-an-existing-environment"></a>Editar um ambiente existente
 
@@ -36,23 +36,9 @@ Pode editar alguns dos detalhes de ambientes existentes.
 
 2.  Selecione o ícone **Editar**.
 
-3. Na caixa **Editar ambiente** pode atualizar o **Nome a apresentar** do ambiente, mas não pode alterar a **Região** ou o **Tipo**.
+3. Na caixa **Editar ambiente**, pode atualizar as definições do ambiente.
 
-4. Se um ambiente estiver configurado para armazenar dados no Azure Data Lake Storage, pode atualizar a **Chave da Conta**. No entanto, não é possível alterar o **Nome da conta** ou do **Recipiente**.
-
-5. Opcionalmente, pode atualizar a partir de uma ligação baseada em chave de conta para uma ligação baseada em recursos ou em subscrição. Uma vez atualizado, não se pode voltar à chave de conta após a atualização. Para obter mais informações, consulte [ligar informações de audiência a uma conta Gen2 do Azure Data Lake Storage com um principal de serviço Azure](connect-service-principal.md). Não é possível alterar as informações do **Recipiente** ao atualizar a ligação.
-
-6. Opcionalmente, pode fornecer um URL de ambiente Microsoft Dataverse sob **Configurar partilha de dados com o Microsoft Dataverse e ativar capacidades adicionais**. Estas capacidades incluem a partilha de dados com aplicações e soluções baseadas no Microsoft Dataverse, a ingestão de dados a partir de origens de dados no local ou a utilização de [predições](predictions.md). Selecione **Ativar partilha de dados** para partilhar dados de saída do Customer Insights com um Data Lake Gerido do Microsoft Dataverse.
-
-   > [!NOTE]
-   > - A partilha de dados com o Data Lake Gerido do Microsoft Dataverse não é atualmente suportada quando guarda todos os dados para o seu próprio Azure Data Lake Storage.
-   > - [Predição de valores em falta numa entidade](predictions.md) e relatórios Incorporados do PowerBI em informações de audiência (se ativados no seu ambiente) não são atualmente suportados quando ativa a partilha de dados com o data lake gerido da Microsoft Dataverse.
-
-   Depois de ativar a partilha de dados com o Microsoft Dataverse, começará uma atualização completa das origens de dados e outros processos. Se os processos estiverem atualmente em execução, não vê a opção de permitir a partilha de dados com o Microsoft Dataverse. Espere que esses processos sejam concluídos ou cancele-os para ativar a partilha de dados. 
-   
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Opções de configuração para ativar a partilha de dados com o Microsoft Dataverse.":::
-   
-   Quando executa processos, tais como ingestão de dados ou criação de segmentos, as pastas correspondentes serão criadas na conta de armazenamento que especificou acima. Os ficheiros de dados e os ficheiros model.json serão criados e adicionados às respetivas subpastas, dependendo do processo que executar.
+Para obter mais informações sobre as definições do ambiente, consulte [Criar um novo ambiente](create-environment.md).
 
 ## <a name="copy-the-environment-configuration"></a>Copiar a configuração do ambiente
 

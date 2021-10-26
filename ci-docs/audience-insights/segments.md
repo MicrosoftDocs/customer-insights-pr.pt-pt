@@ -1,7 +1,7 @@
 ---
 title: Segmentos nas informações de audiência
 description: Descrição geral de segmentos e como criar e geri-los.
-ms.date: 05/03/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f1003b53b17e3ba2c37c0f2d94b89f7e97c2b6f10e28b7bbe93160e4c7f08d54
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036387"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617389"
 ---
 # <a name="segments-overview"></a>Descrição geral dos segmentos
 
@@ -26,11 +26,19 @@ Os perfis de cliente que correspondem aos filtros de uma definição de segmento
 
 Existem várias formas de criar um novo segmento: 
 
-- Segmento complexo com criador de segmentos: [Segmento em branco](segment-builder.md#create-a-new-segment)
-- Segmentos simples com um operador: [Segmento rápido](segment-builder.md#quick-segments)
-- Forma de encontrar clientes semelhantes com tecnologia de IA: [Clientes Semelhantes](find-similar-customer-segments.md)
-- Sugestões com tecnologia de IA baseadas em medidas ou atributos: [Segmentos sugeridos para melhorar medidas](suggested-segments.md)
-- Sugestões baseadas em atividades: [Segmentos sugeridos baseados em atividades de cliente](suggested-segments-activity.md)
+# <a name="individual-customers-b2c"></a>[Clientes individuais (B2C)](#tab/b2c)
+
+- Segmento complexo com construtor de segmentos: [Criar o nosso próprio](segment-builder.md#create-a-new-segment) 
+- Segmentos simples com um operador: [Segmento rápido](segment-builder.md#quick-segments) 
+- Forma de encontrar clientes semelhantes com tecnologia de IA: [Clientes Semelhantes](find-similar-customer-segments.md) 
+- Sugestões com tecnologia de IA baseadas em medidas ou atributos: [Segmentos sugeridos para melhorar medidas](suggested-segments.md) 
+- Sugestões baseadas em atividades: [Segmentos sugeridos baseados em atividades de cliente](suggested-segments-activity.md) 
+
+# <a name="business-accounts-b2b"></a>[Contas empresariais (B2B)](#tab/b2b)
+
+- Segmento complexo com construtor de segmentos: [Criar o nosso próprio](segment-builder.md#create-a-new-segment)
+
+---
 
 ## <a name="manage-existing-segments"></a>Gerir segmentos existentes
 
@@ -70,9 +78,9 @@ Pode exportar um segmento a partir da página de segmentos ou da [página de exp
 
 1. Selecione **Gerir exportações** da lista pendente de ações.
 
-1. A página **Exportações (pré-visualização) para segmento** abre-se. Pode ver todas as exportações configuradas agrupadas por exportações que contêm o segmento atual ou não o contêm.
+1. A página **Exportações (pré-visualização) para segmento** abre-se. Pode ver todas as exportações configuradas agrupadas pelo facto de conterem ou não o segmento atual.
 
-   1. Para adicionar o segmento selecionado a uma exportação, selecione a exportação na lista e selecione **Adicionar segmento**.
+   1. Para adicionar o segmento selecionado a uma exportação, **Edite** a respetiva exportação para selecionar o segmento correspondente e, em seguida, guarde. Em ambientes para clientes individuais pode, em vez disso, selecionar a exportação na lista e selecionar **Adicionar segmento** para obter o mesmo resultado.
 
    1. Para criar uma nova exportação com o segmento selecionado, selecione **Adicionar exportação**. Para mais informações sobre a criação de exportações, consulte [Configurar uma nova exportação](export-destinations.md#set-up-a-new-export).
 

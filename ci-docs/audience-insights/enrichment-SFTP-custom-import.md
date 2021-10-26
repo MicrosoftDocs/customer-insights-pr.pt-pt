@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b67aa7477033222b0bc9512a962a1580edd973b4882ce925620ff5ec14f83fe3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fa1d4ffd9f77e128b5d804e4562e964561f4684f
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032726"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618719"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Enriquecer perfis de clientes com dados personalizados (pré-visualização)
 
@@ -44,6 +44,8 @@ Para configurar a importação personalizada do SFTP, devem ser cumpridos os seg
 1.  Selecione **Seguinte** e introduza o **Caminho** e o **Nome do ficheiro** do ficheiro de dados que pretende importar.
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Captura de ecrã ao introduzir a localização dos dados.":::
+
+1. Selecione **Seguinte** e escolha o conjunto de dados do cliente. Isto pode ser todos os perfis de clientes ou um segmento.
 
 1. Selecione **Seguinte** e forneça um nome para o enriquecimento e um nome para a entidade de saída. 
 
@@ -123,6 +125,6 @@ Pode aceder a uma visão detalhada de cada perfil enriquecido selecionando **Ver
 
 ## <a name="next-steps"></a>Passos seguintes
 
-Desenvolva a partir dos seus dados de clientes melhorados. Crie [segmentos](segments.md), [medidas](measures.md) e [exporte os dados](export-destinations.md) para fornecer experiências personalizadas aos seus clientes.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -4,17 +4,17 @@ description: Como criar, renomear e eliminar áreas de trabalho e ambientes.
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 09/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
-ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
+ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "7486049"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645460"
 ---
 # <a name="manage-environments-and-workspaces"></a>Gerir ambientes e áreas de trabalho
 
@@ -22,42 +22,20 @@ ms.locfileid: "7486049"
 
 ## <a name="overview"></a>Descrição geral
 
-Uma área de trabalho é um espaço para armazenar e gerir eventos e relatórios. É onde pode ver a atividade do utilizador em tempo real. Quando cria uma área de trabalho, seleciona o tipo de dados a enviar para a área de trabalho. Atualmente, os dados Web e as aplicações móveis são suportados.
+Este tópico discute como gerir áreas de trabalho e ambientes uma vez que já foram criados. 
 
-Um ambiente é um espaço onde gere as suas áreas de trabalho e ligações. A forma como utiliza ambientes depende da sua organização e do seu caso de utilização. Por exemplo, pode criar:
+- Uma *área de trabalho* é um espaço para armazenar e gerir eventos e relatórios. É onde pode ver a atividade do utilizador em tempo real. Quando cria uma área de trabalho, seleciona o tipo de dados a enviar para a área de trabalho. Atualmente, os dados Web e as aplicações móveis são suportados. Para obter mais informações, consulte [Criar uma área de trabalho e adicionar membros](create-workspace.md).
 
--   Um único ambiente.
--   Ambientes separados para teste e produção.
--   Ambientes separados para equipas ou departamentos específicos da sua organização que contenham eventos relevantes para cada audiência.
--   Ambientes separados para diferentes ramificações globais da sua empresa.
--   Ligações a capacidade de informações de audiência do Customer Insights.
+- Um *ambiente* é um espaço onde gere as suas áreas de trabalho e ligações. Para obter mais informações, consulte [Criar um novo ambiente](create-new-environment.md).
 
-## <a name="choose-an-environment-and-create-a-workspace"></a>Escolha um ambiente e crie uma área de trabalho 
-
-Todas as áreas de trabalho precisam de estar num ambiente. Pode selecionar um ambiente pré-existente ou fazer um novo quando criar uma área de trabalho. Em seguida, pode optar por adicionar membros da área de trabalho e começar a recolher dados.
-
-**Para criar a sua primeira área de trabalho**
-
-1. Em informações de cativação, selecione **Novo** a partir do comutador de área de trabalho. 
-
-   :::image type="content" source="media/New-workspace.png" alt-text="Seletor de área de trabalho da página do Customer Insights.":::
-
-1. Escolha um ambiente na lista ou selecione **Criar novo ambiente**.
-
-1. Introduza um nome em **Nome de área de trabalho**. 
-
-1. Selecione o tipo de ambiente que pretende criar, dependendo se pretende medir o que acontece num site ou numa aplicação móvel. 
-
-1. Pode adicionar membros e atribuir o seu nível de permissão na lista de **Funções**. Em seguida, selecione **Terminar** para criar a área de trabalho ou **Seguinte** para instalar código. 
-
-1. Instale o fragmento de código para começar a receber dados e, em seguida, selecione **Concluído**. 
-
-## <a name="manage-a-workspace"></a>Gerir uma área de trabalho
+## <a name="manage-an-existing-workspace"></a>Gerir uma área de trabalho existente
 
 Pode manter várias áreas de trabalho simultaneamente num ambiente. A sua [função](user-roles.md) determina como pode trabalhar nelas. 
 
  - Tem de ser um administrador do ambiente ou um administrador da área de trabalho para gerir a área de trabalho.
  - Como administrador da área de trabalho, pode mudar o nome de áreas de trabalho existentes ou eliminá-las. 
+
+:::image type="content" source="media/workspace-edit.png" alt-text="Centro de administração da área de trabalho.":::
 
 ### <a name="edit-a-workspace-name"></a>Editar um nome da área de trabalho
 
@@ -75,7 +53,7 @@ A eliminação de uma área de trabalho removerá permanentemente todo o respeti
 
 1. Selecione **Eliminar área de trabalho**. 
 
-1. Na caixa de diálogo **Eliminar área de trabalho**, introduza **CONFIRMAR ELIMINAÇÃO**. 
+1. No diálogo **Eliminar área de trabalho**, introduza **CONFIRMAR ELIMINAÇÃO** totalmente em maiúsculas. 
 
 1. Selecione **Eliminar** para eliminar permanentemente a área de trabalho.
 
@@ -87,27 +65,11 @@ A eliminação de uma área de trabalho removerá permanentemente todo o respeti
 
 1. Selecione **Adicionar membros** para os adicionar à sua área de trabalho.
 
-## <a name="manage-an-environment"></a>Gerir um ambiente
+## <a name="manage-an-existing-environment"></a>Gerir um ambiente existente
 
-Como administrador do Ambiente, pode aceder a um ambiente a partir do painel de navegação à esquerda. Pode configurar definições de ambiente, outros admins de ambiente e áreas de trabalho. Selecione separadores para se mover entre diferentes áreas no centro de administração.
+Como administrador do ambiente, pode aceder a um ambiente a partir do painel de navegação à esquerda. Pode configurar definições de ambiente, outros admins de ambiente e áreas de trabalho. Selecione separadores para se mover entre diferentes áreas no centro de administração.
 
-:::image type="content" source="media/New-environment.png" alt-text="Centro de administração do ambiente.":::
-
-### <a name="create-an-environment"></a>Criar um ambiente
-
-1. No seletor da área de trabalho, selecione **+Nova**.
-
-1. Na experiência guiada, abra o menu pendente **Ambiente** e selecione **Criar novo ambiente**. 
-
-1. Forneça um **Nome do ambiente**.
-
-   :::image type="content" source="media/create-environment.png" alt-text="Passo na experiência guiada para especificar os detalhes do ambiente.":::
-
-1. Escolha a **Região** e selecione **Seguinte**. 
-
-1. Forneça um nome da Área de trabalho e escolha que tipo de área de trabalho pretende criar. 
-
-1.  Opcionalmente, adicione membros e copie o fragmento de código para concluir o processo de criação.
+:::image type="content" source="media/environment-edit.png" alt-text="Centro de administração do ambiente.":::
 
 ### <a name="rename-an-environment"></a>Renomear um ambiente
 
@@ -131,7 +93,7 @@ Os admins de ambientes podem eliminar ambientes. Antes de eliminar um ambiente, 
 
 1. Selecione **Eliminar ambiente**. 
 
-1. Na caixa de diálogo **Eliminar área de trabalho**, introduza **CONFIRMAR ELIMINAÇÃO**. 
+1. No diálogo **Eliminar área de trabalho**, introduza **CONFIRMAR ELIMINAÇÃO** totalmente em maiúsculas. 
 
 1. Selecione **Eliminar** para eliminar permanentemente o ambiente.
 

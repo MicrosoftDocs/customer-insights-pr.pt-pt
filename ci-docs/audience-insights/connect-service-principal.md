@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b96c7f580b4067e059e00a9cdb4e872e9acd4a5c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483539"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645186"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Ligar a uma conta do Azure Data Lake Storage utilizando um principal de serviço do Azure
 
 As ferramentas automatizadas que utilizam os serviços Azure devem ter sempre permissões restritas. Em vez de ter as informações de início de sessão das aplicações como um utilizador totalmente privilegiado, o Azure oferece os principais de serviço. Continue a ler para aprender a ligar o Dynamics 365 Customer Insights a uma conta do Azure Data Lake Storage utilizando um principal de serviço do Azure, em vez de chaves de conta de armazenamento. 
 
-Pode utilizar o principal de serviço para [adicionar ou editar uma pasta do Common Data Model como origem de dados](connect-common-data-model.md) ou [criar ou atualizar um ambiente](get-started-paid.md) de forma segura.
+Pode utilizar o principal de serviço para [adicionar ou editar uma pasta do Common Data Model como origem de dados](connect-common-data-model.md) ou [criar ou atualizar um ambiente](create-environment.md) de forma segura.
 
 > [!IMPORTANT]
 > - A conta Data Lake Storage que utilizará o principal de serviço tem de ter o [espaço de nome hierárquico ativado](/azure/storage/blobs/data-lake-storage-namespace).

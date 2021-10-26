@@ -1,75 +1,71 @@
 ---
 title: Ver perfis de cliente
 description: Obtenha uma visão combinada dos seus dados unificados de clientes.
-ms.date: 12/01/2020
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: NimrodMagen
-ms.author: nimagen
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 87323d15c44ef82ae8bc3cc971be6c36356121571cb9a9630be699ac2d157bf6
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 07d2206372f89cd7dcd9df84c87024a6f87d5eac
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032818"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623283"
 ---
 # <a name="customer-profiles"></a>Perfis de cliente
 
-A página **Clientes** mostra uma visão combinada dos seus clientes, com base em dados de perfil recolhidos a partir [todas as origens de dados](data-sources.md). Os perfis de cliente estão disponíveis depois de [criar a entidade Cliente unificado](data-unification.md). Certifique-se de que conclui o processo de unificação de dados para obter visões mais avançadas dos seus clientes. A página também permite procurar clientes.
+A página **Clientes** mostra uma visão combinada dos seus perfis de clientes unificados. Os perfis de clientes estão disponíveis assim que [tiver criado a entidade Cliente unificada](data-unification.md). A página permite-lhe procurar clientes e definir o índice para essa pesquisa.
 
-Os clientes podem ser indivíduos ou organizações (Pré-visualização). Cada perfil de cliente ou organização é representado por um mosaico. Selecione um mosaico para ver informações adicionais sobre esse cliente ou organização específica. Utilize os controlos de paginação na parte inferior da página para ver registos adicionais.
+Os clientes podem ser indivíduos ou organizações. Cada perfil do cliente é representado por um mosaico. Utilize os controlos de paginação para obter mais registos. O cartão apresenta campos da entidade *Cliente*, tal como definido no **Índice de pesquisas e filtros**. Selecione um mosaico para ver os dados do cliente selecionado numa página dedicada chamada [página de detalhes do Cliente](customer-profiles.md#customer-details-page).
 
 > [!div class="mx-imgBorder"] 
-> ![Perfis de cliente B2C.](media/profiles-customers.png "Perfis de cliente B2C")
-
-Organizações (Pré-visualização)
-> [!div class="mx-imgBorder"] 
-> ![Perfis de cliente B2B](media/profile-customers-b2b.png "Perfis de cliente B2B")
+> ![Página Clientes a mostrar mosaicos de resultados](media/customers-page-result-tiles-B2C.png "Página Clientes a mostrar mosaicos de resultados")
 
 > [!NOTE]
-> Se não conseguir ver os mosaicos quando seleciona **Clientes** na navegação, o seu administrador terá de [definir, pelo menos, um atributo pesquisável](search-filter-index.md) no **Índice de pesquisas e filtros**.
+> Se não conseguir ver os mosaicos quando seleciona **Clientes** na navegação, o seu administrador precisa de [definir, pelo menos, um atributo pesquisável](search-filter-index.md) no **Índice de pesquisas e filtros**.
 
 ## <a name="search-for-customers"></a>Procurar clientes
 
-Procure clientes ao inserir um nome ou algum outro atributo na caixa de pesquisa. A pesquisa só funciona dentro da entidade Perfil de Cliente criada durante o processo de unificação de dados.
+Procure clientes ao inserir um nome ou algum outro atributo na caixa de pesquisa. A pesquisa apenas funciona dentro da entidade _Cliente_ criada durante o processo de unificação de dados.
 
-Como administrador, pode configurar os atributos pesquisáveis através da página **Índice de pesquisas e filtros**. Para mais informações, consulte [Gerir Índice de pesquisas e filtros](search-filter-index.md).
+Como administrador, pode configurar os atributos pesquisáveis através da página **Índice de pesquisas e filtros**. Para obter mais informações, aceda a [Gerir índice de pesquisas e filtros](search-filter-index.md).
 
 ## <a name="filter-customers"></a>Filtrar clientes
 
-Poderá filtrar os clientes pelos campos da entidade Perfil de Cliente. Semelhante à pesquisa, primeiro o seu administrador terá de definir os campos como filtráveis através da página **Índice de pesquisas e filtros**.
+Pode filtrar os clientes pelos campos da entidade _Cliente_. Semelhante à pesquisa, primeiro o seu administrador terá de definir os campos como filtráveis através da página **Índice de pesquisas e filtros**.
 
-1. Selecione **Filtrar** na página **Clientes**.
+1. Selecione **Mostrar filtros** na página **Clientes**.
 
-2. Marque as caixas junto aos atributos pelos quais pretende filtrar os clientes.
+1. Marque as caixas junto aos atributos pelos quais pretende filtrar os clientes.
 
-   > [!div class="mx-imgBorder"] 
-   > ![Perfis de cliente.](media/profiles-customers3.png "Perfis de cliente")
+1. Retire os seus filtros, selecionando **Limpar filtros** na página **Clientes**.
 
-3. Retire os seus filtros, selecionando **Limpar filtros** na página **Clientes**.
+## <a name="customer-details-page"></a>Página detalhes do cliente
 
-##  <a name="customer-details-page"></a>Página detalhes do cliente
+Selecione qualquer um dos mosaicos do cliente para abrir a **Página de detalhes do cliente**. Esta vista contém informação unificada para o cliente selecionado. Os detalhes do cliente incluem o seguinte conteúdo:
 
-Selecione qualquer um dos mosaicos do cliente para abrir a **Página de detalhes do cliente**. Esta vista contém informação unificada para o cliente selecionado.
+**Mosaico do perfil do cliente**: este mosaico mostra os diferentes valores da entidade _Cliente_ unificada. Se um campo não tiver valor para o perfil do cliente selecionado, não aparecerá. O mosaico é estruturado em secções:  
+  - A primeira secção mostra um conjunto de campos predefinidos seguidos por todos os campos que fazem parte do índice de pesquisas e filtros. Todos os campos relacionados com endereços são combinados numa única linha se o perfil contiver esses campos. 
+  - **Contactos para este cliente**: em ambientes para contas empresariais, verá todos os contactos relacionados para este cliente como a segunda secção. Cada contacto é mostrado com os respetivos campos. Os campos vazios estão ocultos.
+  - **Campos adicionais**: mostra os campos restantes do cliente selecionado, exceto IDs. 
+  - **IDs**: lista todos os IDs com o nome da entidade correspondente. Os campos são identificados como IDs pela sua semântica, que os classificam como tal.
 
-Detalhes do cliente incluem:
+**Linha cronológica da atividade**: mostra dados se tiver atividades configuradas. A vista da linha cronológica contém atividades cronologicamente ordenadas do cliente selecionado, começando pela atividade mais recente. Para mais informações, aceda a [Atividades do cliente](activities.md).
 
--   **Mosaico de perfil de cliente**: este mosaico mostra os diferentes valores da entidade unificada de perfil de cliente. Estes detalhes podem incluir endereço de e-mail, nome, cidade, e assim por diante. 
+**Informações**:  
+  - **Medidas**: mostra se configurou uma ou mais medidas de atributos do cliente. Incluem os KPIs calculados em torno dos seus clientes a nível do cliente individual. Para mais informações, aceda a [Definir e gerir medidas](measures.md).
 
--   **Potenciais interesses, potenciais marcas**: mostra se foi configurado um melhoramento de primeira parte. Representa interesses e afinidades potenciais para marcas que um cliente com um perfil semelhante a este cliente possa ter. Para mais informações, consulte [Enriquecer perfis de clientes com afinidades de marca e interesse](enrichment-microsoft.md).
+  - **Interesses potenciais, marcas potenciais**: mostra se configurou um melhoramento de afinidade de marca e interesses. Representa interesses e afinidades potenciais para marcas baseadas em outros clientes cujo perfil é semelhante ao perfil do cliente selecionado. Para mais informações, aceda ao [Melhorar perfis dos clientes com afinidades de marca e interesses](enrichment-microsoft.md).
 
--   **Medidas**: mostra se configurou uma ou mais medidas de um tipo específico: medidas de atributos do cliente. Incluem os KPIs calculados em torno dos seus clientes a nível do cliente individual. Para mais informações, consulte [Definir e gerir medidas](measures.md).
-
--   **Cronologia da atividade**: mostra se tem atividades configuradas. A vista da cronologia contém as atividades deste cliente ordenadas cronologicamente, começando pela atividade mais recente. Para mais informações, veja [Atividades de cliente](activities.md).
-
-Selecione **Voltar aos clientes** para voltar à página de pesquisa de clientes.
+Para voltar à página de pesquisa do cliente, selecione **Voltar a Clientes**.
 
 ## <a name="next-steps"></a>Passos seguintes
 
-[Adicione mais origens de dados](data-sources.md), [enriqueça perfis unificados](enrichment-hub.md) ou [crie segmentos](segments.md) para trabalhar com perfis unificados noutras aplicações.
+[Adicione mais origens de dados](data-sources.md), [melhore perfis unificados](enrichment-hub.md) ou [crie segmentos](segments.md) para trabalhar com perfis de clientes unificados noutras aplicações.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

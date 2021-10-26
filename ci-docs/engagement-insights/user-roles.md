@@ -4,27 +4,33 @@ description: Visão geral das funções e permissões disponíveis para membros 
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 07/06/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 6d7f4db4a130fc15a69b380c892538db5492d96d8e13f3c070c6a6b9bd098371
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 68e28caf1c14c23acd506da5f7b441f1e3b72e8b
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036707"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645551"
 ---
 # <a name="roles-and-permissions"></a>Funções e permissões
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Uma área de trabalho é a forma como armazena e gere eventos e relatórios. Um membro é um utilizador que pode aceder a uma área de trabalho. Pode atribuir membros à sua área de trabalho e definir as suas funções e permissões. As funções de administrador gerem áreas de trabalho e ambientes e configuram informações de cativação para outros utilizadores. As funções de contribuidor são direcionadas para analistas que não precisam de configurar informações de cativação, mas querem criar os seus próprios relatórios, funis ou segmentos.
+Uma área de trabalho é o local onde armazena e gere eventos e relatórios. Para obter mais informações, consulte [Criar uma área de trabalho e adicionar membros](create-workspace.md). 
+
+Uma área de trabalho pode incluir as seguintes funções e permissões:
+
+- As funções de *membro* são os utilizadores que podem aceder a uma área de trabalho. Pode atribuir membros à sua área de trabalho e definir as suas funções e permissões. 
+- As funções de *administrador* gerem áreas de trabalho e ambientes e configuram informações de cativação para outros utilizadores. 
+- As funções de *contribuidor* são direcionadas para os analistas que não precisam de configurar informações de cativação, mas que querem criar os seus próprios relatórios, funis ou segmentos.
 
 ## <a name="permissions"></a>Permissões
   
-O gráfico que se segue identifica permissões para cada função. 
+A tabela seguinte identifica as permissões para cada função. 
 
 | Permissão | Administrador do ambiente | Administrador da área de trabalho | Contribuidor do ambiente | Contribuidor da área de trabalho | 
 |--|--|--|--|--|
