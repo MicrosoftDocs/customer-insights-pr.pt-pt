@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622984"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673484"
 ---
 # <a name="define-and-manage-measures"></a>Definir e gerir medidas
 
@@ -28,7 +28,7 @@ Utilize o criador de medidas para planear as atividades empresariais consultando
 
 Esta secção acompanha-o através da criação de uma nova medida a partir do zero. Pode criar uma medida com atributos de dados de entidades de dados que tenham uma relação configurada para se ligar à entidade do perfil do cliente unificado.
 
-# <a name="individual-customers-b2c"></a>[Clientes individuais (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Consumidores individuais (B2C)](#tab/b2c)
 
 1. Nas informações de audiência, vá a **Medidas**.
 
@@ -92,7 +92,7 @@ Esta secção acompanha-o através da criação de uma nova medida a partir do z
 
 1. Vá a **Medidas** para ver a nova medida criada na lista.
 
-# <a name="business-accounts-b2b"></a>[Contas empresariais (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Contas empresariais (B2B)](#tab/b2b)
 
 1. Nas informações de audiência, vá a **Medidas**.
 
@@ -164,7 +164,7 @@ Esta secção acompanha-o através da criação de uma nova medida a partir do z
 
 Pode utilizar modelos predefinidos de medidas utilizadas frequentemente para criá-las. Descrições detalhadas dos modelos e uma experiência guiada ajudam-no com a criação de medidas eficientes. Os modelos são criados a partir de dados mapeados da entidade de *Atividade Unificada*. Por isso, certifique-se de que configurou [atividades de cliente](activities.md) antes de criar uma medida a partir de um modelo.
 
-# <a name="individual-customers-b2c"></a>[Clientes individuais (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Consumidores individuais (B2C)](#tab/b2c)
 
 Pode utilizar modelos predefinidos de medidas utilizadas frequentemente para criá-las. Descrições detalhadas dos modelos e uma experiência guiada ajudam-no com a criação de medidas eficientes. Os modelos são criados a partir de dados mapeados da entidade de *Atividade Unificada*. Por isso, certifique-se de que configurou [atividades de cliente](activities.md) antes de criar uma medida a partir de um modelo.
 
@@ -212,7 +212,7 @@ O procedimento a seguir descreve os passos para criar uma nova medida utilizando
 
 1. Agora pode selecionar **Executar** para calcular os resultados da medida. Para refiná-la mais tarde, selecione **Guardar rascunho**.
 
-# <a name="business-accounts-b2b"></a>[Contas empresariais (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Contas empresariais (B2B)](#tab/b2b)
 
 Esta funcionalidade apenas está disponível para medidas criadas em ambientes com clientes individuais como a audiência alvo principal.
 

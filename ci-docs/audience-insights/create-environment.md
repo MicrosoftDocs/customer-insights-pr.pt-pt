@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 95afd1fedb98a451e4978ee66be2ea98ad7a4a76
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645718"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673405"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Criar um ambiente nas informações de audiência
 
@@ -46,7 +46,7 @@ No passo **Informações básicas**, escolha se pretende criar um ambiente do ze
 
 Forneça os seguintes detalhes:
    - **Nome**: O nome para este ambiente. Este campo já está preenchido se copiou de um ambiente existente, mas pode alterá-lo.
-   - **Escolha o seu negócio**: escolha a audiência principal para o novo ambiente. Pode trabalhar com clientes individuais (B2C) ou [contas empresariais](work-with-business-accounts.md) (B2B).
+   - **Escolha o seu negócio**: escolha a audiência principal para o novo ambiente. Pode trabalhar com consumidores individuais (B2C) ou [contas empresariais](work-with-business-accounts.md) (B2B).
    - **Tipo**: selecione se pretende criar um ambiente de produção ou de sandbox. Os ambientes de sandbox não permitem a atualização de dados agendados e destinam-se a pré-implementação e testes. Os ambientes de Sandbox utilizam a mesma audiência principal que o ambiente de produção que está atualmente selecionado.
    - **Região**: a região na qual o serviço é implementado e hospedado.
 
@@ -66,7 +66,7 @@ Ao guardar dados no Azure Data Lake Storage, concorda que os dados serão transf
 > - As contas do Azure Data Lake Storage da mesma região do Azure que selecionou ao criar o ambiente.
 > - As contas do Azure Data Lake Storage que têm um *espaço de nomes hierárquico* ativado.
 
-Para a opção do Azure Data Lake Storage, pode escolher entre uma opção baseada em recursos e uma opção baseada em subscrições para autenticação. Para obter mais informações, consulte [ligar informações de audiência a uma conta Gen2 do Azure Data Lake Storage com um principal de serviço Azure](connect-service-principal.md). O nome do **Contentor** será `customerinsights` e não pode ser alterado.
+Para a opção do Azure Data Lake Storage, pode escolher entre uma opção baseada em recursos e uma opção baseada em subscrições para autenticação. Para obter mais informações, consulte [Ligar a uma conta do Azure Data Lake Storage utilizando um principal de serviço do Azure](connect-service-principal.md). O nome do **Contentor** será `customerinsights` e não pode ser alterado.
 
 Quando os processos do sistema, como a ingestão de dados, estão concluídos, o sistema cria pastas correspondentes na conta de armazenamento especificada. Os ficheiros de dados e os ficheiros *model.json* são criados e adicionados a pastas com base no nome do processo.
 
@@ -76,14 +76,14 @@ Se criar vários ambientes do Customer Insights e optar por guardar as entidades
    
 O passo **Microsoft Dataverse** permite-lhe ligar o Customer Insights ao ambiente do Dataverse.
 
-Para utilizar [modelos de predição fornecidos com o programa](predictions-overview.md#out-of-box-models), configure a partilha de dados com o Dataverse. Ou pode ativar a ingestão de dados a partir de origens de dados no local, fornecendo o URL do ambiente do Microsoft Dataverse que a sua organização administra. Selecione **Ativar partilha de dados** para partilhar dados de saída do Customer Insights com um Data Lake Gerido do Dataverse.
+Para utilizar [modelos de predição fornecidos com o programa](predictions-overview.md#out-of-box-models), configure a partilha de dados com o Dataverse. Ou pode ativar a ingestão de dados a partir de origens de dados no local, fornecendo o URL do ambiente do Microsoft Dataverse que a sua organização administra. Selecione **Ativar partilha de dados** para partilhar dados de saída do Customer Insights com um data lake gerido do Dataverse.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opções de configuração para ativar a partilha de dados com o Microsoft Dataverse.":::
 
 > [!NOTE]
 > O Customer Insights não suporta os seguintes cenários de partilha de dados:
-> - Se guardar todos os dados no Azure Data Lake Storage, não poderá permitir a partilha de dados com um Data Lake Gerido do Microsoft Dataverse.
-> - Se ativar a partilha de dados com um Data Lake Gerido do Microsoft Dataverse, não poderá [criar valores previsíveis ou em falta numa entidade](predictions.md).
+> - Se guardar todos os dados no Azure Data Lake Storage, não poderá permitir a partilha de dados com um data lake gerido do Dataverse.
+> - Se ativar a partilha de dados com o Dataverse, não poderá [criar valores previsíveis ou em falta numa entidade](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>Passo 4: finalizar as definições
 
@@ -93,7 +93,7 @@ Também pode alterar a maioria das definições mais tarde. Para mais informaç�
 
 ## <a name="work-with-your-new-environment"></a>Trabalhar com o seu novo ambiente
 
-Reveja os seguintes artigos para ajudá-lo a começar com a configuração do Customer Insights. 
+Reveja os seguintes artigos para o ajudar a começar com a configuração do Customer Insights: 
 
 - [Adicionar mais utilizadores e atribuir permissões](permissions.md).
 - [Ingerir as suas origens de dados](data-sources.md) e executá-las através do [processo de unificação de dados](data-unification.md) para obter [perfis de clientes unificados](customer-profiles.md).

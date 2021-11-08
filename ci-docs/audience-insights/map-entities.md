@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-map
-ms.openlocfilehash: 7ee3feea8423f35f32ff471b3ed8eb3447584089
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: 8b84ed1a860e383e4eb3f7499be6d397ba3f1db1
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648177"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673289"
 ---
 # <a name="map-entities-and-attributes"></a>Mapear entidades e atributos
 
@@ -96,9 +96,9 @@ Continue com os passos de unificação e certifique-se de que o atributo que con
 
 Para as organizações (Pré-visualização), o tipo de atributo deve ser mapeado para "Nome.Organização"
 > [!div class="mx-imgBorder"]
-> ![Chave primária e tipo de atributo B2B](media/configure-data-map-edit-b2b.png "Chave primária e tipo de atributo B2B")
+> ![Chave primária e tipo de atributo B2B.](media/configure-data-map-edit-b2b.png "Chave primária e tipo de atributo B2B")
 
-## <a name="next-step"></a>Passo seguinte
+## <a name="next-step"></a>Próximo passo
 
 Como parte do processo de unificação dos dados, vá para a página **Corresponder**. Visite [**Corresponder**](match-entities.md) para saber mais sobre esta fase.
 

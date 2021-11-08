@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623147"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673337"
 ---
 # <a name="exports-preview-overview"></a>Descrição geral de exportações (pré-visualização)
 
@@ -32,14 +32,14 @@ Existem dois tipos principais de exportação:
 
 ### <a name="export-segments"></a>Exportar segmentos
 
-**Exportar segmentos em ambientes para contas empresariais (B2B) ou clientes individuais (B2C)**  
-A maioria das opções de exportação suportam ambos os tipos de ambientes. A exportação de segmentos para vários sistemas de destino possui requisitos específicos. De um modo geral, uma membro do segmento, o perfil do cliente, contém informações de contacto. Embora este seja geralmente o caso dos segmentos baseados em clientes individuais (B2C), não é necessariamente o caso dos segmentos baseados em contas empresariais (B2B). 
+**Exportar segmentos em ambientes para contas empresariais (B2B) ou consumidores individuais (B2C)**  
+A maioria das opções de exportação suportam ambos os tipos de ambientes. A exportação de segmentos para vários sistemas de destino possui requisitos específicos. De um modo geral, uma membro do segmento, o perfil do cliente, contém informações de contacto. Embora este seja geralmente o caso dos segmentos baseados em consumidores individuais (B2C), não é necessariamente o caso dos segmentos baseados em contas empresariais (B2B). 
 
 **Ambientes de exportação de segmentos para contas empresariais (B2B)**  
 - Os segmentos no contexto de ambientes para contas empresariais são baseados na entidade *conta*. Para exportar segmentos de contas como está, o sistema de destino precisa de suportar segmentos de contas completos. É o caso do [LinkedIn](export-linkedin-ads.md) quando escolhe a opção **empresa** enquanto define a exportação.
 - Todos os outros sistemas de destino requerem campos da entidade de contacto. Para garantir que os segmentos de contas podem obter dados de contactos relacionados, a definição do segmento precisa de projetar atributos da entidade de contacto. Saiba mais sobre como [configurar segmentos e projetar atributos](segment-builder.md).
 
-**Exportações de segmentos em ambientes para clientes individuais (B2C)**  
+**Exportações de segmentos em ambientes para consumidores individuais (B2C)**  
 - Os segmentos no contexto de ambientes para clientes individuais são baseados na entidade *perfil do cliente unificado*. Todos os segmentos que satisfaçam os requisitos dos sistemas de destino (por exemplo, um endereço de e-mail) podem ser exportados.
 
 **Limites às exportações de segmentos**  
