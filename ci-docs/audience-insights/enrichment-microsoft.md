@@ -1,7 +1,7 @@
 ---
 title: Enriquecer perfis de clientes com dados da Microsoft
-description: Utilize dados proprietários da Microsoft para enriquecer os dados dos seus clientes com afinidades de marcas e interesses.
-ms.date: 11/01/2021
+description: Utilize dados proprietários da Microsoft para melhorar os dados dos seus clientes com afinidades e quota de voz.
+ms.date: 11/11/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,29 +9,33 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: c25dbb7a877da2d3fccc1a4e5b219b9792bc6402
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 346c79d0a4d5cd5c47e91c195a48d3a153db0dc0
+ms.sourcegitcommit: 9d3c9e4eb2ce20996a4f4fb44c42e3fe020c5b48
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732556"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "7793718"
 ---
-# <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Melhorar perfis de cliente com afinidades de marca e interesse (pré-visualização)
+# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Melhore os perfis do cliente com afinidades e quota de voz (pré-visualização)
 
-Utilize dados proprietários da Microsoft para enriquecer os dados dos seus clientes com afinidades de marcas e interesses. Estas afinidades são baseadas em dados de pessoas com demografia semelhante à dos seus clientes. Estas informações ajudam-no a compreender melhor e segmentar os clientes com base nas afinidades com marcas e interesses específicos.
+Utilize dados proprietários da Microsoft para melhorar os dados dos seus clientes com afinidades de marcas, afinidades de interesses e quota de voz (SoV). Estas afinidades e SoV são baseados em dados de pessoas com dados demográficos semelhantes aos dos seus clientes. Esta informação ajuda-o a compreender melhor e a segmentar os seus clientes com base nas suas afinidades ou SoV a marcas e interesses específicos.
 
 Nas informações da audiência, vá a **Dados** > **Melhoramento** para [configurar e ver melhoramentos](enrichment-hub.md).
 
-Para configurar o enriquecimento de afinidades de marcas, vá ao separador **Descubrir** e selecione **Enriquecer os meus dados** no mosaico **Marcas**.
+Para configurar as afinidades de marcas e o melhoramento da SoV, vá ao separador **Descobrir** e selecione **Melhorar os meus dados** no mosaico **Marcas**.
 
-Para configurar o enriquecimento de afinidades de interesses, vá ao separador **Descubrir** e selecione **Enriquecer os meus dados** no mosaico **Interesses**.
+Para configurar as afinidades de interesses e o melhoramento da SoV, vá ao separador **Descobrir** e selecione **Melhorar os meus dados** no mosaico **Interesses**.
 
    > [!div class="mx-imgBorder"]
    > ![Mosaicos Marcas e Interesses.](media/BrandsInterest-tile-Hub.png "Mosaicos Marcas e Interesses")
 
-## <a name="how-we-determine-affinities"></a>Como determinamos afinidades
+## <a name="how-we-determine-affinities-and-sov"></a>Como determinamos afinidades e SoV
 
-Utilizamos os dados de pesquisa online da Microsoft para encontrar afinidades com marcas e interesses em vários segmentos demográficos (definidos por idade, sexo ou localização). O volume de pesquisa online para uma marca ou um interesse determina quanta afinidade um segmento demográfico, em comparação com outros segmentos, tem com essa marca ou interesse.
+Utilizamos os dados de pesquisa online da Microsoft para encontrar afinidades e SoV para marcas e interesses em vários segmentos demográficos (definidos por idade, sexo ou localização). O volume de pesquisa online para uma marca ou interesse constitui a base para determinar a afinidade ou a SoV. No entanto, cada um fornece uma perspetiva diferente para compreender os seus clientes.
+
+- A afinidade é um comparativo entre segmentos demográficos. Pode utilizar esta informação para identificar segmentos demográficos que tenham a maior afinidade para uma determinada marca ou interesse, em comparação com outros segmentos.
+
+- A Quota de Voz é um comparativo entre as suas marcas ou interesses selecionados. Pode utilizar esta informação para identificar qual a marca ou o interesse que tem a maior quota de voz para um determinado segmento demográfico, em comparação com outras marcas ou interesses que selecionou.
 
 ## <a name="affinity-level-and-score"></a>Nível e pontuação de afinidade
 
@@ -48,6 +52,10 @@ O *nível de afinidade* consiste em quatro níveis e a *pontuação de afinidade
 |Baixo     | 1-34        |
 
 Dependendo da granularidade que gostaria para medir a afinidade, pode utilizar o nível de afinidade ou a pontuação. A pontuação de afinidade dá-lhe um controlo mais preciso.
+
+## <a name="share-of-voice-sov"></a>Quota de Voz (SoV)
+
+Calculamos a SoV numa escala de 100 pontos. O total de SoV em todas as marcas ou interesses por cada perfil de cliente melhorado soma até 100. Ao contrário das afinidades, a SoV é relativa às marcas e aos interesses que seleciona. Por exemplo, os valores SoV para 'Microsoft' podem ser diferentes se as marcas selecionadas forem ('Microsoft', 'GitHub') versus ('Microsoft', 'LinkedIn').
 
 ## <a name="supported-countriesregions"></a>Países/regiões suportados
 
@@ -82,7 +90,7 @@ Reveja as suas preferências de melhoramento predefinidas e atualize-as conforme
 
 ### <a name="select-entity-to-enrich"></a>Selecione a entidade a melhorar
 
-Selecione **Entidade enriquecida** e escolha o conjunto de dados que pretende enriquecer com os dados da empresa da Microsoft. Pode selecionar a entidade Cliente para melhorar todos os seus perfis de cliente ou selecionar uma entidade de segmento para melhorar apenas os perfis de cliente contidos nesse segmento.
+Selecione **Entidade melhorada** e escolha o conjunto de dados que pretende melhorar com os dados da Microsoft. Pode selecionar a entidade Cliente para melhorar todos os seus perfis de cliente ou selecionar uma entidade de segmento para melhorar apenas os perfis de cliente contidos nesse segmento.
 
 ### <a name="map-your-fields"></a>Mapear os seus campos
 
@@ -124,13 +132,11 @@ Depois de executar o processo de melhoramento, aceda a **Meus enriquecimentos** 
 
 :::image type="content" source="media/my-enrichments.png" alt-text="Pré-visualização dos resultados depois de executar o processo de enriquecimento.":::
 
-Reveja os dados melhorados ao selecionar **Ver dados melhorados** no gráfico. Os dados melhorados para as marcas vão para a entidade **BrandAffinityFromMicrosoft**. Os dados para os interesses estão na entidade **InterestAffinityFromMicrosoft**. Também encontrará estas entidades listadas no grupo **Enriquecimento** em **Dados** > **Entidades**.
-
-Verá um gráfico com o número de perfis de cliente melhorados ao longo do tempo e uma pré-visualização da entidade melhorada. Selecione **Mostrar mais** no mosaico de pré-visualização para abrir a entidade melhorada.
+Encontrará um gráfico com o número de perfis de clientes melhorados ao longo do tempo e pré-visualizações das entidades melhoradas. Reveja os dados melhorados selecionando **Ver mais** nos gráficos **Nível de Afinidade** ou **Quota de Voz**. Os dados melhorados para as marcas vão para as entidades **BrandAffinityFromMicrosoft** e **BrandShareOfVoiceFromMicrosoft**. Os dados relativos aos interesses encontram-se nas entidades **InterestAffinityFromMicrosoft** e **InterestShareOfVoiceFromMicrosoft**. Também encontrará estas entidades listadas no grupo **Enriquecimento** em **Dados** > **Entidades**.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Ver dados de enriquecimento no cartão de cliente
 
-As afinidades de marca e de interesses também podem ser vistas em cartões de clientes individuais. Aceda a **Clientes** e selecione um perfil de cliente. No cartão de cliente, encontrará gráficos para as marcas ou interesses pelas quais as pessoas no perfil demográfico desse cliente têm afinidade.
+A SoV de marca e interesse também pode ser vista em cartões de clientes individuais. Aceda a **Clientes** e selecione um perfil de cliente. No cartão do cliente, encontrará gráficos para a SoV de marca ou interesse com base nas pessoas no perfil demográfico desse cliente.
 
 :::image type="content" source="media/enrichment-customer-card.png" alt-text="Cartão de cliente com dados enriquecidos.":::
 
