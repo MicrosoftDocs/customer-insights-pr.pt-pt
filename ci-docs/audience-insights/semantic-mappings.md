@@ -1,7 +1,7 @@
 ---
 title: Mapeamentos semânticos (pré-visualização)
 description: Descrição geral dos mapeamentos semânticos e como utilizá-los.
-ms.date: 09/28/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: f23c622572ff9f967eca07de7898419d1ffc18b0
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622949"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7731957"
 ---
 # <a name="semantic-mappings"></a>Mapeamentos semânticos
 
@@ -75,8 +75,7 @@ Os mapeamentos semânticos permitem mapear os seus dados de não atividade para 
 
 1. Para executar um mapeamento semântico num momento posterior, selecione o mapeamento semântico e selecione **Atualizar**.
 
-> [!TIP]
-> Há [seis tipos de estados](system.md#status-types) para tarefas/processos. Além disso, a maior parte dos processos [depende de outros processos a jusante](system.md#refresh-policies). Poderá selecionar o estado de um processo para ver os detalhes do progresso de toda a tarefa. Depois de selecionar **Ver detalhes** de uma das tarefas do trabalho, encontra informações adicionais: tempo de processamento, última data de processamento e todos os erros e avisos associados à tarefa.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Gerir mapeamentos semânticos existentes
 
@@ -91,5 +90,6 @@ Em **Dados** > **Mapeamentos semânticos (pré-visualização)**, pode ver todos
 - **Mudar o nome**: abre um diálogo onde pode introduzir um nome diferente para o mapeamento semântico selecionado. Selecione **Guardar** para aplicar as alterações.
 
 - **Eliminar**: abre um diálogo para confirmar a eliminação do mapeamento semântico selecionado. Também pode eliminar mais de um mapeamento semântico ao mesmo tempo, selecionando os mapeamentos semânticos e o ícone de eliminação. Selecione **Eliminar** para confirmar a eliminação.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

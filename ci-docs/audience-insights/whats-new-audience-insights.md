@@ -1,7 +1,7 @@
 ---
 title: Funcionalidades novas e para breve
 description: Informações sobre as novas funcionalidades, melhoramentos e correções de erros.
-ms.date: 08/31/2021
+ms.date: 11/04/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
+ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673878"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "7753131"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>O que há de novo na capacidade de informações de audiência do Dynamics 365 Customer Insights
 
@@ -26,6 +26,41 @@ Implementamos as atualizações numa base por região. Assim, certas regiões po
 
 > [!TIP]
 > Para enviar e votar em pedidos de funcionalidades e sugestões para produtos, vá para o [portal de ideias de aplicação do Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="october-2021-updates"></a>Atualizações de outubro de 2021
+
+As atualizações em outubro de 2021 incluem novas funcionalidades, atualizações de desempenho e correções de erros.
+
+### <a name="b-to-b"></a>B2B
+
+A partir de outubro de 2021, pode trabalhar com contas empresariais e os seus contactos relacionados no Customer Insights. Antes, a aplicação era maioritariamente adaptada para consumidores individuais. Várias áreas de funcionalidade foram atualizadas para suportar cenários B2B em cima de um novo tipo de ambiente. Para obter uma descrição geral sobre as funcionalidades B2B suportadas, consulte [Trabalhar com contas empresariais em informações de audiência](work-with-business-accounts.md).
+
+As secções seguintes destacam algumas das áreas chave que foram adaptadas para suportar as contas empresariais e os consumidores individuais.
+
+#### <a name="export-segments-based-on-business-accounts"></a>Exportar segmentos com base em contas empresariais
+
+Todas as exportações de segmentos em informações de audiência estão disponíveis no contexto das contas empresariais. A maioria das exportações de segmentos requerem que a configuração adicional e [as informações de contacto projetadas](segment-builder.md#create-a-new-segment) nos segmentos subjacentes sejam válidas para contas empresariais. Para mais informações, consulte [Exportar segmentos](export-destinations.md#export-segments).
+
+#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Utilizar a exportação do LinkedIn Ads com contas empresariais
+
+A exportação do LinkedIn Ads está agora disponível para filtragem por contacto e empresa no contexto das contas empresariais. Ao selecionar a filtragem por empresa como o seu foco principal de exportação do LinkedIn, pode exportar segmentos incorporados em contas empresariais sem a necessidade de projetar informações de contacto. Para mais informações, consulte os documentos sobre a [exportação do LinkedIn Ads](export-linkedin-ads.md) e a diferença entre a [filtragem por contacto](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) e a [filtragem por empresa](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
+
+#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Criar medidas com base em contas empresariais e a sua hierarquia
+
+O construtor de medidas permite criar medidas em torno de contas empresariais e, opcionalmente, utilizar as informações da hierarquia. As informações de hierarquia são utilizadas para acumular um cálculo de medida numa conta e todas as suas subcontas relacionadas. Por exemplo, pode criar medidas como o total de receitas para cada grupo de contas empresariais identificadas pela sua hierarquia. Para mais informações, consulte [Definir e gerir medidas](measures.md).
+
+#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Criar segmentos com base em contas empresariais e a sua hierarquia
+
+O construtor de segmentos permite-lhe criar segmentos de contas empresariais que, opcionalmente, incluem informações de contacto para cada conta num segmento. Se tiver a hierarquia de contas configurada, pode utilizar informações da hierarquia de contas na criação de segmentos. Para obter mais informações, consulte [Criar um novo segmento](segment-builder.md#create-a-new-segment).
+
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Manter as suas contas empresariais com conhecimentos aprofundados sobre a sua tendência de abandono
+
+O modelo de predição de abandono de clientes suporta agora também as contas empresariais. Pode avaliar o risco de abandono não apenas para uma conta, mas para uma combinação de uma conta e uma categoria de produto ou serviço que lhe compram. Esta adição ajuda-o a perceber se uma conta tem mais probabilidade de parar de comprar de si em geral ou apenas para uma determinada categoria de bens ou serviços. Para ajudá-lo a utilizar este modelo de IA, também lista os motivos pelos quais uma conta será provavelmente objeto de abandono. Para obter mais informações, consulte [Predição de abandono de transações (pré-visualização)](predict-transactional-churn.md).
+
+#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Ver contactos de uma conta empresarial na vista Cliente
+
+Se as contas empresariais forem mapeadas para as contas relacionadas, a aplicação Customer Insights mostra estes contactos relacionados como parte da vista de detalhes do cliente. Para mais informações, consulte [Perfis de cliente](customer-profiles.md).
+
 
 ## <a name="september-2021-updates"></a>Atualizações de setembro de 2021
 

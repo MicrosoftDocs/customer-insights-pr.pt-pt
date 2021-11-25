@@ -1,7 +1,7 @@
 ---
 title: Criar e gerir ambientes
 description: Saiba como se inscrever no serviço e como gerir ambientes.
-ms.date: 10/14/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673758"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799650"
 ---
 # <a name="manage-environments"></a>Gerir ambientes
 
@@ -39,6 +39,19 @@ Pode editar alguns dos detalhes de ambientes existentes.
 3. Na caixa **Editar ambiente**, pode atualizar as definições do ambiente.
 
 Para obter mais informações sobre as definições do ambiente, consulte [Criar um novo ambiente](create-environment.md).
+
+## <a name="connect-to-microsoft-dataverse"></a>Ligar ao Microsoft Dataverse
+   
+O passo **Microsoft Dataverse** permite-lhe ligar o Customer Insights ao ambiente do Dataverse.
+
+Para utilizar [modelos de predição fornecidos com o programa](predictions-overview.md#out-of-box-models), configure a partilha de dados com o Dataverse. Ou pode ativar a ingestão de dados a partir de origens de dados no local, fornecendo o URL do ambiente do Microsoft Dataverse que a sua organização administra. Selecione **Ativar partilha de dados** para partilhar dados de saída do Customer Insights com um data lake gerido do Dataverse.
+
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opções de configuração para ativar a partilha de dados com o Microsoft Dataverse.":::
+
+> [!NOTE]
+> O Customer Insights não suporta os seguintes cenários de partilha de dados:
+> - Se guardar todos os dados no Azure Data Lake Storage, não poderá permitir a partilha de dados com um data lake gerido do Dataverse.
+> - Se ativar a partilha de dados com o Dataverse, não poderá [criar valores previsíveis ou em falta numa entidade](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Copiar a configuração do ambiente
 

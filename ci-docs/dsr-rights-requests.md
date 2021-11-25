@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: c116f7ce208c0288851a4b2230e27784ba3a5337
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483696"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732694"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Os pedidos de Direitos de Titulares de Dados (DSR) são pedidos sob RGPD
 
@@ -79,7 +79,14 @@ Um administrador pode seguir estes passos para exportar dados:
 2. Aceite a confirmação para exportar os dados para o utilizador pedido.
 3. Receba os dados exportados através do endereço de e-mail do administrador de inquilino.
 
-## <a name="engagement-insights"></a>Informações de cativação
+## <a name="consent-management-preview"></a>Gestão de consentimento (pré-visualização)
+
+A capacidade de gestão de consentimento não recolhe os dados dos utilizadores diretamente. Apenas importa e processa os dados de consentimento fornecidos pelos utilizadores noutras aplicações.
+
+Para remover dados de consentimento sobre utilizadores específicos, remova-os nas origens de dados ingeridas para a capacidade de gestão de consentimento. Após atualizar a origem de dados, os dados removidos também serão eliminados no Centro de Consentimento. As aplicações que utilizam a entidade de consentimento também eliminarão os dados que foram removidos na origem após uma [atualização](audience-insights/system.md#refresh-processes). Recomendamos atualizar as origens de dados rapidamente após responder a um pedido individual de acesso a dados para remover os dados do utilizador de todos os outros processos e aplicações.
+
+
+## <a name="engagement-insights-preview"></a>Informações de Interação (pré-visualização)
 
 ### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Eliminação e exportação de dados de eventos que contenham informações identificáveis pelo utilizador final
 

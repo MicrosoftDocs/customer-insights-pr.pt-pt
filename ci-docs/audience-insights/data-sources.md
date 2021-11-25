@@ -1,7 +1,7 @@
 ---
 title: Utilizar origens de dados para ingerir dados
 description: Saiba como importar dados de várias origens.
-ms.date: 04/12/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de31e1f25c08d0bcb5341c5f465b1999de48acf3
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645369"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732169"
 ---
 # <a name="data-sources-overview"></a>Descrição geral das origens de dados
 
@@ -48,14 +48,7 @@ Verá o nome de cada origem de dados ingerido, o seu estado, e a última vez que
 > [!div class="mx-imgBorder"]
 > ![Origem de dados adicionada.](media/configure-data-datasource-added.png "Origem de dados adicionada")
 
-|Estado  |Descrição  |
-|---------|---------|
-|Êxito   |A origem dos dados foi ingerida com sucesso se houver uma hora mencionada na coluna **Atualizada**.
-|Não iniciado   |A origem dos dados ainda não tem dados ingeridos ou ainda está em modo de rascunho.         |
-|A atualizar    |A ingestão de dados está em curso. Poderá cancelar esta operação ao selecionar **Parar de atualizar** na coluna **Ações**. Parar a atualização de um origem de dados irá revertê-lo para o último estado de atualização.       |
-|Falha     |A ingestão de dados encontrou erros.         |
-
-Selecione o valor na coluna **Estado** de qualquer origem de dados para rever mais detalhes. No painel **Detalhes do progresso**, expanda **Origens de dados**. Selecione **Ver detalhes** para obter mais informações sobre o estado da atualização, incluindo detalhes de erro e atualizações do processo a jusante.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 O carregamento de dados pode levar tempo. Após uma atualização bem-sucedida, os dados ingeridos podem ser revistos na página **Entidades**. Para mais informações, consulte [Entidades](entities.md).
 

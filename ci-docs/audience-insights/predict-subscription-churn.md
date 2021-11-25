@@ -9,16 +9,18 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 409dfce02c41d7c52295409912880b9224469908805e199066faeb2b7a4f1f9d
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f9397729d2f79d079b4dea2ee92d0823b6d987e4
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035337"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799742"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Previsão de abandono de subscrição (pré-visualização)
 
 A previsão de abandono de subscrição ajuda a prever se um cliente está em risco por ter deixado de utilizar os produtos ou serviços de subscrição da sua empresa. Pode criar uma nova previsão de abandono de subscrição na página **Informações** > **Previsões**. Selecione **Minhas previsões** para ver outras previsões que criou.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOKNQ]
 
 > [!TIP]
 > Experimente o tutorial para uma previsão de rotatividade de subscrição utilizando dados de amostra: [Guia de previsão da rotatividade da subscrição](sample-guide-predict-subscription-churn.md).

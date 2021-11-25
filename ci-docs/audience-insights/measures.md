@@ -1,7 +1,7 @@
 ---
 title: Criar e gerir medidas
 description: Defina medidas para analisar e refletir o desempenho do seu negócio.
-ms.date: 09/30/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: f6be11bd97be71bc0c3a58eaee4d8ed45f535877
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673484"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732740"
 ---
 # <a name="define-and-manage-measures"></a>Definir e gerir medidas
 
@@ -238,10 +238,9 @@ Selecione uma medida da lista para as seguintes opções:
 - **Elimine** a medição.
 - **Ativar** ou **Desativar**. As medidas inativas não serão atualizadas durante uma [atualização agendada](system.md#schedule-tab).
 
-> [!TIP]
-> Há [seis tipos de estados](system.md#status-types) para tarefas/processos. Além disso, a maior parte dos processos [depende de outros processos a jusante](system.md#refresh-policies). Poderá selecionar o estado de um processo para ver os detalhes do progresso de toda a tarefa. Depois de selecionar **Ver detalhes** para uma das tarefas do trabalho, encontrará informações adicionais: tempo de processamento, data do último processamento e todos os erros e avisos associados à tarefa.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
-## <a name="next-step"></a>Passo seguinte
+## <a name="next-step"></a>Próximo passo
 
 Pode utilizar as medidas existentes para criar [um segmento de cliente](segments.md).
 

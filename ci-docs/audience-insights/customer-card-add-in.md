@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c9c7cfbf9f47cca53e5543e2cda2584e25ad855d
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: dbcdcbea8ffd1755b58c322233c08c70a065db36
+ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643444"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7792041"
 ---
 # <a name="customer-card-add-in-preview"></a>Suplemento de Cartões de Cliente (pré-visualização)
 
@@ -34,7 +34,7 @@ Obtenha uma visão de 360 graus dos seus clientes diretamente nas aplicações D
   - **Controlo da medida**: requer [medidas configuradas](measures.md) do tipo de atributos do cliente.
   - **Controlo de inteligência**: requer dados gerados utilizando [predições](predictions.md) ou [modelos personalizados](custom-models.md).
   - **Controlo de detalhes do cliente**: todos os campos do perfil estão disponíveis no perfil do cliente unificado.
-  - **Controlo do melhoramento**: requer [melhoramentos](enrichment-hub.md) ativos aplicados aos perfis de clientes.
+  - **Controlo do melhoramento**: requer [melhoramentos](enrichment-hub.md) ativos aplicados aos perfis de clientes. O suplemento do cartão suporta estes melhoramentos: as [Marcas](enrichment-microsoft.md) fornecidas pela Microsoft, os [Interesses](enrichment-microsoft.md) fornecidos pela Microsoft.
   - **Controlo de contactos**: requer a definição de entidade semântica do tipo de contactos.
   - **Controlo da linha cronológica**: requer [atividades configuradas](activities.md).
 

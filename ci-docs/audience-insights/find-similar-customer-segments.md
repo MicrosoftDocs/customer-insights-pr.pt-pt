@@ -9,16 +9,18 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ee4d24ae0ae39c689956f70efe46c4226876484e6da6282dc874cec37bd287e2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 7c447609bd54de0780dd14aae9f05c7c24b8cce5
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034557"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799696"
 ---
 # <a name="similar-customers-preview"></a>Clientes semelhantes (pré-visualização)
 
 Esta funcionalidade permite encontrar clientes semelhantes na sua base de clientes utilizando inteligência artificial. Precisa de ter, pelo menos, um segmento criado para utilizar esta funcionalidade. Expandir os critérios de um segmento existente ajuda a encontrar clientes semelhantes a esse segmento.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
 > *Encontrar clientes semelhantes* utiliza meios automatizados para avaliar dados e fazer previsões com base nesses dados, pelo que tem a capacidade de ser usado como um método de criar perfis, uma vez que esse termo é definido pelo Regulamento Geral de Proteção de Dados ("RGPD"). A utilização desta funcionalidade por parte do Cliente para tratar os dados pode estar sujeita aos RGPD ou a outras leis ou regulamentos. O utilizador é responsável por garantir que a sua utilização do Dynamics 365 Customer Insights, incluindo predições, cumpre com todas as leis e regulamentos aplicáveis, incluindo leis relacionadas com a privacidade, dados pessoais, dados biométricos, proteção de dados e confidencialidade das comunicações.

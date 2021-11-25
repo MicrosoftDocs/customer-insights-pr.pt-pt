@@ -1,7 +1,7 @@
 ---
 title: Fundir entidades na unificação de dados
 description: Fundir entidades para criar perfis unificados de clientes.
-ms.date: 10/10/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-merge
-ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648268"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732786"
 ---
 # <a name="merge-entities"></a>Unir entidades
 
@@ -187,10 +187,9 @@ Escolha **Executar processos de União e a jusante** para atualizar o sistema co
 
 Para fazer mais alterações e voltar a executar o passo, pode cancelar uma união em curso. Selecione **A atualizar...** e selecione **Cancelar tarefa** no painel lateral apresentado.
 
-> [!TIP]
-> Depois de executar o processo de união, selecione o estado do processo para abrir o painel de **Detalhes da tarefa**. Fornece uma descrição geral sobre o tempo de processamento, a última data de processamento e todos os erros e avisos associados à tarefa. Selecione **Ver detalhes** para ver quais as entidades que participaram no processo de correspondência, se a resolução de conflitos for bem sucedida e se as atualizações foram publicadas com sucesso.  
-> Há [seis tipos de estados](system.md#status-types) para tarefas/processos. Além disso, a maior parte dos processos [depende de outros processos a jusante](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Caminho de desagregação para chegar aos detalhes do processo a partir da ligação do estado da tarefa.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+:::image type="content" source="media/process-detail-path.png" alt-text="Caminho de desagregação para chegar aos detalhes do processo a partir da ligação do estado da tarefa.":::
 
 ## <a name="next-step"></a>Passo Seguinte
 
