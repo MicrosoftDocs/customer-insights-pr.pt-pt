@@ -1,7 +1,7 @@
 ---
 title: Funcionalidades novas e para breve
 description: Informações sobre as novas funcionalidades, melhoramentos e correções de erros.
-ms.date: 11/04/2021
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
-ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
+ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "7753131"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884276"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>O que há de novo na capacidade de informações de audiência do Dynamics 365 Customer Insights
 
@@ -26,6 +26,18 @@ Implementamos as atualizações numa base por região. Assim, certas regiões po
 
 > [!TIP]
 > Para enviar e votar em pedidos de funcionalidades e sugestões para produtos, vá para o [portal de ideias de aplicação do Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="november-2021-updates"></a>Atualizações de novembro de 2021
+
+As atualizações em novembro de 2021 incluem novas funcionalidades, atualizações de desempenho e correções de erros.
+
+### <a name="segment-membership-now-available-in-dataverse"></a>Associações a segmentos agora disponíveis no Dataverse
+
+As informações das associações a segmentos para perfis de cliente estão agora disponíveis no Dataverse a par das informações e dos perfis de cliente. As aplicações de ação e as aplicações condicionadas por modelo do Dynamics 365 podem utilizar estes detalhes de associação a segmentos de pesquisa de dados para um determinado cliente.
+
+### <a name="activities-support-contact-level-details-for-business-accounts"></a>As atividades suportam detalhes a nível do contacto para as contas empresariais
+
+Pode agora configurar, apresentar e filtrar as atividades para os contactos nas cronologias de atividade da sua conta profissional para melhor compreender que contactos da conta participaram em atividades específicas.
 
 ## <a name="october-2021-updates"></a>Atualizações de outubro de 2021
 

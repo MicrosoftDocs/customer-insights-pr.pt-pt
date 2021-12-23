@@ -1,7 +1,7 @@
 ---
-title: Ingerir dados através de um conector Power Query
+title: Ingerir dados através de um conector do Power Query (Vídeo)
 description: Conectores para origens de dados com base no Power Query.
-ms.date: 11/01/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,18 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 38c447d80a25feca087ca9f110278b8401423018
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732232"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7903854"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Ligue-se a uma origem de dados do Power Query
 
-O Power Query oferece um vasto conjunto de conectores para ingerir dados. A maioria destes conectores são suportados pelo Dynamics 365 Customer Insights. A adição de origens de dados com base em conectores Power Query geralmente segue os passos descritos na secção seguinte. No entanto, dependendo do conector que utiliza, são necessárias informações diferentes. Para obter mais informações, consulte a documentação sobre os conectores individuais na [referência do conector Power Query](/power-query/connectors/).
+O Power Query oferece um vasto conjunto de conectores para ingerir dados. A maioria destes conectores são suportados pelo Dynamics 365 Customer Insights. 
+
+Normalmente, a adição de origens de dados baseada em conectores do Power Query segue os passos descritos nesta secção. No entanto, dependendo do conector que utiliza, são necessárias informações diferentes. Para saber mais, consulte a documentação sobre os conectores individuais na [Referência do conector do Power Query](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -28,14 +30,11 @@ O Power Query oferece um vasto conjunto de conectores para ingerir dados. A maio
 
 1. Selecione **Adicionar origem de dados**.
 
-1. Escolha o método **Importação de dados** e selecione **Seguinte**.
+1. Selecione **Microsoft Power Query** e, depois, selecione **Seguinte**.
 
-1. Forneça um **Nome** para a origem de dados e selecione **Seguinte** para criar a origem de dados. Nomear diretrizes: 
-   - Comece com uma letra.
-   - Utilize apenas letras e números. Não são permitidos carateres especiais e espaços.
-   - Utilize entre 3 e 64 carateres.
+1. Forneça um **Nome** para a origem de dados e selecione **Seguinte** para criar a origem de dados.
 
-1. Escolha um dos [conectores disponíveis](#available-power-query-data-sources). Para este exemplo, selecionamos o conector **Texto/CSV**.
+1. Escolha um dos [conectores disponíveis](#available-power-query-data-sources). Neste exemplo, selecionamos o conector **Text/CSV**.
 
 1. Introduza os detalhes requeridos nas **Definições de ligação** para o conector selecionado e selecione **Seguinte** para ver uma pré-visualização dos dados.
 
@@ -50,7 +49,7 @@ O Power Query oferece um vasto conjunto de conectores para ingerir dados. A maio
 
 1. Poderá adicionar entidades adicionar à sua origem de dados ao selecionar **Obter dados** na caixa de diálogo **Editar consultas**.
 
-   Estas transformações são altamente recomendadas:
+   Recomendamos que utilize as seguintes transformações:
 
    - Se estiver a ingerir dados a partir de um ficheiro CSV, a primeira linha contém frequentemente cabeçalhos. Aceda a **Tabela de transformar** e selecione **Utilizar os cabeçalhos como primeira linha**.
    - Certifique-se de que o tipo de dados está definido de forma adequada.
@@ -61,7 +60,7 @@ O Power Query oferece um vasto conjunto de conectores para ingerir dados. A maio
 
 ## <a name="available-power-query-data-sources"></a>Origens de dados do Power Query disponíveis
 
-Consulte a [referência do conector Power Query](/power-query/connectors/) para obter uma lista atualizada de conectores que pode selecionar para importar dados para o Customer Insights. 
+Consulte a [Referência do conector do Power Query](/power-query/connectors/) para obter uma lista de conectores que poderá utilizar para importar dados para o Customer Insights. 
 
 Os conectores com uma marca de verificação na coluna **Customer Insights (Fluxos de dados)** estão disponíveis para criar novas origens de dados com base no Power Query. Reveja a documentação de um conector específico para saber mais sobre os seus pré-requisitos, limitações e outros detalhes.
 
@@ -70,7 +69,7 @@ Os conectores com uma marca de verificação na coluna **Customer Insights (Flux
 > [!NOTE]
 > Poderá não ser possível efetuar alterações às origens de dados que estão atualmente a ser utilizadas num dos processos da aplicação (*segmentação*, *corresponder* ou *intercalar*, por exemplo). 
 >
-> A utilização da página **Definições** permite monitorizar o progresso de cada um dos processos ativos. Quando um processo é concluído, pode regressar à página **Origens de Dados** e efetuar as suas alterações.
+> Na página **Definições**, pode monitorizar o progresso de cada um dos processos ativos. Quando um processo é concluído, pode regressar à página **Origens de Dados** e efetuar as suas alterações.
 
 1. Em informações de audiência, aceda a **Dados** > **Origens de dados**.
 

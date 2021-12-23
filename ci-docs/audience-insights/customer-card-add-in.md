@@ -1,20 +1,20 @@
 ---
-title: Suplemento de Cartões de Cliente para aplicações Dynamics 365
+title: Suplemento de Cartões de Cliente para Aplicações do Dynamics 365 (Vídeo)
 description: Mostrar dados de informações de audiência em aplicações Dynamics 365 com este suplemento.
-ms.date: 09/30/2021
+ms.date: 12/07/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: pkieffer
-ms.author: philk
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: dbcdcbea8ffd1755b58c322233c08c70a065db36
-ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
+ms.openlocfilehash: e15d73bfc7af2cd9c8b5d983f01922459ec4a2ee
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7792041"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7904027"
 ---
 # <a name="customer-card-add-in-preview"></a>Suplemento de Cartões de Cliente (pré-visualização)
 
@@ -34,7 +34,7 @@ Obtenha uma visão de 360 graus dos seus clientes diretamente nas aplicações D
   - **Controlo da medida**: requer [medidas configuradas](measures.md) do tipo de atributos do cliente.
   - **Controlo de inteligência**: requer dados gerados utilizando [predições](predictions.md) ou [modelos personalizados](custom-models.md).
   - **Controlo de detalhes do cliente**: todos os campos do perfil estão disponíveis no perfil do cliente unificado.
-  - **Controlo do melhoramento**: requer [melhoramentos](enrichment-hub.md) ativos aplicados aos perfis de clientes. O suplemento do cartão suporta estes melhoramentos: as [Marcas](enrichment-microsoft.md) fornecidas pela Microsoft, os [Interesses](enrichment-microsoft.md) fornecidos pela Microsoft.
+  - **Controlo do melhoramento**: requer [melhoramentos](enrichment-hub.md) ativos aplicados aos perfis de clientes. O suplemento do cartão suporta estes melhoramentos: as [Marcas](enrichment-microsoft.md) fornecidas pela Microsoft, os [Interesses](enrichment-microsoft.md) fornecidos pela Microsoft e os [Dados de interação do Office](enrichment-office.md) fornecidos pela Microsoft.
   - **Controlo de contactos**: requer a definição de entidade semântica do tipo de contactos.
   - **Controlo da linha cronológica**: requer [atividades configuradas](activities.md).
 
