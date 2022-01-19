@@ -1,5 +1,5 @@
 ---
-title: Exportar dados do Customer Insights para os anfitriões do SFTP (Vídeo)
+title: Exportar dados do Customer Insights para os anfitriões do SFTP (Contém vídeo)
 description: Aprenda a configurar a ligação e exportar para uma localização SFTP.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bb73c49cf87657b71e0c2f5934662b062eeffb21
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 542bd908010cf0a8ccc12f15d54e0a3d5b72f189
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904143"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934901"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Exportar segmentos e outros dados para o SFTP (pré-visualização)
 
@@ -28,6 +28,7 @@ Utilize os dados dos seus clientes em aplicações de terceiros exportando-os pa
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
+- Os destinos SFTP por trás de firewalls não são atualmente suportados. 
 - O runtime de uma exportação depende do desempenho do seu sistema. Recomendamos dois núcleos CPU e 1 Gb de memória como configuração mínima do seu servidor. 
 - As entidades exportadoras com até 100 milhões de perfis de clientes podem demorar 90 minutos quando utilizam a configuração mínima recomendada de dois núcleos CPU e 1 Gb de memória. 
 

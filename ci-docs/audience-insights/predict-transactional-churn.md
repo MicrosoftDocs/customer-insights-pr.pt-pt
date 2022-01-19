@@ -1,7 +1,7 @@
 ---
-title: Predição de abandono de transações (Vídeo)
+title: Predição de abandono de transações (contém vídeo)
 description: Preveja se um cliente está em risco por ter deixado de comprar os seus produtos ou serviços.
-ms.date: 10/20/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ad87e0fd848168d1a18f28f2ac5c507bb01e1f28
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 602a86a67006925faac00add8e089d28f7071c14
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904086"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967761"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Predição de abandono de transações (pré-visualização)
 
@@ -103,10 +103,10 @@ Para ambientes baseados em contas empresariais, podemos prever o abandono transa
 
 1. Selecione o mosaico **Modelo de abandono do cliente (pré-visualização)** e selecione **Use este modelo**.
 
-1. No painel **Modelo de abandono de clientes**, escolha **Transação** e selecione **Começar**.
+1. No painel **Modelo de abandono de clientes (pré-visualização)**, escolha **Transação** e selecione **Começar**.
 
 :::image type="content" source="media/select-transaction-churn.PNG" alt-text="Captura de ecrã com a opção de transação selecionada no painel Modelo de abandono de clientes.":::
-
+ 
 ### <a name="name-model"></a>Atribuir nome ao modelo
 
 1. Forneça um nome para o modelo para distingui-lo de outros modelos.
@@ -117,11 +117,11 @@ Para ambientes baseados em contas empresariais, podemos prever o abandono transa
 
 ### <a name="define-customer-churn"></a>Definir abandono do cliente
 
-1. Estabeleça uma margem de dias para predição do abandono no campo **Identificar clientes que possam abandonar nos próximos**. Por exemplo, prever o risco de abandono para os seus clientes durante os próximos 90 dias para se alinhar com os seus esforços de retenção de marketing. Prever o risco de abandono durante um período de tempo mais ou menos longo pode tornar mais difícil abordar os fatores no seu perfil de risco de abandono, mas depende das suas necessidades específicas de negócio.
+1. Defina a **Janela de predição**. Por exemplo, prever o risco de abandono para os seus clientes durante os próximos 90 dias para se alinhar com os seus esforços de retenção de marketing. Prever o risco de abandono durante um período de tempo mais ou menos longo pode tornar mais difícil abordar os fatores no seu perfil de risco de abandono, mas depende das suas necessidades específicas de negócio.
    >[!TIP]
-   > Pode selecionar **Guardar e fechar** a qualquer momento para guardar a previsão como rascunho. Vais encontrar o rascunho de previsão no separador **Minhas previsões** para continuar.
+   > Pode selecionar **Guardar rascunho** a qualquer momento para guardar a predição como rascunho. Vais encontrar o rascunho de previsão no separador **Minhas previsões** para continuar.
 
-1. Introduza o número de dias para definir o abandono no campo **Um cliente abandonou se não fez nenhuma compra em:**. Por exemplo, se um cliente não tiver feito quaisquer compras nos últimos 30 dias, elas podem ser consideradas como sendo de abandono para o seu negócio. 
+1. Introduza o número de dias para definir o abandono no campo **Definição de abandono**. Por exemplo, se um cliente não tiver feito quaisquer compras nos últimos 30 dias, elas podem ser consideradas como sendo de abandono para o seu negócio. 
 
 1. Selecione **Seguinte** para continuar.
 
@@ -129,19 +129,16 @@ Para ambientes baseados em contas empresariais, podemos prever o abandono transa
 
 1. Selecione **Adicionar dados** e escolha o tipo de atividade no painel lateral que contém as informações de histórico de transação ou de compra necessárias.
 
-1. Em **Escolher atividades**, escolha as atividades específicas da atividade selecionada em que gostaria que o cálculo se focasse.
+1. Em **Atividades selecionadas**, escolha as atividades específicas do tipo de atividade selecionado em que gostaria que o cálculo se focasse.
 
-   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Painel lateral a mostrar a escolha de atividades específicas sob o tipo semântico.":::
+   :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Painel lateral a mostrar a escolha de atividades específicas sob o tipo semântico.":::
 
-1. Se ainda não mapeou a atividade para um tipo semântico, selecione **Editar** para o fazer. A experiência guiada para mapear atividades semânticas é aberto. Mapeie os seus dados para os campos correspondentes no tipo de atividade selecionado.
+   Se ainda não mapeou a atividade para um tipo semântico, selecione **Editar** para o fazer. A experiência guiada para mapear atividades semânticas é aberto. Mapeie os seus dados para os campos correspondentes no tipo de atividade selecionado.
 
-   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Tipo de atividade de definição de página.":::
+1. Mapear os atributos semânticos para os campos que são necessários para executar o modelo. Se os campos abaixo não estiverem preenchidos, configure a relação da sua entidade de histórico de compras com a entidade *Cliente*. Selecione **Guardar**.
 
-1. Depois de mapear a atividade para o tipo semântico correspondente, selecione **Seguinte** para prosseguir
+1. No passo **Adicionar dados necessários**, selecione **Seguinte** para proceder se não pretender adicionar mais atividades.
 
-1. Mapear os atributos semânticos para os campos que são necessários para executar o modelo. Se os campos abaixo não estiverem preenchidos, configure a relação da sua entidade de histórico de compras com a entidade *Cliente*.
-
-1. Selecione **Seguinte**.
 
 # <a name="individual-consumers-b-to-c"></a>[Consumidores individuais (B2C)](#tab/b2c)
 

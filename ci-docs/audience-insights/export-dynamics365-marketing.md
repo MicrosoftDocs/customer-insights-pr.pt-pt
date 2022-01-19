@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b8e63a738abaf4fbb902e3edbf83f5a815978478
-ms.sourcegitcommit: 8e89575fe2acb4b289fc157fa7c4c29caf9be967
+ms.openlocfilehash: 2c673c432f308efa289625a159de608d07f8d2b3
+ms.sourcegitcommit: f988114ac7a288ccadf2db35b02dbef5cacea4d9
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/24/2021
-ms.locfileid: "7417219"
+ms.lasthandoff: 01/14/2022
+ms.locfileid: "7975138"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Utilizar segmentos no Dynamics 365 Marketing (pré-visualização)
 
@@ -45,7 +45,7 @@ Se estiver a utilizar as novas capacidades do Dynamics 365 Marketing para orques
 
 1. Na secção **Conta de administrador do servidor**, selecione **Iniciar sessão** e selecione uma conta do Dynamics 365 Marketing.
 
-1. Mapear um campo de ID de cliente para o ID de contacto Dynamics 365.
+1. Mapear o campo de ID de Contacto na entidade Cliente para o ID de Contacto do Dynamics 365.
 
 1. Selecione **Guardar** para concluir a ligação. 
 

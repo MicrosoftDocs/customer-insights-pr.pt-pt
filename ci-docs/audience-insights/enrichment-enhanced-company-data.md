@@ -1,7 +1,7 @@
 ---
 title: Melhoramento de dados da empresa
 description: Melhore e normalize os dados da empresa com os modelos da Microsoft.
-ms.date: 11/15/2021
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
-ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
+ms.openlocfilehash: 616efe723313a6fbec7f1c7219c236a8f0aab3b2
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "7813932"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927596"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Melhoramento de perfis da empresa com dados melhorados da empresa
 
@@ -83,6 +83,16 @@ Para iniciar o processo de enriquecimento, selecione **Executar** na barra de co
 Após o processo de enriquecimento concluído, pode rever os dados de perfis de clientes recentemente enriquecidos nos **Meus enriquecimentos**. Além disso, encontrará a hora da última atualização e o número de perfis enriquecidos.
 
 Pode aceder a uma visão detalhada de cada perfil enriquecido selecionando **Ver dados enriquecidos**.
+
+### <a name="overview-card"></a>Cartão de descrição geral
+
+O cartão de descrição geral mostra detalhes sobre a cobertura do enriquecimento. 
+
+* **Clientes processados e alterados**: o número de perfis de clientes que foram enriquecidos com sucesso.
+
+* **Clientes processados e não alterados**: o número de perfis de clientes que foram reconhecidos, mas não alterados. Normalmente, acontece quando os dados de entrada são válidos e não podem ser melhorados pelo enriquecimento.
+
+* **Clientes não processados e não alterados**: o número de perfis que não foram reconhecidos. Normalmente, para dados de entrada que são inválidos ou não suportados pelo enriquecimento.
 
 ## <a name="next-steps"></a>Passos seguintes
 

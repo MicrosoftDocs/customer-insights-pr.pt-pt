@@ -1,5 +1,5 @@
 ---
-title: Ingerir dados através de um conector do Power Query (Vídeo)
+title: Ingerir dados através de um conector do Power Query (contém vídeo)
 description: Conectores para origens de dados com base no Power Query.
 ms.date: 12/06/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 38c447d80a25feca087ca9f110278b8401423018
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: aae49be4364676ecc7a307e60eeca13859f1662a
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903854"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934992"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Ligue-se a uma origem de dados do Power Query
 

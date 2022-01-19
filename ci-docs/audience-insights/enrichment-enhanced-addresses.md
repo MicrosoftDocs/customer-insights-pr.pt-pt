@@ -1,7 +1,7 @@
 ---
-title: Melhoramento de endereços (Vídeo)
+title: Melhoramento de endereços (contém vídeo)
 description: Enriqueça e normalize a informação de endereço dos perfis de cliente com os modelos da Microsoft.
-ms.date: 07/25/2021
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 2158d80aa088c5bf8589fb7d23586496e2d8b855
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903964"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934937"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enriquecimento de perfis de clientes com endereços melhorados
 
@@ -101,6 +101,16 @@ Para iniciar o processo de enriquecimento, selecione **Executar** na barra de co
 Após o processo de enriquecimento concluído, pode rever os dados de perfis de clientes recentemente enriquecidos nos **Meus enriquecimentos**. Além disso, encontrará a hora da última atualização e o número de perfis enriquecidos.
 
 Pode aceder a uma visão detalhada de cada perfil enriquecido selecionando **Ver dados enriquecidos**.
+
+### <a name="overview-card"></a>Cartão de descrição geral
+
+O cartão de descrição geral mostra detalhes sobre a cobertura do enriquecimento. 
+
+* **Clientes processados e alterados**: o número de perfis de clientes que foram enriquecidos com sucesso.
+
+* **Clientes processados e não alterados**: o número de perfis de clientes que foram reconhecidos, mas não alterados. Normalmente, acontece quando os dados de entrada são válidos e não podem ser melhorados pelo enriquecimento.
+
+* **Clientes não processados e não alterados**: o número de perfis que não foram reconhecidos. Normalmente, para dados de entrada que são inválidos ou não suportados pelo enriquecimento.
 
 ## <a name="next-steps"></a>Passos seguintes
 

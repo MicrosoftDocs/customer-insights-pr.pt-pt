@@ -1,21 +1,20 @@
 ---
 title: Descrição geral sobre cenários de predição suportados
 description: Cenários de predição e opções abrangidas pela aplicação Dynamics 365 Customer Insights.
-ms.date: 09/06/2021
+ms.date: 12/21/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: get-started
+ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.custom: intro-internal
-ms.openlocfilehash: 63e22bf9a457ea43c65132643681cffb295ae7e5
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 5972d5b191ded7db14e2ebe9a4a26570a8ea60ba
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673976"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7978027"
 ---
 # <a name="predictions-overview"></a>Descrição geral das predições
 
@@ -31,6 +30,7 @@ A maneira mais fácil de começar com a previsão de dados são os modelos prede
 - [Recomendação do produto](predict-product-recommendation.md): sugere conjuntos de recomendações preditivas do produto com base no comportamento de compra e clientes com padrões de compra semelhantes.
 - [Abandono de subscrições](predict-subscription-churn.md): prevê se um cliente está em risco por ter deixado de utilizar os produtos ou serviços de subscrição da sua empresa.
 - [Abandono transacional](predict-transactional-churn.md): prevê se um cliente deixará de comprar os seus produtos ou serviços num determinado período de tempo.
+- [Análise de sentimentos](sentiment-analysis.md): analise o sentimento do feedback de clientes e identifique aspetos de negócio que são frequentemente mencionados.
 
 # <a name="business-accounts-b-to-b"></a>[Contas empresariais (B2B)](#tab/b2b)
 
