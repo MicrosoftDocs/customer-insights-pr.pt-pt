@@ -1,7 +1,7 @@
 ---
 title: Ligue os dados Common Data Model a uma conta Azure Data Lake
 description: Trabalhe com dados do Common Data Model utilizando Azure Data Lake Storage.
-ms.date: 12/06/2021
+ms.date: 01/25/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,13 +9,8 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: HT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900211"
 ---
+
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Ligar a uma pasta do Common Data Model com uma conta Azure Data Lake
 
 Este artigo fornece informações sobre como ingerir dados a partir de uma pasta Common Data Model utilizando a sua conta Gen2 Azure Data Lake Storage.
@@ -26,7 +21,9 @@ Este artigo fornece informações sobre como ingerir dados a partir de uma pasta
 
 - A ingestão de dados suporta exclusivamente as contas de armazenamento do Azure Data Lake *Gen2*. Não pode usar as contas de armazenamento do Azure Data Lake Gen1 para ingerir dados.
 
-- Para autenticar com um principal de serviço da Azure, certifique-se de que está configurado no seu inquilino. Para obter mais informações, consulte [ligar informações de audiência a uma conta Gen2 do Azure Data Lake Storage com um principal de serviço Azure](connect-service-principal.md).
+- A conta de armazenamento do Azure Data Lake tem de ter o [espaço de nomes hierárquico ativado](/azure/storage/blobs/data-lake-storage-namespace).
+
+- Para autenticar com um principal de serviço do Azure, certifique-se de que está configurado no seu inquilino. Para obter mais informações, consulte [ligar informações de audiência a uma conta Gen2 do Azure Data Lake Storage com um principal de serviço Azure](connect-service-principal.md).
 
 - O Azure Data Lake a que se quer conectar e do qual pretende ingerir dados tem de ser na mesma região do Azure que o ambiente Dynamics 365 Customer Insights. As ligações a uma pasta Common Data Model a partir de um data lake numa região do Azure diferente não são suportadas. Para conhecer a região do Azure do ambiente, vá a **Admin** > **Sistema** > **Sobre** informações da audiência.
 

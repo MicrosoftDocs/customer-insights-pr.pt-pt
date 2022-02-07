@@ -1,7 +1,7 @@
 ---
 title: Fazer corresponder entidades para unificação de dados
 description: Fazer corresponder entidades para criar perfis unificados de clientes.
-ms.date: 11/24/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-match
-ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
-ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
-ms.translationtype: HT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "7863825"
+  - ci-match
 ---
+
 # <a name="match-entities"></a>Fazer corresponder entidades
 
 A fase de correspondência especifica como combinar os seus conjuntos de dados num conjunto de dados de perfil do cliente unificado. Depois de concluir o [passo de mapeamento](map-entities.md) no processo de unificação de dados, está pronto para corresponder as suas entidades. A fase de correspondência exige pelo menos duas entidades correspondidas.
@@ -35,7 +30,7 @@ Cada correspondência unifica duas ou mais entidades numa única entidade consol
 
 :::image type="content" source="media/match-page.png" alt-text="Captura de ecrã da página Correspondência na área Unificar do processo de unificação de dados.":::
   
-A entidade principal *eCommerce:eCommerceContacts* é correpondida com a entidade seguinte *LoyaltyScheme:loyCustomers*. O conjunto de dados que resulta do primeiro passo de correspondência é combinado com a seguinte entidade se tiver mais de duas entidades.
+A entidade principal *eCommerce:eCommerceContacts* é correpondida com a entidade seguinte *LoyaltyScheme:loyCustomers*. O conjunto de dados que resulta do primeiro passo de correspondência é correspondido com a seguinte entidade se tiver mais do que duas entidades.
 
 > [!IMPORTANT]
 > A entidade que escolher como entidade principal servirá como base para o seu conjunto de dados de perfis unificados. As entidades adicionais selecionadas durante a fase de correspondência serão adicionadas a esta entidade. Isto não significa que a entidade unificada incluirá *todos* os dados incluídos nesta entidade.
@@ -130,17 +125,21 @@ A especificação das regras de duplicação não é obrigatória. Se tais regra
 
 1. Aceda a **Dados** > **Unificar** > **Corresponder**.
 
-1. Na secção **Duplicados fundidos**, selecione **Definir entidades**. Caso já estejam criadas regras de eliminação de duplicados, selecione **Editar**.
+1. Na secção **Detalhes de registos com eliminação de duplicados**, selecione **Definir entidades**. Caso já estejam criadas regras de eliminação de duplicados, selecione **Editar**.
 
 1. No painel **Preferências de intercalação**, escolha as entidades em que pretende realizar a eliminação de duplicados.
 
-1. Especifique como combinar os registos duplicados e escolha uma das três opções:
-   - **Mais preenchido**: identifica o registo com os campos de atributos mais povoados como registo vencedor. É a opção de intercalação predefinida.
-   - **Mais recentes**: Identifica o registo vencedor com base no mais recente. Requer uma data ou um campo numérico para definir a atualidade.
-   - **Menos recente**: Identifica o registo vencedor com base no menos recente. Requer uma data ou um campo numérico para definir a atualidade.
+   1. Especifique como combinar os registos duplicados e escolha uma das três opções:
+      - **Mais preenchido**: identifica o registo com os campos de atributos mais povoados como registo vencedor. É a opção de intercalação predefinida.
+      - **Mais recentes**: Identifica o registo vencedor com base no mais recente. Requer uma data ou um campo numérico para definir a atualidade.
+      - **Menos recente**: Identifica o registo vencedor com base no menos recente. Requer uma data ou um campo numérico para definir a atualidade.
+
+   1. Opcionalmente, selecione **Avançadas** para definir regras de eliminação de duplicados em atributos individuais de uma entidade. Por exemplo, pode optar por manter o e-mail mais recente e o endereço mais completo de diferentes registos. Expanda a entidade para ver todos os seus atributos e definir que opção utilizar para atributos individuais. Se escolher uma opção baseada em recência, também precisa de especificar um campo de data/hora que defina a recência. 
  
-   > [!div class="mx-imgBorder"]
-   > ![Regras de duplicação – passo 1.](media/match-selfconflation.png "Regras de duplicação etapa 1")
+      > [!div class="mx-imgBorder"]
+      > ![Regras de duplicação – passo 1.](media/match-selfconflation.png "Regras de duplicação etapa 1")
+
+   1. Selecione **Concluído** para aplicar as suas preferências de união para a eliminação de duplicados.
  
 1. Assim que as entidades forem selecionadas e a sua preferência de intercalação for definida, selecione **Adicionar regra** para definir as regras de eliminação de duplicados a nível da entidade.
    - **Selecionar campo** apresenta todos os campos disponíveis dessa entidade. Escolha o campo que pretende verificar se existem duplicados. Escolha os campos que sejam provavelmente únicos para cada cliente. Por exemplo, um endereço de e-mail ou a combinação de nome, cidade e número de telefone.
@@ -158,7 +157,7 @@ A especificação das regras de duplicação não é obrigatória. Se tais regra
 
 1. As regras de correspondência personalizadas definidas substituem as regras de eliminação de duplicados. Se uma regra de duplicação identificar registos correspondentes, e uma regra de correspondência personalizada for definida para nunca corresponder a esses registos, então estes dois registos não terão correspondência.
 
-1. Após [a execução do processo de correspondência](#run-the-match-process), irá ver as estatísticas de eliminação de duplicados nos mosaicos das principais métricas.
+1. Depois de [executar o processo de correspondência](#run-the-match-process), verá as estatísticas de eliminação de duplicados nos mosaicos de métricas principais.
 
 ### <a name="deduplication-output-as-an-entity"></a>Saída de eliminação de duplicados como uma entidade
 
@@ -222,7 +221,23 @@ Pode reconfigurar e aperfeiçoar a maioria dos parâmetros de correspondência.
 
 - **Elimine uma regra** selecionando o símbolo **Eliminar**.
 
-## <a name="specify-custom-match-conditions"></a>Especificar condições de correspondência personalizadas
+## <a name="advanced-options"></a>Opções avançadas
+
+### <a name="add-exceptions-to-a-rule"></a>Adicionar exceções a uma regra
+
+Na maioria dos casos, a correspondência de entidades leva a perfis de utilizador exclusivos com dados consolidados. Para abordar dinamicamente casos raros de falsos positivos e falsos negativos, pode definir exceções para uma regra de correspondência. As exceções são aplicadas após o processamento das regras de correspondência e evitam a correspondência de todos os registos, as quais preenchem os critérios de exceção.
+
+Por exemplo, se a sua regra de correspondência combinar apelido, cidade e data de nascimento, o sistema identificaria gémeos com o mesmo apelido que vivem na mesma cidade que o mesmo perfil. Pode especificar uma exceção que não corresponda aos perfis se os nomes próprios nas entidades que combinar não forem os mesmos.
+
+1. Aceda a **Dados** > **Unificar** > **Corresponder** e selecione **Editar** na regra a que pretende adicionar condições.
+
+1. No painel **Editar regra**, selecione **Adicionar exceção**.
+
+1. Especifique os critérios de exceção. 
+
+1. Selecione **Concluído** para guardar a regra.
+
+### <a name="specify-custom-match-conditions"></a>Especificar condições de correspondência personalizadas
 
 Poderá especificar as condições que substituem a lógica de correspondência predefinida. Estão disponíveis quatro opções: 
 
@@ -241,7 +256,7 @@ Poderá especificar as condições que substituem a lógica de correspondência 
 
 1. Escolha a opção de correspondência personalizada a partir da lista pendente **Tipo personalizado** e selecione **Transferir modelo**. É necessário um modelo separado para cada opção de correspondência.
 
-1. É transferido um ficheiro de modelo. Abra-o e preencha os detalhes. O modelo contém campos para especificar a entidade e os valores de chave primária da entidade que serão utilizados na correspondência personalizada. Por exemplo, se pretender que a chave primária *12345* da entidade *Vendas* corresponda sempre à chave primária *34567* da entidade *Contacto*, preencha o modelo:
+1. Abra o ficheiro de modelo transferido e preencha os detalhes. O modelo contém campos para especificar a entidade e os valores de chave primária da entidade que serão utilizados na correspondência personalizada. Por exemplo, se pretender que a chave primária *12345* da entidade *Vendas* corresponda sempre à chave primária *34567* da entidade *Contacto*, preencha o modelo:
     - Entidade1: Vendas
     - Entity1Key: 12345
     - Entidade2: Contacto
@@ -268,7 +283,7 @@ Poderá especificar as condições que substituem a lógica de correspondência 
 
 1. Selecione **Executar** na página **Corresponder** para iniciar o processo de correspondência. As outras regras de correspondência especificadas são substituídas pela configuração de correspondência personalizada.
 
-### <a name="known-issues"></a>Problemas conhecidos
+#### <a name="known-issues"></a>Problemas conhecidos
 
 - A autoconjugação não mostra os dados normalizados nas entidades de eliminação de duplicados. No entanto, aplica a normalização internamente durante a eliminação de duplicados. Isto acontece por predefinição para todas as normalizações. 
 - Se a definição de tipo semântico for removida na fase **Mapear** quando uma regra de correspondência utiliza o Mapeamento de aliases ou Ignorar personalizado, a normalização não será aplicada. Só acontece se limpar o tipo semântico depois de configurar a normalização na regra de correspondência porque o tipo semântico será desconhecido.

@@ -1,7 +1,7 @@
 ---
 title: Funcionalidades novas e para breve
-description: Informações sobre as novas funcionalidades, melhoramentos e correções de erros.
-ms.date: 12/02/2021
+description: 'Informações sobre as novas funcionalidades, melhoramentos e correções de erros.'
+ms.date: 01/27/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,11 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
-ms.translationtype: HT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884276"
 ---
+
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>O que há de novo na capacidade de informações de audiência do Dynamics 365 Customer Insights
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 É com entusiasmo que anunciamos as nossas mais recentes atualizações! Este artigo resume as funcionalidades de pré-visualização públicas, melhorias gerais de disponibilidade e atualizações de funcionalidades. Para conhecer os planos de funcionalidades a longo prazo, consulte os [Planos de versão do Dynamics 365 e do Power Platform](/dynamics365/release-plans/).
 
@@ -26,6 +21,50 @@ Implementamos as atualizações numa base por região. Assim, certas regiões po
 
 > [!TIP]
 > Para enviar e votar em pedidos de funcionalidades e sugestões para produtos, vá para o [portal de ideias de aplicação do Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="december-2021-updates"></a>Atualizações de dezembro de 2021
+
+As atualizações em dezembro de 2021 incluem novas funcionalidades, atualizações de desempenho e correções de erros.
+
+### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Encaminhar o Customer Insights para o Azure Monitor
+
+O Customer Insights fornece uma integração direta com o Azure Monitor. Esta funcionalidade inclui eventos de auditoria e eventos operacionais. Os registos de recursos do Azure Monitor permitem monitorizar e enviar registos para o Armazenamento do Azure, o Azure Log Analytics ou transmiti-los para Hubs de Eventos do Azure.
+
+Para obter mais informações, consulte [Encaminhamento de registos no Dynamics 365 Customer Insights com o Azure Monitor (Pré-visualização)](diagnostics.md).
+
+### <a name="enrich-customer-profiles-with-engagement-data"></a>Enriquecer os perfis de clientes com dados de cativação
+
+Utilize os dados do Microsoft Office 365 para enriquecer os seus perfis de conta de cliente com informações sobre as interações através das aplicações do Office 365. Os dados de cativação são compostos por atividade de e-mail e reunião, que são agregados a nível da conta. Por exemplo, o número de e-mails de uma conta profissional ou o número de reuniões com a conta. Não são partilhados dados sobre utilizadores individuais. Este enriquecimento está disponível nas seguintes regiões: Reino Unido, Europa, América do Norte.
+
+Para obter mais informações, consulte [Enriquecer os perfis de clientes com dados de cativação (pré-visualização)](enrichment-office.md)
+
+### <a name="advanced-data-unification-features"></a>Funcionalidades avançadas de unificação de dados
+
+#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Permitir políticas de resolução de conflitos ao nível de atributos individuais
+
+Ao eliminar os duplicados de registos de clientes dentro de uma entidade, pode não querer ter de escolher um registo completo como vencedor. Permitimos agora unir os melhores campos de vários registos com base em regras para cada atributo. Por exemplo, pode optar por manter o e-mail mais recente e o endereço mais completo de diferentes registos. 
+
+Pode agora definir regras de união separadas para atributos individuais, ao mesmo tempo que elimina duplicados e une registos dentro de uma única entidade. Anteriormente, apenas lhe permitíamos selecionar uma única regra de união (mantendo registos com base na totalidade dos dados de recência) e essa regra era aplicada ao nível do registo a todos os atributos. Isso não é o ideal quando alguns dos dados que pretende guardar são encontrados no registo A, e outros bons dados são encontrados no registo B.
+
+Para mais informações, consulte [Definir a duplicação numa entidade correspondente](match-entities.md#define-deduplication-on-a-match-entity).
+
+#### <a name="custom-rules-for-matching"></a>Regras personalizadas para correspondência
+
+Há alturas em que é necessário especificar uma exceção às regras gerais para NÃO corresponderem registos. Isto pode acontecer quando vários indivíduos partilham informações suficientes para que o sistema os combinasse como um único indivíduo. Por exemplo, gémeos com o mesmo apelido, que vivem na mesma cidade e partilham a data de nascimento.
+
+As exceções garantem que a unificação incorreta dos dados pode ser abordada nas regras de unificação. Pode adicionar várias exceções a uma regra.
+
+Para obter mais informações, consulte [Adicionar exceções a uma regra](match-entities.md#add-exceptions-to-a-rule).
+
+#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Fornecer políticas adicionais de resolução de conflitos e permitir o agrupamento de atributos
+
+Esta funcionalidade permite-lhe tratar um grupo de campos como uma única unidade. Por exemplo, quando os nossos registos contiverem os campos Endereço1, Endereço2, Cidade, Estado e Código postal. Provavelmente não queremos unir Endereço2 de um registo diferente, pensando que tornaria os nossos dados mais completos.
+
+Agora pode combinar um grupo de campos relacionados e aplicar uma única política de união ao grupo. 
+
+Para mais informações, consulte [Combinar um grupo de campos](merge-entities.md#combine-a-group-of-fields).
+
 
 ## <a name="november-2021-updates"></a>Atualizações de novembro de 2021
 

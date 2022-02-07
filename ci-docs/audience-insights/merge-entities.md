@@ -1,7 +1,7 @@
 ---
 title: Fundir entidades na unificação de dados
 description: Fundir entidades para criar perfis unificados de clientes.
-ms.date: 11/01/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-merge
-ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732786"
+  - ci-merge
 ---
+
 # <a name="merge-entities"></a>Unir entidades
 
 A fase de intercalação é a última fase no processo de unificação de dados. Tem como objetivo reconciliar os dados em conflito. Os exemplos de dados em conflito poderão incluir um nome de cliente que se encontra em dois dos seus conjuntos de dados, mas que apresenta pequenas diferenças ("Grant Marshall" versus "Grant Marshal"), ou um número de telefone com que difere no formato (617-803-091X versus 617803091X). A intercalação destes pontos de dados em conflito é feita numa base atributo a atributo.
@@ -99,11 +94,13 @@ Na página **Unir**, selecione **Campos excluídos** para ver a lista de todos o
 
 1. Selecione **Guardar** e **Executar** para processar as alterações. 
 
-## <a name="manually-combine-fields"></a>Combinar campos manualmente
+## <a name="combine-fields-manually"></a>Combinar campos manualmente
 
-Especifique manualmente um atributo unido. 
+Especifique manualmente um atributo unido.
 
-1. Na página **Unir**, selecione **Combinar campos**.
+1. Na página **Unir**, selecione **Combinar**.
+
+1. Escolha a opção **Campos**.
 
 1. Especifique a política vencedora de união no menu pendente **Combinar campos por**.
 
@@ -114,6 +111,26 @@ Especifique manualmente um atributo unido.
 1. Selecione **Concluído** para aplicar as alterações.
 
 1. Selecione **Guardar** e **Executar** para processar as alterações. 
+
+## <a name="combine-a-group-of-fields"></a>Combinar um grupo de campos
+
+Trate um grupo de campos como uma única unidade. Por exemplo, quando os nossos registos contiverem os campos Endereço1, Endereço2, Cidade, Estado e Código postal. Provavelmente não queremos unir Endereço2 de um registo diferente, pensando que tornaria os nossos dados mais completos
+
+1. Na página **Unir**, selecione **Combinar**.
+
+1. Escolha a opção **Grupo de campos**.
+
+1. Especifique a política de unir vencedor no menu pendente **Classificar grupos por**.
+
+1. Selecione **Adicionar** e escolha se pretende adicionar mais campos ou grupos adicionais aos campos.
+
+1. Forneça um **Nome** e um **Nome de saída** para cada campo combinado.
+
+1. Indique um **Nome** para o grupo de campos. 
+
+1. Selecione **Concluído** para aplicar as alterações.
+
+1. Selecione **Guardar** e **Executar** para processar as alterações.
 
 ## <a name="change-the-order-of-fields"></a>Alterar a ordem dos campos
 

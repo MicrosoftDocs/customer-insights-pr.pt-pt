@@ -1,5 +1,5 @@
 ---
-title: Análise semântica para feedback do cliente
+title: Análise de sentimentos para feedback do cliente
 description: Aprenda a utilizar um modelo de análise de sentimentos no feedback do cliente no Dynamics 365 Customer Insights.
 ms.date: 12/23/2021
 ms.service: customer-insights
@@ -9,13 +9,8 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 05e530a1bc96c5fd9c7a3bc0197563d8fe330387
-ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
-ms.translationtype: HT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 01/10/2022
-ms.locfileid: "7951088"
 ---
+
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analisar sentimentos no feedback do cliente (Pré-visualização)
 
 Nos dias de hoje, os clientes esperam produtos, serviços e experiências de alta qualidade. Especialmente, clientes que partilham o seu feedback. É muito desafiante para as organizações analisarem um volume crescente de dados sem baixarem a precisão e sem um custo de mão-de-obra mais elevado. O Dynamics 365 Customer Insights oferece um modelo de análise de sentimentos para feedback do cliente que permite às organizações analisar os seus dados com mais precisão e a um custo mais baixo.
@@ -38,7 +33,7 @@ Para garantir que pode confiar nos resultados dos modelos, fornecemos informaç�
 
 Utilizamos dois **Modelos de Processamento de Linguagem Natural (NLP)**: o primeiro atribui a cada comentário de feedback uma classificação de sentimento. O segundo modelo associa cada comentário a todos os aspetos de negócio aplicáveis. Os modelos são treinados em dados públicos de origens dos setores de redes sociais, retalho, restauração, produtos de consumo e automóvel.    
   
-- Os aspetos de negócio predefinidos para o modelo associado aos dados de feedback incluem:
+Os aspetos de negócio predefinidos para o modelo associado aos dados de feedback incluem:
 -   Gestão de contas
 -   Finalização e pagamento
 -   Suporte ao cliente
