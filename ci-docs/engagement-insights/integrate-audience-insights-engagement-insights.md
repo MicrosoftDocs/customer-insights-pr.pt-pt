@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: db38778c0da862e119f9b374e07c82ead0d3a4f2
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 6aadd6b5018f63362f86c0e3e3ce085e94c47391
+ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645596"
+ms.lasthandoff: 02/12/2022
+ms.locfileid: "8116028"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Criar uma ligação entre as informações de audiência e as informações de cativação
 
@@ -25,7 +25,7 @@ Utilize perfis e segmentos unificados a partir de informações de audiência pa
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Os perfis de informações de audiência têm de ser armazenados numa conta Azure Data Lake Storage que possui ou num data lake gerido pelo [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). 
+- Os perfis de informações de audiência têm de ser armazenados numa conta Azure Data Lake Storage que possui ou num data lake gerido pelo [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). 
 - O seu ambiente de informações de audiência deve ter um ambiente do Dataverse associado. E se esse ambiente também estiver a utilizar o Dataverse para armazenamento de dados, certifique-se de que marca a opção **Ativar a partilha de dados** em informações de audiência. Para obter mais informações, consulte [Criar e configurar um ambiente nas informações de audiência](../audience-insights/create-environment.md).
 - Precisa de permissões administrador para ambos os ambientes de informações de cativação e de informações de audiência.
 - Os ambientes ligados têm de estar na mesma região geográfica.

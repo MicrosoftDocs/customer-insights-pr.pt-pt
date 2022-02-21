@@ -1,7 +1,7 @@
 ---
 title: Funcionalidades novas e para breve
-description: 'Informações sobre as novas funcionalidades, melhoramentos e correções de erros.'
-ms.date: 01/27/2022
+description: Informações sobre as novas funcionalidades, melhoramentos e correções de erros.
+ms.date: 03/02/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,8 +9,13 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
+ms.openlocfilehash: 0e25ed4e4e25b130fda410d4ba1c78caded7f0f9
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088299"
 ---
-
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>O que há de novo na capacidade de informações de audiência do Dynamics 365 Customer Insights
 
 
@@ -21,6 +26,17 @@ Implementamos as atualizações numa base por região. Assim, certas regiões po
 
 > [!TIP]
 > Para enviar e votar em pedidos de funcionalidades e sugestões para produtos, vá para o [portal de ideias de aplicação do Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="january-2022-updates"></a>Atualizações de janeiro de 2022
+
+As atualizações em janeiro de 2022 incluem novas funcionalidades, atualizações de desempenho e correções de erros.
+
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Análise de sentimentos do feedback do seu cliente
+
+O Customer Insights fornece uma nova funcionalidade com tecnologia de IA para sintetizar o sentimento do cliente e identificar aspetos de negócio específicos como oportunidades para melhorias direcionadas. Ao analisar o feedback escrito dos seus clientes, pode obter informações precisas a baixo custo. A Análise de sentimentos com tecnologia de modelos de Processamento de Linguagem Natural (NLP) que geram duas informações derivadas para cada ID do cliente. Uma classificação de sentimentos (de –5 a 5) e uma lista de aspetos comerciais aplicáveis. 
+
+Para obter mais informações, consulte [Analisar sentimentos em feedback de clientes (Pré-visualização)](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>Atualizações de dezembro de 2021
@@ -37,7 +53,7 @@ Para obter mais informações, consulte [Encaminhamento de registos no Dynamics 
 
 Utilize os dados do Microsoft Office 365 para enriquecer os seus perfis de conta de cliente com informações sobre as interações através das aplicações do Office 365. Os dados de cativação são compostos por atividade de e-mail e reunião, que são agregados a nível da conta. Por exemplo, o número de e-mails de uma conta profissional ou o número de reuniões com a conta. Não são partilhados dados sobre utilizadores individuais. Este enriquecimento está disponível nas seguintes regiões: Reino Unido, Europa, América do Norte.
 
-Para obter mais informações, consulte [Enriquecer os perfis de clientes com dados de cativação (pré-visualização)](enrichment-office.md)
+Para obter mais informações, consulte [Enriquecer os perfis de clientes com dados de cativação](enrichment-office.md).
 
 ### <a name="advanced-data-unification-features"></a>Funcionalidades avançadas de unificação de dados
 
