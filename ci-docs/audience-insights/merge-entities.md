@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-merge
+- ci-merge
+ms.openlocfilehash: eb08ab38d23bf22a17896b63c93e6821431b002a
+ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.translationtype: HT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "8046614"
 ---
-
 # <a name="merge-entities"></a>Unir entidades
 
 A fase de intercalação é a última fase no processo de unificação de dados. Tem como objetivo reconciliar os dados em conflito. Os exemplos de dados em conflito poderão incluir um nome de cliente que se encontra em dois dos seus conjuntos de dados, mas que apresenta pequenas diferenças ("Grant Marshall" versus "Grant Marshal"), ou um número de telefone com que difere no formato (617-803-091X versus 617803091X). A intercalação destes pontos de dados em conflito é feita numa base atributo a atributo.

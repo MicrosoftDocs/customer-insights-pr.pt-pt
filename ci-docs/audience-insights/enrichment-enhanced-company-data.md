@@ -9,8 +9,13 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
+ms.openlocfilehash: 693e2f410a77cbf2e87ff0132ce963aab7e8e3e4
+ms.sourcegitcommit: 4c9db6c124d7244e7e8bb2f8bfdc697523781c31
+ms.translationtype: HT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "8010943"
 ---
-
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Melhoramento de perfis da empresa com dados melhorados da empresa
 
 Utilize os modelos da Microsoft e compile os dados da empresa para corrigir, suplementar e normalizar os perfis da empresa. Utilizaremos o [formato do Common Data Model](/common-data-model/schema/core/applicationcommon/account) para uma melhor precisão e informações.
