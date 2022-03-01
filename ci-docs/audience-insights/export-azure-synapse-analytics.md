@@ -1,7 +1,7 @@
 ---
 title: Exportar dados do Customer Insights para a Análise do Azure Synapse
 description: Aprenda a configurar a ligação e exportar para a Análise do Azure Synapse.
-ms.date: 01/05/2022
+ms.date: 04/12/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 6f630b8fb03bf615ada6d40fe27a91975d0c856e
-ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
+ms.openlocfilehash: 822082d661863e737ea3d3a749a6c878db766967
+ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/10/2022
-ms.locfileid: "7951056"
+ms.lasthandoff: 05/04/2021
+ms.locfileid: "5977391"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportar dados para a Análise do Azure Synapse (Pré-visualização)
 
@@ -49,8 +49,6 @@ No Azure:
 
 ### <a name="configure-a-connection"></a>Configurar uma ligação
 
-Para criar uma ligação, o principal do serviço e a conta de utilizador no Customer Insights precisam de permissões de **Leitor** no *grupo de recursos* onde está localizada o área de trabalho do Synapse Analytics. Além disso, o principal de serviço e o utilizador na área de trabalho do Synapse Analytics precisam de permissões de **Administrador do Synapse**. 
-
 1. Aceda a **Admin** > **Ligações**.
 
 1. Selecione **Adicionar ligação** e escolha a **Análise do Azure Synapse** para selecionar **Configurar** no mosaico **Análise do Azure Synapse** para configurar a ligação.
@@ -65,7 +63,7 @@ Para criar uma ligação, o principal do serviço e a conta de utilizador no Cus
 
 ### <a name="configure-an-export"></a>Configurar uma exportação
 
-Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Para configurar a exportação com uma ligação partilhada, são necessário, pelo menos, permissões de **Contribuidor** no Customer Insights. Para obter mais informações, consulte [Permissões necessárias para configurar uma exportação](export-destinations.md#set-up-a-new-export).
+Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Para obter mais informações, consulte [Permissões necessárias para configurar uma exportação](export-destinations.md#set-up-a-new-export).
 
 1. Aceda a **Dados** > **Exportações**.
 
@@ -76,16 +74,12 @@ Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Pa
 1. Forneça um **Nome a apresentar** reconhecível para a sua exportação e um **Nome de base de dados**.
 
 1. Selecione que entidades pretende exportar para a Análise do Azure Synapse.
-   > [!NOTE]
-   > As origens de dados baseadas numa [pasta Common Data Model](connect-common-data-model.md) não são suportadas.
 
-2. Selecione **Guardar**.
+1. Selecione **Guardar**.
 
 Guardar uma exportação não executa a exportação imediatamente.
 
 A exportação é executada com cada [atualização agendada](system.md#schedule-tab). Também pode [exportar dados a pedido](export-destinations.md#run-exports-on-demand).
-
-Para consultar dados que foram exportados para o Synapse Analytics, precisa de acesso de **Leitor de Armazenamento de Dados de Blob** ao armazenamento de destino na área de trabalho das exportações. 
 
 ### <a name="update-an-export"></a>Atualizar uma exportação
 

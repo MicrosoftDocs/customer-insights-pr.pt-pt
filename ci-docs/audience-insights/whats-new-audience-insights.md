@@ -1,7 +1,7 @@
 ---
 title: Funcionalidades novas e para breve
 description: Informações sobre as novas funcionalidades, melhoramentos e correções de erros.
-ms.date: 03/02/2022
+ms.date: 11/02/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,344 +9,438 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 0e25ed4e4e25b130fda410d4ba1c78caded7f0f9
-ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.openlocfilehash: 07b4bee0445f9cd7d53a37cd405af839feb07ae3
+ms.sourcegitcommit: 4004eadac7a65e50e0a409cb925958523c2b6348
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "8088299"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "4650018"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>O que há de novo na capacidade de informações de audiência do Dynamics 365 Customer Insights
 
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
+É com entusiasmo que anunciamos as nossas mais recentes atualizações! Este artigo resume as funcionalidades de pré-visualização públicas, melhorias gerais de disponibilidade e atualizações de funcionalidades. Para conhecer os planos de funcionalidades a longo prazo, consulte os [Planos de versão do Dynamics 365 e do Power Platform](https://docs.microsoft.com/dynamics365/release-plans/).
 
-É com entusiasmo que anunciamos as nossas mais recentes atualizações! Este artigo resume as funcionalidades de pré-visualização públicas, melhorias gerais de disponibilidade e atualizações de funcionalidades. Para conhecer os planos de funcionalidades a longo prazo, consulte os [Planos de versão do Dynamics 365 e do Power Platform](/dynamics365/release-plans/).
+Também pode ver o vídeo seguinte para saber mais sobre as capacidades planeadas para os últimos seis meses.
+
+> [!VIDEO https://www.youtube.com/embed/jQh-7pscH30]
 
 Implementamos as atualizações numa base por região. Assim, certas regiões podem ver características antes de outras. A menos que seja especificado de forma diferente, não precisa de tomar nenhuma ação e atualizaremos a aplicação automaticamente sem tempo de inatividade.
 
 > [!TIP]
 > Para enviar e votar em pedidos de funcionalidades e sugestões para produtos, vá para o [portal de ideias de aplicação do Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="november-2020-updates"></a>Atualizações de novembro de 2020
 
-## <a name="january-2022-updates"></a>Atualizações de janeiro de 2022
+As atualizações em novembro de 2020 incluem várias características, atualizações de desempenho, e correções de erros.
 
-As atualizações em janeiro de 2022 incluem novas funcionalidades, atualizações de desempenho e correções de erros.
+### <a name="new-and-updated-features-in-november-2020"></a>Características novas e atualizadas em novembro de 2020
 
-### <a name="sentiment-analysis-of-your-customers-feedback"></a>Análise de sentimentos do feedback do seu cliente
+#### <a name="data-enrichment"></a>Melhoramento de dados
 
-O Customer Insights fornece uma nova funcionalidade com tecnologia de IA para sintetizar o sentimento do cliente e identificar aspetos de negócio específicos como oportunidades para melhorias direcionadas. Ao analisar o feedback escrito dos seus clientes, pode obter informações precisas a baixo custo. A Análise de sentimentos com tecnologia de modelos de Processamento de Linguagem Natural (NLP) que geram duas informações derivadas para cada ID do cliente. Uma classificação de sentimentos (de –5 a 5) e uma lista de aspetos comerciais aplicáveis. 
-
-Para obter mais informações, consulte [Analisar sentimentos em feedback de clientes (Pré-visualização)](sentiment-analysis.md).
-
-
-## <a name="december-2021-updates"></a>Atualizações de dezembro de 2021
-
-As atualizações em dezembro de 2021 incluem novas funcionalidades, atualizações de desempenho e correções de erros.
-
-### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Encaminhar o Customer Insights para o Azure Monitor
-
-O Customer Insights fornece uma integração direta com o Azure Monitor. Esta funcionalidade inclui eventos de auditoria e eventos operacionais. Os registos de recursos do Azure Monitor permitem monitorizar e enviar registos para o Armazenamento do Azure, o Azure Log Analytics ou transmiti-los para Hubs de Eventos do Azure.
-
-Para obter mais informações, consulte [Encaminhamento de registos no Dynamics 365 Customer Insights com o Azure Monitor (Pré-visualização)](diagnostics.md).
-
-### <a name="enrich-customer-profiles-with-engagement-data"></a>Enriquecer os perfis de clientes com dados de cativação
-
-Utilize os dados do Microsoft Office 365 para enriquecer os seus perfis de conta de cliente com informações sobre as interações através das aplicações do Office 365. Os dados de cativação são compostos por atividade de e-mail e reunião, que são agregados a nível da conta. Por exemplo, o número de e-mails de uma conta profissional ou o número de reuniões com a conta. Não são partilhados dados sobre utilizadores individuais. Este enriquecimento está disponível nas seguintes regiões: Reino Unido, Europa, América do Norte.
-
-Para obter mais informações, consulte [Enriquecer os perfis de clientes com dados de cativação](enrichment-office.md).
-
-### <a name="advanced-data-unification-features"></a>Funcionalidades avançadas de unificação de dados
-
-#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Permitir políticas de resolução de conflitos ao nível de atributos individuais
-
-Ao eliminar os duplicados de registos de clientes dentro de uma entidade, pode não querer ter de escolher um registo completo como vencedor. Permitimos agora unir os melhores campos de vários registos com base em regras para cada atributo. Por exemplo, pode optar por manter o e-mail mais recente e o endereço mais completo de diferentes registos. 
-
-Pode agora definir regras de união separadas para atributos individuais, ao mesmo tempo que elimina duplicados e une registos dentro de uma única entidade. Anteriormente, apenas lhe permitíamos selecionar uma única regra de união (mantendo registos com base na totalidade dos dados de recência) e essa regra era aplicada ao nível do registo a todos os atributos. Isso não é o ideal quando alguns dos dados que pretende guardar são encontrados no registo A, e outros bons dados são encontrados no registo B.
-
-Para mais informações, consulte [Definir a duplicação numa entidade correspondente](match-entities.md#define-deduplication-on-a-match-entity).
-
-#### <a name="custom-rules-for-matching"></a>Regras personalizadas para correspondência
-
-Há alturas em que é necessário especificar uma exceção às regras gerais para NÃO corresponderem registos. Isto pode acontecer quando vários indivíduos partilham informações suficientes para que o sistema os combinasse como um único indivíduo. Por exemplo, gémeos com o mesmo apelido, que vivem na mesma cidade e partilham a data de nascimento.
-
-As exceções garantem que a unificação incorreta dos dados pode ser abordada nas regras de unificação. Pode adicionar várias exceções a uma regra.
-
-Para obter mais informações, consulte [Adicionar exceções a uma regra](match-entities.md#add-exceptions-to-a-rule).
-
-#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Fornecer políticas adicionais de resolução de conflitos e permitir o agrupamento de atributos
-
-Esta funcionalidade permite-lhe tratar um grupo de campos como uma única unidade. Por exemplo, quando os nossos registos contiverem os campos Endereço1, Endereço2, Cidade, Estado e Código postal. Provavelmente não queremos unir Endereço2 de um registo diferente, pensando que tornaria os nossos dados mais completos.
-
-Agora pode combinar um grupo de campos relacionados e aplicar uma única política de união ao grupo. 
-
-Para mais informações, consulte [Combinar um grupo de campos](merge-entities.md#combine-a-group-of-fields).
-
-
-## <a name="november-2021-updates"></a>Atualizações de novembro de 2021
-
-As atualizações em novembro de 2021 incluem novas funcionalidades, atualizações de desempenho e correções de erros.
-
-### <a name="segment-membership-now-available-in-dataverse"></a>Associações a segmentos agora disponíveis no Dataverse
-
-As informações das associações a segmentos para perfis de cliente estão agora disponíveis no Dataverse a par das informações e dos perfis de cliente. As aplicações de ação e as aplicações condicionadas por modelo do Dynamics 365 podem utilizar estes detalhes de associação a segmentos de pesquisa de dados para um determinado cliente.
-
-### <a name="activities-support-contact-level-details-for-business-accounts"></a>As atividades suportam detalhes a nível do contacto para as contas empresariais
-
-Pode agora configurar, apresentar e filtrar as atividades para os contactos nas cronologias de atividade da sua conta profissional para melhor compreender que contactos da conta participaram em atividades específicas.
-
-## <a name="october-2021-updates"></a>Atualizações de outubro de 2021
-
-As atualizações em outubro de 2021 incluem novas funcionalidades, atualizações de desempenho e correções de erros.
-
-### <a name="b-to-b"></a>B2B
-
-A partir de outubro de 2021, pode trabalhar com contas empresariais e os seus contactos relacionados no Customer Insights. Antes, a aplicação era maioritariamente adaptada para consumidores individuais. Várias áreas de funcionalidade foram atualizadas para suportar cenários B2B em cima de um novo tipo de ambiente. Para obter uma descrição geral sobre as funcionalidades B2B suportadas, consulte [Trabalhar com contas empresariais em informações de audiência](work-with-business-accounts.md).
-
-As secções seguintes destacam algumas das áreas chave que foram adaptadas para suportar as contas empresariais e os consumidores individuais.
-
-#### <a name="export-segments-based-on-business-accounts"></a>Exportar segmentos com base em contas empresariais
-
-Todas as exportações de segmentos em informações de audiência estão disponíveis no contexto das contas empresariais. A maioria das exportações de segmentos requerem que a configuração adicional e [as informações de contacto projetadas](segment-builder.md#create-a-new-segment) nos segmentos subjacentes sejam válidas para contas empresariais. Para mais informações, consulte [Exportar segmentos](export-destinations.md#export-segments).
-
-#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Utilizar a exportação do LinkedIn Ads com contas empresariais
-
-A exportação do LinkedIn Ads está agora disponível para filtragem por contacto e empresa no contexto das contas empresariais. Ao selecionar a filtragem por empresa como o seu foco principal de exportação do LinkedIn, pode exportar segmentos incorporados em contas empresariais sem a necessidade de projetar informações de contacto. Para mais informações, consulte os documentos sobre a [exportação do LinkedIn Ads](export-linkedin-ads.md) e a diferença entre a [filtragem por contacto](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) e a [filtragem por empresa](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
-
-#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Criar medidas com base em contas empresariais e a sua hierarquia
-
-O construtor de medidas permite criar medidas em torno de contas empresariais e, opcionalmente, utilizar as informações da hierarquia. As informações de hierarquia são utilizadas para acumular um cálculo de medida numa conta e todas as suas subcontas relacionadas. Por exemplo, pode criar medidas como o total de receitas para cada grupo de contas empresariais identificadas pela sua hierarquia. Para mais informações, consulte [Definir e gerir medidas](measures.md).
-
-#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Criar segmentos com base em contas empresariais e a sua hierarquia
-
-O construtor de segmentos permite-lhe criar segmentos de contas empresariais que, opcionalmente, incluem informações de contacto para cada conta num segmento. Se tiver a hierarquia de contas configurada, pode utilizar informações da hierarquia de contas na criação de segmentos. Para obter mais informações, consulte [Criar um novo segmento](segment-builder.md#create-a-new-segment).
-
-#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Manter as suas contas empresariais com conhecimentos aprofundados sobre a sua tendência de abandono
-
-O modelo de predição de abandono de clientes suporta agora também as contas empresariais. Pode avaliar o risco de abandono não apenas para uma conta, mas para uma combinação de uma conta e uma categoria de produto ou serviço que lhe compram. Esta adição ajuda-o a perceber se uma conta tem mais probabilidade de parar de comprar de si em geral ou apenas para uma determinada categoria de bens ou serviços. Para ajudá-lo a utilizar este modelo de IA, também lista os motivos pelos quais uma conta será provavelmente objeto de abandono. Para obter mais informações, consulte [Predição de abandono de transações (pré-visualização)](predict-transactional-churn.md).
-
-#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Ver contactos de uma conta empresarial na vista Cliente
-
-Se as contas empresariais forem mapeadas para as contas relacionadas, a aplicação Customer Insights mostra estes contactos relacionados como parte da vista de detalhes do cliente. Para mais informações, consulte [Perfis de cliente](customer-profiles.md).
-
-
-## <a name="september-2021-updates"></a>Atualizações de setembro de 2021
-
-As atualizações em setembro de 2021 incluem novas funcionalidades, atualizações de desempenho e correções de erros.
-
-### <a name="activities"></a>Atividades
-
-- **Melhorias na linha cronológica da atividade** Ampliámos os filtros para a linha cronológica da atividade nos perfis de clientes. Além disso, pode utilizar o novo painel de filtro para filtrar por tipo de atividade e por data. As datas podem ser filtradas com diferentes condições. Para obter mais informações, consulte [Ver linhas cronológicas de atividades nos perfis de clientes](activities.md#view-activity-timelines-on-customer-profiles).
-
-### <a name="relationships"></a>Relações
-
-- **Suporte de relação de múltiplos saltos** Utilize relações de múltiplos saltos ao configurar atividades e definir relações entre entidades. As relações de múltiplos saltos utilizam uma entidade intermediária para ligar as duas entidades. Ao configurar uma atividade, pode utilizar uma relação de múltiplos saltos para ligar a sua entidade de atividade a uma entidade intermediária e, em seguida, a uma entidade do cliente. Pode combinar relações de múltiplos saltos com relações de múltiplos caminhos. Para obter mais informações, consulte [Relação de múltiplos saltos](relationships.md#multi-hop-relationship).
-
-- **Suporte de relação de múltiplos caminhos** Utilize relações de múltiplos caminhos ao configurar atividades e definir relações entre entidades. As relações de múltiplos caminhos relacionam uma entidade de origem com mais de uma entidade. Ao configurar uma atividade, pode utilizar uma relação de múltiplos caminhos para ligar a sua entidade de atividade a mais de uma entidade do cliente. Pode combinar relações de múltiplos caminhos com relações de múltiplos saltos. Para obter mais informações, consulte [Relação de múltiplos caminhos](relationships.md#multi-path-relationship).
-
-## <a name="august-2021-updates"></a>Atualizações de agosto de 2021
-
-As atualizações em julho e agosto de 2021 incluem uma nova funcionalidade, atualizações de desempenho e correções de erros.
-
-### <a name="extensibility"></a>Extensibilidade
-
-- **Exportar segmentos para Klaviyo** Alargámos os nossos [destinos de exportação para incluir o Klaviyo](export-klaviyo.md). Pode agora exportar segmentos para criar campanhas, efetuar marketing por e-mail e utilizar grupos de clientes específicos com o Klaviyo. 
-
-
-## <a name="june-2021-updates"></a>Atualizações de junho de 2021
-
-As atualizações em junho de 2021 incluem várias funcionalidades, atualizações de desempenho e correções de erros.
-
-### <a name="data-ingestion"></a>Ingestão de dados
-
-- **Atualizações ao progresso de unificação de dados melhoradas** Pode agora ver atualizações de estado dinâmicas e mais granulares e melhoradas nos passos do [processo de unificação de dados](data-unification.md). Esta funcionalidade permite-lhe acompanhar o progresso detalhado para compreender o fluxo do processo e tomar medidas se algum passo precisar de atenção.
-
-### <a name="extensibility"></a>Extensibilidade
-
-- **Exportar segmentos e outros dados para a Salesforce Marketing Cloud** Alargámos os nossos destinos de exportação para incluir a [Salesforce Marketing Cloud](export-salesforce.md). Agora pode exportar segmentos e outros tipos de dados para a Salesforce Marketing Cloud através de uma exportação SFTP com marca. A importação de dados pode ser totalmente automatizada no Salesforce e usada para criar campanhas de marketing mais eficazes.  
- 
-- **Exportar segmentos para ActiveCampaign** Alargámos os nossos destinos de exportação para incluir o [ActiveCampaign](export-active-campaign.md). Pode agora exportar segmentos para gerar campanhas, executar marketing por e-mail e trabalhar com grupos de clientes específicos no ActiveCampaign.
- 
-- **Exportar segmentos para Sendinblue** Alargámos os nossos destinos de exportação para incluir o [Sendinblue](export-sendinblue.md). Pode agora exportar segmentos para gerar campanhas, executar marketing por e-mail e trabalhar com grupos de clientes específicos com o Sendinblue.
- 
-### <a name="ux-updates"></a>Atualizações UX 
-
-- **Página Clientes e detalhes de perfil novos e melhorados** Voltámos a conceber a página Clientes e as páginas de detalhe de perfil para uma melhor experiência do utilizador e melhor desempenho. Estas alterações permitem-lhe ver, ordenar, pesquisar e filtrar clientes. Os filtros estão agora representados no URL para partilhar os resultados da pesquisa com outros utilizadores de forma totalmente integrada. Os resultados da pesquisa também podem ser guardados como um segmento.    
-  A página de detalhes para perfis de clientes agora agrupa dados em várias subsecções, tais como dados demográficos, IDs e outros atributos de perfil para uma melhor legibilidade. Outras secções na página de detalhes do perfil são agora mais interativas. Por exemplo, a secção de atividades permite agora filtrar e ordenar.
-
-
-## <a name="may-2021-updates"></a>Atualizações de maio de 2021
-
-As atualizações em maio de 2021 incluem várias atualizações de versão de funcionalidades e de desempenho, bem como correções de erros.
-
-### <a name="data-ingestion"></a>Ingestão de dados
-
-- **Ver ou modificar metadados ou definição de entidade ao anexar dados do seu Azure Data Lake Storage** Pode agora ver e editar metadados ou definição de entidade em informações de audiência ao anexar dados de uma pasta do Common Data Model no seu Azure Data Lake Storage. Esta capacidade fornece comentários, validação de modelos e verificação de erros em tempo real. Permite-lhe editar tanto o model.json como manifest.json de forma totalmente integrada.
-
-### <a name="extensibility"></a>Extensibilidade
-
-- **Exportações de segmentos, agenda personalizada e duplicação melhorados** Pode agora [ver todas as exportações para um segmento específico](export-destinations.md#view-exports-and-export-details) numa lista. Esta nova vista ajuda a gerir a forma como um segmento específico é usado e adaptar as exportações existentes ou criar novas.    
-  Pode [definir agendas de atualização personalizadas](export-destinations.md#schedule-and-run-exports) para exportações individuais ou várias exportações ao mesmo tempo. Até agora, todas as exportações eram executadas em todas as atualizações do sistema.    
-  Em vez de criar uma nova exportação do zero, pode começar com base numa existente para poupar algum tempo.
-
-- **Exportar segmentos para o Microsoft Advertising** Alargámos os nossos destinos de exportação para incluir o Microsoft Advertising. Crie audiências de Correspondências de Clientes no Microsoft Advertising com os seus dados de perfil de cliente unificados e utilize estas audiências para campanhas de publicidade. Para mais informações, consulte [Exportar segmentos para o Microsoft Advertising](export-microsoft-advertising.md).
-
-- **Exportar segmentos para o LinkedIn Ads** Alargámos os nossos destinos de exportação para incluir o LinkedIn Ads e permitir-lhe desbloquear o Direcionamento de Contactos, bem como o Direcionamento de Empresas através do LinkedIn ao exportar os seus dados de perfil de cliente unificado. Para mais informações, consulte [Exportar segmentos para o LinkedIn Ads](export-linkedin-ads.md).
-
-
-- **Exportar segmentos para o Omnisend** Alargámos os nossos destinos de exportação para incluir o Omnisend. Utilize os segmentos criados nas informações de audiência para gerar campanhas, fornecer marketing por e-mail e utilizar grupos de clientes específicos com o Omnisend. Para mais informações, consulte [Exportar segmentos para o Omnisend](export-omnisend.md)
-
-### <a name="predictions"></a>Predições
-
-- **Relatório de capacidade de utilização de Dados de Entrada** O relatório de capacidade de utilização de dados de entrada fornece uma vista consolidada dos erros e avisos que as suas predições fornecidas com o programa podem estar a gerar. Também apresenta recomendações sobre como melhorar o desempenho do modelo.    
-  O relatório está disponível depois de um modelo ter concluído o seu processo de preparação. É criado para cada modelo separadamente, independentemente de ter sido concluído com sucesso ou não.
-  Atualmente, esta funcionalidade está apenas disponível para o modelo Abandono de Transações. Para mais informações, consulte o [Relatório de capacidade de utilização de dados de entrada](manage-predictions.md#input-data-usability-report).
-
-### <a name="relationships"></a>Relações
-
-- **Visualizador de relações** A vista do visualizador de relações permite-lhe ver todas as relações existentes entre entidades e a respetiva cardinalidade. As relações estão agora organizadas em grupos: utilizador criado, sistema e relações herdadas. Também pode exportar uma vista como uma imagem. Para mais informações, consulte [Ver relações](relationships.md#view-relationships). 
-
-## <a name="april-2021-updates"></a>Atualizações de abril de 2021
-
-As atualizações em abril de 2021 incluem várias atualizações de versão de funcionalidades e de desempenho, bem como correções de erros.
-
-### <a name="data-unification"></a>Unificação de dados
- 
-- **Experiência de união melhorada para unificação de dados**    
+- **Apresente os seus próprios dados de melhoramento através da importação personalizada SFTP (Secure File Transfer Protocol)**
   
-   Dispomos agora de uma experiência de utilizador melhorada na configuração de união do processo de unificação de dados. As alterações incluem a ordenação intuitiva dos campos unidos e estatísticas detalhadas sobre os campos combinados e singleton.
+  A importação personalizada SFTP permite-lhe importar dados de melhoramento que não têm de passar pelo processo de unificação de dados. Mais informações sobre a importação personalizada SFTP.
 
-- **Reordenar entidades e configurar todos os registos de origem na entidade Cliente**  
-      
-   Pode agora reordenar e remover entidades de um plano de confluência existente no processo de unificação de dados. Dá flexibilidade para reordenar as entidades no processo de correspondência de acordo com as necessidades do negócio. Adicionalmente, ativamos a inclusão de todos os registos não correspondidos na entidade *Cliente* final, o que lhes permite definir a sua definição de conjunto de dados de perfil de cliente.
-
-### <a name="enrichments"></a>Melhoramentos
-
- - **Novo enriquecimento: endereços melhorados**    
-  
-   Estamos entusiasmados por introduzir um novo enriquecimento para melhorar endereços nos dados dos seus clientes. Os endereços nos seus dados podem não estar estruturados, estar incompletos ou incorretos. Esta funcionalidade utiliza os modelos da Microsoft para normalizar e enriquecer os seus endereços no formato do Common Data Model para uma melhor precisão e informações.
+  Para mais informações, consulte [Melhorar perfis de clientes com dados personalizados (pré-visualização)](enrichment-SFTP-custom-import.md).
  
-   Para mais informações, consulte [Enriquecimento de perfis de clientes com endereços melhorados](enrichment-enhanced-addresses.md).
+- **Melhorar os seus dados de clientes com os dados de localização da HERE Technologies**
 
-- **Experiência de configuração guiada para enriquecimentos**    
-  
-   Revisitámos a experiência de configuração para enriquecimentos com uma experiência simples e guiada. Tem agora um processo passo a passo claro para criar e editar enriquecimentos.
- 
-   Adicionalmente, separámos a configuração de ligações para enriquecimentos de terceiros para permitir que a mesma ligação seja usada por vários enriquecimentos. Apenas os administradores podem configurar novas ligações, mas as ligações criadas estão disponíveis tanto para administradores como para contribuidores.    
+  Com os serviços de melhoramento de dados da HERE Technologies, pode construir uma compreensão mais precisa da localização dos seus clientes com normalização de endereços, extração de latitude e longitude, e muito mais. Saiba mais sobre o melhoramento com a HERE Technologies.
 
-   Para mais informações, consulte [Descrição geral das ligações](connections.md).
-
-- **Múltiplos enriquecimentos do mesmo tipo**    
-  
-   Agora permitimos que os utilizadores criem e efetuem a gestão de vários enriquecimentos do mesmo tipo de enriquecimento. Por exemplo, agora pode criar dois enriquecimentos de endereços separados para enriquecer dois segmentos de cliente diferentes. Os limites aplicam-se ao número de enriquecimentos do mesmo tipo que podem ser criados e variam consoante o tipo de enriquecimento.
-  
-   Para mais informações, consulte [Enriquecimento para perfis de clientes](enrichment-hub.md).
-
-## <a name="march-2021-updates"></a>Atualizações de março de 2021
-
-As atualizações em março de 2021 incluem várias atualizações de versão de funcionalidades e de desempenho, bem como correções de erros.
-
-### <a name="activities"></a>Atividades
-
-- **Assistente de atividade e tipos semânticos**
-
-   Melhorámos e atualizámos a nossa experiência de mapeamento de atividades para orientar e simplificar a criação do mapeamento de atividades. Nesta nova experiência, os utilizadores obtêm uma experiência guiada para ajudar a completar cada passo do processo. No passo de mapeamento de atividades, além de escolher entre muitos tipos de atividade, o utilizador pode optar por mapear semanticamente dados para *Subscription* e/ou *SalesOrderLine* para esquemas de norma do setor, que podem ser usados para consumo a jusante.   
-
-   Para mais informações, veja [Atividades de cliente](activities.md).
-
-### <a name="data-ingestion"></a>Ingestão de dados
-
-- **Ligar a origens de dados no local utilizando fluxos de dados e gateways do Power Platform** Temos o prazer de anunciar a pré-visualização de fluxos de dados e conectividade no local do Power Platform utilizando gateways no Customer Insights com um ambiente Power Platform ou Dataverse associado. Quaisquer novas origens de dados criadas num ambiente do Customer Insights com um ambiente Dataverse associado irão assumir a predefinição dos fluxos de dados do Power Platform que trazem a conectividade de dados no local e um rico conjunto de conectores e capacidades de transformação.
-
-### <a name="extensibility"></a>Extensibilidade
-
-- **Exportações organizadas em ligações e exportações** Mudámos o nome da página **Exportar destinos** para **Ligações** e adicionámos uma página separada para **Exportações**. Como parte desta atualização, vamos transitar as exportações existentes para pares de uma ligação e uma exportação utilizando essa ligação. Os administradores têm agora mais clareza sobre os dados de saída na página **Ligações**. Todas as funções de utilizador têm acesso à página **Exportações**, mas apenas os administradores podem optar por permitir que os contribuidores editem exportações específicas com ligações partilhadas.     
-  Para mais informações, consulte [Descrição geral das ligações](connections.md) e [Descrição geral das exportações](export-destinations.md).
-
-- **Exportar segmentos para a Campaign Monitor** Alargámos os nossos destinos de exportação para incluir a Campaign Monitor. Agora, pode exportar segmentos do Customer Insights para listas da Campaign Monitor e utilizá-los como a linha de base para as suas campanhas de marketing.    
-   Para mais informações, consulte [Exportar para a Campaign Monitor](export-campaign-monitor.md).
-
-- **Exportar segmentos para a Constant Contact** Alargámos os nossos destinos de exportação para incluir a Constant Contact. Agora, pode exportar segmentos do Customer Insights para listas da Constant Contact e utilizá-los como a linha de base para as suas campanhas de marketing.   
-   Para mais informações, consulte [Exportar para a Constant Contact](export-constant-contact.md).
-
-- **Exportar segmentos para o RollWorks** Alargámos os nossos destinos de exportação para incluir o RollWorks. Agora pode exportar segmentos do Customer Insights para audiências da RollWorks e utilizá-los como linha de base para a sua publicidade B2B.    
-   Para mais informações, consulte [Exportar para o RollWorks](export-rollworks.md).
-
-- **Exportar segmentos para o Snapchat** Alargámos os nossos destinos de exportação para incluir o Snapchat. Agora, pode exportar segmentos do Customer Insights para audiências do Snapchat e utilizá-los como a linha de base para a sua publicidade.     
-   Para mais informações, consulte [Exportar para o Snapchat](export-snapchat.md).
-
-### <a name="predictions"></a>Predições
-
-- **Utilizar filtros de produtos em recomendações de produtos preditivas** Adicionámos a capacidade de utilização de filtros de produtos no nosso modelo de recomendação de produtos. Agora, pode criar um predição que utiliza apenas um subconjunto dos seus produtos.    
-   Para obter mais informações, consulte [Configurar filtros de produtos](predict-product-recommendation.md#configure-product-filters).
-
-- **Criar segmentos a partir de predições de modelos** Adicionámos uma forma rápida de criar segmentos utilizando os resultados de um modelo de predição. A partir da página de resultados do modelo, pode facilmente criar um novo segmento selecionando a nova opção **Criar segmento**.    
-  Para obter mais informações, consulte [Criar um segmento baseado num modelo de predição](prediction-based-segment.md).
-
-- **Explicações para recomendações de produtos** Adicionámos informações que explicam os fatores principais aprendidos pelo modelo de IA para gerar recomendações de produtos e até que ponto esses fatores contribuem para as recomendações de produtos. Estas informações são adicionadas ao ecrã de resultados do modelo.    
-   Para obter mais informações, consulte [Rever um estado de predição e resultados](predict-product-recommendation.md#review-a-prediction-status-and-results).
-
-## <a name="february-2021-updates"></a>Atualizações de fevereiro de 2021
-
-As atualizações em fevereiro de 2021 incluem várias atualizações de versão de funcionalidades, de desempenho e correções de erros.
-
-#### <a name="extensibility"></a>Extensibilidade
-
-- **Exportar segmentos para o AdRoll**
-
-  Expandimos os nossos destinos de exportação para incluir o AdRoll. Agora pode exportar segmentos do Customer Insights para audiências do AdRoll e usá-los como base para a sua publicidade. Para mais informações, consulte [Conector para AdRoll](export-adroll.md).
-
-#### <a name="segments"></a>Segmentos
- 
-- **Duplicar um segmento**
-  
-  Para criar um novo segmento baseado num existente, pode agora duplicar um segmento e editar o segmento duplicado para refiná-lo ainda mais. 
-
-- **Adicionar atributos adicionais a um segmento**
-
-  Agora pode incluir atributos na saída do segmento, mesmo que estes atributos não façam parte do perfil do cliente. Por exemplo, inclua ID de subscrição num segmento, mesmo que faça parte da entidade de subscrição que tem uma relação M:1 com a entidade do cliente. Desde que o atributo pertença a uma entidade relacionada com a entidade cliente, pode agora incluir estes atributos.  
-
-#### <a name="predictions"></a>Predições
-
-- **Criar recomendações de produtos preditivas**
-
-  Compreender o que os clientes estão interessados em comprar é um dos primeiros passos necessários para melhorar as receitas do negócio e conquistar a fidelização do cliente através da personalização e cativação. Fornecer recomendações para produtos que não estejam alinhados com os interesses do seu cliente pode criar uma sensação de afastamento entre o cliente e o seu negócio e, por fim, limitar a receita e experiência potencial global para um cliente. 
-
-  Utilizando os seus próprios dados, pode agora criar previsões para que produtos os seus clientes poderão adquirir no futuro. Para mais informações, consulte [Predição de recomendação de produtos](predict-product-recommendation.md).
-
-#### <a name="system-administration"></a>Administração de sistema
-
-- **Copiar ambiente suporta mais tipos de origens de dados**
-
-  Os administradores podem copiar as configurações de ambientes para um novo ambiente na mesma organização. Esta funcionalidade alarga a funcionalidade do ambiente de cópia para casos em que são utilizadas origens de dados baseadas num data lake gerido do Microsoft Dataverse ou numa pasta do Common Data Model.
-
-## <a name="january-2021-updates"></a>Atualizações de janeiro de 2021
-
-As atualizações em janeiro de 2021 incluem várias atualizações de versão de funcionalidades, de desempenho e correções de erros.
-
-#### <a name="extensibility"></a>Extensibilidade
-
-- **Funcionalidade alargada e desempenho melhorado para exportação SFTP** Pode agora exportar todas as entidades de saída do Customer Insights para um anfitrião SFTP. Anteriormente, a exportação limitava-se a entidades de segmento. Além disso, o desempenho da exportação SFTP permite mais volume de dados em menos tempo, dependendo do desempenho do seu anfitrião SFTP.    
-  Para mais informações, consulte [Conector para SFTP (pré-visualização)](export-sftp.md).  
-
-#### <a name="segments"></a>Segmentos
-
-- **Os segmentos sugeridos com tecnologia de aprendizagem automática para melhorar métricas** Há uma nova forma de descobrir e criar segmentos. O sistema utiliza um modelo de IA para sugerir segmentos que podem ajudar a melhorar um KPI (medida) que já está a monitorizar. Mostramos a extensão da influência dos atributos que seleciona numa medida ou noutro atributo principal. Estas informações ajudam a encontrar potenciais segmentos que apresentem oportunidades.    
-  Para mais informações, consulte [Segmentos sugeridos (pré-visualização)](suggested-segments.md).
+  Para mais informações, consulte [Melhorar perfis de clientes com HERE Technologies](enrichment-here.md).
 
 #### <a name="data-unification"></a>Unificação de dados
 
-- **Experiência de correspondência melhorada** Na área de unificação de dados, a experiência de correspondência foi atualizada. Permite-lhe configurar e ver as regras de correspondência, incluindo estatísticas detalhadas para explicar em mais detalhe como funciona a correspondência. Existem opções para desativar uma regra de correspondência, para que deixe de estar ativa, mantendo as regras de configuração, arrastar e largar e de correspondência, e muito mais.
-  Para mais informações, consulte [Entidades de correspondência](match-entities.md).
+- **Flexibilidade para permitir a criação de perfis de dados sobre entidades e campos selecionados a partir da sua conta de armazenamento**
 
-- **A saída de eliminação de duplicados do processo de correspondência está disponível como uma entidade** A saída do processo de eliminação de duplicados do processo de correspondência está agora escrita numa entidade separada para análise posterior. Esta entidade é constituída pelos campos utilizados no processo de eliminação de duplicados e no registo de vencedor e nos registos alternativos correspondentes que são unidos com o registo de vencedor.
-  Para obter mais informações, consulte [Saída de eliminação de duplicados como uma entidade](match-entities.md#deduplication-output-as-an-entity).
+  Pode indicar quais as entidades e campos de dados de uma pasta Modelo de Dados Comum na sua conta de armazenamento do Azure Data Lake que pretende habilitar para o perfil de dados como parte do processo de ingestão de dados.
+
+  Para mais informações, consulte [Estabelecer a ligação à pasta Modelo de Dados Comum](connect-common-data-model.md#connect-to-a-common-data-model-folder).
+
+#### <a name="extensibility"></a>Extensibilidade
+
+- **Ative os seus segmentos através do Google Ads**
+
+  Exportar segmentos das listas de audiência do Google Ads e utilizar estas listas para publicitar no Google Search, Google Display Network, YouTube e Gmail. Saiba mais sobre como ativar os seus segmentos através do Google Ads.
+
+  Para mais informações, consulte [Conector para Google Ads](export-google-ads.md).
+
+- **Ative os seus segmentos através do Marketo**
+
+  Exportar segmentos para as audiências do Marketo e utilizar estas audiências para a automatização do marketing. Saiba mais sobre como ativar os seus segmentos através do Marketo. 
+
+  Para mais informações, consulte [Conector para Marketo](export-marketo.md).
+
+- **Ative os seus segmentos através do DotDigital**
+
+  Exportar segmentos para a DotDigital e utilizá-los para fins de marketing. Saiba mais sobre como ativar os seus segmentos através do DotDigital. 
+
+  Para mais informações, consulte [Conector para DotDigital](export-dotdigital.md).
+
+#### <a name="predictions"></a>Predições
+
+- **Prever abandono transacional**
+
+  A funcionalidade de predição de abandono da transação permite-lhe, sem a ajuda de um cientista de dados, prever a probabilidade de um cliente deixar de comprar produtos ou serviços.  Usando a pontuação de predição, é possível combinar outras informações sobre os seus clientes, como o valor do cliente, para criar segmentos de alto risco de abandono ou clientes de alto valor. Utilizar este segmento para atingir diretamente os clientes através de atividades de marketing, apoio ao cliente, e outros cenários para reduzir o risco de abandono.
+ 
+  Configure a definição de abandono como uma janela temporal específica para o seu negócio e defina quando os clientes são considerados abandonados. Por exemplo, uma mercearia pode querer considerar um cliente em abandono se não tiver comprado nada nos últimos 30 dias.
+ 
+  Ao continuar a criar a predição, guiá-lo-emos quanto aos dados necessários, e permitir-lhe-emos mapear dados sobre o seu negócio para os campos necessários para prever o abandono dos seus clientes. Também pode definir um horário para a reciclagem do modelo com base em novas informações no seu sistema para se adaptar à evolução das circunstâncias comerciais.
+ 
+  Para obter mais informações, consulte [Predição de abandono transacional (pré-visualização)](predict-transactional-churn.md).
 
 #### <a name="system-administration"></a>Administração de sistema
 
-- **Partilhar dados com o Microsoft Dataverse sem problemas** Agora pode partilhar a saída do Customer Insights com aplicações Microsoft Dataverse utilizando o Data Lake Gerido do Microsoft Dataverse. Uma vez associado a um ambiente Dataverse com o Customer Insights, obtém a opção de ativar a partilha de dados.
+- **Repor ambiente**
+
+  Reiniciar tudo num ambiente de uma instância selecionada para começar de novo.
+
+  Para obter mais informações, consulte [Repor um ambiente existente](manage-environments.md#reset-an-existing-environment).
+
+
+- **Estabelecer ligação à sua conta de armazenamento do Azure Data Lake utilizando um principal de serviço**
+
+  Escreva e leia os dados da sua conta de armazenamento usando um principal de serviço Azure. As ligações de contas de armazenamento existentes podem continuar a utilizar a chave de conta. Oferecem também uma opção de atualização para utilizar o serviço principal a avançar. As novas ligações serão baseadas no método de autenticação do serviço principal da sua conta de armazenamento.
+
+  Para mais informações, consulte [Estabelecer ligação a uma conta Azure Data Lake Storage Gen2 com um principal de serviço Azure para informações de audiência](connect-service-principal.md).
+
+## <a name="october-2020-updates"></a>Atualizações de outubro de 2020
+
+As atualizações em outubro de 2020 incluem várias características, atualizações de desempenho, e correções de erros.
+
+### <a name="new-and-updated-features-in-october-2020"></a>Características novas e atualizadas em outubro de 2020
+
+#### <a name="extensibility"></a>Extensibilidade
+
+- **Exportar para Mailchimp**
+
+Exportar segmentos para listas de audiência existentes no Mailchimp para fornecer uma experiência de correio eletrónico personalizada aos seus clientes.
+
+Para mais informações, consulte [Conector para Mailchimp](export-mailchimp.md).
+
+#### <a name="data-enrichment"></a>Melhoramento de dados
+
+- **Duplicar os registos da origem numa entidade Corresponder**
+
+Especificar regras de duplicação sobre as entidades utilizadas no processo de correspondência para identificar registos duplicados. Intercalá-los num único registo e ligar todos os registos de origem a este registo intercalado. Este registo duplicado será então utilizado no processo de correspondência entre entidades.
+
+Para mais informações, consulte [Definir a duplicação numa entidade correspondente](match-entities.md#define-deduplication-on-a-match-entity).
+
+#### <a name="system-administration"></a>Administração de sistema
+
+- **Orquestração: Nova opção de atualização em Corresponder**
+
+Até hoje, quando se executa o processo de intercalar, o sistema executava todos os processos a jusante que dependem do intercalar e processos subsequentes. Pode agora verificar o resultado do processo de intercalar (a entidade unificada do cliente) antes de o utilizar no processamento a jusante como segmentos ou medidas.
+Na página de intercalar, pode agora optar por executar apenas a etapa de intercalar e executar apenas este processo. Para atualizar também todos os processos a jusante, pode escolher executar processos de intercalar e processos a jusante. 
+
+## <a name="september-2020-updates"></a>Atualizações de setembro de 2020
+
+As atualizações em setembro de 2020 incluem várias funcionalidades, atualizações de desempenho e correções de erros.
+
+### <a name="new-and-updated-features-in-september-2020"></a>Novidades e funcionalidades atualizadas em setembro de 2020
+
+#### <a name="activities"></a>Atividades
+
+- **Predição inteligente de semântica de atributo**
+
+Esta nova funcionalidade prevê os tipos semânticos de atributos de entrada que são transmitidos ao processo de unificação de dados. Utiliza modelos de aprendizagem automática que melhoram a precisão e poupam tempo.
+
+#### <a name="enrichments"></a>Melhoramentos
+
+- **Enriquecimento de dados demográficos da Experian**
+
+O enriquecimento de dados demográficos da Experian está agora disponível na pré-visualização. A Experian é líder global em serviços de marketing e relatórios de crédito para consumidor e empresas. Com [os serviços de enriquecimento de dados da Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage), pode criar uma compreensão mais profunda dos seus clientes enriquecendo os seus perfis de clientes com dados demográficos como tamanho da casa, rendimento e muito mais.
+
+Para utilizar esta funcionalidade, tem de ter uma subscrição ativa da Experian.
+
+Para mais informações, consulte [Enriquecer perfis de clientes com dados demográficos da Experian](enrichment-experian.md)
+
+
+#### <a name="system-administration"></a>Administração de sistema
+
+- **Painel de detalhes da tarefa**
+
+O painel de detalhes da tarefa permite-lhe ver detalhes sobre as tarefas que o sistema executa. É uma forma útil de identificar problemas com a configuração e encontrar soluções.
+Reveja as mensagens de erro para ver como aborda potenciais problemas.
+ 
+- **Informações de processamento adicionadas a páginas adicionais**
+
+Esta melhoria adiciona informações sobre o estado das suas entidades na página **Entidades** e **Clientes**.
+ 
+Além disso, pode encontrar detalhes sobre o progresso dos processos, juntamente com os detalhes da tarefa, em ambas as páginas.
+
+- **Melhorias à página de estado do sistema**
+
+Melhorámos a estrutura da tabela de detalhes de estado em **Sistema** > **Estado** ao rever as exportações de dados.
+ 
+Além disso, os erros na coluna **Detalhes** são agora mais detalhados e com ações. 
+ 
+- **Cancelar reverte a tarefa de volta ao estado anterior**
+
+Quando cancela uma tarefa, por exemplo, no processo de correspondência, ela reverterá ao seu estado mais recente. Por exemplo, se o processo de Correspondência foi concluído ontem e o cancelar hoje, reverterá para o estado de sucesso de ontem.
+
+
+## <a name="august-2020-updates"></a>Atualizações de agosto de 2020
+
+As atualizações em agosto de 2020 incluem várias funcionalidades, atualizações de desempenho e correções de erros.
+
+### <a name="new-and-updated-features-in-august-2020"></a>Novidades e funcionalidades atualizadas em agosto de 2020
+
+#### <a name="data-unification"></a>Unificação de dados
+
+- **Experiência melhorada para a fase do mapa durante a unificação de dados**
+
+  A experiência para a fase do mapa no processo de unificação de dados permite selecionar entidades, atributos e definir semântica de uma forma mais perfeita.
+
+  As alterações incluem:
+  
+  - menos interações necessárias para adicionar entidades e campos
+  - capacidades de pesquisa melhoradas na página do mapa
+  - identificação visual e fácil do tipo de campo sugerido
+
+#### <a name="enrichment"></a>Melhoramento
+
+- **Enriquecimento de afinidades de interesses disponível em mercados adicionais**
+
+  Estamos a alargar a disponibilidade do enriquecimento de afinidades de interesses para além dos Estados Unidos para cinco mercados adicionais: Canadá, Austrália, Reino Unido, França e Alemanha. Com esta extensão, pode enriquecer os dados do seu cliente com interesses adicionais aplicáveis a estes mercados. Também enriqueceremos os perfis dos seus clientes localizados nestes mercados utilizando dados de propriedade local do Microsoft Graph.
+  Para mais informações, consulte [Enriquecer perfis de clientes com afinidades de marca e interesse](enrichment-microsoft-graph.md)
+
+
+## <a name="july-2020-updates"></a>Atualizações de julho de 2020
+
+As atualizações em julho de 2020 incluem várias funcionalidades, atualizações de desempenho e correções de erros.
+
+### <a name="new-and-updated-features-in-july-2020"></a>Novas e atualizadas funcionalidades em julho de 2020
+
+#### <a name="extensibility"></a>Extensibilidade
+
+- **Acionador do Power Automate para processo de unificação concluído**
+
+  Alargámos os nossos acionadores para o Power Automate e permitimos criar uma notificação ou ação quando uma atualização do processo de unificação (mapa, correspondência, união) estiver concluída.    
+  Para mais informações, consulte [Conector do Power Automate](export-power-automate.md)
+
+#### <a name="enrichment"></a>Melhoramento
+
+- **Enriquecimento de afinidades de marca disponível em mercados adicionais**
+
+  Estamos a alargar a disponibilidade do enriquecimento de afinidades da marca para além dos Estados Unidos para cinco mercados adicionais: Canadá, Austrália, Reino Unido, França e Alemanha. Com esta extensão, pode enriquecer os dados dos seus clientes com marcas locais nestes mercados. Também enriqueceremos os perfis dos seus clientes localizados nestes mercados utilizando dados de propriedade local do Microsoft Graph.
+  Para mais informações, consulte [Enriquecer perfis de clientes com afinidades de marca e interesse](enrichment-microsoft-graph.md)
+
+## <a name="june-2020-updates"></a>Atualizações de junho de 2020
+
+As atualizações em junho de 2020 incluem várias funcionalidades, atualizações de desempenho e correções de erros.
+
+### <a name="new-and-updated-features-in-june-2020"></a>Novas e atualizadas funcionalidades em junho de 2020
+
+#### <a name="enrichment"></a>Melhoramento
+
+- **Enriquecimento com dados da empresa da Leadspace**
+  
+  Defina campos em perfis de clientes unificados que são usados para procurar dados relacionados da empresa a partir do Leadspace. Após a execução do processo de enriquecimento, os perfis B2B são enriquecidos com atributos adicionais, incluindo tamanho da empresa, localização, setor e muito mais.    
+  Esta colaboração permite-lhe melhorar a qualidade dos seus dados com a entrada de serviços de terceiros. Para utilizar este enriquecimento, precisará de uma licença da Leadspace para aceder aos dados da empresa B2B. O sistema utilizará essa licença para manter os seus dados continuamente melhorados.    
+  Para mais informações, consulte [Enriquecimento dos perfis da empresa com o Leadspace](enrichment-leadspace.md).
+
+- **Página do Hub de enriquecimento**
+
+  Todo o enriquecimento de dados disponível de fornecedores de enriquecimento de primeiros e terceiros é configurado no mesmo local. Configurar o enriquecimento de dados é uma experiência totalmente integrada que é gerida a partir de um lugar comum.    
+  Para mais informações, consulte [Enriquecimento para perfis de clientes](enrichment-hub.md).
+
+- **Enriquecimento de afinidade de marca e interesse em separado**
+
+  As marcas e interesses estão agora disponíveis como dois enriquecimentos independentes. Os enriquecimentos separados conferem-lhe a flexibilidade para os configurar e gerir individualmente, dependendo dos requisitos ou necessidades do seu negócio.    
+  Para mais informações, consulte [Enriquecer perfis de clientes com afinidades de marca e interesse](enrichment-microsoft-graph.md).
+
+#### <a name="extensibility"></a>Extensibilidade
+
+- **URLs clicáveis para atividades unificadas no Suplemento de Cartão de Cliente do Dynamics 365**
+
+  As atividades unificadas no Suplemento de Cartão de Cliente estão agora a mostrar URLs clicáveis se tais URLs tiverem sido definidas durante a configuração das atividades.    
+  Para mais informações, veja [Suplemento de Cartão de Cliente](customer-card-add-in.md).
+
+- **Afinidades de marca e interesse disponíveis no Suplemento de Cartão de Cliente do Dynamics 365**
+
+  Um novo controlo sobre Suplemento de Cartão de Cliente do Dynamics 365 permite-lhe mostrar enriquecimentos de marca e interesse nos seus contactos em aplicações de Customer Engagement no Dynamics 365.    
+  Para mais informações, veja [Suplemento de Cartão de Cliente](customer-card-add-in.md).
+
+- **Acionadores do Power Automate adicionais**
+
+  Alargámos os nossos acionadores para o Power Automate e adicionámos os seguintes acionadores:
+  - Obtenha uma notificação ou realize uma ação quando uma atualização completa automatizada (fontes de dados, unificação, segmentos, medidas, exportações) concluir
+  - Defina um limiar para uma medida de negócio. Por exemplo, pode criar uma notificação que é enviada quando o limiar definido é passado. Além disso, o acionador traz informações que lhe permitem construir fluxos de trabalho mais complexos no Power Automate.    
+  Para mais informações, consulte [Conector do Power Automate](export-power-automate.md)
+
+- **Exportar para Gestor de Anúncios do Facebook**
+  
+  Esta capacidade permite-lhe exportar segmentos para o Ads Manager do Facebook. Os segmentos são exportados como audiências personalizadas para utilizar perfis unificados de clientes em campanhas de marketing e anúncios no Facebook. O público personalizado também é utilizável para criar campanhas no Instagram através do Gestor de Anúncios do Facebook.    
+  Para obter mais informações, consulte [Conector para o Gestor de Anúncios do Facebook](export-facebook.md).
+
+#### <a name="predictions"></a>Predições
+
+- **Predição de abandono de subscrição**
+
+  Siga uma experiência guiada para criar predição de abandono em áreas de subscrição como serviços cloud, associação do cliente e outros setores. 
+
+  A funcionalidade de predição de abandono de subscrição permite-lhe prever a probabilidade de um cliente parar o uso de produtos ou serviços baseados em subscrições sem envolver um cientista de dados. Utilizando a classificação de predição, pode combinar outras informações sobre os seus clientes para criar segmentos de alto risco de abandono. Com a ajuda deste segmento, pode visar diretamente clientes em marketing, apoio ao cliente, e outros cenários para reduzir o risco de abandono para clientes específicos para melhorar as receitas e reduzir os custos.
+
+  Dentro da experiência, pode configurar a definição de abandono como uma janela baseada no tempo específica para o seu negócio. Por exemplo, um negócio de streaming de vídeo que tenha um processo de subscrição mensal pode querer considerar um cliente ter abandonado 15 dias após o termo da sua subscrição.
+
+  À medida que prossegue com a predição, vamos guiá-lo através dos dados necessários e permitir-lhe mapear dados sobre o seu negócio para campos necessários para prever o abandono para os seus clientes. À medida que a informação do negócio muda, também pode definir um calendário para retreinar novas informações no seu sistema para se adaptar às circunstâncias de negócio em mudança.    
+  Para obter mais informações, consulte [Predição de abandono de subscrição (pré-visualização)](predict-subscription-churn.md).
+
+#### <a name="segments"></a>Segmentos
+
+- **Encontrar clientes semelhantes**
+  
+  Encontre clientes semelhantes na sua base de clientes usando inteligência artificial. Um modelos de aprendizagem automática de classificação binária atribui uma classificação de semelhança aos clientes do segmento expandido. A pontuação baseia-se na semelhança com os clientes do segmento de origem. Dependendo da classificação de semelhança, os perfis do cliente são adicionados a um segmento recém-criado.
+
+  Por vezes referido como modelagem de sósia em marketing digital, utiliza um modelo de IA para ajudar a encontrar clientes que são semelhantes a outro segmento dos seus clientes, considerando atributos adicionais. Não só lhe permite escolher os atributos, como também lhe permite especificar o número máximo de clientes que deveriam estar neste novo segmento. O modelo de IA irá então calcular classificações de semelhança para cada cliente com base nos seus atributos selecionados e encontrar clientes com a classificação de semelhança média mais alta. O segmento resultante incluirá clientes que se parecem com o cliente no seu segmento original.    
+  Para mais informações, consulte [Clientes Semelhantes](find-similar-customer-segments.md).
+
+- **Sobreposição de segmentos e diferenciadores**
+
+  A sobreposição de segmentos permite-lhe ver quantos e quais os clientes comuns a dois ou mais segmentos. Por exemplo, como um segmento de clientes com gastos elevados se sobrepõe a um segmento de clientes com alta satisfação ou como um segmento de clientes agitados se sobrepõe a um segmento de clientes com baixa satisfação. Além disso, pode analisar como a sobreposição muda com base num atributo adicional à sua escolha.
+
+  Os diferenciadores de segmento revelam o que diferencia um segmento do resto dos seus clientes ou de outro segmento. Tudo o que precisa de fazer é identificar um segmento e o sistema identificará atributos de perfil e medidas que distinguem o segmento sob a forma de uma lista classificada de diferenciadores — do diferenciador mais forte para o mais fraco.    
+  Para mais informações, consulte [Informações sobre segmentos (pré-visualização)](segment-insights.md).
+
+- **Vida útil do segmento**
+  
+  Definir uma agenda para ativar ou desativar um segmento.    
+  Para mais informações, consulte [Gerir segmentos existentes](segments.md#manage-existing-segments).
+
+## <a name="may-2020-updates"></a>Atualizações de maio de 2020
+
+As atualizações em maio de 2020 incluem várias atualizações de funcionalidades, de desempenho e correções de erros.
+
+### <a name="new-and-updated-features-in-may-2020"></a>Funcionalidades novas e atualizadas em maio de 2020
+
+#### <a name="data-ingestion"></a>Ingestão de dados
+
+- **Ingestão de dados em tempo real: vistas de histórico**
+
+  Ao utilizar a nossa API para ingerir atualizações em tempo real, pode ver até 30 dias de histórico agregado para estas atualizações. Tem acesso a agregados de todas as chamadas API bem sucedidas ou falhadas, incluindo o seu resultado, sistema de origem e outros metadados úteis.    
+  Para mais informações, consulte [Ingestão de dados em tempo real](real-time-data-ingestion.md).
+
+- **Ingestão de dados em tempo real: atualizações de perfis**
+
+  Esta extensão da ingestão de dados em tempo real permite-lhe ver, em segundos, alterações em campos específicos de perfil do utilizador.    
+  Para além da funcionalidade em tempo real para as atividades, o sistema suporta atualizações de baixa latência para campos de perfil. As atualizações em tempo real para os campos de perfil têm um tempo de validade e, portanto, não são um substituto para atualizações programadas.    
+  Para mais informações, consulte [Ingestão de dados em tempo real](real-time-data-ingestion.md).
+
+#### <a name="extensibility"></a>Extensibilidade
+
+- **Linha cronológica e paginação atualizadas no Suplemento do Cartão de Cliente**
+
+  A cronologia da solução Suplemento do Cartão de Cliente corresponde à cronologia da atividade. A paginação da linha cronológica melhorou, aparecendo até 50 atividades ao mesmo tempo. Também permite carregar atividades adicionais na linha cronológica.    
+  Para mais informações, veja [Suplemento de Cartão de Cliente](customer-card-add-in.md).
+
+- **Acionador do Power Automate para alterações de segmentos**
+
+  Acionadores para o Power Automate definem a partir do que se pode construir um fluxo. O acionador recém-adicionado permite definir um limiar para um segmento. Por exemplo, pode criar uma notificação que é enviada quando o limiar definido é passado.    
+  Para mais informações, consulte [Conector do Power Automate](export-power-automate.md).
+
+- **Suporte multi-inquilino para modelos personalizados**
+
+  Configure fluxos de trabalho para modelos personalizados com um serviço Web de um inquilino do Azure Machine Learning diferente. Pode inscrever-se no inquilino do Azure Machine Learning ao criar um novo fluxo de trabalho para modelos personalizados. Esta capacidade é uma adição à capacidade existente de integração com o seu próprio serviço Web do Azure Machine Learning personalizado.    
+  Para mais informações, consulte [Modelos personalizados de aprendizagem automática](custom-models.md).
+
+#### <a name="segments"></a>Segmentos
+
+- **Automatização de caminhos de entidade**
+
+  Ao criar um segmento, os utilizadores precisam de definir o caminho da entidade. Esta capacidade dá um primeiro passo na automatização da definição de trajetória da entidade para que possa focar-se nos critérios de segmentação que tem em mente.    
+  Se a entidade pela qual pretende segmentar os seus clientes estiver diretamente relacionada com a entidade de cliente unificada, já não terá de definir o caminho da entidade. No entanto, se houver mais do que um possível caminho de entidade, ainda precisa de defini-lo manualmente.
+
+- **Ações em vários segmentos**
+  
+  Os utilizadores podem selecionar vários segmentos e tomar ações sobre eles, como atualizar os segmentos, com um único clique.    
+
+- **Atualizar segmentos**
+
+  Os utilizadores podem atualizar um único segmento ou selecionar apenas os segmentos que querem atualizar.    
+
+  
+- **Melhorias nos segmentos compostos**
+
+  Os utilizadores podem criar, editar e eliminar segmentos que se baseiam em outros segmentos. Por exemplo, um segmento construído noutro segmento que foi construído num terceiro segmento.    
+
+- **Página de lista de segmentos**
+
+  O novo design da página de segmentos utiliza um formato de lista que permite ver mais segmentos ao mesmo tempo. Um campo de pesquisa é adicionado para encontrar segmentos rapidamente. Os utilizadores podem agora aplicar ações como transferir ou eliminar em vários segmentos ao mesmo tempo. Uma nova experiência de tendência é introduzida para identificar rapidamente mudanças significativas em segmentos.    
+  Para obter mais informações, veja [Criar e gerir segmentos](segments.md).
+
+#### <a name="system-administration"></a>Administração de sistema
+
+- **Customer Insights disponível no Microsoft Dynamics 365 Online Government**
+
+  Com cada vez mais canais para interações, os dados dos cidadãos estão espalhados por vários sistemas, levando a dados isolados e uma visão fragmentada da informação sobre as interações dos cidadãos. Sem uma visão completa das interações de cada cidadão através dos canais, é impossível para os governos modernizar em escala. A Microsoft está empenhada em apoiar as necessidades tecnológicas do governo para acompanhar as expectativas dos cidadãos de experiências consistentes e responsivas.    
+  Com a fase 1 da versão de 2020, o Dynamics 365 Customer Insights estará disponível para a Nuvem da Comunidade Governamental (GCC), um ambiente criado para atender às necessidades de maior conformidade das agências governamentais dos Estados Unidos. As agências ganham uma visão unificada dos cidadãos e usam a IA pré-criada para obter informações que melhorem as interações, capacitem os colaboradores e transformem comunidades, reduzindo a complexidade das TI e cumprindo os padrões de conformidade e segurança dos Estados Unidos. O Dynamics 365 Government cumpre os exigentes requisitos do Federal Risk and Authorization Management Program (FedRAMP), permitindo que as agências federais dos Estados Unidos beneficiem da poupança de custos e da segurança rigorosa da Microsoft Cloud.
+
+## <a name="april-2020-updates"></a>Atualizações de abril de 2020
+
+As atualizações em abril de 2020 incluem várias atualizações de funcionalidades, de desempenho e correções de erros.
+
+### <a name="new-and-updated-features-in-april-2020"></a>Funcionalidades novas e atualizadas em abril de 2020
+
+#### <a name="activities"></a>Atividades
+
+- **Entidade de atividade do mapa para o tipo de atividade padrão**
+  
+  A configuração e armazenamento de atividade são atualmente baseados num design estático para vê-los numa linha cronológica. O significado semântico das atividades, que tem potencial para múltiplos incidentes de utilização em modelos de IA, não é totalmente usado no momento. Pretendemos tornar a linha cronológica de atividade mais dinâmica, com base no tipo de atividade e melhor compreensão semântica das atividades. Esta funcionalidade visa identificar o tipo de atividade tal como definido no Common Data Model para qualquer atividade ingerida.
+  Para mais informações, veja [Atividades de cliente](activities.md).
+
+#### <a name="data-ingestion"></a>Ingestão de dados
+
+- **Ingestão de dados em tempo real: atividades**
+  
+  A ingestão de dados em tempo real fornece dados imediatamente para consumo, até a subsequente atualização programada extrair estes dados da origem de dados.    
+  Para mais informações, consulte [Ingestão de dados em tempo real](real-time-data-ingestion.md).
+
+- **Melhorias à preparação de dados**
+  
+  Saiba mais sobre os dados ingeridos numa entidade. Com o resumo dos dados, pode compreender as características de qualidade dos dados que podem ajudar a tomar as medidas adequadas.    
+  Para mais informações, consulte [Explorar dados de entidades](entities.md#exploring-a-specific-entitys-data).
+
+- **Ingerir dados analíticos do Dynamics 365 com o Common Data Service**
+  
+  O Common Data Service está disponível como uma forma de criar origens de dados. Os clientes existentes do Dynamics 365 podem ingerir entidades analíticas do Common Data Service para o Customer Insights. Uma única fonte de dados pode utilizar simultaneamente o mesmo lake gerido pelo Common Data Service num ambiente de Customer Insights.    
+  Para obter mais informações, consulte [Ligar a dados num data lake gerido do Common Data Service](connect-common-data-service-lake.md).
+
+#### <a name="extensibility"></a>Extensibilidade
+
+- **Exportar para o LiveRamp**
+
+  Ativar os seus dados no LiveRamp® para ligar a mais de 500 plataformas em ecossistemas digitais, de redes sociais e de TV. Aproveite os seus dados no LiveRamp para direcionar, suprimir e personalizar campanhas publicitárias.    
+  Para mais informações, consulte [Conector do LiveRamp&reg;](export-liveramp.md).
+
+- **Suplementos de Equipas do Customer Insights**
+  
+  O bot fornece capacidades de pesquisa para perfis de cliente unificados. Mostrará um cartão com até 15 campos do perfil de cliente resultante. Várias correspondências devolvem uma lista de resultados onde pode selecionar um perfil.    
+  Para mais informações, consulte [Bot do Teams para o Customer Insights](export-teams-bot.md).
+
+#### <a name="measures"></a>Medidas
+
+- **Página de lista de medidas**
+  
+  As melhorias à página das medidas incluem o suporte a ações numa única medida e a várias medidas ao mesmo tempo. Além disso, encontrará um campo de pesquisa para encontrar e monitorizar medidas rapidamente.    
+  Para obter mais informações, veja [Criar e gerir segmentos](segments.md).
+
+- **Melhorias a medidas compostas**
+  
+  Os utilizadores podem criar, editar e eliminar medidas que se baseiam em outras medidas. Por exemplo, uma medida construída noutra medida que foi construída numa terceira medida.
+
+#### <a name="segments"></a>Segmentos
+
+- **Operador adicional**
+  
+  O operador In-set permite a segmentação para os clientes por vários valores de cadeia possíveis. Antes deste operador ser adicionado, teve que construir tais segmentos com múltiplas condições de OR. O operador In-set permite-lhe fazê-lo com uma única condição.    
+  Para obter mais informações, veja [Criar e gerir segmentos](segments.md).
+
+#### <a name="system-administration"></a>Administração de sistema
+
+- **Copiar definições de configuração para um novo ambiente**
+  
+  Copie a sua configuração de um ambiente para outro. Ao criar um novo ambiente, pode selecionar um ambiente existente a partir do qual pretende copiar a configuração. Atualmente, suportamos origens de dados, unificação de dados, relações, medidas e segmentos a serem copiados. As credenciais das origens de dados e os dados reais não são copiados.    
   Para mais informações, consulte [Gerir ambientes](manage-environments.md).
-
-
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

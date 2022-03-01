@@ -1,7 +1,7 @@
 ---
 title: Suplemento de Cartões de Cliente para aplicações do Dynamics 365 (contém vídeo)
 description: Mostrar dados de informações de audiência em aplicações Dynamics 365 com este suplemento.
-ms.date: 02/02/2022
+ms.date: 12/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: ce6c8fab84fd4c5dfc9f78b91dde3483a1d358c1
-ms.sourcegitcommit: 11308ed275b4b25a35576eccfcae9dda9e2c2784
+ms.openlocfilehash: 98597600c2a39f8bb707af8461df4736f913e6bc
+ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "8085262"
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "8046494"
 ---
 # <a name="customer-card-add-in-preview"></a>Suplemento de Cartões de Cliente (pré-visualização)
 
@@ -118,26 +118,5 @@ O Suplemento da Ficha de Cliente não atualiza a versão automaticamente. Para a
 
 1. Depois de iniciar o processo de atualização de versão, verá um indicador de carregamento até que a atualização esteja concluída. Se não houver uma versão mais recente, a atualização mostrará uma mensagem de erro.
 
-## <a name="troubleshooting"></a>Resolução de Problemas
-
-### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Os controlos do Suplemento de Cartões de Cliente não encontram dados
-
-**Problema:**
-
-Mesmo com campos de ID corretamente configurados, os controlos não conseguem encontrar os dados de nenhum cliente.  
-
-**Resolução:**
-
-1. Certifique-se de que configura o Suplemento de Cartões de acordo com as instruções: [Configurar o Suplemento de Cartões de Cliente](#configure-the-customer-card-add-in) 
-
-1. Reveja a configuração de ingestão de dados. Edite a origem de dados para o sistema Dynamics 365 que contém o GUID ID do contacto. Se o GUID ID do contacto for mostrado com carateres em maiúsculas no editor do Power Query, experimente o seguinte: 
-    1. Edite a origem de dados para abrir a origem de dados no Editor do Power Query.
-    1. Selecione a coluna de ID do contacto.
-    1. Selecione **Transformar** na barra de cabeçalho para ver as ações disponíveis.
-    1. Selecione **em minúsculas**. Valide se os GUIDs na tabela estão agora em minúsculas.
-    1. Guardar a origem dos dados.
-    1. Execute processos de ingestão de dados, unificação e a jusante para propagar as alterações ao GUID. 
-
-Após terminar a atualização completa, os controlos do Suplemento de Cartões de Cliente devem mostrar os dados esperados. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

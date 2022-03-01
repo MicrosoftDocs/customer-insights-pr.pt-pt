@@ -5,15 +5,15 @@ description: Familiarize-se com a experiência da primeira execução do Dynamic
 ms.author: mhart
 ms.date: 10/05/2021
 ms.service: customer-insights
-ms.topic: conceptual
+ms.topic: overview
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: e17b66217415c0b554a449f0d992deec7e2d96e7
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: b4228a36069f4adb8098ea96cefec0eef81a6560
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977686"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645717"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Começar depois de comprar o Customer Insights
 

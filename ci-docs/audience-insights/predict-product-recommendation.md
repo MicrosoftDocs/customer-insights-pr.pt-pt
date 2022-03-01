@@ -1,7 +1,7 @@
 ---
 title: Predição de recomendação de produtos
 description: Preveja que produtos um cliente é provável que compre ou com os quais interaja.
-ms.date: 01/13/2022
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 62b829b6ca3074e0ca52fb52584b74572bb05f05
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967853"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494553"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predição de recomendação de produtos (pré-visualização)
 
@@ -79,11 +79,11 @@ Se estiver interessado em experimentar esta funcionalidade mas não tiver dados 
 1. Defina o **Número de produtos** que pretende recomendar a um cliente. Este valor depende de como o seu método de entrega preenche os dados. Se puder recomendar três produtos, defina este valor em conformidade.
    
    >[!TIP]
-   > Pode selecionar **Guardar rascunho** a qualquer momento para guardar a predição como rascunho. Vai encontrar a predição de rascunho no separador **A minhas predições**.
+   > Pode selecionar **Guardar e fechar** a qualquer momento para guardar a previsão como rascunho. Vai encontrar a predição de rascunho no separador **A minhas predições**.
 
-1. Escolha se pretende incluir produtos que os clientes compraram recentemente no campo **Compras repetidas esperadas**.
+1. Escolha se pretende **Sugerir produtos que os clientes compraram recentemente**.
 
-1. Defina a **Janela de histórico**. Esta definição especifica o período de tempo que o modelo considera antes de recomendar o produto ao utilizador novamente. Por exemplo, indica que um cliente compra um portátil de dois em dois anos. Esta janela irá olhar para o histórico de compras dos últimos dois anos e, se encontrarem um item, o item será filtrado das recomendações.
+1. Se tiver selecionado *não* recomendar produtos comprados recentemente, defina a **Janela de recuo**. Esta definição especifica o período de tempo que o modelo considera antes de recomendar o produto ao utilizador novamente. Por exemplo, indica que um cliente compra um portátil de dois em dois anos. Esta janela irá olhar para o histórico de compras dos últimos dois anos e, se encontrarem um item, o item será filtrado das recomendações.
 
 1. Selecione **Seguinte**
 

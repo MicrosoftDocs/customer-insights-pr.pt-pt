@@ -1,50 +1,43 @@
 ---
 title: Exportar dados Customer Insights para a DotDigital
-description: Aprenda a configurar a ligação e exportar para a DotDigital.
-ms.date: 10/08/2021
-ms.reviewer: mhart
+description: Saiba como configurar a ligação a DotDigital.
+ms.date: 11/14/2020
+ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: pkieffer
-ms.author: philk
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 3e3a79603f9f5746ee176d3d4299a30510c7459e
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: ed6bd40e8575fc90258f79f60abffe54f136d274
+ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618397"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "4644462"
 ---
-# <a name="export-segments-to-dotdigital-preview"></a>Exportar segmentos para a DotDigital (pré-visualização)
+# <a name="connector-for-dotdigital-preview"></a>Ligação para DotDigital (pré-visualização)
 
 Exportar segmentos de perfis unificados de clientes para a DotDigital e utilizá-los em campanhas, marketing por e-mail, e construir segmentos de clientes com a DotDigital. 
 
-## <a name="prerequisites-for-a-connection"></a>Pré-requisitos para uma ligação
+## <a name="prerequisites"></a>Pré-requisitos
 
--   Tem uma [conta DotDigital](https://dotdigital.com/) e criou um [utilizador da API](https://support.dotdigital.com/hc/articles/115001718730-How-do-I-create-an-API-user). Precisará de utilizar as credenciais de utilizador da API para criar uma ligação
+-   Tem uma [conta DotDigital](https://dotdigital.com/) e as correspondentes credenciais de administrador.
 -   Existem livros de endereços na DotDigital e os IDs correspondentes. A ID pode ser encontrada no URL ao selecionar e abrir um livro de endereços. Para mais informações, ver [livros de endereços DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 -   Tem [segmentos configurados](segments.md) nos insights da audiência.
 -   Os perfis unificados dos clientes nos segmentos exportados contêm um campo que representam um endereço de correio eletrónico.
 
-## <a name="known-limitations"></a>Limitações conhecidas
+## <a name="connect-to-dotdigital"></a>Ligar a DotDigital
 
-- Até 1 milhão de perfis de clientes por exportação para o DotDigital.
-- A exportação para a DotDigital é limitada a segmentos.
-- Os segmentos de exportação com um total de 1 milhão de perfis de clientes podem levar até 3 horas devido a limitações do lado do fornecedor. 
-- O número de perfis de clientes que pode exportar para o DotDigital está dependente e limitado no seu contrato com o DotDigital.
+1. Aceda a **Administrador** > **Destinos de exportação**.
 
-## <a name="set-up-connection-to-dotdigital"></a>Configurar ligação à DotDigital
+1. Em **DotDigital**, selecione **Configurar**.
 
-1. Aceda a **Admin** > **Ligações**.
+1. Forneça um nome reconhecível ao destino de exportação no campo **Nome a apresentar**.
 
-1. Selecione **Adicionar ligação** e escolha **DotDigital** para configurar a ligação.
+   :::image type="content" source="media/DotDigital_config.PNG" alt-text="Painel de configuração para exportação DotDigital.":::
 
-1. Forneça um nome reconhecível à ligação no campo **Nome a apresentar**. O nome e o tipo de ligação descrevem esta ligação. Recomendamos a escolha de um nome que explique o propósito e o destino da ligação.
-
-1. Escolher quem pode utilizar esta ligação. Se não tomar nenhuma ação, a predefinição será Administradores. Para mais informações, consulte [Permitir que os contribuidores utilizem uma ligação para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
-
-1. Introduza o seu **nome de utilizador e a palavra-passe da API do DotDigital**. 
+1. Introduza o seu **nome de utilizador e a palavra-passe DotDigital**.
 
 1. Introduza a sua **[ID do livro de endereços DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book)**.
 
@@ -54,36 +47,28 @@ Exportar segmentos de perfis unificados de clientes para a DotDigital e utilizá
 
 1. Selecione **Adicione-se como utilizador de exportação** e fornecer as suas credenciais Customer Insights.
 
-1. Selecione **Guardar** para concluir a ligação. 
+1. Selecione **Seguinte** para configurar a exportação.
 
-## <a name="configure-an-export"></a>Configurar uma exportação
+## <a name="configure-the-connector"></a>Configurar o conector
 
-Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Para obter mais informações, consulte [Permissões necessárias para configurar uma exportação](export-destinations.md#set-up-a-new-export).
-
-1. Aceda a **Dados** > **Exportações**.
-
-1. Para criar uma nova exportação, selecione **Adicionar destino**.
-
-1. No campo **Ligação para a exportação**, escolha uma ligação a partir da secção DotDigital. Se não vir este nome de secção, não existem ligações deste tipo disponíveis para si.
-
-
-1. Na secção **Correspondência de dados**, no campo **E-mail**, selecione o campo que representa o endereço de e-mail de um cliente. Repita os mesmos passos para outros campos opcionais, tais como **nome próprio**, **nome próprio**, **nome completo**, **género**, e **código postal**.
+1. Na secção **Correspondência de dados**, no campo **E-mail**, selecione o campo no seu perfil unificado de cliente que representa o endereço de correio eletrónico de um cliente. Repita os mesmos passos para outros campos opcionais, tais como **nome próprio**, **nome próprio**, **nome completo**, **género**, e **código postal**.
 
 1. Selecione os segmentos que quer exportar. Pode exportar até 1 milhão de perfis de clientes no total para a DotDigital.
 
 1. Selecione **Guardar**.
 
-Guardar uma exportação não executa a exportação imediatamente.
+## <a name="export-the-data"></a>Exportar os dados
 
-A exportação é executada com cada [atualização agendada](system.md#schedule-tab). Também pode [exportar dados a pedido](export-destinations.md#run-exports-on-demand). 
- 
-Na DotDigital, pode agora encontrar os seus segmentos nos [livros de endereços DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
+Pode [exportar dados a pedido](export-destinations.md). A exportação também será executada com cada [atualização agendada](system.md#schedule-tab). Na DotDigital, pode agora encontrar os seus segmentos nos [livros de endereços DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 
+## <a name="known-limitations"></a>Limitações conhecidas
+
+- Até 1 milhão de perfis por exportar para a DotDigital.
+- A exportação para a DotDigital é limitada a segmentos.
+- A exportação de segmentos com um total de 1 milhão de perfis pode demorar até 3 horas devido a limitações do lado do fornecedor. 
+- O número de perfis que pode exportar para a DotDigital está dependente e limitado ao seu contrato com a DotDigital.
 
 ## <a name="data-privacy-and-compliance"></a>Privacidade e conformidade de dados
 
 Quando ativa Dynamics 365 Customer Insights para transmitir dados à DotDigital, permite a transferência de dados fora dos limites de conformidade para Dynamics 365 Customer Insights, incluindo dados potencialmente sensíveis, tais como Dados Pessoais. A Microsoft transferirá tais dados sob as suas instruções, mas o utilizador é responsável por assegurar que a DotDigital cumpre quaisquer obrigações de privacidade ou segurança que possa ter. Para obter mais informações, consulte [Declaração de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 O seu administrador Dynamics 365 Customer Insights pode remover este destino de exportação em qualquer altura para descontinuar a utilização desta funcionalidade.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

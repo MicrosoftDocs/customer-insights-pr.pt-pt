@@ -1,5 +1,5 @@
 ---
-title: Localizar clientes similares com IA (contém vídeo)
+title: Encontrar clientes semelhantes com IA
 description: Encontre segmentos de clientes semelhantes com inteligência artificial.
 ms.date: 06/25/2020
 ms.service: customer-insights
@@ -9,18 +9,16 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: de337ae989558c81fff25a6ff7cca01890ed306b
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.openlocfilehash: ee4d24ae0ae39c689956f70efe46c4226876484e6da6282dc874cec37bd287e2
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934854"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034557"
 ---
 # <a name="similar-customers-preview"></a>Clientes semelhantes (pré-visualização)
 
 Esta funcionalidade permite encontrar clientes semelhantes na sua base de clientes utilizando inteligência artificial. Precisa de ter, pelo menos, um segmento criado para utilizar esta funcionalidade. Expandir os critérios de um segmento existente ajuda a encontrar clientes semelhantes a esse segmento.
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
 > *Encontrar clientes semelhantes* utiliza meios automatizados para avaliar dados e fazer previsões com base nesses dados, pelo que tem a capacidade de ser usado como um método de criar perfis, uma vez que esse termo é definido pelo Regulamento Geral de Proteção de Dados ("RGPD"). A utilização desta funcionalidade por parte do Cliente para tratar os dados pode estar sujeita aos RGPD ou a outras leis ou regulamentos. O utilizador é responsável por garantir que a sua utilização do Dynamics 365 Customer Insights, incluindo predições, cumpre com todas as leis e regulamentos aplicáveis, incluindo leis relacionadas com a privacidade, dados pessoais, dados biométricos, proteção de dados e confidencialidade das comunicações.

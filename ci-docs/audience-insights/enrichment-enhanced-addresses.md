@@ -1,7 +1,7 @@
 ---
 title: Melhoramento de endereços (contém vídeo)
 description: Enriqueça e normalize a informação de endereço dos perfis de cliente com os modelos da Microsoft.
-ms.date: 01/19/2022
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ba43d24ac5ae8846da87f0d41234d8616c2f8070
-ms.sourcegitcommit: 4c9db6c124d7244e7e8bb2f8bfdc697523781c31
+ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "8010923"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934937"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enriquecimento de perfis de clientes com endereços melhorados
 
@@ -100,17 +100,17 @@ Para iniciar o processo de enriquecimento, selecione **Executar** na barra de co
 
 Após o processo de enriquecimento concluído, pode rever os dados de perfis de clientes recentemente enriquecidos nos **Meus enriquecimentos**. Além disso, encontrará a hora da última atualização e o número de perfis enriquecidos.
 
-Pode ver uma amostra dos dados enriquecidos no mosaico **Pré-visualização de clientes enriquecidos**. Selecione **Ver mais** e selecione o separador **Dados** para aceder a uma vista detalhada de cada perfil enriquecido.
+Pode aceder a uma visão detalhada de cada perfil enriquecido selecionando **Ver dados enriquecidos**.
 
 ### <a name="overview-card"></a>Cartão de descrição geral
 
 O cartão de descrição geral mostra detalhes sobre a cobertura do enriquecimento. 
 
-* **Endereços processados e alterados**: o número de perfis de clientes com endereços que foram enriquecidos com sucesso.
+* **Clientes processados e alterados**: o número de perfis de clientes que foram enriquecidos com sucesso.
 
-* **Endereços processados e não alterados**: o número de perfis de clientes com endereços que foram reconhecidos, mas não alterados. Normalmente, acontece quando os dados de entrada são válidos e não podem ser melhorados pelo enriquecimento.
+* **Clientes processados e não alterados**: o número de perfis de clientes que foram reconhecidos, mas não alterados. Normalmente, acontece quando os dados de entrada são válidos e não podem ser melhorados pelo enriquecimento.
 
-* **Endereços não processados e não alterados**: o número de perfis com endereços que não foram reconhecidos. Normalmente, para dados de entrada que são inválidos ou não suportados pelo enriquecimento.
+* **Clientes não processados e não alterados**: o número de perfis que não foram reconhecidos. Normalmente, para dados de entrada que são inválidos ou não suportados pelo enriquecimento.
 
 ## <a name="next-steps"></a>Passos seguintes
 

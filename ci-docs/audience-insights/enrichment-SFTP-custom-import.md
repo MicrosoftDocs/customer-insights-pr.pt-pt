@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: fa1d4ffd9f77e128b5d804e4562e964561f4684f
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618719"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304664"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Enriquecer perfis de clientes com dados personalizados (pré-visualização)
 
@@ -45,8 +45,6 @@ Para configurar a importação personalizada do SFTP, devem ser cumpridos os seg
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Captura de ecrã ao introduzir a localização dos dados.":::
 
-1. Selecione **Seguinte** e escolha o conjunto de dados do cliente. Isto pode ser todos os perfis de clientes ou um segmento.
-
 1. Selecione **Seguinte** e forneça um nome para o enriquecimento e um nome para a entidade de saída. 
 
 1. Selecione **Guardar enriquecimento** depois de rever as suas escolhas.
@@ -66,7 +64,7 @@ Tens de ser um administrador para configurar ligações. Selecione **Adicionar l
 1. Uma vez concluída a verificação, a ligação pode ser guardada selecionando **Guardar**.
 
    > [!div class="mx-imgBorder"]
-   > ![Página de configuração da ligação à Experian.](media/enrichment-SFTP-connection.png "Página de configuração da ligação à Experian")
+   > ![Página de configuração da ligação à Experian](media/enrichment-SFTP-connection.png "Página de configuração da ligação à Experian")
 
 
 ## <a name="defining-field-mappings"></a>Definir mapeamentos de campo 
@@ -125,6 +123,6 @@ Pode aceder a uma visão detalhada de cada perfil enriquecido selecionando **Ver
 
 ## <a name="next-steps"></a>Passos seguintes
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Desenvolva a partir dos seus dados de clientes melhorados. Crie [segmentos](segments.md), [medidas](measures.md) e [exporte os dados](export-destinations.md) para fornecer experiências personalizadas aos seus clientes.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

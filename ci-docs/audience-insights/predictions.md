@@ -1,7 +1,7 @@
 ---
 title: Dados parciais completos utilizando previsões
 description: Utilizar previsões para preencher os dados incompletos dos clientes.
-ms.date: 11/01/2021
+ms.date: 05/05/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,17 +9,16 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3100acf383d85c00a6ff0a8ebc54e038bd813427
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732439"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692541"
 ---
-# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Complete os seus dados parciais com previsões (preterido)
+# <a name="complete-your-partial-data-with-predictions"></a>Concluir os seus dados parciais com predições
 
-> [!IMPORTANT]
-> Esta funcionalidade será **preterida** a partir de **5 de novembro de 2021**. As implementações atuais continuarão a funcionar até que a funcionalidade seja removida, mas não poderá criar novas integrações utilizando as instruções abaixo.
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 As predições permitem criar facilmente valores previstos que podem melhorar a sua compreensão de um cliente. Na página **Inteligência** > **Predições**, pode selecionar **As minhas predições** para ver as predições que configurou noutras partes das informações de audiência, e pode personalizá-las ainda mais.
 
@@ -36,7 +35,7 @@ Antes de a sua organização poder utilizar a funcionalidade de predições, dev
 
 2. O seu ambiente de informações de audiência está ligado à sua instância do Dataverse.
 
-Para obter mais informações, consulte [Criar um novo ambiente](create-environment.md).
+Se [criar um novo ambiente](get-started-paid.md), configure-o na caixa de diálogo **Criar um ambiente** e selecione **Avançadas**. Se já tiver criado um ambiente, aceda às respetivas definições e **selecione** avançado. De qualquer forma, na secção **Usar predições**, introduza a o URL da instância do Dataverse a que deseja anexar o seu ambiente.
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Criar uma predição na entidade de Cliente
 
@@ -61,8 +60,6 @@ Para obter mais informações, consulte [Criar um novo ambiente](create-environm
    > ![Exemplo a mostrar valores de campos mapeados para categorias.](media/intelligence-categorymapping.png "Exemplo a mostrar valores de campos mapeados para categorias")
 
 8. Selecione **Concluído** e a predição será processada. O processamento irá demorar algum tempo, consoante o tamanho e a complexidade dos dados. Os resultados estarão disponíveis numa nova entidade baseada no **Nome da entidade de saída** da predição que criou.
-
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Criar uma predição durante a criação de um segmento
 

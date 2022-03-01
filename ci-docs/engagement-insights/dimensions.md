@@ -4,17 +4,17 @@ description: Como criar, editar e eliminar dimensões.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 10/01/2021
+ms.date: 06/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 136da1e1265c7087d861712d34d011b09cb60ad5
-ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
+ms.openlocfilehash: b575c5e84197d76f53a722bac60c5af928c917f9671720ede1de38c4a7478be4
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623646"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034011"
 ---
 # <a name="view-and-create-dimensions"></a>Ver e criar dimensões
 
@@ -22,7 +22,7 @@ ms.locfileid: "7623646"
 
 Uma dimensão é um atributo de um evento que pode descrever, filtrar ou agrupar dados. Se estiver a realizar uma promoção de marketing no seu site, pode usar dimensões para ordenar visitantes por utilizadores novos e de regresso.  
 
-As informações de cativação incluem dimensões fornecidas com o programa (OOB) para propriedades de eventos. Os exemplos incluem:
+As informações de cativação incluem dimensões fornecidas com o programa para propriedades de eventos. Os exemplos incluem:
 
 - Nome do browser
 - Nome de página
@@ -44,21 +44,17 @@ As dimensões baseiam-se nas propriedades de eventos existentes. Quando utiliza 
 Além das dimensões geradas pelo sistema, os admins de ambientes e de áreas de trabalho podem criar dimensões personalizadas. As dimensões personalizadas baseiam-se em propriedades predefinidas de eventos base ou podem usar [propriedades personalizadas de um evento](advanced-SDK-implementation.md).
 
 1. Aceda a **Dados** > **Dimensões**.
-1. Selecione **Nova dimensão**.
+1. Selecione **Adicionar uma dimensão**.
 
    :::image type="content" source="media/add-dimension.png" alt-text="Adicionar uma dimensão a um evento.":::
 
 1. No painel **Criar uma dimensão**, selecione uma propriedade em que basear a dimensão. A lista de propriedades mostrará todas as propriedades na área de trabalho não atribuídas a uma dimensão.
-   
-   :::image type="content" source="media/create-new-dimension.png" alt-text="Crie uma nova dimensão.":::
-      
-3. Introduza um nome na caixa **Nome a apresentar**. Opcionalmente, pode adicionar uma **Descrição**.
-4. Selecione **Criar** para guardar a dimensão. Pode demorar até um minuto antes que possa utilizar a dimensão num [relatório personalizado](custom-reports.md) ou [segmento](segments.md). 
+1. Introduza um nome na caixa **Nome a apresentar**. Opcionalmente, pode adicionar uma descrição.
+1. Selecione **Criar** para guardar a dimensão. Pode demorar até um minuto antes que possa utilizar a dimensão num [relatório personalizado](custom-reports.md) ou [segmento](segments.md). 
 
 ## <a name="edit-a-dimension"></a>Editar uma dimensão
 
-Pode alterar o nome e a descrição de uma dimensão. Só pode editar dimensões criadas pelo utilizador, mas não é possível editar dimensões do sistema.
-
+Pode alterar o nome e a descrição de uma dimensão.
 
 1. Aceda a **Dados** > **Dimensões**.
 1. Selecione a dimensão que pretende eliminar.

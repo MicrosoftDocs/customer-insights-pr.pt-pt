@@ -1,7 +1,7 @@
 ---
 title: Ligar a tabelas no Microsoft Dataverse
 description: Importar dados de um data lake gerido do Microsoft Dataverse.
-ms.date: 12/06/2021
+ms.date: 07/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,25 +9,22 @@ author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
-ms.openlocfilehash: 436345d8932820eb4c517a9e9164b1377c1f62d3
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.openlocfilehash: f92d64723e6a4d2fcebdbb3758519d4bfd4aeaf4
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046439"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692588"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Conecte-se aos dados num data lake gerido do Microsoft Dataverse
 
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-
-Este artigo fornece informações sobre como os utilizadores do Dataverse podem ligar-se rapidamente a entidades analíticas num data lake gerido do Microsoft Dataverse. 
-
-> [!NOTE]
-> Tem de ser um administrador da organização do Dataverse para prosseguir e ver a lista de entidades disponíveis no data lake gerido.
+Este artigo fornece informações sobre como os utilizadores do Dataverse podem ligar-se rapidamente às suas entidades analíticas num lake gerido do Dataverse. Deve ser um administrador na organização do Dataverse para prosseguir e ver a lista de entidades disponíveis no lake gerido.
 
 ## <a name="important-considerations"></a>Considerações importantes
 
-Os dados armazenados em serviços online, como o Azure Data Lake Storage, podem ser armazenados numa localização diferente do local em que os dados são processados ou armazenados no Dynamics 365 Customer Insights. Ao importar, ou ligar a, os dados armazenados em serviços online, como o , concorda que os dados podem ser transferidos para, e armazenados com o Dynamics 365 Customer Insights. [Saber mais no Centro de Fidedignidade da Microsoft](https://www.microsoft.com/trust-center).
+Os dados armazenados em serviços online, como o Azure Data Lake Storage, podem ser armazenados numa localização diferente do local em que os dados são processados ou armazenados no Dynamics 365 Customer Insights. Ao importar, ou ligar a, os dados armazenados em serviços online, como o , concorda que os dados podem ser transferidos para, e armazenados com o Dynamics 365 Customer Insights. [Saber mais no Centro de Fidedignidade da Microsoft.](https://www.microsoft.com/trust-center)
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Ligar a um lake gerido do Dataverse
 
@@ -35,9 +32,12 @@ Os dados armazenados em serviços online, como o Azure Data Lake Storage, podem 
 
 2. Selecione **Adicionar origem de dados**.
 
-3. Selecione **Microsoft Dataverse** e selecione **Seguinte**.
+3. Selecione **Ligar ao lake gerido do Microsoft Dataverse** e selecione **Seguinte**.
 
-4. Introduza um **Nome** para a oridem de dados e, em seguida, selecione **Seguinte**. 
+4. Introduza um **Nome** para a oridem de dados e, em seguida, selecione **Seguinte**. Nomear diretrizes: 
+   - Comece com uma letra.
+   - Utilize apenas letras e números. Não são permitidos carateres especiais e espaços.
+   - Utilize entre 3 e 64 carateres.
 
 5. Forneça o **Endereço do servidor** da organização Dataverse e selecione **Iniciar sessão**.
 

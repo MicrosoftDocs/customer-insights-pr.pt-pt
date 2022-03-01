@@ -4,17 +4,17 @@ description: Utilize os relatórios disponíveis para ver a atividade em tempo r
 author: darrinw-docs
 ms.reviewer: mhart
 ms.author: darrinw
-ms.date: 10/01/2021
+ms.date: 06/18/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 5ccdcb47db597154cf79b9f2e8fc238ab75dfde9
-ms.sourcegitcommit: d9965f4bfc09391698a34042f6b44367e53819e3
+ms.openlocfilehash: cb6d9ab75b95a5f677d2267f5412a55327930987b2fc3a1a21958633a8116bd2
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/30/2021
-ms.locfileid: "7582936"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036662"
 ---
 # <a name="view-reports"></a>Ver relatórios
 
@@ -92,18 +92,12 @@ Os relatórios móveis são agrupados nas categorias de utilização em tempo re
 
 - **Localizações** mostra informações sobre utilizadores de aplicação por país, região e cidade.
 
-## <a name="filter-by-time-or-date-range"></a>Filtrar por intervalo de tempo ou datas
+## <a name="filter-by-time-or-value"></a>Filtrar por tempo ou valor
 
-Pode selecionar o intervalo de tempo ou de datas num relatório Web ou móvel para se concentrar num valor ou período de tempo. 
+Pode selecionar o período de tempo ou valor num relatório Web ou móvel para se concentrar num valor ou período de tempo. 
 
-- Para selecionar um intervalo de tempo, no canto superior direito da vista do relatório, selecione um valor da lista pendente do relatório. Também pode escolher um **Intervalo de datas fixo**. 
+- Para selecionar um período de tempo, selecione **Mais [...]** da lista pendente do relatório. A seleção do intervalo de tempo é desativada para um relatório de utilização em tempo real; o intervalo de tempo para um relatório de utilização em tempo real é "agora."
 
-  :::image type="content" source="media/filter-by-time.png" alt-text="Filtre por intervalo de tempo ou datas.":::   
-
-- Para a maioria dos relatórios, selecione um valor num gráfico ou lista para filtrar o relatório.
-
-> [!NOTE]
-> A seleção do intervalo de tempo é desativada para um relatório de utilização em tempo real; o intervalo de tempo para um relatório de utilização em tempo real é "agora."
-
+- Na maioria dos relatórios, selecione um valor num gráfico ou lista para filtrar o relatório pelo valor selecionado.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

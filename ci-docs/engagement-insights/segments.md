@@ -4,17 +4,17 @@ description: Como criar, editar e eliminar segmentos e onde utilizá-los.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 10/01/2021
+ms.date: 06/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: f6bba645a78173fb00dc75e6080f2aeda0b5a143
-ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
+ms.openlocfilehash: cedcd58373428dd35ba29ce8fdd00007257f8fa59b0d25bc584b4e832df13604
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623601"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036162"
 ---
 # <a name="view-and-create-segments"></a>Ver e criar segmentos
 
@@ -44,27 +44,22 @@ Esta secção descreve como criar um *segmento em branco* a partir do zero.
 
 1. Selecione **Novo segmento**.
 
-1. Na **Biblioteca de Recursos**, selecione o (+) ao lado do atributo pelo qual pretende filtrar. Atualmente, só é possível criar segmentos baseados em dimensões.
+1. Na **Biblioteca de recursos**, escolha o atributo pelo qual pretende filtrar. Atualmente, só é possível criar segmentos baseados em dimensões.
 
-   :::image type="content" source="media/create-new-segment.png" alt-text="Crie um novo segmento.":::
-
-1. Na secção **Regra**, escolha um operador e um valor para o atributo selecionado. As seguintes operações são suportadas.
-
-   :::image type="content" source="media/choose-operator-segment.png" alt-text="Escolha um operador para o seu novo segmento.":::
-
+1. Escolha um operador e um valor para o atributo selecionado. As seguintes operações são suportadas.
    - **é**: requer uma correspondência exata para incluir valores. Utiliza **igual a** para um valor único ou **qualquer um de** para incluir múltiplos valores.
    - **não é**: requer uma correspondência exata para excluir valores. Utiliza **igual a** para um valor único ou **qualquer um de** para incluir múltiplos valores.
    - **começa em**: uma cadeia com que os valores correspondentes começam.
    - **termina em**: uma cadeia com que os valores correspondentes terminam.
    - **contém**: uma cadeia contida em valores correspondentes.
 
-1. Para adicionar mais condições a um grupo, pode utilizar operadores lógicos. Os atributos projetados são contabilizados quando utiliza operadores definidos.
+1. Para adicionar mais condições a um grupo, poderá utilizar dois operadores lógicos. Os atributos projetados são contabilizados quando utiliza operadores definidos.
    - Operador **AND**: ambas as condições têm de ser satisfeitas como parte do processo de segmentação. Esta opção é mais útil quando define condições em diferentes entidades.
    - Operador **OR**: qualquer uma das condições tem de ser satisfeita como parte do processo de segmentação. Esta opção é mais útil quando define múltiplas condições para a mesma entidade.
 
 1. Selecione **Guardar** e dê nome ao segmento. 
 
-O segmento será listado na página **Segmentos** e pode aplicá-lo a todos os relatórios e funis na área de trabalho.
+O segmento será listado na página Segmentos e pode aplicá-lo a todos os relatórios e funis na área de trabalho.
 
 ## <a name="use-a-segment-in-a-report-or-funnel"></a>Use um segmento num relatório ou funil
 
@@ -72,7 +67,7 @@ Pode aplicar segmentos a um relatório ou a um funil para os filtrar com base na
 
 :::image type="content" source="media/segment-reports-filter.png" alt-text="Uma relatórios de visualizações de página com uma lista pendente expandida para escolher que segmentos aplicar.":::
 
-Para aplicar um segmento, abra o relatório ou funil. Selecione **+ Adicionar condição** e escolha **Filtrar por segmento**. Escolha o segmento da lista que pretende aplicar. O segmento é aplicado ao relatório. Se um gráfico não suporta o segmento, mostra um erro. Para obter mais informações, consulte [Criar e gerir relatórios de funil](funnel-reports.md).
+Para aplicar um segmento, abra o relatório ou funil. Selecione **Adicionar condição** e escolha **Filtrar por segmento**. Escolha o segmento da lista que pretende aplicar. O segmento é aplicado ao relatório. Se um gráfico não suporta o segmento, mostra um erro.
  
 Pode aplicar *até três segmentos* a um relatório ou funil.
 
@@ -96,7 +91,5 @@ Pode aplicar *até três segmentos* a um relatório ou funil.
 1. Na lista de segmentos, selecione **Mais [...]**. 
 1. Na lista pendente, escolha **Eliminar**.
 1. Selecione **Eliminar** para confirmar.
-
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
