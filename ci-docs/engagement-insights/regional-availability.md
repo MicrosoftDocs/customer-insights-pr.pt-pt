@@ -4,26 +4,26 @@ description: Saiba mais sobre as regiões e localizações geográficas para ond
 author: mkisel11
 ms.reviewer: mhart
 ms.author: mkisel
-ms.date: 09/01/2021
+ms.date: 09/28/2021
 ms.service: customer-insights
 ms.topic: article
 ms.manager: shellyha
-ms.openlocfilehash: c89637cbbe6626f95bcadb1f69831a1647f448a4
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: 82591919b44eaac8a251d7fdb148253d5cac23c3
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483311"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645415"
 ---
 # <a name="regional-availability-for-dynamics-365-customer-insights"></a>Disponibilidade regional para o Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Informações de cativação, uma capacidade do Dynamics 365 Customer Insights introduz gradualmente mais regiões onde os clientes podem optar por armazenar os seus dados. Os admins podem escolher uma região quando [criam um novo ambiente](manage-environments-workspaces.md#create-an-environment). 
+Informações de cativação, uma capacidade do Dynamics 365 Customer Insights introduz gradualmente mais regiões onde os clientes podem optar por armazenar os seus dados. Os admins podem escolher uma região quando [criam um novo ambiente](create-new-environment.md). 
 
-Quando configurar informações de cativação pela primeira vez, pode escolher a região enquanto passam pela [experiência guiada de primeira execução](quickstart.md). Posteriormente, cada novo ambiente permite-lhe escolher a região onde os dados serão armazenados.
+Quando configurar informações de cativação pela primeira vez, pode escolher a região enquanto passam pela [experiência guiada de primeira execução](quickstart.md). Posteriormente, cada novo ambiente permite-lhe escolher a região em que os dados serão armazenados.
 
-Atualmente existem duas geografias: EUA e Europa. Os utilizadores podem escolher entre a região EUA Oeste e a região Europa do Norte.
+Atualmente, suportamos as geografias dos EUA e da Europa. Os utilizadores podem escolher entre estas regiões: EUA Oeste, EUA Leste, Norte da Europa e Europa Ocidental.
 
 Uma organização pode manter ambientes em diferentes regiões. Por exemplo, o Ambiente A armazena dados nos EUA Oeste e no ambiente B na Europa do Norte.
 

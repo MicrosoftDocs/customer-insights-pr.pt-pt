@@ -1,5 +1,5 @@
 ---
-title: Predição de abandono de subscrições (contém vídeo)
+title: Predição de abandono de subscrições (Vídeo)
 description: Preveja se um cliente está em risco por ter deixado de utilizar os produtos ou serviços de subscrição da sua empresa.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: 1ef2ff642731ee1ba0a142433745fc5a5b398c88
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967715"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7904003"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Previsão de abandono de subscrição (pré-visualização)
 
@@ -77,7 +77,7 @@ A previsão de abandono de subscrição ajuda a prever se um cliente está em ri
 1. Insira o número de **Dias desde que a subscrição terminou** que o seu negócio considera um cliente em estado de abandono. Este período é tipicamente comparado a atividades empresariais como ofertas ou outros esforços de marketing tentando evitar a perda do cliente.
 1. Insira o número de **Dias para investigar o futuro para prever o abandono** para definir uma janela para prever o qual prever o abandono. Por exemplo, para prever o risco de abandono para os seus clientes nos próximos 90 dias para se alinhar com os seus esforços de retenção de marketing. Prever o risco de abandono por períodos de tempo mais longos ou mais curtos pode dificultar o processamento dos fatores do seu perfil de risco de abandono, dependendo dos requisitos específicos do seu negócio. Selecione **Seguinte** para continuar
    >[!TIP]
-   > Pode selecionar **Guardar rascunho** a qualquer momento para guardar a predição como rascunho. Vais encontrar o rascunho de previsão no separador **Minhas previsões** para continuar.
+   > Pode selecionar **Guardar e fechar** a qualquer momento para guardar a previsão como rascunho. Vais encontrar o rascunho de previsão no separador **Minhas previsões** para continuar.
 
 ### <a name="add-required-data"></a>Adicionar dados necessários
 

@@ -1,76 +1,86 @@
 ---
 title: Exportar dados Customer Insights para a Mailchimp
-description: Saiba como configurar a ligação a Mailchimp.
-ms.date: 10/26/2020
-ms.reviewer: philk
+description: Aprenda a configurar a ligação e exportar para o Mailchimp.
+ms.date: 10/08/2021
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+ms.topic: how-to
+author: pkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: edff494f6edf26a8b641cb1d788a715389ddb346
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 94a9fead56ce8c40b35d4eb41ebdc0d672798dce
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406611"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618628"
 ---
-# <a name="connector-for-mailchimp-preview"></a>Ligação para Mailchimp (pré-visualização)
+# <a name="export-segments-to-mailchimp-preview"></a>Exportar segmentos para o Mailchimp (pré-visualização)
 
 Exportar segmentos de perfis unificados de clientes para Mailchimp para criar boletins informativos e campanhas de correio eletrónico.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites-for-connection"></a>Pré-requisitos para a ligação
 
 -   Tem uma [conta Mailchimp](https://mailchimp.com/) e as correspondentes credenciais de administrador.
 -   Existem audiências na Mailchimp e os IDs correspondentes. Para mais informações, consulte [audiências da Mailchimp](https://mailchimp.com/help/create-audience/).
 -   Tem [segmentos configurados](segments.md)
 -   Os perfis unificados dos clientes nos segmentos exportados contêm um campo que representam um endereço de correio eletrónico.
 
-## <a name="connect-to-mailchimp"></a>Ligar ao Mailchimp
+## <a name="known-limitations"></a>Limitações conhecidas
 
-1. Aceda a **Administrador** > **Destinos de exportação**.
+- Até 1 milhão de perfis de clientes por exportação para o Mailchimp.
+- A exportação para a Mailchimp é limitada a segmentos.
+- A exportação de segmentos com 1 milhão de perfis de clientes pode levar até três horas. 
+- O número de perfis de clientes que pode exportar para o Mailchimp está dependente e limitado no seu contrato com o Mailchimp.
 
-1. Em **Mailchimp**, selecione **Configurar**.
+## <a name="set-up-connection-to-mailchimp"></a>Configurar ligação ao Mailchimp
 
-1. Forneça um nome reconhecível ao destino de exportação no campo **Nome a apresentar**.
+1. Aceda a **Admin** > **Ligações**.
+
+1. Selecione **Adicionar ligação** e escolha **Mailchimp** para configurar a ligação.
+
+1. Forneça um nome reconhecível à ligação no campo **Nome a apresentar**. O nome e o tipo de ligação descrevem esta ligação. Recomendamos a escolha de um nome que explique o propósito e o destino da ligação.
+
+1. Escolher quem pode utilizar esta ligação. Se não tomar nenhuma ação, a predefinição será Administradores. Para mais informações, consulte [Permitir que os contribuidores utilizem uma ligação para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Selecione **Concordo** para confirmar a **Privacidade e conformidade dos dados**.
 
-1. Introduza a sua **[ID de audiência da Mailchimp](https://mailchimp.com/help/find-audience-id/)** e selecione **Ligar** para iniciar a ligação à Mailchimp.
+1. Selecione **Ligar** para inicializar a ligação ao Mailchimp.
 
 1. Selecione **Autenticar com a Mailchimp** e forneça as suas credenciais da Mailchimp.
 
 1. Selecione **Adicione-se como utilizador de exportação** e fornecer as suas credenciais Customer Insights.
 
-   :::image type="content" source="media/export-connect-mailchimp.png" alt-text="Exportar captura de ecrã para ligação a Mailchimp":::
-
-1. Selecione **Seguinte** para configurar a exportação.
+1. Selecione **Guardar** para concluir a ligação. 
 
 ## <a name="configure-the-connector"></a>Configurar o conector
 
-1. Na secção **Correspondência de dados**, no campo **E-mail**, selecione o campo no seu perfil unificado de cliente que representa o endereço de correio eletrónico de um cliente. 
+Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Para obter mais informações, consulte [Permissões necessárias para configurar uma exportação](export-destinations.md#set-up-a-new-export).
 
-1. Opcionalmente, pode exportar o **nome próprio** e o **apelido** como campos adicionais para criar e-mails mais personalizados. Selecione **Adicionar atributo** para mapear estes campos.
+1. Aceda a **Dados**> **Exportações**.
+
+1. Para criar uma nova exportação, selecione **Adicionar destino**.
+
+1. No campo **Ligação para a exportação**, escolha uma ligação a partir da secção Mailchimp. Se não vir este nome de secção, não existem ligações deste tipo disponíveis para si.
+
+1. Introduza o seu **[ID da audiência do Mailchimp](https://mailchimp.com/help/find-audience-id/)**
+
+1. Na secção **Correspondência de dados**, no campo **E-mail**, selecione o campo que representa o endereço de e-mail de um cliente. 
+
+1. Opcionalmente, pode exportar **Nome próprio** e **Apelido** para criar e-mails mais personalizados. Selecione **Adicionar atributo** para mapear estes campos.
 
 1. Selecione os segmentos que quer exportar. Pode exportar até 1 milhão de perfis de clientes no total para a Mailchimp.
 
-   :::image type="content" source="media/export-segments-mailchimp.png" alt-text="Selecionar campos e segmentos a exportar para Mailchimp":::
-
 1. Selecione **Guardar**.
 
-## <a name="export-the-data"></a>Exportar os dados
+Guardar uma exportação não executa a exportação imediatamente.
 
-Pode [exportar dados a pedido](export-destinations.md). A exportação também será executada com cada [atualização agendada](system.md#schedule-tab). Na Mailchimp, pode agora encontrar os seus segmentos nas [audiências da Mailchimp](https://mailchimp.com/help/create-audience/).
-
-## <a name="known-limitations"></a>Limitações conhecidas
-
-- Até 1 milhão de perfis por exportar para a Mailchimp.
-- A exportação para a Mailchimp é limitada a segmentos.
-- A exportação de segmentos com um total de 1 milhão de perfis pode demorar até três horas devido a limitações do lado do fornecedor. 
-- O número de perfis que pode exportar para a Mailchimp está dependente e limitado ao seu contrato com a Mailchimp.
+A exportação é executada com cada [atualização agendada](system.md#schedule-tab). Também pode [exportar dados a pedido](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Privacidade e conformidade de dados
 
 Quando ativa Dynamics 365 Customer Insights para transmitir dados à Mailchimp, permite a transferência de dados fora dos limites de conformidade para Dynamics 365 Customer Insights, incluindo dados potencialmente sensíveis, tais como Dados Pessoais. A Microsoft transferirá tais dados sob as suas instruções, mas o utilizador é responsável por assegurar que a Mailchimp cumpre quaisquer obrigações de privacidade ou segurança que possa ter. Para obter mais informações, consulte [Declaração de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 O seu administrador Dynamics 365 Customer Insights pode remover este destino de exportação em qualquer altura para descontinuar a utilização desta funcionalidade.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

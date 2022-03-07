@@ -4,17 +4,17 @@ description: Mapear dados para criar perfis unificados de clientes.
 ms.date: 09/25/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: adkuppa
+ms.topic: tutorial
+author: adkuppa
+ms.author: adkuppa
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e98c7717f7707d43a9fd1fc6f6b0e9c49e4e7ee0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 7fc05aca61d1136f620019ee82dc6937ea39d8e5
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406642"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555137"
 ---
 # <a name="map-entities-and-attributes"></a>Mapear entidades e atributos
 
@@ -35,14 +35,14 @@ Para obter mais informações sobre o fluxo geral da unificação de dados, cons
 3. Selecione as entidades e atributos que pretende utilizar nas fases de *correspondência* e *união*. Pode selecionar os atributos exigidos individualmente a partir de uma entidade ou incluir todos os atributos de uma entidade selecionando a caixa de verificação **Incluir todos os campos** ao nível da entidade. Recomendamos que selecione pelo menos duas entidades para beneficiar do processo de unificação de dados.
 
    > [!div class="mx-imgBorder"]
-   > ![Exemplo de Adicionar entidades](media/data-manager-configure-map-add-entities-example.png "Exemplo de Adicionar entidades")
+   > ![Exemplo de Adicionar entidades.](media/data-manager-configure-map-add-entities-example.png "Exemplo de Adicionar entidades")
 
    Neste exemplo, estamos a adicionar as entidades **eCommerceContacts** e **loyCustomers**. Ao escolher estas entidades, pode obter informações sobre quais dos clientes de negócios online são membros do programa de fidelização.
    
    Pode pesquisar palavras-chave em todos os atributos e entidades para selecionar os atributos necessários que pretende mapear.
    
      > [!div class="mx-imgBorder"]
-   > ![Exemplo de campos de pesquisa](media/data-manager-configure-map-search-fields-example.png "Exemplo de campos de pesquisa")
+   > ![Exemplo de campos de pesquisa.](media/data-manager-configure-map-search-fields-example.png "Exemplo de campos de pesquisa")
 
 4. Selecione **Aplicar** para confirmar as suas seleções.
 
@@ -55,7 +55,7 @@ Depois de selecionar as suas entidades, a página **Mapa** lista as entidades se
 - **Tipo de atributo semântico**: categorias dos seus atributos, tais como endereço de e-mail ou nome. Para utilizar modelos de IA para predição inteligente de semântica, poupar tempo e melhorar a precisão, defina **Mapeamento inteligente** para **ATIVADO**. O mapeamento inteligente destaca a recomendação de semântica baseada em IA no campo **Tipo**. Se o definir como **DESATIVADO**, verá as nossas recomendações regulares de mapeamento. Pode selecionar qualquer tipo semântico da lista de opções disponíveis e anular a seleção sugerida.
 
 > [!div class="mx-imgBorder"]
-> ![Tipo de atributo e predição semântica](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Tipo de atributo e predição semântica")
+> ![Tipo de atributo e predição semântica.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Tipo de atributo e predição semântica")
 
 Também é possível adicionar um tipo semântico personalizado. Selecione o campo de tipo para um atributo e escreva o nome do tipo semântico personalizado. Desta forma, também pode alterar os tipos de atributo que foram identificados pelo sistema.
 
@@ -64,7 +64,7 @@ Todos os atributos para os quais um tipo semântico é automaticamente identific
 Os atributos que não são automaticamente mapeados para um tipo semântico são agrupados na secção **Definir dados nos campos não mapeados**. Selecione o campo de tipo semântico para os atributos não mapeados ou introduza o seu nome de atributo personalizado.
 
 > [!div class="mx-imgBorder"]
-> ![Chave primária e tipo de atributo](media/data-manager-configure-map-add-attributes.png "Chave primária e tipo de atributo")
+> ![Chave primária e tipo de atributo.](media/data-manager-configure-map-add-attributes.png "Chave primária e tipo de atributo")
 
 > [!NOTE]
 > Um campo deve mapear para o tipo semântico Person.FullName para preencher o nome do cliente no cartão de cliente. Caso contrário, os cartões do cliente serão apresentados sem nome. 
@@ -76,7 +76,7 @@ Os atributos que não são automaticamente mapeados para um tipo semântico são
 2. No painel **Editar campos**, adicione ou remova atributos e entidades. Utilize a pesquisa ou percorra para encontrar e selecionar os seus atributos e entidades de interesse. Não se pode remover um atributo ou uma entidade se já foram combinados.
 
    > [!div class="mx-imgBorder"]
-   > ![Adicionar ou remover atributos](media/configure-data-map-edit.png "Adicionar ou remover atributos")
+   > ![Adicionar ou remover atributos.](media/configure-data-map-edit.png "Adicionar ou remover atributos")
 
 3. Selecione **Aplicar**.
 
@@ -102,3 +102,6 @@ Como parte do processo de unificação dos dados, vá para a página **Correspon
 
 > [!TIP]
 > Veja o seguinte vídeo: [Introdução: Criar um Perfil de Cliente Unificado](https://youtu.be/oBfGEhucAxs).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

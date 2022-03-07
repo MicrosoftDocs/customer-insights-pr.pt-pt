@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 740d6a5a749e156414b0e80193334051b7f2632fe4d1f4291d74b99250f35bc2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
+ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035383"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "5954593"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Predição do valor vitalício do cliente (CLV) (Pré-visualização)
 
@@ -149,6 +149,7 @@ Os dados que refletem as principais interações do cliente (como Web, suporte a
 
 1. Selecione **Seguinte**.
 
+
 ### <a name="review-and-run-the-model-configuration"></a>Rever e executar a configuração do modelo
 
 1. Na passo **Rever os detalhes do modelo**, valide a configuração da predição. Pode voltar a qualquer parte da configuração de previsão selecionando **Editar** por abaixo do valor indicado. Também pode selecionar um passo de configuração a partir do indicador de progresso.
@@ -169,10 +170,11 @@ Os dados que refletem as principais interações do cliente (como Web, suporte a
 - **Estado**: estado da execução da predição.
     - **Em fila**: a predição está à espera que outros processos completem.
     - **A atualizar**: a predição está atualmente em execução para criar resultados que fluirão para a entidade de saída.
-    - **Falhou**: a execução da predição falhou. [Rever os registos](manage-predictions.md#troubleshoot-a-failed-prediction) para mais detalhes.
+    - **Falhou**: a execução da predição falhou. [Rever os registos](#troubleshoot-a-failed-prediction) para mais detalhes.
     - **Sucesso**: a predição foi bem sucedida. Selecione **Ver** sob as reticências verticais para rever os resultados predição.
 - **Editada**: a data da em que a configuração para a predição foi alterada.
 - **Última atualização**: a data em que a predição foi atualizada resulta na entidade de saída.
+
 
 ### <a name="review-prediction-results"></a>Rever os resultados da predição
 
@@ -214,8 +216,28 @@ Existem três secções primárias de dados dentro da página de resultados.
 
 - **Fatores mais influentes**: vários fatores são considerados ao criar a sua predição de CLV com base nos dados de entrada fornecidos ao modelo de IA. Cada um dos fatores tem a sua importância calculada para as previsões agregadas que um modelo cria. Pode utilizar estes fatores para ajudar a validar os resultados da sua previsão. Estes fatores também fornecem mais informações sobre os fatores mais influentes que contribuíram para a predição de CLV em todos os seus clientes.
 
-## <a name="manage-predictions"></a>Gerir predições
+## <a name="refresh-a-prediction"></a>Atualizar uma previsão
 
-É possível otimizar, resolver problemas, atualizar ou eliminar predições. Reveja um relatório de capacidade de utilização de dados de entrada para saber como tornar uma predição mais rápida e fiável. Para mais informações, consulte [Gerir predições](manage-predictions.md).
+As predições atualizam-se automaticamente na mesma [agenda em que os seus dados são atualizados](system.md#schedule-tab), como configurados nas definições. Também é possível atualizá-las manualmente.
+
+1. Aceda a **Inteligência** > **Predições** e selecione o separador **As minhas predições**.
+2. Selecione as reticências verticais ao lado da previsão que pretende atualizar.
+3. Selecione **Atualizar**.
+
+## <a name="delete-a-prediction"></a>Eliminar uma previsão
+
+A eliminação de uma predição também elimina a sua entidade de saída.
+
+1. Aceda a **Inteligência** > **Predições** e selecione o separador **As minhas predições**.
+2. Selecione as reticências verticais ao lado da previsão que pretende eliminar.
+3. Selecione **Eliminar**.
+
+## <a name="troubleshoot-a-failed-prediction"></a>Resolução de problemas de uma predição falhada
+
+1. Aceda a **Inteligência** > **Predições** e selecione o separador **As minhas predições**.
+2. Selecione as reticências verticais ao lado da predição para a qual deseja ver os registos de erros.
+3. Selecionar **Registos**.
+4. Rever todos os erros. Existem vários tipos de erros que podem ocorrer, e estes descrevem que condição causou o erro. Por exemplo, um erro que informa que não há dados suficientes para prever com precisão é, normalmente, resolvido carregando mais dados para as informações da audiência.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

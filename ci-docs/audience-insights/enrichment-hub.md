@@ -1,7 +1,7 @@
 ---
 title: Melhorar perfis unificados de clientes
 description: Utilize as capacidades para melhorar os dados dos seus clientes.
-ms.date: 09/30/2021
+ms.date: 07/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: a64bbd754d4013d0a6243074ac9f55991547be82b269047a9937b583baf98697
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673013"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032542"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquecimento para perfis de clientes (pré-visualização)
 
@@ -27,26 +27,15 @@ Nos insights de audiência, vá a **Dados** > **Melhoramento** para trabalhar co
 
 É preciso ter permissões de Contribuidor ou Administrador para criar ou editar enriquecimentos. Para mais informações, consulte [Permissões](permissions.md).
 
-No separador **Descobrir**, encontrará todas as opções de melhoramento suportadas.
-
-# <a name="individual-consumers-b-to-c"></a>[Consumidores individuais (B2C)](#tab/b2c)
+No separador **Descobrir**, encontrará os seguintes enriquecimentos:
 
 - [Marcas](enrichment-microsoft.md) fornecidas pela Microsoft
 - [Interesses](enrichment-microsoft.md) fornecidos pela Microsoft
-- [Endereços melhorados](enrichment-enhanced-addresses.md) fornecidos pela Microsoft 
-- [Informações demográficas](enrichment-experian.md) fornecidas pela Experian
-- [Dados personalizados](enrichment-SFTP-custom-import.md) através de Secure File Transfer Protocol (SFTP) 
-- [Azure Maps](enrichment-azure-maps.md) fornecido pela Microsoft
-
-# <a name="business-accounts-b-to-b"></a>[Contas empresariais (B2B)](#tab/b2b)
-
+- [Endereços melhorados](enrichment-enhanced-addresses.md) fornecidos pela Microsoft
 - [Dados da empresa](enrichment-leadspace.md) fornecidos pela Leadspace
-- [Endereços melhorados](enrichment-enhanced-addresses.md) fornecidos pela Microsoft 
-- [Dados de localização](enrichment-here.md) fornecidos pela HERE Technologies 
-- [Dados personalizados](enrichment-SFTP-custom-import.md) através de Secure File Transfer Protocol (SFTP) 
-- [Azure Maps](enrichment-azure-maps.md) fornecido pela Microsoft
-
----
+- [Informações demográficas](enrichment-experian.md) fornecidas pela Experian
+- [Dados de localização](enrichment-here.md) fornecidos pela HERE Technologies
+- [Dados personalizados](enrichment-SFTP-custom-import.md) através de Secure File Transfer Protocol (SFTP)
 
 No separador **Meus enriquecimentos**, pode ver os enriquecimentos que configurou e editar as suas propriedades.
 
@@ -68,22 +57,10 @@ Executar ou desativar vários enriquecimentos de uma só vez selecionando-os na 
 
 ## <a name="enrichments-and-connections"></a>Enriquecimentos e ligações
 
-Os enriquecimentos de terceiros são configurados através de [ligações](connections.md), que um administrador configura com credenciais e fornece consentimento para transferências de dados. As ligações podem ser utilizadas por administradores e contribuidores para configurar os melhoramentos.  
+Os enriquecimentos de terceiros são configurados através de [ligações](connections.md), que um administrador configura com credenciais e fornece consentimento para transferências de dados. A ligação pode então ser utilizada por administradores e contribuidores para configurar enriquecimentos.  
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Múltiplos enriquecimentos do mesmo tipo
 
 A entidade a enriquecer é especificada durante a configuração do enriquecimento, o que lhe permite enriquecer apenas um subconjunto dos seus perfis. Por exemplo, melhorar dados apenas para um segmento específico. Pode configurar vários enriquecimentos do mesmo tipo e reutilizar a mesma ligação. Alguns enriquecimentos terão limites ao número de enriquecimentos do mesmo tipo que podem ser criados. Os limites e a utilização atual podem ser vistos na página de **Enriquecimento**.
-
-## <a name="see-the-progress-of-the-enrichment-process"></a>Veja o progresso do processo de melhoramento
-
-Pode encontrar detalhes sobre o processamento de um melhoramento, incluindo o seu estado e potenciais problemas enquanto está a atualizar ou após uma atualização concluída. Entenda quais os processos envolvidos na atualização de um melhoramento e quanto tempo demorou a executar os processos. O estado do melhoramento é suportado para Experian, Leadspace, HERE Technologies, SFTP Import e Azure Maps.
-
-Para ver o estado do melhoramento
-
-1. Aceda a **Dados** > **Enriquecimento**. 
-1. No separador **Os meus melhoramentos**, selecione o estado de um melhoramento para abrir um painel lateral. 
-1. No painel **Detalhes do progresso**, expanda a secção **Melhoramentos**. 
-1. Sob o melhoramento do qual pretende ver o progresso, selecione **Ver detalhes**. 
-1. No painel **Detalhes da tarefa**, selecione **Mostrar detalhes** para ver os processos envolvidos na atualização do melhoramento e respetivo estado. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

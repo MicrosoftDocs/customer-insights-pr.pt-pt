@@ -1,7 +1,7 @@
 ---
 title: Pesquisar e filtrar perfis de clientes
 description: Encontre rapidamente informações sobre perfis de cliente unificados e filtre por atributos especificados.
-ms.date: 11/01/2021
+ms.date: 01/19/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,20 +9,19 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e17d745974958b73683f1f9406c5ae95f2cbcb3c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: a6131d4dddce48b0fba153bcefe5631e0d22d808
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732048"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554035"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Perfis de clientes: índice de pesquisa e de filtro
 
 O resultado da unificação dos dados dos clientes é uma entidade Perfil do Cliente que fornece uma vista unificada sobre a base de clientes total. Para [localizar informações num grupo de clientes ou num cliente específico](customer-profiles.md) rapidamente, poderá configurar as funcionalidades **Procurar** e **Filtrar** na página **Clientes**. Continue a ler para saber como os administradores podem editar a página **Índice de pesquisas e filtros**, disponível para os utilizadores fazerem pesquisas e aplicarem filtros.
 
-   :::image type="content" source="media/search-filter.png" alt-text="Filtro de pesquisa":::
-
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!div class="mx-imgBorder"]
+> ![Filtro de pesquisa.](media/search-filter.png "Filtro de pesquisa")
 
 ## <a name="add-fields-and-specify-attributes"></a>Adicionar campos e especificar atributos
 
@@ -57,11 +56,11 @@ O menu **Filtro** na página **Clientes** pode incluir um número variável de n
 
 2. Selecione **Guardar** para aplicar as alterações.
 
-3. Selecione **Executar** quando estiver pronto para aplicar as suas definições. Depois de processadas as alterações, encontra-as nos [cartões de cliente na página do Cliente](customer-profiles.md). 
+3. Selecione **Executar** quando estiver pronto para aplicar as suas definições.
 
 ## <a name="next-steps"></a>Passos seguintes
 
-Reveja a [página de perfis unificados](customer-profiles.md) para procurar perfis ou use os campos indexados para ver um subconjunto de todos os perfis unificados.
+Vá à página **Clientes** para procurar perfis de clientes ou utilize os campos indexados para ver um subconjunto de todos os perfis de clientes.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

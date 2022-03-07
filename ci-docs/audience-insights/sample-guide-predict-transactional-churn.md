@@ -2,27 +2,27 @@
 title: Guia de predição de abandono transacional
 description: Utilize este guia de amostra para experimentar o modelo de predição de abandono transacional.
 ms.date: 11/19/2020
-ms.reviewer: mhart
+ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 19befa17524aba4543f0d8a5f5f7d6f5a88b2322f1264b88fa0b31641610592a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 81540ad2f490cf566f031233543b3cb6aa838033
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7029459"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269804"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Guia de amostra de predição de abandono transacional (pré-visualização)
 
-Este guia irá guiá-lo através de um exemplo da predição de abandono transacional no Customer Insights, utilizando os dados fornecidos abaixo Todos os dados utilizados neste guia não são dados reais de clientes e fazem parte do conjunto de dados da Contoso encontrados no ambiente de *Demonstração* da sua Subscrição do Customer Insights.
+Este guia irá guiá-lo através de um exemplo da predição de abandono transacional no Customer Insights, utilizando os dados fornecidos abaixo Todos os dados utilizados neste guia não são dados reais do cliente e fazem parte do conjunto de dados Contoso que se encontram no ambiente de *Demonstração* na sua subscrição do Customer Insights.
 
 ## <a name="scenario"></a>Cenário
 
-A Contoso é uma empresa que produz café e máquinas de café de alta qualidade, que vende através do seu site Contoso Coffee. O seu objetivo é saber quais os clientes que normalmente adquirem os seus produtos regularmente deixarão de ser clientes ativos nos próximos 60 dias. Saber qual dos seus clientes os pode **abandonar** pode ajudá-los a poupar esforços de marketing, concentrando-se em mantê-los.
+Contoso é uma empresa que produz café e máquinas de café de alta qualidade, que vendem através do seu site Contoso Coffee. O seu objetivo é saber quais os clientes que normalmente adquirem os seus produtos regularmente deixarão de ser clientes ativos nos próximos 60 dias. Saber qual dos seus clientes os pode **abandonar** pode ajudá-los a poupar esforços de marketing, concentrando-se em mantê-los.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -46,7 +46,8 @@ Rever os artigos [sobre ingestão de dados](data-sources.md) e [importar origens
    - **DateOfBirth**: Data
    - **CreatedOn**: Data/Hora/Zona
 
-   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Transformar data de nascimento em data.":::
+   [!div class="mx-imgBorder"]
+   ![Transformar data de nascimento em data](media/ecommerce-dob-date.PNG "transformar data de nascimento em data")
 
 1. No campo **Nome** no painel da direita, altere o nome da sua origem de dados de **Consulta** para **eCommerceContacts**
 
@@ -108,9 +109,9 @@ Depois de ingerirmos os dados, iniciamos agora o processo **Mapear, Corresponder
 
 1. Aceda ao separador **Corresponder** e selecione **Definir encomenda**.
 
-1. Na lista pendente **Primário**, escolha **eCommerceContacts : eCommerce** como a origem primária e inclua todos os registos.
+1. Na lista pendente **Primária**, escolher **eCommerceContacts : eCommerce** como a origem primária e incluir todos os registos.
 
-1. Na lista pendente **Entidade 2**, escolha **loyCustomers : LoyaltyScheme** e inclua todos os registos.
+1. Na lista pendente **Entidade 2**, escolher **loyCustomers : LoyaltyScheme** e incluir todos os registos.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Unificar corresponder comércio eletrónico e fidelidade.":::
 
@@ -118,16 +119,16 @@ Depois de ingerirmos os dados, iniciamos agora o processo **Mapear, Corresponder
 
 1. Adicione a sua primeira condição usando FullName.
 
-   * Para eCommerceContacts, selecione **FullName** na lista pendente.
-   * Para loyCustomers, selecione **FullName** na lista pendente.
+   * Para eCommerceContacts selecione **FullName** na lista pendente.
+   * Para loyCustomers selecione **FullName** na lista pendente.
    * Selecione a lista pendente **Normalizar** e escolha **Tipo (Telefone, Nome, Morada, ...)**.
    * Definir **Nível de precisão**: **Básico** e **Valor**: **Elevado**.
 
 1. Introduzir o nome **FullName, Email** para a nova regra.
 
    * Acrescentar uma segunda condição para o endereço de correio eletrónico, selecionando **Adicionar condição**
-   * Para a entidade eCommerceContacts, escolha **E-mail** na lista pendente.
-   * Para a entidade loyCustomers, escolha **E-mail** na lista pendente. 
+   * Para a entidade eCommerceContacts, escolha **EMail** na lista pendente.
+   * Para a entidade loyCustomers, escolha **EMail** na lista pendente. 
    * Deixar em branco Normalizar. 
    * Definir **Nível de precisão**: **Básico** e **Valor**: **Elevado**.
 

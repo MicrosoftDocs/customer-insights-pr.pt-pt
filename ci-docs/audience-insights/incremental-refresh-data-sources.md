@@ -1,24 +1,22 @@
 ---
 title: Atualização incremental para origens de dados baseados em Power Query
 description: Atualizar dados novos e atualizados para grandes origens de dados baseadas no Power Query.
-ms.date: 12/06/2021
-ms.reviewer: mhart
+ms.date: 09/28/2020
+ms.reviewer: adkuppa
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: adkuppa
-ms.author: adkuppa
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.openlocfilehash: b7e834f5f2fd1328563139675d7f850008348734
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900282"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4406640"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Atualização incremental para origens de dados baseadas no Power Query
-
-Este artigo aborda a forma de configurar a atualização incremental para origens de dados baseada no Power Query.
 
 A atualização incremental para origens de dados fornece as seguintes vantagens:
 
@@ -32,9 +30,9 @@ Os insights da audiência permitem uma atualização incremental para origens de
 
 1. [Criar uma nova origem de dados baseado no Power Query](connect-power-query.md).
 
-1. Forneça um **Nome** para a origem de dados.
+1. Forneça um nome para a origem de dados.
 
-1. Selecione uma origem de dados que suporte a atualização incremental, tal como a [base de dados do Azure SQL](/power-query/connectors/azuresqldatabase).
+1. Selecione uma origem de dados que suporte a atualização incremental, tal como a base de dados SQL do Azure.
 
 1. Selecione as entidades ou tabelas a ingerir.
 
@@ -46,7 +44,8 @@ Os insights da audiência permitem uma atualização incremental para origens de
 
 1. Nas **Definições de atualização incremental**, irá configurar a atualização incremental para todas as entidades que tiver selecionado ao criar a origem de dados.
 
-   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="Configurar entidades numa origem de dados para atualização incremental.":::
+   > [!div class="mx-imgBorder"]
+   > ![Configurar entidades numa origem de dados para atualização incremental](media/incremental-refresh-settings.png "Configurar entidades numa origem de dados para atualização incremental")
 
 1. Selecione uma entidade e forneça os seguintes detalhes:
 
@@ -55,6 +54,3 @@ Os insights da audiência permitem uma atualização incremental para origens de
    - **Pesquisar atualizações a cada**: especifique o intervalo de tempo pretendido da atualização incremental.
 
 1. Selecione **Guardar** para concluir a criação do origem de dados. A atualização de dados inicial será uma atualização completa. Posteriormente, a atualização de dados incremental acontece conforme configurado no passo anterior.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

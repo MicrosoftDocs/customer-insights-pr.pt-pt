@@ -1,22 +1,22 @@
 ---
-title: Criar uma nova área de trabalho
-description: A finalidade de uma área de trabalho e como criar uma nova.
+title: Criar uma área de trabalho
+description: O propósito de uma área de trabalho e como criar uma.
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 10/01/2021
+ms.date: 06/18/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 816f948331a06794c15000eb779f93cc7fdda202
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 38c817c169ce7986c73fb46fa14a9a8352a218d359cdcb2fa822a34303ff5ecc
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645324"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034146"
 ---
-# <a name="create-a-new-workspace-and-add-members"></a>Criar uma nova área de trabalho e adicionar membros
+# <a name="create-the-first-workspaces-and-add-members"></a>Crie as primeiras áreas de trabalho e adicione membros
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -24,7 +24,7 @@ Uma área de trabalho é como pode ver a atividade do utilizador em tempo real p
 
 Quando cria uma área de trabalho, seleciona o tipo de dados em que se pretende focar. Pode adicionar outros utilizadores ou membros a uma área de trabalho existente a qualquer momento. 
 
-## <a name="create-a-new-workspace"></a>Criar uma nova área de trabalho
+## <a name="create-a-workspace"></a>Criar uma área de trabalho
 
 O processo de criação de uma área de trabalho inclui a criação do *ambiente* para organizar a sua área de trabalho. Um ambiente é um espaço que pode conter uma ou mais áreas de trabalho. Pode utilizar um ambiente para gerir as suas áreas de trabalho e ligações à capacidade de informações de audiência do Customer Insights.
 
@@ -32,25 +32,13 @@ O processo de criação de uma área de trabalho inclui a criação do *ambiente
 
    :::image type="content" source="media/new-workspace.png" alt-text="Página do Customer Insights com chamada no painel de navegação e descrição.":::
 
-1. No painel **Área de trabalho**, introduza um **Nome da área de trabalho**.
-
-   :::image type="content" source="media/workspace-name.png" alt-text="Digite um nome da área de trabalho.":::
-
-1. Escolha o tipo de plataforma (Web ou móvel) que pretende medir.
-
-1. Selecione **Mostrar definições avançadas** para ativar ou desativar estas definições opcionais:
-
-   - Alterne **Desconhecido para conhecido** como "ativado" para associar eventos Web a utilizadores que foram anteriormente autenticados. Para mais informações, consulte [Reconhecer eventos Web de visitantes anteriormente autenticados](unknown-to-known.md)
-   - Alterne **Filtrar tráfego de bots** para "ativado" para remover o tráfego Web por bots para esta área de trabalho. 
-
-1. Selecione **Concluído** quando tiver concluído. 
-
-1. Instale o fragmento de código para começar a receber dados e, em seguida, selecione **Concluir** para criar a área de trabalho. Para mais informações, consulte [Descrição geral para programadores](developer-resources.md).
-
-> [!NOTE]
-> Agora pode adicionar membros e atribuir o seu nível de permissão na lista **Função**. Para obter mais informações, veja [Funções e permissões](user-roles.md). 
+1. Escolha o ambiente na lista ou selecione **Criar novo ambiente**.
+1. Introduza um **nome de área de trabalho**.
+1. Escolher a plataforma que pretende medir.
+1. Selecione **Concluir** quando tiver terminado. 
+1. Pode adicionar membros e atribuir o seu nível de permissão na lista de **Funções**. Para obter mais informações, veja [Funções e permissões](user-roles.md). Em seguida, selecione **Terminar** para criar a área de trabalho ou **Seguinte** para instalar código.
+1. Instale o fragmento de código para começar a receber dados e, em seguida, selecione **Concluído**.
 
 Para obter mais informações, consulte [Gerir ambientes e áreas de trabalho](manage-environments-workspaces.md).
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

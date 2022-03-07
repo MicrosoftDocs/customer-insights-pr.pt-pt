@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896341"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554632"
 ---
 # <a name="customer-profiles"></a>Perfis de cliente
 
@@ -23,7 +23,7 @@ A página **Clientes** mostra uma visão combinada dos seus clientes, com base e
 Os clientes podem ser indivíduos ou organizações (Pré-visualização). Cada perfil de cliente ou organização é representado por um mosaico. Selecione um mosaico para ver informações adicionais sobre esse cliente ou organização específica. Utilize os controlos de paginação na parte inferior da página para ver registos adicionais.
 
 > [!div class="mx-imgBorder"] 
-> ![Perfis de cliente B2C](media/profiles-customers.png "Perfis de cliente B2C")
+> ![Perfis de cliente B2C.](media/profiles-customers.png "Perfis de cliente B2C")
 
 Organizações (Pré-visualização)
 > [!div class="mx-imgBorder"] 
@@ -47,7 +47,7 @@ Poderá filtrar os clientes pelos campos da entidade Perfil de Cliente. Semelhan
 2. Marque as caixas junto aos atributos pelos quais pretende filtrar os clientes.
 
    > [!div class="mx-imgBorder"] 
-   > ![Perfis de cliente](media/profiles-customers3.png "Perfis de cliente")
+   > ![Perfis de cliente.](media/profiles-customers3.png "Perfis de cliente")
 
 3. Retire os seus filtros, selecionando **Limpar filtros** na página **Clientes**.
 
@@ -57,13 +57,13 @@ Selecione qualquer um dos mosaicos do cliente para abrir a **Página de detalhes
 
 Detalhes do cliente incluem:
 
--   **Mosaico de perfil de cliente:** Este mosaico mostra os diferentes valores da entidade unificada de perfil de cliente. Estes detalhes podem incluir endereço de e-mail, nome, cidade, e assim por diante. 
+-   **Mosaico de perfil de cliente**: este mosaico mostra os diferentes valores da entidade unificada de perfil de cliente. Estes detalhes podem incluir endereço de e-mail, nome, cidade, e assim por diante. 
 
--   **Potenciais interesses, potenciais marcas:** Mostra se foi configurado um enriquecimento de primera parte. Representa interesses e afinidades potenciais para marcas que um cliente com um perfil semelhante a este cliente possa ter. Para mais informações, consulte [Enriquecer perfis de clientes com afinidades de marca e interesse](enrichment-microsoft.md).
+-   **Potenciais interesses, potenciais marcas**: mostra se foi configurado um melhoramento de primeira parte. Representa interesses e afinidades potenciais para marcas que um cliente com um perfil semelhante a este cliente possa ter. Para mais informações, consulte [Enriquecer perfis de clientes com afinidades de marca e interesse](enrichment-microsoft.md).
 
--   **Medidas:** Mostra se configurou uma ou mais medidas de um tipo específico: medidas de atributos do cliente. Incluem os KPIs calculados em torno dos seus clientes a nível do cliente individual. Para mais informações, consulte [Definir e gerir medidas](measures.md).
+-   **Medidas**: mostra se configurou uma ou mais medidas de um tipo específico: medidas de atributos do cliente. Incluem os KPIs calculados em torno dos seus clientes a nível do cliente individual. Para mais informações, consulte [Definir e gerir medidas](measures.md).
 
--   **Cronologia da actividade:** Mostra se tem atividades configuradas. A vista da cronologia contém as atividades deste cliente ordenadas cronologicamente, começando pela atividade mais recente. Para mais informações, veja [Atividades de cliente](activities.md).
+-   **Cronologia da atividade**: mostra se tem atividades configuradas. A vista da cronologia contém as atividades deste cliente ordenadas cronologicamente, começando pela atividade mais recente. Para mais informações, veja [Atividades de cliente](activities.md).
 
 Selecione **Voltar aos clientes** para voltar à página de pesquisa de clientes.
 

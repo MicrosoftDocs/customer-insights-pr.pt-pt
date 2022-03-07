@@ -1,97 +1,116 @@
 ---
-title: Destinos de exportação
-description: Exportar dados e gerir destinos de exportação.
-ms.date: 07/21/2020
-ms.reviewer: philk
+title: Exportar dados do Customer Insights
+description: Gerir exportações para partilhar dados.
+ms.date: 06/14/2021
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: pkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 9032d99357db86e66588eda544211a5f8eb2f23b
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
+ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643877"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6253054"
 ---
-# <a name="export-destinations-preview"></a>Destinos de exportação (pré-visualização)
+# <a name="exports-preview-overview"></a>Descrição geral de exportações (pré-visualização)
 
-A página **Exportar destinos** mostra-lhe todos os locais que configurou para onde exportar dados. Também pode adicionar novos destinos para exportação. Além disso, mostra as opções de exportação atualmente disponíveis. Obtenha uma descrição geral rápida e saiba o que pode fazer com cada opção de extensibilidade. Exporte perfis, medidas e segmentos unificados para aplicações suportadas relevantes para o seu negócio.
+A página **Exportações** mostra todas as exportações configuradas. As exportações partilham dados específicos com várias aplicações. Podem incluir perfis de clientes ou entidades, esquemas e detalhes de mapeamento. Cada exportação requer uma [ligação, configurada por um administrador, para gerir a autenticação e o acesso](connections.md).
 
-Aceda a **Administração** > **Exportar destinos** para localizar as seguintes opções de extensibilidade:
+Vá a **Dados** > **Exportações** para ver a página de exportações. Todas as funções de utilizador têm acesso a ver exportações configuradas. Utilização do campo de pesquisa na barra de comandos para encontrar exportações pelo nome, nome da ligação ou tipo de ligação.
 
-- [Suplemento de Cartões de Clientes do Dynamics 365](customer-card-add-in.md)
-- [Conector Gestor de Anúncios do Facebook](export-facebook.md)
-- [Conector do Power Automate](export-power-automate.md)
-- [Conector do Power Apps](export-power-apps.md)
-- [Conector do Power BI](export-power-bi.md)
-- [DotDigital](export-dotdigital.md)
-- [Vendas do Dynamics 365](export-dynamics365-sales.md)
-- [Dynamics 365 Marketing](export-dynamics365-marketing.md)
-- [Armazenamento de Blobs do Azure](export-azure-blob-storage.md)
-- [Conector do LiveRamp&reg;](export-liveramp.md)
-- [Bot para o Microsoft Teams](export-teams-bot.md)
-- [Mailchimp](export-mailchimp.md)
-- [API do Customer Insights](apis.md)
+## <a name="set-up-a-new-export"></a>Configurar uma nova exportação
 
-## <a name="add-a-new-export-destination"></a>Adicionar um novo destino de exportação
+Para configurar ou editar uma exportação, precisa de ter ligações disponíveis para si. As ligações dependem da sua [função de utilizador](permissions.md):
+- Os administradores têm acesso a todas as ligações. Podem também criar novas ligações ao configurar uma exportação.
+- Os contribuidores podem ter acesso a ligações específicas. Dependem dos administradores para configurar e partilhar ligações. A lista de exportações mostra aos contribuidores se podem editar ou apenas ver uma exportação na coluna **As suas permissões**. Para mais informações, consulte [Permitir que os contribuidores utilizem uma ligação para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- Os visualizadores só podem ver exportações existentes, mas não criá-las.
 
-Para adicionar destinos de exportação, tem [permissões de administrador](permissions.md). Se exportar para serviços da Microsoft, vamos supor que ambos os serviços estão na mesma organização.
+### <a name="define-a-new-export"></a>Definir uma nova exportação
 
-1. Aceda a **Administrador** > **Destinos de exportação**.
+1. Aceda a **Dados** > **Exportações**.
 
-1. Alterne para o separador **Os meus destinos de exportação**.
+1. Selecione **Adicionar exportação** para criar um nova exportação.
 
-1. Selecione **Adicionar destino** para criar um novo destino de exportação.
+1. No painel **Configurar exportação**, selecione que ligação utilizar. As [Ligações](connections.md) são geridas por administradores. 
 
-1. No painel **Adicionar destino**, selecione o **Tipo** de destino de exportação na lista pendente.
+1. Forneça os detalhes necessários e selecione **Guardar** para criar a exportação.
 
-1. Forneça os detalhes necessários e selecione **Seguinte** para criar o destino de exportação.
+### <a name="define-a-new-export-based-on-an-existing-export"></a>Defina uma nova exportação com base numa exportação existente
 
-Também pode selecionar **Configurar** num mosaico no separador **Descobrir**.
+1. Aceda a **Dados** > **Exportações**.
 
-## <a name="view-export-destinations"></a>Ver Destinos de exportação
+1. Na lista de exportações, selecione a exportação que pretende duplicar.
 
-Depois de criar os destinos de exportação, irá encontrá-los numa tabela no separador **Os meus destinos de exportação**. Esta tabela tem três colunas:
+1. Selecione **Criar duplicado** na barra de comandos para abrir o painel **Configurar exportação** com os detalhes da exportação selecionada.
 
-- **Nome a apresentar**: o nome que introduziu ao criar o destino.
-- **Tipo**: o tipo de destino de exportação que definiu ao criar o destino.
-- **Criado em**: a data de criação do destino.
+1. Reveja e adapte a exportação e selecione **Guardar** para criar uma nova exportação.
 
-## <a name="edit-an-export-destination"></a>Editar um destino de exportação
+### <a name="edit-an-export"></a>Editar uma exportação
 
-1. Selecione as reticências verticais do destino de Exportação que pretende editar.
+1. Aceda a **Dados** > **Exportações**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Reticências verticais](media/export-destinations-page-ellipsis.png "Reticências verticais")
+1. Na lista de exportações, selecione a exportação que pretende editar.
 
-1. Selecione **Editar** no menu pendente.
+1. Selecione **Editar** na barra de comandos.
 
-1. Altere os valores que necessitam de atualização e selecione **Guardar**.
+1. Altere os valores que pretende atualizar e selecione **Guardar**.
 
-## <a name="export-data-on-demand"></a>Exportar dados a pedido
+## <a name="view-exports-and-export-details"></a>Ver exportações e detalhes da exportação
 
-Depois de configurar um conector para um destino de exportação, as exportações serão executadas com cada [atualização agendada](system.md#schedule-tab).
+Depois de criar destinos de exportação, são listados em **Dados** > **Exportações**. Todos os utilizadores podem ver que dados são partilhados e o respetivo estado mais recente.
 
-Para exportar dados sem aguardar uma atualização agendada, vá para o separador **Os meus destinos de exportação** em **Administrador** > **Destinos de exportação**.
+1. Aceda a **Dados** > **Exportações**.
 
-> [!div class="mx-imgBorder"]
-> ![Reticências verticais](media/export-destinations-page-ellipsis.png "Reticências verticais")
+1. Os utilizadores sem permissões de edição selecionam **Ver** em vez de **Editar** para ver os detalhes da exportação.
 
-- Selecione **Exportar** acima da lista para executar a exportação para todos os destinos de exportação simultaneamente.
-- Selecione as reticências (...) à frente de um item de lista e, em seguida, escolha a opção **Exportar** para executar a exportação para um único destino de exportação.
+1. O painel lateral mostra a configuração de uma exportação. Sem permissões de edição, não é possível alterar valores. Selecione **Fechar** para regressar à página de exportações.
 
-## <a name="remove-an-export-destination"></a>Remover um destino de Exportação
+## <a name="schedule-and-run-exports"></a>Agendar e executar exportações
 
-Para remover um destino de Exportação, inicie a partir da página principal **Exportar destinos**.
+Cada exportação que configura tem uma agenda de atualização. Durante uma atualização, o sistema procura dados novos ou atualizados a incluir numa exportação. Por predefinição, as exportações são executadas como parte de cada [atualização de sistema agendada](system.md#schedule-tab). Pode personalizar a agenda de atualização ou desativá-la para executar exportações manualmente.
 
-1. Selecione as reticências verticais do destino de Exportação que pretende remover.
+As agendas de exportação dependem do estado do seu ambiente. Se existirem atualizações sobre [dependências](system.md#refresh-policies) em curso quando uma exportação agendada deve começar, o sistema completará primeiro as dependências e, em seguida, executará a exportação. Pode ver quando uma exportação foi atualizada pela última vez na coluna **Atualizadas**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Reticências verticais](media/export-destinations-page-ellipsis.png "Reticências verticais")
+### <a name="schedule-exports"></a>Agendar exportações
 
-2. Selecione **Remover** no menu pendente.
+Pode definir agendas de atualização personalizadas para exportações individuais ou várias exportações ao mesmo tempo. A agenda atualmente definida está listada na coluna **Agenda** da lista de exportação. A permissão para alterar a agenda é a mesma que para [editar e definir exportações](export-destinations.md#set-up-a-new-export). 
 
-3. Confirme a remoção selecionando **Remover** no ecrã de confirmação.
+1. Aceda a **Dados** > **Exportações**.
+
+1. Selecione a exportação que pretende agendar.
+
+1. Selecione **Agendar** na barra de comandos.
+
+1. No painel **Agendar exportação**, defina **Agendar execução** para **Ativada** para executar a exportação automaticamente. Defina-a como **Desativada** para a atualizar manualmente.
+
+1. Para exportações automaticamente atualizadas, escolha um valor de **Periodicidade** e especifique os respetivos detalhes. O tempo definido aplica-se a todas as instâncias de periodicidade. É o momento em que uma exportação deve começar a atualizar.
+
+1. Aplique e ative as suas alterações selecionando **Guardar**.
+
+Ao editar a agenda para várias exportações, precisa de fazer uma seleção sob **Manter ou substituir agendas**:
+- **Manter agendas individuais**: persiste a agenda previamente definida para as exportações selecionadas e apenas as desativa ou ativa.
+- **Definir nova agenda para todas as exportações selecionadas**: substitui as agendas existentes das exportações selecionadas.
+
+### <a name="run-exports-on-demand"></a>Executar exportações a pedido
+
+Para exportar dados sem esperar por uma atualização agendada, vá a **Dados** > **Exportações**.
+
+- Para executar todas as exportações, selecione **Executar todas** na barra de comandos. Esta ação só irá executar exportações que tenham uma agenda ativa.
+- Para executar uma única exportação, selecione-a na lista e selecione **Executar** na barra de comandos. É assim que se executam exportações sem agenda ativa. 
+
+## <a name="remove-an-export"></a>Remover uma Exportação
+
+1. Aceda a **Dados** > **Exportações**.
+
+1. Selecione a exportação que deseja remover.
+
+1. Selecione **Remover** na barra de comandos.
+
+1. Confirme a remoção selecionando **Remover** no ecrã de confirmação.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

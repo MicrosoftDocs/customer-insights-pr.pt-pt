@@ -2,19 +2,19 @@
 title: Predição de abandono transacional
 description: Preveja se um cliente está em risco por ter deixado de comprar os seus produtos ou serviços.
 ms.date: 11/12/2020
-ms.reviewer: zacook
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+ms.topic: how-to
+author: zacookmsft
+ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f3cbbf99a6cecba2aab2cf85428d53e5df8346e4
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: f120e9e3cf8d40d913c7fa6a81fbf9facd045e3c
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644417"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597203"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Predição de abandono transacional (pré-visualização)
 
@@ -96,6 +96,8 @@ A previsão de abandono transacional ajuda a prever se um cliente não comprará
 1. Opcionalmente, selecione **Adicionar dados** para **Atividades do cliente**. Escolher a entidade que fornece a informação sobre a atividade do cliente, tal como descrito nos pré-requisitos.
 
 1. Mapear os campos semânticos a atributos dentro da sua entidade de atividade do cliente e selecione **Seguinte**. Para descrições dos campos, veja os [pré-requisitos](#prerequisites).
+
+   :::image type="content" source="media/map-transaction-data-fields.png" alt-text="Mapear campos de clientes para dados transacionais.":::
 
 1. Selecione um tipo de atividade que corresponda ao tipo de atividade do cliente que está a configurar. Selecione **Criar novo** e escolher um tipo de atividade disponível ou criar um novo tipo.
 
@@ -185,3 +187,6 @@ A eliminação de uma predição também elimina a sua entidade de saída.
 1. Selecione as reticências verticais ao lado da previsão que pretende eliminar.
 
 1. Selecione **Eliminar**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

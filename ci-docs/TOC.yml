@@ -2,8 +2,6 @@
   href: index.yml
 - name: Descrição geral do produto
   href: overview.md
-- name: Criar uma avaliação
-  href: audience-insights/get-started-trial.md
 - name: Aceder ao seu ambiente
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Informações de Audiência
@@ -12,16 +10,12 @@
       href: audience-insights/index.yml
     - name: Descrição geral das capacidades
       href: audience-insights/overview.md
+    - name: Avaliação Gratuita
+      href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
     - name: Funcionalidades novas e atualizadas
       href: audience-insights/whats-new-audience-insights.md
-    - name: Introdução
-      items:
-        - name: Guia de início rápido
-          href: audience-insights/get-started.md
-        - name: Criar um novo ambiente
-          href: audience-insights/get-started-paid.md
-        - name: Explorar informações de audiência
-          href: audience-insights/home.md
+    - name: Criar um novo ambiente
+      href: audience-insights/home.md
     - name: Módulos de aprendizagem
       items:
         - name: Ingerir dados
@@ -40,8 +34,8 @@
           href: audience-insights/connect-power-query.md
         - name: Adicionar uma pasta Common Data Model como uma origem de dados
           href: audience-insights/connect-common-data-model.md
-        - name: Adicionar data lake gerido pelo Dataverse
-          href: audience-insights/connect-dataverse-managed-lake.md
+        - name: Adicionar data lake gerido pelo Common Data Service
+          href: audience-insights/connect-common-data-service-lake.md
         - name: Atualização incremental para origens de dados
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Ingestão de dados em tempo real
@@ -72,80 +66,58 @@
           href: audience-insights/enrichment-hub.md
         - name: Afinidades de marcas e interesses
           href: audience-insights/enrichment-microsoft.md
-        - name: Endereços melhorados
-          href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Melhorar com o Azure Maps
-          href: audience-insights/enrichment-azure-maps.md
         - name: Melhorar com a HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: Enriqueça com o Leadspace
           href: audience-insights/enrichment-leadspace.md
-        - name: Melhorar com a Experian
+        - name: Enriqueça com o Experian
           href: audience-insights/enrichment-experian.md
         - name: Melhorar com a importação personalizada SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
-    - name: Segmentos
+    - name: Segmentos e medidas
       items:
-        - name: Descrição geral dos segmentos
+        - name: Criar segmentos e grupos de clientes
           href: audience-insights/segments.md
-        - name: Criar segmentos
-          href: audience-insights/segment-builder.md
-        - name: Segmentos sugeridos baseados em medidas
-          href: audience-insights/suggested-segments.md
-        - name: Segmentos sugeridos baseados em atividades
-          href: audience-insights/suggested-segments-activity.md
         - name: Obtenha informações sobre segmentos
           href: audience-insights/segment-insights.md
+        - name: Ver segmentos sugeridos
+          href: audience-insights/suggested-segments.md
         - name: Encontrar clientes semelhantes
           href: audience-insights/find-similar-customer-segments.md
-    - name: Medidas
-      items:
         - name: Definir medidas e KPIs
           href: audience-insights/measures.md
     - name: Predições
       items:
-        - name: Prever dados com a ajuda da IA
-          items:
-            - name: Descrição geral dos modelos de predição
-              href: audience-insights/predictions-overview.md
-            - name: Prever valor vitalício do cliente (CLV)
-              href: audience-insights/predict-customer-lifetime-value.md
-            - name: Prever recomendações de produtos
-              href: audience-insights/predict-product-recommendation.md
-            - name: Prever o abandono de subscrições
-              href: audience-insights/predict-subscription-churn.md
-            - name: Prever abandono transacional
-              href: audience-insights/predict-transactional-churn.md
-            - name: Utilize modelos personalizados do Azure Machine Learning
-              href: audience-insights/custom-models.md
-            - name: Complete dados parcialmente em falta
-              href: audience-insights/predictions.md
-        - name: Guias de exemplo
-          items:
-            - name: Guia de exemplo para predição CLV
-              href: audience-insights/sample-guide-predict-clv.md
-            - name: Guia de amostra para predição de abandono da subscrição
-              href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Guia de amostra para predição de abandono transacional
-              href: audience-insights/sample-guide-predict-transactional-churn.md
-            - name: Guia de exemplos para predição de recomendações de produtos
-              href: audience-insights/sample-guide-predict-product-recommendation.md
-            - name: Experimentações com o Azure Machine Learning
-              href: audience-insights/azure-machine-learning-experiments.md
-            - name: Experiências com o Azure Machine Learning studio
-              href: audience-insights/machine-learning-studio-experiments.md
-        - name: Gerir predições
-          href: audience-insights/manage-predictions.md
+        - name: Dados de conclusão utilizando previsões de valor
+          href: audience-insights/predictions.md
+        - name: Prever o abandono de subscrições
+          href: audience-insights/predict-subscription-churn.md
+        - name: Guia de amostra para predição de abandono da subscrição
+          href: audience-insights/sample-guide-predict-subscription-churn.md
+        - name: Prever abandono transacional
+          href: audience-insights/predict-transactional-churn.md
+        - name: Guia de amostra para predição de abandono transacional
+          href: audience-insights/sample-guide-predict-transactional-churn.md
+        - name: Prever valor vitalício do cliente (CLV)
+          href: audience-insights/predict-customer-lifetime-value.md
+        - name: Prever recomendações de produtos
+          href: audience-insights/predict-product-recommendation.md
+        - name: Guia de exemplos para predição de recomendações de produtos
+          href: audience-insights/sample-guide-predict-product-recommendation.md
         - name: Criar segmentos com base em predições
           href: audience-insights/prediction-based-segment.md
+        - name: Implementar modelos de aprendizagem automática personalizados
+          href: audience-insights/custom-models.md
+        - name: Experimentações com o Azure Machine Learning
+          href: audience-insights/azure-machine-learning-experiments.md
+        - name: Experiências com o Azure Machine Learning studio
+          href: audience-insights/machine-learning-studio-experiments.md
     - name: Opções de exportação
       items:
         - name: Exportações
           items:
-            - name: Descrição geral de exportações
+            - name: Descrição geral de exportações (pré-visualização)
               href: audience-insights/export-destinations.md
-            - name: Campanha Ativa
-              href: audience-insights/export-active-campaign.md
             - name: AdRoll
               href: audience-insights/export-adroll.md
             - name: Autopilot
@@ -154,11 +126,9 @@
               href: audience-insights/export-azure-blob-storage.md
             - name: Azure Data Lake Storage Gen2
               href: audience-insights/export-azure-data-lake-storage-gen2.md
-            - name: Azure Synapse Analytics
-              href: audience-insights/export-azure-synapse-analytics.md
             - name: Adobe Campaign Standard
               href: audience-insights/export-adobe-campaign-standard.md
-            - name: Adobe Experience Platform
+            - name: Plataforma de Experiência do Adobe
               href: audience-insights/export-adobe-experience-platform.md
             - name: Campaign Monitor
               href: audience-insights/export-campaign-monitor.md
@@ -174,35 +144,25 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
-            - name: Klaviyo
-              href: audience-insights/export-klaviyo.md
-            - name: LinkedIn Ads
-              href: audience-insights/export-linkedin-ads.md
             - name: LiveRamp
               href: audience-insights/export-liveramp.md
             - name: Mailchimp
               href: audience-insights/export-mailchimp.md
             - name: Marketo
               href: audience-insights/export-marketo.md
-            - name: Microsoft Advertising
-              href: audience-insights/export-microsoft-advertising.md
-            - name: Omnisend
-              href: audience-insights/export-omnisend.md
             - name: RollWorks
               href: audience-insights/export-rollworks.md
-            - name: Marketing Cloud da Salesforce
-              href: audience-insights/export-salesforce.md
             - name: SendGrid
               href: audience-insights/export-sendgrid.md
-            - name: SendInBlue
-              href: audience-insights/export-sendinblue.md
             - name: Snapchat
               href: audience-insights/export-snapchat.md
             - name: SFTP
               href: audience-insights/export-sftp.md
         - name: Outras utilizações
           items:
-            - name: Suplemento de Cartões de Cliente para Dynamics 365
+            - name: Dynamics 365 Customer Service (Suplemento)
+              href: audience-insights/customer-card-add-in.md
+            - name: Hub do Dynamics 365 Sales (Suplemento)
               href: audience-insights/customer-card-add-in.md
             - name: Microsoft Teams (bot)
               href: audience-insights/export-teams-bot.md
@@ -218,7 +178,7 @@
           href: audience-insights/system.md
         - name: Atribuir permissões de utilizador
           href: audience-insights/permissions.md
-        - name: Descrição geral das ligações
+        - name: Descrição geral das ligações (pré-visualização)
           href: audience-insights/connections.md
         - name: Gerir vários ambientes
           href: audience-insights/manage-environments.md
@@ -232,34 +192,36 @@
           href: audience-insights/integrate-engagement-insights.md
         - name: Rever os esquemas de entidade no Common Data Model
           href: audience-insights/entity-schemas.md
-        - name: Dados do Customer Insights no Dataverse
-          href: audience-insights/customer-insights-dataverse.md
         - name: Trabalhar com APIs
           href: audience-insights/apis.md
         - name: Referências API
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-- name: Informações de Interação (pré-visualização)
+    - name: Limites de serviço
+      href: audience-insights/service-limits.md
+    - name: Pedidos de DSR em RGPD
+      href: audience-insights/gdpr.md
+- name: Informações de interação (pré-visualização)
   items:
     - name: Centro de ajuda
       href: engagement-insights/index.yml
-    - name: Acerca das informações de cativação
+    - name: Descrição geral das capacidades
       href: engagement-insights/overview.md
+    - name: Avaliação Gratuita
+      href: 'https://pi.dynamics.com/'
     - name: Introdução
       items:
-        - name: Guia de início rápido
+        - name: Introdução
           href: engagement-insights/get-started.md
         - name: Criar uma área de trabalho
           href: engagement-insights/create-workspace.md
-        - name: Capturar eventos de sites e de aplicações móveis
-          href: engagement-insights/developer-resources.md
+        - name: Instrumentalize o seu website
+          href: engagement-insights/instrument-website.md
         - name: Conceitos e terminologia
           href: engagement-insights/glossary.md
     - name: Eventos
       items:
         - name: Criar e modificar eventos
           href: engagement-insights/refined-events.md
-        - name: Reconhecer eventos Web de visitantes previamente autenticados
-          href: engagement-insights/unknown-to-known.md
         - name: Exportar eventos
           href: engagement-insights/export-events.md
     - name: Relatórios
@@ -270,12 +232,6 @@
           href: engagement-insights/custom-reports.md
         - name: Criar relatórios de perfis unificados
           href: engagement-insights/profile-reports.md
-        - name: Ver e criar dimensões
-          href: engagement-insights/dimensions.md
-        - name: Ver e criar métricas
-          href: engagement-insights/metrics.md
-        - name: Ver e criar segmentos
-          href: engagement-insights/segments.md
     - name: Análise do percurso
       items:
         - name: Criar e gerir relatórios de funil
@@ -284,37 +240,25 @@
       items:
         - name: Visão geral dos recursos para programadores
           href: engagement-insights/developer-resources.md
-        - name: Tutorial do Web SDK
+        - name: Tutorial Web SDK
           href: engagement-insights/advanced-SDK-implementation.md
         - name: Exemplo da SDK Web
           href: engagement-insights/websdk-sample.md
-        - name: Tutorial da SDK Android
-          href: engagement-insights/get-started-android.md
-        - name: Exemplo de SDK Android
-          href: engagement-insights/androidsdk-sample.md
-        - name: Tutorial do SDK do iOS
-          href: engagement-insights/get-started-ios.md
-        - name: Exemplo de SDK iOS
-          href: engagement-insights/iossdk-sample.md
     - name: Administração
       items:
         - name: Funções e permissões
           href: engagement-insights/user-roles.md
         - name: Gerir ambientes e áreas de trabalho
           href: engagement-insights/manage-environments-workspaces.md
+        - name: Configurar ligações
+          href: engagement-insights/configure-connections.md
         - name: Gerir cookies e consentimentos de utilizadores
           href: engagement-insights/user-consent-storage.md
-    - name: Disponibilidade regional
-      href: engagement-insights/regional-availability.md
-- name: Partilhar dados entre capacidades
-  items:
-    - name: Ligar informações de audiência e informações de cativação
-      href: engagement-insights/integrate-audience-insights-engagement-insights.md
-    - name: Utilize segmentos de informações de audiência em relatórios de informações de cativação
-      href: engagement-insights/integrate-audience-insights-segments.md
-    - name: Utilizar dimensões demográficas para dividir dados comportamentais
-      href: engagement-insights/curate-dimensions.md
-- name: Limites de serviço
-  href: service-limits.md
-- name: Direitos e pedidos de DSR
-  href: dsr-rights-requests.md
+    - name: GDPR
+      items:
+        - name: Eliminar e exportar dados pessoais
+          href: engagement-insights/delete-export-personal-data.md
+    - name: Limites de serviço
+      href: engagement-insights/quotas.md
+- name: Contactar o suporte
+  href: 'https://admin.powerplatform.microsoft.com/support'

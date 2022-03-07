@@ -1,20 +1,20 @@
 ---
 title: Predição de recomendação de produtos
 description: Preveja que produtos um cliente é provável que compre ou com os quais interaja.
-ms.date: 09/13/2021
+ms.date: 03/17/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: wmelewong
-ms.author: wameng
+author: zacookmsft
+ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: e46e31131a2dd5235af8221eafcd2e1d1394f3d4
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494553"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906778"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predição de recomendação de produtos (pré-visualização)
 
@@ -64,7 +64,7 @@ Se estiver interessado em experimentar esta funcionalidade mas não tiver dados 
 
 1. Selecione o mosaico **Modelo de recomendações de produtos (pré-visualização)** e selecione **Utilizar este modelo**.
    > [!div class="mx-imgBorder"]
-   > ![Mosaico do modelo Recomendação de Produtos com o botão Utilizar este modelo.](media/product-recommendation-usethismodel.PNG "Mosaico do modelo Recomendação de Produtos com o botão Utilizar este modelo")
+   > ![Mosaico do modelo Recomendação de Produtos com o botão Utilizar este modelo](media/product-recommendation-usethismodel.PNG "Mosaico do modelo Recomendação de Produtos com o botão Utilizar este modelo")
 
 1. Reveja as informações sobre os requisitos do modelo. Se tiver os dados obrigatórios, selecione **Começar**.
 
@@ -89,24 +89,23 @@ Se estiver interessado em experimentar esta funcionalidade mas não tiver dados 
 
 ### <a name="add-required-data"></a>Adicionar dados necessários
 
-1. Selecione **Adicionar dados** e escolha o tipo de atividade no painel lateral que contém as informações de histórico de transação ou de compra necessárias.
+1. Selecione **Adicionar dados** para o **Histórico de transações do cliente** e escolha a entidade que fornece as informações do histórico de transações/compras, conforme descrito nos [pré-requisitos](#prerequisites).
 
-1. Em **Escolher atividades**, escolha as atividades específicas da atividade selecionada em que gostaria que o cálculo se focasse.
+1. Mapear os campos semânticos a atributos dentro da sua entidade de histórico de compras e selecione **Seguinte**. Para descrições dos campos, veja os [pré-requisitos](#prerequisites).
+   > [!div class="mx-imgBorder"]
+   > ![Definir A relação entre entidades](media/product-recommendation-purchasehistorymapping.PNG "Página de histórico de compras que mostra atributos semânticos que são mapeados para campos na entidade do histórico de compras selecionada")
 
-   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Painel lateral a mostrar a escolha de atividades específicas sob o tipo semântico.":::
-
-1. Se ainda não mapeou a atividade para um tipo semântico, selecione **Editar** para o fazer. A experiência guiada para mapear atividades semânticas é aberto. Mapeie os seus dados para os campos correspondentes no tipo de atividade selecionado.
-
-   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Tipo de atividade de definição de página.":::
-
-1. Depois de mapear a atividade para o tipo semântico correspondente, selecione **Seguinte** para prosseguir 
- 
-1. Mapear os atributos semânticos para os campos que são necessários para executar o modelo.
+1. Se os campos não estiverem preenchidos, configure a relação da sua entidade de histórico de compras para a entidade *Cliente*.
+    1. Selecione a **Entidade de histórico de compras**.
+    1. Selecione o **Campo** que identifica o cliente na entidade do histórico de compras. Tem de se relacionar com o ID do cliente primário da sua entidade *Cliente*.
+    1. Selecione a **entidade Cliente** que corresponde à sua entidade principal de cliente.
+    1. Introduza um nome que descreva a relação.
+       > [!div class="mx-imgBorder"]
+       > ![Página de histórico de compras que mostra a criação de uma relação com o cliente](media/model-purchase-join.png "Página de histórico de compras que mostra a criação de uma relação com o cliente")
 
 1. Selecione **Guardar**.
 
 1. Selecione **Seguinte**.
-
 
 ### <a name="configure-product-filters"></a>Configurar filtros de produtos
 
@@ -146,7 +145,7 @@ Por vezes, apenas determinados produtos são benéficos ou adequados para o tipo
 
 1. Vá para o separador **Minhas previsões** em **Informações** > **Previsões**.
    > [!div class="mx-imgBorder"]
-   > ![Vista da página Minhas Previsões.](media/product-recommendation-mypredictions.PNG "Vista da página Minhas Previsões")
+   > ![Vista da página Minhas Previsões](media/product-recommendation-mypredictions.PNG "Vista da página Minhas Previsões")
 
 1. Selecione a predição que pretende rever.
    - **Nome da previsão:** O nome da previsão fornecida ao criá-la.
@@ -164,7 +163,7 @@ Por vezes, apenas determinados produtos são benéficos ou adequados para o tipo
 
 1. Selecione as reticências verticais ao lado da previsão que pretende rever os resultados e selecione **Ver**.
    > [!div class="mx-imgBorder"]
-   > ![Vista das opções no menu de reticências verticais para uma previsão, incluindo Editar, Atualizar, Ver, Registos e Eliminar.](media/product-recommendation-verticalellipses.PNG "Vista das opções no menu de reticências verticais para uma previsão, incluindo Editar, Atualizar, Ver, Registos e Eliminar")
+   > ![Vista das opções no menu de reticências verticais para uma previsão, incluindo Editar, Atualizar, Ver, Registos e Eliminar](media/product-recommendation-verticalellipses.PNG "Vista das opções no menu de reticências verticais para uma previsão, incluindo Editar, Atualizar, Ver, Registos e Eliminar")
 
 1. Existem cinco secções primárias de dados dentro da página de resultados:
     1. **Desempenho do modelo de preparação:** A, B ou C são possíveis pontuações. Esta pontuação indica o desempenho da previsão, e pode ajudá-lo a tomar a decisão de usar os resultados armazenados na entidade de saída.
@@ -174,13 +173,13 @@ Por vezes, apenas determinados produtos são benéficos ou adequados para o tipo
             - **C** O modelo será considerado de qualidade **C** se a métrica "Sucesso @ K" for menor que a linha de base.
                
                > [!div class="mx-imgBorder"]
-               > ![Vista do resultado do desempenho do modelo.](media/product-recommendation-modelperformance.PNG "Vista do resultado do desempenho do modelo")
+               > ![Vista do resultado do desempenho do modelo](media/product-recommendation-modelperformance.PNG "Vista do resultado do desempenho do modelo")
             - **Linha de base**: o modelo considera os produtos mais recomendados pela contagem de compras entre todos os clientes e utiliza regras aprendidas identificadas pelo modelo para criar um conjunto de recomendações para os clientes. As predições são então comparadas com os produtos principais, como calculado pelo número de clientes que tinham comprado o produto. Se um cliente tiver, pelo menos, um produto nos seus produtos recomendados que também foi visto nos principais produtos comprados, são considerados uma parte da linha de base. Se houvesse 10 destes clientes que tivessem um produto recomendado comprado de 100 clientes totais, a linha de base seria de 10%.
             - **Sucesso @ K**: utilizando um conjunto de períodos de tempo de validação de transações, são criadas recomendações para todos os clientes e comparadas com o conjunto de transações de validação. Por exemplo, num período de 12 meses, o mês 12 pode ser reservado como um conjunto de dados de validação. Se o modelo prevê, pelo menos, uma coisa que compraria no mês 12 com base no que aprendeu com os 11 meses anteriores, o cliente aumentaria a métrica "Sucesso @ K".
     
     1. **Produtos mais sugeridos (com contagem):** os cinco principais produtos que foram previstos para os seus clientes.
        > [!div class="mx-imgBorder"]
-       > ![Grafo que mostra os principais 5 produtos mais recomendados.](media/product-recommendation-topproducts.PNG "Gráfico que mostra os principais 5 produtos mais recomendados")
+       > ![Gráfico que mostra os principais 5 produtos mais recomendados](media/product-recommendation-topproducts.PNG "Gráfico que mostra os principais 5 produtos mais recomendados")
     
     1. **Principais fatores de recomendação:** o modelo utiliza o histórico de transações dos clientes para fazer recomendações de produtos. Aprende padrões com base em compras anteriores e encontra semelhanças entre clientes e produtos. Estas semelhanças são então utilizadas para gerar recomendações de produtos.
     Seguem-se os fatores que podem influenciar uma recomendação de produtos gerada pelo modelo. 
@@ -191,24 +190,48 @@ Por vezes, apenas determinados produtos são benéficos ou adequados para o tipo
         Cada recomendação de produtos é influenciada por um ou mais destes fatores. A percentagem de recomendações em que cada fator influenciador desempenhou um papel é visualizada num gráfico. No exemplo seguinte, 100% das recomendações foram influenciadas por transações passadas, 60% pela semelhança de clientes e 22% pela semelhança de produtos. Paire sobre as barras no gráfico para ver a percentagem exata onde os fatores influenciadores contribuíram.
 
         > [!div class="mx-imgBorder"]
-        > ![Principais fatores de recomendação.](media/product-recommendation-keyrecommendationfactors.png "Principais fatores de recomendação aprendidos pelo modelo para gerar recomendações de produtos")
+        > ![Principais fatores de recomendação](media/product-recommendation-keyrecommendationfactors.png "Principais fatores de recomendação aprendidos pelo modelo para gerar recomendações de produtos")
        
      
    1. **Estatísticas de dados**: dá uma descrição geral do número de transações, clientes e produtos considerados pelo modelo. Baseia-se nos dados de entrada que foram usados para aprender padrões e gerar recomendações de produtos.
 
       > [!div class="mx-imgBorder"]
-      > ![Estatísticas de dados.](media/product-recommendation-datastatistics.png "Estatísticas de dados em torno de dados de entrada utilizados pelo modelo para aprender padrões")
+      > ![Estatísticas de dados](media/product-recommendation-datastatistics.png "Estatísticas de dados em torno de dados de entrada utilizados pelo modelo para aprender padrões")
 
       Esta secção mostra estatísticas em torno dos pontos de dados que foram usados pelo modelo para aprender padrões e gerar recomendações de produtos. A filtragem, como configurada na configuração do modelo, aplicar-se-á na saída gerada pelo modelo. No entanto, o modelo utiliza todos os dados disponíveis para aprender padrões. Portanto, se utilizar a filtragem de produtos na configuração do modelo, esta secção mostrará o número total de produtos que o modelo analisou para aprender padrões, o que pode diferir do número de produtos que correspondem aos critérios de filtragem definidos.
 
    1. **Recomendações de alta confiança no produto:** um exemplo de recomendações fornecidas aos seus clientes que o modelo acredita serem suscetíveis de serem adquiridas pelo cliente.    
       Se for adicionado um catálogo de produtos, os IDs de produtos são substituídos por nomes de produtos. Os nomes dos produtos fornecem informações mais acionáveis e intuitivas sobre as predições.
        > [!div class="mx-imgBorder"]
-       > ![Lista que mostra sugestões de alta confiança para um conjunto selecionado de clientes individuais.](media/product-recommendation-highconfidence.PNG "Lista que mostra sugestões de alta confiança para um conjunto selecionado de clientes individuais")
+       > ![Lista que mostra sugestões de alta confiança para um conjunto selecionado de clientes individuais](media/product-recommendation-highconfidence.PNG "Lista que mostra sugestões de alta confiança para um conjunto selecionado de clientes individuais")
 
-## <a name="manage-predictions"></a>Gerir predições
+## <a name="fix-a-failed-prediction"></a>Corrigir uma previsão falhada
 
-É possível otimizar, resolver problemas, atualizar ou eliminar predições. Reveja um relatório de capacidade de utilização de dados de entrada para saber como tornar uma predição mais rápida e fiável. Para mais informações, consulte [Gerir predições](manage-predictions.md).
+1. Vá para o separador **Minhas previsões** em **Informações** > **Previsões**.
+
+1. Selecione a previsão para visualizar registos de erros e selecione **Registos**.
+
+1. Rever todos os erros. Existem vários tipos de erros que podem ocorrer, e estes descrevem que condição causou o erro. Por exemplo, um erro que não há dados suficientes para prever com precisão é normalmente resolvido carregando mais dados no Customer Insights.
+
+## <a name="refresh-a-prediction"></a>Atualizar uma previsão
+
+As predições atualizam-se automaticamente na mesma [agenda em que os seus dados são atualizados](system.md#schedule-tab), como configurados nas definições.
+
+1. Vá para o separador **Minhas previsões** em **Informações** > **Previsões**.
+
+1. Selecione as reticências verticais ao lado da previsão que pretende atualizar.
+
+1. Selecione **Atualizar**.
+
+## <a name="delete-a-prediction"></a>Eliminar uma previsão
+
+A eliminação de uma predição também removerá a sua entidade de saída.
+
+1. Vá para o separador **Minhas previsões** em **Informações** > **Previsões**.
+
+1. Selecione as reticências verticais ao lado da previsão que pretende eliminar.
+
+1. Selecione **Eliminar**.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

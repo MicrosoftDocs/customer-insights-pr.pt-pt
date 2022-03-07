@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692541"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595915"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Concluir os seus dados parciais com predições
 
@@ -31,11 +31,11 @@ As predições permitem criar facilmente valores previstos que podem melhorar a 
 
 Antes de a sua organização poder utilizar a funcionalidade de predições, devem ser cumpridos os seguintes pré-requisitos:
 
-1. A sua organização tem uma instância [configurada no Microsoft Dataverse](/ai-builder/build-model#prerequisites) e está na mesma organização que o Customer Insights.
+1. A sua organização tem uma instância [configurada no Common Data Service](/ai-builder/build-model#prerequisites) e está na mesma organização que o Customer Insights.
 
-2. O seu ambiente de informações de audiência está ligado à sua instância do Dataverse.
+2. O seu ambiente está ligado à sua instância do Common Data Service.
 
-Se [criar um novo ambiente](get-started-paid.md), configure-o na caixa de diálogo **Criar um ambiente** e selecione **Avançadas**. Se já tiver criado um ambiente, aceda às respetivas definições e **selecione** avançado. De qualquer forma, na secção **Usar predições**, introduza a o URL da instância do Dataverse a que deseja anexar o seu ambiente.
+Se [criar um novo ambiente](manage-environments.md), configure-o na caixa de diálogo **Criar um ambiente** e selecione **Avançadas**. Se já tiver criado um ambiente, aceda às respetivas definições e **selecione** avançado. De qualquer forma, na secção **Usar predições**, introduza a o URL da instância do Common Data Service a que deseja anexar o seu ambiente.
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Criar uma predição na entidade de Cliente
 
@@ -47,17 +47,17 @@ Se [criar um novo ambiente](get-started-paid.md), configure-o na caixa de diálo
 
 4. Localize o nome do atributo para o qual pretende prever os valores e, em seguida, no ícone **Descrição Geral** na coluna **Resumo**.
    > [!div class="mx-imgBorder"]
-   > ![Ícone Descrição Geral.](media/intelligence-overviewicon.png "Ícone Descrição Geral")
+   > ![Ícone Descrição Geral](media/intelligence-overviewicon.png "Ícone Descrição Geral")
 
 5. Se existir uma taxa elevada de valores em falta para o atributo, selecione **Prever valores em falta** para continuar com a sua predição.
    > [!div class="mx-imgBorder"]
-   > ![Estado da descrição geral a mostrar o botão Prever valores em falta.](media/intelligence-overviewpredictmissingvalues.png "Estado da descrição geral a mostrar o botão Prever valores em falta")
+   > ![Estado da descrição geral a mostrar o botão Prever valores em falta](media/intelligence-overviewpredictmissingvalues.png "Estado da descrição geral a mostrar o botão Prever valores em falta")
 
 6. Forneça um **Nome a Apresentar** e um **Nome da entidade de saída** para obter os resultados da predição.
 
 7. Será aqui mostrada uma lista de opções preenchida previamente onde poderá mapear os valores para uma categoria prevista. Neste caso, as únicas opções de categoria serão 0 ou 1, uma vez que são mapeadas para a natureza verdadeiro/falso, ou binária, da predição. Na coluna Categoria, mapeie os valores de campo que pretende que sejam classificados como "0" na predição final como "0" e os itens que pretende que sejam classificados como "1" na predição final como "1".
    > [!div class="mx-imgBorder"]
-   > ![Exemplo a mostrar valores de campos mapeados para categorias.](media/intelligence-categorymapping.png "Exemplo a mostrar valores de campos mapeados para categorias")
+   > ![Exemplo a mostrar valores de campos mapeados para categorias](media/intelligence-categorymapping.png "Exemplo a mostrar valores de campos mapeados para categorias")
 
 8. Selecione **Concluído** e a predição será processada. O processamento irá demorar algum tempo, consoante o tamanho e a complexidade dos dados. Os resultados estarão disponíveis numa nova entidade baseada no **Nome da entidade de saída** da predição que criou.
 
@@ -77,7 +77,7 @@ Como parte deste fluxo, irá escolher um atributo específico onde basear o segm
 
 5. Se o segmento que criar tiver dados incompletos no campo de origem, poderá optar por prever os valores em falta.
    > [!div class="mx-imgBorder"]
-   > ![Botão Predição.](media/segments-predictoption.png "Botão Predição")
+   > ![Botão Predição](media/segments-predictoption.png "Botão Predição")
 
 6. Forneça um **Nome a Apresentar** e um **Nome da entidade de saída** para obter os resultados da predição.
 
@@ -93,7 +93,7 @@ Como parte deste fluxo, irá escolher um atributo específico onde basear o segm
 
 4. Verá vários pontos de dados na vista da sua predição.
    > [!div class="mx-imgBorder"]
-   > ![Página Predições.](media/intelligence-predictionsviewpage.png "Página Predições")
+   > ![Página Predições](media/intelligence-predictionsviewpage.png "Página Predições")
 
    - Os **valores previstos** mostram o mapeamento criado durante a fase de mapeamento do valor Campo para Categoria. São valores no conjunto de dados que foram mapeados para uma categoria específica.
    -**Principais influenciadores** são os fatores existentes no seu conjunto de dados com maior probabilidade de influenciar a confiança da predição do valor Campo que está a ser mapeado para uma categoria específica..
@@ -139,7 +139,7 @@ A execução seguinte da sua predição utilizará o modelo atualizado que criou
 
 ## <a name="troubleshooting"></a>Resolução de Problemas
 
-Se não conseguir concluir o processo de anexação do Dataverse devido a um erro, poderá tentar concluir o processo manualmente. Existem dois problemas conhecidos que podem ocorrer no processo de anexação:
+Se não conseguir concluir o processo de anexação do Common Data Service devido a um erro, poderá tentar concluir o processo manualmente. Existem dois problemas conhecidos que podem ocorrer no processo de anexação:
 
 - A solução Suplemento Ficha de Cliente não está instalada.
     1. Conclua as instruções para [instalar e configurar a solução](customer-card-add-in.md).
