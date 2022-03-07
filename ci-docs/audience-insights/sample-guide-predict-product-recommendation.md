@@ -3,26 +3,29 @@ title: Guia de exemplos de predição de recomendações de produtos
 description: Utilize este guia de exemplos para experimentar o modelo de predição de recomendações de produtos de origem.
 ms.date: 02/10/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: a85ee598ec747d0594755314e83a127ce0f2af95
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 8ba54cfd466049c8df99c15f34626ab1914234f1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306180"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354661"
 ---
-# <a name="product-recommendation-prediction-preview-sample-guide"></a>Guia de exemplos de predição de recomendações de produtos (pré-visualização)
+# <a name="product-recommendation-prediction-sample-guide"></a>Guia de exemplos de predição de recomendações de produtos
 
 Iremos acompanhá-lo do princípio ao fim num exemplo de predição de recomendações de produtos usando os dados de exemplo fornecidos abaixo.
 
 ## <a name="scenario"></a>Cenário
 
-A Contoso é uma empresa que produz café e máquinas de café de alta qualidade, que vende através do seu site Contoso Coffee. O objetivo é compreender quais os produtos que devem recomendar aos seus clientes recorrentes. Saber quais os clientes mais **propensos a comprar**, pode ajudá-los a economizar esforços de marketing, focando-se em itens específicos.
+Contoso é uma empresa que produz café e máquinas de café de alta qualidade, que vendem através do seu site Contoso Coffee. O objetivo é compreender quais os produtos que devem recomendar aos seus clientes recorrentes. Saber quais os clientes mais **propensos a comprar**, pode ajudá-los a economizar esforços de marketing, focando-se em itens específicos.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -31,7 +34,7 @@ A Contoso é uma empresa que produz café e máquinas de café de alta qualidade
 
 ## <a name="task-1---ingest-data"></a>Tarefa 1 - Ingerir dados
 
-Rever os artigos [sobre ingestão de dados](data-sources.md) e [importar origens de dados utilizando conectores Power Query](connect-power-query.md) especificamente. A seguinte informação pressupõe que está familiarizado com a ingestão de dados em geral.
+Reveja os artigos [sobre a ingestão de dados](data-sources.md) e a [importação de origens de dados utilizando especificamente conectores do Power Query](connect-power-query.md). A seguinte informação pressupõe que está familiarizado com a ingestão de dados em geral.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingerir dados de clientes a partir da plataforma eCommerce
 

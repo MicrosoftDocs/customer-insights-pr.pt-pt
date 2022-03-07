@@ -1,20 +1,19 @@
 ---
 title: Conector do Power Apps
 description: Ligar com o Power Apps e Power Automate.
-ms.date: 08/21/2020
-ms.reviewer: nikeller
-ms.service: customer-insights
+ms.date: 10/01/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+ms.topic: how-to
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: b6ec103e29e218b2f27bfc1193300ea793a6b30b
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: ae2a3b7c05e9ed860da31853c47af2aec8634e7a
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406607"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229046"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Conector do Microsoft Power Apps (pré-visualização)
 
@@ -22,53 +21,55 @@ Integre os perfis de clientes unificados nas suas aplicações personalizadas co
 
 ## <a name="connect-power-apps-and-dynamics-365-customer-insights"></a>Ligar ao Power Apps e a Dynamics 365 Customer Insights
 
-O Customer Insights é uma das muitas [origens disponíveis para os dados no Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-data-sources).
+O Customer Insights é uma das muitas [origens disponíveis para os dados no Power Apps](/powerapps/maker/canvas-apps/working-with-data-sources).
 
-Consulte a documentação do Power Apps para saber como [adicionar uma ligação de dados a uma aplicação](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-data-connection). Recomendamos que também reveja [como o Power Apps usa a delegação usa para lidar com grandes conjuntos de dados em Aplicações de tela](https://docs.microsoft.com/powerapps/maker/canvas-apps/delegation-overview).
+Consulte a documentação do Power Apps para saber como [adicionar uma ligação de dados a uma aplicação](/powerapps/maker/canvas-apps/add-data-connection). Recomendamos que também reveja [como o Power Apps usa a delegação usa para lidar com grandes conjuntos de dados em Aplicações de tela](/powerapps/maker/canvas-apps/delegation-overview).
 
 ## <a name="available-entities"></a>Entidades disponíveis
 
 Depois de adicionar o Customer Insights como uma ligação de dados, poderá escolher as seguintes entidades no Power Apps:
 
-- Cliente: para utilizar os dados do [perfil de cliente unificado](customer-profiles.md).
-- Atividade do Cliente Unificado: para apresentar a [linha cronológica da atividade](activities.md) na aplicação.
+- **Cliente**: para utilizar os dados do [perfil do cliente unificado](customer-profiles.md).
+- **UnifiedActivity**: para apresentar a [linha cronológica da atividade](activities.md) na aplicação.
+- **ContactProfile**: para apresentar os contactos de um cliente. Esta entidade está disponível apenas em ambientes de informações de audiência para contas empresariais.
 
 ## <a name="limitations"></a>Limitações
 
 ### <a name="retrievable-entities"></a>Entidades que pode obter
 
-Só é possível obter as entidades **Cliente**, **UnifiedActivity** e **Segmentos** através do conector Power Apps. Outras entidades são mostradas porque o conector subjacente as suporta através de acionadores no Power Automate.  
+Só pode obter as entidades **Cliente**, **UnifiedActivity**, **Segmentos** e **ContactProfile** através do conector do Power Apps. ContactProfile está disponível apenas na instância das informações de audiência para contas empresariais. Outras entidades são mostradas porque o conector subjacente as suporta através de acionadores no Power Automate.
 
 ### <a name="delegation"></a>Delegação
 
-A delegação trabalha para a entidade Cliente e entidade UnifiedActivity. 
+A delegação trabalha para a entidade **Cliente** e entidade **UnifiedActivity**. 
 
 - Delegação para a entidade **Cliente**: Para utilizar a delegação para esta entidade, os campos precisam de ser indexados em [Índice procurar e filtrar](search-filter-index.md).  
-
 - Delegação para **UnifiedActivity**: a delegação para esta entidade só funciona para os campos **ActivityId** e **CustomerId**.  
+- Delegação para **ContactProfile**: a delegação para esta entidade só funciona para os campos **ContactId** e **CustomerId**. ContactProfile está disponível apenas em ambientes de informações de audiência para contas empresariais.
 
-- Para obter mais informações sobre a delegação, consulte [Funções e operações delegatáveis do Power Apps](https://docs.microsoft.com/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
+Para mais informações sobre a delegação, aceda a [funções e operações delegáveis do Power Apps](/powerapps/maker/canvas-apps/delegation-overview). 
 
 ## <a name="example-gallery-control"></a>Exemplo de controlo de galeria
 
-Por exemplo, adiciona perfis de clientes a um [controlo da galeria](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-gallery).
+Pode adicionar perfis de clientes a um [controlo de galeria](/powerapps/maker/canvas-apps/add-gallery).
 
-1. Adicione um controlo **Galeria** a uma aplicação que esteja a criar.
-
-> [!div class="mx-imgBorder"]
-> ![Adicionar um elemento de galeria](media/connector-powerapps9.png "Adicionar um elemento de galeria")
-
-1. Selecione **Cliente** como origem de dados para os itens.
+1. Adicione um controlo de **galeria** a uma aplicação que esteja a criar.
 
     > [!div class="mx-imgBorder"]
-    > ![Selecionar uma origem de dados](media/choose-datasource-powerapps.png "Selecionar uma origem de dados")
+    > ![Adicionar um elemento de galeria.](media/connector-powerapps9.png "Adicione um elemento de galeria.")
 
-1. Pode alterar o painel de dados à direita para selecionar o campo que a entidade Cliente vai mostrar na galeria.
+2. Selecione **Cliente** como origem de dados para os itens.
 
-1. Se pretende mostrar qualquer campo do cliente selecionado na galeria, preencha a propriedade Texto de uma etiqueta:  **{Name_of_the_gallery}.Selecionado.{property_name}**
+    > [!div class="mx-imgBorder"]
+    > ![Selecionar uma origem de dados.](media/choose-datasource-powerapps.png "Selecione uma origem de dados.")
 
-    Exemplo: Galeria1.Selecionada.address1_city
+3. Pode alterar o painel de dados à direita para selecionar o campo que a entidade Cliente vai mostrar na galeria.
 
-1. Para apresentar a linha cronológica unificada para um cliente, adicione um elemento Galeria e adicione a propriedade Itens: **Filter('UnifiedActivity', CustomerId = {Customer_Id})**
+4. Se pretende mostrar qualquer campo do cliente selecionado na galeria, preencha a propriedade **Texto** de uma etiqueta utilizando **{Name_of_the_gallery}.Selecionado.{property_name}**  
+    - Por exemplo: _Gallery1.Selected.address1_city_
 
-    Exemplo: Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)
+5. Para apresentar a linha cronológica unificada para um cliente, adicione um elemento de galeria e adicione a propriedade **Itens** utilizando **Filter('UnifiedActivity', CustomerId = {Customer_Id})**  
+    - Por exemplo: _Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)_
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

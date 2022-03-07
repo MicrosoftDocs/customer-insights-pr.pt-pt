@@ -1,20 +1,19 @@
 ---
 title: Melhoramento de dados da empresa
 description: Melhore e normalize os dados da empresa com os modelos da Microsoft.
-ms.date: 11/05/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 9bfb96d47de4ec98325e644c60752fc7cab2706c
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.openlocfilehash: 7a576621c71b925bd1563827aca10cad4ef9b4eb
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770184"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229417"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Melhoramento de perfis da empresa com dados melhorados da empresa
 
@@ -51,7 +50,8 @@ Existem algumas limitações com os dados melhorados. Os itens da lista abaixo n
 
 1.  Confirme a identidade da empresa. Não verificamos se a entrada é uma organização existente ou se uma empresa utiliza a saída como o respetivo nome padrão.
 2.  Abrange empresas de forma abrangente em todo o mundo. Os dados da empresa compilados da Microsoft têm cobertura global, mas oferecem a maior parte da cobertura na Austrália, Canadá, Reino Unido e Estados Unidos.
-3.  Garanta a precisão ou atualização dos dados. Como as informações de negócio mudam com frequência, não podemos garantir que os dados melhorados da empresa fornecidos sejam sempre exatos ou atualizados.
+3.  Uniformize os endereços da empresa globalmente. Atualmente, suportamos a uniformização dos endereços nestes países ou regiões: Austrália, Canadá, França, Alemanha, Itália, Japão, Reino Unido e Estados Unidos.
+4.  Garanta a precisão ou atualização dos dados. Como as informações de negócio mudam com frequência, não podemos garantir que os dados melhorados da empresa fornecidos sejam sempre exatos ou atualizados.
 
 ## <a name="configure-the-enrichment"></a>Configurar o enriquecimento
 
@@ -81,7 +81,17 @@ Para iniciar o processo de enriquecimento, selecione **Executar** na barra de co
 
 Após o processo de enriquecimento concluído, pode rever os dados de perfis de clientes recentemente enriquecidos nos **Meus enriquecimentos**. Além disso, encontrará a hora da última atualização e o número de perfis enriquecidos.
 
-Pode aceder a uma visão detalhada de cada perfil enriquecido selecionando **Ver dados enriquecidos**.
+Pode ver uma amostra dos dados enriquecidos no mosaico **Pré-visualização de clientes enriquecidos**. Selecione **Ver mais** e selecione o separador **Dados** para aceder a uma vista detalhada de cada perfil enriquecido.
+
+### <a name="overview-card"></a>Cartão de descrição geral
+
+O cartão de descrição geral mostra detalhes sobre a cobertura do enriquecimento. 
+
+* **Empresas processadas e alteradas**: o número de perfis de empresas de clientes que foram enriquecidos com sucesso.
+
+* **Empresas processadas e não alteradas**: o número de perfis de empresas de clientes que foram reconhecidos, mas não alterados. Normalmente, isto acontece quando os dados de entrada são válidos e não podem ser melhorados pelo enriquecimento.
+
+* **Empresas não processadas e não alteradas**: o número de perfis de empresas de clientes que foram não reconhecidos. Normalmente, isto acontece para dados de entrada que são inválidos ou não suportados pelo enriquecimento.
 
 ## <a name="next-steps"></a>Passos seguintes
 

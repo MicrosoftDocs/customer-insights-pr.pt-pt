@@ -1,92 +1,29 @@
 ### YamlMime:Landing
-title: Capacidade de informações de cativação no Dynamics 365 Customer Insights (pré-visualização)
-summary: Recolher dados para os seus websites. Compreender as interações do cliente e o uso em todos os seus sites, interativamente. Usar a integração profunda entre informações de cativação e informações de audiência para enriquecer a sua análise comportamental em tempo real com relatórios de perfil do cliente. Enriquecer os perfis do cliente com atividades web para obter dados comportamentais em tempo real ao lado de dados relevantes do cliente. Transforme o seu negócio para obter valor imediato a partir dos dados do seu cliente.
+title: Pré-visualização de informações de Interação termina
+summary: A pré-visualização da capacidade informações de interação do Dynamics 365 Customer Insights terminou em 15 de fevereiro de 2022. Esta alteração significa que a experiência de avaliação do Customer Insights já não inclui a capacidade de criar funis ou outras funcionalidades de relatórios. Convidámo-lo a explorar e a avaliar as muitas outras funcionalidades do Customer Insights, a Plataforma de Dados de Clientes da Microsoft (CDP). Contacte diretamente a sua equipa da Conta Microsoft se tiver dúvidas sobre o final da pré-visualização da capacidade. A sua Equipa da Conta vai mantê-lo atualizado sobre os futuros lançamentos. Obrigado!
 metadata:
   title: Documentação de informações de cativação (pré-visualização)
   description: Ajudar o hub com links chave para informações de cativação.
-  ms.service: customer-insights
   ms.subservice: engagement-insights
   ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
   ms.reviewer: mhart
   ms.date: 09/15/2021
-  ms.openlocfilehash: 0ec5a31a968fc97deeeef3ef444bb558a4ff2b65
-  ms.sourcegitcommit: a371fc1e75b2321e45d3f972a3ac84c725f8cc38
+  ms.openlocfilehash: 99933c69c791da12815ebee3edb6413276b19b09
+  ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
   ms.translationtype: HT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 02/10/2022
-  ms.locfileid: "8107261"
+  ms.lasthandoff: 02/25/2022
+  ms.locfileid: "8350513"
 landingContent:
-- title: Sobre
+- title: Entre em contacto com
   linkLists:
   - linkListType: overview
     links:
-    - text: Benefícios da capacidade
-      url: overview.md
-    - text: Glossário de termos
-      url: glossary.md
-    - text: Planos de lançamento
-      url: /dynamics365/release-plans/
-- title: Integração
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Começar agora
-      url: get-started.md
-    - text: Criar uma área de trabalho
-      url: create-workspace.md
-    - text: Instrumentalize o seu website
-      url: instrument-website.md
-- title: Ver e filtrar relatórios
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Ver relatórios
-      url: view-reports.md
-    - text: Ver relatório de perfis unificados
-      url: profile-reports.md
-    - text: Utilizar segmentos de audiência para filtrar relatórios
-      url: integrate-audience-insights-segments.md
-- title: Analisar
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Criar relatórios de funil
-      url: funnel-reports.md
-    - text: Analisar dados comportamentais
-      url: curate-dimensions.md
-    - text: Criar relatórios personalizados
-      url: custom-reports.md
-    - text: Criar eventos refinados
-      url: refined-events.md
-    - text: Exportar eventos
-      url: export-events.md
-- title: Recursos para programadores
-  linkLists:
-  - linkListType: reference
-    links:
-    - text: Recursos para programadores
-      url: developer-resources.md
-    - text: Amostra webSDK
-      url: websdk-sample.md
-    - text: Cenários web SDK avançados
-      url: advanced-SDK-implementation.md
-    - text: Exemplo de SDK Android
-      url: get-started-android.md
-    - text: Exemplo de SDK iOS
-      url: get-started-ios.md
-- title: Administração
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Gerir ambientes e áreas de trabalho
-      url: manage-environments-workspaces.md
-    - text: Ligar às informações de audiência
-      url: integrate-audience-insights-engagement-insights.md
-    - text: Gerir cookies e consentimentos de utilizadores
-      url: user-consent-storage.md
-    - text: Eliminar e exportar dados pessoais
-      url: delete-export-personal-data.md
-    - text: Limites de serviço
-      url: ../service-limits.md
+    - text: Junte-se à Comunidade do Dynamics 365
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+    - text: Partilhe as suas ideias
+      url: https://go.microsoft.com/fwlink/?linkid=2074172
+    - text: Comunicar um problema
+      url: https://go.microsoft.com/fwlink/?linkid=2079641

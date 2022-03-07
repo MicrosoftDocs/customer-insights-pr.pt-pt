@@ -3,20 +3,24 @@ title: Predição de valor vitalício do cliente (CLV)
 description: Prever o potencial de receita para clientes ativos no futuro.
 ms.date: 02/05/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 07790604b06f21095a9220a6f57727cac80789c5
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954593"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355803"
 ---
-# <a name="customer-lifetime-value-clv-prediction-preview"></a>Predição do valor vitalício do cliente (CLV) (Pré-visualização)
+# <a name="customer-lifetime-value-clv-prediction"></a>Predição de valor vitalício do cliente (CLV)
 
 Preveja o valor potencial (receita) que os clientes ativos individuais irão trazer para o seu negócio através de um período de tempo definido no futuro. Esta funcionalidade pode ajudá-lo a alcançar vários objetivos: 
 - Identifique clientes de alto valor e processe esta informação
@@ -65,7 +69,7 @@ São necessários os seguintes dados, e onde marcados como opcionais, recomendad
     - Conclusão de dados: menos de 20% dos valores em falta nos campos obrigatórios nos dados de entrada   
 
 > [!NOTE]
-> - O modelo requer o histórico de transações dos seus clientes. Atualmente, apenas uma entidade de histórico de transações pode ser configurada. Se houver várias entidades de compra/transação, pode uni-las no Power Query antes da ingestão de dados.
+> - O modelo requer o histórico de transações dos seus clientes. Atualmente, apenas uma entidade de histórico de transações pode ser configurada. Se existirem várias entidades de compra/transação, pode uni-las no Power Query antes de começar a ingestão de dados.
 > - Para dados de atividade de cliente adicionais (opcional), no entanto, pode adicionar as entidades de atividade de cliente que quiser para consideração pelo modelo.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Criar um predição do Valor Vitalício do Cliente
@@ -74,7 +78,7 @@ São necessários os seguintes dados, e onde marcados como opcionais, recomendad
 
 1. Selecione o mosaico **Valor vitalício do cliente** e selecione **Utilizar modelo**. 
 
-1. No painel **Valor vitalício do cliente (pré-visualização)**, selecione **Começar**.
+1. No painel **Valor vitalício do Cliente**, selecione **Começar**.
 
 1. **Nomeie este modelo** e o **Nome da entidade de saída** para distingui-los de outros modelos ou entidades.
 
@@ -149,7 +153,6 @@ Os dados que refletem as principais interações do cliente (como Web, suporte a
 
 1. Selecione **Seguinte**.
 
-
 ### <a name="review-and-run-the-model-configuration"></a>Rever e executar a configuração do modelo
 
 1. Na passo **Rever os detalhes do modelo**, valide a configuração da predição. Pode voltar a qualquer parte da configuração de previsão selecionando **Editar** por abaixo do valor indicado. Também pode selecionar um passo de configuração a partir do indicador de progresso.
@@ -170,11 +173,10 @@ Os dados que refletem as principais interações do cliente (como Web, suporte a
 - **Estado**: estado da execução da predição.
     - **Em fila**: a predição está à espera que outros processos completem.
     - **A atualizar**: a predição está atualmente em execução para criar resultados que fluirão para a entidade de saída.
-    - **Falhou**: a execução da predição falhou. [Rever os registos](#troubleshoot-a-failed-prediction) para mais detalhes.
+    - **Falhou**: a execução da predição falhou. [Rever os registos](manage-predictions.md#troubleshoot-a-failed-prediction) para mais detalhes.
     - **Sucesso**: a predição foi bem sucedida. Selecione **Ver** sob as reticências verticais para rever os resultados predição.
 - **Editada**: a data da em que a configuração para a predição foi alterada.
 - **Última atualização**: a data em que a predição foi atualizada resulta na entidade de saída.
-
 
 ### <a name="review-prediction-results"></a>Rever os resultados da predição
 
@@ -192,7 +194,7 @@ Existem três secções primárias de dados dentro da página de resultados.
 
   Os níveis são determinados com base nas seguintes regras:
   - **A** quando o modelo previu com precisão, pelo menos, 5% mais clientes de alto valor em comparação com o modelo de base.
-  - **B** quando o modelo previu com precisão entre a 0% a 5% mais clientes de alto valor em comparação com o modelo de base.
+  - **B** quando o modelo previu com precisão entre 0% a 5% mais clientes de alto valor em comparação com o modelo de base.
   - **C** quando o modelo previu com precisão menos clientes de alto valor em comparação com o modelo de base.
 
   O painel **Classificação do modelo** mostra mais detalhes sobre o desempenho do modelo de IA e o modelo de base. O modelo de base utiliza uma abordagem não baseada em IA para calcular o valor vitalício do cliente baseado principalmente em compras históricas feitas pelos clientes.     
@@ -216,28 +218,8 @@ Existem três secções primárias de dados dentro da página de resultados.
 
 - **Fatores mais influentes**: vários fatores são considerados ao criar a sua predição de CLV com base nos dados de entrada fornecidos ao modelo de IA. Cada um dos fatores tem a sua importância calculada para as previsões agregadas que um modelo cria. Pode utilizar estes fatores para ajudar a validar os resultados da sua previsão. Estes fatores também fornecem mais informações sobre os fatores mais influentes que contribuíram para a predição de CLV em todos os seus clientes.
 
-## <a name="refresh-a-prediction"></a>Atualizar uma previsão
+## <a name="manage-predictions"></a>Gerir predições
 
-As predições atualizam-se automaticamente na mesma [agenda em que os seus dados são atualizados](system.md#schedule-tab), como configurados nas definições. Também é possível atualizá-las manualmente.
-
-1. Aceda a **Inteligência** > **Predições** e selecione o separador **As minhas predições**.
-2. Selecione as reticências verticais ao lado da previsão que pretende atualizar.
-3. Selecione **Atualizar**.
-
-## <a name="delete-a-prediction"></a>Eliminar uma previsão
-
-A eliminação de uma predição também elimina a sua entidade de saída.
-
-1. Aceda a **Inteligência** > **Predições** e selecione o separador **As minhas predições**.
-2. Selecione as reticências verticais ao lado da previsão que pretende eliminar.
-3. Selecione **Eliminar**.
-
-## <a name="troubleshoot-a-failed-prediction"></a>Resolução de problemas de uma predição falhada
-
-1. Aceda a **Inteligência** > **Predições** e selecione o separador **As minhas predições**.
-2. Selecione as reticências verticais ao lado da predição para a qual deseja ver os registos de erros.
-3. Selecionar **Registos**.
-4. Rever todos os erros. Existem vários tipos de erros que podem ocorrer, e estes descrevem que condição causou o erro. Por exemplo, um erro que informa que não há dados suficientes para prever com precisão é, normalmente, resolvido carregando mais dados para as informações da audiência.
-
+É possível otimizar, resolver problemas, atualizar ou eliminar predições. Reveja um relatório de capacidade de utilização de dados de entrada para saber como tornar uma predição mais rápida e fiável. Para mais informações, consulte [Gerir predições](manage-predictions.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

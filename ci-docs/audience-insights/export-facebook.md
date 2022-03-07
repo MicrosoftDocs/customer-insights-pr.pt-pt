@@ -1,20 +1,19 @@
 ---
-title: Exportar dados do Customer Insights para o Facebook Ads Manager (Vídeo)
+title: Exportar dados do Customer Insights para o Facebook Ads Manager (contém vídeo)
 description: Aprenda a configurar a ligação e exportar para o Gestor de Anúncios do Facebook.
 ms.date: 04/15/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4b2dc2ff8e5286209bd2ec94df42e82f0944715c
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: 781cf10e1bb5ddaf82d4a17c7a77e0c43c41a1c2
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904178"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226509"
 ---
 # <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Lista de segmentos de exportação para o Gestor de Anúncios do Facebook (pré-visualização)
 

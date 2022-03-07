@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/04/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5e301b4ff0a7586fb143b154b773791b3bd645b7
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: 1f82ff588c2ffbe82c3ee7df2498ac2cca2bad31
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648131"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225461"
 ---
 # <a name="create-a-new-environment"></a>Criar um novo ambiente 
 
@@ -42,11 +41,11 @@ Um ambiente é um espaço onde gere as suas áreas de trabalho e ligações. A f
 
 1. Digite **Nome da área de trabalho**, que lhe permite recolher dados para aplicações ou sites específicos. Para obter mais informações, consulte [Criar uma área de trabalho](create-workspace.md).
 
-1. Escolha o **Tipo de área de trabalho** (Web ou Móvel) que pretende criar. 
+1. Escolha o **Tipo de área de trabalho** (Web ou móvel) que pretende criar. 
 
 1. Selecione **Mostrar definições avançadas** para ativar ou desativar estas definições opcionais:
 
-   - Alterne **Desconhecido para conhecido** como "ativado" para associar eventos Web a utilizadores que foram anteriormente autenticados. Para mais informações, consulte [Reconhecer eventos Web de visitantes anteriormente autenticados](unknown-to-known.md)
+   - Alterne **Desconhecido para conhecido** como "ativado" para associar eventos Web a utilizadores que foram anteriormente autenticados. Para mais informações, consulte [Reconhecer eventos Web de visitantes anteriormente autenticados](unknown-to-known.md).
    - Alterne **Filtrar tráfego de bots** para "ativado" para remover o tráfego Web por bots para esta área de trabalho. 
 
 1. Selecione **Concluído** quando tiver concluído. 

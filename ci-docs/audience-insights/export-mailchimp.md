@@ -3,18 +3,17 @@ title: Exportar dados Customer Insights para a Mailchimp
 description: Aprenda a configurar a ligação e exportar para o Mailchimp.
 ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 94a9fead56ce8c40b35d4eb41ebdc0d672798dce
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: f7a33f2eddb6b625ddb8663b97103de75beab44c
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618628"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226860"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Exportar segmentos para o Mailchimp (pré-visualização)
 

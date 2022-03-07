@@ -1,20 +1,22 @@
 ---
 title: Dados do Customer Insights no Microsoft Dataverse
 description: Utilize entidades do Customer Insights como tabelas no Microsoft Dataverse.
-ms.date: 06/15/2021
+ms.date: 11/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 45535a7368b89e19a91f08fcd825bda9d57a8709653104bf4043c29ffa14d0b8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-system-diagnostic
+- customerInsights
+ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032910"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355443"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Trabalhar com dados do Customer Insights no Microsoft Dataverse
 
@@ -24,11 +26,7 @@ O Customer Insights oferece a opção de disponibilizar entidades de saída no [
 
 **Organizações com ambientes do Dataverse existentes**
 
-As organizações que já utilizam o Dataverse podem [usar um dos seus ambientes do Dataverse existentes](get-started-paid.md) quando um administrador configurar informações de audiência. Ao fornecer o URL ao ambiente do Dataverse, está ligado ao seu novo ambiente de informações de audiência. Para garantir o melhor desempenho possível, os ambientes do Customer Insights e do Dataverse têm de estar alojados na mesma região.
-
-Para anexar um ambiente do Dataverse, expanda as **Definições avançadas** ao criar o ambiente de informações de audiência. Forneça o **URL do ambiente do Microsoft Dataverse** e selecione a caixa de verificação para **Ativar a partilha de dados**.
-
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt.":::
+As organizações que já utilizam o Dataverse podem [usar um dos seus ambientes do Dataverse existentes](create-environment.md) quando um administrador configurar informações de audiência. Ao fornecer o URL ao ambiente do Dataverse, está ligado ao seu novo ambiente de informações de audiência. Para garantir o melhor desempenho possível, os ambientes do Customer Insights e do Dataverse têm de estar alojados na mesma região.
 
 **Nova organização**
 
@@ -49,6 +47,7 @@ Algumas entidades de saída de informações de audiência estão disponíveis c
 - [CustomerMeasure](#customermeasure)
 - [Melhoramento](#enrichment)
 - [Predição](#prediction)
+- [Associação a segmentos](#segment-membership)
 
 
 ### <a name="customerprofile"></a>CustomerProfile
@@ -110,7 +109,7 @@ Esta tabela contém a saída do processo de enriquecimento.
 | EnrichmentProvider   | String           | Nome do fornecedor para o enriquecimento                                  |
 | EnrichmentType       | String           | Tipo de enriquecimento                                      |
 | Valores               | Cadeia JSON      | Lista de atributos produzidos pelo processo de enriquecimento |
-| msdynci_enrichmentid | GUID             | GUID determinista gerado a partir do msdynci_identifier |
+| msdynci_enrichmentid | GUID             | GUID determinista gerada a partir de msdynci_identifier |
 | msdynci_identifier   | String           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
 
 ### <a name="prediction"></a>Predição
@@ -123,5 +122,18 @@ Esta tabela contém a saída das predições do modelo.
 | ModelProvider        | String      | Nome do fornecedor do modelo                                      |
 | Modelo                | String      | Nome do modelo                                                |
 | Valores               | Cadeia JSON | Lista de atributos produzidos pelo modelo |
-| msdynci_predictionid | GUID        | GUID determinista gerado a partir do msdynci_identifier | 
-| msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+| msdynci_predictionid | GUID        | GUID determinista gerada a partir de msdynci_identifier | 
+| msdynci_identifier   | Cadeia (de carateres)      |  `Model|ModelProvider|CustomerId`                      |
+
+### <a name="segment-membership"></a>Associação a segmentos
+
+Esta tabela contém informações de associação a segmentos dos perfis de cliente.
+
+| Column        | Type | Description                        |
+|--------------------|--------------|-----------------------------|
+| ID do Cliente        | Cadeia (de carateres)       | ID do Perfil do Cliente        |
+| SegmentProvider      | Cadeia (de carateres)       | Aplicação que publica os segmentos. Predefinição: Informações de audiência         |
+| SegmentMembershipType | Cadeia (de carateres)       | Tipo de cliente neste registo de associação a segmentos. Suporta vários tipos, tais como Cliente, Contacto ou Conta. Predefinição: Cliente  |
+| Segmentos       | Cadeia JSON  | Lista de segmentos exclusivos dos quais os perfil de cliente é membro      |
+| msdynci_identifier  | Cadeia (de carateres)   | Identificador exclusivo do registo de associação a segmentos. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| msdynci_segmentmembershipid | GUID      | GUID determinista gerada a partir de `msdynci_identifier`          |

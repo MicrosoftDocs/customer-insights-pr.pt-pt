@@ -5,17 +5,19 @@ ms.reviewer: mhart
 ms.author: mhart
 author: m-hartmann
 ms.date: 08/31/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5e8545bc9bf0d953150248fa859c6ca71a12f9cf
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: 2776b2292560f9ea61a06d2b1b7bc7811d35c860
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645278"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353741"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Começar com a capacidade de informações de audiência do Dynamics 365 Customer Insights
 
@@ -37,7 +39,7 @@ A primeira vez que iniciar sessão para informações de audiência, pode config
 
 Os perfis unificados são a base para obter informações e tomar medidas sobre os dados. Traga dados de várias origens e execute o processo de unificação de dados para combinar perfis unificados. Especifique relações entre as entidades ingeridas para usar funcionalidades de melhoramento para adicionar informação aos perfis. 
 
-1. Ingerir dados criando origens de dados a partir de várias opções. Escolha entre [conectores do Power Query](connect-power-query.md), uma [pasta Common Data Model](connect-common-data-model.md) ou o [Microsoft Dataverse](connect-common-data-service-lake.md). 
+1. Ingerir dados criando origens de dados a partir de várias opções. Escolha, entre [conectores do Power Query](connect-power-query.md), uma [pasta do Common Data Model](connect-common-data-model.md) ou [Microsoft Dataverse](/dynamics365/customer-insights/audience-insights/connect-dataverse-managed-lake). 
 
 1. Execute o [processo de unificação de dados](data-unification.md) através das fases [mapear](map-entities.md), [corresponder](match-entities.md) e [unir](merge-entities.md).
 

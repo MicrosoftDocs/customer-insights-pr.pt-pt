@@ -1,22 +1,21 @@
 ---
-title: Predição de abandono de subscrições (Vídeo)
+title: Predição de abandono de subscrições (contém vídeo)
 description: Preveja se um cliente está em risco por ter deixado de utilizar os produtos ou serviços de subscrição da sua empresa.
 ms.date: 08/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 1ef2ff642731ee1ba0a142433745fc5a5b398c88
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.openlocfilehash: b61e87ad833dd7a8e51c6619945a9e216d85f221
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904003"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354708"
 ---
-# <a name="subscription-churn-prediction-preview"></a>Previsão de abandono de subscrição (pré-visualização)
+# <a name="subscription-churn-prediction"></a>Predição de abandono de subscrição
 
 A previsão de abandono de subscrição ajuda a prever se um cliente está em risco por ter deixado de utilizar os produtos ou serviços de subscrição da sua empresa. Pode criar uma nova previsão de abandono de subscrição na página **Informações** > **Previsões**. Selecione **Minhas previsões** para ver outras previsões que criou.
 
@@ -63,7 +62,7 @@ A previsão de abandono de subscrição ajuda a prever se um cliente está em ri
 ## <a name="create-a-subscription-churn-prediction"></a>Criar um previsão de abandono de subscrição
 
 1. Nas informações de audiência, vá a **Inteligência** > **Predições**.
-1. Selecione o mosaico **Modelo de abandono de subscrição (pré-visualização)** e selecione **Utilizar este modelo**.
+1. Selecione o mosaico do **Modelo de abandono de subscrições** e selecione **Utilizar este modelo**.
    > [!div class="mx-imgBorder"]
    > ![Mosaico do modelo de abandono da subscrição com o botão Utilizar este modelo.](media/subscription-churn-usethismodel.PNG "Mosaico do modelo de abandono da subscrição com o botão Utilizar este modelo")
 
@@ -77,12 +76,12 @@ A previsão de abandono de subscrição ajuda a prever se um cliente está em ri
 1. Insira o número de **Dias desde que a subscrição terminou** que o seu negócio considera um cliente em estado de abandono. Este período é tipicamente comparado a atividades empresariais como ofertas ou outros esforços de marketing tentando evitar a perda do cliente.
 1. Insira o número de **Dias para investigar o futuro para prever o abandono** para definir uma janela para prever o qual prever o abandono. Por exemplo, para prever o risco de abandono para os seus clientes nos próximos 90 dias para se alinhar com os seus esforços de retenção de marketing. Prever o risco de abandono por períodos de tempo mais longos ou mais curtos pode dificultar o processamento dos fatores do seu perfil de risco de abandono, dependendo dos requisitos específicos do seu negócio. Selecione **Seguinte** para continuar
    >[!TIP]
-   > Pode selecionar **Guardar e fechar** a qualquer momento para guardar a previsão como rascunho. Vais encontrar o rascunho de previsão no separador **Minhas previsões** para continuar.
+   > Pode selecionar **Guardar rascunho** a qualquer momento para guardar a predição como rascunho. Vais encontrar o rascunho de previsão no separador **Minhas previsões** para continuar.
 
 ### <a name="add-required-data"></a>Adicionar dados necessários
 
 1. Selecione **Adicionar dados** para o **Histórico de subscrições** e selecione a entidade que fornece as informações do histórico de subscrições, conforme descrito nos [pré-requisitos](#prerequisites).
-1. Se os campos abaixo não estiverem preenchidos, configuure a relação da sua entidade de histórico de subscrições com a entidade Cliente.
+1. Se os campos abaixo não estiverem preenchidos, configure a relação da sua entidade de histórico de subscrições com a entidade Cliente.
     1. Selecione a **Entidade de histórico de subscrições**.
     1. Selecione o **Campo** que identifica o cliente na entidade de histórico de subscrições. Tem de se relacionar com o ID do cliente primário da sua entidade Cliente.
     1. Selecione a **entidade Cliente** que corresponde à sua entidade principal de cliente.

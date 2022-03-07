@@ -2,18 +2,17 @@
 title: Utilizar segmentos de informações de audiência para filtrar relatórios de informações de cativação
 description: Utilize segmentos de informações de audiência em análises interativas de dados comportamentais capturados por informações de cativação no site de um cliente.
 ms.date: 07/27/2021
-ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: bdd5641bb17384725491f22f70ae967ad90b1696
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 9c8c7a1a9216e04ebee100c548afbc745af396ec
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461072"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8230500"
 ---
 # <a name="use-audience-insights-segments-to-filter-engagement-insights-reports"></a>Utilizar segmentos de informações de audiência para filtrar relatórios de informações de cativação
 

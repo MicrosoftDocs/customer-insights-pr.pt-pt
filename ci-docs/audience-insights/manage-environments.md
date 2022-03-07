@@ -1,24 +1,26 @@
 ---
 title: Criar e gerir ambientes
 description: Saiba como se inscrever no serviço e como gerir ambientes.
-ms.date: 10/14/2021
-ms.service: customer-insights
+ms.date: 12/06/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+searchScope:
+- ci-system-about
+- customerInsights
+ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645140"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354293"
 ---
 # <a name="manage-environments"></a>Gerir ambientes
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 ## <a name="switch-environments"></a>Mudar de ambientes
 
@@ -39,6 +41,22 @@ Pode editar alguns dos detalhes de ambientes existentes.
 3. Na caixa **Editar ambiente**, pode atualizar as definições do ambiente.
 
 Para obter mais informações sobre as definições do ambiente, consulte [Criar um novo ambiente](create-environment.md).
+
+## <a name="connect-to-microsoft-dataverse"></a>Ligar ao Microsoft Dataverse
+   
+O passo **Microsoft Dataverse** permite-lhe ligar o Customer Insights ao ambiente do Dataverse.
+
+Para utilizar [modelos de predição fornecidos com o programa](predictions-overview.md#out-of-box-models), configure a partilha de dados com o Dataverse. Ou pode ativar a ingestão de dados a partir de origens de dados no local, fornecendo o URL do ambiente do Microsoft Dataverse que a sua organização administra.
+
+> [!IMPORTANT]
+> O Customer Insights e o Dataverse têm de estar na mesma região para permitir a partilha de dados.
+
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="Opções de configuração para ativar a partilha de dados com o Microsoft Dataverse.":::
+
+> [!NOTE]
+> O Customer Insights não suporta os seguintes cenários de partilha de dados:
+> - Se guardar todos os dados no Azure Data Lake Storage, não poderá permitir a partilha de dados com um data lake gerido do Dataverse.
+> - Se ativar a partilha de dados com o Dataverse, não poderá [criar valores previsíveis ou em falta numa entidade](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Copiar a configuração do ambiente
 
@@ -67,7 +85,8 @@ Os dados seguintes *não* são copiados:
 
 - Perfis de cliente.
 - Credenciais da origem de dados. Terá de fornecer as credenciais para cada origem de dados e atualizar manualmente as origens de dados.
-- Origens de dados da pasta do Common Data Model e do Data Lake gerido do Dataverse. Terá de criar manualmente essas origens de dados com o mesmo nome que no ambiente de origem.
+
+- Origens de dados da pasta Common Data Model e data lake gerido do Dataverse. Terá de criar manualmente essas origens de dados com o mesmo nome que no ambiente de origem.
 
 Quando copia um ambiente, verá uma mensagem de confirmação de que o novo ambiente foi criado. Selecione **Ir para origens de dados** para ver a lista de origens de dados.
 

@@ -1,62 +1,59 @@
 ---
-title: Capacidade de informações de audiência
-description: Visão geral da capacidade de informações de audiência do Dynamics 365 Customer Insights.
-ms.date: 02/05/2020
-ms.reviewer: nimagen
-ms.service: customer-insights
+title: Descrição geral de informações da audiência para o Dynamics 365 Customer Insights
+description: Descrição geral de informações da audiência para o Dynamics 365 Customer Insights.
+ms.date: 08/04/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+ms.topic: overview
+author: NimrodMagen
+ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 82763b294484cca4a3982f4ebef6f914a02f5cca
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: b0fd10ca6f79bfec35c8a238179ba7e26e4dad98
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406639"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8230750"
 ---
-# <a name="dynamics-365-customer-insights-audience-insights-capability"></a>Capacidade de informações de audiência do Dynamics 365 Customer Insights
+# <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Descrição geral de informações da audiência para o Dynamics 365 Customer Insights
 
-A experiência dos clientes encontra-se na essência das ambições de transformação digital de cada organização. Para competir no mercado de hoje, as organizações devem criar relações significativas com os clientes a um nível pessoal. Personalizar de forma efetiva em escala requer uma vista unificada e completa do cliente.
+[Informações de audiência, uma capacidade do Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/) ajuda-o a criar uma compreensão mais profunda dos seus clientes. Ligar dados de várias origens transacionais, comportamentais e de observação para criar uma vista de 360 graus de um cliente. Utilize estes conhecimentos para conduzir experiências e processos centrados nos clientes. Unificar e compreender os dados dos clientes e aproveitá-los para informações e ações inteligentes.
 
-As informações de audiência ajudam-no a obter uma compreensão mais profunda dos seus clientes. Ligar dados de várias origens transacionais, comportamentais e de observação para criar uma vista de 360 graus de um cliente. Utilize estes conhecimentos para conduzir experiências e processos centrados nos clientes.
-
-**Unificar e compreender os dados dos clientes e aproveitá-los para informações e ações inteligentes.**
-
-Com a informações de audiência, as organizações podem:  
+## <a name="main-benefits"></a>Principais benefícios 
 
 - **Eliminar silos de dados e unificar dados de clientes**
 
   - Ligar e unificar os seus dados com facilidade — coloque dados transacionais, de observação e comportamental a partir de [origens de dados populares utilizando conectores pré-criados](data-sources.md).
-  - Transformar dados de clientes de forma inteligente — crie perfis de clientes unificados em conformidade com o [Common Data Model](https://docs.microsoft.com/common-data-model/). Resolver as identidades dos clientes com recomendações condicionadas por IA/ML.
+  - Transformar dados de clientes de forma inteligente — crie perfis de clientes unificados em conformidade com o [Common Data Model](/common-data-model/). Resolver as identidades dos clientes com recomendações condicionadas por IA/ML.
 
-- **Enriquecer com a inteligência de audiência contida no Microsoft Graph**
+- **Enriquecer com inteligência da audiência**
 
-  - Crie perfis de cliente mais sofisticados incorporando inteligência de audiência contida no Microsoft Graph.  
+  - Crie perfis de clientes mais ricos [incorporando dados enriquecidos](enrichment-hub.md).  
 
 - **Dê poder aos seus processos de negócio e às experiências personalizadas dos clientes**
 
-  - Impulsionar a cativação personalizada entre os canais — capacite profissionais de marketing, vendas e serviços com o Customer Insights de origem e cartões de perfil de clientes personalizados, incorporados nas aplicações de negócio que estes já utilizam diariamente
-  - Automatize as experiências e processos centrados no cliente com base em perfis, medidas de negócio e segmentos personalizáveis.
-  - Ativar e ampliar experiências de linha de negócio incorporadas no Microsoft Power Platform. Construir rapidamente aplicações com informações incorporadas utilizando uma poderosa abordagem de baixo código a partir do PowerApps.  
+  - Impulsione a cativação personalizada em todos os canais – capacite os profissionais de marketing, de vendas e serviços. Utilize cartões de perfil de cliente de origem, de informações e personalizados que se integram com aplicações empresariais que já utilizam.
+  - Automatize as experiências e processos com base em perfis, medidas de negócio e segmentos personalizáveis.
+  - Ative e amplie experiências de linha de negócio incorporadas no [Microsoft Power Platform](https://powerplatform.microsoft.com/). Construir rapidamente aplicações com informações incorporadas utilizando uma poderosa abordagem de baixo código a partir do Power Apps.  
 
-As informações de audiência incluem capacidades para os seguintes utilizadores-chave:
+## <a name="key-audiences"></a>Audiências principais
 
 - **Analistas/administradores de dados:**
 
   - Acesso a uma coleção rica de conectores para ingerir todos os dados do cliente.
-  - Capacidade de unificar dados de clientes e transformá-los no formato [Common Data Model](https://docs.microsoft.com/common-data-model/).
-  - Enriquecer as informações dos clientes com conhecimentos de inteligência da audiência contidos no Microsoft Graph, como, por exemplo, a afinidade de marca e os interesses.
+  - Capacidade de unificar dados de clientes e transformá-los no formato [Common Data Model](/common-data-model/).
+  - Enriquecer as informações dos clientes com informações de inteligência da audiência , como a afinidade de marca e os interesses.
   - Experiência de configuração e depuração "cliques, não código" para ajudar a configurar facilmente informações de audiência e identificar problemas potenciais.
   - Limpe e padronize dados de clientes em diferentes origens, com recomendações de tecnologia de IA.  
 
 - **Utilizadores empresariais:**
 
-  - Informações sobre os perfis de cliente de 360 graus e vistas ponto-a-ponto do percurso do cliente.
-  - Ver dados do cliente 360 graus nos processos de negócio do Dynamics 365 com pacotes de pré-compilação.
+  - Informações sobre os perfis de cliente de 360 graus e percursos do cliente.
+  - Ver dados do cliente 360 graus nos processos de negócio do Dynamics 365 com pacotes de pré-criados.
 
 - **Analistas de negócio:**
 
-  - Crie perfis personalizáveis, defina medidas e crie segmentos para obter uma vista de 360 graus do cliente, específica da sua organização.  
-  - Utilização de conetores fora de caixa para PowerApps ou Microsoft Power BI ou APIs para dar a conhecer as suas aplicações comerciais ou soluções de BI.  
+  - Crie perfis personalizáveis, defina medidas, crie segmentos e beneficie de análise preditiva para obter uma vista de 360 graus do cliente, específica da sua organização.  
+  - Utilize conectores de origem para várias aplicações da Microsoft e de terceiros ou APIs para processar as informações.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

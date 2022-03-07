@@ -1,43 +1,49 @@
 ---
 title: Utilizar origens de dados para ingerir dados
 description: Saiba como importar dados de várias origens.
-ms.date: 11/01/2021
-ms.service: customer-insights
+ms.date: 12/06/2021
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.custom: intro-internal
-ms.openlocfilehash: 27cbd0346b1219c7812f4b90327dd27b645c2b8e
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+searchScope:
+- ci-data-sources
+- ci-create-data-source
+- customerInsights
+ms.openlocfilehash: e7bcf82c4fe3625ef791ec2b0a7651be0356a006
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732169"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354063"
 ---
 # <a name="data-sources-overview"></a>Descrição geral das origens de dados
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 A capacidade de insights da audiência em Dynamics 365 Customer Insights liga-se a dados de um vasto conjunto de origens. A ligação a um origem de dados é frequentemente referida como o processo de *ingestão de dados*. Depois de ingerir os dados, pode [unificar](data-unification.md) e tomar medidas sobre os mesmos.
 
 ## <a name="add-a-data-source"></a>Adicionar uma origem de dados
 
-Consulte os artigos detalhados sobre como adicionar uma origem de dados, dependendo da opção que escolher.
+Consulte os artigos detalhados para saber como adicionar uma origem de dados, consoante a opção que escolher.
 
-Pode adicionar uma origem de dados de três formas principais:
+Poderá adicionar as seguintes origens de dados:
 
-- [Através de dezenas de conectores Power Query](connect-power-query.md)
+- [Através de dezenas de conectores do Power Query](connect-power-query.md)
 - [A partir de uma pasta do Common Data Model](connect-common-data-model.md)
-- [A partir do seu próprio lake do Microsoft Dataverse](connect-dataverse-managed-lake.md)
+- [A partir do seu próprio Data Lake do Microsoft Dataverse](connect-dataverse-managed-lake.md)
+- [A partir de uma base de dados do Azure Synapse Analytics](connect-synapse.md)
+
+> [!NOTE]
+> Se estiver a utilizar a versão de avaliação, a secção de métodos de importação inclui uma opção **Biblioteca de dados do Customer Insights**. Escolha esta opção para selecionar um conjunto de dados de amostra disponível para vários setores. Para obter mais informações, consulte [Avaliação do Dynamics 365 Customer Insights](../trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Adicionar dados de origens de dados no local
 
-Ingerir dados de origens de dados no local em informações de audiência é suportado com base em fluxos de dados do Microsoft Power Platform. Os fluxos de dados podem ser ativados no Customer Insights [fornecendo o URL do ambiente Microsoft Dataverse](create-environment.md) ao configurar o ambiente.
+Ingerir dados de origens de dados no local em informações de audiência é suportado com base em fluxos de dados do Microsoft Power Platform. Poderá ativar Fluxos de Dados no Customer Insights ao [fornecer o URL do ambiente do Microsoft Dataverse](create-environment.md) quando configurar o ambiente.
 
-Por predefinição, as origens de dados criadas após a associação de um ambiente Dataverse ao Customer Insights utilizarão [fluxos de dados do Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Os fluxos de dados suportam conectividade no local utilizando o gateway de dados. Remova e recrie origens de dados que existiam antes de um ambiente Dataverse ser associado a [utilizar os gateways de dados no local](/data-integration/gateway/service-gateway-app).
+As origens de dados que são criadas após a associação de um ambiente do Dataverse ao Customer Insights utilizam [fluxos de dados do Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) por predefinição. Os fluxos de dados suportam conectividade no local utilizando o gateway de dados. Poderá remover e recriar as origens de dados que existiam antes de um ambiente do Dataverse ser associado [através de gateways de dados no local](/data-integration/gateway/service-gateway-app).
 
 Os gateways de dados de um ambiente Power BI ou Power Apps existente serão visíveis e poderá reutilizá-los no Customer Insights. A página de origens de dados mostra ligações para ir para o ambiente do Microsoft Power Platform onde pode ver e configurar gateways de dados no local.
 

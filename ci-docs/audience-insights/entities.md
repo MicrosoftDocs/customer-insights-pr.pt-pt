@@ -3,18 +3,20 @@ title: Entidades e conjuntos de dados
 description: Ver dados na página Entidades.
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 00c5ee50fb9f0906622c91699852ffba0acb5c15
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+searchScope:
+- ci-entities
+- customerInsight
+ms.openlocfilehash: 1e1abdf49a3c1fe6f9fdd2cf5353a7723454f47b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900441"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355334"
 ---
 # <a name="entities-in-audience-insights"></a>Entidades em insight da audiência
 
@@ -71,7 +73,9 @@ Campos de uma origem de dados ingerida podem conter dados danificados. Os regist
 
 Por exemplo, uma coluna de "aniversário" tem o tipo de dados definido como "data". Um registo de cliente tem o seu aniversário introduzido como "01/01/19777". O sistema vai sinalizar este registo como danificado. Alguém pode agora mudar o aniversário no sistema de origem para "1977". Após uma atualização automatizada de origens de dados, o campo tem agora um formato válido e o registo será removido da entidade danificada. 
 
-Aceda a **Dados** > **Entidades** e procure as entidades danificadas na secção **Sistema**. Nomeação de esquema de entidades danificadas: "DataSourceName_EntityName_corrupt".
+Aceda a **Dados** > **Entidades** e procure as entidades danificadas na secção **Sistema**. Nomeação de esquema de entidades danificadas: "DataSourceName_EntityName_corrupt". Selecione uma entidade corrompida para identificar todos os campos corrompidos e a razão a nível de registo individual.
+> [!div class="mx-imgBorder"]
+> ![Razão do corrompimento.](media/corruption-reason.png "Razão do Corrompimento")
 
 O Customer Insights ainda processa registos danificados. No entanto, podem causar problemas ao trabalhar com os dados unificados.
 

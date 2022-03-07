@@ -1,22 +1,30 @@
 ---
 title: Configuração do sistema em informações de audiência
 description: Saiba mais sobre as configurações do sistema na capacidade das informações de audiência do Dynamics 365 Customer Insights.
-ms.date: 02/12/2021
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2af8728009b4f1d53ebc2557bab8c79537a0dc5dda54477493ab1ad16f3f9a8a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+searchScope:
+- ci-system-status
+- ci-system-schedule
+- ci-system-about
+- ci-system-general
+- ci-system-api-usage
+- customerInsights
+ms.openlocfilehash: 2c52f7b8a7d41ae4a985745c7b79bbc62f59bb5a
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035930"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354247"
 ---
 # <a name="system-configuration"></a>Configuração do sistema
+
+Para aceder às configurações do sistema em informações de audiência, a partir da barra de navegação esquerda, selecione **Administração** > **Sistema** para ver uma lista de tarefas e processos do sistema.
 
 A página **Sistema** inclui os seguintes separadores:
 - [Estado](#status-tab)
@@ -24,49 +32,69 @@ A página **Sistema** inclui os seguintes separadores:
 - [Utilização da API](#api-usage-tab)
 - [Acerca de](#about-tab)
 - [Geral](#general-tab)
+- [Segurança](#security-tab)
 
-> [!div class="mx-imgBorder"]
-> ![Página do sistema.](media/system-tabs.png "Página do sistema")
+:::image type="content" source="media/system-tabs.png" alt-text="Separadores de definições na página do sistema.":::
 
 ## <a name="status-tab"></a>Separador Estado
 
-O separador **Estado** permite-lhe acompanhar o progresso da ingestão de dados, exportações de dados e vários outros processos importantes do produto. Rever a informação neste separador para garantir a abrangência dos processos ativos.
+O **separador Estado** permite-lhe monitorizar o progresso de tarefas, a ingestão de dados, as exportações de dados e vários outros processos importantes do produto. Reveja as informações sobre este separador para garantir a conclusão das suas tarefas e processos ativos.
 
-Este separador inclui tabelas com informações de estado e processamento para vários processos. Cada tabela monitoriza o **Nome** da tarefa e a sua entidade correspondente, o **Estado** da sua execução mais recente, e quando foi **Atualizada pela última vez**.
+Este separador inclui tabelas com informações de estado e processamento para vários processos. Cada tabela monitoriza o **Nome** da tarefa e a sua entidade correspondente, o **Estado** da sua execução mais recente, e quando foi **Atualizada pela última vez**. Pode ver os detalhes das últimas execuções selecionando a tarefa ou o nome do processo. 
 
-Ver os detalhes das últimas várias execuções das tarefas ao selecionar o respetivo nome.
+Selecione o estado junto da tarefa ou do processo na coluna **Estado** para abrir o painel **Detalhes do progresso**.
 
-### <a name="status-types"></a>Tipos de estado
+   :::image type="content" source="media/system-progress-details.png" alt-text="Painel de detalhes do progresso do sistema":::
 
-Há seis tipos de estados para tarefas. Os seguintes tipos de estado também são mostrados nas páginas *Corresponder*, *Unir*, *Origens de dados*, *Segmentos*, *Medidas*, *Melhoramento*, *Atividades* e *Previsões*:
+### <a name="status-definitions"></a>Definições de estado
 
-- **A processar:** a tarefa está em curso. O estado pode ser alterado para Com êxito ou Falha.
-- **Com Êxito:** a tarefa foi concluída com êxito.
-- **Ignorada:** A tarefa foi ignorada. Um ou mais dos processos a jusante de que esta tarefa depende estão a falhar ou foram ignorados.
-- **Falha:** o processamento da tarefa falhou.
-- **Cancelada:** o processamento foi cancelado pelo utilizador antes de ser concluído.
-- **Em fila:** o processamento está em fila e começará assim que todas as tarefas a montante estiverem concluídas. Para mais informações, consulte [Políticas de atualização](#refresh-policies).
+O sistema utiliza os seguintes estados para tarefas e processos:
 
-### <a name="refresh-policies"></a>Políticas de atualização
+|Estado  |Definição  |
+|---------|---------|
+|Cancelado |O processamento foi cancelado pelo utilizador antes de terminar.   |
+|Com Falha   |A ingestão de dados encontrou erros.         |
+|Falha  |O processamento falhou.  |
+|Não iniciada   |A origem dos dados ainda não tem dados ingeridos ou ainda está em modo de rascunho.         |
+|Em processamento  |A tarefa ou o processo estão em curso.  |
+|A atualizar    |A ingestão de dados está em curso. Poderá cancelar esta operação ao selecionar **Parar de atualizar** na coluna **Ações**. Parar a atualização de um origem de dados irá revertê-lo para o último estado de atualização.       |
+|Omitida  |A tarefa ou o processo foi ignorado. Um ou mais dos processos a jusante de que esta tarefa depende estão a falhar ou foram ignorados.|
+|Êxito  |Tarefa ou processo concluído com êxito. Para as origens de dados, indica que os dados foram ingeridos com êxito se for mencionado um tempo na coluna **Atualizado**.|
+|Em fila | O processamento está na fila e iniciará assim que todas as tarefas e processos de origem forem concluídos. Para mais informações, consulte [Atualizar processos](#refresh-processes).|
 
-Esta lista mostra as políticas de atualização para cada um dos principais processos:
+### <a name="refresh-processes"></a>Atualizar processos
 
-- **Origens de dados:** é executado de acordo com a [agenda configurada](#schedule-tab). Não depende de qualquer outro processo. A correspondência depende da conclusão com êxito deste processo.
-- **Corresponder:** é executada de acordo com a [agenda configurada](#schedule-tab). Depende do processamento das origens de dados utilizadas na definição de correspondência. Unir depende da conclusão com êxito deste processo.
-- **Unir:** é executada de acordo com a [agenda configurada](#schedule-tab). Depende da conclusão do processo de correspondência. Os segmentos, as medidas, o melhoramento, a pesquisa, as atividades, as previsões e a preparação de dados dependem da conclusão com êxito deste processo.
-- **Segmentos**: a execução é feita manualmente (atualização única) e em conformidade com a [agenda configurada](#schedule-tab). Depende de Unir. As informações dependem do seu processamento.
-- **Medidas**: a execução é feita manualmente (atualização única) e em conformidade com a [agenda configurada](#schedule-tab). Depende de Unir.
-- **Atividades**: a execução é feita manualmente (atualização única) e em conformidade com a [agenda configurada](#schedule-tab). Depende de Unir.
-- **Melhoramento**: a execução é feita manualmente (atualização única) e em conformidade com a [agenda configurada](#schedule-tab). Depende de Unir.
-- **Pesquisa**: a execução é feita manualmente (atualização única) e em conformidade com a [agenda configurada](#schedule-tab). Depende de Unir.
-- **Preparação de dados**: é executado de acordo com a [agenda configurada](#schedule-tab). Depende de Unir.
-- **Informações**: a execução é feita manualmente (atualização única) e em conformidade com a [agenda configurada](#schedule-tab). Depende dos Segmentos.
+A atualização de tarefas e processos é executada de acordo com a [agenda configurada](#schedule-tab). 
 
-Selecione o estado de uma tarefa para ver os detalhes do progresso de toda a tarefa em que se encontrava. As políticas de atualização anteriores podem ajudar a compreender o que pode fazer para abordar uma tarefa **Ignorada** ou **Em fila**.
+|Processo  |Descrição  |
+|---------|---------|
+|Atividade  |É executado manualmente (atualização única). Depende do processo de intercalação. As informações dependem do seu processamento.|
+|Ligação da análise |É executado manualmente (atualização única). Depende dos segmentos.  |
+|Preparação da análise |É executado manualmente (atualização única). Depende dos segmentos.  |
+|Preparação de dados   |Depende da intercalação.   |
+|Origens de dados   |Não depende de qualquer outro processo. A correspondência depende da conclusão com êxito deste processo.  |
+|Melhoramentos   |É executado manualmente (atualização única). Depende do processo de intercalação. |
+|Destinos de exportação |É executado manualmente (atualização única). Depende dos segmentos.  |
+|Informações |É executado manualmente (atualização única). Depende dos segmentos.  |
+|Informações   |Depende da intercalação.   |
+|Corresponder |Depende do processamento das origens de dados utilizadas na definição de correspondência.      |
+|Medidas  |É executado manualmente (atualização única). Depende do processo de intercalação.  |
+|Unir   |Depende da conclusão do processo de correspondência. Os segmentos, as medidas, o melhoramento, a pesquisa, as atividades, as previsões e a preparação de dados dependem da conclusão com êxito deste processo.   |
+|Perfis   |É executado manualmente (atualização única). Depende do processo de intercalação. |
+|Pesquisar   |É executado manualmente (atualização única). Depende do processo de intercalação. |
+|Segmentos  |É executado manualmente (atualização única). Depende do processo de intercalação. As informações dependem do seu processamento.|
+|Sistema   |Depende da conclusão do processo de correspondência. Os segmentos, as medidas, o melhoramento, a pesquisa, as atividades, as previsões e a preparação de dados dependem da conclusão com êxito deste processo.   |
+|Utilizador  |É executado manualmente (atualização única). Depende das entidades.  |
+
+Selecione o estado de um processo para ver os detalhes do progresso de toda a tarefa em que estava. Os processos de atualização acima podem ajudar a compreender o que pode fazer para abordar uma tarefa ou processo **Ignorado** ou **Em fila**.
 
 ## <a name="schedule-tab"></a>Separador Agenda
 
 Use o separador **Agendar** para agendar atualizações automáticas de todos as suas [origens de dados ingeridas](data-sources.md). As atualizações automáticas ajudam a garantir que as atualizações das suas origens de dados são refletidas nos perfis de clientes unificados.
+
+> [!NOTE]
+> As origens de dados geridas por si atualizam as suas próprias agendas. Para agendar a atualização de origens de dados geridas por si, configure as definições de atualização nessa origem de dados específica na página de **origens de dados**.
+> :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Definições de atualização do fluxo de dados.":::
 
 1. Nas informações de audiência, aceda a **Admin** > **Sistema** e selecione o separador **Agendar**.
 
@@ -84,9 +112,15 @@ O separador **Sobre** contém o **Nome a apresentar** da sua organização, o **
 
 ## <a name="general-tab"></a>Separador Geral
 
-Existem duas opções no separador **Geral**, **Idioma** e **Formato do País/Região**.
+Pode alterar o idioma e o formato de país/região no separador **Geral**.
 
-A aplicação [suporta diversos idiomas](supported-languages.md). Para alterar o idioma preferencial, escolha um **Idioma** na lista pendente.
+O Customer Insights [suporta muitos idiomas](/dynamics365/get-started/availability). A aplicação usa a sua preferência de idioma para apresentar elementos como o menu, o texto da etiqueta e as mensagens do sistema no seu idioma preferencial.
+
+Os dados importados e as informações que introduziu manualmente não são traduzidos.
+
+### <a name="update-the-settings"></a>Atualizar as definições
+
+Para alterar o idioma preferencial, escolha um **Idioma** na lista pendente.
 
 Para alterar a formatação preferencial das datas, hora e números, utilize o menu pendente **País/Região**. É apresentada uma pré-visualização da formatação neste campo. O sistema irá sugerir automaticamente uma seleção quando escolher um novo idioma.
 
@@ -103,8 +137,15 @@ A **Utilização da API** contém três secções:
 
 -  **Operações** – uma tabela com filas para cada operação disponível da API e detalhes sobre a utilização das operações. Pode selecionar um nome de operação para ir [à referência API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
-   As operações que utilizam [a ingestão de dados em tempo real](real-time-data-ingestion.md) contêm um botão com um símbolo binocular para visualizar a utilização da API em tempo real. Selecione o botão para abrir um painel lateral contendo detalhes de utilização para a utilização da API em tempo real no ambiente atual.   
+   As operações que utilizam [a ingestão de dados em tempo real](real-time-data-ingestion.md) contêm um botão com um símbolo de binóculos para ver a utilização da API em tempo real. Selecione o botão para abrir um painel lateral contendo detalhes de utilização para a utilização da API em tempo real no ambiente atual.   
    Utilize a caixa **Agrupar por** no painel **Utilização da API em tempo real** para escolher como melhor apresentar as suas interações em tempo real. Pode agrupar os dados pelo método de API, nome qualificado de entidade (entidade ingerida), criado por (origem do evento), resultado (sucesso ou falha) ou códigos de erro. Os dados estão disponíveis como gráfico histórico e como tabela.
+
+## <a name="security-tab"></a>Separador de segurança
+
+O separador **Segurança** permite-lhe ligar e gerir o seu próprio [Azure Key Vault](/azure/key-vault/general/basic-concepts) ao ambiente.
+O cofre de chaves dedicado pode ser utilizado para preparar e utilizar segredos no limiar de conformidade de uma organização. As informações de audiência podem utilizar os segredos no Azure Key Vault para [configurar as ligações](connections.md) aos sistemas de terceiros.
+
+Para mais informações, consulte [Trazer o seu próprio Azure Key Vault](use-azure-key-vault.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

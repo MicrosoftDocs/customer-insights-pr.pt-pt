@@ -2,18 +2,17 @@
 title: Utilizar dimensões demográficas para dividir dados comportamentais (dimensões curadas)
 description: Utilize dimensões unificadas com curadoria de perfis para permitir propriedades de perfil de cliente de informações de audiência.
 ms.date: 07/27/2021
-ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 95395e09bc0ba5ba93138957c62105f31c709e91
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461117"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8233061"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Utilizar dimensões demográficas para dividir dados comportamentais
 
@@ -29,7 +28,7 @@ Ao utilizar dimensões demográficas de perfil unificado, os utilizadores podem 
 - Um ambiente de informações de cativação em que tem dados de perfil de cliente ligados ao ambiente de informações de audiência onde os perfis de clientes são criados. Mais informações: [Criar uma ligação entre as informações de audiência e as informações de cativação](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Depois de criar uma ligação entre os ambientes de informações de audiência e de informações de cativação, poderá só querer dados específicos das propriedades de perfil de cliente, o que pode ser útil como dimensões em informações de cativação. Para obter mais informações, vá a [Capacitar atributos e segmentos de perfis unificados de informações de audiência](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
+> Depois de criar uma ligação entre os ambientes de informações de audiência e de informações de cativação, poderá só querer dados específicos das propriedades de perfil de cliente, o que pode ser útil como dimensões em informações de cativação. Para obter mais informações, vá a [Capacitar atributos e segmentos de perfis unificados de informações de audiência](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
 
 ## <a name="create-a-new-custom-report"></a>Criar um novo relatório personalizado
 

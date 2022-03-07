@@ -1,20 +1,19 @@
 ---
 title: Tarefas partilhadas para cenários de predição
 description: Aprenda a gerir, resolver problemas e refinar predições.
-ms.date: 05/17/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b935be08199f20e83bceb3317985b0e1dc120016
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 8c5d8b0395452c8da1631f09cffeddfc811e6d29
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095740"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8230806"
 ---
 # <a name="manage-predictions"></a>Gerir predições
 
@@ -36,9 +35,6 @@ O relatório de capacidade de utilização de dados de entrada fornece uma vista
 
 O relatório está disponível depois de um modelo ter concluído o seu processo de preparação. É criado para cada modelo separadamente, independentemente de ter sido concluído com sucesso ou não.
 
-> [!NOTE]
-> Atualmente, esta funcionalidade só funciona para o modelo Abandono de Transações.
-
 ### <a name="view-the-input-data-usability-report"></a>Ver o relatório de capacidade de utilização de dados de entrada
 
 Depois de um modelo fornecido com o programa ter concluído o seu passo de preparação, veja o relatório:
@@ -53,12 +49,12 @@ As seguintes colunas no relatório contêm informações úteis para melhorar os
 
 :::image type="content" source="media/input-data-usability-report.png" alt-text="Exemplo de um relatório de capacidade de utilização de dados de entrada a mostrar uma tabela com erros, avisos e recomendações.":::
 
-- Nome: nome descritivo do erro, aviso ou recomendação.
-- Passo: fase do modelo, preparação ou classificação, a que as informações se referem.
-- Estado: gravidade das informações (erro, aviso, recomendação).
-- Nome da coluna: coluna numa entidade que precisa de ser modificada para melhorar o desempenho do modelo.
-- Nome da entidade: nome da entidade que precisa de ser modificada para melhorar o desempenho do modelo.
-- Detalhes: detalhes sobre o erro, aviso ou recomendação.
+- **Nome:** nome descritivo do erro, aviso ou recomendação.
+- **Passo:** fase do modelo, preparação ou classificação, a que as informações se referem.
+- **Estado:** gravidade das informações (erro, aviso, recomendação).
+- **Nome da coluna:** coluna numa entidade que precisa de ser modificada para melhorar o desempenho do modelo.
+- **Nome da entidade:** nome da entidade que precisa de ser modificada para melhorar o desempenho do modelo.
+- **Detalhes:** detalhes sobre o erro, aviso ou recomendação.
 
 ## <a name="refresh-a-prediction"></a>Atualizar uma previsão
 
@@ -69,6 +65,8 @@ As previsões serão automaticamente atualizadas no mesmo [horário que as suas 
 1. Selecione as reticências verticais ao lado da previsão que pretende atualizar.
 
 1. Selecione **Atualizar**.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="delete-a-prediction"></a>Eliminar uma previsão
 

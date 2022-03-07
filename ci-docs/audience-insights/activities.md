@@ -1,20 +1,28 @@
 ---
 title: Atividades do cliente
 description: Defina as atividades dos clientes e veja-as numa linha cronológica nos perfis dos clientes.
-ms.date: 09/27/2021
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: bcb8d42963719f5d225556c31b3fc06db8573e5b
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+searchScope:
+- ci-entities
+- ci-customer-card
+- ci-relationships
+- ci-activities
+- ci-activities-wizard
+- ci-measures
+- ci-segment-suggestions
+- customerInsight
+ms.openlocfilehash: a2f1e8ecf49664a4bb2dc271131d437e50cfdd24
+ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673152"
+ms.lasthandoff: 02/28/2022
+ms.locfileid: "8359848"
 ---
 # <a name="customer-activities"></a>Atividades do cliente
 
@@ -61,7 +69,7 @@ Uma entidade tem de ter, pelo menos, um atributo do tipo **Data** a ser incluíd
    - **Campos opcionais**
       - **Detalhe adicional**: campo com informações relevantes para esta atividade.
       - **Ícone**: ícone que melhor representa este tipo de atividade.
-      - **Endereço Web**: campo que contém um URL com informações sobre esta atividade. Por exemplo, o sistema transacional que fornece esta atividade. Este URL pode ser qualquer campo da origem de dados, ou pode ser construído como um novo campo usando uma transformação Power Query. Os dados de URL serão armazenados na entidade de *Atividade Unificada*, que pode ser consumida a jusante utilizando [APIs](apis.md).
+      - **Endereço Web**: campo que contém um URL com informações sobre esta atividade. Por exemplo, o sistema transacional que fornece esta atividade. Este URL pode ser qualquer campo a partir da origem de dados ou pode ser construído como um novo campo usando uma transformação do Power Query. Os dados de URL serão armazenados na entidade de *Atividade Unificada*, que pode ser consumida a jusante utilizando [APIs](apis.md).
 
    - **Mostrar na linha cronológica**
       - Escolha se pretende mostrar esta atividade na vista de linha cronológica dos perfis dos clientes. Selecione **Sim** para mostrar a atividade na linha cronológica ou **Não** para ocultá-la.
@@ -82,9 +90,7 @@ Uma entidade tem de ter, pelo menos, um atributo do tipo **Data** a ser incluíd
 
 1. Na página **Atividades**, selecione **Executar** para processar a atividade. 
 
-> [!TIP]
-> Há [seis tipos de estados](system.md#status-types) para tarefas/processos. Além disso, a maior parte dos processos [depende de outros processos a jusante](system.md#refresh-policies). Poderá selecionar o estado de um processo para ver os detalhes do progresso de toda a tarefa. Depois de selecionar **Ver detalhes** de uma das tarefas do trabalho, encontra informações adicionais: tempo de processamento, última data de processamento e todos os erros e avisos associados à tarefa.
-
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-activities"></a>Gerir atividades existentes
 

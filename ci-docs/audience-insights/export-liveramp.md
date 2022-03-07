@@ -3,18 +3,17 @@ title: Conector do LiveRamp
 description: Aprenda a configurar a ligação e exportar para o LiveRamp.
 ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: f9a0a88fb58897e4d279c181f4cdb4f6c852da60
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 4c0f58083e8486d2042d8efcc8b3690020efb1c3
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618949"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226366"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>Exportar segmentos para o LiveRamp&reg; (pré-visualização)
 

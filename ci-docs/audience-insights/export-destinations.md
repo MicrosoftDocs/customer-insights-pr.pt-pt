@@ -1,33 +1,59 @@
 ---
 title: Exportar dados do Customer Insights
 description: Gerir exportações para partilhar dados.
-ms.date: 06/14/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
-ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
+searchScope:
+- ci-export
+- ci-connections
+- customerInsights
+ms.openlocfilehash: 33f59c62565560517c480be63e581465605c5f7b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6253054"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354339"
 ---
 # <a name="exports-preview-overview"></a>Descrição geral de exportações (pré-visualização)
 
-A página **Exportações** mostra todas as exportações configuradas. As exportações partilham dados específicos com várias aplicações. Podem incluir perfis de clientes ou entidades, esquemas e detalhes de mapeamento. Cada exportação requer uma [ligação, configurada por um administrador, para gerir a autenticação e o acesso](connections.md).
+A página **Exportações** mostra todas as exportações configuradas. As exportações partilham dados específicos com várias aplicações. Podem incluir perfis de clientes, entidades, esquemas e detalhes de mapeamento. Cada exportação requer uma [ligação, configurada por um administrador, para gerir a autenticação e o acesso](connections.md).
 
-Vá a **Dados** > **Exportações** para ver a página de exportações. Todas as funções de utilizador têm acesso a ver exportações configuradas. Utilização do campo de pesquisa na barra de comandos para encontrar exportações pelo nome, nome da ligação ou tipo de ligação.
+Vá a **Dados** > **Exportações** para ver a página de exportações. Todas as funções de utilizador podem ver exportações configuradas. Utilize o campo de pesquisa na barra de comando para encontrar exportações pelo nome, nome da ligação ou tipo de ligação.
 
-## <a name="set-up-a-new-export"></a>Configurar uma nova exportação
+## <a name="export-types"></a>Tipos de exportação
 
+Existem dois tipos principais de exportação:  
+
+- As **exportações de saída de dados** permitem-lhe exportar qualquer tipo de entidade disponível nas informações de audiência. As entidades que seleciona para exportação são exportadas com todos os campos de dados, metadados, esquemas e detalhes de mapeamento. 
+- As **exportações de segmentos** permitem-lhe exportar entidades de segmentos de informações de audiência. Os segmentos representam uma lista de perfis de clientes. Ao configurar a exportação, selecione os campos de dados incluídos, dependendo do sistema de destino para o qual está a exportar dados. 
+
+### <a name="export-segments"></a>Exportar segmentos
+
+**Exportar segmentos em ambientes para contas empresariais (B2B) ou consumidores individuais (B2C)**  
+A maioria das opções de exportação suportam ambos os tipos de ambientes. A exportação de segmentos para vários sistemas de destino possui requisitos específicos. De um modo geral, uma membro do segmento, o perfil do cliente, contém informações de contacto. Embora este seja geralmente o caso dos segmentos baseados em consumidores individuais (B2C), não é necessariamente o caso dos segmentos baseados em contas empresariais (B2B). 
+
+**Ambientes de exportação de segmentos para contas empresariais (B2B)**  
+- Os segmentos no contexto de ambientes para contas empresariais são baseados na entidade *conta*. Para exportar segmentos de contas como está, o sistema de destino precisa de suportar segmentos de contas completos. É o caso do [LinkedIn](export-linkedin-ads.md) quando escolhe a opção **empresa** enquanto define a exportação.
+- Todos os outros sistemas de destino requerem campos da entidade de contacto. Para garantir que os segmentos de contas podem obter dados de contactos relacionados, a definição do segmento precisa de projetar atributos da entidade de contacto. Saiba mais sobre como [configurar segmentos e projetar atributos](segment-builder.md).
+
+**Exportações de segmentos em ambientes para consumidores individuais (B2C)**  
+- Os segmentos no contexto de ambientes para clientes individuais são baseados na entidade *perfil do cliente unificado*. Todos os segmentos que satisfaçam os requisitos dos sistemas de destino (por exemplo, um endereço de e-mail) podem ser exportados.
+
+**Limites às exportações de segmentos**  
+- Os sistemas de destino de terceiros podem limitar o número de perfis de clientes que pode exportar. 
+- Para clientes individuais, verá o número real de membros do segmento quando seleciona um segmento para exportação. Obterá um aviso se um segmento for muito grande. 
+- Para contas empresariais, verá o número de contas num segmento; no entanto, o número de contactos que podem ser projetados não é apresentado. Em alguns casos, isto poderia levar a que o segmento exportado realmente contenha mais perfis de clientes do que o sistema de destino aceita. Exceder os limites dos resultados dos sistemas de destino irá ignorar a exportação. 
+
+## <a name="set-up-a-new-export"></a>Configurar uma nova exportação  
 Para configurar ou editar uma exportação, precisa de ter ligações disponíveis para si. As ligações dependem da sua [função de utilizador](permissions.md):
-- Os administradores têm acesso a todas as ligações. Podem também criar novas ligações ao configurar uma exportação.
-- Os contribuidores podem ter acesso a ligações específicas. Dependem dos administradores para configurar e partilhar ligações. A lista de exportações mostra aos contribuidores se podem editar ou apenas ver uma exportação na coluna **As suas permissões**. Para mais informações, consulte [Permitir que os contribuidores utilizem uma ligação para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
-- Os visualizadores só podem ver exportações existentes, mas não criá-las.
+- Os **administradores** têm acesso a todas as ligações. Podem também criar novas ligações ao configurar uma exportação.
+- Os **contribuidores** podem ter acesso a ligações específicas. Dependem dos administradores para configurar e partilhar ligações. A lista de exportações mostra aos contribuidores se podem editar ou apenas ver uma exportação na coluna **As suas permissões**. Para mais informações, aceda a [Permitir que os contribuidores utilizem uma ligação para as exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- Os **visualizadores** só podem ver as exportações existentes, mas não podem criá-las.
 
 ### <a name="define-a-new-export"></a>Definir uma nova exportação
 
@@ -73,7 +99,9 @@ Depois de criar destinos de exportação, são listados em **Dados** > **Exporta
 
 Cada exportação que configura tem uma agenda de atualização. Durante uma atualização, o sistema procura dados novos ou atualizados a incluir numa exportação. Por predefinição, as exportações são executadas como parte de cada [atualização de sistema agendada](system.md#schedule-tab). Pode personalizar a agenda de atualização ou desativá-la para executar exportações manualmente.
 
-As agendas de exportação dependem do estado do seu ambiente. Se existirem atualizações sobre [dependências](system.md#refresh-policies) em curso quando uma exportação agendada deve começar, o sistema completará primeiro as dependências e, em seguida, executará a exportação. Pode ver quando uma exportação foi atualizada pela última vez na coluna **Atualizadas**.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+As agendas de exportação dependem do estado do seu ambiente. Se houver atualizações em curso sobre as [dependências](system.md#refresh-processes) quando uma exportação agendada deveria começar, o sistema completará primeiro as atualizações e, em seguida, executará a exportação. Pode ver quando uma exportação foi atualizada pela última vez na coluna **Atualizadas**.
 
 ### <a name="schedule-exports"></a>Agendar exportações
 

@@ -1,22 +1,21 @@
 ---
-title: Exportar dados do Customer Insights para a Análise do Azure Synapse
-description: Aprenda a configurar a ligação e exportar para a Análise do Azure Synapse.
+title: Exportar dados do Customer Insights para o Azure Synapse Analytics
+description: Saiba como configurar a ligação ao Azure Synapse Analytics.
 ms.date: 01/05/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 6f630b8fb03bf615ada6d40fe27a91975d0c856e
-ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
+ms.openlocfilehash: 289c8d545f057b3f70679b485cf4350545c0587b
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/10/2022
-ms.locfileid: "7951056"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231326"
 ---
-# <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportar dados para a Análise do Azure Synapse (Pré-visualização)
+# <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportar para o Azure Synapse Analytics (pré-visualização)
 
 O Azure Synapse é um serviço de análise que acelera o tempo para as informações através de armazéns de dados e sistemas de macrodados. Pode ingerir e utilizar os seus dados do Customer Insights no [Azure Synapse](/azure/synapse-analytics/overview-what-is).
 
@@ -53,7 +52,7 @@ Para criar uma ligação, o principal do serviço e a conta de utilizador no Cus
 
 1. Aceda a **Admin** > **Ligações**.
 
-1. Selecione **Adicionar ligação** e escolha a **Análise do Azure Synapse** para selecionar **Configurar** no mosaico **Análise do Azure Synapse** para configurar a ligação.
+1. Selecione **Adicionar ligação** e escolha **Azure Synapse Analytics** ou selecione a **Configuração** no mosaico **Azure Synapse Analytics** para configurar a ligação.
 
 1. Forneça um nome reconhecível à ligação no campo Nome a apresentar. O nome e o tipo de ligação descrevem esta ligação. Recomendamos a escolha de um nome que explique o propósito e o destino da ligação.
 
@@ -71,11 +70,11 @@ Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Pa
 
 1. Para criar um nova exportação, selecione **Adicionar exportação**.
 
-1. No campo **Ligação para a exportação**, escolha uma ligação a partir da secção **Análise do Azure Synapse**. Se não vir este nome de secção, não existem [ligações](connections.md) deste tipo disponíveis para si.
+1. No campo **Ligação para a exportação**, escolha uma ligação na secção **Azure Synapse Analytics**. Se não vir este nome de secção, não existem [ligações](connections.md) deste tipo disponíveis para si.
 
 1. Forneça um **Nome a apresentar** reconhecível para a sua exportação e um **Nome de base de dados**.
 
-1. Selecione que entidades pretende exportar para a Análise do Azure Synapse.
+1. Selecione quais as entidades que pretende exportar para o Azure Synapse Analytics.
    > [!NOTE]
    > As origens de dados baseadas numa [pasta Common Data Model](connect-common-data-model.md) não são suportadas.
 

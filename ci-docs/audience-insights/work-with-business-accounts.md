@@ -1,24 +1,28 @@
 ---
 title: Começar com contas profissionais como audiência alvo principal
 description: Mais informações sobre começar com contas profissionais como audiência alvo principal Dynamics 365 Customer Insights.
-ms.date: 09/30/2021
-ms.service: customer-insights
+ms.date: 10/19/2021
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
+ms.custom: intro-internal
 ms.author: wimohabb
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea036cf3a3623a314a6d0d7da85b2c30c030ccea
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+searchScope:
+- ci-semantic-mapping
+- ci-connections
+- customerInsights
+ms.openlocfilehash: 88882dc727c37262c9f204fbc8049abe17bd21a3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645002"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353557"
 ---
 # <a name="work-with-business-accounts-in-audience-insights"></a>Trabalhar com contas empresariais nas informações de audiência
 
-A capacidade de informações de audiência no Dynamics 365 Customer Insights permite configurar o seu ambiente para diferentes audiências alvo principais: clientes individuais (B2C) e contas empresariais (B2B). Nos cenários B2C, os dados centram-se nos indivíduos. No B2B, as audiências alvo principais são as contas - organizações ou empresas - e os contactos. Este artigo ajuda-o a começar com um ambiente para contas empresariais. Lista as diferenças para as áreas de funcionalidades em informações de audiência, dependendo do foco do seu ambiente. Para obter mais informações sobre as diferenças, reveja os documentos das áreas de funcionalidades. 
+A capacidade de informações de audiência no Dynamics 365 Customer Insights permite configurar o seu ambiente para diferentes audiências alvo principais: consumidores individuais (B2C) e contas empresariais (B2B). Nos cenários B2C, os dados centram-se nos indivíduos. No B2B, as audiências alvo principais são as contas - organizações ou empresas - e os contactos. Este artigo ajuda-o a começar com um ambiente para contas empresariais. Lista as diferenças para as áreas de funcionalidades em informações de audiência, dependendo do foco do seu ambiente. Para obter mais informações sobre as diferenças, reveja os documentos das áreas de funcionalidades. 
 
 ## <a name="create-an-environment-for-business-accounts"></a>Criar um ambiente para contas empresariais
 
@@ -32,7 +36,7 @@ Após a unificação dos dados, [especifique as hierarquias de contas](relations
 
 Se a sua organização mantiver ambientes para clientes individuais e contas empresariais, pode utilizar o comutador no painel esquerdo para escolher a audiência alvo principal.
 
-:::image type="content" source="media/switch-primary-target-audience.PNG" alt-text="Comutador para alterar a audiência alvo principal entre clientes individuais e contas empresariais.":::
+:::image type="content" source="media/switch-primary-target-audience.png" alt-text="Comutador para alterar a audiência alvo principal entre clientes individuais e contas empresariais.":::
 
 ## <a name="supported-feature-areas"></a>Áreas de funcionalidades suportadas
 

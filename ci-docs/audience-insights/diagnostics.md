@@ -3,18 +3,20 @@ title: Auditar o Dynamics 365 Customer Insights com o Azure Monitor
 description: Saiba como enviar registos para o Microsoft Azure Monitor.
 ms.date: 12/14/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: article
 author: brndkfr
 ms.author: bkief
 manager: shellyha
-ms.openlocfilehash: d962c359d70a068fcf939b61e340f86de088b419
-ms.sourcegitcommit: 0c3c473e0220de9ee3c1f1ee1825de0b3b3663c3
+searchScope:
+- ci-system-diagnostic
+- customerInsights
+ms.openlocfilehash: 2e0801c2b6af591e48a7df485a8523903c07617c
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/14/2021
-ms.locfileid: "7920840"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354422"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Registar o reencaminhamento no Dynamics 365 Customer Insights com o Azure Monitor (Pré-visualização)
 
@@ -233,10 +235,10 @@ Os eventos de fluxo de trabalho têm as seguintes propriedades.
 | `properties.submittedBy`                     | Sim      | No   | Opcional. Apenas eventos do fluxo de trabalho. O [objectId do utilizador](/azure/marketplace/find-tenant-object-id#find-user-object-id) do Azure Active Directory que acionou o fluxo de trabalho, consulte também `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Sim      | No   | Atualização `full` ou `incremental`.                                                                                                                                                                                                                            |
 | `properties.workflowSubmissionKind`          | Sim      | No   | `OnDemand` ou `Scheduled`.                                                                                                                                                                                                                                  |
-| `properties.workflowStatus`                  | Sim      | No   | `Running` ou `Successful`.                                                                                                                                                                                                                                 |
-| `properties.startTimestamp`                  | Sim      | Sim  | Carimbo de Data/Hora UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.endTimestamp`                    | Sim      | Sim  | Carimbo de Data/Hora UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.submittedTimestamp`              | Sim      | Sim  | Carimbo de Data/Hora UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
+| `properties.workflowStatus`                  | Sim      | No   | `Running` ou  `Successful`.                                                                                                                                                                                                                                 |
+| `properties.startTimestamp`                  | Sim      | Sim  | Carimbo de Data/Hora UTC `yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
+| `properties.endTimestamp`                    | Sim      | Sim  | Carimbo de Data/Hora UTC `yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
+| `properties.submittedTimestamp`              | Sim      | Sim  | Carimbo de Data/Hora UTC `yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.instanceId`                      | Sim      | Sim  | Customer Insights `instanceId`                                                                                                                                                                                                                              |  |
 | `properties.identifier`                      | No       | Sim  | - Para OperationType = `Export`, o identificar é o guid da configuração de exportação. <br> - Para OperationType = `Enrichment`, é o guid do melhoramento <br> - Para OperationType `Measures` e `Segmentation`, o identificar é o nome da entidade. |
 | `properties.friendlyName`                    | No       | Sim  | Nome amigável da exportação ou da entidade que é processada.                                                                                                                                                                                           |

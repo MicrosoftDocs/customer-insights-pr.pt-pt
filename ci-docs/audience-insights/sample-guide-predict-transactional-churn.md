@@ -2,21 +2,20 @@
 title: Guia de predição de abandono transacional
 description: Utilize este guia de amostra para experimentar o modelo de predição de abandono transacional.
 ms.date: 11/19/2020
-ms.reviewer: digranad
-ms.service: customer-insights
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: mhart
+author: diegogranados117
+ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 81540ad2f490cf566f031233543b3cb6aa838033
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 93841358d110bd16c7b7f8beb079bed704b22260
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269804"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354615"
 ---
-# <a name="transactional-churn-prediction-preview-sample-guide"></a>Guia de amostra de predição de abandono transacional (pré-visualização)
+# <a name="transactional-churn-prediction-sample-guide"></a>Guia de predição de abandono transacional
 
 Este guia irá guiá-lo através de um exemplo da predição de abandono transacional no Customer Insights, utilizando os dados fornecidos abaixo Todos os dados utilizados neste guia não são dados reais do cliente e fazem parte do conjunto de dados Contoso que se encontram no ambiente de *Demonstração* na sua subscrição do Customer Insights.
 
@@ -31,7 +30,7 @@ Contoso é uma empresa que produz café e máquinas de café de alta qualidade, 
 
 ## <a name="task-1---ingest-data"></a>Tarefa 1 - Ingerir dados
 
-Rever os artigos [sobre ingestão de dados](data-sources.md) e [importar origens de dados utilizando conectores Power Query](connect-power-query.md) especificamente. A seguinte informação pressupõe que está familiarizado com a ingestão de dados em geral. 
+Reveja os artigos [sobre a ingestão de dados](data-sources.md) e a [importação de origens de dados utilizando especificamente conectores do Power Query](connect-power-query.md). A seguinte informação pressupõe que está familiarizado com a ingestão de dados em geral. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingerir dados de clientes a partir da plataforma eCommerce
 
@@ -46,8 +45,7 @@ Rever os artigos [sobre ingestão de dados](data-sources.md) e [importar origens
    - **DateOfBirth**: Data
    - **CreatedOn**: Data/Hora/Zona
 
-   [!div class="mx-imgBorder"]
-   ![Transformar data de nascimento em data](media/ecommerce-dob-date.PNG "transformar data de nascimento em data")
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Transformar data de nascimento em data.":::
 
 1. No campo **Nome** no painel da direita, altere o nome da sua origem de dados de **Consulta** para **eCommerceContacts**
 
@@ -109,9 +107,9 @@ Depois de ingerirmos os dados, iniciamos agora o processo **Mapear, Corresponder
 
 1. Aceda ao separador **Corresponder** e selecione **Definir encomenda**.
 
-1. Na lista pendente **Primária**, escolher **eCommerceContacts : eCommerce** como a origem primária e incluir todos os registos.
+1. Na lista pendente **Primário**, escolha **eCommerceContacts : eCommerce** como a origem primária e inclua todos os registos.
 
-1. Na lista pendente **Entidade 2**, escolher **loyCustomers : LoyaltyScheme** e incluir todos os registos.
+1. Na lista pendente **Entidade 2**, escolha **loyCustomers : LoyaltyScheme** e inclua todos os registos.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Unificar corresponder comércio eletrónico e fidelidade.":::
 
@@ -119,16 +117,16 @@ Depois de ingerirmos os dados, iniciamos agora o processo **Mapear, Corresponder
 
 1. Adicione a sua primeira condição usando FullName.
 
-   * Para eCommerceContacts selecione **FullName** na lista pendente.
-   * Para loyCustomers selecione **FullName** na lista pendente.
+   * Para eCommerceContacts, selecione **FullName** na lista pendente.
+   * Para loyCustomers, selecione **FullName** na lista pendente.
    * Selecione a lista pendente **Normalizar** e escolha **Tipo (Telefone, Nome, Morada, ...)**.
    * Definir **Nível de precisão**: **Básico** e **Valor**: **Elevado**.
 
 1. Introduzir o nome **FullName, Email** para a nova regra.
 
    * Acrescentar uma segunda condição para o endereço de correio eletrónico, selecionando **Adicionar condição**
-   * Para a entidade eCommerceContacts, escolha **EMail** na lista pendente.
-   * Para a entidade loyCustomers, escolha **EMail** na lista pendente. 
+   * Para a entidade eCommerceContacts, escolha **E-mail** na lista pendente.
+   * Para a entidade loyCustomers, escolha **E-mail** na lista pendente. 
    * Deixar em branco Normalizar. 
    * Definir **Nível de precisão**: **Básico** e **Valor**: **Elevado**.
 
@@ -150,7 +148,7 @@ Depois de ingerirmos os dados, iniciamos agora o processo **Mapear, Corresponder
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Tarefa 3 - Configurar a predição de abandono da transação
 
-Com os perfis unificados de clientes em vigor, podemos agora executar a predição de abandono da subscrição. Para passos detalhados, ver o artigo [Predição de abandono da subscrição (pré-visualização)](predict-subscription-churn.md). 
+Com os perfis unificados de clientes em vigor, podemos agora executar a predição de abandono da subscrição. Para obter passos detalhados, consulte o artigo [Predição de abandono de subscrições](predict-subscription-churn.md). 
 
 1. Vá a **Inteligência** > **Descobrir** e selecione para utilizar o **Modelo de abandono do cliente**.
 

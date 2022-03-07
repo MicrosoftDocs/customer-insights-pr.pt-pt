@@ -1,20 +1,23 @@
 ---
-title: Mapear entidades para unificação de dados
-description: Mapear dados para criar perfis unificados de clientes.
-ms.date: 09/25/2020
-ms.service: customer-insights
+title: Mapear entidades e atributos para unificação de dados
+description: Selecione entidades, atributos, chaves primárias e tipos semânticos para mapear dados para o perfil do cliente unificado.
+ms.date: 10/18/2020
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7fc05aca61d1136f620019ee82dc6937ea39d8e5
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+searchScope:
+- ci-map
+- ci-match
+- customerInsights
+ms.openlocfilehash: 81f1e97dfbecd9292c50529ca21da8dab9295b5d
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6555137"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354972"
 ---
 # <a name="map-entities-and-attributes"></a>Mapear entidades e atributos
 
@@ -94,9 +97,9 @@ Continue com os passos de unificação e certifique-se de que o atributo que con
 
 Para as organizações (Pré-visualização), o tipo de atributo deve ser mapeado para "Nome.Organização"
 > [!div class="mx-imgBorder"]
-> ![Chave primária e tipo de atributo B2B](media/configure-data-map-edit-b2b.png "Chave primária e tipo de atributo B2B")
+> ![Chave primária e tipo de atributo B2B.](media/configure-data-map-edit-b2b.png "Chave primária e tipo de atributo B2B")
 
-## <a name="next-step"></a>Passo seguinte
+## <a name="next-step"></a>Próximo passo
 
 Como parte do processo de unificação dos dados, vá para a página **Corresponder**. Visite [**Corresponder**](match-entities.md) para saber mais sobre esta fase.
 

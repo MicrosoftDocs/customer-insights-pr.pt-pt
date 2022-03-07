@@ -2,19 +2,21 @@
 title: Informações de segmentos para segmentos existentes
 description: Obter informações sobre segmentos existentes para ver diferenças e pontos em comum.
 ms.date: 06/10/2020
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: jimsonc
+author: JimsonChalissery
+ms.author: jimsonc
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: d731d21462b5a31aba0653f87e299d98373bbf49
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+searchScope:
+- ci-segment-insights
+- customerInsights
+ms.openlocfilehash: 8ae832c69c89bee08b8ef36ed99233b6e8e5a0f4
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270034"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355581"
 ---
 # <a name="segment-insights-preview"></a>Informações de segmentos (pré-visualização)
 
@@ -44,13 +46,13 @@ Também pode analisar como a sobreposição muda para atributos específicos.
 Após completar a análise, encontre detalhes sobre esta informação em **Segmentos** > **Informações (pré-visualização)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Detalhes de informações de sobreposição de segmentos":::
+> :::image type="content" source="media/segment-overlap.png" alt-text="Detalhes de informações de sobreposição de segmentos.":::
 
 Selecione uma informação para ver os resultados da análise:
 
 - O número de membros que se sobrepõem aos segmentos selecionados para análise.
 - O número de membros incluídos num dos segmentos, mas não nos restantes segmentos.
-- Se selecionar campos enquanto configura a análise de sobreposição, irá encontrá-los nos separadores correspondentes. Pode utilizar o filtro para selecionar qualquer nível de interesse do atributo e a tabela na parte inferior mostrará os dados correspondentes.
+- Se selecionar campos enquanto configura a análise de sobreposição, irá encontrá-los nos separadores correspondentes. Pode utilizar a lista pendente de filtros para selecionar qualquer nível de atributo de interesse e a tabela na parte inferior mostrará os dados correspondentes.
 
 ## <a name="segment-differentiators"></a>Diferenciadores de segmentos
 
@@ -77,7 +79,7 @@ Os diferenciadores de segmento ajudam-no a descobrir o que diferencia um segment
 Após completar a análise, encontre detalhes sobre esta informação em **Segmentos** > **Informações (pré-visualização)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Detalhes de informações de diferenciador de segmentos":::
+> :::image type="content" source="media/segment-differentiators.png" alt-text="Detalhes de informações de diferenciador de segmentos.":::
 
 Selecione uma informação para ver os resultados da análise. Uma análise diferenciadora inclui dois separadores. O separador **Atributos** lista atributos de perfil considerados diferenciadores. O separador **Medidas** lista diferenciadores. Cada separador inclui os seguintes detalhes:
 
