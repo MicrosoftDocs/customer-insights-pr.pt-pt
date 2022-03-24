@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: cf680c21c55c71d99728be79fe68111dc89a79ec
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 4c1b5eaa3568b5c73013024d2da7e65276142f72
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355031"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455876"
 ---
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Utilizar segmentos no Dynamics 365 Sales (pré-visualização)
 
@@ -31,7 +31,7 @@ Utilize os dados dos seus clientes para criar listas de marketing, dar seguiment
 
 ## <a name="prerequisite-for-connection"></a>Pré-requisito para a ligação
 
-1. Os registos de contacto têm de estar presentes no Dynamics 365 Sales antes de poder exportar um segmento do Customer Insights para o Sales. Leia mais sobre como ingerir contactos no [Dynamics 365 Sales utilizando o Microsoft Dataverse](connect-power-query.md).
+1. Os registos de contacto têm de estar presentes no Dynamics 365 Sales antes de poder exportar um segmento do Customer Insights para o Sales. Obtenha mais informações sobre como ingerir os contactos a partir do [Dynamics 365 Sales através do Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
    > [!NOTE]
    > A exportação de segmentos a partir de informações da audiência para o Sales não criarão novos registos de contacto nas instâncias do Sales. Os registos de contacto do Sales têm de ser ingeridos nas informações da audiência e utilizados como origem de dados. Também precisam de ser incluídos na entidade unificada do Cliente para mapear IDs de cliente para contactar IDs antes que os segmentos possam ser exportados.

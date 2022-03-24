@@ -8,16 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 9195770255bd798636b9532d6e1ca928345b3708
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232718"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376476"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>O que há de novo na capacidade de informações de audiência do Dynamics 365 Customer Insights
-
-
 
 É com entusiasmo que anunciamos as nossas mais recentes atualizações! Este artigo resume as funcionalidades de pré-visualização públicas, melhorias gerais de disponibilidade e atualizações de funcionalidades. Para conhecer os planos de funcionalidades a longo prazo, consulte os [Planos de versão do Dynamics 365 e do Power Platform](/dynamics365/release-plans/).
 
@@ -26,6 +24,62 @@ Implementamos as atualizações numa base por região. Assim, certas regiões po
 > [!TIP]
 > Para enviar e votar em pedidos de funcionalidades e sugestões para produtos, vá para o [portal de ideias de aplicação do Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+
+## <a name="february-2022-updates"></a>Atualizações de fevereiro de 2022
+
+As atualizações em fevereiro de 2022 incluem novas funcionalidades, atualizações de desempenho e correções de erros.
+
+### <a name="general-availability-for-prediction-models"></a>Disponibilidade geral para modelos predição
+
+Os modelos de predição prontos a utilizar, incluindo **abandono de subscrições**, **abandono transacional** e **valor vitalício do cliente(CLV)** ficam em disponibilidade geral como parte do Customer Insights. 
+
+Para mais informações, consulte [Descrição geral das predições](predictions-overview.md).
+
+### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Nova origem de dados: Integração com o Azure Synapse Analytics (Pré-visualização)
+
+Azure Synapse Analytics é um serviço de análise empresarial que acelera o tempo para insights em armazéns de dados e sistemas de macrodados.
+
+Se a sua organização já utilizar para a análise avançada as capacidades do Azure Synapse Analytics e armazena a saída nas bases de dados do Data Lake, poderá ingerir facilmente esses dados para o Customer Insights. Para obter mais informações, consulte [Ligar uma origem de dados do Azure Synapse (Pré-visualização)](connect-synapse.md).
+
+### <a name="liveramp-enrichment-preview"></a>Melhoramento da LiveRamp (Pré-visualização)
+
+A LiveRamp fornece uma resolução de identidade offline determinística e a consolidação dos dados de clientes. Pode mapear identificadores pessoais nos seus dados de clientes para o gráfico de identidade da AbiliTec e receber os IDs da AbiliTec. Em seguida, pode utilizar estes IDs para melhorar a unificação dos seus dados de clientes.
+
+Para obter mais informações, consulte [Melhorar os perfis de clientes com dados de identidade da LiveRamp (Pré-visualização)](enrichment-liveramp.md).
+
+### <a name="enrichment-for-data-sources-preview"></a>Melhoramento de origens de dados (Pré-visualização)
+
+Utilize dados de origens como a Microsoft e outros parceiros para melhorar os dados dos seus clientes antes da unificação de dados. Os melhoramentos de origens de dados ajudam a produzir uma maior qualidade e integralidade de dados que podem ajudar a obter melhores resultados quando unificar os seus dados.
+
+Para obter mais informações, consulte [Melhoramento para origens de dados (Pré-visualização)](data-sources-enrichment.md).
+
+### <a name="change-owner-of-environment"></a>Alterar proprietário do ambiente
+
+Apesar de vários utilizadores poderem ter permissões de administrador no Customer Insights, apenas um utilizador é o proprietário de um ambiente. Uma experiência melhorada permite alterar os proprietários de um ambiente e reclamar a propriedade se um antigo proprietário sair da organização. 
+
+Para mais informações, consulte [Alterar o proprietário de um ambiente](manage-environments.md#change-the-owner-of-an-environment).
+
+### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>O processo de preparação de dados lista a razão dos danos aos registos danificados
+
+O processo de preparação de dados mostra agora a razão dos danos para todos os campos com dados danificados a nível de registo individual para facilitar a identificação. 
+
+Para obter mais informações, consulte [Origens de dados danificadas](entities.md#corrupted-data-sources).
+
+### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Fim da pré-visualização para as funcionalidades de relatórios na capacidade de informações de interação
+
+A pré-visualização da capacidade informações de interação do Dynamics 365 Customer Insights terminou em 15 de fevereiro de 2022.  
+Esta alteração significa que a experiência de avaliação do Customer Insights já não inclui a capacidade de criar funis ou outras funcionalidades de relatórios.
+
+Convidámo-lo a explorar e a avaliar as muitas outras funcionalidades do [Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/), a plataforma de dados de clientes da Microsoft (CDP).    
+ 
+Durante um período de transição, os participantes de pré-visualização existentes ainda têm acesso a algumas capacidades e funcionalidades de pré-visualização:
+
+- Obtenha código para instrumentar um site ou aplicação móvel 
+- Ver eventos e propriedades de eventos 
+- Melhorar perfis unificados com eventos ingeridos e refinados para beneficiar do valor total dos dados dos seus clientes
+  
+Durante o período de transição, os eventos capturados ainda são transmitidos para o Data Lake ligado. Assim que esta funcionalidade for desligada, a partilha de dados entre informações de interação e informações de audiência será interrompida e nenhum evento novo será enviado para o armazenamento ligado.
+Contacte diretamente a sua equipa da Conta Microsoft se tiver dúvidas sobre o final da pré-visualização da capacidade. A sua equipa de Contas vai mantê-lo atualizado sobre os próximos lançamentos. 
 
 ## <a name="january-2022-updates"></a>Atualizações de janeiro de 2022
 

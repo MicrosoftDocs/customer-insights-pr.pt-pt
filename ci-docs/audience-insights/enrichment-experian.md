@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ad1023135516ca9c49818d19aa84df68d16b2e3c
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: efa26fa82a950063e074a4ab930ed95383c55334
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229978"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376706"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Melhore perfis do cliente com demografia a partir da Experian (pré-visualização)
 
@@ -25,7 +25,7 @@ Para configurar a Experian, os seguintes pré-requisitos têm de ser cumpridos:
 
 - Tem uma subscrição ativa da Experian. Para obter uma subscrição, [contacte a Experian](https://www.experian.com/marketing-services/contact) diretamente. [Mais informações sobre o Melhoramento de Dados da Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
 
-- Uma ligação Experian já foi configurada por um administrador *ou* tem permissões de [administrador](permissions.md#administrator). Também precisa do ID de Utilizador, ID de Entidade e Número de Modelo para a sua conta de Transporte Seguro (ST) ativada por SSH que a Experian criou para si.
+- Uma ligação Experian já foi configurada por um administrador *ou* tem permissões de [administrador](permissions.md#admin). Também precisa do ID de Utilizador, ID de Entidade e Número de Modelo para a sua conta de Transporte Seguro (ST) ativada por SSH que a Experian criou para si.
 
 ## <a name="supported-countriesregions"></a>Países/regiões suportados
 

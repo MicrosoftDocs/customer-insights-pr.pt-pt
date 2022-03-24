@@ -1,7 +1,7 @@
 ---
 title: Gerir permissões de utilizador
 description: Mais informações sobre permissões e funções do utilizador.
-ms.date: 03/25/2021
+ms.date: 02/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 85e1f4f93ac0e99ce6634dfc8fceab0c9a14885e
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355951"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376752"
 ---
 # <a name="user-permissions"></a>Permissões de utilizador
 
@@ -48,7 +48,7 @@ Existem três tipos de funções:
 - Gerir a configuração e enriquecer os perfis do cliente a partir da página de **Enriquecimento** (apenas para enriquecimentos de proprietário).
 - Gerir e criar exportações com base em ligações partilhadas com os contribuidores. [Saiba mais sobre como os administradores permitem que os contribuidores utilizem uma ligação para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-## <a name="administrator"></a>Administrador
+## <a name="admin"></a>Admin
 
 - Todas as permissões disponíveis para o Contribuidor.
 - Altere as definições no **Sistema**, incluindo o idioma de trabalho e atualize as agendas para os seus processos do sistema.
@@ -60,6 +60,12 @@ Existem três tipos de funções:
 - Instale e utilize o **Suplemento Ficha de Cliente**.
 - Adicione e utilize o **Power Apps conetor**.
 - Permitir o uso de [APIs do Customer Insights](apis.md).
+- [Atribuir a propriedade do ambiente](manage-environments.md#change-the-owner-of-an-environment) a outro administrador.
+
+## <a name="admin-owner"></a>Administrador (proprietário)
+
+- Todas as permissões disponíveis para o Administrador.
+- [Repor e eliminar](manage-environments.md#reset-an-existing-environment) o ambiente.
 
 ## <a name="assign-roles-and-permissions"></a>Atribuir funções e permissões
 

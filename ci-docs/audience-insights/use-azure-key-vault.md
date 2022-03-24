@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 5b22c1464b3f089551f485f98d6d93840ff77136
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 418575f724090628da8bd01e2569a4cb9e646337
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355905"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376522"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Trazer o seu próprio Azure Key Vault (pré-visualização)
 
@@ -31,7 +31,7 @@ Para configurar o cofre de chaves em informações de audiência, devem ser cump
 
 - Tem uma subscrição ativa do Azure.
 
-- Tem uma função de [Administrador](permissions.md#administrator) nas informações de audiência. Saiba mais sobre [as permissões de utilizador nas informações de audiência](permissions.md#assign-roles-and-permissions).
+- Tem uma função de [Administrador](permissions.md#admin) nas informações de audiência. Saiba mais sobre [as permissões de utilizador nas informações de audiência](permissions.md#assign-roles-and-permissions).
 
 - Tem as funções de [Contribuidor](/azure/role-based-access-control/built-in-roles#contributor) e de [Administrador de Acesso ao Utilizador](/azure/role-based-access-control/built-in-roles#user-access-administrator) no cofre de chaves ou no grupo de recursos ao qual o cofre de chaves pertence. Para obter mais informações, aceda a [Adicionar ou remova atribuições de funções do Azure utilizando o portal do Azure](/azure/role-based-access-control/role-assignments-portal). Se não tiver a função de Administrador de Acesso ao Utilizador no cofre de chaves, tem de configurar as permissões de controlo de acesso baseado em funções para o principal de serviço do Azure para o Dynamics 365 Customer Insights em separado. Siga os passos para [utilizar um principal de serviço do Azure](connect-service-principal.md) para o cofre de chaves que deve ser ligado.
 

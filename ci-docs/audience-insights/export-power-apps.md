@@ -8,12 +8,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: ae2a3b7c05e9ed860da31853c47af2aec8634e7a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 18cc32a169e79794d2d3203d462620ab41efaafe
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229046"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455966"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Conector do Microsoft Power Apps (pré-visualização)
 
@@ -38,6 +38,8 @@ Depois de adicionar o Customer Insights como uma ligação de dados, poderá esc
 ### <a name="retrievable-entities"></a>Entidades que pode obter
 
 Só pode obter as entidades **Cliente**, **UnifiedActivity**, **Segmentos** e **ContactProfile** através do conector do Power Apps. ContactProfile está disponível apenas na instância das informações de audiência para contas empresariais. Outras entidades são mostradas porque o conector subjacente as suporta através de acionadores no Power Automate.
+
+Pode fazer um máximo de 100 chamadas por cada 60 segundos. Pode chamar o ponto final de API várias vezes ao utilizar o parâmetro $skip. [Saiba mais sobre o parâmetro $skip](/connectors/customerinsights/#get-items-from-an-entity).
 
 ### <a name="delegation"></a>Delegação
 

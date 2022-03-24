@@ -58,6 +58,8 @@
           href: audience-insights/connect-dataverse-managed-lake.md
         - name: Adicionar Azure Synapse Analytics
           href: audience-insights/connect-synapse.md
+        - name: Melhoramento de origens de dados
+          href: audience-insights/data-sources-enrichment.md
         - name: Atualização incremental para origens de dados
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Ingestão de dados em tempo real
@@ -100,6 +102,8 @@
           href: audience-insights/enrichment-here.md
         - name: Enriqueça com o Leadspace
           href: audience-insights/enrichment-leadspace.md
+        - name: Melhorar com a LiveRamp
+          href: audience-insights/enrichment-liveramp.md
         - name: Melhorar com a Experian
           href: audience-insights/enrichment-experian.md
         - name: Melhorar com dados do Office 365

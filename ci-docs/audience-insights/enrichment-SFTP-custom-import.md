@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: e4b9a65eb50f75e0243fabfc10b501cf7acf4490
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 042558af801a1d1fc365939d9aa42c09b98b2679
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229652"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376614"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Enriquecer perfis de clientes com dados personalizados (pré-visualização)
 
@@ -25,7 +25,7 @@ Para configurar a importação personalizada do SFTP, devem ser cumpridos os seg
 
 - Tem o nome do ficheiro e a localização (caminho) do ficheiro a ser importado no anfitrião do SFTP.
 - Existe um ficheiro *model.json* que especifica [o esquema do Common Data Model](/common-data-model/) para os dados a serem importados. Este ficheiro deve estar no mesmo diretório do ficheiro a importar.
-- Uma ligação SFTP já foi configurada por um administrador *ou* tem permissões de [administrador](permissions.md#administrator). Precisará das credenciais, URL e número de porta do utilizador para a localização SFTP de onde pretende importar dados.
+- Uma ligação SFTP já foi configurada por um administrador *ou* tem permissões de [administrador](permissions.md#admin). Precisará das credenciais, URL e número de porta do utilizador para a localização SFTP de onde pretende importar dados.
 
 
 ## <a name="configure-the-import"></a>Configurar a importação

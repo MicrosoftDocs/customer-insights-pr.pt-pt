@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 49729a13d26885c30039f9fa426eaee92c172424
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: ab4ab0dba1bd91b1893cd4b16b8d51381d5b6ef8
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355167"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376936"
 ---
 # <a name="match-entities"></a>Fazer corresponder entidades
 
@@ -180,7 +180,19 @@ Uma entidade de saída de eliminação de duplicados contém as seguintes inform
   - Deduplication_WinnerId: este campo contém o ID de vencedor dos grupos ou clusters identificados. Se Deduplication_WinnerId é o mesmo que o valor da Chave primária para um registo, significa que o registo é o registo vencedor.
 - Campos usados para definir as regras de eliminação de duplicados.
 - Campos Regra e Pontuação para denotar quais as regras de eliminação de duplicados foram aplicadas e a pontuação devolvida pelo algoritmo correspondente.
-   
+ 
+## <a name="include-enriched-entities-preview"></a>Incluir entidades melhoradas (Pré-visualização)
+
+Se melhorar as entidades a nível da origem de dados, selecione-as antes de executar o processo de correspondência. As entidades melhoradas podem melhorar os seus resultados de unificação. Para obter mais informações, consulte [Melhoramento para origens de dados](data-sources-enrichment.md). 
+
+A entidade melhorada contém os campos de origem de dados originais e os campos melhorados. Portanto, se optar por trabalhar com a entidade melhorada, a configuração existente não é afetada. No entanto, poderá ter de atualizar as regras de correspondência para utilizar os campos melhorados.
+
+1. Vá para **Dados** > **Unificar** > **Corresponder** e selecione **Utilizar entidades melhoradas** no início da página.
+
+1. A partir do painel **Utilizar entidades melhoradas**, escolha uma ou mais entidades melhoradas.
+
+1. Selecionar **Concluído**. Onde quer que a entidade de origem seja utilizada (como as regras ou a ordem de correspondência), é alterada automaticamente para a entidade melhorada.
+  
 ## <a name="run-the-match-process"></a>Executar o processo de correspondência
 
 Com as regras de correspondência configuradas, incluindo regras de correspondência e eliminação de duplicados entre entidades, pode executar o processo de correspondência. 

@@ -14,16 +14,18 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 2ab550e83a4969c1f547e66bcbf6ddb96d7789df
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353650"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376336"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enriquecimento de perfis de clientes com endereços melhorados
 
 Os endereços nos seus dados podem não estar estruturados, estar incompletos ou incorretos. Utilize os modelos da Microsoft para normalizar e enriquecer os seus endereços no [formato do Common Data Model](/common-data-model/schema/core/applicationcommon/address) para uma melhor precisão e informações.
+
+Também pode [melhorar os endereços nas origens de dados](data-sources-enrichment.md) para melhorar a precisão de correspondência no processo de unificação de dados. 
 
 ## <a name="how-we-enhance-addresses"></a>Como melhoramos endereços
 

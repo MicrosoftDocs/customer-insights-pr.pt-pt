@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 2e0801c2b6af591e48a7df485a8523903c07617c
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354422"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376430"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Registar o reencaminhamento no Dynamics 365 Customer Insights com o Azure Monitor (Pré-visualização)
 
@@ -37,7 +37,7 @@ O Customer Insights envia os seguintes registos de eventos:
 Para configurar os diagnósticos no Customer Insights, têm de ser cumpridos os seguintes pré-requisitos:
 
 - Tem uma [Subscrição do Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/) ativa.
-- Tem permissões de [Administrador](permissions.md#administrator) no Customer Insights.
+- Tem permissões de [Administrador](permissions.md#admin) no Customer Insights.
 - Tem a função **Contribuinte** e **Administrador de Acesso ao Utilizador** no recurso de destino no Azure. O recurso pode ser uma conta de Armazenamento do Azure, um Hub de Eventos do Azure ou uma área de trabalho do Azure Log Analytics. Para obter mais informações, consulte [Adicionar ou remova atribuições de funções do Azure utilizando o portal do Azure](/azure/role-based-access-control/role-assignments-portal).
 - Os [Requisitos de destino](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) para o Armazenamento do Azure, o Hub de Eventos do Azure ou o Azure Log Analytics são cumpridos.
 - Tem pelo menos a função **Leitor** no grupo de recursos ao qual o recurso pertence.
@@ -132,7 +132,7 @@ Os eventos de API e os eventos de fluxo de trabalho têm uma estrutura comum e d
 | `resultSignature` | Cadeia (de carateres)    | Opcional          | Estado do resultado do evento. Se a operação corresponder a uma chamada à API REST, é o código de estado HTTP.        | `200`             |
 | `durationMs`      | Longo      | Opcional          | Duração da operação em milissegundos.     | `133`     |
 | `callerIpAddress` | Cadeia (de carateres)    | Opcional          | Endereço IP do chamador, se a operação corresponder a uma chamada à API com origem num endereço IP disponível publicamente.                                                 | `144.318.99.233`         |
-| `identity`        | Cadeia (de carateres)    | Opcional          | Objeto JSON que descreve a identidade do utilizador ou da aplicação que executou a operação.       | Consulte a secção [Identidade](#identity-schema).     |  |
+| `identity`        | Cadeia (de carateres)    | Opcional          | Objeto JSON que descreve a identidade do utilizador ou da aplicação que executou a operação.       | Consulte a secção [Identidade](#identity-schema).     |  
 | `properties`      | Cadeia (de carateres)    | Opcional          | Objeto JSON com mais propriedades para a categoria de eventos específica.      | Consulte a secção [Propriedades](#api-properties-schema).    |
 | `level`           | Cadeia (de carateres)    | Necessária          | Nível de gravidade do evento.    | `Informational`, `Warning`, `Error` ou `Critical`.           |
 | `uri`             | Cadeia (de carateres)    | Opcional          | URI do pedido absoluto.    |               |
@@ -239,7 +239,7 @@ Os eventos de fluxo de trabalho têm as seguintes propriedades.
 | `properties.startTimestamp`                  | Sim      | Sim  | Carimbo de Data/Hora UTC `yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.endTimestamp`                    | Sim      | Sim  | Carimbo de Data/Hora UTC `yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.submittedTimestamp`              | Sim      | Sim  | Carimbo de Data/Hora UTC `yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.instanceId`                      | Sim      | Sim  | Customer Insights `instanceId`                                                                                                                                                                                                                              |  |
+| `properties.instanceId`                      | Sim      | Sim  | Customer Insights `instanceId`                                                                                                                                                                                                                              |  
 | `properties.identifier`                      | No       | Sim  | - Para OperationType = `Export`, o identificar é o guid da configuração de exportação. <br> - Para OperationType = `Enrichment`, é o guid do melhoramento <br> - Para OperationType `Measures` e `Segmentation`, o identificar é o nome da entidade. |
 | `properties.friendlyName`                    | No       | Sim  | Nome amigável da exportação ou da entidade que é processada.                                                                                                                                                                                           |
 | `properties.error`                           | No       | Sim  | Opcional. Mensagem de erro com mais detalhes.                                                                                                                                                                                                                  |

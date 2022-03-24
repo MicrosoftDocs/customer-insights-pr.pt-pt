@@ -1,7 +1,7 @@
 ---
 title: Criar e gerir ambientes
 description: Saiba como se inscrever no serviço e como gerir ambientes.
-ms.date: 12/06/2021
+ms.date: 02/09/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 4f4e5a8415f6c2128b0480edf67f317124eeeba9
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354293"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376890"
 ---
 # <a name="manage-environments"></a>Gerir ambientes
-
-
 
 ## <a name="switch-environments"></a>Mudar de ambientes
 
@@ -98,9 +96,29 @@ Depois de atualizar as fontes de dados, aceda ao **Dados** > **Unificar**. Aqui 
 
 Quando a unificação de dados estiver concluída, aceda a **Medidas** e **Segmentos** para atualizá-los também.
 
+## <a name="change-the-owner-of-an-environment"></a>Alterar o proprietário de um ambiente
+
+Apesar de vários utilizadores poderem ter permissões de administrador no Customer Insights, apenas um utilizador é o proprietário de um ambiente. Por predefinição, é o administrador quem cria inicialmente um ambiente. Como administrador de um ambiente, pode atribuir a propriedade a outro utilizador com permissões de administrador.
+
+1. Selecione o seletor **Ambiente** no cabeçalho da aplicação.
+
+1. Selecione o ícone **Editar**.
+
+1. Na caixa de **Editar ambiente**, vá para o passo **Informações básicas**.
+
+1. No campo **Alterar proprietário do ambiente**, escolha o novo proprietário do ambiente.  
+
+1. Selecione **Rever e concluir** e, em seguida, **Atualizar** para aplicar as alterações. 
+
+## <a name="claim-ownership-of-an-environment"></a>Reclamar a propriedade de um ambiente
+
+Se o proprietário de um ambiente sair da organização ou se a respetiva conta de utilizador for eliminada, o ambiente não terá proprietário. Um utilizador com permissões de administrador pode reclamar a propriedade e tornar-se o novo proprietário. Pode continuar a ser o proprietário do ambiente ou [alterar a propriedade para outro administrador](#change-the-owner-of-an-environment). 
+
+Para reclamar a propriedade, selecione o botão **Assumir propriedade** que é apresentado no início de cada página no Customer Insights quando o proprietário original deixou a organização.
+
 ## <a name="reset-an-existing-environment"></a>Repor um ambiente existente
 
-Como administrador, pode repor um ambiente para um estado vazio se quiser eliminar todas as configurações e remover os dados ingeridos.
+Como proprietário de um ambiente, pode repor um ambiente para um estado vazio se quiser eliminar todas as configurações e remover os dados ingeridos.
 
 1.  Selecione o seletor **Ambiente** no cabeçalho da aplicação. 
 
@@ -112,7 +130,7 @@ Como administrador, pode repor um ambiente para um estado vazio se quiser elimin
 
 ## <a name="delete-an-existing-environment"></a>Eliminar um ambiente existente
 
-Como administrador, pode eliminar um ambiente que administra.
+Como proprietário de um ambiente, pode eliminar um ambiente que administra.
 
 1.  Selecione o seletor **Ambiente** no cabeçalho da aplicação.
 
