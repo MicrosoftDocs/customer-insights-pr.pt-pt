@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec286bb6a90fb4d18e89caf9166aa659b29d668e
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: d56ed779c342bb0855ee84d949f8d3ca604b92c1
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232005"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487529"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Exportar segmentos para a Marketo (pré-visualização)
 
@@ -63,7 +63,7 @@ Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Pa
 
 1. Introduza o seu **[ID da lista Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. O ID da lista é um valor puramente numérico. Por exemplo, se o seu ID da lista de Marketo for ST12345A7, remova o caráter antes e depois dos algarismos e introduza `12345`. 
 
-1. Na secção **Correspondência de dados**, no campo **E-mail**, selecione o campo que representa o endereço de e-mail de um cliente. 
+1. Na secção **Correspondência de dados**, selecione, pelo menos, um campo que represente o endereço de e-mail de um cliente ou o ID de Marketo de um cliente. 
 
 1. Opcionalmente, pode exportar **Nome próprio**, **Apelido**, **Cidade**, **Estado** e **País/Região** para criar e-mails mais personalizados. Selecione **Adicionar atributo** para mapear estes campos.
 

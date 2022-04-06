@@ -1,7 +1,7 @@
 ---
 title: Segmentos nas informações de audiência
 description: Descrição geral de segmentos e como criar e geri-los.
-ms.date: 11/01/2021
+ms.date: 03/30/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
+ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355997"
+ms.lasthandoff: 03/30/2022
+ms.locfileid: "8508580"
 ---
 # <a name="segments-overview"></a>Descrição geral dos segmentos
 
@@ -68,7 +68,9 @@ A seguinte ação está disponível quando seleciona um segmento:
 
 ## <a name="refresh-segments"></a>Atualizar segmentos
 
-Pode atualizar todos os segmentos de uma só vez selecionando **Atualizar tudo** na página **Segmentos** ou pode atualizar um ou vários segmentos quando os seleciona e escolher **Atualizar** nas opções. Em alternativa, poderá configurar uma atualização recorrente em **Administração** > **Sistema** > **Agendar**.
+Pode atualizar todos os segmentos de uma só vez selecionando **Atualizar tudo** na página **Segmentos** ou pode atualizar um ou vários segmentos quando os seleciona e escolher **Atualizar** nas opções. Em alternativa, poderá configurar uma atualização recorrente em **Administração** > **Sistema** > **Agendar**. Quando uma atualização recorrente é configurada, aplicam-se as seguintes regras:
+- Todos os segmentos com o tipo **Dinâmico** ou **Expansão** serão automaticamente atualizados na cadência definida. Quando a atualização estiver concluída, o **Estado** indica se houve quaisquer problemas na atualização do segmento. A **Última atualização** mostra um carimbo de data/hora da última atualização bem sucedida. Se ocorrer um erro, selecione o erro para ver os detalhes sobre o que aconteceu.
+- Os segmentos com o tipo **Estático** *não* serão atualizados automaticamente. A **Última atualização** mostra um carimbo de data/hora da última vez que os segmentos estáticos foram executados ou atualizados manualmente.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

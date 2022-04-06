@@ -14,18 +14,20 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 3a17716508a14020c56640c7d68f300a9d721af4
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 074d84eff65d52b083fff6c161282d4fafa1af85
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354895"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523746"
 ---
 # <a name="customer-profiles"></a>Perfis de cliente
 
 A página **Clientes** mostra uma visão combinada dos seus perfis de clientes unificados. Os perfis de clientes estão disponíveis assim que [tiver criado a entidade Cliente unificada](data-unification.md). A página permite-lhe procurar clientes e definir o índice para essa pesquisa.
 
-Os clientes podem ser indivíduos ou organizações. Cada perfil do cliente é representado por um mosaico. Utilize os controlos de paginação para obter mais registos. O cartão apresenta campos da entidade *Cliente*, tal como definido no **Índice de pesquisas e filtros**. Selecione um mosaico para ver os dados do cliente selecionado numa página dedicada chamada [página de detalhes do Cliente](customer-profiles.md#customer-details-page).
+Os clientes podem ser indivíduos ou organizações. Cada perfil do cliente é representado por um mosaico. Utilize os controlos de paginação para obter mais registos. O cartão apresenta campos da entidade *Cliente*, tal como definido no **Índice de pesquisas e filtros**. A ordem dos campos dentro de cada cartão é selecionada pelo sistema.
+
+Selecione um mosaico para ver os dados do cliente selecionado numa página dedicada chamada [página de detalhes do Cliente](customer-profiles.md#customer-details-page).
 
 > [!div class="mx-imgBorder"] 
 > ![Página Clientes a mostrar mosaicos de resultados](media/customers-page-result-tiles-B2C.png "Página Clientes a mostrar mosaicos de resultados")

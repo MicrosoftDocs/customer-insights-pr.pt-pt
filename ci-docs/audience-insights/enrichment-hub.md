@@ -1,7 +1,7 @@
 ---
 title: Melhorar perfis unificados de clientes
 description: Utilize as capacidades para melhorar os dados dos seus clientes.
-ms.date: 02/18/2022
+ms.date: 03/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.openlocfilehash: 510a20306e793a5ba522a6ac0d9c7194f03472d2
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372733"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491973"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquecimento para perfis de clientes (pré-visualização)
 
@@ -97,5 +97,19 @@ Para ver o estado do melhoramento
 1. No painel **Detalhes do progresso**, expanda a secção **Melhoramentos**. 
 1. Sob o melhoramento do qual pretende ver o progresso, selecione **Ver detalhes**. 
 1. No painel **Detalhes da tarefa**, selecione **Mostrar detalhes** para ver os processos envolvidos na atualização do melhoramento e respetivo estado. 
+
+## <a name="enrichment-results"></a>Resultados do enriquecimento
+
+Após uma execução de melhoramento concluída, pode rever os resultados do melhoramento.
+
+1. Aceda a **Dados** > **Enriquecimento**. 
+1. Selecione o melhoramento sobre o qual pretende informações.
+
+Todos os melhoramentos mostram informações básicas, como o número de perfis melhorados, uma pré-visualização da entidade de melhoramento gerada e o número de perfis melhorados ao longo do tempo. Se disponível, o **Número de clientes melhorados por campo** proporciona uma desagregação da cobertura de cada campo melhorado.
+
+:::image type="content" source="media/enrichments-results.png" alt-text="Página de resultados de melhoramentos.":::
+
+Alguns melhoramentos também mostram informações específicas para o tipo de melhoramento. Para mais informações, consulte a documentação do melhoramento relevante.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

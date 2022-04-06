@@ -24,11 +24,9 @@
       href: trial-signup.md
     - name: FAQs sobre a Avaliação
       href: trial-FAQ.md
-- name: Começar com uma licença paga
-  href: paid-license.md
 - name: Aceder ao seu ambiente
   href: 'https://home.ci.ai.dynamics.com/'
-- name: Informações de Audiência
+- name: Audience insights
   items:
     - name: Centro de ajuda
       href: audience-insights/index.yml
@@ -36,16 +34,18 @@
       href: audience-insights/overview.md
     - name: Funcionalidades novas e atualizadas
       href: audience-insights/whats-new-audience-insights.md
-    - name: Introdução
+    - name: Começar agora
       items:
         - name: Guia de início rápido
           href: audience-insights/get-started.md
+        - name: Começar com uma licença paga
+          href: paid-license.md
         - name: Criar um novo ambiente
           href: audience-insights/create-environment.md
         - name: Explorar informações de audiência
           href: audience-insights/home.md
-    - name: Trabalhar com contas empresariais
-      href: audience-insights/work-with-business-accounts.md
+        - name: Trabalhar com contas empresariais
+          href: audience-insights/work-with-business-accounts.md
     - name: Origens de dados
       items:
         - name: Descrição geral das origens de dados
@@ -64,8 +64,6 @@
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Ingestão de dados em tempo real
           href: audience-insights/real-time-data-ingestion.md
-        - name: Compreender entidades e conjuntos de dados
-          href: audience-insights/entities.md
     - name: Unificação de dados
       items:
         - name: Descrição geral da unificação de dados
@@ -76,16 +74,6 @@
           href: audience-insights/match-entities.md
         - name: Unir entidades
           href: audience-insights/merge-entities.md
-        - name: Analisar perfis de cliente unificado
-          href: audience-insights/customer-profiles.md
-        - name: Filtrar perfis de cliente unificado
-          href: audience-insights/search-filter-index.md
-        - name: Compilação de relações e entidades associadas
-          href: audience-insights/relationships.md
-        - name: Enumerar as atividades do cliente
-          href: audience-insights/activities.md
-        - name: Definir mapeamentos semânticos
-          href: audience-insights/semantic-mappings.md
     - name: Melhoramento de dados
       items:
         - name: Melhorar perfis de cliente
@@ -110,6 +98,14 @@
           href: audience-insights/enrichment-office.md
         - name: Melhorar com a importação personalizada SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
+    - name: Perfis unificados
+      items:
+        - name: Analisar perfis de cliente unificado
+          href: audience-insights/customer-profiles.md
+        - name: Filtrar perfis de cliente unificado
+          href: audience-insights/search-filter-index.md
+        - name: Definir atividades do cliente
+          href: audience-insights/activities.md
     - name: Segmentos
       items:
         - name: Descrição geral dos segmentos
@@ -190,6 +186,8 @@
               href: audience-insights/export-adobe-campaign-standard.md
             - name: Adobe Experience Platform
               href: audience-insights/export-adobe-experience-platform.md
+            - name: Braze
+              href: audience-insights/export-braze.md
             - name: Campaign Monitor
               href: audience-insights/export-campaign-monitor.md
             - name: Constant Contact
@@ -198,12 +196,14 @@
               href: audience-insights/export-dotdigital.md
             - name: Dynamics 365 Marketing
               href: audience-insights/export-dynamics365-marketing.md
-            - name: Dynamics 365 Sales
+            - name: Vendas do Dynamics 365
               href: audience-insights/export-dynamics365-sales.md
             - name: Gestor de Anúncios do Facebook
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: Iterable
+              href: audience-insights/export-iterable.md
             - name: Klaviyo
               href: audience-insights/export-klaviyo.md
             - name: LinkedIn Ads
@@ -242,6 +242,18 @@
               href: audience-insights/export-power-automate.md
             - name: Power BI
               href: audience-insights/export-power-bi.md
+    - name: Entidades
+      items:
+        - name: Compreender entidades
+          href: audience-insights/entities.md
+        - name: Rever os esquemas de entidade no Common Data Model
+          href: audience-insights/entity-schemas.md
+        - name: Dados do Customer Insights no Dataverse
+          href: audience-insights/customer-insights-dataverse.md
+        - name: Compilação de relações e entidades associadas
+          href: audience-insights/relationships.md
+        - name: Definir mapeamentos semânticos
+          href: audience-insights/semantic-mappings.md
     - name: Administração
       items:
         - name: Definir a configuração do sistema
@@ -252,15 +264,17 @@
           href: audience-insights/connections.md
         - name: Gerir vários ambientes
           href: audience-insights/manage-environments.md
-        - name: Segurança
-          items:
-            - name: Trazer o seu próprio Key Vault
-              href: audience-insights/use-azure-key-vault.md
-            - name: Estabelecer ligação a uma conta de armazenamento ADLS utilizando o principal de serviço
-              href: audience-insights/connect-service-principal.md
-            - name: Exportar registos de diagnóstico
-              href: audience-insights/diagnostics.md
-    - name: Extensibilidade
+        - name: Trazer o seu próprio Key Vault
+          href: audience-insights/use-azure-key-vault.md
+        - name: Ligação a uma conta de armazenamento utilizando o Principal de Serviço
+          href: audience-insights/connect-service-principal.md
+        - name: Exportar registos de diagnóstico
+          href: audience-insights/diagnostics.md
+        - name: Limites de serviço
+          href: service-limits.md
+        - name: Direitos e pedidos de DSR
+          href: dsr-rights-requests.md
+    - name: APIs
       items:
         - name: Rever os esquemas de entidade no Common Data Model
           href: audience-insights/entity-schemas.md
@@ -306,9 +320,5 @@
           href: consent-management/predictions-consent-data.md
 - name: Informações de Interação (pré-visualização)
   href: engagement-insights/overview.md
-- name: Limites de serviço
-  href: service-limits.md
-- name: Direitos e pedidos de DSR
-  href: dsr-rights-requests.md
 - name: Obtenha suporte
   href: /power-platform/admin/get-help-support

@@ -1,19 +1,19 @@
 ---
 title: Descrição geral sobre cenários de predição suportados
 description: Cenários de predição e opções abrangidas pela aplicação Dynamics 365 Customer Insights.
-ms.date: 12/21/2021
+ms.date: 03/24/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: c692785c7d81ab660ba2e07411e986c67c1a5d0a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 11b0efeecf8bea893272e67d29b1c6622771110c
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228258"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487549"
 ---
 # <a name="predictions-overview"></a>Descrição geral das predições
 
@@ -36,6 +36,11 @@ A maneira mais fácil de começar com a previsão de dados são os modelos prede
 - [Abandono transacional](predict-transactional-churn.md): prevê se um cliente deixará de comprar os seus produtos ou serviços num determinado período de tempo.
 
 ---
+
+> [!TIP]
+> Recomendamos que atualize regularmente os modelos de caixa de origem com dados atualizados para garantir que informam com precisão o caso de utilização do seu negócio. Os dados são atualizados ad hoc quando o sistema ingere origens de dados novas ou atualizadas. No entanto, os modelos apenas voltarão a classificar neste caso e continuarão a utilizar os dados de formação existentes.
+> 
+> Pode configurar uma **Agenda de atualização** definindo a agenda de reeducação do modelo na experiência de configuração. O modelo irá reeducar e voltar a classificar nesta agenda, que pode alterar a qualquer momento.
 
 
 ## <a name="azure-machine-learning-integration"></a>Integração do Azure Machine Learning

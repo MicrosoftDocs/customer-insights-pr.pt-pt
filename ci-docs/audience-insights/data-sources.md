@@ -1,7 +1,7 @@
 ---
 title: Utilizar origens de dados para ingerir dados
 description: Saiba como importar dados de várias origens.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: adkuppa
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: e7bcf82c4fe3625ef791ec2b0a7651be0356a006
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 9cf97c3e30d7501ba1f188a0e25a1a103299aa7f
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354063"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464088"
 ---
 # <a name="data-sources-overview"></a>Descrição geral das origens de dados
 
@@ -47,7 +47,18 @@ As origens de dados que são criadas após a associação de um ambiente do Data
 
 Os gateways de dados de um ambiente Power BI ou Power Apps existente serão visíveis e poderá reutilizá-los no Customer Insights. A página de origens de dados mostra ligações para ir para o ambiente do Microsoft Power Platform onde pode ver e configurar gateways de dados no local.
 
+> [!IMPORTANT]
+> Certifique-se de que os seus gateways estão atualizados para a versão mais recente. Pode instalar uma atualização e reconfigurar um gateway a partir de um pedido mostrado diretamente no ecrã do gateway ou [transfira a versão mais recente](https://powerapps.microsoft.com/downloads/). Se não utilizar a versão mais recente do gateway, a atualização do fluxo de dados falha com mensagens de erro como **A palavra-chave não é suportada: propriedades de configuração. Nome do parâmetro: palavra-chave**.
+
 ## <a name="review-ingested-data"></a>Rever dados ingeridos
+Se o seu ambiente contiver fluxos de dados do Power Platform, a página **Origens de Dados** enumera três secções: 
+- **Partilhado**: as origens de dados que podem ser geridas por todos os admins do Customer Insights. Os fluxos de dados do Power BI, a sua própria conta de armazenamento e anexar a um data lake gerido pelo Dataverse são exemplos de origens de dados partilhadas.
+- **Gerido por mim**: fluxos de dados do Power Platform criados e geridos apenas por si. Outros admins do Customer Insights só podem ver estes fluxos de dados, mas não os podem editar, atualizar ou eliminar.
+- **Gerido por outros**: fluxos de dados do Power Platform criados por outros admins. Só os pode ver. Enumera o proprietário do fluxo de dados a contactar para qualquer assistência.
+> [!NOTE]
+> Todas as entidades podem ser vistas e utilizadas por outros utilizadores. A contextualização de utilizador aplica-se apenas às origens de dados e não às entidades que resultam destes fluxos de dados.
+
+Se não forem utilizados quaisquer fluxos de dados do Power Platform, não verá qualquer grupo ou secção. A página **Origens de Dados** contém apenas uma lista de todas as origens de dados.
 
 Verá o nome de cada origem de dados ingerido, o seu estado, e a última vez que os dados foram atualizados para essa origem. Pode ordenar a lista de origens de dados por cada coluna.
 
