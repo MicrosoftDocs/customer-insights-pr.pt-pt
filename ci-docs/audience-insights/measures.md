@@ -1,12 +1,12 @@
 ---
 title: Compreender e gerir medidas
 description: Saiba como as medidas ajudam a analisar e a refletir o desempenho da sua empresa.
-ms.date: 02/28/2022
+ms.date: 03/24/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measures
@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: c46fcc3baba1d6c92c2c0fe459a62277343cc0e4
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
+ms.openlocfilehash: ef10f480086ccac4fa5c6c58818e35ecae67532c
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359801"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529691"
 ---
 # <a name="measures-overview"></a>Descrição geral das medidas
 
@@ -27,7 +27,7 @@ As medidas ajudam-no a compreender melhor os comportamentos dos clientes e o des
 
 As medidas são criadas [utilizando o criador de medidas](measure-builder.md), uma plataforma de consulta de dados com vários operadores e opções simples de mapeamento. Permite filtrar os dados, agrupar os resultados, detetar [caminhos de relações entres entidades](relationships.md) e pré-visualizar a saída. Pode [utilizar modelos predefinidos](measure-templates.md) para configurar eficazmente as medidas habitualmente utilizadas.
 
-Utilize o criador de medidas para planear as atividades empresariais consultando os dados dos clientes e extraindo informações. Por exemplo, criar uma medida de *gasto total por cliente* e *devoluções totais por cliente* ajuda a identificar um grupo de clientes com elevado gasto mas com elevadas devoluções também. Pode [criar um segmento](segments.md) baseado nestas medidas para impulsionar as melhores ações seguintes. 
+Utilize o criador de medidas para planear as atividades empresariais consultando os dados dos clientes e extraindo informações. Por exemplo, criar uma medida de *gasto total por cliente* e *devoluções totais por cliente* ajuda a identificar um grupo de clientes com elevado gasto mas com elevadas devoluções também. Pode [criar um segmento](segments.md) baseado nestas medidas para impulsionar as melhores ações seguintes.
 
 ## <a name="manage-your-measures"></a>Gerir as medidas
 
@@ -35,18 +35,17 @@ Pode encontrar a lista de medidas na página **Medidas**.
 
 Encontrará informações sobre o tipo de medida, o criador, data de criação e estado. Quando selecionar uma medida da lista, pode pré-visualizar a saída e transferir um ficheiro CSV.
 
-Para atualizar todas as suas medidas ao mesmo tempo, selecione **Atualizar tudo** sem selecionar uma medida específica.
+:::image type="content" source="media/measures-actions.png" alt-text="Ações para gerir medidas únicas."lightbox="media/measures-actions.png":::
 
-:::image type="content" source="media/measure-actions.png" alt-text="Ações para gerir medidas únicas.":::
+As seguintes ações estão disponíveis quando seleciona uma medida:
 
-Selecione uma medida da lista para as seguintes opções:
-
-- Selecione o nome da medida para ver os respetivos detalhes.
 - **Edite** a configuração da medida.
-- **Atualize** a medida com base nos dados mais recentes.
+- **Duplique** uma medida. Pode optar por editar as suas propriedades imediatamente ou simplesmente guardar o duplicado.
+- **Atualize** a medida com base nos dados mais recentes. Para atualizar todas as suas medidas ao mesmo tempo, selecione todas as medidas e, em seguida, **Atualize**.
 - **Mude o nome** da medida.
-- **Elimine** a medição.
 - **Ativar** ou **Desativar**. As medidas inativas não serão atualizadas durante uma [atualização agendada](system.md#schedule-tab).
+- **Etiqueta** para [gerir etiquetas](work-with-tags-columns.md#manage-tags) para o segmento.
+- **Elimine** a medição.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

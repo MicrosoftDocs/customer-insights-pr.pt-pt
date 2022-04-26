@@ -1,22 +1,22 @@
 ---
 title: Criar medidas a partir de modelos
 description: Defina medidas, utilizando modelos para casos de utilização habituais.
-ms.date: 02/28/2022
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: 0fe846691825b93732cbbe6d1c942a79e4a3934f
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
+ms.openlocfilehash: eeabd889f7b694f8d809894169a3cdc068acc340
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359933"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529415"
 ---
 # <a name="use-a-template-to-build-a-measure"></a>Utilize um modelo para criar uma medida
 
@@ -51,9 +51,11 @@ Modelos de medidas disponíveis:
 
 1. Reveja os dados necessários e selecione **Começar** se tiver todos os dados preparados.
 
-1. No painel **Editar nome**, defina o nome da sua medida e a entidade de saída. 
+1. Selecione **Editar detalhes** junto de Nome da medida. Forneça um nome para a medida. Opcionalmente, adicione [etiquetas](work-with-tags-columns.md#manage-tags) à medida.
 
-1. Selecione **Concluído**.
+   :::image type="content" source="media/measures_edit_details.png" alt-text="Caixa de diálogo Editar detalhes.":::
+
+1. Selecionar **Concluído**.
 
 1. Na secção **Definir período de tempo**, defina o período de tempo dos dados a utilizar. Escolha se pretende que a nova medida cubra todo o conjunto de dados selecionando **Sempre** ou se pretende que a medida se concentre num **Período de tempo específico**.
 

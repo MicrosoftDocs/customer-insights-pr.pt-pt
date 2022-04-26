@@ -44,6 +44,8 @@
           href: audience-insights/create-environment.md
         - name: Explorar informações de audiência
           href: audience-insights/home.md
+        - name: Trabalhar com etiquetas e colunas
+          href: audience-insights/work-with-tags-columns.md
         - name: Trabalhar com contas empresariais
           href: audience-insights/work-with-business-accounts.md
     - name: Origens de dados

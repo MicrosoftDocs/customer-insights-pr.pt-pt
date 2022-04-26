@@ -6,7 +6,7 @@ ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-customers-page
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
-ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
+ms.openlocfilehash: 68e71df3853470af47228c7365f25db3a71d15b0
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 03/30/2022
-ms.locfileid: "8508580"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529553"
 ---
 # <a name="segments-overview"></a>Descrição geral dos segmentos
 
@@ -47,24 +47,30 @@ Existem várias formas de criar um novo segmento:
 
 ## <a name="manage-existing-segments"></a>Gerir segmentos existentes
 
-Vá à página **Segmentos**, para ver todos os seus segmentos guardados e geri-los.
+Vá à página **Segmentos** para ver todos os seus segmentos guardados e geri-los.
 
 Cada segmento é representado por uma linha que inclui informações adicionais sobre o segmento.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Segmento selecionado com lista pendente de opções e opções disponíveis.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Segmento selecionado com lista pendente de opções e opções disponíveis." lightbox="media/segments-selected-segment.png":::
 
-A seguinte ação está disponível quando seleciona um segmento:
+As seguintes ações estão disponíveis quando seleciona um segmento:
 
 - **Ver** os detalhes do segmento, incluindo a tendência da contagem de membros e uma pré-visualização dos membros do segmento.
+- **Transferir** a lista de membros como um ficheiro .CSV.
 - **Editar** o segmento para alterar as respetivas propriedades.
 - **Criar duplicado** de um segmento. Pode optar por editar as suas propriedades imediatamente ou simplesmente guardar o duplicado.
 - **Atualizar** o segmento para incluir os dados mais recentes.
-- **Ativar** ou **desativar** o segmento. Os segmentos têm dois estados possíveis – ativos ou inativos. Estes estados são úteis ao editar um segmento. Para segmentos inativos, a definição de segmento existe, mas ainda não contém nenhum cliente. Quando ativa um segmento, o seu estado muda de "inativo" para "ativo" e começa a procurar clientes que correspondam à definição do segmento. Se uma [atualização agendada](system.md#schedule-tab) for configurada, os segmentos inativos têm o **Estado** listado como **Ignorado** indicando que uma atualização nem sequer foi tentada. Quando um segmento inativo é ativado, ele irá atualizar e será incluído em atualizações agendadas.
+- **Ativar** ou **desativar** o segmento. Para segmentos inativos, a definição de segmento existe, mas ainda não contém nenhum cliente. Um segmento ativo procura por clientes que correspondem à definição do segmento. Se uma [atualização agendada](system.md#schedule-tab) for configurada, os segmentos inativos têm o **Estado** listado como **Ignorado** indicando que uma atualização nem sequer foi tentada. Quando um segmento inativo é ativado, ele irá atualizar e será incluído em atualizações agendadas.
   Em alternativa, pode utilizar a funcionalidade **Agendar mais tarde** no menu pendente **Ativar/Desativar** para especificar uma data e hora futuras para ativação e desativação de um determinado segmento.
+- **[Encontre clientes semelhantes](find-similar-customer-segments.md)** a partir do segmento.
 - **Mudar nome** do segmento.
+- **Etiqueta** para [gerir etiquetas](work-with-tags-columns.md#manage-tags) para o segmento.
 - **Transferir** a lista de membros como um ficheiro .CSV.
 - **Faça a gestão de exportações** para ver o segmento relacionado com as exportações e geri-las. [Saber mais sobre exportações.](export-destinations.md)
 - **Eliminar** o segmento.
+- **Colunas** para [personalizar as colunas](work-with-tags-columns.md#customize-columns) que são apresentadas.
+- **Filtrar** para [filtrar em etiquetas](work-with-tags-columns.md#filter-on-tags).
+- **Pesquisar nome** para pesquisar por nome de segmento.
 
 ## <a name="refresh-segments"></a>Atualizar segmentos
 

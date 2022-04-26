@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: dccc069a355725bae09c1fece9292b9aee374e6d
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 06c5bed74b82f9ae2a764a2eb363348e0edab531
+ms.sourcegitcommit: 4b2ad63aa7a4d4f31b573870bccbc40befe5f8fd
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8225539"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "8552070"
 ---
 # <a name="connector-for-power-bi-preview"></a>Conector para Power BI (pré-visualização)
 
@@ -72,6 +72,6 @@ Após a remoção das relações duplicadas, tente configurar novamente o conect
 
 Ao carregar entidades que contenham campos com um formato de data como MM/DD/AAAA, pode encontrar erros devido a formatos locais sem correspondência. Esta falta de correspondência acontece quando o seu ficheiro do Power BI Desktop está definido para outra região que não o Inglês (Estados Unidos), porque os campos de data em informações de audiência são guardados em formato dos EUA.
 
-O ficheiro do Power BI Desktop tem uma única definição de região, que é aplicada ao obter dados. Para fazer com que estes campos de data sejam interpretados corretamente, defina a região do ficheiro .BPI para Inglês (Estados Unidos). [Aprenda a alterar a região de um ficheiro de ambiente de trabalho do Power BI](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
+O ficheiro do Power BI Desktop tem uma única definição de região, que é aplicada ao obter dados. Para fazer com que estes campos de data sejam interpretados corretamente, defina a região do ficheiro .BPI para Inglês (Estados Unidos). [Aprenda a alterar a região de um ficheiro de ambiente de trabalho do Power BI](/power-bi/fundamentals/supported-languages-countries-regions#choose-the-language-or-locale-of-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
