@@ -3,17 +3,17 @@ title: Inscrição para uma avaliação gratuita - Dynamics 365 Customer Insight
 description: Aprenda a inscrever-se rapidamente e a iniciar uma versão de avaliação gratuita do Customer Insights. Explore a aplicação e encontre recursos de aprendizagem adicionais.
 author: m-hartmann
 ms.author: mhart
-ms.date: 09/30/2021
+ms.date: 04/12/2022
 ms.topic: get-started
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 1b50da077cb0584ca9f277b276d0e9ebb46b2c5d
-ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.openlocfilehash: 2f27dd4fd9df679696d72f2eccde262de3e4afc4
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8350237"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641730"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Inscrever-se para uma avaliação gratuita Dynamics 365 Customer Insights
 
@@ -21,7 +21,7 @@ O Customer Insights oferece uma versão de avaliação gratuita de 30 dias. Depo
 
 **Para se inscrever para a versão de avaliação**:
 
-1. Vá para a [página de descrição geral da avaliação](https://dynamics.microsoft.com/get-started/?appname=customerinsights) e selecione **Inscrever-se agora**.
+1. Aceda à [página de descrição geral da avaliação](https://dynamics.microsoft.com/ai/customer-insights/) e selecione **Experimentar o Customer Insights gratuitamente**.
 1. Siga a orientação no ecrã para introduzir o [e-mail associado à sua conta Microsoft](https://support.microsoft.com/windows/what-is-a-microsoft-account-4a7c48e9-ff5a-e9c6-5a5c-1a57d66c3bfa) e as suas informações de contacto.
 1. Faça seleções e escolha o seu foco até chegar à página inicial para obter a sua capacidade selecionada.
 
@@ -31,12 +31,12 @@ A versão de avaliação leva alguns momentos a carregar e, em seguida, pode com
 
 O seu ambiente de avaliação inclui as mesmas funcionalidades que a versão paga. As ligações abaixo irão guiá-lo através de algumas das principais funcionalidades.
 
-- [Início rápido para informações de audiência.](audience-insights/get-started.md)
-- [Adicione mais utilizadores e atribua permissões.](audience-insights/permissions.md)
-- [Ingerir as suas origens de dados](audience-insights/data-sources.md) e executá-las através do [processo de unificação de dados](audience-insights/data-unification.md) para obter [perfis de clientes unificados](audience-insights/customer-profiles.md).
-- [Enriquecer os perfis de clientes unificados](audience-insights/enrichment-hub.md) ou [executar modelos preditivos](audience-insights/predictions-overview.md).
-- Crie [segmentos](audience-insights/segments.md) para agrupar clientes e [medidas](audience-insights/measures.md) para rever KPIs.
-- Configure [ligações](audience-insights/connections.md) e [exportações](audience-insights/export-destinations.md) para processar subconjuntos dos seus dados noutras aplicações.
+- [Começar com o Customer Insights.](get-started.md)
+- [Adicione mais utilizadores e atribua permissões.](permissions.md)
+- [Ingerir as suas origens de dados](data-sources.md) e executá-las através do [processo de unificação de dados](data-unification.md) para obter [perfis de clientes unificados](customer-profiles.md).
+- [Enriquecer os perfis de clientes unificados](enrichment-hub.md) ou [executar modelos preditivos](predictions-overview.md).
+- Crie [segmentos](segments.md) para agrupar clientes e [medidas](measures.md) para rever KPIs.
+- Configure [ligações](connections.md) e [exportações](export-destinations.md) para processar subconjuntos dos seus dados noutras aplicações.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
