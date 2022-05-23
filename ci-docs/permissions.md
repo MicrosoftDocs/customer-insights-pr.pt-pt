@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b80f07dfa734f4dd762bd711151a7045f24bed7d
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 74c7ff7cda8431c04dd34713becefa7e346331b4
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653582"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740917"
 ---
 # <a name="user-permissions"></a>Permissões de utilizador
 
@@ -41,7 +41,7 @@ Existem três tipos de funções:
 
 - Todas as permissões disponíveis para o Visualizador.
 - Carregue e transforme os dados através da página **Origens de dados**.
-- Preencha as secções *Unificação de Dados* (**Mapear**, **Corresponder** e **Intercalar**) que resultam na entidade de perfil do cliente unificado.
+- Conclua a ***Unificação de dados**, o que resulta na unified customer profile.
 - Defina as **Relações** e as **Atividades**.
 - Crie segmentos através da página **Segmentos**.
 - Crie medidas através da página **Medidas**.
@@ -69,7 +69,7 @@ Existem três tipos de funções:
 
 ## <a name="assign-roles-and-permissions"></a>Atribuir funções e permissões
 
-1. Aceda a **Admin** > **Segurança** > **Utilizadores**.
+1. Aceda a **Admin** > **Segurança** > **Utilizadores***.
 
 1. Selecione **Adicionar utilizadores** para abrir o painel **Adicionar/Editar permissões**.
 

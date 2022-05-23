@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6a1c3791076a7dda4531664ca88632f7f1b914e3
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646530"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755368"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Melhoramento de perfis de clientes com o Azure Maps (pré-visualização)
 
@@ -51,7 +51,7 @@ Para configurar o melhoramento de dados do Azure Maps, devem ser cumpridos os se
 
 1. Selecione **Seguinte** para concluir o mapeamento de campos.
 
-1. Avalie se pretende modificar as **Definições Avançadas**. Estas são fornecidas para dar a máxima flexibilidade para processar casos de utilização avançada, mas os valores predefinidos serão adequados na maioria dos casos:
+1. Avalie se pretende modificar as **Definições Avançadas**. Estas definições são fornecidas para dar o máximo de flexibilidade para tratar casos de utilização avançada, mas os valores predefinidos estes serão adequados na maior parte dos casos:
    - **Tipo de endereços**: o comportamento predefinido é que o melhoramento devolverá a melhor correspondência de endereço, mesmo que esteja incompleta. Para obter apenas endereços completos&mdash;por exemplo, endereços que incluem o número da casa&mdash;limpe todas as caixas de verificação, exceto **Endereços de Ponto**. 
    - **Idioma**: por predefinição, os endereços são obtidos no idioma para a região a que o endereço foi determinado pertencer. Para aplicar um idioma de endereço padronizado, selecione o idioma do menu pendente. Por exemplo, selecionar **Inglês** irá obter **Copenhagen, Denmark** em vez de **København, Danmark**.
 
@@ -89,7 +89,7 @@ Pode aceder a uma visão detalhada de cada perfil enriquecido selecionando **Ver
 
 ## <a name="data-privacy-and-compliance"></a>Privacidade e conformidade de dados
 
-Quando ativa o Dynamics 365 Customer Insights para transmitir dados para o Azure Maps, permite a transferência de dados para fora do limite de conformidade para o Dynamics 365 Customer Insights , incluindo dados potencialmente sensíveis, como Dados Pessoais. A Microsoft transferirá esses dados conforme as suas instruções, mas você é responsável por garantir que o Azure Maps cumpre quaisquer obrigações de privacidade ou de segurança que possa ter. Para mais informações, aceda à [Declaração de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Quando ativa o Dynamics 365 Customer Insights para transmitir dados para o Azure Maps, permite a transferência de dados para fora do limite de conformidade para o Dynamics 365 Customer Insights , incluindo dados potencialmente sensíveis, como Dados Pessoais. A Microsoft transferirá estes dados após a sua instrução, mas fica responsável por assegurar que o Azure Maps cumpre quaisquer obrigações de privacidade ou segurança que possa ter. Para mais informações, aceda à [Declaração de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 O seu administrador Dynamics 365 Customer Insights pode remover este melhoramento em qualquer altura para descontinuar a utilização desta funcionalidade.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

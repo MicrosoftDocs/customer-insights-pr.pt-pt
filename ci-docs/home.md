@@ -1,7 +1,7 @@
 ---
 title: Home page no Customer Insights
 description: Comece a explorar a aplicação na página inicial.
-ms.date: 04/12/2022
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,38 +11,55 @@ manager: shellyha
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: ebc5eb6b2dfaa9b013cfa0c9ce60c8a0a57a065d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: cdeb48df2172785ed8adad0f21943974ec39d14d
+ms.sourcegitcommit: 94de4dacdb8a7f4bc0f5914e7398622e70b81ff3
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647199"
+ms.lasthandoff: 05/12/2022
+ms.locfileid: "8743427"
 ---
 # <a name="explore-customer-insights"></a>Explorar o Customer Insights
 
-Pode no [Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) no seguinte URL: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
+Pode aceder ao [Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) no seguinte URL: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
 
-A página **Home Page** mostra uma descrição geral de segmentos, medidas e dados de melhoramento (se configurados) depois de completar as fases [mapear](map-entities.md), [corresponder](match-entities.md) e [unir](merge-entities.md).
+A página **Home** guia-o através do processo de configuração de funcionalidades principais e fornece uma descrição geral de segmentos, medidas e dados de melhoria.
 
 :::image type="content" source="media/home-page.png" alt-text="Captura de ecrã do ecrã Base a mostrar informações de exemplo.":::
 
-Controlos principais no Customer Insights:
+## <a name="left-side-pane"></a>Painel lateral esquerdo
 
-- Painel esquerdo: alternar entre a audiência alvo primária se tiver um ambiente B2C e B2B
+Utilize o painel esquerdo para navegar entre diferentes áreas no Customer Insights. 
 
-- Painel esquerdo: navegar entre diferentes áreas e escolher a audiência alvo principal
+Se trabalhar com contas empresariais e consumidores individuais, poderá selecionar a sua audiência principal de forma a definir o seu foco em conformidade. 
 
-- Cabeçalho: alterar o ambiente em que trabalha e gerir ambientes como administrador
+## <a name="application-header"></a>Cabeçalho da aplicação
 
-- Cabeçalho: especificar definições pessoais para o Customer Insights e obter opções de obter ajuda
+O seletor de **Ambiente** mostra o ambiente em que trabalha e permite-lhe criar ou gerir ambientes como administrador.
 
-Agora pode ver as seguintes secções na home page:
+O ícone de sorriso é o controlo **Comentários**. Selecione-o para nos falar sobre a sua experiência com Customer Insights. Escutamos ativamente os seus comentários e agradecemos-lhe antecipadamente por nos dizer o que gosta e como podemos melhorar.
 
-- Os **segmentos recentes** mostram grupos de clientes baseados em atributos demográficos, comportamentais ou transacionais que definiu. [Criar segmentos](segments.md) ajuda-o a agrupar a sua base de clientes e a direcionar melhor as suas atividades empresariais.
+O controlo **Definições**, representado por um ícone de engrenagem, permite-lhe recolher detalhes da sessão para Customer Insights e configurar as definições globais para o seu perfil do Microsoft 365. 
 
-- As **medidas de negócio recentes** mostram mosaicos com [indicadores chave de desempenho (KPIs)](measures.md) que definiu. Por exemplo, a probabilidade média de um cliente de abandonar ou a média de gastos online por cliente.
+As opções **Ajuda**, visualizadas com um ícone de ponto de interrogação, fornecem ligações de ajuda contextuais e outros recursos úteis.
 
-- Os **melhoramentos recentes** listam os resultados das execuções de melhoramento que foram concluídas recentemente. Os [melhoramentos](enrichment-hub.md) adicionam informações sobre a sua base de clientes. Por exemplo, compreendendo os interesses e marcas para os quais têm afinidade.
+A sua imagem de perfil abre o **Gestor de contas** do seu perfil do Microsoft 365. Selecione **A minha conta** para gerir as suas definições pessoais.
+
+## <a name="getting-started-with-customer-insights-section"></a>Introdução à secção Customer Insights
+
+Esta secção contém cartões que o ajudam a percorrer o processo de configuração do seu ambiente do Customer Insights. 
+
+1. O cartão **Adicionar dados** ajuda-o na importação de dados. O Customer Insights suporta [várias opções para lhe mostrar dados sobre os seus clientes](data-sources.md). Selecione **Adicionar origens de dados** para começar.
+1. Quando a importação de dados inicial for concluída com êxito, poderá utilizar o cartão **Unificar dados** para harmonizar os dados e [criar unified customer profiles](data-unification.md) a partir de fontes diferentes. 
+1. Com os unified customer profiles criados, está na hora de rever as opções **Analisar dados** e obter informações adicionais. Experimente criar [medidas comerciais](measures.md) para controlar KPIs, [definir segmentos](segments.md) para chegar a audiências específicas ou [configurar previsões](predictions-overview.md) com a ajuda da IA.
+1. Agora que os dados dos clientes foram importados, unificados e estruturados, utilize os nossos [diversos destinos de exportação](export-destinations.md) para tomar medidas sobre os dados. Selecione **Adicionar ligações** para ligar os seus serviços favoritos. Por exemplo, exporte os dados para o Dynamics 365 Marketing para criar campanhas de marketing de saída ou criar percursos do cliente. 
+
+## <a name="your-customer-insights-section"></a>A sua secção de informações de clientes
+
+- Os **segmentos** mostram grupos de clientes baseados em atributos demográficos, comportamentais ou transacionais que definiu. [Criar segmentos](segments.md) ajuda-o a agrupar a sua base de clientes e a direcionar melhor as suas atividades empresariais.
+
+- As **medidas de negócio** mostram mosaicos com [indicadores chave de desempenho (KPIs)](measures.md) que definiu. Por exemplo, a probabilidade média de um cliente de abandonar ou a média de gastos online por cliente.
+
+- Os **melhoramentos** listam os resultados das execuções de melhoramento que foram concluídas recentemente. Os [melhoramentos](enrichment-hub.md) adicionam informações sobre a sua base de clientes. Por exemplo, compreendendo os interesses e marcas para os quais têm afinidade.
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

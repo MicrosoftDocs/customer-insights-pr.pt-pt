@@ -17,16 +17,16 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 29b5d3f5848d36abd8e941136a6330dbb7730016
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646804"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755512"
 ---
 # <a name="customer-activities"></a>Atividades do cliente
 
-Combine as atividades de clientes de [várias origens de dados](data-sources.md) no Dynamics 365 Customer Insights para criar uma linha cronológica que lista as atividades cronologicamente. Inclua a linha cronológica em aplicações Dynamics 365 com a solução de [suplemento do Cartão de Cliente](customer-card-add-in.md) ou num dashboard do Power BI.
+Combine as atividades do cliente de [várias origens de dados](data-sources.md) no Dynamics 365 Customer Insights. Crie uma linha cronológica que liste as atividades cronologicamente. Inclua a linha cronológica em aplicações Dynamics 365 com a solução de [suplemento do Cartão de Cliente](customer-card-add-in.md).
 
 ## <a name="define-an-activity"></a>Definir uma atividade
 
@@ -78,7 +78,7 @@ Uma entidade tem de ter, pelo menos, um atributo do tipo **Data** a ser incluíd
 
 1. Selecione **Seguinte** para avançar para o passo seguinte. Pode selecionar **Terminar e rever** para guardar a atividade agora com o tipo de atividade definido como **Outro**. 
 
-1. No passo **Tipo de Atividade**, escolha o tipo de atividade e selecione opcionalmente se pretende mapear semântica alguns dos tipos de atividade para utilização noutras áreas do Customer Insights. Atualmente, os tipos de atividade *Comentários*, *Lealdade*, *SalesOrder*, *SalesOrderLine* e *Subscrição* podem ser semanticamente mapeados depois de concordar em mapear os campos. Se um tipo de atividade não for relevante para a nova atividade, pode escolher *Outro* ou *Criar novo* para um tipo de atividade personalizada.
+1. No passo **Tipo de Atividade**, escolha o tipo de atividade e selecione opcionalmente se pretende mapear semântica alguns dos tipos de atividade para utilização noutras áreas do Customer Insights. Atualmente, os tipos de atividade *Comentários*, *Lealdade*, *SalesOrder*, *SalesOrderLine* e *Subscrição* suportam a semântica depois de concordar mapear os campos. Se um tipo de atividade não for relevante para a nova atividade, pode escolher *Outro* ou *Criar novo* para um tipo de atividade personalizada.
 
 1. Selecione **Seguinte** para avançar para o passo seguinte. 
 
@@ -110,7 +110,7 @@ Depois de configurar as atividades do cliente, selecione **Mostrar na linha cron
 
 Para abrir a linha cronológica para um cliente, aceda a **Clientes** e escolha o perfil do cliente que pretende visualizar.
 
-Se um cliente tiver participado numa atividade que tenha configurado, irá encontrá-la na secção **Linha cronológica da atividade**.
+Se um cliente tiver participado numa atividade configurada, irá encontrá-la na secção **Linha cronológica da atividade**.
 
 :::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Veja as atividades configuradas nos Perfis de Clientes.":::
 

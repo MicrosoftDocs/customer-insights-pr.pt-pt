@@ -1,110 +1,83 @@
 ---
-title: Mapear entidades e atributos para unificação de dados
-description: Selecione entidades, atributos, chaves primárias e tipos semânticos para mapear dados para o perfil do cliente unificado.
-ms.date: 10/18/2020
+title: Selecione campos de origem para unificação de dados
+description: O primeiro passo no processo de unificação é selecionar entidades, atributos, chaves primárias e tipos de semântica para mapear dados para o unified customer profile.
+recommendations: false
+ms.date: 04/22/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: v-wendysmith
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: bebc600e91db471c3cd50eccb5e42be309ff09c9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a962f1353b6e25b40c60b39a81ac936873f34d92
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646696"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741009"
 ---
-# <a name="map-entities-and-attributes"></a>Mapear entidades e atributos
+# <a name="select-source-fields-for-data-unification"></a>Selecione campos de origem para unificação de dados
 
-**Mapear** é a primeira fase do processo de unificação de dados. O mapeamento consiste em três fases:
+[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-- *Seleção de Entidades*: identificar as entidades combináveis que levam a uma conjunto de dados com informações mais completas sobre os seus clientes.
-- *Seleção de atributos*: para cada entidade, identifique as colunas que pretende combinar e reconciliar nas fases de *correspondência* e *intercalação*. Estas colunas chamam-se *Atributos*.
-- *Chave primária e seleção de tipo semântico*: para cada entidade, identifique um atributo que pretende definir como a chave primária para essa entidade e, para cada atributo, identifique um tipo semântico que melhor descreve esse atributo.
+O primeiro passo na unificação é selecionar as entidades e os campos nos seus conjuntos de dados que pretende unificar. Selecione entidades que contenham detalhes relacionados com os clientes, tais como nome, endereço, número de telefone e e-mail. Pode selecionar uma ou mais entidades.
 
-Para obter mais informações sobre o fluxo geral da unificação de dados, consulte [Unificar](data-unification.md).
+## <a name="select-entities-and-fields"></a>Selecionar entidades e campos
 
-## <a name="select-the-first-entities"></a>Selecionar as primeiras entidades
+1. Vá para **Dados** > **Unificar**.
 
-1. Aceder a **Dados** > **Unificar** > **Mapear**.
+   :::image type="content" source="media/m3_unify_land.png" alt-text="Captura de ecrã da página de destino de unificação para a primeira experiência de execução com Começar realçado.":::
 
-2. Inicie a fase de mapeamento ao selecionar **Selecionar entidades**.
+1. Selecione **Introdução**.
 
-3. Selecione as entidades e atributos que pretende utilizar nas fases de *correspondência* e *união*. Pode selecionar os atributos exigidos individualmente a partir de uma entidade ou incluir todos os atributos de uma entidade selecionando a caixa de verificação **Incluir todos os campos** ao nível da entidade. Recomendamos que selecione pelo menos duas entidades para beneficiar do processo de unificação de dados.
+1. Na página **Campos de origem**, selecione **Selecionar entidades e campos**. O painel **Selecionar entidades e campos** é apresentado.
 
-   > [!div class="mx-imgBorder"]
-   > ![Exemplo de Adicionar entidades.](media/data-manager-configure-map-add-entities-example.png "Exemplo de Adicionar entidades")
+1. Selecione pelo menos uma entidade.
 
-   Neste exemplo, estamos a adicionar as entidades **eCommerceContacts** e **loyCustomers**. Ao escolher estas entidades, pode obter informações sobre quais dos clientes de negócios online são membros do programa de fidelização.
-   
-   Pode pesquisar palavras-chave em todos os atributos e entidades para selecionar os atributos necessários que pretende mapear.
-   
-     > [!div class="mx-imgBorder"]
-   > ![Exemplo de campos de pesquisa.](media/data-manager-configure-map-search-fields-example.png "Exemplo de campos de pesquisa")
+1. Para cada entidade selecionada, identifique os campos que pretende utilizar para corresponder aos registos de clientes e os campos a incluir no perfil unificado. Estes campos são denominados *Atributos*. Pode selecionar os atributos necessários individualmente a partir de uma entidade ou incluir todos os atributos de uma entidade, selecionando a caixa de verificação ao nível da entidade. Pode pesquisar palavras-chave em todos os atributos e entidades para selecionar os atributos necessários que pretende mapear.
 
-4. Selecione **Aplicar** para confirmar as suas seleções.
+   :::image type="content" source="media/m3_select_entities.png" alt-text="Captura de ecrã de entidades e atributos selecionados.":::
+
+   Neste exemplo, estamos a adicionar as entidades **Contacts** e **CustomerLoyalty**. Ao escolher estas entidades, pode obter informações sobre quais dos clientes de negócios online são membros do programa de fidelização.
+
+1. Selecione **Aplicar** para confirmar as suas seleções. As entidades e atributos selecionados são apresentados.
 
 ## <a name="select-primary-key-and-semantic-type-for-attributes"></a>Selecionar chave primária e tipo semântico para atributos
 
-Depois de selecionar as suas entidades, a página **Mapa** lista as entidades selecionadas para a sua revisão. Defina a chave primária para uma entidade e identifique o tipo semântico para um atributo na entidade.
+   :::image type="content" source="media/m3_select_primary.png" alt-text="Captura de ecrã de entidades selecionadas com chave primária não selecionada." lightbox="media/m3_select_primary.png":::
 
-- **Chave primária**: selecione um atributo como chave primária para cada uma das entidades. Para que um atributo seja uma chave primária válida, não deve incluir valores duplicados, valores em falta ou valores nulos. Os atributos do tipo de dados cadeia, número inteiro e GUID são suportados como chaves primárias e serão exibidos num campo para selecionar.
+Para cada entidade, execute os seguintes passos.
 
-- **Tipo de atributo semântico**: categorias dos seus atributos, tais como endereço de e-mail ou nome. Para utilizar modelos de IA para predição inteligente de semântica, poupar tempo e melhorar a precisão, defina **Mapeamento inteligente** para **ATIVADO**. O mapeamento inteligente destaca a recomendação de semântica baseada em IA no campo **Tipo**. Se o definir como **DESATIVADO**, verá as nossas recomendações regulares de mapeamento. Pode selecionar qualquer tipo semântico da lista de opções disponíveis e anular a seleção sugerida.
+1. Escolha a **Chave primária**. A chave primária é um atributo exclusivo da entidade. Para que um atributo seja uma chave primária válida, não deve incluir valores duplicados, valores em falta ou valores nulos. Os atributos de cadeia, número inteiro e tipo de dados GUID são suportados como chaves primárias.
 
-> [!div class="mx-imgBorder"]
-> ![Tipo de atributo e predição semântica.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Tipo de atributo e predição semântica")
+1. Para utilizar modelos de IA para soluções predição de semântica, poupe tempo e melhore a precisão, certifique-se de que o **mapeamento inteligente** está ativado. O mapeamento inteligente destaca a recomendação de semântica baseada em IA no campo **Tipo**. Pode substituir a seleção sugerida escolhendo qualquer tipo de semântica a partir da lista de opções disponível.
 
-Também é possível adicionar um tipo semântico personalizado. Selecione o campo de tipo para um atributo e escreva o nome do tipo semântico personalizado. Desta forma, também pode alterar os tipos de atributo que foram identificados pelo sistema.
+1. Para cada atributo, escolha o **Tipo** de semântica que melhor descreve esse atributo, como o nome, a cidade ou o endereço de e-mail.
 
-Todos os atributos para os quais um tipo semântico é automaticamente identificado são agrupados na secção **Rever campos mapeados**. Reveja estes atributos e os seus tipos semânticos porque serão usados para combinar as suas entidades no passo de união da unificação de dados.
+   > [!NOTE]
+   > Um campo deve mapear para o tipo de semântica *Person.FullName* para povoar o nome do cliente no cartão de cliente. Caso contrário, os cartões do cliente serão apresentados sem nome.
 
-Os atributos que não são automaticamente mapeados para um tipo semântico são agrupados na secção **Definir dados nos campos não mapeados**. Selecione o campo de tipo semântico para os atributos não mapeados ou introduza o seu nome de atributo personalizado.
+   1. Para alterar um tipo de atributo identificado pelo sistema, selecione outro tipo. Se o tipo não existir, crie um tipo de semântica personalizado ao selecionar o campo **Tipo** para o atributo e introduzindo o nome do tipo de semântica personalizada.
 
-> [!div class="mx-imgBorder"]
-> ![Chave primária e tipo de atributo.](media/data-manager-configure-map-add-attributes.png "Chave primária e tipo de atributo")
+   1. Para adicionar um atributo que contém um URL a imagens ou logótipos de perfil disponíveis ao público, selecione a entidade e o campo que contém o URL. No campo **Tipo**, introduz o seguinte:
+      - Para uma pessoa: Person.ProfileImage
+      - Para uma organização: Organization.LogoImage
 
-> [!NOTE]
-> Um campo deve mapear para o tipo semântico Person.FullName para preencher o nome do cliente no cartão de cliente. Caso contrário, os cartões do cliente serão apresentados sem nome. 
+   1. Para um atributo de nome da conta, introduza "Organization.Name" no campo **Tipo**.
 
-## <a name="add-and-remove-attributes-and-entities"></a>Adicionar e remover atributos e entidades
+1. Reveja os atributos em que um tipo de semântica é identificado automaticamente. Estes atributos estão listados em **Rever campos mapeados**. Só é possível combinar atributos com o mesmo tipo no passo **Campos de cliente unificados**. Os tipos semântica são utilizados para sugerir informações automaticamente. Certifique-se de que os tipos escolhidos são consistentes em todas as entidades selecionadas.
 
-1. Em **Unificar** > **Mapa**, selecione **Editar campos**.
+1. Para atributos que não sejam mapeados automaticamente para um tipo de semântica, selecione um campo tipo de semântica, insira o seu nome personalizado do tipo de atributo ou deixe-o não mapeado. Estes atributos estão listados em **Definir os dados nos campos não mapeados**.
 
-2. No painel **Editar campos**, adicione ou remova atributos e entidades. Utilize a pesquisa ou percorra para encontrar e selecionar os seus atributos e entidades de interesse. Não se pode remover um atributo ou uma entidade se já foram combinados.
+1. Depois de concluir os passos para cada entidade, selecione **Guardar campos de origem**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Adicionar ou remover atributos.](media/configure-data-map-edit.png "Adicionar ou remover atributos")
+1. Selecione **Seguinte**.
 
-3. Selecione **Aplicar**.
-
-## <a name="add-images-to-profiles"></a>Adicionar imagens a perfis
-
-Se uma entidade contiver URLs para logótipos ou imagens de perfil disponíveis publicamente, poderá adicioná-los ao perfil do cliente unificado.
-
-Selecione a entidade e localize o campo que contém o URL para a imagem de perfil. No campo de texto **Tipo**, introduza manualmente o seguinte valor: 
-- Para uma pessoa: Person.ProfileImage
-- Para uma organização: Organization.LogoImage
-
-Continue com os passos de unificação e certifique-se de que o atributo que contém o URL de imagem também é adicionado no passo [Unir](merge-entities.md).
-
-## <a name="set-attributes-for-organizations"></a>Definir atributos para as organizações
-
-Para as organizações (Pré-visualização), o tipo de atributo deve ser mapeado para "Nome.Organização"
-> [!div class="mx-imgBorder"]
-> ![Chave primária e tipo de atributo B2B.](media/configure-data-map-edit-b2b.png "Chave primária e tipo de atributo B2B")
-
-## <a name="next-step"></a>Próximo passo
-
-Como parte do processo de unificação dos dados, vá para a página **Corresponder**. Visite [**Corresponder**](match-entities.md) para saber mais sobre esta fase.
-
-> [!TIP]
-> Veja o seguinte vídeo: [Introdução: Criar um Perfil de Cliente Unificado](https://youtu.be/oBfGEhucAxs).
-
+> [!div class="nextstepaction"]
+> [Passo seguinte: Remover duplicados](remove-duplicates.md)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

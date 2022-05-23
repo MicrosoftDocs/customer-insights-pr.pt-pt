@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: 56f6a8ad20224922f9968f0ad3b6a0e0a400214b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646570"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755700"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Melhoramento de origens de dados (pré-visualização)
 
@@ -26,7 +26,7 @@ Tem de ter as permissões Contribuidor ou Administrador para criar ou editar mel
 1. Vá para **Dados** > **Unificar**. Selecione a entidade que pretende melhorar e selecione um atributo como chave primária para a entidade. Para obter mais informações, consulte [Selecionar chave primária](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 
 1. Aceda a **Dados** > **Origens de dados**.
- 
+
 1. Selecione as reticências verticais junto à origem de dados que pretende melhorar e selecione **Melhorar**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Página de melhoramentos de origens de dados.":::

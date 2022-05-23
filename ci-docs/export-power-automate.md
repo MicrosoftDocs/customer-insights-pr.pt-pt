@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 409792bc3f12fca451ef038e3300758bdf9ecf3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d22c4c785695b23a257a89f1ffa519fdc18b443e
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647219"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741193"
 ---
 # <a name="power-automate-connector-preview"></a>Conector do Power Automate (pré-visualização)
 
@@ -25,14 +25,14 @@ Acione eventos específicos para ocorrerem automaticamente quando os seus dados 
 
 ## <a name="power-automate-triggers"></a>Acionadores do Power Automate
 
-Utilize acionadores para criar fluxos de cloud e automatizar tarefas repetitivas, tais como notificações ou ações mais avançadas. 
+Utilize acionadores para criar fluxos de cloud e automatizar tarefas repetitivas, tais como notificações ou ações mais avançadas.
 
-- É acionado quando uma atualização de origem de dados falha. 
+- É acionado quando uma atualização de origem de dados falha.
 - É acionado quando uma atualização de origem de dados é bem sucedida.
 - É acionado quando um limiar é ultrapassado num segmento. O acionador limita-se a passar acima do limiar.
 - É acionado quando um limiar é ultrapassado numa medida empresarial. Apenas as medidas de negócio sem uma dimensão são suportadas. O acionador limita-se a passar acima do limiar.
 - Acionar quando uma atualização completa de ( origens de dados, segmentos, medidas, ...) é completada.
-- Acionar quando uma atualização do processo de unificação (mapa, correspondência, união) estiver concluída.
+- Acionar quando for concluída um atualização do processo de unificação.
 
 [Configure os seus acionadores no Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 

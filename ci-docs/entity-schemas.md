@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e155f75ffbc2c1bb228bece1b3e34846df794543
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646894"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757446"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Esquema de entidades no Common Data Model
 
@@ -23,7 +23,7 @@ O [Common Data Model](/common-data-model/) é uma especificação declarativa e 
 
 Este modelo de dados partilhados que permite que os integradores de dados e aplicações colaborem mais facilmente fornecendo uma definição unificada dos dados. O Common Data Model inclui um sistema de metadados rico com entidades, relações, hierarquias, características padrão e muito mais. Provém de aplicações do Dynamics 365 e é aberto com origem no GitHub com mais de 260 entidades padrão. Um grande sistema de parceiros internos e externos contribui com conceitos específicos do setor para o Common Data Model.
 
-Existem vários sistemas e plataformas que implementam o Common Data Model hoje em dia, incluindo os fluxos de dados do Power BI e o Azure Data Services. Já é suportado no Microsoft Dataverse, Dynamics 365, Power Apps, Power BI e serviços de dados do Azure para breve, acumulando diretamente valor para a [Open Data Initiative](https://www.microsoft.com/open-data-initiative).
+Existem vários sistemas e plataformas que implementam o Common Data Model hoje em dia, incluindo os fluxos de dados do Power BI e o Azure Data Services. Já é suportado no Microsoft Dataverse, Dynamics 365, Power Apps, Power BI e serviços de dados do Azure para breve, acumulando diretamente valor para a [Open Data Initiative](https://dynamics.microsoft.com/en-us/open-data-initiative/).
 
 ## <a name="customer-insights-entity-schemas"></a>Esquemas de entidades do Customer Insights
 
