@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740733"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800664"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Complete os seus dados parciais com previsões (preterido)
 
@@ -95,7 +95,7 @@ Como parte deste fluxo, irá escolher um atributo específico onde basear o segm
 
 2. Selecione a predição que pretende rever.
 
-3. Selecione as reticências na coluna **Ações** e escolha **Ver**.
+3. Selecione a reticências verticais (&vellip;) na coluna **Ações** e escolha **Ver**.
 
 4. Verá vários pontos de dados na vista da sua predição.
    > [!div class="mx-imgBorder"]
@@ -122,7 +122,7 @@ Depois de criar uma predição, pode personalizar o modelo no AI Builder para au
 
 2. Selecione a predição que pretende editar.
 
-3. Selecione as reticências na coluna **Ações** e escolha **Ver**.
+3. Selecione a reticências verticais (&vellip;) na coluna **Ações** e escolha **Ver**.
 
 4. Selecione **Personalizar em AI Builder**.
 
@@ -139,7 +139,7 @@ A execução seguinte da sua predição utilizará o modelo atualizado que criou
 
 2. Selecione a predição que pretende eliminar.
 
-3. Selecione as reticências na coluna **Ações** e escolha **Eliminar**.
+3. Selecione a reticências verticais (&vellip;) na coluna **Ações** e escolha **Eliminar**.
 
 4. Confirme a eliminação.
 
@@ -153,7 +153,7 @@ Se não conseguir concluir o processo de anexação do Dataverse devido a um err
 - Não são concedidas permissões da aplicação.
     1. Ir para o [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
     1. Selecionar **Ambientes**.
-    1. Selecione as reticências junto do ambiente ao qual pretende adicionar a permissão e selecione **Definições**.
+    1. Selecione as reticências verticais (&vellip;) junto do ambiente ao qual pretende adicionar a permissão e selecione **Definições**.
     1. Expanda **Utilizadores + permissões** e selecione **Utilizadores**.
     1. Selecione **+ Novo** e selecione **Utilizador**.
     1. Selecione **Utilizador da Aplicação** se ainda não estiver selecionado e introduza as seguintes informações:

@@ -1,7 +1,7 @@
 ---
 title: Ligue os dados Common Data Model a uma conta Azure Data Lake
 description: Trabalhe com dados do Common Data Model utilizando Azure Data Lake Storage.
-ms.date: 01/25/2022
+ms.date: 05/24/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -13,12 +13,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: eeb6b9d97be5f9c0b9f6cbd6dbc6985559a1cd9d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 2e8564950a3269180a85f80fb736d2dcbd1b03b6
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646843"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833399"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Ligar a uma pasta do Common Data Model com uma conta Azure Data Lake
 
@@ -46,16 +46,16 @@ Este artigo fornece informações sobre como ingerir dados para o Dynamics 365 C
 
 1. Selecione **Azure Data Lake Storage**, introduza um **Nome** para a origem de dados e, em seguida, selecione **Seguinte**.
 
-   - Se solicitado, selecione um dos conjuntos de dados de amostra relacionados com o seu setor e, em seguida, selecione **Seguinte**. 
+   - Se solicitado, selecione um dos conjuntos de dados de amostra relacionados com o seu setor e, em seguida, selecione **Seguinte**.
 
 1. Pode escolher entre usar uma opção baseada em recursos e uma opção baseada em subscrição para autenticação. Para obter mais informações, consulte [Ligar a uma conta do Azure Data Lake Storage Gen2 com um principal do serviço do Azure](connect-service-principal.md). Introduza o **Endereço do servidor**, selecione **Iniciar sessão** e, depois, selecione **Seguinte**.
    > [!div class="mx-imgBorder"]
    > ![Caixa de diálogo para introduzir detalhes da nova ligação para o Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
-   > Precisa de uma das seguintes funções, quer no recipiente, quer na conta de armazenamento acima referida, para poder ligar-se e criar uma origem de dados:
-   >  - Leitor de Dados de Blobs de Armazenamento
-   >  - Proprietário de Dados de Blobs de Armazenamento
-   >  - Contribuidor de Dados de Blobs de Armazenamento
+   > Necessita de uma das seguintes funções para o contentor na conta de armazenamento para, e criar a origem de dados:
+   >
+   >  - O Leitor de Dados de Blobs de Armazenamento é suficiente para ler a partir de uma conta de armazenamento e ingerir os dados para o Customer Insights. 
+   >  - É necessário o Contribuidor ou Proprietário de Dados de Blobs de Armazenamento se quiser editar os ficheiros de manifesto diretamente no Customer Insights.
 
 1. No diálogo **Selecionar uma pasta Common Data Model**, selecione o ficheiro model.json ou manifest.json para importar dados e selecione **Seguinte**.
    > [!NOTE]
@@ -65,11 +65,11 @@ Este artigo fornece informações sobre como ingerir dados para o Dynamics 365 C
    > [!div class="mx-imgBorder"]
    > ![Caixa de diálogo que mostra uma lista de entidades a partir de um ficheiro model.json.](media/review-entities.png)
 
-8. Indique as entidades de dados para as quais pretende ativar a criação de perfis de dados e, depois, selecione **Guardar**. A criação de perfis de dados permite utilizar análise e outras capacidades. Pode selecionar toda a entidade, o que seleciona todos os atributos da entidade, ou selecionar certos atributos à sua escolha. Por defeito, nenhuma entidade está habilitada para a criação de perfis de dados.
+1. Indique as entidades de dados para as quais pretende ativar a criação de perfis de dados e, depois, selecione **Guardar**. A criação de perfis de dados permite utilizar análise e outras capacidades. Pode selecionar toda a entidade, o que seleciona todos os atributos da entidade, ou selecionar certos atributos à sua escolha. Por defeito, nenhuma entidade está habilitada para a criação de perfis de dados.
    > [!div class="mx-imgBorder"]
    > ![Caixa de diálogo que mostra a criação de perfis de dados.](media/dataprofiling-entities.png)
 
-9. Depois de guardar as seleções, é aberta a página **Origens de dados**. Deverá ver agora a ligação de pasta do Common Data Model como uma origem de dados.
+1. Depois de guardar as seleções, é aberta a página **Origens de dados**. Deverá ver agora a ligação de pasta do Common Data Model como uma origem de dados.
 
 > [!NOTE]
 > Um ficheiro model.json ou manifest.json só pode associar-se a um origem de dados no mesmo ambiente. No entanto, o mesmo ficheiro model.json ou manifest.json pode ser usado para origens de dados em vários ambientes.
@@ -80,7 +80,7 @@ Pode atualizar a chave de acesso para a conta de armazenamento que contém a pas
 
 1. Aceda a **Dados** > **Origens de dados**.
 
-2. Junto da origem de dados que pretende atualizar, selecione as reticências.
+2. Junto da origem de dados que pretende atualizar, selecione as reticências verticais (&vellip;).
 
 3. Selecione a opção **Editar** da lista.
 
@@ -93,13 +93,6 @@ Pode atualizar a chave de acesso para a conta de armazenamento que contém a pas
 
    > ![Caixa de diálogo para introduzir detalhes de ligação para o Azure Data Lake para uma conta de armazenamento existente.](media/enter-existing-storage-details.png)
 
-   > [!NOTE]
-   > Precisa de uma das seguintes funções, quer no recipiente, quer na conta de armazenamento acima referida, para poder ligar-se e criar uma origem de dados:
-   >  - Leitor de Dados de Blobs de Armazenamento
-   >  - Proprietário de Dados de Blobs de Armazenamento
-   >  - Contribuidor de Dados de Blobs de Armazenamento
-
-
 6. Opcionalmente, escolha outro ficheiro model.json ou manifest.json com um conjunto diferente de entidades do recipiente.
 
 7. Opcionalmente, pode selecionar entidades adicionais para ingerir. Também pode remover quaisquer entidades já selecionadas se não houver dependências.
@@ -107,7 +100,6 @@ Pode atualizar a chave de acesso para a conta de armazenamento que contém a pas
    > [!IMPORTANT]
    > Se houver dependências do ficheiro model.json ou manifest.json existente e do conjunto de entidades, verá uma mensagem de erro e não poderá selecionar um ficheiro model.json ou manifest.json diferente. Remova essas dependências antes de alterar o ficheiro model.json ou manifest.json ou criar uma nova origem de dados com o ficheiro model.json ou manifest.json que pretende utilizar para evitar a remoção das dependências.
 
-8. Opcionalmente, pode selecionar atributos ou entidades adicionais para possibilitar a criação de perfis de dados ou desativar os já selecionados.   
-
+8. Opcionalmente, pode selecionar atributos ou entidades adicionais para possibilitar a criação de perfis de dados ou desativar os já selecionados.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

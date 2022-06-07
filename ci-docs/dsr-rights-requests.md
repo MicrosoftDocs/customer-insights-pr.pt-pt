@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 5b39452d7a4612242739e8000e57217954c71289
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641530"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808575"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Os pedidos de Direitos de Titulares de Dados (DSR) são pedidos sob RGPD
 
@@ -41,7 +41,7 @@ Um administrador do Customer Insights pode seguir estes passos para remover os d
 1. Iniciar sessão no Dynamics 365 Customer Insights.
 2. Aceder a **Dados** > **Origens de dados**
 3. Para cada origem de dados na lista que contém dados de clientes eliminados:
-   1. Seleccione (...) e, em seguida, selecione **Atualizar**.
+   1. Selecione as reticências verticais (&vellip;) e, em seguida, selecione **Atualizar**.
    2. Verifique o estado da origem de dados em **Estado**. Uma marca de verificação significa que a atualização foi bem-sucedida. Um triângulo de aviso significa que algo correu mal. Se for apresentado um triângulo de aviso, contacte D365CI@microsoft.com.
 
 > [!div class="mx-imgBorder"]
@@ -52,7 +52,7 @@ Um administrador do Customer Insights pode seguir estes passos para remover os d
 Um administrador do Customer Insights pode seguir estes passos para eliminar dados dos utilizadores do Customer Insights:
 
 1. Iniciar sessão no Dynamics 365 Customer Insights.
-2. Aceda a **Admin** > **Permissões**.
+2. Aceda a **Admin** > **Segurança** > **Permissões**.
 3. Selecione a caixa de verificação para o utilizador que pretende eliminar.
 4. Selecione **Remover**.
 

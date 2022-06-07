@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 04ae4ffd303a47add15044f313c96a23e5efcd76
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c0d23a74b5ca68162ee21307705b1f781a7eb97e
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647239"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800573"
 ---
 # <a name="work-with-tags-and-columns"></a>Trabalhar com etiquetas e colunas
 
@@ -37,7 +37,7 @@ Pode ver, adicionar e remover etiquetas de um item. Adicione etiquetas à medida
 
 1. Selecione o item cujas etiquetas pretende gerir.
 
-1. Selecione **Mostrar mais (...)** e selecione **Etiqueta**.
+1. Selecione as reticências verticais (&vellip;) e, em seguida, selecione **Etiqueta**.
 
    :::image type="content" source="media/segments_list_tag.png" alt-text="Segmento selecionado com lista pendente de opções e opções disponíveis."lightbox="media/segments_list_tag.png":::
 

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
+ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755276"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "8807595"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Registar o reencaminhamento no Dynamics 365 Customer Insights com o Azure Monitor (Pré-visualização)
 
@@ -38,7 +38,7 @@ Para configurar os diagnósticos no Customer Insights, têm de ser cumpridos os 
 
 - Tem uma [Subscrição do Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/) ativa.
 - Tem permissões de [Administrador](permissions.md#admin) no Customer Insights.
-- Tem a função **Contribuinte** e **Administrador de Acesso ao Utilizador** no recurso de destino no Azure. O recurso pode ser uma conta de Armazenamento do Azure, um Hub de Eventos do Azure ou uma área de trabalho do Azure Log Analytics. Para obter mais informações, consulte [Adicionar ou remova atribuições de funções do Azure utilizando o portal do Azure](/azure/role-based-access-control/role-assignments-portal).
+- Tem a função **Contribuinte** e **Administrador de Acesso ao Utilizador** no recurso de destino no Azure. O recurso pode ser uma conta do Azure Data Lake Storage, um Hub de Eventos do Azure ou uma área de trabalho do Azure Log Analytics. Para obter mais informações, consulte [Adicionar ou remova atribuições de funções do Azure utilizando o portal do Azure](/azure/role-based-access-control/role-assignments-portal). Esta permissão é necessária durante a configuração de definições de diagnóstico no Customer Insights, pode ser alterada após a configuração com êxito.
 - Os [Requisitos de destino](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) para o Armazenamento do Azure, o Hub de Eventos do Azure ou o Azure Log Analytics são cumpridos.
 - Tem pelo menos a função **Leitor** no grupo de recursos ao qual o recurso pertence.
 

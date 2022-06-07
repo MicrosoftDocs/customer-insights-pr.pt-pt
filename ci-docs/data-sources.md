@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 1fe8d6e8098831ecc8ff28e571340c56a654de6d
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: 355d52eabde90e0764817cf479821264ebb2e5eb
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8739222"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800480"
 ---
 # <a name="data-sources-overview"></a>Descrição geral das origens de dados
 
@@ -76,7 +76,7 @@ Para atualizar uma origem de dados a pedido, siga estes passos:
 
 1. Aceda a **Dados** > **Origens de dados**.
 
-2. Selecione as reticências verticais junto da origem de dados que pretende atualizar e selecione **Atualizar** na lista pendente.
+2. Selecione as reticências verticais (&vellip;) junto da origem de dados que pretende atualizar e selecione **Atualizar** na lista pendente.
 
 3. A origem dos dados é agora ativada para uma atualização manual. Atualizar uma origem de dados irá atualizar tanto o esquema da entidade como os dados para todas as entidades especificadas na origem de dados.
 
@@ -86,7 +86,7 @@ Para atualizar uma origem de dados a pedido, siga estes passos:
 
 1. Aceda a **Dados** > **Origens de dados**.
 
-2. Selecione as reticências verticais junto da origem de dados que pretende remover e selecione **Eliminar** no menu pendente.
+2. Selecione as reticências verticais (&vellip;) junto da origem de dados que pretende remover e selecione **Eliminar** no menu pendente.
 
 3. Confirme a eliminação.
 

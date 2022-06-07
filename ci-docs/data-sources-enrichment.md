@@ -1,19 +1,19 @@
 ---
 title: Melhoramento de origens de dados
 description: Melhore as origens de dados antes de passar pelo processo de unificação de dados.
-ms.date: 03/02/2022
+ms.date: 05/20/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755700"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800295"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Melhoramento de origens de dados (pré-visualização)
 
@@ -27,7 +27,7 @@ Tem de ter as permissões Contribuidor ou Administrador para criar ou editar mel
 
 1. Aceda a **Dados** > **Origens de dados**.
 
-1. Selecione as reticências verticais junto à origem de dados que pretende melhorar e selecione **Melhorar**.
+1. Selecione as reticências verticais (&vellip;) junto à origem de dados que pretende melhorar e selecione **Melhorar**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Página de melhoramentos de origens de dados.":::
 
@@ -41,11 +41,12 @@ Atualmente, os seguintes melhoramentos estão disponíveis para origens de dados
 
 - [Endereços melhorados](enrichment-enhanced-addresses.md)
 - [Dados de empresas melhorados](enrichment-enhanced-company-data.md)
+- [Dados de identidade da LiveRamp](enrichment-liveramp.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>Gerir os melhoramentos de origens de dados existentes
 
 Aceda ao separador **Os meus melhoramentos** para ver todos os melhoramentos configurados.
 
-Selecione o enriquecimento para ver as opções disponíveis. Também pode selecionar as reticências (...) num item de lista para ver as opções. Se configurou vários enriquecimentos, pode usar a caixa de pesquisa para encontrá-lo rapidamente.
+Selecione o enriquecimento para ver as opções disponíveis. Também pode selecionar as reticências verticais (&vellip;) num item de lista para ver as opções. Se configurou vários enriquecimentos, pode usar a caixa de pesquisa para encontrá-lo rapidamente.
 
 Pode ver, editar, executar ou eliminar um melhoramento de origens de dados. Para mais informações, consulte [Gerir melhoramentos existentes](enrichment-hub.md).

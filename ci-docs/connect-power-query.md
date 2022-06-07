@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 50258365c3134c588aa79ec72c66d0de329e0ff1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4db97ec02eb96662d30a8536ea42372f81f318d2
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646879"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800192"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Ligar a uma origem de dados do Power Query
 
@@ -76,7 +76,7 @@ Os conectores com uma marca de verificação na coluna **Customer Insights (Flux
 
 1. Aceda a **Dados** > **Origens de dados**.
 
-2. Selecione as reticências verticais junto da origem de dados que pretende alterar e selecione **Editar** no menu pendente.
+2. Selecione as reticências verticais (&vellip;) junto da origem de dados que pretende alterar e selecione **Editar** no menu pendente.
 
    > [!div class="mx-imgBorder"]
    > ![Opção Editar.](media/edit-option-data-sources.png "Opção Editar")

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: 6370df0287362a5512a837cdb588f5d20ef03d3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647284"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800340"
 ---
 # <a name="use-measure-builder-to-create-measures-from-scratch"></a>Utilizar o construtor de medidas para criar medidas de raiz
 
@@ -88,7 +88,7 @@ Pode criar medidas ao nível de clientes individuais (atributo do cliente, medid
 
 1. Para adicionar mais cálculos para a medida, selecione **Novo cálculo**. Só é possível utilizar entidades no mesmo caminho da entidade para novos cálculos. Mais cálculos mostrarão como novas colunas na entidade de saída da medida.
 
-1. Selecione **...** no cálculo para **Duplicar**, **Renomear** ou **Remover** um cálculo de uma medida.
+1. Selecione as reticências verticais (&vellip;) no cálculo para **Duplicar**, **Mudar o nome** ou **Remover** um cálculo de uma medida.
 
 1. Na área **Pré-visualização**, verá o esquema de dados da entidade de saída da medida, incluindo filtros e dimensões. A pré-visualização reage dinamicamente a alterações na configuração.
 
@@ -158,7 +158,7 @@ Pode criar medidas ao nível de contas individuais (medida do cliente) ou ao ní
    1. Selecione **Caminho da relação** e escolha o caminho da entidade que deve ser utilizado para identificar a sua medida. Se houver apenas um único caminho para a entidade *Cliente*, este controlo não aparecerá.
    1. Selecione **Concluído** para aplicar a sua seleção.
 
-1. Selecione **...** no cálculo para **Duplicar**, **Renomear** ou **Remover** um cálculo de uma medida.
+1. Selecione as reticências verticais (&vellip;) no cálculo para **Duplicar**, **Mudar o nome** ou **Remover** um cálculo de uma medida.
 
 1. Na área **Pré-visualização**, verá o esquema de dados da entidade de saída da medida, incluindo filtros e dimensões. A pré-visualização reage dinamicamente a alterações na configuração.
 

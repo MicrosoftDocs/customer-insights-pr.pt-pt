@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 5c14e6c96d2f907ba161331b6f92277191cbdbef
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: abc1b6af80e8854ee3bc930453634ef67376c4af
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653537"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800619"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Enriquecimento para perfis de clientes (pré-visualização)
 
@@ -63,7 +63,7 @@ No separador **Meus enriquecimentos**, pode ver os enriquecimentos que configuro
 
 Aceda ao separador **Os meus melhoramentos** para ver todos os melhoramentos configurados. Cada enriquecimento é representado como uma linha que inclui informações adicionais sobre o enriquecimento.
 
-Selecione o enriquecimento para ver as opções disponíveis. Também pode selecionar as reticências (...) num item de lista para ver as opções. Se configurou vários enriquecimentos, pode usar a caixa de pesquisa para encontrá-lo rapidamente.
+Selecione o enriquecimento para ver as opções disponíveis. Também pode selecionar as reticências verticais (&vellip;) num item de lista para ver as opções. Se configurou vários enriquecimentos, pode usar a caixa de pesquisa para encontrá-lo rapidamente.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Opções para gerir enriquecimentos na lista de enriquecimentos.":::
 

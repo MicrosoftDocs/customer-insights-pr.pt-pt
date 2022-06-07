@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: cdeb48df2172785ed8adad0f21943974ec39d14d
-ms.sourcegitcommit: 94de4dacdb8a7f4bc0f5914e7398622e70b81ff3
+ms.openlocfilehash: 621977068dc49b55f50f00e9762a4a5952d7b453
+ms.sourcegitcommit: ba29fd7c89bdeba7260b4783662d8da8e1e1e30e
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "8743427"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "8768364"
 ---
 # <a name="explore-customer-insights"></a>Explorar o Customer Insights
 
@@ -28,9 +28,9 @@ A página **Home** guia-o através do processo de configuração de funcionalida
 
 ## <a name="left-side-pane"></a>Painel lateral esquerdo
 
-Utilize o painel esquerdo para navegar entre diferentes áreas no Customer Insights. 
+Utilize o painel esquerdo para navegar entre diferentes áreas do Customer Insights.
 
-Se trabalhar com contas empresariais e consumidores individuais, poderá selecionar a sua audiência principal de forma a definir o seu foco em conformidade. 
+Se trabalhar com contas empresariais e consumidores individuais, poderá selecionar a sua audiência principal de forma a definir o seu foco em conformidade.
 
 ## <a name="application-header"></a>Cabeçalho da aplicação
 
@@ -38,7 +38,7 @@ O seletor de **Ambiente** mostra o ambiente em que trabalha e permite-lhe criar 
 
 O ícone de sorriso é o controlo **Comentários**. Selecione-o para nos falar sobre a sua experiência com Customer Insights. Escutamos ativamente os seus comentários e agradecemos-lhe antecipadamente por nos dizer o que gosta e como podemos melhorar.
 
-O controlo **Definições**, representado por um ícone de engrenagem, permite-lhe recolher detalhes da sessão para Customer Insights e configurar as definições globais para o seu perfil do Microsoft 365. 
+O controlo **Definições**, representado por um ícone de engrenagem, permite-lhe recolher detalhes da sessão para Customer Insights e configurar as definições globais para o seu perfil do Microsoft 365.
 
 As opções **Ajuda**, visualizadas com um ícone de ponto de interrogação, fornecem ligações de ajuda contextuais e outros recursos úteis.
 
@@ -46,7 +46,7 @@ A sua imagem de perfil abre o **Gestor de contas** do seu perfil do Microsoft 36
 
 ## <a name="getting-started-with-customer-insights-section"></a>Introdução à secção Customer Insights
 
-Esta secção contém cartões que o ajudam a percorrer o processo de configuração do seu ambiente do Customer Insights. 
+Esta secção contém cartões que o ajudam a percorrer o processo de configuração do seu ambiente do Customer Insights.
 
 1. O cartão **Adicionar dados** ajuda-o na importação de dados. O Customer Insights suporta [várias opções para lhe mostrar dados sobre os seus clientes](data-sources.md). Selecione **Adicionar origens de dados** para começar.
 1. Quando a importação de dados inicial for concluída com êxito, poderá utilizar o cartão **Unificar dados** para harmonizar os dados e [criar unified customer profiles](data-unification.md) a partir de fontes diferentes. 
