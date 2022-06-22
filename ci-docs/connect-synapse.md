@@ -1,7 +1,7 @@
 ---
 title: Ingerir dados de Azure Synapse Analytics
 description: Utilizar uma base de dados em Azure Synapse como origem de dados em Dynamics 365 Customer Insights.
-ms.date: 02/24/2022
+ms.date: 03/25/2022
 ms.reviewer: v-wendysmith
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 7c758dccf7ea34dd7b8f80d05eff1ed12030526f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6f94cdbcc203fc4518544f7a945bd80e871b36c1
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646861"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011441"
 ---
-# <a name="connect-an-azure-synapse-data-source-preview"></a>Ligar uma origem de dados Azure Synapse (pré-visualização)
+# <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Ligar uma origem de dados Azure Synapse Analytics (pré-visualização)
 
 Azure Synapse Analytics é um serviço de análise empresarial que acelera o tempo para insights em armazéns de dados e sistemas de macrodados. Azure Synapse Analytics reúne as melhores tecnologias SQL utilizadas no armazém de dados empresariais, tecnologias Spark utilizadas para macrodados, Data Explorer para análise de registos e de séries temporais, Pipelines para integração de dados e ETL/ELT e integração profunda com outros serviços Azure como o Power BI, Cosmos DB e o AzureML.
 
@@ -24,16 +24,14 @@ Para mais informações, consulte a descrição geral do [Azure Synapse](/azure/
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Os seguintes pré-requisitos têm de ser cumpridos para configurar a ligação do Dynamics 365 Customer Insights para o Azure Synapse.
-
 > [!IMPORTANT]
 > Certifique-se de que define todas as **atribuições de funções**, conforme descrito.  
 
-## <a name="prerequisites-in-customer-insights"></a>Pré-requisitos no Customer Insights
+**No Customer Insights**:
 
 * Tem uma função de **Administrador** no Customer Insights. Saiba mais sobre [as permissões de utilizador no Customer Insights](permissions.md#assign-roles-and-permissions).
 
-No Azure: 
+**No Azure**:
 
 - Uma subscrição ativa do Azure.
 
@@ -47,7 +45,7 @@ No Azure:
 
 - No Azure Synapse workspace, o *principal do serviço para o Customer Insights* precisa da função de **Administrador do Synapse** atribuída. Para mais informações, consulte [Como configurar o controlo de acesso à sua área de trabalho do Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
-## <a name="connect-to-data-lake-databases-in-azure-synapse-analytics"></a>Ligar a bases de dados de data lake em Azure Synapse Analytics
+## <a name="connect-to-the-data-lake-database-in-azure-synapse-analytics"></a>Ligar à base de dados do data lake no Azure Synapse Analytics
 
 1. Aceda a **Dados** > **Origens de dados**.
 
@@ -55,14 +53,16 @@ No Azure:
 
 1. Escolha o método **(Pré-visualização) do Azure Synapse Analytics**.
 
-1. Forneça um **Nome** para a origem de dados e selecione **Seguinte** para criar a origem de dados. 
+   :::image type="content" source="media/data_sources_synapse.png" alt-text="Caixa de diálogo para ligar a dados do Synapse Analytics":::
+  
+1. Introduza um **Nome** para a origem de dados e uma **Descrição** opcional.
 
 1. Escolha uma [ligação disponível](connections.md) para Azure Synapse Analytics ou crie uma nova.
 
-1. Escolha uma **Base de Dados Data Lake** a partir da área de trabalho ligada na ligação do Azure Synapse Analytics e selecione **Seguinte**.
+1. Escolha uma **Base de Dados** a partir da área de trabalho ligada na ligação do Azure Synapse Analytics e selecione **Seguinte**.
 
-1. Selecione as entidades para ingerir a partir da base de dados ligadas. 
+1. Selecione as entidades para ingerir a partir da base de dados ligadas e selecione **Seguinte**.
 
-1. Em alternativa, escolha as entidades de dados para permitir a criação de perfis de dados. 
+1. Em alternativa, escolha as entidades de dados para permitir a criação de perfis de dados.
 
-1. Selecione **Guardar** para confirmar a sua seleção e iniciar a ingestão dos dados da sua origem de dados recém-criada, ligada às tabelas de base de dados de Data Lake no Azure Synapse Analytics.
+1. Selecione **Guardar** para confirmar a sua seleção e iniciar a ingestão dos dados da sua origem de dados recém-criada, ligada às tabelas de base de dados de Data Lake no Azure Synapse Analytics. A página **Origens de dados** é aberta a mostrar a origem de dados novas no estado **A atualizar**.

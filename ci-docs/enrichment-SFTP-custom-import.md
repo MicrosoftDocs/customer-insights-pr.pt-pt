@@ -1,19 +1,19 @@
 ---
 title: Enriquecimento com importação personalizada SFTP
 description: Informação geral sobre o melhoramento de importação personalizado SFTP.
-ms.date: 04/09/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f52d24cbe793bee7948ad2af31059cd3edf40f94
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 657afb6fcb68429680eb677734b4115e69769008
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646545"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953733"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Enriquecer perfis de clientes com dados personalizados (pré-visualização)
 
@@ -21,54 +21,13 @@ A importação personalizada do Secure File Transfer Protocol (SFTP) permite imp
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Para configurar a importação personalizada do SFTP, devem ser cumpridos os seguintes pré-requisitos:
+- O nome do ficheiro e a localização (caminho) do ficheiro a importar no anfitrião SFTP são conhecidos.
 
-- Tem o nome do ficheiro e a localização (caminho) do ficheiro a ser importado no anfitrião do SFTP.
-- Existe um ficheiro *model.json* que especifica [o esquema do Common Data Model](/common-data-model/) para os dados a serem importados. Este ficheiro deve estar no mesmo diretório do ficheiro a importar.
-- Uma ligação SFTP já foi configurada por um administrador *ou* tem permissões de [administrador](permissions.md#admin). Precisará das credenciais, URL e número de porta do utilizador para a localização SFTP de onde pretende importar dados.
+- Está disponível um ficheiro *model.json* que especifica o esquema do Common Data Model para os dados a importar. Este ficheiro deve estar no mesmo diretório do ficheiro a importar.
 
+- Uma [ligação](connections.md) SFTP é [configurada](#configure-the-connection-for-sftp-custom-import).
 
-## <a name="configure-the-import"></a>Configurar a importação
-
-1. Aceda a **Dados** > **Enriquecimento** e selecione o separador **Descobrir**.
-
-1. No **mosaico de importação personalizada SFTP**, selecione **Enriquecer os meus dados** e, em seguida, selecione **Começar**.
-
-   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Mosaico de importação personalizada SFTP.":::
-
-1. Selecione uma [ligação](connections.md) na lista pendente. Contacte um administrador se não houver nenhuma ligação disponível. Se for um administrador, pode criar uma ligação selecionando **Adicionar ligação** e escolhendo a **Importação Personalizada SFTP** na lista pendente.
-
-1. Selecione **Ligar à Importação Personalizada** para confirmar a ligação selecionada.
-
-1.  Selecione **Seguinte** e introduza o **Caminho** e o **Nome do ficheiro** do ficheiro de dados que pretende importar.
-
-    :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Captura de ecrã ao introduzir a localização dos dados.":::
-
-1. Selecione **Seguinte** e escolha o conjunto de dados do cliente. Isto pode ser todos os perfis de clientes ou um segmento.
-
-1. Selecione **Seguinte** e forneça um nome para o enriquecimento e um nome para a entidade de saída. 
-
-1. Selecione **Guardar enriquecimento** depois de rever as suas escolhas.
-
-## <a name="configure-the-connection-for-sftp-custom-import"></a>Configure a ligação para a Importação Personalizada SFTP 
-
-Tens de ser um administrador para configurar ligações. Selecione **Adicionar ligação** ao configurar um enriquecimento *ou* vá a **Admin** > **Ligações** e selecione **Configurar** no mosaico de Importação Personalizada.
-
-1. Introduza um nome para a ligação na caixa **Nome a Apresentar**.
-
-1. Introduza um nome de utilizador, palavra-passe e URL de anfitrião válidos para o servidor SFTP em que os dados a importar residem.
-
-1. Reveja e forneça o seu consentimento para a **Privacidade e conformidade de dados** selecionando a caixa de verificação **Concordo**.
-
-1. Selecione **Verificar** para validar a configuração.
-
-1. Uma vez concluída a verificação, a ligação pode ser guardada selecionando **Guardar**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Página de configuração da ligação à Experian.](media/enrichment-SFTP-connection.png "Página de configuração da ligação à Experian")
-
-
-## <a name="defining-field-mappings"></a>Definir mapeamentos de campo 
+## <a name="file-schema-example"></a>Exemplo de esquema de ficheiro
 
 O diretório que contém o ficheiro a importar no servidor SFTP também deve conter um ficheiro *model.json*. Este ficheiro define o esquema a utilizar para a importação dos dados. O esquema tem de utilizar o [Common Data Model](/common-data-model/) para especificar o mapeamento de campos. Um exemplo simples de um ficheiro model.json parece-se com isto:
 
@@ -82,12 +41,12 @@ O diretório que contém o ficheiro a importar no servidor SFTP também deve con
             "attributes": [
                 {
                     "name": "CustomerId",
-                    "friendlyName": "Client id",
+                    "friendlyName": "Client ID",
                     "dataType": "string"
                 },
                 {
                     "name": "PreferredCity",
-                    "friendlyName": "Preferred City for vacation",
+                    "friendlyName": "Preferred city for vacation",
                     "dataType": "string"
                 },
                 {
@@ -114,15 +73,58 @@ O diretório que contém o ficheiro a importar no servidor SFTP também deve con
 }
 ```
 
+## <a name="configure-the-connection-for-sftp-custom-import"></a>Configure a ligação para a Importação Personalizada SFTP
+
+Tem de ser um [administrador](permissions.md#admin) no Customer Insights e ter as credenciais de utilizador, URL e número da porta para a localização SFTP a partir da qual pretende importar dados.
+
+1. Selecione **Adicionar ligação** ao configurar um enriquecimento ou vá a **Admin** > **Ligações** e selecione **Configurar** no mosaico de Importação Personalizada.
+
+   :::image type="content" source="media/enrichment-SFTP-connection.png" alt-text="Página de configuração de ligação de Importação Personalizada.":::
+
+1. Introduzir um nome para a ligação.
+
+1. Introduza um nome de utilizador, palavra-passe e URL de anfitrião válidos para o servidor SFTP em que os dados a importar residem.
+
+1. Reveja e forneça o seu consentimento para a [Privacidade e conformidade dos dados](#data-privacy-and-compliance) selecionando **Concordo**.
+
+1. Selecione **Verificar** para validar a configuração e, em seguida, selecione **Guardar**.
+
+### <a name="data-privacy-and-compliance"></a>Privacidade e conformidade de dados
+
+Quando ativa o Dynamics 365 Customer Insights para transmitir dados utilizando a Importação Personalizada, permite a transferência de dados fora dos limites de conformidade para Dynamics 365 Customer Insights, incluindo dados potencialmente sensíveis, tais como Dados Pessoais. A Microsoft transferirá estes dados após a sua instrução, mas é responsável por assegurar que os Dados cumprem quaisquer obrigações de privacidade ou segurança que possa ter. Para obter mais informações, consulte [Declaração de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+O seu administrador do Dynamics 365 Customer Insights pode remover este melhoramento em qualquer altura para descontinuar a utilização desta funcionalidade.
+
+## <a name="configure-the-import"></a>Configurar a importação
+
+1. Aceda a **Dados** > **Enriquecimento** e selecione o separador **Descobrir**.
+
+1. Selecione **Melhorar os meus dados** no mosaico **Importação personalizada SFTP**.
+
+   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Mosaico de importação personalizada SFTP.":::
+
+1. Reveja a descrição geral e, em seguida, selecione **Seguinte**.
+
+1. Selecione a ligação. Contacte um administrador, caso não esteja nenhuma disponível.
+
+1. Selecione o **Conjunto de dados de clientes** e escolha o perfil ou segmento que pretende melhorar. A entidade *Cliente* melhora todos os seus perfis de cliente, enquanto um segmento melhora apenas os perfis de cliente contidos nesse segmento.
+
+1. Selecione **Seguinte**.
+
+1. Introduza o **Caminho** e o **Nome de ficheiro** do ficheiro de dados que pretende importar.
+
+1. Selecione **Seguinte**.
+
+1. Forneça um **Nome** para o melhoramento e o **Nome da entidade de saída**.
+
+1. Selecione **Guardar enriquecimento** depois de rever as suas escolhas.
+
+1. Selecione **Executar** para iniciar o processo de melhoramento ou Fechar para regressar à página **Melhoramentos**.
+
 ## <a name="enrichment-results"></a>Resultados do enriquecimento
 
-Para iniciar o processo de enriquecimento, selecione **Executar** na barra de comando. Também pode deixar o sistema executar o enriquecimento automaticamente como parte de uma [atualização agendada](system.md#schedule-tab). O tempo de processamento dependerá do tamanho dos dados a importar e da ligação ao servidor SFTP.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Após a conclusão do processo de melhoramento, pode rever os seus dados de melhoramento personalizados recentemente importados em **Os meus melhoramentos**. Além disso, encontrará a hora da última atualização e o número de perfis enriquecidos.
-
-Pode aceder a uma visão detalhada de cada perfil enriquecido selecionando **Ver dados enriquecidos**.
-
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
 

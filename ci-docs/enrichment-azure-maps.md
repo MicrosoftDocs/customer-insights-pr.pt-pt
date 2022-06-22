@@ -1,95 +1,95 @@
 ---
 title: Melhorar perfis de clientes com dados de localização do Azure Maps
 description: Informações gerais sobre o melhoramento de propriedade do Azure Maps.
-ms.date: 08/31/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: a806b2d0c791972c967c90694527608b4def9f3f
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755368"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953642"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Melhoramento de perfis de clientes com o Azure Maps (pré-visualização)
 
-O Azure Maps fornece dados e serviços centrados na localização para fornecer experiências baseadas em dados geoespaciais com inteligência de localização incorporada. Os serviços de melhoramento de dados do Azure Maps melhoram a precisão das informações de localização sobre os seus clientes. Traz capacidades como a normalização do endereços e a extração de latitude e de longitude para o Dynamics 365 Customer Insights.
+O Azure Maps fornece dados e serviços baseados na localização para proporcionar experiências baseadas em dados geoespaciais com inteligência de localização incorporada. Os serviços de melhoramento de dados do Azure Maps melhoram a precisão das informações de localização sobre os seus clientes. Traz capacidades como a normalização do endereços e a extração de latitude e de longitude para o Dynamics 365 Customer Insights.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Para configurar o melhoramento de dados do Azure Maps, devem ser cumpridos os seguintes pré-requisitos:
+- Uma subscrição ativa do Azure Maps. Para obter uma subscrição [inscreva-se ou obtenha um versão de avaliação gratuita](https://azure.microsoft.com/services/azure-maps/).
 
-- Tem uma subscrição ativa do Azure Maps. Para obter uma subscrição, pode [inscrever-se ou obter uma avaliação gratuita](https://azure.microsoft.com/services/azure-maps/).
-
-- Uma [ligação](connections.md) ao Azure Maps está disponível, *ou* tem permissões de [administrador](permissions.md#admin) e uma chave de API do Azure Maps ativa.
-
-## <a name="configure-the-enrichment"></a>Configurar o enriquecimento
-
-1. Aceda a **Dados** > **Enriquecimento**. 
-
-1. No mosaico **Localização**, selecione **Melhorar os meus dados**.
-
-   :::image type="content" source="media/azure-maps-tile.png" alt-text="Mosaico do Azure Maps.":::
-
-1. Selecione uma [ligação](connections.md) na lista pendente. Contacte um administrador se não estiver disponível nenhuma ligação ao Azure Maps. Se for um administrador, pode [configurar a ligação ao Azure Maps](#configure-the-connection-for-azure-maps). 
-
-1. Selecione **Seguinte** para confirmar a seleção.
-
-1. Escolha o **Conjunto de dados de cliente** que pretende melhorar com dados de localização a partir do Azure Maps. Pode selecionar a entidade **Cliente** para melhorar todos os seus perfis de clientes unificados ou selecionar uma entidade de segmento para melhorar apenas os perfis de clientes contidos nesse segmento.
-
-    :::image type="content" source="media/enrichment-azure-maps-configuration-customer-data-set.png" alt-text="Captura de ecrã ao escolher o conjunto de dados do cliente.":::
-
-1. Escolha se deseja mapear campos para o endereço primário e/ou secundário. Pode especificar um mapeamento de campo para ambos os endereços e melhorar os perfis de ambos os endereços separadamente&mdash;por exemplo, para um endereço doméstico e um endereço de negócio. Selecione **Seguinte**.
-
-1. Defina que campos os seus perfis unificados a utilizar para procurar dados de localização correspondentes a partir do Azure Maps. Os campos **Rua 1** e **Código Postal** são obrigatórios para o endereço primário ou secundário selecionado. Para uma maior precisão de correspondência, pode adicionar mais campos.
-
-   :::image type="content" source="media/enrichment-azure-maps-configuration.png" alt-text="Página de configuração de melhoramento do Azure Maps.":::
-
-1. Selecione **Seguinte** para concluir o mapeamento de campos.
-
-1. Avalie se pretende modificar as **Definições Avançadas**. Estas definições são fornecidas para dar o máximo de flexibilidade para tratar casos de utilização avançada, mas os valores predefinidos estes serão adequados na maior parte dos casos:
-   - **Tipo de endereços**: o comportamento predefinido é que o melhoramento devolverá a melhor correspondência de endereço, mesmo que esteja incompleta. Para obter apenas endereços completos&mdash;por exemplo, endereços que incluem o número da casa&mdash;limpe todas as caixas de verificação, exceto **Endereços de Ponto**. 
-   - **Idioma**: por predefinição, os endereços são obtidos no idioma para a região a que o endereço foi determinado pertencer. Para aplicar um idioma de endereço padronizado, selecione o idioma do menu pendente. Por exemplo, selecionar **Inglês** irá obter **Copenhagen, Denmark** em vez de **København, Danmark**.
-
-1. Forneça um nome para o enriquecimento.
-
-1. Reveja as suas escolhas e, em seguida, selecione **Guardar melhoramento**.
+- Uma [ligação](connections.md) do Azure Maps é [configurada](#configure-the-connection-for-azure-maps) por um administrador.
 
 ## <a name="configure-the-connection-for-azure-maps"></a>Configurar a ligação ao Azure Maps
 
-Tem de ser um administrador no Customer Insights para configurar ligações. Selecione **Adicionar ligação** ao configurar um melhoramento ou aceda a **Admin** > **Ligações** e selecione **Configurar** no mosaico do Azure Maps.
+Tem de ser um [administrador](permissions.md#admin) no Customer Insights e ter uma chave de API do Azure Maps ativa.
 
-1. Na caixa **Nome a apresentar**, introduza um nome para a ligação.
+1. Selecione **Adicionar ligação** ao configurar um melhoramento ou aceda a **Admin** > **Ligações** e selecione **Configurar** no mosaico do Azure Maps.
 
-1. Forneça uma chave de API do Azure Maps válida.
+   :::image type="content" source="media/enrichment-azure-maps-connection.png" alt-text="Página de configuração de ligação ao Azure Maps.":::
 
-1. Reveja e forneça o seu consentimento para a **Privacidade e conformidade de dados** selecionando a caixa de verificação **Concordo**
+1. Introduza um nome para a ligação e uma chave de API do Azure Maps válida.
 
-1. Selecione **Verificar** para validar a configuração.
+1. Reveja e forneça o seu consentimento para a [Privacidade e conformidade dos dados](#data-privacy-and-compliance) selecionando **Concordo**.
 
-1. Depois de concluir a verificação, selecione **Guardar**.
+1. Selecione **Verificar** para validar a configuração e, em seguida, selecione **Guardar**.
 
-:::image type="content" source="media/enrichment-azure-maps-connection.png" alt-text="Página de configuração de ligação ao Azure Maps.":::
-
-## <a name="enrichment-results"></a>Resultados do enriquecimento
-
-Para iniciar o processo de enriquecimento, selecione **Executar** na barra de comando. Também pode deixar o sistema executar o enriquecimento automaticamente como parte de uma [atualização agendada](system.md#schedule-tab). O tempo de processamento dependerá do tamanho dos dados do cliente e dos tempos de resposta da API.
-
-Após o processo de melhoramento ser concluído, pode rever os dados de perfis de clientes recentemente melhorados em **Os meus melhoramentos**. Além disso, encontrará a hora da última atualização e o número de perfis enriquecidos.
-
-Pode aceder a uma visão detalhada de cada perfil enriquecido selecionando **Ver dados enriquecidos**.
-
-## <a name="next-steps"></a>Passos seguintes
-
-[!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Privacidade e conformidade de dados
+### <a name="data-privacy-and-compliance"></a>Privacidade e conformidade de dados
 
 Quando ativa o Dynamics 365 Customer Insights para transmitir dados para o Azure Maps, permite a transferência de dados para fora do limite de conformidade para o Dynamics 365 Customer Insights , incluindo dados potencialmente sensíveis, como Dados Pessoais. A Microsoft transferirá estes dados após a sua instrução, mas fica responsável por assegurar que o Azure Maps cumpre quaisquer obrigações de privacidade ou segurança que possa ter. Para mais informações, aceda à [Declaração de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 O seu administrador Dynamics 365 Customer Insights pode remover este melhoramento em qualquer altura para descontinuar a utilização desta funcionalidade.
+
+## <a name="configure-the-enrichment"></a>Configurar o enriquecimento
+
+1. Aceda a **Dados** > **Enriquecimento** e selecione o separador **Descobrir**.
+
+1. Selecione **Melhorar os meus dados** no mosaico **Localização** do Microsoft Azure Maps.
+
+   :::image type="content" source="media/azure-maps-tile.png" alt-text="Mosaico do Azure Maps.":::
+
+1. Reveja a descrição geral e, em seguida, selecione **Seguinte**.
+
+1. Selecione a ligação. Contacte um administrador se não houver nenhuma ligação disponível.
+
+1. Selecione **Seguinte**.
+
+1. Selecione o **Conjunto de dados de clientes** e escolha o perfil ou segmento que pretende melhorar com os dados da Microsoft. A entidade *Cliente* melhora todos os seus perfis de cliente, enquanto um segmento melhora apenas os perfis de cliente contidos nesse segmento.
+
+1. Defina o tipo de campos dos seus perfis unificados a utilizar para correspondência: o endereço primário e/ou secundário. Pode especificar um mapeamento de campos para ambos os endereços e enriquecer os perfis de ambos os endereços separadamente. Por exemplo, para um endereço doméstico e um endereço empresarial. Selecione **Seguinte**.
+
+1. Mapeie os campos para o dados de localização a partir do Azure Maps. Os campos **Rua 1** e **Código Postal** são necessários para o endereço primário e/ou secundário selecionado. Para maior precisão de correspondência, adicione mais campos.
+
+   :::image type="content" source="media/enrichment-azure-maps-attributes.png" alt-text="Mapeamento de atributos do Azure Maps.":::
+
+1. Selecione **Seguinte** para concluir o mapeamento de campos.
+
+1. Reveja as **Definições Avançadas** que oferecem máxima flexibilidade para processar casos de utilização avançada. No entanto, os seguintes valores predefinidos, normalmente, não necessitam de ser alterados.
+
+   - **Tipo de endereços**: obtém a melhor correspondência de endereços mesmo que esteja incompleto. Para obter apenas endereços completos&mdash;por exemplo, endereços que incluem o número da casa&mdash;limpe todas as caixas de verificação, exceto **Endereços de Ponto**.
+   - **Idioma**: os endereços são obtidos no idioma com base na região do endereço. Para aplicar um idioma de endereço padronizado, selecione o idioma do menu pendente. Por exemplo, selecionar **portugues**, obtém **Copenhaga, Dinamarca**, em vez de **København, Danmark**.
+   - **Número máximo de resultados**: número de resultados por endereço.
+
+1. Selecione **Seguinte**.
+
+1. Forneça um **Nome** para o melhoramento e o **Nome da entidade de saída**.
+
+1. Selecione **Guardar enriquecimento** depois de rever as suas escolhas.
+
+1. Selecione **Executar** para iniciar o processo de melhoramento ou Fechar para regressar à página **Melhoramentos**.
+
+## <a name="enrichment-results"></a>Resultados do enriquecimento
+
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
+
+O **Número de clientes melhorados por campo** proporciona uma desagregação da cobertura de cada campo melhorado.
+
+## <a name="next-steps"></a>Próximos passos
+
+[!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

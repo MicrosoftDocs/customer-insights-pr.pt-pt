@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833411"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011855"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Ligar a uma conta do Azure Data Lake Storage utilizando um principal de serviço do Azure
 
@@ -51,7 +51,13 @@ Antes de criar um novo principal de serviço para o Customer Insights, verifique
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Conceda permissões ao principal de serviço para aceder à conta de armazenamento
 
-Vá ao portal do Azure para conceder permissões ao principal do serviço para a conta de armazenamento que pretende utilizar no Customer Insights.
+Vá ao portal do Azure para conceder permissões ao principal do serviço para a conta de armazenamento que pretende utilizar no Customer Insights. Uma das seguintes funções tem de ser atribuída à conta ou armazenamento ou contentor:
+
+|Credencial|Requisitos |
+|----------|------------|
+|Utilizador com sessão iniciada atualmente|**Função**: Leitor de Dados de Blob de Armazenamento, Contribuidor de Blob de Armazenamento ou Proprietário de Blob de Armazenamento.<br>**Nível**: as permissões podem ser concedidas na conta de armazenamento ou no contentor.</br>|
+|Principal de Serviço do Customer Insights -<br>Utilizar o Azure Data Lake Storage como uma origem de dados</br>|Opção 1<ul><li>**Função**: Leitor de Dados de Blob de Armazenamento, Contribuidor de Dados de Blob de Armazenamento ou Proprietário de Dados de Blob de Armazenamento.</li><li>**Nível**: as permissões devem ser concedidas na conta de armazenamento.</li></ul>Opção 2 *(sem partilhar o acesso do Principal de Serviço à conta de armazenamento)*<ul><li>**Função 1**: Leitor de Dados de Blob de Armazenamento, Contribuidor de Dados de Blob de Armazenamento ou Proprietário de Dados de Blob de Armazenamento.</li><li>**Nível**: as permissões devem ser concedidas no contentor.</li><li>**Função 2**: Atribuidor de Dados de Blob de Armazenamento.</li><li>**Nível**: as permissões devem ser concedidas na conta de armazenamento.</li></ul>|
+|Principal de Serviço do Customer Insights - <br>Utilizar o Azure Data Lake Storage como uma saída ou um destino</br>|Opção 1<ul><li>**Função**: Contribuidor de Dados de Blob de Armazenamento ou Proprietário de Blob de Armazenamento.</li><li>**Nível**: as permissões devem ser concedidas na conta de armazenamento.</li></ul>Opção 2 *(sem partilhar o acesso do Principal de Serviço à conta de armazenamento)*<ul><li>**Função**: Contribuidor de Dados de Blob de Armazenamento ou Proprietário de Blob de Armazenamento.</li><li>**Nível**: as permissões devem ser concedidas no contentor.</li><li>**Função 2**: Atribuidor de Blob de Armazenamento.</li><li>**Nível**: as permissões devem ser concedidas na conta de armazenamento.</li></ul>|
 
 1. Aceda ao [portal de administração do Azure](https://portal.azure.com) e inicie sessão na sua organização.
 
@@ -62,7 +68,7 @@ Vá ao portal do Azure para conceder permissões ao principal do serviço para a
    :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Captura de ecrã a mostrar o portal do Azure enquanto adiciona uma atribuição de funções.":::
 
 1. No painel **Adicionar atribuição de funções**, defina as seguintes propriedades:
-   - Função: **Contribuidor de dados de blobs de armazenamento**
+   - Função: Leitor de Dados de Blob de Armazenamento, Contribuidor de Blob de Armazenamento ou Proprietário de Blob de Armazenamento com base em credenciais listadas acima.
    - Atribuir acesso a: **Utilizador, grupo ou principal de serviço**
    - Selecionar membros: **Dynamics 365 AI for Customer Insights** (o [principal do serviço](#create-a-new-service-principal) que procurou anteriormente neste procedimento)
 

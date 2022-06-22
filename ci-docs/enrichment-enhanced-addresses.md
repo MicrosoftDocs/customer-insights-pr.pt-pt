@@ -1,7 +1,7 @@
 ---
 title: Melhoramento de endereços (contém vídeo)
 description: Enriqueça e normalize a informação de endereço dos perfis de cliente com os modelos da Microsoft.
-ms.date: 01/19/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b4fef3b5e30e1cac4e5cb4401498f2f0981a409e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f6279b9bb721d99d66f73e8dc839a92f1ad90140
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646525"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953825"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Enriquecimento de perfis de clientes com endereços melhorados
 
@@ -53,17 +53,17 @@ As informações de endereço podem estar num formato não padrão e conter erro
 
 ### <a name="limitations"></a>Limitações
 
-Os endereços melhorados apenas funcionam com os valores que já existem nos dados de endereços ingeridos. O modelo não: 
+Os endereços melhorados só funcionam com os valores já existentes nos seus dados de endereços ingeridos. O modelo não:
 
 1. Verifica se o endereço é um endereço válido.
 2. Verifica se algum dos valores, tais como códigos postais ou nomes de rua, são válidos.
 3. Muda valores que não reconhece.
 
-O modelo utiliza técnicas baseadas em aprendizagem automática para melhorar endereços. Embora apliquemos um limiar de confiança elevado para quando o modelo muda um valor de entrada, como em qualquer modelo baseado em aprendizagem automática, a precisão de 100 por cento não é garantida.
+O modelo utiliza técnicas baseadas em aprendizagem automática para melhorar endereços. Tal como com qualquer modelo baseado em aprendizagem automática, não é possível garantir 100 por cento de precisão.
 
 ## <a name="supported-countries-or-regions"></a>Países ou regiões suportados
 
-Atualmente, suportamos endereços enriquecedores nestes países ou regiões: 
+Atualmente, suportamos endereços enriquecedores nestes países ou regiões:
 
 - Austrália
 - Canadá
@@ -74,50 +74,46 @@ Atualmente, suportamos endereços enriquecedores nestes países ou regiões:
 - Reino Unido
 - Estados Unidos da América
 
-Os endereços têm de conter um valor de país/região. Não processamos endereços para países ou regiões que não são suportados e endereços que não têm nenhum país ou região fornecido.
-
 ## <a name="configure-the-enrichment"></a>Configurar o enriquecimento
 
-1. Aceda a **Dados** > **Enriquecimento**.
+1. Aceda a **Dados** > **Enriquecimento** e selecione o separador **Descobrir**.
 
 1. Selecione **Enriquecer os meus dados** no mosaico **Endereços melhorados**.
 
    :::image type="content" source="media/enhanced-addresses-tile.png" alt-text="Captura de ecrã do mosaico de endereços melhorados.":::
 
-1. Selecione o **Conjunto de dados do cliente** e escolha a entidade que contém os endereços que pretende enriquecer. Pode selecionar a entidade *Cliente* para enriquecer endereços em todos os seus perfis de clientes ou selecionar uma entidade de segmento para enriquecer endereços apenas nos perfis de clientes contidos nesse segmento.
+1. Reveja a descrição geral e, em seguida, selecione **Seguinte**.
+
+1. Selecione o **Conjunto de dados de clientes** e escolha o perfil ou segmento que pretende melhorar. A entidade *Cliente* melhora todos os seus perfis de cliente, enquanto um segmento melhora apenas os perfis de cliente contidos nesse segmento.
 
 1. Selecionar a forma como os endereços estão formatados no seu conjunto de dados. Escolha **Endereço de atributo único** se os endereços dos seus dados utilizarem um único campo. Escolha **Endereço de vários atributos** se os endereços dos seus dados utilizarem mais do que um campo de dados.
+
+1. Selecione **Seguinte** e mapeie os campos de endereço a partir da entidade cliente unificada.
+
+    :::image type="content" source="media/enhanced-address-mapping.png" alt-text="Página de mapeamento de campo de endereço melhorado.":::
 
    > [!NOTE]
    > País/Região é obrigatório em endereços de atributo único e de múltiplos atributos. Endereços que não contenham valores válidos ou valores de país/região suportados não serão melhorados.
 
-1.  Mapeie os campos de endereço da sua entidade de cliente unificado.
-
-    :::image type="content" source="media/enhanced-address-mapping.png" alt-text="Página de mapeamento de campo de endereço melhorado.":::
-
 1. Selecione **Seguinte** para concluir o mapeamento de campos.
 
-1. Forneça um nome para o enriquecimento e para a entidade de saída.
+1. Forneça um **Nome** para o melhoramento e a **Entidade de saída**.
 
 1. Selecione **Guardar enriquecimento** depois de rever as suas escolhas.
 
 ## <a name="enrichment-results"></a>Resultados do enriquecimento
 
-Para iniciar o processo de enriquecimento, selecione **Executar** na barra de comando. Também pode deixar o sistema executar o enriquecimento automaticamente como parte de uma [atualização agendada](system.md#schedule-tab). O tempo de processamento depende do tamanho dos dados do seu cliente.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-Após o processo de enriquecimento concluído, pode rever os dados de perfis de clientes recentemente enriquecidos nos **Meus enriquecimentos**. Além disso, encontrará a hora da última atualização e o número de perfis enriquecidos.
-
-Pode ver uma amostra dos dados enriquecidos no mosaico **Pré-visualização de clientes enriquecidos**. Selecione **Ver mais** e selecione o separador **Dados** para aceder a uma vista detalhada de cada perfil enriquecido.
+O **Número de clientes melhorados por campo** proporciona uma desagregação da cobertura de cada campo melhorado.
 
 ### <a name="overview-card"></a>Cartão de descrição geral
 
-O cartão de descrição geral mostra detalhes sobre a cobertura do enriquecimento. 
+O cartão **Descrição geral de alterações de clientes** mostra detalhes sobre a cobertura do melhoramento:
 
-* **Endereços processados e alterados**: o número de perfis de clientes com endereços que foram enriquecidos com sucesso.
-
-* **Endereços processados e não alterados**: o número de perfis de clientes com endereços que foram reconhecidos, mas não alterados. Normalmente, acontece quando os dados de entrada são válidos e não podem ser melhorados pelo enriquecimento.
-
-* **Endereços não processados e não alterados**: o número de perfis com endereços que não foram reconhecidos. Normalmente, para dados de entrada que são inválidos ou não suportados pelo enriquecimento.
+- **Endereços processados e alterados**: o número de perfis de clientes com endereços que foram enriquecidos com sucesso.
+- **Endereços processados e não alterados**: o número de perfis de clientes com endereços que foram reconhecidos, mas não alterados. Normalmente, acontece quando os dados de entrada são válidos e não podem ser melhorados pelo enriquecimento.
+- **Endereços não processados e não alterados**: o número de perfis com endereços que não foram reconhecidos. Normalmente, para dados de entrada que são inválidos ou não suportados pelo enriquecimento.
 
 ## <a name="next-steps"></a>Passos seguintes
 

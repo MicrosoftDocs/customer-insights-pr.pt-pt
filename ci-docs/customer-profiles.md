@@ -1,7 +1,7 @@
 ---
 title: Ver perfis de cliente
 description: Obtenha uma visão combinada dos seus dados unificados de clientes.
-ms.date: 05/13/2022
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1e9e59d7ae6c16ed8b33f2ea482563c3520ab885
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755796"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947060"
 ---
 # <a name="customer-profiles"></a>Perfis de cliente
 
@@ -55,9 +55,9 @@ Pode filtrar os clientes pelos campos da entidade *Cliente*. Semelhante à pesqu
 
 Selecione qualquer um dos mosaicos do cliente para abrir a **Página de detalhes do cliente**. Esta vista contém informação unificada para o cliente selecionado. Os detalhes do cliente incluem o seguinte conteúdo:
 
-**Mosaico do perfil do cliente**: este mosaico mostra os diferentes valores da entidade *Cliente* unificada. Se um campo não tiver valor para o perfil do cliente selecionado, não aparecerá. O mosaico é estruturado em secções:
+**Mosaico do perfil do cliente**: este mosaico mostra os diferentes valores da entidade *Cliente* unificada. Se um campo não tiver valor para o perfil do cliente selecionado, não aparecerá, exceto para o campo de endereço. O mosaico é estruturado em secções:
 
-- A primeira secção mostra um conjunto de campos predefinidos seguidos por todos os campos que fazem parte do índice de pesquisas e filtros. Todos os campos relacionados com endereços são combinados numa única linha se o perfil contiver esses campos.
+- A primeira secção mostra um conjunto de campos predefinidos seguidos por todos os campos que fazem parte do índice de pesquisas e filtros. Todos os campos relacionados com endereços são combinados numa única linha, o que é mostrado mesmo se o perfil não contiver informações de endereço.
 - **Contactos para este cliente**: em ambientes para contas empresariais, verá todos os contactos relacionados para este cliente como a segunda secção. Cada contacto é mostrado com os respetivos campos. Os campos vazios estão ocultos.
 - **Campos adicionais**: mostra os campos restantes do cliente selecionado, exceto IDs.
 - **IDs**: lista todos os IDs com o nome da entidade correspondente. Os campos são identificados como IDs pela sua semântica, que os classificam como tal.

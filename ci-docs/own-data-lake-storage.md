@@ -3,17 +3,17 @@ title: Utilizar a sua própria conta do Azure Data Lake Storage Gen2
 author: mukeshpo
 description: Conheça os requisitos para utilizar a sua própria conta do Azure Data Lake Storage para armazenar dados do Customer Insights.
 ms.author: mukeshpo
-ms.date: 05/30/2022
+ms.date: 06/08/2022
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 ms.reviewer: mhart
-ms.openlocfilehash: 9fcd7645e34bf310ac3a1b98a0dd9a60598b19dc
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 5acb58906c1a9db54337f3b4dc2ab7891db7954e
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833929"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011947"
 ---
 # <a name="use-your-own-azure-data-lake-storage-gen2-account"></a>Utilizar a sua própria conta do Azure Data Lake Storage Gen2
 
@@ -37,6 +37,7 @@ Quando criar um novo ambiente, certifique-se de que a conta do Data Lake Storage
 1. Escolha como **Ligar o armazenamento**. Pode escolher entre uma opção baseada em recursos e uma opção de autenticação baseada em subscrições. Para obter mais informações, consulte [Ligar a uma conta do Azure Data Lake Storage utilizando um Principal de Serviço do Azure](connect-service-principal.md).
    - Para a **Subscrição do Azure**, escolha a **Subscrição**, **Grupo de recursos** e **Conta de armazenamento** que contém o contentor `customerinsights`.
    - Para **Chave de conta**, forneça o **Nome da conta** e a **Chave da conta** para a conta do Data Lake Storage. A utilização deste método de autenticação implica que está informado se a sua organização rodar as chaves. Tem de [atualizar a configuração do ambiente](manage-environments.md#edit-an-existing-environment) com a nova chave quando esta for rodada.
+1. Escolha se pretende utilizar o Azure Private Link para ligar a conta de armazenamento e [criar a ligação ao Private Link](security-overview.md#private-links-tab) com um processo de dois passos.
 
 Quando os processos do sistema, como a ingestão de dados, estão concluídos, o sistema cria pastas correspondentes na conta de armazenamento. Os ficheiros de dados e os ficheiros *model.json* são criados e adicionados a pastas com base no nome do processo.
 

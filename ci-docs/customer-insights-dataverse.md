@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 3848e143bc7cb2f345bc698a274b92148ef00669
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833690"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011560"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Trabalhar com dados do Customer Insights no Microsoft Dataverse
 
 O Customer Insights disponibiliza a opção para disponibilizar entidades de saída como [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Esta integração permite uma fácil partilha de dados e desenvolvimento personalizado através de uma abordagem de código baixo/sem código. As [entidades de saída](#output-entities) estão disponíveis como tabelas num ambiente do Dataverse. Pode utilizar os dados de qualquer outra aplicação com base em tabelas do Dataverse. Estas tabelas permitem cenários como fluxos de trabalho automatizados através do Power Automate ou a criação de aplicações com o Power Apps.
 
-A ligação ao seu ambiente Dataverse também permite-lhe [ingerir dados de origens de dados no local utilizando fluxos de dados e gateways do Power Platform](data-sources.md#add-data-from-on-premises-data-sources).
+A ligação ao seu ambiente Dataverse também permite-lhe [ingerir dados de origens de dados no local utilizando fluxos de dados e gateways do Power Platform](connect-power-query.md#add-data-from-on-premises-data-sources).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -57,7 +57,7 @@ Ativar a partilha de dados com o Microsoft Dataverse quando o ambiente [utiliza 
 Existem duas limitações ao utilizar o Dataverse com a sua própria conta do Azure Data Lake Storage:
 
 - Existe um mapeamento um-para-um entre uma organização do Dataverse e uma conta do Azure Data Lake Storage. Depois de uma organização Dataverse ser ligada a uma conta de armazenamento, não poderá ser ligada a outra conta de armazenamento. Esta limitação impede que um Dataverse não preencha várias contas de armazenamento.
-- A partilha de dados não funcionará se for necessária uma configuração do Azure Private Link para aceder à sua conta do Azure Data Lake Storage, porque está por detrás de uma firewall. Atualmente, o Dataverse não suporta a ligação a pontos finais privados através do Private Link.
+- A partilha de dados não funcionará se for necessária uma configuração do Azure Private Link para aceder à sua conta Azure Data Lake Storage, porque está por detrás de uma firewall. Atualmente, o Dataverse não suporta a ligação a pontos finais privados através do Private Link.
 
 ### <a name="set-up-powershell"></a>Configurar o PowerShell
 

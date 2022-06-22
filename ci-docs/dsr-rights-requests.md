@@ -1,19 +1,19 @@
 ---
 title: Pedidos de Direitos de Titulares de Dados (DSR) ao abrigo do RGPD | Microsoft Docs
 description: Responda aos Pedidos de Titulares de Dados para o Dynamics 365 Customer Insights.
-ms.date: 08/11/2021
+ms.date: 05/23/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808575"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947382"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Os pedidos de Direitos de Titulares de Dados (DSR) são pedidos sob RGPD
 
@@ -77,11 +77,5 @@ Um administrador pode seguir estes passos para exportar dados:
 1. Enviar um e-mail para D365CI@microsoft.com a especificar o endereço de e-mail do utilizador no pedido. A equipa da Customer Insights enviará um e-mail ao endereço de e-mail do inquilino registado, pedindo confirmação para exportar os dados.
 2. Aceite a confirmação para exportar os dados para o utilizador pedido.
 3. Receba os dados exportados através do endereço de e-mail do administrador de inquilino.
-
-## <a name="consent-management-preview"></a>Gestão de consentimento (pré-visualização)
-
-A capacidade de gestão de consentimento não recolhe os dados dos utilizadores diretamente. Apenas importa e processa os dados de consentimento fornecidos pelos utilizadores noutras aplicações.
-
-Para remover dados de consentimento sobre utilizadores específicos, remova-os nas origens de dados ingeridas para a capacidade de gestão de consentimento. Após atualizar a origem de dados, os dados removidos também serão eliminados no Centro de Consentimento. As aplicações que utilizam a entidade de consentimento também eliminarão os dados que foram removidos na origem após uma [atualização](system.md#refresh-processes). Recomendamos atualizar as origens de dados rapidamente após responder a um pedido individual de acesso a dados para remover os dados do utilizador de todos os outros processos e aplicações.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

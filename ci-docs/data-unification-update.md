@@ -1,7 +1,7 @@
 ---
 title: Atualizar as definições de unificação
 description: Atualizar regras de duplicação, regras de correspondência ou campos unificados nas definições de unificação.
-ms.date: 05/04/2022
+ms.date: 06/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: be399da9b98d8803d7d1a90f44a40e0d638a8d47
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 590a2996cf8b2b1c6def59b78583169ec1910b59
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755604"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844054"
 ---
 # <a name="update-the-unification-settings"></a>Atualizar as definições de unificação
 
@@ -43,8 +43,9 @@ Para rever ou alterar quaisquer definições de unificação após a criação d
 
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Captura de ecrã da página Unificar Dados com as opções de União realçadas.":::
 
-   - Para atualizar o unified customer profile (com ou sem dependências), consulte [Executar atualizações para o perfil de cliente](#run-updates-to-the-unified-customer-profile).
-   - Para avaliar a qualidade das condições correspondentes sem atualizar o perfil unificado, consulte [Executar condições de correspondência](#run-matching-conditions). A opção **Executar condições de correspondência apenas** não é apresentada para uma única entidade.
+   - [Executar condições de correspondência](#run-matching-conditions) para avaliar rapidamente a qualidade das condições de correspondência (regras de correspondência e de eliminação de duplicados) sem atualizar o perfil unificado. A opção **Executar condições de correspondência apenas** não é apresentada para uma única entidade.
+   - [Unificar perfis de clientes](#run-updates-to-the-unified-customer-profile) para executar condições de correspondência e atualizar a entidade Unified customer profile sem afetar dependências (tais como melhoramentos, segmentos ou medidas). Os processos dependentes não são executados, mas serão atualizados conforme [definido na agenda de atualização](system.md#schedule-tab).
+   - [Unificar perfis de clientes e dependências](#run-updates-to-the-unified-customer-profile) para executar condições de correspondência e atualizar a entidade Unified customer profile e todas as dependências (tais como melhoramentos, segmentos ou medidas). Todos os processos voltam a ser executados automaticamente.
 
 ## <a name="edit-source-fields"></a>Editar campos de origem
 
@@ -135,11 +136,13 @@ Pode reconfigurar e aperfeiçoar a maioria dos parâmetros de correspondência. 
 
 ## <a name="run-matching-conditions"></a>Executar condições de correspondência
 
+A execução de condições de correspondência executa apenas regras de correspondência e eliminação de duplicados e atualiza as entidades *Deduplication_* e *ConflationMatchPair*.
+
 1. Na página **Dados** > **Unificar**, selecione **Executar condições de correspondência apenas**.
 
-   Os mosaicos **Duplicar registos** e **Condições de correspondência** mostram **Fila** ou **Atualização**.
+   Os mosaicos **Duplicar registos** e **Condições de correspondência** mostram o estado **Na fila** ou **Em atualização**.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
 1. Quando o processo correspondente estiver concluído, selecione **Editar** no mosaico **Condições de correspondência**.
 
@@ -153,10 +156,12 @@ Pode reconfigurar e aperfeiçoar a maioria dos parâmetros de correspondência. 
 
 1. Na página **Dados** > **Unificar**, selecione:
 
-   - **Unificar perfis de clientes**: Atualiza a entidade unified customer profile sem afetar dependências (tais como enriquecimentos, segmentos ou medidas). Os processos dependentes não são executados, mas serão atualizados conforme [definido na agenda de atualização](system.md#schedule-tab).
+   - **Unificar perfis de clientes**: executa condições de correspondência e atualiza a entidade Unified customer profile sem afetar dependências (tais como melhoramentos, segmentos ou medidas). Os processos dependentes não são executados, mas serão atualizados conforme [definido na agenda de atualização](system.md#schedule-tab).
 
-   - **Unificar perfis de cliente e dependências**: Atualiza o perfil unificado e todas as dependências. Todos os processos voltam a ser executados automaticamente. Depois de concluídos todos os processos a jusante, o perfil de cliente reflete os dados atualizados.
+   - **Unificar perfis de cliente e dependências**: executa condições de correspondência e atualiza o perfil unificado e todas as dependências. Todos os processos voltam a ser executados automaticamente. Depois de concluídos todos os processos a jusante, o perfil de cliente reflete os dados atualizados.
 
-   Os mosaicos **Duplicar registos**, **Condições de correspondência** e **Campos de cliente unificados** mostram **Fila** ou **Atualização**.
+   Os mosaicos **Duplicar registos**, **Condições de correspondência** e **Campos de cliente unificados** mostram o estado **Na fila** ou **Em atualização**.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+Os resultados de uma apresentação de execução com êxito na página **Unificar** mostra o número de unified customer profiles.

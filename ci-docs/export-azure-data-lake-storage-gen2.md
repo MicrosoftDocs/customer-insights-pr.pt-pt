@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 8b14992f8312d333d8a12501e8a28496c8434779
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 22eee11666752459a1750d728c4e254ab0c59e58
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646771"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947244"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Exportar a lista de segmentos e outros dados para o Azure Data Lake Storage Gen2 (pré-visualização)
 
@@ -21,11 +21,9 @@ Armazene os seus dados do Customer Insights numa conta Data Lake Storage Gen2 ou
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
-1. Para o Azure Data Lake Storage Gen2 pode escolher entre [o escalão de desempenho Standard e o escalão de desempenho Premium](/azure/storage/blobs/create-data-lake-storage-account) quando estiver a criar uma conta de armazenamento para o seu data lake. Se escolher o escalão de desempenho Premium, selecione os blobs de blocos premium como o tipo de conta. 
+1. Para o Azure Data Lake Storage Gen2 pode escolher entre [o escalão de desempenho Standard e o escalão de desempenho Premium](/azure/storage/blobs/create-data-lake-storage-account) quando estiver a criar uma conta de armazenamento para o seu data lake. Se escolher o escalão de desempenho Premium, selecione os blobs de blocos premium como o tipo de conta.
 
-
-## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Configurar a ligação para o Azure Data Lake Storage Gen2 
-
+## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Configurar a ligação para o Azure Data Lake Storage Gen2
 
 1. Aceda a **Admin** > **Ligações**.
 
@@ -39,7 +37,7 @@ Armazene os seus dados do Customer Insights numa conta Data Lake Storage Gen2 ou
     - Para aprender a criar uma conta de armazenamento a utilizar com o Azure Data Lake Storage Gen2, consulte [Criar conta de armazenamento](/azure/storage/blobs/create-data-lake-storage-account). 
     - Para saber mais sobre o nome da conta de armazenamento do Azure Data Lake Gen2 e a chave da conta, consulte [Gerir definições da conta de armazenamento no portal do Azure](/azure/storage/common/storage-account-manage).
 
-1. Selecione **Guardar** para concluir a ligação. 
+1. Selecione **Guardar** para concluir a ligação.
 
 ## <a name="configure-an-export"></a>Configurar uma exportação
 
@@ -57,8 +55,12 @@ Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Pa
 
 Guardar uma exportação não executa a exportação imediatamente.
 
-A exportação é executada com cada [atualização agendada](system.md#schedule-tab). Também pode [exportar dados a pedido](export-destinations.md#run-exports-on-demand). 
+A exportação é executada com cada [atualização agendada](system.md#schedule-tab).
+Também pode [exportar dados a pedido](export-destinations.md#run-exports-on-demand).
 
-Os dados exportados são armazenados no contentor do Azure Data Lake Gen 2 que configurou. 
+Os dados exportados são armazenados no contentor do Azure Data Lake Gen 2 que configurou.
+
+> [!TIP]
+> A exportação de entidades que contenham uma grande quantidade de dados pode levar a vários ficheiros CSV na mesma pasta para cada exportação. A divisão de exportações ocorre por razões de desempenho que minimizam o tempo que demora a conclusão de uma exportação.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
