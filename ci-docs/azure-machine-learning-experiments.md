@@ -1,5 +1,5 @@
 ---
-title: Experimentações do Azure Machine Learning
+title: Utilize modelos baseados em Azure Machine Learning
 description: Utilize modelos baseados em Azure Machine Learning no Dynamics 365 Customer Insights.
 ms.date: 12/02/2021
 ms.subservice: audience-insights
@@ -8,12 +8,12 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: cefd037a021b669e827f0593d63b938d452963f7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a1efad2887a02a92ee2960b07b066edc331f3665
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646786"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081320"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Utilize modelos baseados em Azure Machine Learning
 

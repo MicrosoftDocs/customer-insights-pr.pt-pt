@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: f3ec86806074a12c1107648303ed2d65e97ebc69
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800340"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081651"
 ---
-# <a name="use-measure-builder-to-create-measures-from-scratch"></a>Utilizar o construtor de medidas para criar medidas de raiz
+# <a name="create-new-measures-with-the-measure-builder"></a>Criar novas medidas com o construtor de medidas
 
 Este artigo explica como deve criar uma nova [medida](measures.md) de raiz. O construtor de medidas permite definir cálculos usando operadores de matemática, funções de agregação e filtros. Pode construir uma medida com atributos de entidades relacionadas com a entidade de *Cliente* unificado.
 

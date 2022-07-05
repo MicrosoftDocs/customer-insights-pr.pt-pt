@@ -1,5 +1,5 @@
 ---
-title: Melhoramento com o melhoramento de terceiros da HERE Technologies
+title: Melhorar os perfis dos clientes com HERE Technologies (pré-visualização)
 description: Informação geral sobre o enriquecimento de terceiros HERE Technologies.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 171ead92427924083a13e2a3d52e7a7da417c801
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: d88085b6be156dd1c895e9e5b38cc9d77acbdb95
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953687"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052065"
 ---
-# <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Enriquecimento de perfis de clientes com HERE Technologies (pré-visualização)
+# <a name="enrich-customer-profiles-with-here-technologies-preview"></a>Melhorar os perfis dos clientes com HERE Technologies (pré-visualização)
 
 A HERE Technologies é uma empresa de plataforma de localização que fornece dados e serviços centrados na localização. Os serviços de melhoramento de dados da HERE Technologies melhoram a precisão das informações de localização sobre os seus clientes. Fornece normalização de endereço, extração de latitude e longitude, entre outros.
 
@@ -72,7 +72,7 @@ O seu administrador do Dynamics 365 Customer Insights pode remover este melhoram
 
 1. Selecione **Executar** para iniciar o processo de melhoramento ou Fechar para regressar à página **Melhoramentos**.
 
-## <a name="enrichment-results"></a>Resultados do enriquecimento
+## <a name="view-enrichment-results"></a>Ver resultados de melhoramento
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

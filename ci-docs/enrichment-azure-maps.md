@@ -1,5 +1,5 @@
 ---
-title: Melhorar perfis de clientes com dados de localização do Azure Maps
+title: Melhorar perfis de clientes com dados de localização da Azure Maps (pré-visualização)
 description: Informações gerais sobre o melhoramento de propriedade do Azure Maps.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a806b2d0c791972c967c90694527608b4def9f3f
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: dfadc08f67beac3fded1a97e557ee9e1880664e0
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953642"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052621"
 ---
-# <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Melhoramento de perfis de clientes com o Azure Maps (pré-visualização)
+# <a name="enrich-customer-profiles-with-location-data-from-azure-maps-preview"></a>Melhorar perfis de clientes com dados de localização da Azure Maps (pré-visualização)
 
 O Azure Maps fornece dados e serviços baseados na localização para proporcionar experiências baseadas em dados geoespaciais com inteligência de localização incorporada. Os serviços de melhoramento de dados do Azure Maps melhoram a precisão das informações de localização sobre os seus clientes. Traz capacidades como a normalização do endereços e a extração de latitude e de longitude para o Dynamics 365 Customer Insights.
 
@@ -82,7 +82,7 @@ O seu administrador Dynamics 365 Customer Insights pode remover este melhorament
 
 1. Selecione **Executar** para iniciar o processo de melhoramento ou Fechar para regressar à página **Melhoramentos**.
 
-## <a name="enrichment-results"></a>Resultados do enriquecimento
+## <a name="view-enrichment-results"></a>Ver resultados de melhoramento
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

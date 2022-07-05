@@ -1,5 +1,5 @@
 ---
-title: Enriquecer os perfis dos clientes com dados do Microsoft Office 365
+title: Enriquecer os perfis dos clientes com dados do Microsoft Office 365 (pré-visualização)
 description: Utilize dados próprios a partir do Microsoft Office para enriquecer os seus perfis de cliente com dados de interação.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 7192b7680e73a581dd603de174c57b20bec996dd
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 75762afb70814c8a81c1574ee7ea1553a2048737
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954147"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055688"
 ---
-# <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Enriquecer os perfis dos clientes com dados de interação (pré-visualização)
+# <a name="enrich-customer-profiles-with-data-from-microsoft-office-365-preview"></a>Enriquecer os perfis dos clientes com dados do Microsoft Office 365 (pré-visualização)
 
 Utilize os dados do Microsoft Office 365 para enriquecer os seus perfis de conta de cliente com informações sobre as interações através das aplicações do Office 365. Os dados de interação são compostos por atividade de e-mail e reunião, que são agregados a nível da conta. Por exemplo, o número de e-mails de uma conta profissional ou o número de reuniões com a conta. Não são disponibilizados dados sobre os utilizadores individuais.
 
@@ -75,7 +75,7 @@ Selecione **Executar** para iniciar o processo de melhoramento.
 
 [!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
-## <a name="enrichment-results"></a>Resultados do enriquecimento
+## <a name="view-enrichment-results"></a>Ver resultados de melhoramento
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)] Esta é a entidade *Office*. A *Office_UserEntity* contém os IDs do Active Directory para os endereços de e-mail que foram escolhidos durante a configuração do melhoramento.
 

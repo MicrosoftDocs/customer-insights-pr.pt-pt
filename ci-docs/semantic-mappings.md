@@ -1,5 +1,5 @@
 ---
-title: Mapeamentos semânticos (pré-visualização)
+title: Mapeamentos de semânticas (pré-visualização)
 description: Descrição geral dos mapeamentos semânticos e como utilizá-los.
 ms.date: 12/01/2021
 ms.subservice: audience-insights
@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: a60855f6d5616ca9b958752836d1071ae3433db0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b3a0643ab71c98ce212f4e4581a584d8382c67eb
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647059"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081709"
 ---
-# <a name="semantic-mappings-preview"></a>Mapeamentos semânticos (pré-visualização)
+# <a name="semantic-mappings-preview"></a>Mapeamentos de semânticas (pré-visualização)
 
 Os mapeamentos semânticos permitem mapear os seus dados de não atividade para esquemas predefinidos. Estes esquemas ajudam o Customer Insights a compreender melhor os seus atributos de dados. O mapeamento semântico e os dados fornecidos permitem novas informações e funcionalidades no Customer Insights. Para mapear os seus dados de atividade para os esquemas, reveja a documentação das [atividades](activities.md).
 

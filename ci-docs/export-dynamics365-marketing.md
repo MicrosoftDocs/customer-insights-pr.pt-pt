@@ -1,5 +1,5 @@
 ---
-title: Exportar dados Customer Insights para o Dynamics 365 Marketing
+title: Exportar segmentos para o Dynamics 365 Marketing (pré-visualização)
 description: Aprenda a configurar a ligação e exportar para o Dynamics 365 Marketing.
 ms.date: 08/24/2021
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: 7227f3f9e7699a9b5ad546789de5e568b56da579
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: fed4ae1b017cca2b6060c4dda155859cd77e0daf
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646485"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054630"
 ---
-# <a name="use-segments-in-dynamics-365-marketing-preview"></a>Utilizar segmentos no Dynamics 365 Marketing (pré-visualização)
-
-
+# <a name="export-segments-to-dynamics-365-marketing-preview"></a>Exportar segmentos para o Dynamics 365 Marketing (pré-visualização)
 
 Utilize os [segmentos](segments.md) para gerar campanhas e contactar grupos específicos de clientes com Dynamics 365 Marketing. Para mais informações, consulte [Usar segmentos do Dynamics 365 Customer Insights com o Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments).
 

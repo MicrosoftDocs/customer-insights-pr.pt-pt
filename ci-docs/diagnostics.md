@@ -1,5 +1,5 @@
 ---
-title: Auditar o Dynamics 365 Customer Insights com o Azure Monitor
+title: Registar o reencaminhamento no Dynamics 365 Customer Insights com o Azure Monitor (pré-visualização)
 description: Saiba como enviar registos para o Microsoft Azure Monitor.
 ms.date: 12/14/2021
 ms.reviewer: mhart
@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
-ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
+ms.openlocfilehash: 8c72df7054a682244215bbee54968d6aef4bbf59
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "8807595"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052667"
 ---
-# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Registar o reencaminhamento no Dynamics 365 Customer Insights com o Azure Monitor (Pré-visualização)
+# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Registar o reencaminhamento no Dynamics 365 Customer Insights com o Azure Monitor (pré-visualização)
 
 O Dynamics 365 Customer Insights fornece uma integração direta com o Azure Monitor. Os registos de recursos do Azure Monitor permitem monitorizar e enviar registos para o [Armazenamento do Azure](https://azure.microsoft.com/services/storage/), o [Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) ou transmiti-los para [Hubs de Eventos do Azure](https://azure.microsoft.com/services/event-hubs/).
 

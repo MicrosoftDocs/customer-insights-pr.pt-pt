@@ -1,5 +1,5 @@
 ---
-title: Localizar clientes similares com IA (contém vídeo)
+title: Localizar clientes similares com IA (pré-visualização) (contém vídeo)
 description: Encontre segmentos de clientes semelhantes com inteligência artificial.
 ms.date: 03/25/2022
 ms.subservice: audience-insights
@@ -12,14 +12,14 @@ searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 7877349817829f7486a63a1355a81361e1cb2c13
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d58b2e424fd81ad691db4b2576bdf5655038ed89
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8646912"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054817"
 ---
-# <a name="similar-customers-preview"></a>Clientes semelhantes (pré-visualização)
+# <a name="find-similar-customers-with-ai-preview"></a>Localizar clientes similares com IA (pré-visualização)
 
 Esta funcionalidade permite encontrar clientes semelhantes na sua base de clientes utilizando inteligência artificial. Precisa de ter, pelo menos, um segmento criado para utilizar esta funcionalidade. Expandir os critérios de um segmento existente ajuda a encontrar clientes semelhantes a esse segmento.
 

@@ -1,5 +1,5 @@
 ---
-title: Suplemento de Cartões de Cliente para aplicações do Dynamics 365 (contém vídeo)
+title: Suplemento de Cartões de Cliente para aplicações do Dynamics 365 (pré-visualização) (contém vídeo)
 description: Mostrar dados de perfil de cliente do Customer Insights em aplicações Dynamics 365 com este suplemento.
 ms.date: 02/02/2022
 ms.reviewer: mhart
@@ -13,14 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755650"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081251"
 ---
-# <a name="customer-card-add-in-preview"></a>Suplemento de Cartões de Cliente (pré-visualização)
+# <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Suplemento de Cartões de Cliente para Aplicações do Dynamics 365 (pré-visualização)
 
 Obtenha uma visão de 360 graus dos seus clientes diretamente nas aplicações Dynamics 365. Com o Suplemento de Cartões de Cliente instalado numa aplicação do Dynamics 365 suportada, pode optar por apresentar campos do perfil do cliente, informações e a linha cronológica da atividade. O suplemento irá obter dados do Customer Insights sem afetar os dados na aplicação ligada do Dynamics 365.
 

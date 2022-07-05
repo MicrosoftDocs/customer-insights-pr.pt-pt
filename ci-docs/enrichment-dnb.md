@@ -1,5 +1,5 @@
 ---
-title: Melhoramento de perfis de empresa com Dun & Bradstreet
+title: Melhorar perfis de empresa com Dun & Bradstreet (pré-visualização)
 description: Informações gerais sobre o melhoramento de terceiros da Dun & Bradstreet
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b1038970b6aee3bbdd7f79cc457f79aaf1c38222
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 51f2e4e46aa25d10502d0feb5ea42eb7d2d637b9
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953905"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9081431"
 ---
-# <a name="enrichment-of-company-profiles-with-dun--bradstreet-preview"></a>Melhoramento de perfis de empresa com Dun & Bradstreet (Pré-visualização)
+# <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Melhorar perfis de empresa com Dun & Bradstreet (pré-visualização)
 
 A Dun & Bradstreet fornece dados, análises e informações comerciais para empresas. Permite que os clientes com perfis de clientes unificados para as empresas enriqueçam os seus dados. Os melhoramentos incluem atributos como o número DUNS, o tamanho da empresa, a localização, o setor e muito mais.
 
@@ -102,7 +102,7 @@ Atualmente, suportamos as seguintes opções de país/região: Canadá (inglês)
 
 1. Selecione **Executar** para iniciar o processo de melhoramento ou Fechar para regressar à página **Melhoramentos**.
 
-## <a name="enrichment-results"></a>Resultados do enriquecimento
+## <a name="view-enrichment-results"></a>Ver resultados de melhoramento
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
