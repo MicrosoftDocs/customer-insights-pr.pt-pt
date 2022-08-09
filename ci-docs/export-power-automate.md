@@ -1,19 +1,19 @@
 ---
 title: Conectores do Power Automate (pré-visualização) | Microsoft Docs
 description: Criar fluxos no Microsoft Power Automate a partir do Dynamics 365 Customer Insights.
-ms.date: 06/24/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 29a861dad926072f6f849d738d868f0f3b9306be
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: f87bd6db7143294a264813f6c5c7d7963f303628
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081392"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196132"
 ---
 # <a name="power-automate-connector-preview"></a>Conector do Power Automate (pré-visualização)
 
@@ -21,18 +21,18 @@ Acione eventos específicos para ocorrerem automaticamente quando os seus dados 
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
-- Pode fazer um máximo de 100 chamadas por cada 60 segundos. Pode chamar o ponto final de API várias vezes ao utilizar o parâmetro $skip. [Saiba mais sobre o parâmetro $skip](/connectors/customerinsights/#get-items-from-an-entity).
+- Um máximo de 100 chamadas por cada 60 segundos. Utilize o [parâmetro $skip](/connectors/customerinsights/#get-items-from-an-entity) para chamar o ponto final de API várias vezes.
 
 ## <a name="power-automate-triggers"></a>Acionadores do Power Automate
 
-Utilize acionadores para criar fluxos de cloud e automatizar tarefas repetitivas, tais como notificações ou ações mais avançadas.
+Utilize acionadores para criar fluxos de cloud e automatizar tarefas repetitivas, tais como notificações ou ações mais avançadas. Utilize acionadores quando:
 
-- É acionado quando uma atualização de origem de dados falha.
-- É acionado quando uma atualização de origem de dados é bem sucedida.
-- É acionado quando um limiar é ultrapassado num segmento. O acionador limita-se a passar acima do limiar.
-- É acionado quando um limiar é ultrapassado numa medida empresarial. Apenas as medidas de negócio sem uma dimensão são suportadas. O acionador limita-se a passar acima do limiar.
-- Acionar quando uma atualização completa de ( origens de dados, segmentos, medidas, ...) é completada.
-- Acionar quando for concluída um atualização do processo de unificação.
+- Uma origem de dados falhar.
+- Uma atualização de origem de dados for concluída com êxito.
+- Um limiar é ultrapassado num segmento. O acionador limita-se a passar acima do limiar.
+- Um limiar é ultrapassado numa medida empresarial. Apenas as medidas de negócio sem uma dimensão são suportadas. O acionador limita-se a passar acima do limiar.
+- É concluída uma atualização agendada completa. Este acionador não funciona para as atualizações iniciadas manualmente.
+- Uma atualização do processo de unificação é concluída.
 
 [Configure os seus acionadores no Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
@@ -42,7 +42,7 @@ O conector do Power Automate fornece outras ações que não os acionadores disp
 
 ## <a name="create-a-power-automate-flow"></a>Criar um fluxo do Power Automate
 
-1. Aceda a **Administrador** > **Destinos de exportação**.
+1. Aceda a **Admin** > **Ligações**.
 
 1. No mosaico **Power Automate**, selecione **Configurar**.
 
@@ -53,7 +53,5 @@ O conector do Power Automate fornece outras ações que não os acionadores disp
 Exemplos de como utilizar fluxos: 
 - Publique uma mensagem num canal do Microsoft Teams se uma atualização de origem de dados falhar. 
 - Envie um e-mail aos proprietários de dados quando um limiar de um segmento é ultrapassado.
-
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

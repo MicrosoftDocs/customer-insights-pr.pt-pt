@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e55ca8c6926fa0bda05aaf52fd799ca25f7f585f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8216b5a739964fdfff8cad7e6d6d7ce3f5308b5
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647499"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171109"
 ---
 # <a name="transaction-churn-prediction"></a>Predição de abandono de transações
 
@@ -240,7 +240,7 @@ Adicione uma lista dos seus clientes e contas empresariais que pretende utilizar
    - **Nome da predição**: nome da predição fornecida na sua criação.
    - **Tipo de predição**: tipo de modelo utilizado para a predição
    - **Entidade de saída**: nome da entidade para armazenar a saída da predição. Pode encontrar uma entidade com este nome em **Dados** > **Entidades**.
-     Na entidade de saída, *ChurnScore* é a probabilidade prevista de abandono e *IsChurn* é uma etiqueta binária baseada em *ChurnScore* com limiar de 0,5. O limiar predefinido pode não funcionar para o seu cenário. [Crie um novo segmento](segments.md#create-a-new-segment) com o seu limiar preferido.
+     Na entidade de saída, *ChurnScore* é a probabilidade prevista de abandono e *IsChurn* é uma etiqueta binária baseada em *ChurnScore* com limiar de 0,5. O limiar predefinido pode não funcionar para o seu cenário. [Crie um novo segmento](segments.md#create-a-segment) com o seu limiar preferido.
      Nem todos os clientes são necessariamente clientes ativos. Alguns deles podem não ter qualquer atividade há muito tempo e já são considerados como tendo abandonado, com base na sua definição de abandono. Prever o risco de abandono de clientes que já efetuaram o abandono não é útil porque não são a audiência de interesse.
    - **Campo da predição**: este campo é povoado apenas para alguns tipos de predições, e não é utilizado na predição de abandono.
    - **Estado**: estado da execução da predição.

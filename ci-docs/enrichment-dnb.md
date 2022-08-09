@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 51f2e4e46aa25d10502d0feb5ea42eb7d2d637b9
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 71b35e4295e19c13edadc6548ac79715555e8183
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081431"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196040"
 ---
 # <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Melhorar perfis de empresa com Dun & Bradstreet (pré-visualização)
 
@@ -80,7 +80,7 @@ Atualmente, suportamos as seguintes opções de país/região: Canadá (inglês)
 
 1. Reveja a descrição geral e, em seguida, selecione **Seguinte**.
 
-1. Selecione a ligação e confirme. Contacte um administrador, caso não esteja nenhuma disponível.
+1. Selecione a ligação e confirme. Contacte um administrador se não houver nenhuma ligação disponível.
 
 1. Selecione **Seguinte**.
 

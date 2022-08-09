@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: fb97b721cc82ccd23cfd1df74a0712b8fc277b8a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 98e9e330e7ef9cf085caa94a506fa788cebdd67b
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081248"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207197"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Melhoramento de origens de dados (pré-visualização)
 
@@ -21,9 +21,9 @@ Utilize dados de origens como a Microsoft e outros parceiros para melhorar os da
 
 ## <a name="enrich-a-data-source"></a>Melhorar uma origem de dados
 
-Tem de ter as permissões Contribuidor ou Administrador para criar ou editar melhoramentos. Para mais informações, consulte [Permissões](permissions.md).  
+Tem de ter as [permissões](permissions.md) Contribuidor ou Administrador para criar ou editar melhoramentos.  
 
-1. Vá para **Dados** > **Unificar**. Selecione a entidade que pretende melhorar e selecione um atributo como chave primária para a entidade. Para obter mais informações, consulte [Selecionar chave primária](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. Vá para **Dados** > **Unificar**. Selecione a entidade que pretende melhorar e selecione um atributo como [chave primária](map-entities.md#select-primary-key-and-semantic-type-for-attributes) para a entidade.
 
 1. Aceda a **Dados** > **Origens de dados**.
 
@@ -47,8 +47,8 @@ Atualmente, os seguintes melhoramentos estão disponíveis para origens de dados
 
 ## <a name="manage-existing-data-source-enrichments"></a>Gerir os melhoramentos de origens de dados existentes
 
-Aceda ao separador **Os meus melhoramentos** para ver todos os melhoramentos configurados.
+Aceda a **Dados** > **Enriquecimento**. No separador **Os meus melhoramentos**, ver os melhoramentos configurados, o respetivo estado, o número de clientes melhorados e a última vez que os dados foram atualizados. Pode ordenar a lista de melhoramentos por qualquer coluna ou utilizar a caixa de pesquisa para encontrar o melhoramento que pretende gerir.
 
-Selecione o enriquecimento para ver as opções disponíveis. Também pode selecionar as reticências verticais (&vellip;) num item de lista para ver as opções. Se configurou vários enriquecimentos, pode usar a caixa de pesquisa para encontrá-lo rapidamente.
+Selecione o enriquecimento para ver as opções disponíveis. Também pode selecionar as reticências verticais (&vellip;) num item de lista para ver as opções.
 
-Pode ver, editar, executar ou eliminar um melhoramento de origens de dados. Para mais informações, consulte [Gerir melhoramentos existentes](enrichment-hub.md).
+Pode ver, editar, executar ou eliminar um melhoramento de origens de dados. Para mais informações, consulte [Gerir melhoramentos existentes](enrichment-hub.md#manage-existing-enrichments).

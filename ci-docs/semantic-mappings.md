@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: b3a0643ab71c98ce212f4e4581a584d8382c67eb
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 7c9588ac7a132ca6f43cf26ea3a744109a0dd2b8
+ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081709"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "9183645"
 ---
 # <a name="semantic-mappings-preview"></a>Mapeamentos de semânticas (pré-visualização)
 
@@ -32,13 +32,13 @@ Os mapeamentos semânticos permitem mapear os seus dados de não atividade para 
 
 1. No passo **Dados da entidade**, defina os valores para os seguintes campos:
 
-   - **Nome do mapeamento de entidade semântico**: forneça um nome ao mapeamento de entidade semântico.
-   - **Entidade de Origem**: selecione uma entidade que inclua dados de contacto.
-   - **Chave primária**: selecione o campo que identifica exclusivamente um registo de contacto. Não deve conter valores duplicados, valores vazios ou valores em falta.
+   - **Nome do mapeamento de entidades de semântica**: nome para o o mapeamento de entidades de semântica.
+   - **Entidade de Origem**: entidade que inclui dados de contacto.
+   - **Chave primária**: campo que identifica exclusivamente um registo de contacto. Não deve conter valores duplicados, valores vazios ou valores em falta.
 
    :::image type="content" source="media/Semantic_Mapping_Wizard1.png" alt-text="Configure o mapeamento de entidade semântico com o nome, a entidade de origem e a chave primária.":::
 
-1. Selecione **Seguinte** para continuar.
+1. Selecione **Seguinte**.
 
 1. No passo **Relações**, configure os detalhes para ligar os dados de contacto aos respetivos dados da conta. Este passo visualiza a ligação entre entidades.  
 
@@ -46,7 +46,7 @@ Os mapeamentos semânticos permitem mapear os seus dados de não atividade para 
 
    1. Selecione **Adicionar Relação** para configurar a relação.
    1. Escolha o atributo da sua entidade de origem que liga a sua entidade de contacto a outra entidade.
-   1. Escolha a entidade para ligar a sua entidade de contacto. Pode escolher uma entidade a partir da secção **Entidades de conta** ou **Entidades intermediárias**. Se selecionar uma entidade intermediária, tem de definir uma segunda relação para se ligar à sua entidade de conta de destino.
+   1. Escolha a entidade para ligar a sua entidade de contacto. Escolha uma entidade a partir da secção **Entidades de conta** ou **Entidades intermediárias**. Se selecionar uma entidade intermediária, defina uma segunda relação para se ligar à sua entidade de conta de destino.
 
       :::image type="content" source="media/Semantic_Mapping_Wizard2.png" alt-text="Selecione uma entidade de Conta ou uma entidade Intermediária.":::
 
@@ -55,43 +55,38 @@ Os mapeamentos semânticos permitem mapear os seus dados de não atividade para 
 
    > [!NOTE]
    > Pode configurar mais relações entre a entidade de contacto e outras entidades de conta com entidades intermediárias.
-   >  :::image type="content" source="media/Semantic_Mapping_Wizard4.png" alt-text="A visualização de várias relações que ligam as entidades de contacto a entidades de conta.":::
+   
+     :::image type="content" source="media/Semantic_Mapping_Wizard4.png" alt-text="A visualização de várias relações que ligam as entidades de contacto a entidades de conta.":::
 
-1. Selecione **Seguinte** quando concluir a configuração da relação.
+1. Selecione **Seguinte**.
 
 1. No passo **Definir o tipo semântico**, escolha um **Tipo semântico**. Atualmente, existe um **Tipo Semântico** chamado *ContactProfile*.
 
-1. Mapeie os seus dados para o **Tipo semântico** *ContactProfile* para os campos mostrados.
-   - Campo obrigatório: ID do Contacto
-   - Campos Opcionais: Nome próprio, Apelido, Data de nascimento, Sexo, E-mail principal e Telefone principal
+1. Mapeie o seu ID de contacto para o **ID de Contacto** com o tipo de semântica *ContactProfile*. Opcionalmente, mapeie outros campos, como o nome próprio, o apelido, o sexo ou o e-mail.
 
    :::image type="content" source="media/Semantic_Mapping_Wizard5.png" alt-text="Mapeie os seus atributos de dados de contacto para os campos obrigatórios e opcionais.":::
 
-1. Selecione **Seguinte** para continuar.
+1. Selecione **Seguinte**.
 
-1. No passo **Revisão**, veja a configuração do mapeamento semântico. Selecione **Editar** para a secção correspondente para efetuar alterações.
+1. No passo **Revisão**, reveja a configuração do mapeamento de semânticas. Para fazer alterações, selecione **Editar** para a secção correspondente.
 
-1. Selecione **Guardar** para guardar o seu novo **Mapeamento semântico**.
+1. Selecione **Guardar**.
 
-1. Depois de guardar, pode selecionar **Executar** para processar o mapeamento semântico ou pode selecionar **Fechar** para guardar o mapeamento semântico sem o processar.
-
-1. Para executar um mapeamento semântico num momento posterior, selecione o mapeamento semântico e selecione **Atualizar**.
+1. Para processar o mapeamento de semânticas, selecione **Executar**. Ou selecione **Fechar** para guardar o mapeamento de semânticas sem o processar. Para o executar num momento posterior, selecione o mapeamento de semânticas e selecione **Atualizar**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Gerir mapeamentos semânticos existentes
 
-Em **Dados** > **Mapeamentos semânticos (pré-visualização)**, pode ver todos os seus mapeamentos semânticos guardados e geri-los. Cada mapeamento semântico é representado por uma linha separada. Encontrará os detalhes sobre a entidade de origem, o tipo semântico, o tipo de mapeamento e o respetivo estado.
+Vá para **Dados** > **Mapeamentos de semânticas (pré-visualização)** para ver os mapeamentos de semânticas guardados, a respetiva entidade de origem, o tipo de semântica, o tipo de mapeamento e o estado.
 
 :::image type="content" source="media/semantic-mapping-options.png" alt-text="Opções para gerir mapeamentos semânticos.":::
 
-- **Editar**: abre a configuração do mapeamento semântico no passo de revisão. Pode alterar a configuração atual. Selecione **Guardar** e **Executar** para processar as alterações.
-
-- **Atualizar**: atualiza o mapeamento semântico selecionado com os dados mais atualizados das entidades que fazem parte da sua configuração. A atualização de qualquer mapeamento semântico irá atualizar todos os mapeamentos semânticos do mesmo tipo.
-
-- **Mudar o nome**: abre um diálogo onde pode introduzir um nome diferente para o mapeamento semântico selecionado. Selecione **Guardar** para aplicar as alterações.
-
-- **Eliminar**: abre um diálogo para confirmar a eliminação do mapeamento semântico selecionado. Também pode eliminar mais de um mapeamento semântico ao mesmo tempo, selecionando os mapeamentos semânticos e o ícone de eliminação. Selecione **Eliminar** para confirmar a eliminação.
+Selecione o mapeamento de semânticas para ver as ações disponíveis.
+- **Editar** a configuração atual. Selecione **Guardar** e **Executar** para processar as alterações.
+- **Atualizar** o mapeamento de semânticas para incluir os dados mais recentes. A atualização de qualquer mapeamento semântico irá atualizar todos os mapeamentos semânticos do mesmo tipo.
+- **Mudar o nome** do mapeamento de semânticas. Selecione **Guardar**.
+- **Eliminar** o mapeamento de semânticas. Para eliminar mais de um mapeamento de semânticas ao mesmo tempo, selecione os mapeamentos de semânticas e o ícone de eliminação. Selecione **Eliminar** para confirmar a eliminação.
 
 ## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Utilize um mapeamento de entidades de semântica ContactProfile para criar atividades de nível de contacto
 
@@ -100,7 +95,7 @@ Depois de criar um *ContactProfile* mapeamento de entidades de semântica, pode 
    > [!NOTE]
    > Para as atividades de nível de contacto funcionarem, tem de ter os atributos **AccountID** e **ContactID** para cada registo nos seus dados de atividade.
 
-1. [Definir um mapeamento de entidades de semântica *ContactProfile*.](#define-a-contactprofile-semantic-entity-mapping) e executar o mapeamento de semânticas.
+1. [Defina um mapeamento de entidades de semântica *ContactProfile*](#define-a-contactprofile-semantic-entity-mapping) e execute o mapeamento de semânticas.
 
 1. Aceda a **Dados** > **Atividades**.
 
@@ -119,14 +114,14 @@ Depois de criar um *ContactProfile* mapeamento de entidades de semântica, pode 
 
 1. Execute os seus mapeamentos de atividades.
 
-1. As suas atividades de nível de contacto estarão agora visíveis na linha cronológica do seu cliente.
+1. Após a execução de mapeamentos de atividades a nível do contacto, selecione **Clientes**. As atividades a nível de contacto são apresentadas na linha cronológica do seu cliente.
 
    :::image type="content" source="media/Contact_Activities2.png" alt-text="Resultado final depois de configurar as atividade do contacto":::
 
 ### <a name="contact-level-activity-timeline-filtering"></a>Filtragem da linha cronológica das atividades a nível do contacto
 
-Depois de configurar um mapeamento de atividade a nível do contacto e executá-lo, será atualizada a cronologia de atividades para os seus clientes. Inclui os respetivos IDs ou nomes, consoante a sua configuração *ContactProfile* para as atividades nas quais atuaram. Poderá filtrar as atividades por contactos na linha cronológica para ver contactos específicos em que está interessado. Além disso, pode ver todas as atividades que não estão atribuídas a um contacto específico ao selecionar **Atividades não mapeadas para um Contacto**.
+A linha cronológica da atividade para os seus clientes inclui os respetivos IDs ou nomes, consoante a sua configuração *ContactProfile* para as atividades nas quais atuaram. Filtre as atividades por contactos na linha cronológica para ver contactos específicos em que está interessado. Para ver todas as atividades que não estão atribuídas a um contacto específico, selecione **Atividades não mapeadas para um Contacto**.
 
-   :::image type="content" source="media/Contact_Activities3.png" alt-text="Opções de filtragem disponíveis para as atividades a nível do contacto.":::
+:::image type="content" source="media/Contact_Activities3.png" alt-text="Opções de filtragem disponíveis para as atividades a nível do contacto.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

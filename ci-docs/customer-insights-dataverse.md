@@ -1,7 +1,7 @@
 ---
 title: Trabalhar com dados do Customer Insights no Microsoft Dataverse
 description: Aprenda a ligar o Customer Insights e o Microsoft Dataverse e compreenda as entidades de saída que são exportadas para o Dataverse.
-ms.date: 05/30/2022
+ms.date: 07/15/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 89ff629033230de3c6252b6a3a16816d9b3c1287
+ms.sourcegitcommit: 85b198de71ff2916fee5500ed7c37c823c889bbb
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011560"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "9153418"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Trabalhar com dados do Customer Insights no Microsoft Dataverse
 
@@ -31,13 +31,25 @@ A ligação ao seu ambiente Dataverse também permite-lhe [ingerir dados de orig
 - Nenhum outro ambiente do Customer Insights está já associado ao ambiente do Dataverse que pretende ligar. Saiba como [remover uma ligação existente a um ambiente do Dataverse](#remove-an-existing-connection-to-a-dataverse-environment).
 - Um ambiente do Microsoft Dataverse só pode ligar a uma única conta de armazenamento. Só é aplicável se configurar o ambiente para [utilizar o seu Azure Data Lake Storage](own-data-lake-storage.md).
 
+## <a name="dataverse-storage-capacity-entitlement"></a>Elegibilidade da capacidade de armazenamento do Dataverse
+
+Uma subscrição do Customer Insights dá-lhe uma capacidade adicional para a [capacidade de armazenamento do Dataverse](/power-platform/admin/capacity-storage) existente da organização. A capacidade adicionada depende do número de perfis que a sua subscrição utiliza.
+
+**Exemplo:**
+
+Partindo do princípio de que obtém 15 GB de armazenamento de bases de dados e 20 GB de armazenamento de ficheiros por 100.000 perfis de cliente. Se a sua subscrição incluir 300.000 perfis de clientes, a sua capacidade total de armazenamento seria de 45 GB (3 x 15 GB) de armazenamento de ficheiros e de 60 GB (3 x 20 GB) de armazenamento de ficheiros. Do mesmo modo, se tiver uma subscrição B2B com contas de 30K, a sua capacidade total de armazenamento seria de 45 GB (3 x 15 GB) de armazenamento de bases de dados e de 60 GB de armazenamento de ficheiros (3 x 20 GB).
+
+A capacidade de registo não é incremental e não está fixa para a sua organização.
+
+Para mais informações sobre as elegibilidades de capacidade detalhada, consulte o [Guia de Licenciamento do Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
+
 ## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Ligar um ambiente do Dataverse ao Customer Insights
 
 O passo **Microsoft Dataverse** permite-lhe ligar o Customer Insights ao seu ambiente do Dataverse ao [criar um ambiente do Customer Insights](create-environment.md).
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="partilha de dados com Microsoft Dataverse ativado automaticamente para novos ambientes de rede.":::
 
-Os administradores podem configurar o Customer Insights para ligar um ambiente do Dataverse existente. Ao fornecer o URL para o ambiente do Dataverse, está a anexar ao respetivo ambiente do Customer Insights.
+Os administradores podem configurar o Customer Insights para ligar um ambiente do Dataverse existente. Ao fornecer o URL para o ambiente do Dataverse, está a ligar ao respetivo ambiente do Customer Insights. Depois de estabelecer a ligação entre o Customer Insights e o Dataverse, não altere o nome da organização para o ambiente do Dataverse. O nome da organização é utilizado no URL do Dataverse e um nome alterado quebra a ligação ao Customer Insights.
 
 Se não quiser utilizar um ambiente do Dataverse existente, o sistema cria um novo ambiente para os dados do Customer Insights no seu inquilino. [Os admins do Power Platform podem controlar quem pode criar ambientes](/power-platform/admin/control-environment-creation). Quando estiver a configurar um novo ambiente do Customer Insights e o admin tiver desativado a criação de ambientes do Dataverse para todas as pessoas, exceto admins, poderá não conseguir criar um novo ambiente.
 

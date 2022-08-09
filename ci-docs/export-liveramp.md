@@ -1,61 +1,75 @@
 ---
 title: Exportar segmentos para o LiveRamp (pré-visualização)
 description: Aprenda a configurar a ligação e exportar para o LiveRamp.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 3e30a16dcb276fa6c951ad0b42ed0a4792f87ce3
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 55eacea3af83f46583a3a43797d625479f56586b
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050777"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196730"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>Exportar segmentos para o LiveRamp&reg; (pré-visualização)
 
 Ative os seus dados no LiveRamp para se ligar a mais de 500 plataformas através de canais digitais, sociais e TVs. Trabalhar com os seus dados no LiveRamp para campanhas publicitárias com alvo, supressão e personalizar.
 
-## <a name="prerequisites-for-a-connection"></a>Pré-requisitos para uma ligação
+## <a name="prerequisites"></a>Pré-requisitos
 
-- Necessita de uma subscrição do LiveRamp para utilizar este conector.
-- Para obter uma subscrição, [contacte a LiveRamp](https://liveramp.com/contact/) diretamente. [Obtenha mais informações sobre a Inclusão do LiveRamp](https://liveramp.com/our-platform/data-onboarding/).
+- Uma subscrição do LiveRamp para utilizar este conector. Para obter uma subscrição, [contacte a LiveRamp](https://liveramp.com/contact/) diretamente. [Obtenha mais informações sobre a Inclusão do LiveRamp](https://liveramp.com/our-platform/data-onboarding/).
+
+## <a name="known-limitations"></a>Limitações conhecidas
+
+- A exportação LiveRamp está a utilizar uma exportação SFTP. Os destinos SFTP por trás de firewalls não são atualmente suportados.
+- Se utilizar uma chave SSH para autenticação, certifique-se de que [cria a sua chave privada](/azure/virtual-machines/linux/create-ssh-keys-detailed#basic-example) de acordo com o formato PEM ou SSH.COM. Se estiver a utilizar o Putty, converta a sua chave privada ao exportá-la como Open SSH. São suportados os seguintes formatos de chave privada:
+  - RSA em formato OpenSSL PEM e ssh.com
+  - DSA em formato OpenSSL PEM e ssh.com
+  - ECDSA 256/384/521 em formato OpenSSL PEM
+  - ED25519 e RSA em formato de chave OpenSSH
+- O runtime de uma exportação depende do desempenho do seu sistema. Recomendamos dois núcleos CPU e 1 Gb de memória como configuração mínima do seu servidor.
+- As entidades exportadoras com até 100 milhões de perfis de clientes podem demorar 90 minutos quando utilizam a configuração mínima recomendada de dois núcleos CPU e 1 Gb de memória.
+- O número real de perfis (ou dados) que pode exportar para LiveRamp depende da sua subscrição com o LiveRamp.
 
 ## <a name="set-up-connection-to-liveramp"></a>Configurar ligação ao LiveRamp
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Aceda a **Admin** > **Ligações**.
 
-1. Selecione **Adicionar ligação** e escolha **LiveRamp** para configurar a ligação.
+1. Selecione **Adicionar ligação** e escolha **LiveRamp**.
 
 1. Forneça um nome reconhecível à ligação no campo **Nome a apresentar**. O nome e o tipo de ligação descrevem esta ligação. Recomendamos a escolha de um nome que explique o propósito e o destino da ligação.
 
-1. Escolher quem pode utilizar esta ligação. Se não tomar nenhuma ação, a predefinição será Administradores. Para mais informações, consulte [Permitir que os contribuidores utilizem uma ligação para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Escolher quem pode utilizar esta ligação. Por predefinição, são apenas administradores. Para mais informações, consulte [Permitir que os contribuidores utilizem uma ligação para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Forneça um **Nome de utilizador** e **Palavra-passe** para a sua conta LiveRamp Secure FTP (SFTP).
-Estas credenciais podem ser diferentes das suas credenciais de Integração do LiveRamp.
+1. Escolha se pretende autenticar através de SSH ou nome de utilizador/palavra-passe para a sua ligação e forneça os detalhes necessários.
 
 1. Selecione **Verificar** para testar a ligação ao LiveRamp.
 
-1. Após uma verificação com êxito, forneça o seu consentimento para a **Privacidade e conformidade de dados** selecionando a caixa de verificação **Concordo**.
+1. Após uma verificação com êxito, reveja a [conformidade e privacidade de dados](connections.md#data-privacy-and-compliance) e selecione **Concordo**.
 
 1. Selecione **Guardar** para concluir a ligação.
 
 ## <a name="configure-an-export"></a>Configurar uma exportação
 
-Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Para obter mais informações, consulte [Permissões necessárias para configurar uma exportação](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Aceda a **Dados** > **Exportações**.
 
-1. Para criar uma nova exportação, selecione **Adicionar destino**.
+1. Selecione **Adicionar exportação**.
 
-1. No campo **Ligação para a exportação**, escolha uma ligação a partir da secção LiveRamp. Se não vir este nome de secção, não existem ligações deste tipo disponíveis para si.
+1. No campo **Ligação para a exportação**, escolha uma ligação a partir da secção LiveRamp. Contacte um administrador se não houver nenhuma ligação disponível.
 
-1. No campo **Escolher o identificador-chave**, selecione **E-mail**, **Nome e endereço** ou **Telefone** para enviar para o LiveRamp para a resolução de identidades.
-   > [!div class="mx-imgBorder"]
-   > ![Conector do LiveRamp com mapeamento de atributos.](media/export-liveramp-segments.png "Conector do LiveRamp com mapeamento de atributos")
+1. Introduza um nome para a exportação.
+
+1. No campo **Ligar dados**, selecione **E-mail**, **Nome e endereço** ou **Telefone** para enviar para o LiveRamp para a resolução de identidades.
+
+   :::image type="content" source="media/export-liveramp-segments.png" alt-text="Conector do LiveRamp com mapeamento de atributos.":::
 
 1. Mapeie os atributos correspondentes da sua entidade *Cliente* para o identificador de chave selecionado.
 
@@ -64,18 +78,10 @@ Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Pa
    > [!TIP]
    > É provável que o envio de atributos de identificador-chave para o LiveRamp tenha uma taxa de correspondência superior.
 
-1. Selecione os segmentos que pretende exportar para o LiveRamp.
+1. Selecione os segmentos que quer exportar.
 
 1. Selecione **Guardar**.
 
-Guardar uma exportação não executa a exportação imediatamente.
-
-A exportação é executada com cada [atualização agendada](system.md#schedule-tab). Também pode [exportar dados a pedido](export-destinations.md#run-exports-on-demand). 
-
-
-## <a name="data-privacy-and-compliance"></a>Privacidade e conformidade de dados
-
-Quando ativa Dynamics 365 Customer Insights para transmitir dados ao Liveramp, permite a transferência de dados fora dos limites de conformidade para Dynamics 365 Customer Insights, incluindo dados potencialmente sensíveis, tais como Dados Pessoais. A Microsoft transferirá tais dados sob as suas instruções, mas o utilizador é responsável por assegurar que o Liveramp cumpre quaisquer obrigações de privacidade ou segurança que possa ter. Para obter mais informações, consulte [Declaração de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-O seu administrador Dynamics 365 Customer Insights pode remover este destino de exportação em qualquer altura para descontinuar a utilização desta funcionalidade.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

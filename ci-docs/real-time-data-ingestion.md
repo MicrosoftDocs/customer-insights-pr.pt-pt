@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 39d68011df9e4341244af627bb71f4e3635256bb
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081727"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195672"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Ingestão de dados em tempo real (pré-visualização)
 
@@ -28,7 +28,7 @@ A funcionalidade em tempo real fornece dados imediatamente para consumo, até a 
 
 As atualizações em tempo real têm uma hora de expiração após a qual deixam de substituir o valor da origem de dados:
 
-- As atualizações do perfil serão mantidas durante 4 horas
+- As atualizações do perfil serão mantidas durante quatro horas
 - As atividades serão mantidas durante 30 dias
 
 Estes valores são os parâmetros de chamada à API que pode alterar. Visam assegurar que os seus dados de origem permanecem a sua origem da verdade. Se quiser que as atualizações em tempo real sejam incluídas por mais tempo, é necessário adicioná-las a uma origem de dados para que sejam extraídas durante a próxima atualização programada.

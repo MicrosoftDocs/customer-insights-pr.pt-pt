@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 415cd5d675512b4f434998afaa8265c8e45c562b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72aa38242df21181f142833db03c825574455986
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8647339"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171063"
 ---
 # <a name="subscription-churn-prediction"></a>Predição de abandono de subscrição
 
@@ -121,7 +121,7 @@ A previsão de abandono de subscrição ajuda a prever se um cliente está em ri
    - **Nome da previsão:** O nome da previsão fornecida ao criá-la.
    - **Tipo de previsão:** O tipo de modelo utilizado para a previsão
    - **Entidade de saída:** Nome da entidade para armazenar a saída da previsão. Pode encontrar uma entidade com este nome em **Dados** > **Entidades**.    
-     Na entidade de saída, *ChurnScore* é a probabilidade prevista de abandono e *IsChurn* é uma etiqueta binária baseada em *ChurnScore* com limiar de 0,5. O limiar predefinido pode não funcionar para o seu cenário. [Crie um novo segmento](segments.md#create-a-new-segment) com o seu limiar preferido.
+     Na entidade de saída, *ChurnScore* é a probabilidade prevista de abandono e *IsChurn* é uma etiqueta binária baseada em *ChurnScore* com limiar de 0,5. O limiar predefinido pode não funcionar para o seu cenário. [Crie um novo segmento](segments.md#create-a-segment) com o seu limiar preferido.
    - **Campo previsto:** Este campo é povoado apenas para alguns tipos de previsões, e não é usado na previsão de abandono de subscrição.
    - **Estado:** O estado atual da execução da previsão.
         - **Em fila:** a previsão está neste momento à espera que outros processos sejam executados.

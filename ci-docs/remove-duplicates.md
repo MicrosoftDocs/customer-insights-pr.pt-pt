@@ -13,16 +13,14 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: 27dff3551ab411a12c273536d7431d651c48573e
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741667"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139443"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Remover duplicados antes de unificar dados
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Este passo na unificação permite-lhe configurar opcionalmente regras para o tratamento de dados duplicados dentro de uma entidade. *A eliminação de duplicados* identifica os registos duplicados e une-os num único registo. Os registos de origem ligam-se ao registo intercalado com ID alternativos. Se não forem configuradas regras, aplicam-se as regras definidas pelo sistema.
 

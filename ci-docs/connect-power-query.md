@@ -1,7 +1,7 @@
 ---
 title: Ligar a uma origem de dados do Power Query (contém vídeo)
 description: Ingerir dados através de um conector do Power Query (contém vídeo).
-ms.date: 06/13/2022
+ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6736b253e3a7e652f92f61bc44bfb31ca69be31a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081269"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207059"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Ligar a uma origem de dados do Power Query
 
@@ -41,22 +41,29 @@ Normalmente, a adição de origens de dados baseada em conectores do Power Query
 
 1. Introduza os detalhes requeridos nas **Definições de ligação** para o conector selecionado e selecione **Seguinte** para ver uma pré-visualização dos dados.
 
-1. Selecione **Transformar dados**. Neste passo, vai adicionar entidades à sua origem de dados. As entidades são conjuntos de dados. Se tiver uma base de dados que inclua vários conjuntos de dados, cada conjunto é a sua própria entidade.
+1. Selecione **Transformar dados**.
 
 1. O diálogo **Power Query – Editar consultas** permite-lhe rever e refinar os dados. As entidades que os sistemas identificaram na sua origem de dados ligada aparecem no painel esquerdo.
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="Diálogo Editar consultas":::
 
-1. Também pode transformar os seus dados. Selecione uma entidade para edição ou transformação. Utilize as opções na janela do Power Query para aplicar transformações. Cada transformação é listada sob **Passos aplicados**. O Power Query fornece inúmeras opções de transformação pré-criadas. Para mais informações, consulte [Transformações do Power Query](/power-query/power-query-what-is-power-query#transformations).
+1. Também pode transformar os seus dados. Selecione uma entidade para edição ou transformação. Utilize as opções na janela do Power Query para aplicar transformações. Cada transformação é listada sob **Passos aplicados**. O Power Query fornece inúmeras opções de [transformação pré-criadas](/power-query/power-query-what-is-power-query#transformations).
 
    Recomendamos que utilize as seguintes transformações:
 
    - Se estiver a ingerir dados a partir de um ficheiro CSV, a primeira linha contém frequentemente cabeçalhos. Vá a **Transformar** e selecione **Utilizar a primeira linha como cabeçalhos**.
    - Certifique-se de que o tipo de dados está definido de forma adequada. Por exemplo, para campos de data, selecione um tipo de data.
 
-1. Para adicionar entidades adicionais à sua origem de dados no diálogo **Editar consultas**, vá a **Base** e selecione **Obter dados**. Repita os passos 6 a 10 até ter adicionado todas as entidades para esta origem de dados.
+1. Para adicionar entidades adicionais à sua origem de dados no diálogo **Editar consultas**, vá a **Base** e selecione **Obter dados**. Repita os passos 5 a 10 até ter adicionado todas as entidades para esta origem de dados. Se tiver uma base de dados que inclua vários conjuntos de dados, cada conjunto é a sua própria entidade.
 
 1. Selecione **Guardar**. A página **Origens de dados** é aberta a mostrar a origem de dados novas no estado **A atualizar**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+O carregamento de dados pode levar tempo. Após uma atualização bem-sucedida, os dados ingeridos podem ser revistos na página [**Entidades**](entities.md).
+
+> [!CAUTION]
+> Uma origem de dados baseada no Power Query cria um [fluxo de dados no Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Não altere o nome de um fluxo de dados no centro de administração do Power Platform que é utilizado no Customer Insights. Mudar o nome de um fluxo de dados causa problemas nas referências entre o a origem de dados do Customer Insights e o fluxo de dados do Dataverse.
 
 ### <a name="available-power-query-data-sources"></a>Origens de dados do Power Query disponíveis
 
@@ -74,11 +81,13 @@ Os gateways de dados de um ambiente Power BI ou Power Apps existente serão vis�
 
 > [!IMPORTANT]
 > Certifique-se de que os seus gateways estão atualizados para a versão mais recente. Pode instalar uma atualização e reconfigurar um gateway a partir de um pedido mostrado diretamente no ecrã do gateway ou [transfira a versão mais recente](https://powerapps.microsoft.com/downloads/). Se não utilizar a versão mais recente do gateway, a atualização do fluxo de dados falha com mensagens de erro como **A palavra-chave não é suportada: propriedades de configuração. Nome do parâmetro: palavra-chave**.
+>
+> Os erros com os gateways de dados no local no Customer Insights são muitas vezes causados por problemas de configuração. Para mais informações sobre os gateways de dados de resolução de problemas, consulte [Resolver problemas com o gateway de dados no local](/data-integration/gateway/service-gateway-tshoot).
 
 ## <a name="edit-power-query-data-sources"></a>Editar origens de dados do Power Query
 
 > [!NOTE]
-> Poderá não ser possível efetuar alterações às origens de dados que estão atualmente a ser utilizadas num dos processos da aplicação (*segmentação*, *corresponder* ou *intercalar*, por exemplo).
+> Poderá não ser possível efetuar alterações às origens de dados que estão atualmente a ser utilizadas num dos processos da aplicação (segmentação ou unificação de dados, por exemplo).
 >
 > Na página **Definições**, pode monitorizar o progresso de cada um dos processos ativos. Quando um processo é concluído, pode regressar à página **Origens de Dados** e efetuar as suas alterações.
 
@@ -86,8 +95,10 @@ Os gateways de dados de um ambiente Power BI ou Power Apps existente serão vis�
 
 1. Junto da origem de dados que pretende atualizar, selecione **Editar**.
 
-   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
 1. Aplique as suas alterações e transformações no diálogo **Power Query – Editar consultas** como descrito na secção [Criar uma nova origem de dados](#create-a-new-data-source).
 
-1. Selecione **Guardar** no Power Query depois de concluir as suas edições para guardar as suas alterações.
+1. Selecione **Guardar** para aplicar as alterações e regressar à página **Origens de dados**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

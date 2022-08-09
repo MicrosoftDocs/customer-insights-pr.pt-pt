@@ -1,7 +1,7 @@
 ---
 title: Ligar a uma pasta do Common Data Model com uma conta Azure Data Lake
 description: Trabalhe com dados do Common Data Model utilizando Azure Data Lake Storage.
-ms.date: 05/30/2022
+ms.date: 07/27/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b1cdcb46df17d722ad49d361ae4c7ab34c83eeb1
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081305"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207013"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Ligar a dados no Azure Data Lake Storage
 
@@ -82,7 +82,7 @@ Ingerir dados para o Dynamics 365 Customer Insights utilizando a sua conta do Az
    :::image type="content" source="media/ADLS_required.png" alt-text="Caixa de diálogo a mostrar Obrigatório para Chave primária":::
 
    > [!TIP]
-   > Para editar as entidades numa interface de edição JSON, selecione **Mostrar mais** > **Editar ficheiro de esquema**. Efetue as alterações e selecione **Guardar**.
+   > Para editar uma entidade numa interface de edição JSON, selecione a entidade e, em seguida, **Editar ficheiro de esquema**. Efetue as alterações e selecione **Guardar**.
 
 1. Para as entidades selecionadas que necessitam de ingestão incremental, é apresentado **Obrigatório** sob **Atualização incremental**. Para cada uma destas entidades, consulte [Configurar uma atualização incremental para origens de dados do Azure Data Lake](incremental-refresh-data-sources.md).
 
@@ -101,6 +101,10 @@ Ingerir dados para o Dynamics 365 Customer Insights utilizando a sua conta do Az
    1. Selecionar **Concluído**.
 
 1. Selecione **Guardar**. A página **Origens de dados** é aberta a mostrar a origem de dados novas no estado **A atualizar**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+O carregamento de dados pode levar tempo. Após uma atualização bem-sucedida, os dados ingeridos podem ser revistos na página [**Entidades**](entities.md).
 
 ### <a name="create-a-new-schema-file"></a>Criar um novo ficheiro de esquema
 
@@ -148,6 +152,9 @@ Ingerir dados para o Dynamics 365 Customer Insights utilizando a sua conta do Az
 
 1. Selecione **Guardar**. A página **Origens de dados** é aberta a mostrar a origem de dados novas no estado **A atualizar**.
 
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+O carregamento de dados pode levar tempo. Após uma atualização bem-sucedida, os dados ingeridos podem ser revistos na página [**Entidades**](entities.md).
 
 ## <a name="edit-an-azure-data-lake-storage-data-source"></a>Editar uma origem de dados do Azure Data Lake Storage
 
@@ -179,8 +186,16 @@ Pode atualizar a opção *Ligar a conta de armazenamento utilizando*. Para obter
       > [!IMPORTANT]
       > Se houver dependências do ficheiro model.json ou manifest.json existente e do conjunto de entidades, verá uma mensagem de erro e não poderá selecionar um ficheiro model.json ou manifest.json diferente. Remova essas dependências antes de alterar o ficheiro model.json ou manifest.json ou criar uma nova origem de dados com o ficheiro model.json ou manifest.json que pretende utilizar para evitar a remoção das dependências.
    - Para alterar a localização do ficheiro de dados ou a chave primária, selecione **Editar**.
-   - Para alterar os dados de ingestão incremental, consulte [Configurar uma atualização incremental para origens de dados do Azure Data Lake](incremental-refresh-data-sources.md)
+   - Para alterar os dados de ingestão incremental, consulte [Configurar uma atualização incremental para origens de dados do Azure Data Lake](incremental-refresh-data-sources.md).
+   - Altere apenas o nome de entidade para corresponder ao nome de entidade no ficheiro .json.
+
+     > [!NOTE]
+     > Mantenha sempre o nome da entidade no Customer Insights igual ao nome de entidade no ficheiro model.json ou manifest.json após a ingestão. O Customer Insights valida todos os nomes de entidade com model.json ou manifest.json durante cada atualização do sistema. Se um nome de entidade for alterado dentro ou fora do Customer Insights, ocorre um erro porque o Customer Insights não consegue localizar o novo nome de entidade no ficheiro .json. Se um nome de entidade ingerido tiver sido alterado acidentalmente, edite o nome de entidade no Customer Insights para corresponder ao nome no ficheiro .json.
 
 1. Selecione **Atributos** para adicionar ou alterar atributos, ou para ativar a análise para otimização de dados. Em seguida, selecione **Concluir**.
 
 1. Clique em **Guardar** para aplicar as alterações e regressar à página **Origens de dados**.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

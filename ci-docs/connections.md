@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a8b4b8a9bdcf7cf43c47a67d547405dd20dad60d
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 4a0bc5dd4100b462a26660a0c51fda1fe92b6bb9
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081233"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195188"
 ---
 # <a name="connections-preview-overview"></a>Descrição geral das ligações (pré-visualização)
 
@@ -27,6 +27,12 @@ Aceda a **Admin** > **Ligações** para criar e ver ligações.
 O separador **Ligações** mostra todas as ligações ativas. A lista mostra uma linha para cada ligação.
 
 Obtenha uma descrição geral rápida, descrição e descubra o que pode fazer com cada opção de extensibilidade no separador **Descobrir**.
+
+## <a name="data-privacy-and-compliance"></a>Privacidade e conformidade de dados
+
+Quando ativa o Dynamics 365 Customer Insights para transmitir dados para terceiros ou outros produtos Microsoft, permite a transferência de dados fora do limite de conformidade do Dynamics 365 Customer Insights, incluindo dados potencialmente confidenciais, como Dados Pessoais. A Microsoft transferirá tais dados sob as suas instruções, mas o utilizador é responsável por assegurar que os terceiros cumprem quaisquer obrigações de privacidade ou segurança que possa ter. Para obter mais informações, consulte [Declaração de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+
+O seu administrador do Dynamics 365 Customer Insights pode remover a ligação em qualquer altura para descontinuar a utilização da funcionalidade.
 
 ## <a name="exports"></a>Exportações
 
@@ -41,8 +47,6 @@ Apenas os administradores podem configurar novas ligações, mas as ligações c
 Para adicionar ligações, precisa de ter [permissões de administrador](permissions.md). Se ligar a outros serviços da Microsoft, assumimos que ambos os serviços estão na mesma organização.
 
 1. Aceda a **Admin** > **Ligações (pré-visualização)**.
-
-1. Vá ao separador **Ligações**.
 
 1. Selecione **Adicionar ligação** para criar uma nova ligação. Escolha do menu pendente que tipo de ligação pretende criar.
 
@@ -99,3 +103,5 @@ Enriquecimentos e exportações separados tornam-se inativos. Reativa-os adicion
 ## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Configurar ligações com segredos geridos pelo seu próprio Key Vault
 
 Algumas ligações precisam de segredos como chaves de API ou palavras-passe. Algumas ligações suportam segredos armazenados no seu próprio Key Vault. Saiba mais sobre as ligações suportadas e como configurar no [seu próprio Key Vault para o Customer Insights](use-azure-key-vault.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

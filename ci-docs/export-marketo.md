@@ -1,51 +1,54 @@
 ---
 title: Exportar segmentos para a Marketo (pré-visualização)
 description: Aprenda a configurar a ligação e exportar para a Marketo.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8cd24cf436bd5fdfd4ec3834d35baa1495e37ca4
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f57cdfbb24df8a8ffa1670b426d50dbba2c5f40f
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053219"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195258"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Exportar segmentos para a Marketo (pré-visualização)
 
 Exportar segmentos de perfis unificados de clientes para gerar campanhas, fornecer marketing por e-mail e utilizar grupos específicos de clientes com Marketo.
 
-## <a name="prerequisites-for-connection"></a>Pré-requisitos para a ligação
+## <a name="prerequisites"></a>Pré-requisitos
 
--   Tem uma [conta Marketo](https://login.marketo.com/) e as correspondentes credenciais de administrador.
--   Existem listas na Marketo e os IDs correspondentes. Para mais informações, consulte [listas da Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
--   Tem [segmentos configurados](segments.md).
--   Os perfis unificados dos clientes nos segmentos exportados contêm um campo que representam um endereço de correio eletrónico.
+- Uma [conta Marketo](https://login.marketo.com/) e as correspondentes credenciais de administrador.
+- Um [ID de cliente da Marketo, Segredo de cliente e Nome do Anfitrião do Ponto Final REST](https://developers.marketo.com/rest-api/authentication/).
+- [Listas existentes no Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists) e os IDs correspondentes.
+- [Segmentos configurados](segments.md).
+- Os perfis unificados dos clientes nos segmentos exportados contêm um campo que representam um endereço de correio eletrónico.
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
-- Até 1 milhão de perfis de clientes por exportação para o Marketo.
-- A exportação para a Marketo é limitada a segmentos.
-- A exportação de segmentos com um total de 1 milhão de perfis de clientes pode levar até 3 horas. 
-- O número de perfis de clientes que pode exportar para o Marketo está dependente e limitado no seu contrato com o Marketo.
+- Até 1 milhão de perfis de cliente por exportação para o Marketo, o que pode demorar até 3 horas. O número de perfis de cliente que pode exportar para o Marketo depende do seu contrato com o Marketo.
+- Apenas segmentos.
 
 ## <a name="set-up-connection-to-marketo"></a>Configure a ligação para a Marketo
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Aceda a **Admin** > **Ligações**.
 
-1. Selecione **Adicionar ligação** e escolha **Marketo** para configurar a ligação.
+1. Selecione **Adicionar ligação** e escolha **Marketo**.
 
 1. Forneça um nome reconhecível à ligação no campo **Nome a apresentar**. O nome e o tipo de ligação descrevem esta ligação. Recomendamos a escolha de um nome que explique o propósito e o destino da ligação.
 
-1. Escolher quem pode utilizar esta ligação. Se não tomar nenhuma ação, a predefinição será Administradores. Para mais informações, consulte [Permitir que os contribuidores utilizem uma ligação para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Escolher quem pode utilizar esta ligação. Por predefinição, são apenas administradores. Para mais informações, consulte [Permitir que os contribuidores utilizem uma ligação para exportações](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Introduza a sua **[ID de cliente da Marketo, segredo do cliente e nome do ponto final REST](https://developers.marketo.com/rest-api/authentication/)**. O Nome do Anfitrião do Ponto Final REST é apenas o nome de anfitrião, sem `https://`. Exemplo: `xyz-abc-123.mktorest.com`. 
+1. Introduza o seu **ID de cliente do Marketo, Segredo do cliente e Nome do Anfitrião do Ponto Final REST**. O Nome do Anfitrião do Ponto Final REST é apenas o nome de anfitrião, sem https://. Exemplo: xyz-abc-123.mktorest.com.
 
-1. Selecione **Concordo** para confirmar a **Privacidade e conformidade dos dados** e selecione **Ligar** para iniciar a ligação a Marketo.
+1. Reveja a [privacidade e conformidade dos dados](connections.md#data-privacy-and-compliance) e selecione **Concordo**.
+
+1. Selecione **Ligar** para inicializar a ligação.
 
 1. Selecione **Adicione-se como utilizador de exportação** e fornecer as suas credenciais Customer Insights.
 
@@ -53,33 +56,28 @@ Exportar segmentos de perfis unificados de clientes para gerar campanhas, fornec
 
 ## <a name="configure-an-export"></a>Configurar uma exportação
 
-Pode configurar esta exportação se tiver acesso a uma ligação deste tipo. Para obter mais informações, consulte [Permissões necessárias para configurar uma exportação](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Aceda a **Dados** > **Exportações**.
 
-1. Para criar uma nova exportação, selecione **Adicionar destino**.
+1. Selecione **Adicionar exportação**.
 
-1. No campo **Ligação para a exportação**, escolha uma ligação a partir da secção Marketo. Se não vir este nome de secção, não existem ligações deste tipo disponíveis para si.
+1. No campo **Ligação para a exportação**, escolha uma ligação a partir da secção Marketo. Contacte um administrador se não houver nenhuma ligação disponível.
 
-1. Introduza o seu **[ID da lista Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. O ID da lista é um valor puramente numérico. Por exemplo, se o seu ID da lista de Marketo for ST12345A7, remova o caráter antes e depois dos algarismos e introduza `12345`. 
+1. Introduza um nome para a exportação.
 
-1. Na secção **Correspondência de dados**, selecione, pelo menos, um campo que represente o endereço de e-mail de um cliente ou o ID de Marketo de um cliente. 
+1. Introduza o seu **ID de lista do Marketo**. O ID da lista é um valor puramente numérico. Por exemplo, se o seu ID de lista do Marketo for ST12345A7, remova o caráter antes e depois dos numerais e introduza *12345*.
 
-1. Opcionalmente, pode exportar **Nome próprio**, **Apelido**, **Cidade**, **Estado** e **País/Região** para criar e-mails mais personalizados. Selecione **Adicionar atributo** para mapear estes campos.
+1. Na secção **Correspondência de dados**, selecione, pelo menos, um campo que represente o endereço de e-mail de um cliente ou o ID de Marketo de um cliente.
 
-1. Selecione os segmentos que quer exportar. Pode exportar até 1 milhão de perfis de clientes no total para a Marketo.
+1. Opcionalmente, exporte **Nome próprio**, **Apelido**, **Localidade**, **Estado** e **País/Região** para criar e-mails mais personalizados. Selecione **Adicionar atributo** para mapear estes campos.
+
+1. Selecione os segmentos que quer exportar.
 
 1. Selecione **Guardar**.
 
-Guardar uma exportação não executa a exportação imediatamente.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-A exportação é executada com cada [atualização agendada](system.md#schedule-tab). Também pode [exportar dados a pedido](export-destinations.md#run-exports-on-demand). Na Marketo, pode agora encontrar os seus segmentos nas [listas da Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
-
-
-## <a name="data-privacy-and-compliance"></a>Privacidade e conformidade de dados
-
-Quando ativa Dynamics 365 Customer Insights para transmitir dados à Marketo, permite a transferência de dados fora dos limites de conformidade para Dynamics 365 Customer Insights, incluindo dados potencialmente sensíveis, tais como Dados Pessoais. A Microsoft transferirá tais dados sob as suas instruções, mas o utilizador é responsável por assegurar que a Marketo cumpre quaisquer obrigações de privacidade ou segurança que possa ter. Para obter mais informações, consulte [Declaração de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-O seu administrador Dynamics 365 Customer Insights pode remover este destino de exportação em qualquer altura para descontinuar a utilização desta funcionalidade.
-
+Na Marketo, encontre os seus segmentos nas [listas do Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
