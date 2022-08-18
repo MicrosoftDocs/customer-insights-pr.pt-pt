@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 4bcfbb50b893ca7e6ec4607d3c156a3c6979f775
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170695"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246307"
 ---
 # <a name="segments-overview"></a>Descrição geral dos segmentos
 
@@ -58,7 +58,7 @@ Selecione um segmento para ver as ações disponíveis.
 - **Editar** o segmento para alterar as respetivas propriedades.
 - **Criar duplicado** de um segmento. Pode optar por editar de imediato as respetivas propriedades ou guardar o duplicado.
 - [**Atualizar**](#refresh-segments) o segmento para incluir os dados mais recentes.
-- **Ativar** ou **desativar** o segmento. Os segmentos inativos não serão atualizadas durante uma [atualização agendada](system.md#schedule-tab) e têm o **Estado** listado como **Ignorado** indicando que uma atualização nem sequer foi tentada. Os segmentos ativos são atualizados com base no respetivo tipo: estático ou dinâmico.
+- **Ativar** ou **desativar** o segmento. Os segmentos inativos não serão atualizadas durante uma [atualização agendada](schedule-refresh.md) e têm o **Estado** listado como **Ignorado** indicando que uma atualização nem sequer foi tentada. Os segmentos ativos são atualizados com base no respetivo tipo: estático ou dinâmico.
 - **Tornar estáticos** ou **Tornar dinâmicos** o tipo de segmento. Os segmentos estáticos têm de ser atualizados manualmente. Os segmentos dinâmicos são atualizados de forma dinâmica durante as atualizações do sistema.
 - [**Encontre clientes semelhantes**](find-similar-customer-segments.md) a partir do segmento.
 - **Mudar nome** do segmento.
@@ -88,7 +88,7 @@ A parte inferior contém uma lista dos membros do segmento.
 
 Os segmentos podem ser atualizados com um agendamento automático ou atualizadas manualmente a pedido. Para atualizar manualmente um ou mais segmentos, selecione-os e escolha **Atualizar**.
 
-Para [agendar uma atualização automática](system.md#schedule-tab), aceda a **Admin** > **Sistema** > **Agendar**. Aplicam-se as seguintes regras:
+Para [agendar uma atualização automática](schedule-refresh.md), aceda a **Admin** > **Sistema** > **Agendar**. Aplicam-se as seguintes regras:
 
 - Todos os segmentos com o tipo **Dinâmico** ou **Expansão** serão automaticamente atualizados na cadência definida. Assim que a atualização estiver concluída, o **Estado** indica se houve quaisquer problemas na atualização do segmento. A **Última atualização** mostra um carimbo de data/hora da última atualização bem sucedida. Se ocorrer um erro, selecione o erro para ver os detalhes sobre o que aconteceu.
 - Os segmentos com o tipo **Estático** *não* serão atualizados automaticamente. A **Última atualização** mostra um carimbo de data/hora da última vez que o segmento estático foi executado ou atualizado manualmente.

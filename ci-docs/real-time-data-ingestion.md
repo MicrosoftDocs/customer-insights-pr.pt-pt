@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195672"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246122"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Ingestão de dados em tempo real (pré-visualização)
 
 A funcionalidade em tempo quase real permite ver, em poucos segundos, as interações mais recentes dos seus clientes com os seus produtos ou serviços.
 
-[Atualizações programadas](system.md#schedule-tab) incluem um grande número de registos e várias operações complexas. Primeiro, os dados são extraídos da origem de dados. Em seguida, os dados são unificados e, em seguida, melhorados com informações adicionais. Cada execução deste processo pode demorar desde minutos a horas.
+[Atualizações programadas](schedule-refresh.md) incluem um grande número de registos e várias operações complexas. Primeiro, os dados são extraídos da origem de dados. Em seguida, os dados são unificados e, em seguida, melhorados com informações adicionais. Cada execução deste processo pode demorar desde minutos a horas.
 
 A funcionalidade em tempo real fornece dados imediatamente para consumo, até a subsequente atualização programada extrair estes dados da origem de dados.
 
@@ -85,7 +85,7 @@ Detalhes desta API, incluindo parâmetros e respostas, podem ser encontrados na 
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Compreenda a sua utilização em tempo real com telemetria
 
-Obtenha uma visão geral do volume de pedidos para o API em tempo real e informações sobre questões que o sistema possa encontrar. Pode [aceder à telemetria em tempo real](system.md#api-usage-tab). 
+Obtenha uma visão geral do volume de pedidos para o API em tempo real e informações sobre questões que o sistema possa encontrar. Pode [aceder à telemetria em tempo real](system.md#view-api-usage). 
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

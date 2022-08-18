@@ -1,7 +1,7 @@
 ---
-title: Configuração do sistema
+title: Ver configuração do sistema
 description: Saiba mais sobre as definições do sistema no Dynamics 365 Customer Insights.
-ms.date: 04/21/2022
+ms.date: 08/09/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
@@ -10,60 +10,98 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-system-status
-- ci-system-schedule
 - ci-system-about
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 0ef84d8e286d8135eb8938e72f1319925e948bed
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050685"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246261"
 ---
-# <a name="system-configuration"></a>Configuração do sistema
+# <a name="view-system-configuration"></a>Ver configuração do sistema
 
-Para aceder a configurações do sistema, aceda a **Admin** > **Sistema** para ver uma lista de tarefas e processos do sistema.
+Ver informações do sistema, estado do sistema e utilização da API.
 
-A página **Sistema** inclui os seguintes separadores:
-- [Estado](#status-tab)
-- [Agenda](#schedule-tab)
-- [Utilização da API](#api-usage-tab)
-- [Acerca de](#about-tab)
-- [Geral](#general-tab)
+## <a name="view-api-usage"></a>Ver utilização da API
 
-:::image type="content" source="media/system-tabs.png" alt-text="Separadores de definições na página do sistema.":::
+Veja os detalhes sobre a utilização da API em tempo real e veja quais os eventos que ocorreram num dado período de tempo.
 
-## <a name="status-tab"></a>Separador Estado
+1. Aceda a **Admin** > **Sistema** e selecione o separador **Utilização da API**.
 
-O **separador Estado** permite-lhe monitorizar o progresso de tarefas, a ingestão de dados, as exportações de dados e vários outros processos importantes do produto. Reveja as informações sobre este separador para garantir a conclusão das suas tarefas e processos ativos.
+1. **Selecione um intervalo de tempo** a ver.
 
-Este separador inclui tabelas com informações de estado e processamento para vários processos. Cada tabela monitoriza o **Nome** da tarefa e a sua entidade correspondente, o **Estado** da sua execução mais recente, e quando foi **Atualizada pela última vez**. Pode ver os detalhes das últimas execuções selecionando a tarefa ou o nome do processo. 
+   A página **Utilização da API** contém três secções:
 
-Selecione o estado junto da tarefa ou do processo na coluna **Estado** para abrir o painel **Detalhes do progresso**.
+   - **Chamadas à API** – um gráfico que visualiza o número agregado de chamadas à API no intervalo de tempo selecionado.
+   - **Transferência de dados** – um gráfico que mostra a quantidade de dados que foram transferidos através da API no intervalo de tempo selecionado.
+   - **Operações** – uma tabela com filas para cada operação disponível da API e detalhes sobre a utilização das operações. Selecione um nome de operação para ir para [a referência à API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
+
+   As operações que utilizam [a ingestão de dados em tempo real](real-time-data-ingestion.md) contêm um símbolo de binóculos para ver a utilização da API em tempo real.
+
+   1. Selecione os binóculos para abrir o painel **Utilização da API em tempo real** que contém os detalhes de utilização para a operação.
+   1. **Selecione um intervalo de tempo** a ver.
+   1. Utilize a caixa **Agrupar por** para escolher como melhor apresentar as suas interações em tempo real. Agrupe os dados por **Método** de API, **Nome qualificado da entidade** (entidade ingerida), **Criado por** (origem do evento), **Resultado** (êxito ou falha) ou **Códigos de erro**. Os dados estão disponíveis como gráfico histórico e como tabela.
+
+## <a name="view-system-information"></a>Ver informações do sistema
+
+Veja o nome a apresentar do ambiente, ID, região, tipo e ID de sessão.
+
+1. Aceda a **Administrador** > **Sistema** e selecione o separador **Acerca de**.
+
+1. Para ver o idioma e o país/região, selecione o separador **Geral**.
+
+### <a name="update-preferred-language-or-countryregion"></a>Atualizar idioma ou país/região preferencial
+
+O Customer Insights [suporta muitos idiomas](/dynamics365/get-started/availability). A aplicação usa a sua preferência de idioma para apresentar elementos como o menu, o texto da etiqueta e as mensagens do sistema no seu idioma preferencial.
+
+Os dados importados e as informações que introduziu manualmente não são traduzidos.
+
+1. Aceda a **Administrador** > **Sistema** e selecione o separador **Geral**.
+
+1. Para alterar o idioma preferencial, escolha um **Idioma** na lista pendente.
+
+1. Para alterar a formatação preferencial das datas, hora e números, utilize o menu pendente **País/Região**. É apresentada uma pré-visualização de formatação. O sistema sugere automaticamente uma seleção quando escolher um novo idioma.
+
+1. Selecione **Guardar**.
+
+## <a name="view-system-status"></a>Ver estado do sistema
+
+Monitorize o progresso de tarefas, a ingestão de dados, as exportações de dados e vários outros processos importantes do produto. Reveja as informações para garantir a conclusão das suas tarefas e processos ativos.
+
+1. Aceda a **Admin** > **Sistema** e selecione o separador **Estado**.
+
+   São apresentadas as informações sobre o estado e o processamento para vários processos. Veja o **Nome** da tarefa, o **Estado** da sua execução mais recente, e quando foi **Atualizada pela última vez**.
+
+1. Para ver os detalhes das últimas várias execuções, selecione a tarefa ou o nome do processo.
+
+1. Para ver os detalhes do progresso para uma tarefa, selecione o estado. É apresentado o painel **Detalhes do progresso**.
 
    :::image type="content" source="media/system-progress-details.png" alt-text="Painel de detalhes do progresso do sistema":::
+
+1. Para ver os detalhes de progresso para todas as tarefas, selecione **Fluxo de trabalho completo**.
 
 ### <a name="status-definitions"></a>Definições de estado
 
 O sistema utiliza os seguintes estados para tarefas e processos:
 
-|Estado  |Definição  |
+|Status  |Definição  |
 |---------|---------|
-|Cancelado |O processamento foi cancelado pelo utilizador antes de terminar.   |
-|Com Falha   |A ingestão de dados encontrou erros.         |
-|Falha  |O processamento falhou.  |
-|Não iniciada   |A origem dos dados ainda não tem dados ingeridos ou ainda está em modo de rascunho.         |
+|Cancelada |A tarefa ou o processo foi cancelado pelo utilizador antes de terminar.   |
+|Com Falha   |A tarefa ou o processo executado encontrou erros.         |
+|Falha  |A tarefa ou o processo falhou.  |
+|Não iniciada   |A origem de dados ainda não tem dados ingeridos ou a tarefa ainda está em modo de rascunho.         |
 |Em processamento  |A tarefa ou o processo estão em curso.  |
-|A atualizar    |A ingestão de dados está em curso. Poderá cancelar esta operação ao selecionar **Parar de atualizar** na coluna **Ações**. Parar a atualização de um origem de dados irá revertê-lo para o último estado de atualização.       |
+|A atualizar    |A tarefa ou o processo estão em curso. Para cancelar esta operação, selecione **A atualizar** e **Cancelar tarefa**. Parar a atualização de uma tarefa ou processo irá revertê-lo para o último estado de atualização.       |
 |Omitida  |A tarefa ou o processo foi ignorado. Um ou mais dos processos a jusante de que esta tarefa depende estão a falhar ou foram ignorados.|
 |Êxito  |Tarefa ou processo concluído com êxito. Para as origens de dados, indica que os dados foram ingeridos com êxito se for mencionado um tempo na coluna **Atualizado**.|
 |Em fila | O processamento está na fila e iniciará assim que todas as tarefas e processos de origem forem concluídos. Para mais informações, consulte [Atualizar processos](#refresh-processes).|
 
 ### <a name="refresh-processes"></a>Atualizar processos
 
-A atualização de tarefas e processos é executada de acordo com a [agenda configurada](#schedule-tab). 
+A atualização de tarefas e processos é executada de acordo com a [agenda configurada](schedule-refresh.md).
 
 |Processo  |Descrição  |
 |---------|---------|
@@ -86,58 +124,6 @@ A atualização de tarefas e processos é executada de acordo com a [agenda conf
 |Utilizador  |É executado manualmente (atualização única). Depende das entidades.  |
 
 Selecione o estado de um processo para ver os detalhes do progresso de toda a tarefa em que estava. Os processos de atualização acima podem ajudar a compreender o que pode fazer para abordar uma tarefa ou processo **Ignorado** ou **Em fila**.
-
-## <a name="schedule-tab"></a>Separador Agenda
-
-Use o separador **Agendar** para agendar atualizações automáticas de todos as suas [origens de dados ingeridas](data-sources.md). As atualizações automáticas ajudam a garantir que as atualizações das suas origens de dados são refletidas nos perfis de clientes unificados.
-
-> [!NOTE]
-> As origens de dados geridas por si atualizam as suas próprias agendas. Para agendar a atualização de origens de dados geridas por si, configure as definições de atualização nessa origem de dados específica na página de **origens de dados**.
-> :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Definições de atualização do fluxo de dados.":::
-
-1. Aceda a **Admin** > **Sistema** e selecione o separador **Agenda**.
-
-2. O estado predefinido da atualização agendada é **Desativado**. Para ativar as atualizações agendadas, altere o botão de alternar na parte superior do ecrã para **Ativado**.
-
-3. Escolha entre as atualizações **Semanal** (predefinição) e **Diária**. Se pretender agendar atualizações semanais, selecione um ou mais dias nos quais pretende executar a atualização.
-
-4. Defina o seu **Fuso horário** e, em seguida, use a lista suspensa **Hora** para definir o tempo de atualização. Quando terminar, selecione **Definir**. Se pretende agendar várias atualizações num único dia, selecione **Adicionar outra hora**.
-
-5. Selecione **Guardar** para aplicar as alterações.
-
-## <a name="about-tab"></a>Separador Acerca de
-
-O separador **Sobre** contém o **Nome a apresentar** da sua organização, o **ID do Ambiente** ativo, a **Região** e o seu **ID de Sessão**. Se tiver mais do que um ambiente de trabalho, deverá dar a cada um deles um nome a apresentar facilmente identificável.
-
-## <a name="general-tab"></a>Separador Geral
-
-Pode alterar o idioma e o formato de país/região no separador **Geral**.
-
-O Customer Insights [suporta muitos idiomas](/dynamics365/get-started/availability). A aplicação usa a sua preferência de idioma para apresentar elementos como o menu, o texto da etiqueta e as mensagens do sistema no seu idioma preferencial.
-
-Os dados importados e as informações que introduziu manualmente não são traduzidos.
-
-### <a name="update-the-settings"></a>Atualizar as definições
-
-Para alterar o idioma preferencial, escolha um **Idioma** na lista pendente.
-
-Para alterar a formatação preferencial das datas, hora e números, utilize o menu pendente **País/Região**. É apresentada uma pré-visualização da formatação neste campo. O sistema irá sugerir automaticamente uma seleção quando escolher um novo idioma.
-
-Selecione **Guardar** para confirmar as suas seleções.
-
-## <a name="api-usage-tab"></a>Separador de utilização da API
-
-Encontre detalhes sobre a utilização da API em tempo real e veja quais os eventos que ocorreram num dado período de tempo. Você escolhe o período de tempo no menu pendente **Selecionar um período de tempo**. 
-
-A **Utilização da API** contém três secções: 
-- **Chamadas à API** – um gráfico que visualiza o número agregado de chamadas à API no intervalo de tempo selecionado.
-
-- **Transferência de dados** – um gráfico que mostra a quantidade de dados que foram transferidos através da API no intervalo de tempo selecionado.
-
--  **Operações** – uma tabela com filas para cada operação disponível da API e detalhes sobre a utilização das operações. Pode selecionar um nome de operação para ir [à referência API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
-
-   As operações que utilizam [a ingestão de dados em tempo real](real-time-data-ingestion.md) contêm um botão com um símbolo de binóculos para ver a utilização da API em tempo real. Selecione o botão para abrir um painel lateral contendo detalhes de utilização para a utilização da API em tempo real no ambiente atual.   
-   Utilize a caixa **Agrupar por** no painel **Utilização da API em tempo real** para escolher como melhor apresentar as suas interações em tempo real. Pode agrupar os dados pelo método de API, nome qualificado de entidade (entidade ingerida), criado por (origem do evento), resultado (sucesso ou falha) ou códigos de erro. Os dados estão disponíveis como gráfico histórico e como tabela.
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

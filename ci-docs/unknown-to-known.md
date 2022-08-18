@@ -11,16 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: ff99721bef0004bc8cae1ec14ff9df16cbb0682e
-ms.sourcegitcommit: ece8ff732490ecd3b3421ab273f331e6fd46a7f7
+ms.openlocfilehash: 8e3477750d82f965dc2d62174fb35554d9447b7b
+ms.sourcegitcommit: 52eca81c36e93d553140f5a37cf6013aaa42623a
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "9173801"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "9224309"
 ---
 # <a name="personalize-your-experiences-with-data-about-known-and-unknown-users"></a>Personalizar as suas experiências com dados sobre utilizadores conhecidos e desconhecidos
 
-A gestão de dados de clientes não é um novo desafio, mas está cada vez mais difícil à medida que os utilizadores navegam nas várias ofertas de canais digitais. Um utilizador conhecido (autenticado) num canal torna-se desconhecido (não autenticado) noutro se não tiver sessão iniciada. Frequentemente, o problema é que os utilizadores não autenticados (desconhecidos) não têm um ID comum. Poderia ser utilizado para associar atributos de perfil importantes e gerar perfis de cliente unificados. O Customer Insights ajuda a resolver este problema ao ingerir dados a partir de métodos de monitorização nos sistemas de origem. Os perfis conhecidos e desconhecidos consolidados fornecem às organizações uma vista completa dos perfis atualizados e dos respetivos comportamentos, demografia e transações históricas. Vai um passo ainda mais longe ao fornecer resolução de identidades que lhe permite unificar a atividade dos clientes através de vários canais, incluindo o seu site, a compra na loja, programas de fidelização, entre outros.
+A gestão de dados de clientes não é um novo desafio, mas está cada vez mais difícil à medida que os utilizadores navegam nas várias ofertas de canais digitais. Um utilizador conhecido (autenticado) num canal torna-se desconhecido (não autenticado) noutro se não tiver sessão iniciada. Frequentemente, o problema é que os utilizadores não autenticados (desconhecidos) não têm um ID comum. Poderia ser utilizado para associar atributos de perfil importantes e gerar perfis de cliente unificados. O Customer Insights ajuda a resolver este problema ao ingerir dados a partir de métodos de monitorização nos sistemas de origem. A consolidação de perfis desconhecidos e conhecidos proporciona às organizações uma vista completa dos perfis atualizados e das respetivas transações históricas, comportamentos e demografia das organizações. Vai um passo ainda mais longe ao fornecer resolução de identidades que lhe permite unificar a atividade dos clientes através de vários canais, incluindo o seu site, a compra na loja, programas de fidelização, entre outros.
 
 ## <a name="sample-scenario"></a>Cenário de exemplo
 

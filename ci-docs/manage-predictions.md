@@ -8,12 +8,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: a180f6462452d9830d0daa150a35a9d0acad925a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 42abfb305efaccaeef48e32f2cc69f3d36fbe73d
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081571"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245479"
 ---
 # <a name="manage-predictions"></a>Gerir predições
 
@@ -58,7 +58,7 @@ As seguintes colunas no relatório contêm informações úteis para melhorar os
 
 ## <a name="refresh-a-prediction"></a>Atualizar uma previsão
 
-As previsões serão automaticamente atualizadas no mesmo [horário que as suas atualizações de dados](system.md#schedule-tab) como configurados nas definições. Também é possível atualizá-las manualmente.
+As previsões serão automaticamente atualizadas no mesmo [horário que as suas atualizações de dados](schedule-refresh.md) como configurados nas definições. Também é possível atualizá-las manualmente.
 
 1. Aceda a **Inteligência** > **Predições** e selecione o separador **As minhas predições**.
 

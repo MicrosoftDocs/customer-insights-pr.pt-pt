@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053894"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245893"
 ---
 # <a name="data-enrichment-preview-overview"></a>Visão geral do melhoramento de dados (pré-visualização)
 
@@ -76,7 +76,7 @@ Selecione o melhoramento para ver as ações disponíveis.
 - **Ver** os detalhes do enriquecimento com o número de perfis de cliente enriquecidos.
 - **Editar** a configuração de enriquecimento.
 - [**Executar**](#run-or-refresh-enrichments) o melhoramento para atualizar perfis de clientes com os dados mais recentes. Executar vários melhoramentos de uma só vez selecionando-os na lista.
-- **Ativar** ou **Desativar** um melhoramento. Os melhoramentos inativos não serão atualizados durante uma [atualização agendada](system.md#schedule-tab).
+- **Ativar** ou **Desativar** um melhoramento. Os melhoramentos inativos não serão atualizados durante uma [atualização agendada](schedule-refresh.md).
 - **Eliminar** o enriquecimento.
 
 Também pode criar [segmentos](segments.md) ou [medidas](measures.md) a partir de melhoramentos.
@@ -85,7 +85,7 @@ Também pode criar [segmentos](segments.md) ou [medidas](measures.md) a partir d
 
 Após executar, os melhoramentos podem ser atualizados numa agenda automática ou manualmente a pedido.
 
-1. Para atualizar manualmente um ou mais melhoramentos, selecione-os e escolha **Executar**. Para [agendar uma atualização automática](system.md#schedule-tab), aceda a **Admin** > **Sistema** > **Agendar**. O tempo de processamento depende do tamanho dos dados do seu cliente.
+1. Para atualizar manualmente um ou mais melhoramentos, selecione-os e escolha **Executar**. Para [agendar uma atualização automática](schedule-refresh.md), aceda a **Admin** > **Sistema** > **Agendar**. O tempo de processamento depende do tamanho dos dados do seu cliente.
 
 1. Opcionalmente, [consulte o progresso do processo de melhoramento](#see-the-progress-of-the-enrichment-process).
 
@@ -102,6 +102,8 @@ Pode encontrar detalhes sobre o processamento de um melhoramento, incluindo o se
 1. No painel **Detalhes do progresso**, expanda a secção **Melhoramentos**.
 1. Sob o melhoramento do qual pretende ver o progresso, selecione **Ver detalhes**.
 1. No painel **Detalhes da tarefa**, selecione **Mostrar detalhes** para ver os processos envolvidos na atualização do melhoramento e respetivo estado.
+
+[!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
 ## <a name="view-enrichment-results"></a>Ver resultados de melhoramento
 

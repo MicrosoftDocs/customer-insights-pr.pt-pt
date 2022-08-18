@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 33c8910b7a4dd8723c0d62f2e28228cd2d8df4b7
-ms.sourcegitcommit: 5716025eb4828425ca237377b02a892de8689f4a
+ms.openlocfilehash: 875cbbd095dfd239ab83c1c80db28ea7c0a04ed0
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "9142833"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245571"
 ---
 # <a name="how-to-create-a-new-environment"></a>Como: criar um novo ambiente
 
@@ -48,7 +48,7 @@ No passo **Informações básicas**, escolha se pretende criar um ambiente do ze
 
 Forneça os seguintes detalhes:
 
-- **Nome**: O nome para este ambiente. Este campo já está preenchido se copiou de um ambiente existente, mas pode alterá-lo.
+- **Nome**: O nome para este ambiente. Este campo já está preenchido se copiou de um ambiente existente, mas pode alterá-lo. Se tiver mais do que um ambiente de trabalho, dê a cada um um nome facilmente identificável.
 - **Escolha o seu negócio**: escolha a audiência principal para o novo ambiente. Pode trabalhar com consumidores individuais (B2C) ou [contas empresariais](work-with-business-accounts.md) (B2B). Se a sua organização fizer sobretudo negócios com indivíduos, como um revendedor ou uma loja de café, escolha consumidores individuais. No caso de a sua audiência principal ser outras empresas, tais como um fabricantes de automóveis ou uma empresa de papel, escolha contas empresariais.
 - **Tipo**: selecione se pretende criar um ambiente de produção ou de sandbox. Os ambientes de sandbox não permitem a atualização de dados agendados e destinam-se a pré-implementação e testes. Os ambientes de Sandbox utilizam a mesma audiência principal que o ambiente de produção que está atualmente selecionado.
 - **Região**: a região na qual o serviço é implementado e hospedado. Para [utilizar a sua própria conta do Azure Data Lake Storage](own-data-lake-storage.md) ou [ligar a uma organização existente do Microsoft Dataverse](customer-insights-dataverse.md), o ambiente do Customer Insights tem de estar na mesma região.

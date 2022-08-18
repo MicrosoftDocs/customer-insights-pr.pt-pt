@@ -1,19 +1,19 @@
 ---
 title: Melhore perfis do cliente com demografia a partir da Experian (pré-visualização)
 description: Informações gerais sobre o melhoramento de terceiros da Experian.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 876853ab42e8c08ad1abacb8d8a205c0aadabcf7
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fccb37cde3f05a70009c18b6c52db01a5ede094d
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195950"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9238010"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Melhore perfis do cliente com demografia a partir da Experian (pré-visualização)
 
@@ -41,13 +41,9 @@ Tem de ser um [administrador](permissions.md#admin) no Customer Insights e ter u
 
 1. Introduza um nome para a ligação e um ID de Utilizador, ID de Parte e Número de Modelo válidos para a sua conta de Transporte Seguro da Experian.
 
-1. Reveja e forneça o seu consentimento para a [Privacidade e conformidade dos dados](#data-privacy-and-compliance) selecionando **Concordo**.
+1. Reveja a [privacidade e conformidade dos dados](connections.md#data-privacy-and-compliance) e selecione **Concordo**.
 
 1. Selecione **Verificar** para validar a configuração e, em seguida, selecione **Guardar**.
-
-### <a name="data-privacy-and-compliance"></a>Privacidade e conformidade de dados
-
-Quando ativa o Dynamics 365 Customer Insights para transmitir dados para a Experian, permite a transferência de dados para fora do limite de conformidade para o Dynamics 365 Customer Insights, incluindo dados potencialmente sensíveis, como Dados Pessoais. A Microsoft transferirá esses dados conforme as suas instruções, mas você é responsável por garantir que a Experian cumpre quaisquer obrigações de privacidade ou de segurança que possa ter. Para obter mais informações, consulte [Declaração de Privacidade da Microsoft](https://go.microsoft.com/fwlink/?linkid=396732). O seu administrador do Dynamics 365 Customer Insights pode remover este melhoramento em qualquer altura para descontinuar a utilização desta funcionalidade.
 
 ## <a name="configure-the-enrichment"></a>Configurar o enriquecimento
 

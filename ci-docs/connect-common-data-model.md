@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207013"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245847"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Ligar a dados no Azure Data Lake Storage
 
@@ -56,8 +56,8 @@ Ingerir dados para o Dynamics 365 Customer Insights utilizando a sua conta do Az
 
 1. Escolha uma das seguintes opções para **Ligar o armazenamento utilizando**. Para obter mais informações, consulte [Ligar o Customer Insights a uma conta do Azure Data Lake Storage Gen2 com um principal de serviço do Azure](connect-service-principal.md).
 
-   - **Recurso do Azure**: introduza o **ID do Recurso**. Opcionalmente, se pretender ingerir dados de uma conta de armazenamento através de uma Azure Private Link, selecione **Ativar Private Link**. Para obter mais informações, consulte [Private Links](security-overview.md#private-links-tab).
-   - **Subscrição do Azure**: selecione a **Subscrição** e, em seguida, o **Grupo de recursos** e a **Conta de armazenamento**. Opcionalmente, se pretender ingerir dados de uma conta de armazenamento através de uma Azure Private Link, selecione **Ativar Private Link**. Para obter mais informações, consulte [Private Links](security-overview.md#private-links-tab).
+   - **Recurso do Azure**: introduza o **ID do Recurso**. Opcionalmente, se pretender ingerir dados de uma conta de armazenamento através de uma Azure Private Link, selecione **Ativar Private Link**. Para obter mais informações, consulte [Private Links](security-overview.md#set-up-an-azure-private-link).
+   - **Subscrição do Azure**: selecione a **Subscrição** e, em seguida, o **Grupo de recursos** e a **Conta de armazenamento**. Opcionalmente, se pretender ingerir dados de uma conta de armazenamento através de uma Azure Private Link, selecione **Ativar Private Link**. Para obter mais informações, consulte [Private Links](security-overview.md#set-up-an-azure-private-link).
   
    > [!NOTE]
    > Necessita de uma das seguintes funções para o contentor ou a conta de armazenamento para criar a origem de dados:
@@ -176,7 +176,7 @@ Pode atualizar a opção *Ligar a conta de armazenamento utilizando*. Para obter
         > - Proprietário de Dados de Blobs de Armazenamento
         > - Contribuidor de Dados de Blobs de Armazenamento
 
-   - **Ativar Private Link** se pretender ingerir dados de uma conta de armazenamento através de uma Azure Private Link. Para obter mais informações, consulte [Private Links](security-overview.md#private-links-tab).
+   - **Ativar Private Link** se pretender ingerir dados de uma conta de armazenamento através de uma Azure Private Link. Para obter mais informações, consulte [Private Links](security-overview.md#set-up-an-azure-private-link).
 
 1. Selecione **Seguinte**.
 1. Altere qualquer um dos seguintes:

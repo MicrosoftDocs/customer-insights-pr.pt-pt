@@ -2,7 +2,7 @@
 title: Remover duplicados antes de unificar dados
 description: O segundo passo no processo de unificação é selecionar que registos manter quando são encontrados duplicados.
 recommendations: false
-ms.date: 04/22/2022
+ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,16 +13,25 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139443"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213641"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Remover duplicados antes de unificar dados
 
-Este passo na unificação permite-lhe configurar opcionalmente regras para o tratamento de dados duplicados dentro de uma entidade. *A eliminação de duplicados* identifica os registos duplicados e une-os num único registo. Os registos de origem ligam-se ao registo intercalado com ID alternativos. Se não forem configuradas regras, aplicam-se as regras definidas pelo sistema.
+Este passo opcional na unificação permite configurar as regras para eliminar registos duplicados **dentro** de uma entidade. A eliminação de duplicados identifica vários registos para um cliente e seleciona o melhor registo a manter (com base nas preferências de intercalação básicas) ou intercala os registos num só (baseado nas preferências de intercalação avançadas). Os registos de origem ligam-se ao registo intercalado com ID alternativos. Se não forem configuradas regras, aplicam-se as regras definidas pelo sistema.
+
+## <a name="default-deduplication"></a>Eliminação de duplicados predefinida
+
+As regras definições pelo sistema são aplicáveis se não forem adicionadas quaisquer regras de eliminação de duplicados.
+
+- São eliminados os duplicados da chave primária.
+  Para quaisquer registos com a mesma chave primária, o registo **Mais preenchido** (o que tem o menor número de valores nulos) é o vencedor.
+- Quaisquer regras de correspondência entre entidades são aplicadas à entidade.
+  Por exemplo: no passo de correspondência, se a entidade A for correspondida com a entidade B em *FullName* e *DateofBirth*, também são eliminados os duplicados da entidade A por *FullName* e *DateofBirth*. Como *FullName* e *DateofBirth* são chaves válidas para identificar um cliente na entidade A, estas chaves também são válidas para identificar clientes duplicados na entidade A.
 
 ## <a name="include-enriched-entities-preview"></a>Incluir entidades melhoradas (pré-visualização)
 
