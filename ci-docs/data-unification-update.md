@@ -1,11 +1,11 @@
 ---
-title: Atualizar as definições de unificação
-description: Atualizar regras de duplicação, regras de correspondência ou campos unificados nas definições de unificação.
-ms.date: 06/01/2022
+title: Atualizar definições de cliente, conta ou unificação de contactos
+description: Atualize regras de duplicação, regras de correspondência ou campos unificados nas definições de unificação de clientes ou contas.
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: v-wendysmith
-ms.author: mukeshpo
+author: Scott-Stabbert
+ms.author: sstabbert
 ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
@@ -13,20 +13,26 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: a7cf06c07e4b95b848a55dfe5fe0b09397fe744e
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245608"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304349"
 ---
-# <a name="update-the-unification-settings"></a>Atualizar as definições de unificação
+# <a name="update-unification-settings"></a>Atualizar definições de unificação
 
 Para rever ou alterar quaisquer definições de unificação após a criação de um perfil unificado, execute os seguintes passos.
 
 1. Vá para **Dados** > **Unificar**.
 
-   :::image type="content" source="media/m3_unified.png" alt-text="Captura de ecrã da página Unificação de dados após a unificação dos dados.":::
+   Para clientes individuais (B2C), a página **Unificar** apresenta o número de perfis de clientes e mosaicos unificados para cada um dos passos de unificação.
+
+   :::image type="content" source="media/m3_unified.png" alt-text="Captura de ecrã da página Unificação de dados após a unificação dos dados." lightbox="media/m3_unified.png":::
+
+   Para contas empresariais (B2C), a página **Unificar** apresenta o número de perfis de contas e mosaicos unificados para cada um dos passos de unificação de contas. Se os contactos foram unificados, são apresentados o número de perfis de contactos e mosaicos unificados para cada um dos passos de unificação de contactos. Escolha o mosaico apropriado por baixo de **Unificar contas** ou **Unificar contactos (pré-visualização)** dependendo da atualização que pretende fazer.
+
+   :::image type="content" source="media/b2b_unified.png" alt-text="Captura de ecrã da página Unificação de dados após a unificação de dados de conta e contactos." lightbox="media/b2b_unified.png":::
 
    > [!TIP]
    > O mosaico **Condições de correspondência** só é apresentado se várias entidades tiverem sido selecionadas.
@@ -36,14 +42,14 @@ Para rever ou alterar quaisquer definições de unificação após a criação d
    - [Registos duplicados](#manage-deduplication-rules) para gerir regras de eliminação de duplicados ou unir preferências.
    - [Condições de correspondência](#manage-match-rules) para atualizar regras de correspondência em duas ou mais entidades.
    - [Campos de clientes unificados](#manage-unified-fields) para combinar ou excluir campos. Também pode agrupar perfis relacionados em clusters.
+   - [Campos semânticos](#manage-semantic-fields-for-unified-contacts) para gerir tipos semânticos para campos de contacto unificados.
+   - [Relações](#manage-contact-and-account-relationships) para gerir o contacto para relação de conta.
 
 1. Depois de efetuar as alterações, escolha a sua próxima opção:
 
-   :::image type="content" source="media/m3_run_match_merge.png" alt-text="Captura de ecrã da página Unificar Dados com as opções de União realçadas.":::
-
    - [Executar condições de correspondência](#run-matching-conditions) para avaliar rapidamente a qualidade das condições de correspondência (regras de correspondência e de eliminação de duplicados) sem atualizar o perfil unificado. A opção **Executar condições de correspondência apenas** não é apresentada para uma única entidade.
-   - [Unificar perfis de clientes](#run-updates-to-the-unified-customer-profile) para executar condições de correspondência e atualizar a entidade Unified customer profile sem afetar dependências (tais como melhoramentos, segmentos ou medidas). Os processos dependentes não são executados, mas serão atualizados conforme [definido na agenda de atualização](schedule-refresh.md).
-   - [Unificar perfis de clientes e dependências](#run-updates-to-the-unified-customer-profile) para executar condições de correspondência e atualizar a entidade Unified customer profile e todas as dependências (tais como melhoramentos, segmentos ou medidas). Todos os processos voltam a ser executados automaticamente.
+   - [Unificar perfis](#run-updates-to-the-unified-profile) para executar condições de correspondência e atualizar a entidade de perfil unificada sem afetar dependências (tais como melhoramentos, segmentos ou medidas). Os processos dependentes não são executados, mas serão atualizados conforme [definido na agenda de atualização](schedule-refresh.md).
+   - [Unificar perfis e dependências](#run-updates-to-the-unified-profile) para executar condições de correspondência, atualizar a entidade de perfil unificado e atualizar todas as dependências (tais como melhoramentos, segmentos ou medidas). Todos os processos voltam a ser executados automaticamente. No B2B, a unificação é executada nas entidades de conta e de contacto, atualizando os perfis unificados.
 
 ## <a name="edit-source-fields"></a>Editar campos de origem
 
@@ -55,11 +61,11 @@ Não é possível remover um atributo ou uma entidade se os atributos já foram 
 
    O número de campos mapeados e não mapeados apresentados.
 
-1. Selecione **Selecionar entidades e campos** para adicionar outros atributos ou entidades. Utilize a pesquisa ou percorra para encontrar e selecionar os seus atributos e entidades de interesse. Selecione **Aplicar**.
+1. Para adicionar outros atributos ou entidades, selecione **Selecionar entidades e campos**.
 
-1. Opcionalmente, pode alterar a chave primária de uma entidade, os tipos de atributo e ativar ou desativar o **mapeamento Inteligente**. Para mais informações, consulte [Selecionar chave primária e tipo de semântica para atributos](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. Opcionalmente, pode alterar a chave primária de uma entidade, os tipos de atributo e ativar ou desativar o **mapeamento Inteligente**. Para mais informações, consulte [Selecionar campos de origem](map-entities.md).
 
-1. Selecione **Seguinte** para efetuar alterações às regras de eliminação de duplicados ou selecione **Guardar e fechar** para voltar a [Atualizar as definições de unificação](#update-the-unification-settings).
+1. Selecione **Seguinte** para efetuar alterações às regras de deduplicação ou selecione **Guardar e fechar** para voltar a [Atualizar as definições de unificação](#update-unification-settings).
 
 ## <a name="manage-deduplication-rules"></a>Gerir regras de eliminação de duplicados
 
@@ -69,7 +75,7 @@ Não é possível remover um atributo ou uma entidade se os atributos já foram 
 
    O número de registos duplicados encontrados é apresentado em **Duplicados**. A coluna **Eliminação de registos duplicados** mostra as entidades que tinham dados duplicados e a percentagem de dados duplicados.
 
-1. Se adicionou uma entidade enriquecida, selecione **Utilizar entidades enriquecidas**. Para obter mais informações, consulte [Melhoramento para origens de dados](data-sources-enrichment.md).
+1. Para utilizar uma entidade enriquecida, selecione **Utilizar entidades enriquecidas**. Para obter mais informações, consulte [Melhoramento para origens de dados](data-sources-enrichment.md).
 
 1. Para gerir regras de eliminação de duplicados, escolha qualquer uma das seguintes opções:
    - **Criar uma nova regra**: Selecione **Adicionar regra** na entidade apropriada. Para obter mais informações, consulte [Definir regras de eliminação de duplicados](remove-duplicates.md#define-deduplication-rules).
@@ -83,11 +89,9 @@ Não é possível remover um atributo ou uma entidade se os atributos já foram 
    1. Selecione **Editar preferências de união** e altere o **Registo para manter** opção.
    1. Para alterar as preferências de união em atributos individuais de uma entidade, selecione **Avançadas** e efetue as alterações necessárias.
 
-      :::image type="content" source="media/m3_adv_merge.png" alt-text="Captura de ecrã de preferências de união avançadas que mostram o e-mail mais recente e o endereço mais completo":::
-
    1. Selecionar **Concluído**.
 
-1. Selecione **Seguinte** para efetuar alterações às condições de correspondência ou selecione **Guardar e fechar** para voltar a [Atualizar as definições de unificação](#update-the-unification-settings).
+1. Selecione **Seguinte** para efetuar alterações às condições de correspondência ou selecione **Guardar e fechar** para voltar a [Atualizar definições de unificação](#update-unification-settings).
 
 ## <a name="manage-match-rules"></a>Gerir regras de correspondência
 
@@ -98,7 +102,7 @@ Pode reconfigurar e aperfeiçoar a maioria dos parâmetros de correspondência. 
    :::image type="content" source="media/m3_match_edit.png" alt-text="Captura de ecrã da página Regras e condições de correspondência com estatísticas." lightbox="media/m3_match_edit.png":::
 
    A página apresenta a ordem de correspondência e as regras definidas, bem como as seguintes estatísticas:
-   - **Registos de origem exclusivos** mostra o número de registos de origem individuais que foram processados na última execução de correspondência.
+   - **Registos de origem exclusivos** mostra o número de registos de origens individuais que foram processados na última execução de correspondência.
    - **Registos correspondidos e não correspondidos** destaca quantos registos únicos permanecem após o processamento das regras de correspondência.
    - **Apenas registos correspondidos** mostra o número de correspondências em todos os seus pares de correspondências.
 
@@ -120,7 +124,7 @@ Pode reconfigurar e aperfeiçoar a maioria dos parâmetros de correspondência. 
    - **Duplicar uma regra**: Selecione a regra e, depois, **Duplicar** para criar uma regra semelhante com modificações.
    - **Eliminar uma regra**: Selecione a regra e, depois, **Eliminar**.
 
-1. Selecione **Seguinte** para efetuar alterações a campos unificados ou selecione **Guardar e fechar** para voltar a [Atualizar as definições de unificação](#update-the-unification-settings).
+1. Selecione **Seguinte** para efetuar alterações a campos unificados ou selecione **Guardar e fechar** para voltar a [Atualizar definições de unificação](#update-unification-settings).
 
 ## <a name="manage-unified-fields"></a>Gerir campos unificados
 
@@ -130,7 +134,28 @@ Pode reconfigurar e aperfeiçoar a maioria dos parâmetros de correspondência. 
 
 1. Reveja os campos combinados e excluídos e efetue quaisquer alterações necessárias. Adicione ou edite a chave CustomerID ou agrupe perfis em clusters. Para mais informações, consulte [Perfis de cliente unificados](merge-entities.md).
 
-1. Selecione **Seguinte** para rever as definições de unificação e [atualizar o perfil unificado e as dependências](#run-updates-to-the-unified-customer-profile), ou selecione **Guardar e fechar** para voltar a [Atualizar as definições de unificação](#update-the-unification-settings) para efetuar mais alterações.
+1. Para clientes ou contas, selecione **Seguinte** para rever e [atualizar o perfil unificado e dependências](#run-updates-to-the-unified-profile). Ou selecione **Guardar e fechar** para voltar a [Atualizar definições de unificação](#update-unification-settings) para efetuar mais alterações.
+
+   Para contactos, selecione **Seguinte** para gerir campos semânticos. Ou selecione **Guardar e fechar** para voltar a [Atualizar definições de unificação](#update-unification-settings) para efetuar mais alterações.
+
+## <a name="manage-semantic-fields-for-unified-contacts"></a>Gerir campos semânticos para contactos unificados
+
+1. Selecione **Editar** no mosaico **Campos semânticos**.
+
+1. Para alterar o tipo semântico para um campo unificado, selecione um novo tipo. Para mais informações, consulte [Definir os campos semânticos para contactos unificados](data-unification-contacts.md#define-the-semantic-fields-for-unified-contacts).
+
+1. Selecione **Seguinte** para gerir a relação de conta e contacto ou selecione **Guardar e fechar** para voltar a [Atualizar definições de unificação](#update-unification-settings).
+
+## <a name="manage-contact-and-account-relationships"></a>Gerir relações de contacto e conta
+
+1. Selecione **Editar** no mosaico **Relações**.
+
+1. Para alterar a relação de contacto e conta, altere qualquer uma das seguintes informações:
+
+   - **Chave externa a partir da entidade de contacto**: escolha o atributo que liga a sua entidade de contacto à conta.
+   - **Para a entidade de conta**: escolha a entidade de conta associada ao contacto.
+
+1. Selecione **Seguinte** para rever as definições de unificação e [atualizar o perfil unificado e dependências](#run-updates-to-the-unified-profile), ou selecione **Guardar e fechar** para voltar a [Atualizar definições de unificação](#update-unification-settings) para efetuar mais alterações.
 
 ## <a name="run-matching-conditions"></a>Executar condições de correspondência
 
@@ -148,18 +173,15 @@ A execução de condições de correspondência executa apenas regras de corresp
 
 1. Para efetuar alterações, consulte [Gerir regras de eliminação de duplicados](#manage-deduplication-rules) ou [Gerir regras de correspondência](#manage-match-rules).
 
-1. Execute novamente o processo de correspondência ou [execute atualizações ao perfil de cliente](#run-updates-to-the-unified-customer-profile).
+1. Execute novamente o processo de correspondência ou [execute atualizações ao perfil](#run-updates-to-the-unified-profile).
 
-## <a name="run-updates-to-the-unified-customer-profile"></a>Executar atualizações para o unified customer profile
+## <a name="run-updates-to-the-unified-profile"></a>Executar atualizações ao perfil unificado
 
-1. Na página **Dados** > **Unificar**, selecione:
+- Para executar condições de correspondência e atualizar a entidade de perfil unificada *sem* afetar dependências (tais como cartões de cliente, melhoramentos, segmentos ou medidas), selecione **Unificar perfis de cliente**. Para contas, seleccione **Unificar contas** > **Unificar perfis**. Para contactos, seleccione **Unificar contactos (pré-visualização)** > **Unificar perfis**. Os processos dependentes não são executados, mas serão atualizados conforme [definido na agenda de atualização](schedule-refresh.md).
+- Para executar condições de correspondência, atualizar o perfil unificado e executar todas as dependências, selecione **Unificar perfis de cliente e dependências**. Todos os processos voltam a ser executados automaticamente. Para contas e contactos, selecione **Unificar contas** > **Unificar perfis e dependências**. São executadas condições de correspondência para contas e contactos, atualizando tanto perfis unificados e todas as outras dependências executadas.
 
-   - **Unificar perfis de clientes**: executa condições de correspondência e atualiza a entidade Unified customer profile sem afetar dependências (tais como melhoramentos, segmentos ou medidas). Os processos dependentes não são executados, mas serão atualizados conforme [definido na agenda de atualização](schedule-refresh.md).
+Todos os mosaicos, exceto **Campos de origem**, apresentam **Em fila de espera** ou **A atualizar**.
 
-   - **Unificar perfis de cliente e dependências**: executa condições de correspondência e atualiza o perfil unificado e todas as dependências. Todos os processos voltam a ser executados automaticamente. Depois de concluídos todos os processos a jusante, o perfil de cliente reflete os dados atualizados.
+[!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
-   Os mosaicos **Duplicar registos**, **Condições de correspondência** e **Campos de cliente unificados** mostram o estado **Na fila** ou **Em atualização**.
-
-   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
-
-Os resultados de uma apresentação de execução com êxito na página **Unificar** mostra o número de unified customer profiles.
+Os resultados de uma apresentação de execução com êxito na página **Unificar** mostram o número de perfis unificados.

@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: fb747f7adc7d87f30f66c5d0ed20bbe238558fde
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245893"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304533"
 ---
 # <a name="data-enrichment-preview-overview"></a>Visão geral do melhoramento de dados (pré-visualização)
 
@@ -95,7 +95,7 @@ Após executar, os melhoramentos podem ser atualizados numa agenda automática o
 
 ### <a name="see-the-progress-of-the-enrichment-process"></a>Veja o progresso do processo de melhoramento
 
-Pode encontrar detalhes sobre o processamento de um melhoramento, incluindo o seu estado e potenciais problemas enquanto está a atualizar ou após uma atualização concluída. Entenda quais os processos envolvidos na atualização de um melhoramento e quanto tempo demorou a executar os processos. O estado do melhoramento é suportado para Experian, Leadspace, HERE Technologies, SFTP Import e Azure Maps.
+Pode encontrar detalhes sobre o processamento de um melhoramento, incluindo o seu estado e potenciais problemas enquanto está a atualizar ou após a conclusão de uma atualização. Entenda quais os processos envolvidos na atualização de um melhoramento e quanto tempo demorou a executar os processos. O estado do melhoramento é suportado para Experian, Leadspace, HERE Technologies, SFTP Import e Azure Maps.
 
 1. Aceda a **Dados** > **Enriquecimento**.
 1. No separador **Os meus melhoramentos**, selecione o estado do melhoramento para abrir um painel lateral.

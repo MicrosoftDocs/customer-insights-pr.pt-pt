@@ -1,9 +1,9 @@
 ---
 title: Mapeamentos de semânticas (pré-visualização)
 description: Descrição geral dos mapeamentos semânticos e como utilizá-los.
-ms.date: 12/01/2021
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -11,18 +11,19 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: 7c9588ac7a132ca6f43cf26ea3a744109a0dd2b8
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: 8780c11c8b091717349f0fd75a36b99c3a63ab49
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183645"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303890"
 ---
 # <a name="semantic-mappings-preview"></a>Mapeamentos de semânticas (pré-visualização)
 
-Os mapeamentos semânticos permitem mapear os seus dados de não atividade para esquemas predefinidos. Estes esquemas ajudam o Customer Insights a compreender melhor os seus atributos de dados. O mapeamento semântico e os dados fornecidos permitem novas informações e funcionalidades no Customer Insights. Para mapear os seus dados de atividade para os esquemas, reveja a documentação das [atividades](activities.md).
+> [!NOTE]
+> A página **Mapeamentos semânticos** só está disponível para ambientes de negócio (B2B) nos quais os perfis de contacto já tenham sido criados utilizando esta página. Pode continuar a criar e gerir os perfis de contactos individuais utilizando a página **Mapeamentos semânticos**. Ou [unificar os dados dos seus contactos](data-unification-contacts.md) para remover duplicados, identificar correspondências entre entidades e criar um perfil de contacto unificado. Pode então utilizar o perfil de contacto unificado para criar atividades ao nível do contacto.
 
-**Os mapeamentos semânticos estão atualmente ativados para os ambientes baseados em contas empresariais**. *ContactProfile* é o único tipo de mapeamento semântico atualmente disponível no Customer Insights.
+Os mapeamentos semânticos permitem mapear os seus dados de não atividade para esquemas predefinidos. Estes esquemas ajudam o Customer Insights a compreender melhor os seus atributos de dados. O mapeamento semântico e os dados fornecidos permitem novas informações e funcionalidades no Customer Insights. Para mapear os seus dados de atividade para os esquemas, reveja a documentação das [atividades](activities.md).
 
 ## <a name="define-a-contactprofile-semantic-entity-mapping"></a>Definir um mapeamento de entidade semântico ContactProfile
 
@@ -87,41 +88,5 @@ Selecione o mapeamento de semânticas para ver as ações disponíveis.
 - **Atualizar** o mapeamento de semânticas para incluir os dados mais recentes. A atualização de qualquer mapeamento semântico irá atualizar todos os mapeamentos semânticos do mesmo tipo.
 - **Mudar o nome** do mapeamento de semânticas. Selecione **Guardar**.
 - **Eliminar** o mapeamento de semânticas. Para eliminar mais de um mapeamento de semânticas ao mesmo tempo, selecione os mapeamentos de semânticas e o ícone de eliminação. Selecione **Eliminar** para confirmar a eliminação.
-
-## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Utilize um mapeamento de entidades de semântica ContactProfile para criar atividades de nível de contacto
-
-Depois de criar um *ContactProfile* mapeamento de entidades de semântica, pode capturar as atividades dos contactos. Permite-lhe ver na linha cronológica da atividade para uma conta cujo contacto foi responsável por cada atividade. A maioria dos passos segue a configuração típica do mapeamento de atividades.
-
-   > [!NOTE]
-   > Para as atividades de nível de contacto funcionarem, tem de ter os atributos **AccountID** e **ContactID** para cada registo nos seus dados de atividade.
-
-1. [Defina um mapeamento de entidades de semântica *ContactProfile*](#define-a-contactprofile-semantic-entity-mapping) e execute o mapeamento de semânticas.
-
-1. Aceda a **Dados** > **Atividades**.
-
-1. Selecione **Adicionar Atividade** para criar uma nova atividade.
-
-1. Atribua um nome à atividade, selecione a entidade de atividade de origem e selecione a chave primária da entidade de atividade.
-
-1. No passo **Relações**, crie uma relação indireta entre os dados de origem da sua atividade para as contas, utilizando os seus dados de contacto como uma entidade intermediária. Para mais informações, consulte os [caminhos de relação direta e indireta](relationships.md#relationship-paths).
-   - Relação de exemplo para uma atividade denominada *Compras*:
-      - **Dados de Atividade da Origem das Compras** > **Dados do Contacto** no atributo **ContactID**
-      - **Dados do Contacto** > **Dados da Conta** no atributo **AccountID**
-
-   :::image type="content" source="media/Contact_Activities1.png" alt-text="Configuração de uma relação de exemplo.":::
-
-1. Depois de configurar as relações, selecione **Seguinte** e conclua a configuração do mapeamento da sua atividade. Para obter os passos detalhados na criação da atividade, consulte [definir uma atividade](activities.md).
-
-1. Execute os seus mapeamentos de atividades.
-
-1. Após a execução de mapeamentos de atividades a nível do contacto, selecione **Clientes**. As atividades a nível de contacto são apresentadas na linha cronológica do seu cliente.
-
-   :::image type="content" source="media/Contact_Activities2.png" alt-text="Resultado final depois de configurar as atividade do contacto":::
-
-### <a name="contact-level-activity-timeline-filtering"></a>Filtragem da linha cronológica das atividades a nível do contacto
-
-A linha cronológica da atividade para os seus clientes inclui os respetivos IDs ou nomes, consoante a sua configuração *ContactProfile* para as atividades nas quais atuaram. Filtre as atividades por contactos na linha cronológica para ver contactos específicos em que está interessado. Para ver todas as atividades que não estão atribuídas a um contacto específico, selecione **Atividades não mapeadas para um Contacto**.
-
-:::image type="content" source="media/Contact_Activities3.png" alt-text="Opções de filtragem disponíveis para as atividades a nível do contacto.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

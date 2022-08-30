@@ -1,7 +1,7 @@
 ---
 title: Trabalhar com dados do Customer Insights no Microsoft Dataverse
 description: Aprenda a ligar o Customer Insights e o Microsoft Dataverse e compreenda as entidades de saída que são exportadas para o Dataverse.
-ms.date: 07/15/2022
+ms.date: 08/15/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,25 +11,25 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 89ff629033230de3c6252b6a3a16816d9b3c1287
-ms.sourcegitcommit: 85b198de71ff2916fee5500ed7c37c823c889bbb
+ms.openlocfilehash: 0d536259f310b41fe12922baeebdc4569937db08
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/15/2022
-ms.locfileid: "9153418"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303843"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Trabalhar com dados do Customer Insights no Microsoft Dataverse
 
-O Customer Insights disponibiliza a opção para disponibilizar entidades de saída como [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Esta integração permite uma fácil partilha de dados e desenvolvimento personalizado através de uma abordagem de código baixo/sem código. As [entidades de saída](#output-entities) estão disponíveis como tabelas num ambiente do Dataverse. Pode utilizar os dados de qualquer outra aplicação com base em tabelas do Dataverse. Estas tabelas permitem cenários como fluxos de trabalho automatizados através do Power Automate ou a criação de aplicações com o Power Apps.
+O Customer Insights oferece a opção de disponibilizar entidades de saída no [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Esta integração permite uma fácil partilha de dados e desenvolvimento personalizado através de uma abordagem de código baixo/sem código. As [entidades de saída](#output-entities) estão disponíveis como tabelas num ambiente do Dataverse. Pode utilizar os dados de qualquer outra aplicação com base em tabelas do Dataverse. Estas tabelas permitem cenários como fluxos de trabalho automatizados através do Power Automate ou a criação de aplicações com o Power Apps.
 
 A ligação ao seu ambiente Dataverse também permite-lhe [ingerir dados de origens de dados no local utilizando fluxos de dados e gateways do Power Platform](connect-power-query.md#add-data-from-on-premises-data-sources).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 - Os ambientes do Customer Insights e do Dataverse têm de ser a hospedados na mesma região.
-- Tem de ter uma função de administrador global no ambiente do Dataverse. Verifique se este [ambiente do Dataverse está associado](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) a determinados grupos de segurança e certifique-se de que é adicionado a esses grupos de segurança.
-- Nenhum outro ambiente do Customer Insights está já associado ao ambiente do Dataverse que pretende ligar. Saiba como [remover uma ligação existente a um ambiente do Dataverse](#remove-an-existing-connection-to-a-dataverse-environment).
-- Um ambiente do Microsoft Dataverse só pode ligar a uma única conta de armazenamento. Só é aplicável se configurar o ambiente para [utilizar o seu Azure Data Lake Storage](own-data-lake-storage.md).
+- Uma função de administrador global configurada no ambiente do Dataverse. Verifique se este [ambiente do Dataverse está associado](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) a determinados grupos de segurança e certifique-se de que é adicionado a esses grupos de segurança.
+- Nenhum outro ambiente do Customer Insights está associado ao ambiente do Dataverse que pretende ligar. Saiba como [remover uma ligação existente a um ambiente do Dataverse](#remove-an-existing-connection-to-a-dataverse-environment).
+- Um ambiente Microsoft Dataverse ligado a uma única conta de armazenamento se configurar o ambiente para [utilizar o seu Azure Data Lake Storage](own-data-lake-storage.md).
 
 ## <a name="dataverse-storage-capacity-entitlement"></a>Elegibilidade da capacidade de armazenamento do Dataverse
 
@@ -37,7 +37,7 @@ Uma subscrição do Customer Insights dá-lhe uma capacidade adicional para a [c
 
 **Exemplo:**
 
-Partindo do princípio de que obtém 15 GB de armazenamento de bases de dados e 20 GB de armazenamento de ficheiros por 100.000 perfis de cliente. Se a sua subscrição incluir 300.000 perfis de clientes, a sua capacidade total de armazenamento seria de 45 GB (3 x 15 GB) de armazenamento de ficheiros e de 60 GB (3 x 20 GB) de armazenamento de ficheiros. Do mesmo modo, se tiver uma subscrição B2B com contas de 30K, a sua capacidade total de armazenamento seria de 45 GB (3 x 15 GB) de armazenamento de bases de dados e de 60 GB de armazenamento de ficheiros (3 x 20 GB).
+Partindo do princípio de que obtém 15 GB de armazenamento de bases de dados e 20 GB de armazenamento de ficheiros por 100.000 perfis de cliente. Se a sua subscrição incluir 300.000 perfis de clientes, a sua capacidade total de armazenamento é de 45 GB (3 x 15 GB) de armazenamento de ficheiros e de 60 GB (3 x 20 GB). Do mesmo modo, se tiver uma subscrição B2B com contas de 30K, a sua capacidade total de armazenamento é de 45 GB (3 x 15 GB) de armazenamento de bases de dados e de 60 GB de armazenamento de ficheiros (3 x 20 GB).
 
 A capacidade de registo não é incremental e não está fixa para a sua organização.
 
@@ -47,70 +47,80 @@ Para mais informações sobre as elegibilidades de capacidade detalhada, consult
 
 O passo **Microsoft Dataverse** permite-lhe ligar o Customer Insights ao seu ambiente do Dataverse ao [criar um ambiente do Customer Insights](create-environment.md).
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="partilha de dados com Microsoft Dataverse ativado automaticamente para novos ambientes de rede.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="partilha de dados com Microsoft Dataverse ativado automaticamente para novos ambientes.":::
 
-Os administradores podem configurar o Customer Insights para ligar um ambiente do Dataverse existente. Ao fornecer o URL para o ambiente do Dataverse, está a ligar ao respetivo ambiente do Customer Insights. Depois de estabelecer a ligação entre o Customer Insights e o Dataverse, não altere o nome da organização para o ambiente do Dataverse. O nome da organização é utilizado no URL do Dataverse e um nome alterado quebra a ligação ao Customer Insights.
+1. Forneça o URL do seu ambiente Dataverse ou deixe em branco para que seja criado um para si.
 
-Se não quiser utilizar um ambiente do Dataverse existente, o sistema cria um novo ambiente para os dados do Customer Insights no seu inquilino. [Os admins do Power Platform podem controlar quem pode criar ambientes](/power-platform/admin/control-environment-creation). Quando estiver a configurar um novo ambiente do Customer Insights e o admin tiver desativado a criação de ambientes do Dataverse para todas as pessoas, exceto admins, poderá não conseguir criar um novo ambiente.
+   > [!NOTE]
+   > Depois de estabelecer a ligação entre o Customer Insights e o Dataverse, não altere o nome da organização para o ambiente do Dataverse. O nome da organização é utilizado no URL do Dataverse e um nome alterado quebra a ligação ao Customer Insights.
 
-**Ative a partilha de dados** com o Dataverse selecionando a caixa de verificação de partilha de dados.
+   Os admins do [Power Platform podem controlar quem pode criar novos ambientes Dataverse](/power-platform/admin/control-environment-creation). Se estiver a tentar configurar um novo ambiente do Customer Insights e não conseguir, o admin pode ter desativado a criação de ambientes do Dataverse para todas as pessoas, exceto admins.
 
-Se estiver a utilizar a sua própria conta do Data Lake Storage, também necessita do **Identificador de permissões**. Para obter mais informações sobre como obter o identificador de permissões, reveja a secção que se segue.
+1. Se estiver a utilizar a sua própria conta de Armazenamento Data Lake:
+   1. Selecione **Ativar a partilha de dados** com o Dataverse.
+   1. Introduza o **Identificador de permissões**. Para obter o identificador de permissão, [ative a partilha de dados com o Dataverse a partir do seu próprio Azure Data Lake Storage](#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
 
-## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Ative a partilha de dados com o Dataverse a partir do seu próprio Azure Data Lake Storage (Pré-visualização)
+## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Ative a partilha de dados com o Dataverse a partir do seu próprio Azure Data Lake Storage (pré-visualização)
 
-Ativar a partilha de dados com o Microsoft Dataverse quando o ambiente [utiliza a sua própria conta do Azure Data Lake Storage](own-data-lake-storage.md) requer alguma configuração adicional. O utilizador que configura o ambiente do Customer Insights tem de ter, pelo menos, permissões de **Leitor de Dados de Blobs de Armazenamento** no contentor *CustomerInsights* na conta do Azure Data Lake Storage.
-
-1. Crie dois grupos de segurança na sua subscrição do Azure – um  grupo de segurança **Leitor** e um  grupo de segurança **Contribuidor** e defina o serviço Microsoft Dataverse como o proprietário para ambos os grupos de segurança.
-2. Efetue a gestão da Lista de Controlo de Acesso (ACL) no contentor CustomerInsights na sua conta de armazenamento através destes grupos de segurança. Adicione o serviço Microsoft Dataverse e quaisquer aplicações empresariais baseadas no Dataverse, como o Dynamics 365 Marketing ao grupo de segurança **Leitor** com permissões **só de leitura**. Adicione *só* a aplicação Customer Insights ao grupo de segurança **Contribuidor** para conceder permissões de **leitura e escrita** para escrever perfis e informações.
+Na [sua própria conta do Azure Data Lake Storage](own-data-lake-storage.md), verifique se o utilizador de configuração do ambiente Customer Insights tem, pelo menos permissões **Leitor de dados do armazenamento de blobs** no contentor `customerinsights` na conta de armazenamento.
 
 ### <a name="limitations"></a>Limitações
 
-Existem duas limitações ao utilizar o Dataverse com a sua própria conta do Azure Data Lake Storage:
-
-- Existe um mapeamento um-para-um entre uma organização do Dataverse e uma conta do Azure Data Lake Storage. Depois de uma organização Dataverse ser ligada a uma conta de armazenamento, não poderá ser ligada a outra conta de armazenamento. Esta limitação impede que um Dataverse não preencha várias contas de armazenamento.
+- Existe apenas um mapeamento um-para-um entre uma organização do Dataverse e uma conta do Azure Data Lake Storage. Depois de uma organização Dataverse ser ligada a uma conta de armazenamento, não poderá ser ligada a outra conta de armazenamento. Esta limitação impede que o Dataverse preencha várias contas de armazenamento.
 - A partilha de dados não funcionará se for necessária uma configuração do Azure Private Link para aceder à sua conta Azure Data Lake Storage, porque está por detrás de uma firewall. Atualmente, o Dataverse não suporta a ligação a pontos finais privados através do Private Link.
+
+### <a name="set-up-security-groups-on-your-own-azure-data-lake-storage"></a>Configurar grupos de segurança no seu Azure Data Lake Storage
+
+1. Crie dois grupos de segurança na sua subscrição do Azure – um  grupo de segurança **Leitor** e um  grupo de segurança **Contribuidor** e defina o serviço Microsoft Dataverse como o proprietário para ambos os grupos de segurança.
+
+1. Efetue a gestão da Lista de Controlo de Acesso (ACL) no contentor `customerinsights` na sua conta de armazenamento através destes grupos de segurança.
+   1. Adicione o serviço Microsoft Dataverse e quaisquer aplicações empresariais baseadas no Dataverse, como o Dynamics 365 Marketing ao grupo de segurança **Leitor** com permissões **só de leitura**.
+   1. Adicione *só* a aplicação Customer Insights ao grupo de segurança **Contribuidor** para conceder permissões de **leitura e escrita** para escrever perfis e informações.
 
 ### <a name="set-up-powershell"></a>Configurar o PowerShell
 
-Para executar os scripts do PowerShell, primeiro é necessário configurar o PowerShell em conformidade.
+Configurar o PowerShell para executar scripts de PowerShell.
 
 1. Instalar a versão mais recente do [Azure Active Directory PowerShell para Graph](/powershell/azure/active-directory/install-adv2).
    1. No seu PC, selecione a tecla Windows no seu teclado, procure por **Windows PowerShell** e selecione **Executar como administrador**.
    1. Na janela PowerShell que se abre, introduza `Install-Module AzureAD`.
-2. Importe três módulos.
-    1. Na janela do PowerShell, introduza `Install-Module -Name Az.Accounts` e siga os passos.
-    1. Repita para `Install-Module -Name Az.Resources` e `Install-Module -Name Az.Storage`.
 
-### <a name="configuration-steps"></a>Passos de configuração
+1. Importe três módulos.
+   1. Na janela do PowerShell, introduza `Install-Module -Name Az.Accounts` e siga os passos.
+   1. Repita para `Install-Module -Name Az.Resources` e `Install-Module -Name Az.Storage`.
+
+### <a name="execute-powershell-scripts-and-obtain-the-permission-identifier"></a>Executar scripts de PowerShell e obter o Identificador de Permissões
 
 1. Transfira os dois scripts do PowerShell de que precisa para executar a partir do [repositório do GitHub](https://github.com/trin-msft/byol) do nosso engenheiro.
-    1. `CreateSecurityGroups.ps1`
-       - Necessita de ter permissões de *admin de inquilinos* para executar este script do PowerShell.
-       - Este script do PowerShell cria dois grupos de segurança na sua subscrição do Azure. Um para o grupo Leitor e outro para o grupo Contribuidor e tornará o serviço Microsoft Dataverse como proprietário para ambos estes grupos de segurança.
-       - Execute este script do PowerShell no Windows PowerShell fornecendo o ID de subscrição do Azure que contém o seu Azure Data Lake Storage. Abra o script do PowerShell num editor para rever informações adicionais e a lógica implementada.
-       - Guarde ambos os valores do ID do grupo de segurança gerados por este script porque vamos utilizá-los no script `ByolSetup.ps1`.
+   - `CreateSecurityGroups.ps1`: necessita de permissões de administrador de inquilinos
+   - `ByolSetup.ps1`: necessita de permissões Proprietário de Dados de Armazenamento de blobs ao nível da conta/contentor de armazenamento. Este script irá criar a permissão para si. A sua atribuição de funções pode ser removida manualmente depois de executar o script com sucesso.
 
-        > [!NOTE]
-        > A criação de grupos de segurança pode ser desativada no seu inquilino. Nesse caso, seria necessária uma configuração manual e o seu admin do Azure AD teria de [permitir a criação de grupos de segurança](/azure/active-directory/enterprise-users/groups-self-service-management).
+1. Execute `CreateSecurityGroups.ps1` no PowerShell do Windows fornecendo o ID de subscrição do Azure que contém o seu Azure Data Lake Storage. Abra o script do PowerShell num editor para rever informações adicionais e a lógica implementada.
 
-    2. `ByolSetup.ps1`
-        - Precisa de permissões de *Proprietário de Dados do Blob de Armazenamento* ao nível da conta de armazenamento/contentor para executar este script ou este script criará um para si. A sua atribuição de funções pode ser removida manualmente depois de executar o script com sucesso.
-        - Este script do PowerShell adiciona o controlo de acesso baseado em funções (RBAC) necessário para o serviço Microsoft Dataverse e quaisquer aplicações empresariais baseadas no Dataverse. Também atualiza a Lista de Controlo de Acesso (ACL) no contentor CustomerInsights para os grupos de segurança criados com o script `CreateSecurityGroups.ps1`. O grupo Contribuidor terá permissão *rwx* e o grupo Leitores terá apenas permissão *r-x*.
-        - Execute este script do PowerShell no Windows PowerShell fornecendo o ID de subscrição do Azure que contém o nome da sua conta de armazenamento do Azure Data Lake Storage, nome do grupo de recursos e os valores dos ID dos grupos de segurança Leitor e Contribuidor. Abra o script do PowerShell num editor para rever informações adicionais e a lógica implementada.
-        - Copie a cadeia de saída depois de executar com sucesso o script. A cadeia de saída tem o seguinte aspeto: `https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
+   Este script cria dois grupos de segurança na sua subscrição do Azure: um para o grupo de Leitores e outro para o grupo de Contribuidores. O serviço Microsoft Dataverse é o proprietário de ambos os grupos de segurança.
 
-2. Introduza a cadeia de saída copiada acima para o campo **Identificador de permissões** do passo de configuração do ambiente para o Microsoft Dataverse.
+1. Guarde ambos os valores do ID do grupo de segurança gerados por este script para utilizar no script `ByolSetup.ps1`.
 
-:::image type="content" source="media/dataverse-enable-datasharing-BYODL.png" alt-text="Opções de configuração para permitir a partilha de dados a partir do seu próprio Azure Data Lake Storage com o Microsoft Dataverse.":::
+   > [!NOTE]
+   > A criação de grupos de segurança pode ser desativada no seu inquilino. Nesse caso, seria necessária uma configuração manual e o seu admin do Azure AD teria de [permitir a criação de grupos de segurança](/azure/active-directory/enterprise-users/groups-self-service-management).
 
-### <a name="remove-an-existing-connection-to-a-dataverse-environment"></a>Remover uma ligação existente a um ambiente do Dataverse
+1. Execute `ByolSetup.ps1` no PowerShell do Windows fornecendo o ID de subscrição do Azure que contém o seu Azure Data Lake Storage, nome da conta de armazenamento, nome do grupo de recursos e os valores dos ID dos grupos de segurança de Leitor e Contribuidor. Abra o script do PowerShell num editor para rever informações adicionais e a lógica implementada.
+
+   Este script adiciona o controlo de acesso baseado em funções necessário para o serviço Microsoft Dataverse e quaisquer aplicações empresariais baseadas no Dataverse. Também atualiza a Lista de Controlo de Acesso (ACL) no contentor `customerinsights` para os grupos de segurança criados com o script `CreateSecurityGroups.ps1`. O grupo Contribuidor terá permissão *rwx* e o grupo Leitores terá apenas permissão *r-x*.
+
+1. Copie a cadeia de saída que tem o seguinte aspeto: `https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
+
+1. Introduza a cadeia de saída copiada para o campo **Identificador de permissões** do passo de configuração do ambiente para o Microsoft Dataverse.
+
+   :::image type="content" source="media/dataverse-enable-datasharing-BYODL.png" alt-text="Opções de configuração para permitir a partilha de dados a partir do seu próprio Azure Data Lake Storage com o Microsoft Dataverse.":::
+
+## <a name="remove-an-existing-connection-to-a-dataverse-environment"></a>Remover uma ligação existente a um ambiente do Dataverse
 
 Ao ligar a um ambiente do Dataverse, a mensagem de erro **Esta organização do CDS já está ligada a outra instância do Customer Insights** significa que o ambiente do Dataverse já é utilizado num ambiente do Customer Insights. Pode remover a ligação existente como um administrador global no ambiente do Dataverse. Pode levar duas horas para preencher as mudanças.
 
 1. Ir para o [Power Apps](https://make.powerapps.com).
 1. Selecione o ambiente do seletor de ambientes.
-1. Vá para **Soluções**
+1. Vá para **Soluções**.
 1. Desinstale ou elimine a solução denominada **Suplemento de Cartões de Cliente do Dynamics 365 Customer Insights (Pré-visualização)**.
 
 OR
@@ -155,16 +165,16 @@ A tabela AlternateKey contém chaves das entidades, as quais participaram no pro
 
 Esta tabela contém atividades de utilizadores que estão disponíveis no Customer Insights.
 
-| Column            | Tipo        | Descrição                                                                              |
+| Column            | Type        | Description                                                                              |
 |-------------------|-------------|------------------------------------------------------------------------------------------|
-| ID do Cliente        | String      | ID do Perfil do Cliente                                                                      |
-| ActivityId        | String      | ID interno da atividade do cliente (chave primária)                                       |
+| ID do Cliente        | Cadeia (de carateres)      | ID do perfil do cliente                                                                      |
+| ActivityId        | Cadeia (de carateres)      | ID interno da atividade do cliente (chave primária)                                       |
 | SourceEntityName  | String      | Nome da entidade fornecida com o programa                                                                |
 | SourceActivityId  | String      | Chave primária da entidade fornecida com o programa                                                       |
 | ActivityType      | String      | Tipo de atividade semântica ou nome de atividade personalizada                                        |
-| ActivityTimeStamp | DATETIME    | Carimbo de Data/hora da Atividade                                                                      |
-| Cargo             | String      | Título ou nome da atividade                                                               |
-| Descrição       | String      | Descrição da atividade                                                                     |
+| ActivityTimeStamp | DATETIME    | Carimbo de data/hora da Atividade                                                                      |
+| Title             | Cadeia (de carateres)      | Título ou nome da atividade                                                               |
+| Description       | String      | Descrição da atividade                                                                     |
 | URL               | String      | Ligação a um URL externo específico à atividade                                         |
 | SemanticData      | Cadeia JSON | Inclui uma lista de pares de valores de chave para campos de mapeamento semântico específicos para o tipo de atividade |
 | RangeIndex        | String      | Carimbo de data/hora Unix utilizado para ordenar consultas de intervalo de eficácia e de intervalo de tempo |
@@ -199,10 +209,10 @@ Esta tabela contém a saída do processo de enriquecimento.
 
 Esta tabela contém a saída das predições do modelo.
 
-| Column               | Tipo        | Descrição                                          |
+| Column               | Type        | Description                                          |
 |----------------------|-------------|------------------------------------------------------|
-| ID do Cliente           | String      | ID do Perfil do Cliente                                  |
-| ModelProvider        | String      | Nome do fornecedor do modelo                                      |
+| ID do Cliente           | Cadeia (de carateres)      | ID do perfil do cliente                                  |
+| ModelProvider        | Cadeia (de carateres)      | Nome do fornecedor do modelo                                      |
 | Modelo                | String      | Nome do modelo                                                |
 | Valores               | Cadeia JSON | Lista de atributos produzidos pelo modelo |
 | msdynci_predictionid | GUID        | GUID determinista gerada a partir de msdynci_identifier | 
@@ -216,38 +226,10 @@ Esta tabela contém informações de associação a segmentos dos perfis de clie
 |--------------------|--------------|-----------------------------|
 | ID do Cliente        | Cadeia (de carateres)       | ID do Perfil do Cliente        |
 | SegmentProvider      | Cadeia (de carateres)       | Aplicação que publica os segmentos.      |
-| SegmentMembershipType | Cadeia (de carateres)       | Tipo de cliente neste registo de associação a segmentos. Suporta vários tipos, tais como Cliente, Contacto ou Conta. Predefinição: Cliente  |
+| SegmentMembershipType | Cadeia (de carateres)       | Tipo de cliente para este registo de associação a segmentos. Suporta vários tipos, tais como Cliente, Contacto ou Conta. Predefinição: Cliente  |
 | Segmentos       | Cadeia JSON  | Lista de segmentos exclusivos dos quais os perfil de cliente é membro      |
 | msdynci_identifier  | Cadeia (de carateres)   | Identificador exclusivo do registo de associação a segmentos. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
 | msdynci_segmentmembershipid | GUID      | GUID determinista gerada a partir de `msdynci_identifier`          |
 
-<!--
-## FAQ: Update existing environments to use Microsoft Dataverse
 
-Between mid-May 2022 and June 13, 2022, administrators can update the environment settings with a Dataverse environment that Customer Insights can use. On June 13, 2022, your environment will be updated automatically and we'll create a Dataverse environment on your tenant for you.
-
-1. My environment uses my own Azure Data Lake Storage account. Do I still need to update?
-
-   If there's already a Dataverse environment configured in your environment, the update isn't required. If no Dataverse is environment configured, the **Update now** button will create a Dataverse environment and update from the Customer Insights database to a Dataverse database.
-
-1. Will we get extra Dataverse capacity, or will the update use my existing Dataverse capacity?
-
-   - If there's already a Dataverse environment configured in your Customer Insights environment, or connected with other Dynamics 365 or Power Apps applications, the capacity remains unchanged.
-   - If the Dataverse environment is new, it will add new storage and database capacity. The capacity added varies per environment and entitlements. You'll get 3 GB for trial and sandbox environment. Production environments get 15 GB.
-
-1. I proceeded with the update and it seems like nothing happened. Is the update complete?
-
-   If the notification in Customer Insights doesn't show anymore, the update is complete. You can check the status of the update by reviewing your environment settings.
-
-1. Why do I still see the banner after completing the update steps?
-
-   It can happen due to an upgrade or refresh failure. Contact support.
-
-1. I received a "Failed to provision Dataverse environment" error after starting the update. What happened?
-
-   It can happen due to an upgrade or refresh failure. Contact support.
-   Common causes:
-    - Insufficient capacity. There's no more capacity to create more environments. For more information, see [Manage capacity action](/power-platform/admin/capacity-storage#actions-to-take-for-a-storage-capacity-deficit).
-    - Region mismatch between tenant region and Customer Insights environment region in the Australia and India regions.
-    - Insufficient privileges to provision Dataverse. The users starting the update needs a Dynamics 365 admin role.
-    - -->
+[!INCLUDE [footer-include](includes/footer-banner.md)]

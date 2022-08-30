@@ -1,7 +1,7 @@
 ---
 title: Criar segmentos complexos com o construtor de segmentos
 description: Utilize o construtor de segmentos para criar segmentos de clientes ao agrupá-los com base em vários atributos.
-ms.date: 03/25/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
@@ -13,19 +13,19 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: cde373cd65e296675e1b3c92f3024e1093853842
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 7f691fd0b2ea76a2960d5adf766a4b166f02ebb4
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170649"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304763"
 ---
 # <a name="create-complex-segments-with-segment-builder"></a>Criar segmentos complexos com o construtor de segmentos
 
-Defina filtros complexos em torno da entidade de cliente unificado e as suas entidades relacionadas. Cada segmento, após o processamento, cria um conjunto de registos de clientes que pode exportar e tomar medidas.
+Defina filtros complexos em torno do cliente unificado ou contacto unificado e as suas entidades relacionadas. Cada segmento, após o processamento, cria um conjunto de registos de cliente ou contacto que pode exportar e sobre os quais pode agir.
 
 > [!TIP]
-> Os segmentos baseados em **clientes individuais** incluem automaticamente informações de contacto disponíveis para os membros do segmento. Em ambientes para **contas empresariais**, os segmentos baseiam-se em contas (empresas ou subsidiárias). Para incluir informações de contacto num segmento, utilize a funcionalidade **Projetar atributos** no construtor de segmentos. Certifique-se de que as origens de dados de contacto são [semanticamente mapeadas para a entidade ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
+> Os segmentos baseados em **clientes individuais** incluem automaticamente informações de contacto disponíveis para os membros do segmento. Nas **contas empresariais**, se [unificou](data-unification.md) contas e contactos, escolha se o segmento se baseia em contas ou contactos empresariais. Para exportar para um destino que espera informação de contacto, utilize um segmento de contactos. Para exportar para um destino que espera informação de conta, utilize um segmento de contas.
 
 ## <a name="segment-builder"></a>Construtor de segmentos
 
@@ -57,6 +57,11 @@ O exemplo acima ilustra a capacidade de segmentação. Definimos um segmento par
 
 1. Selecione **Novo** > **Criar o seu próprio**. Na página de construtores de segmentos, define ou compõe regras. Uma regra é composta por uma ou mais condições que definem um conjunto de clientes.
 
+   > [!NOTE]
+   > Para ambientes baseados em contas empresariais, selecione **Novo** > **Segmento de contas** ou **Segmento de contactos (pré-visualização)** com base no tipo de segmento que pretende criar. Se uma [hierarquia de contas](relationships.md#set-up-account-hierarchies) tiver sido definida e pretende criar regras para filtrar dados com base na relação de elemento principal e subordinado, selecione **Utilizar hierarquia? (pré-visualização)**, selecione a hierarquia e, em seguida, **Aplicar**.
+   >
+   > :::image type="content" source="media/segment_acct_hierarchy.png" alt-text="Painel de seleção do segmento de hierarquia de conta.":::
+
 1. Selecione **Editar detalhes** junto de Segmento sem título. Forneça um nome para o seu segmento e atualize o **Nome da entidade de saída** sugerido para o segmento. Opcionalmente, adicione uma descrição e [etiquetas](work-with-tags-columns.md#manage-tags) ao segmento.
 
    :::image type="content" source="media/segments_edit_details.png" alt-text="Caixa de diálogo Editar detalhes.":::
@@ -65,11 +70,11 @@ O exemplo acima ilustra a capacidade de segmentação. Definimos um segmento par
    - Reveja a lista de entidades e atributos disponíveis no painel **Adicionar à Regra** e selecione o ícone **+** ao lado do atributo a adicionar. Escolha se deseja adicionar o atributo a uma regra existente ou usá-lo para criar uma nova regra.
    - Digite o nome do atributo na secção da regra para ver sugestões correspondentes.
 
-1. Escolha os operadores para especificar os valores correspondentes da condição. O atributo pode ter um dos quatro tipos de dados como valor: numérico, cadeia, data ou booleano. Dependendo do tipo de dados do atributo, diferentes operadores estão disponíveis para especificar a condição. Para segmentos com contas empresariais, estão disponíveis dois operadores especiais para incluir potenciais hierarquias entre as contas ingeridas. Utilize os operadores *subordinado de* e *principal de* para incluir contas relacionadas.
+1. Escolha os operadores para especificar os valores correspondentes da condição. O atributo pode ter um dos quatro tipos de dados como valor: numérico, cadeia, data ou booleano. Dependendo do tipo de dados do atributo, diferentes operadores estão disponíveis para especificar a condição.
 
 1. Selecione **Adicionar condição** para adicionar mais condições a uma regra. Para criar uma regra sob a regra atual, selecione **Adicionar sub-regra**.
 
-1. Se uma regra utilizar outras entidades para além da entidade *Cliente*, selecione **Definir caminho da relação** para mapear a entidade selecionada para a entidade de cliente unificada. Se existir apenas um caminho de relação possível, o sistema seleciona-o automaticamente. Diferentes [caminhos de relações](relationships.md#relationship-paths) podem produzir resultados diferentes. Cada regra pode ter o seu próprio caminho de relação.
+1. Se uma regra utilizar outras entidades para além da entidade *Cliente* (ou a entidade *ContactProfile* para B2B), selecione **Definir caminho de relação** para mapear a entidade selecionada para a entidade de cliente unificada. Se existir apenas um caminho de relação possível, o sistema seleciona-o automaticamente. Diferentes [caminhos de relações](relationships.md#relationship-paths) podem produzir resultados diferentes. Cada regra pode ter o seu próprio caminho de relação.
 
    :::image type="content" source="media/relationship-path.png" alt-text="Caminho de relação potencial ao criar uma regra baseada numa entidade mapeada para a entidade de cliente unificado.":::
 
@@ -92,24 +97,22 @@ O exemplo acima ilustra a capacidade de segmentação. Definimos um segmento par
       - **Interseção** sobrepõe os dois grupos. Apenas os dados *comuns* a ambos os grupos permanecem no grupo unificado.
       - **Exceto** combina os dois grupos. Apenas são mantidos os dados do grupo A que *não são comuns* aos dados do grupo B.
 
-1. Por predefinição, a entidade de saída conterá automaticamente todos os atributos de perfis de cliente que correspondem aos filtros definidos. Se um segmento se basear noutras entidades diferentes da entidade *Cliente*, selecione **Atributos do projeto** para adicionar mais atributos destas entidades à entidade de saída.
-
-   > [!IMPORTANT]
-   > Para os segmentos baseados em contas empresariais, os detalhes de um ou mais contactos de cada conta da entidade *ContactProfile* têm de ser incluídos no segmento para permitir que esse segmento seja ativado ou exportado para destinos que exijam informações de contacto. Para obter mais informações sobre a entidade *ContactProfile*, consulte [Mapeamentos semânticos](semantic-mappings.md).
-   > Um resultado de um exemplo de um segmento baseado em contas empresariais com atributos projetados de contactos poderia ser assim:
-   >
-   > |ID  |Nome da conta  |Receitas  |Nome do contacto  | Função do contacto|
-   > |---------|---------|---------|---------|---|
-   > |10021     | Contoso | 100.000 | [Abbie Moss, Ruth Soto]  | [CEO, Gestor de aprovisionamento]
-
-   :::image type="content" source="media/segments-project-attributes.png" alt-text="Exemplo de atributos de projeto selecionados no painel lateral a adicionar à entidade de saída.":::
-  
+1. Por predefinição, a entidade de saída conterá automaticamente todos os atributos de perfis de cliente que correspondem aos filtros definidos. No B2B, quando utiliza a entidade *ContactProfile*, o ID da conta é incluído automaticamente. Se um segmento se basear no outras entidades que não a entidade *Cliente* ou para incluir mais atributos a partir de *ContactProfile*, selecione **Atributos de projeto** para adicionar mais atributos destas entidades à entidade de saída.
+ 
    Por exemplo: um segmento baseia-se numa entidade que contém dados de compra, que estão relacionados com a entidade *Cliente*. O segmento procura todos os clientes de Espanha que compraram bens no ano atual. Pode optar por anexar atributos como o preço dos bens ou a data de compra de todos os registos de clientes correspondentes na entidade de saída. Estas informações podem ser úteis para analisar as correlações sazonais com o total de despesas.
 
+   :::image type="content" source="media/segments-project-attributes.png" alt-text="Exemplo de atributos de projeto selecionados no painel lateral a adicionar à entidade de saída.":::
+ 
+   Um resultado de um exemplo de um segmento baseado em contas empresariais com atributos projetados de contactos poderia ser assim:
+
+   |ID  |Nome da conta  |Receitas  |Nome do contacto  | Função do contacto|
+   |---------|---------|---------|---------|---|
+   |10021     | Contoso | 100.000 | [Abbie Moss, Ruth Soto]  | [CEO, Gestor de aprovisionamento]
+
    > [!NOTE]
-   > - A opção **Projetar atributos** só funciona para entidades que têm uma relação de um para muitos com a entidade do cliente. Por exemplo, um cliente pode ter várias subscrições.
-   > - Se o atributo que pretende projetar estiver a mais de um salto de distância da entidade *Cliente*, tal como definido pela relação, esse atributo deve ser utilizado em todas as regras da consulta de segmento que está a criar.
-   > - Se o atributo que pretende projetar estiver apenas a um salto de distância da entidade *Cliente*, esse atributo não precisa de estar presente em todas as regras da consulta de segmento que está a criar.
+   > - **Atributos de projeto** só funciona para entidades que têm uma relação de um para muitos com a entidade *Cliente* ou *ContactProfile*. Por exemplo, um cliente pode ter várias subscrições.
+   > - Se o atributo que pretende projetar estiver a mais de um salto de distância da entidade *Cliente* ou *ContactProfile*, como definido pela relação, esse atributo deve ser utilizado em todas as regras da consulta de segmento que está a criar.
+   > - Se o atributo que pretende projetar estiver apenas a um salto de distância da entidade *Cliente* ou *ContactProfile*, esse atributo não precisa de estar presente em todas as regras da consulta de segmento que está a criar.
    > - Os **atributos projetados** são contabilizados quando utiliza operadores definidos.
 
 1. Selecione **Executar** para criar o segmento. Selecione **Guardar** se pretender manter a configuração atual e executar o segmento mais tarde. A página **Segmentos** é apresentada.

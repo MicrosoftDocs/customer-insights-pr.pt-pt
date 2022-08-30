@@ -1,7 +1,7 @@
 ---
 title: Descrição geral de exportações (pré-visualização)
 description: Gerir exportações para partilhar dados.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245341"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304073"
 ---
 # <a name="exports-preview-overview"></a>Descrição geral de exportações (pré-visualização)
 
@@ -27,8 +27,8 @@ ms.locfileid: "9245341"
 
 Existem dois tipos principais de exportação:  
 
-- As **exportações de saída de dados** permitem exportar qualquer tipo de entidade disponível no Customer Insights. As entidades que seleciona para exportação são exportadas com todos os campos de dados, metadados, esquemas e detalhes de mapeamento.
-- **Exportações de segmentos**: exporte entidades de segmentos do Customer Insights. Os segmentos representam uma lista de perfis de clientes. Ao configurar a exportação, selecione os campos de dados incluídos, dependendo do sistema de destino para o qual está a exportar dados.
+- As **exportações de saída de dados** permitem-lhe exportar qualquer tipo de entidade disponível no Customer Insights. As entidades que seleciona para exportação são exportadas com todos os campos de dados, metadados, esquemas e detalhes de mapeamento.
+- As **exportações de segmentos** permitem-lhe exportar entidades de segmentos do Customer Insights. Para consumidores individuais (B2C), os segmentos representam uma lista de perfis de cliente. Para empresas (B2B), [os segmentos podem representar uma lista de contas ou contactos](segment-builder.md#create-a-new-segment-with-segment-builder). Ao configurar a exportação, selecione os campos de dados incluídos, dependendo do sistema de destino para o qual está a exportar dados.
 
 ### <a name="export-segments"></a>Exportar segmentos
 
@@ -38,14 +38,15 @@ A maioria das opções de exportação suportam ambos os tipos de ambientes. A e
 **Exportações de segmentos em ambientes para consumidores individuais (B2C)**  
 - Os segmentos no contexto de ambientes para clientes individuais são baseados na entidade *perfil do cliente unificado*. Todos os segmentos que satisfaçam os requisitos dos sistemas de destino (por exemplo, um endereço de e-mail) podem ser exportados.
 
-**Ambientes de exportação de segmentos para contas empresariais (B2B)**  
-- Os segmentos no contexto de ambientes para contas empresariais são baseados na entidade *conta*. Para exportar segmentos de contas como está, o sistema de destino precisa de suportar segmentos de contas completos. É o caso do [LinkedIn](export-linkedin-ads.md) quando escolhe a opção **empresa** enquanto define a exportação.
-- Todos os outros sistemas de destino requerem campos da entidade de contacto. Para garantir que os segmentos de contas podem obter dados de contactos relacionados, a definição do segmento precisa de projetar atributos da entidade de contacto. Saiba mais sobre como [configurar segmentos e projetar atributos](segment-builder.md).
+**Exportações de segmentos em ambientes para contas empresariais (B2B)**  
+- Os segmentos no contexto de ambientes para contas empresariais são criados na entidade *conta* ou na entidade *contacto*. Para exportar segmentos de contas como está, o sistema de destino precisa de suportar segmentos de contas completos. É o caso do [LinkedIn](export-linkedin-ads.md) quando escolhe a opção **empresa** enquanto define a exportação.
+- Todos os outros sistemas de destino requerem campos da entidade de contacto.
+- Com dois tipos de segmento (contactos e contas), o Customer Insights identifica automaticamente quais os tipos de segmentos elegíveis para exportação com base no sistema de destino. Por exemplo, para um sistema de destino centrado em contactos, como o MailChimp, o Customer Insights só lhe permite escolher segmentos de contactos para exportação.
 
 **Limites às exportações de segmentos**  
 - Os sistemas de destino de terceiros podem limitar o número de perfis de clientes que pode exportar. 
-- Para clientes individuais, verá o número real de membros do segmento quando seleciona um segmento para exportação. Obterá um aviso se um segmento for muito grande. 
-- Para contas empresariais, verá o número de contas num segmento; no entanto, o número de contactos que podem ser projetados não é apresentado. Em alguns casos, isto poderia levar a que o segmento exportado realmente contenha mais perfis de clientes do que o sistema de destino aceita. Se os limites do sistema de destino tiver excedido, a exportação é ignorada.
+- Para clientes individuais, verá o número real de membros do segmento quando seleciona um segmento para exportação. Irá receber um aviso se um segmento for muito grande. 
+- No caso de contas empresariais, irá ver o número de contas ou contactos dependendo do segmento. Irá receber um aviso se o segmento for muito grande. Exceder os limites dos resultados dos sistemas de destino irá ignorar a exportação.
 
 ## <a name="set-up-a-new-export"></a>Configurar uma nova exportação
 
@@ -110,6 +111,20 @@ Para exportar dados sem esperar por uma atualização agendada, vá a **Dados** 
 
 - Para executar todas as exportações, selecione **Executar todas** na barra de comandos. Só as exportações que tenham uma agenda ativa são executadas. Para executar uma exportação que não está ativa, execute uma única exportação.
 - Para executar uma única exportação, selecione-a na lista e selecione **Executar** na barra de comandos.
+
+## <a name="troubleshooting"></a>Resolução de Problemas
+
+### <a name="segment-not-eligible-for-export"></a>Segmento não elegível para exportação
+
+**Problema** Num ambiente de contas empresariais, as exportações falham com a mensagem de erro: "O segmento seguinte não é elegível para este destino de exportação: '{nome do segmento}'. Escolha apenas segmentos do tipo ContactProfile e tente novamente."
+
+**Resolução** Os ambientes do Customer Insights para contas empresariais foram atualizados para suportar segmentos de contactos além dos segmentos de contas. Devido a essa alteração, as exportações que necessitam de detalhes de contacto só funcionam com segmentos baseados em contactos.
+
+1. [Crie um segmento baseado em contactos](segment-builder.md) que corresponda ao segmento utilizado anteriormente.
+
+1. Depois de executar o segmento de contacto, edite a respetiva exportação e selecione o novo segmento.
+
+1. Selecione **Guardar** para guardar a configuração ou **Guardar e executar** para testar esta exportação de imediato.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

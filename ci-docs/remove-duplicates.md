@@ -6,19 +6,19 @@ ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
-ms.author: mukeshpo
+ms.author: sstabbert
 ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
+ms.openlocfilehash: 3f84c1c149f0befcbe489ccdd8a666ce6d5d798a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213641"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304487"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Remover duplicados antes de unificar dados
 
@@ -47,7 +47,7 @@ Se tiver melhorado entidades ao nível origem de dados para ajudar a melhorar os
 
 1. Na página **Registos duplicados**, selecione uma entidade e selecione **Adicionar regra** para definir as regras de eliminação de duplicados.
 
-   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Captura de ecrã de páginas Registos duplicados com Mostrar mais destacado":::
+   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Captura de ecrã da página Registos duplicados com a entidade destacada e a apresentação de Adicionar regra"  lightbox="media/m3_duplicates_showmore.png":::
 
    1. No painel **Adicionar regra**, introduza as seguintes informações:
       - **Selecionar campo**: escolha a partir da lista de campos disponíveis na entidade que pretende verificar a existência de duplicados. Escolha os campos que sejam provavelmente únicos para cada cliente. Por exemplo, um endereço de e-mail ou a combinação de nome, cidade e número de telefone.
@@ -80,9 +80,9 @@ Se tiver melhorado entidades ao nível origem de dados para ajudar a melhorar os
       - **Mais preenchido**: identifica o registo com os campos de atributos mais povoados como registo vencedor. É a opção de intercalação predefinida.
       - **Mais recentes**: Identifica o registo vencedor com base no mais recente. Requer uma data ou um campo numérico para definir a atualidade.
       - **Menos recente**: Identifica o registo vencedor com base no menos recente. Requer uma data ou um campo numérico para definir a atualidade.
-      
+
       No caso de empate, o registo vencedor é aquele com o MAX(PK) ou valor da chave primária maior.
-      
+
    1. Opcionalmente, para definir as preferências de união em atributos individuais de uma entidade, selecione **Avançadas** na parte inferior do painel. Por exemplo, pode optar por manter o e-mail mais recente e o endereço mais completo de diferentes registos. Expanda a entidade para ver todos os seus atributos e definir que opção utilizar para atributos individuais. Se escolher uma opção baseada em recência, também precisa de especificar um campo de data/hora que defina a recência.
 
       :::image type="content" source="media/m3_adv_merge.png" alt-text="Preferências de união avançadas que mostram e-mails recentes e endereços completos":::
@@ -96,18 +96,5 @@ Se tiver melhorado entidades ao nível origem de dados para ajudar a melhorar os
 
 > [!div class="nextstepaction"]
 > [Passo seguinte para várias entidades: Condições de correspondência](match-entities.md)
-
-## <a name="deduplication-output-as-an-entity"></a>Saída de eliminação de duplicados como uma entidade
-
-O processo de eliminação de duplicados cria uma nova entidade sem duplicados para cada uma das entidades de origem. Estas entidades podem ser encontradas juntamente com **ConflationMatchPairs:CustomerInsights** na secção **Sistema** na página **Entidades**, com o nome **Deduplication_DataSource_Entity**.
-
-Uma entidade de saída de eliminação de duplicados contém as seguintes informações:
-
-- IDs / Chaves
-  - Campos Chave primária e ID Alternativo. O campo de ID alternativo é composto por todos os IDs alternativos identificados num registo.
-  - O campo Deduplication_GroupId mostra o grupo ou o cluster identificado dentro de uma entidade que agrupa todos os registos semelhantes com base nos campos de eliminação de duplicados especificados. É utilizado para fins de processamento do sistema. Se não existirem regras de eliminação de duplicados manuais especificadas e se aplicarem regras de eliminação de duplicados definidas pelo sistema, poderá não encontrar este campo na entidade de saída de eliminação de duplicados.
-  - Deduplication_WinnerId: este campo contém o ID de vencedor dos grupos ou clusters identificados. Se Deduplication_WinnerId é o mesmo que o valor da Chave primária para um registo, significa que o registo é o registo vencedor.
-- Campos usados para definir as regras de eliminação de duplicados.
-- Campos Regra e Pontuação para denotar quais as regras de eliminação de duplicados foram aplicadas e a pontuação devolvida pelo algoritmo correspondente.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
