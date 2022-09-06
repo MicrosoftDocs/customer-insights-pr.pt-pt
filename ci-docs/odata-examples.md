@@ -1,27 +1,27 @@
 ---
 title: Exemplos de consultas de OData para APIs de Customer Insights
 description: Exemplos utilizados normalmente para o Protocolo de Dados Abertos (OData) para consultar as APIs de Customer Insights para rever dados.
-ms.date: 05/25/2022
+ms.date: 08/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
-ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
+ms.openlocfilehash: 26e56a3bab01ba55284a52e72efbcbfbaadaad6f
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "9121576"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387216"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>Exemplos de consultas de OData para APIs de Customer Insights
 
 O Protocolo de Dados Aberto (OData) é um protocolo de acesso a dados criado com protocolos base, como HTTP. Utiliza metodologias normalmente aceites como o REST para a Web. Existem vários tipos de bibliotecas e ferramentas que podem ser utilizadas para consumir serviços de OData.
 
-Este artigo lista algumas consultas de exemplo pedidas com frequência para o ajudar a criar implementações próprias com base nas [APIs de Customer Insights](apis.md).
+Para o ajudar a compilar as suas próprias implementações com base nas [API de Customer Insights](apis.md), reveja alguns inquéritos de exemplo frequentemente solicitados.
 
-Tem de modificar as amostras de consulta para as fazer trabalhar nos ambientes de destino: 
+Modifique as amostras de consulta para as fazer funcionar nos ambientes de destino:
 
 - {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` onde {instanceId} está o GUID do ambiente de Customer Insights que pretende consultar. A [operação ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) permite-lhe encontrar a {InstanceId} a que tem acesso.
 - {CID}: GUID de um registo de cliente unificado. Exemplo: `ce759201f786d590bf2134bff576c369`.
@@ -31,7 +31,7 @@ Tem de modificar as amostras de consulta para as fazer trabalhar nos ambientes d
 
 ## <a name="customer"></a>Cliente
 
-A tabela seguinte contém um conjunto de consultas de amostra para a entidade *Cliente*.
+Consultas de amostra para a entidade *Cliente*.
 
 |Tipo de consulta |Exemplo  | Nota  |
 |---------|---------|---------|
@@ -46,7 +46,7 @@ A tabela seguinte contém um conjunto de consultas de amostra para a entidade *C
 
 ## <a name="unified-activity"></a>Atividade unificada
 
-A tabela seguinte contém um conjunto de consultas de exemplo para a entidade *UnifiedActivity*.
+Consultas de amostra para a entidade *UnifiedActivity*.
 
 |Tipo de consulta |Exemplo  | Nota  |
 |---------|---------|---------|
@@ -59,7 +59,7 @@ A tabela seguinte contém um conjunto de consultas de exemplo para a entidade *U
 
 ## <a name="other-examples"></a>Outros exemplos
 
-A tabela seguinte contém um conjunto de consultas de amostra para outras entidades
+Consultas de exemplo para outras entidades.
 
 |Tipo de consulta |Exemplo  | Nota  |
 |---------|---------|---------|
