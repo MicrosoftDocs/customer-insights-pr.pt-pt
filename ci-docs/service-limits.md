@@ -8,12 +8,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 421e1aa41a54a4b8c34ac27fc7c02e510d2bb588
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
+ms.openlocfilehash: 7f38b7d9985368fc38107f1f360f0603a7fcc8e6
+ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387170"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9411754"
 ---
 # <a name="service-limits-in-customer-insights"></a>Limites do serviço no Customer Insights
 
@@ -23,7 +23,7 @@ ms.locfileid: "9387170"
 
 | Area  | Limites  | Notas |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| Segmentos, medidas e previsões | 300  | O número total de [segmentos](segments.md), [medidas](measures.md) e [previsões](predictions.md) combinados não pode ultrapassar os 300.  |
+| Segmentos, medidas e previsões | 300  | O número total de [segmentos](segments.md), [medidas](measures.md) e [previsões](predictions-overview.md) combinados não pode ultrapassar os 300.  |
 | Relações | 20 níveis de profundidade em relações nos caminhos de entidades. | Ao criar [segmentos](segments.md) ou [medidas](measures.md) utilizando a interface de construtor, os caminhos de entidades podem ter até 20 saltos de relações entre a entidade inicial e a entidade de destino.  |
 
 ## <a name="fair-scheduling-of-jobs"></a>Agendamento de tarefas justo

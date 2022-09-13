@@ -8,12 +8,12 @@ ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: a87af80fa713a1ac70493345c0c920e416692b0f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 32240c8c43751d8514d38b392f23ef4138d50ee2
+ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9081691"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9411845"
 ---
 # <a name="predictions-overview"></a>Descrição geral das predições
 
@@ -39,14 +39,11 @@ A maneira mais fácil de começar com a previsão de dados são os modelos prede
 
 > [!TIP]
 > Recomendamos que atualize regularmente os modelos de caixa de origem com dados atualizados para garantir que informam com precisão o caso de utilização do seu negócio. Os dados são atualizados ad hoc quando o sistema ingere origens de dados novas ou atualizadas. No entanto, os modelos apenas voltarão a classificar neste caso e continuarão a utilizar os dados de formação existentes.
-> 
+>
 > Pode configurar uma **Agenda de atualização** definindo a agenda de reeducação do modelo na experiência de configuração. O modelo irá reeducar e voltar a classificar nesta agenda, que pode alterar a qualquer momento.
-
 
 ## <a name="azure-machine-learning-integration"></a>Integração do Azure Machine Learning
 
 Se uma organização já utiliza cenários aprendizagem automática baseados em experiências do Azure Machine Learning, a funcionalidade de modelos personalizados no Customer Insights ajuda a interligá-los. Crie fluxos de trabalho que o ajudem a escolher os dados de que pretende gerar informações e mapeie os resultados para os seus perfis de clientes unificados. Para mais informações, consulte [Modelos personalizados de aprendizagem automática](custom-models.md).
 
-## <a name="ai-builder-prediction"></a>Predição do AI Builder
-
-Por vezes, os conjuntos de dados estão incompletos e alguns valores estão em falta. O Customer Insights pode ajudar a prever valores em falta para a entidade e segmentos do Cliente. Para mais informações, consulte [Completar os seus dados parciais com predições](predictions.md).
+[!INCLUDE [footer-include](includes/footer-banner.md)]

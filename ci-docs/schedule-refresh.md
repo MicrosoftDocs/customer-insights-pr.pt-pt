@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: ce10fcfe9906d33209270f8f6930a51b045b13e2
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 949ea071ca41127b0c45488d5d7af3f6aa4e1c35
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246347"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9395970"
 ---
 # <a name="schedule-system-refresh"></a>Atualização de dados de sistema
 
@@ -36,7 +36,7 @@ Agende as atualizações automáticas de todas as suas [origens de dados ingerid
 
 1. Escolha entre as atualizações **Semanal** (predefinição) e **Diária**. Se pretender agendar atualizações semanais, selecione um ou mais dias nos quais pretende executar a atualização.
 
-1. Defina o seu **Fuso horário** e, em seguida, use a lista suspensa **Hora** para definir o tempo de atualização. Se pretende agendar várias atualizações num único dia, selecione **Adicionar outra hora**.
+1. Defina o seu **Fuso horário** e, em seguida, use a lista suspensa **Hora** para definir o tempo de atualização. Se pretende agendar várias atualizações num único dia, selecione **Adicionar outra hora**. Pode adicionar até quatro atualizações.
 
 1. Selecione **Guardar** para aplicar as alterações.
 
