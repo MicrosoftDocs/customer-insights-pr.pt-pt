@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 44f58d694b9bd35a8d8c04d487d40743291e0566
+ms.sourcegitcommit: ef3e17134d44d2731605381ea0385dbc5aef6120
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304073"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9460204"
 ---
 # <a name="exports-preview-overview"></a>Descrição geral de exportações (pré-visualização)
 
@@ -81,6 +81,11 @@ Selecione uma exportação para ver as ações disponíveis.
 ## <a name="schedule-and-run-exports"></a>Agendar e executar exportações
 
 Cada exportação que configura tem uma agenda de atualização. Durante uma atualização, o sistema procura dados novos ou atualizados a incluir numa exportação. Por predefinição, as exportações são executadas como parte de cada [atualização de sistema agendada](schedule-refresh.md). Pode personalizar a agenda de atualização ou desativá-la para executar exportações manualmente.
+
+> [!TIP]
+> Minimize o tempo de processamento das exportações de segmentos com as seguintes melhores práticas:
+> - Distribua entidades de segmento em exportações diferentes.
+> - Evite o agendamento de todas as exportações ao mesmo tempo. Deixe 30 minutos ou uma hora entre a hora agendada de cada exportação.
 
 As agendas de exportação dependem do estado do seu ambiente. Se houver atualizações em curso sobre as [dependências](system.md#refresh-processes) quando uma exportação agendada deveria começar, o sistema completará primeiro as atualizações e, em seguida, executará a exportação. A coluna **Atualizada** mostra quando uma exportação foi atualizada pela última vez.
 

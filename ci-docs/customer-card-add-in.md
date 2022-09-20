@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 65fd80cc563b8b3b8c8874b66f179f8b0c7a19f0
+ms.sourcegitcommit: fe33cc76d015232ff8737f77193f44f2b884bb6b
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194937"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "9473656"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Suplemento de Cartões de Cliente para Aplicações do Dynamics 365 (pré-visualização)
 
@@ -32,7 +32,8 @@ Obtenha uma visão de 360 graus dos seus clientes diretamente nas aplicações D
 - Para que os seus dados do Dynamics 365 mapeiem para perfis de clientes do Customer Insights, recomendamos que sejam [ingeridos a partir da aplicação do Dynamics 365 utilizando o conector do Microsoft Dataverse](connect-power-query.md). Se utilizar um método diferente para ingerir contactos do Dynamics 365 (ou contas), certifique-se de que o campo `contactid` (ou `accountid`) é definido como a [chave primária para essa origem de dados durante o processo de unificação de dados](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Todos os utilizadores do Dynamics 365 do Suplemento de Cartões de Cliente têm de ser [adicionados como utilizadores](permissions.md) no Customer Insights para verem os dados.
 - [Capacidades de pesquisa e de filtro configuradas](search-filter-index.md) no Customer Insights.
-- Cada controlo de suplemento baseia-se em dados específicos no Customer Insights. Alguns dados e controlos só estão disponíveis em ambientes de tipos específicos. A configuração do suplemento informá-lo-á se não estiver disponível um controlo devido ao tipo de ambiente selecionado. Mais informações sobre [casos de utilização do ambiente](work-with-business-accounts.md).
+- Alguns dados e controlos só estão disponíveis em ambientes de tipos específicos. A configuração do suplemento informá-lo-á se não estiver disponível um controlo devido ao tipo de ambiente selecionado. Este erro será apresentado no controlo aquando da sua composição. Mais informações sobre [casos de utilização do ambiente](work-with-business-accounts.md).
+- Cada controlo de suplemento baseia-se em dados específicos no Customer Insights.
   - **Controlo da medida**: requer [medidas de atributo de cliente configuradas](measures.md).
   - **Controlo de inteligência**: requer dados gerados utilizando [predições ou modelos personalizados](predictions-overview.md).
   - **Controlo de detalhes do cliente**: mostra todos os campos do perfil disponíveis no perfil do cliente unificado.
