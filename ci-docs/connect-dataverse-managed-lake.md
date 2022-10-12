@@ -1,7 +1,7 @@
 ---
 title: Conecte-se aos dados num data lake gerido do Microsoft Dataverse
 description: Importar dados de um data lake gerido do Microsoft Dataverse.
-ms.date: 07/26/2022
+ms.date: 08/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,12 +11,12 @@ ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: b21150a1c51bdad35250cae7fde7f38a014ec876
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 0d9612525344c8ac99b6e3edfe33a426dc0a474b
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206967"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609810"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Conecte-se aos dados num data lake gerido do Microsoft Dataverse
 
@@ -70,5 +70,93 @@ Para se ligar a um data lake do Dataverse diferente, [crie uma nova origem de da
 1. Clique em **Guardar** para aplicar as alterações e regressar à página **Origens de dados**.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupted-data"></a>Razões comuns para erros de ingestão ou dados danificados
+
+As verificações que se seguem são executadas nos dados ingeridos para expor registos danificados:
+
+- O valor de um campo não corresponde ao tipo de dados da sua coluna.
+- Os campos contêm carateres que fazem com que as colunas não correspondam ao esquema esperado. Por exemplo: aspas mal formatadas, aspas não fechadas ou carateres de nova linha.
+- Se existirem as colunas datetime/date/datetimeoffset, o respetivo formato tem de ser especificado no modelo se não seguir o formato ISO padrão.
+
+### <a name="schema-or-data-type-mismatch"></a>Erro de correspondência de esquema ou de tipo de dados
+
+Se os dados não estão em conformidade com o esquema, os registos são classificados como danificados. Corrija os dados de origem ou o esquema e volte a ingerir os dados.
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Campos datetime no formato errado
+
+Os campos datetime na entidade não estão em formato ISO ou en-US. O formato datetime predefinido no Customer Insights está no formato en-US. Todos os campos datetime numa entidade devem estar no mesmo formato. O Customer Insights suporta outros formatos, desde que as anotações ou caraterísticas sejam feitas ao nível da origem ou da entidade no model ou manifest.json. Por exemplo: 
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  Num manifest.json, o formato datetime pode ser especificado ao nível da entidade ou ao nível do atributo. Ao nível da entidade, utilize "exhibitsTraits" na entidade no *.manifest.cdm.json para definir o formato datetime. Ao nível do atributo, utilize "appliedTraits" no atributo em the entityname.cdm.json.
+
+**Manifest.json ao nível da entidade**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entity.json ao nível do atributo**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

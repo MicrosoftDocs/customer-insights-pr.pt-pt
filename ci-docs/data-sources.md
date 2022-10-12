@@ -1,7 +1,7 @@
 ---
 title: Descrição geral das origens de dados
 description: Saiba como importar ou ingerir dados a partir de várias origens.
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: f89da3cf5b56e367bd673740f80cd82ec0907b28
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245663"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610066"
 ---
 # <a name="data-sources-overview"></a>Descrição geral das origens de dados
 
@@ -65,7 +65,9 @@ Selecione uma origem de dados para ver as ações disponíveis.
 
 ## <a name="refresh-data-sources"></a>Atualizar origens de dados
 
-As origens de dados podem ser atualizadas com agendamento automático ou atualizadas manualmente a pedido. As [origens de dados no local](connect-power-query.md#add-data-from-on-premises-data-sources) atualizam-se nas próprias agendas, que são configuradas durante a ingestão de dados. Para as origens de dados anexadas, a ingestão de dados consome os dados mais recentes disponíveis dessa origem de dados.
+As origens de dados podem ser atualizadas com agendamento automático ou atualizadas manualmente a pedido. As [origens de dados no local](connect-power-query.md#add-data-from-on-premises-data-sources) atualizam-se nas próprias agendas, que são configuradas durante a ingestão de dados. Para sugestões de resolução de problemas, consulte [Resolução de problemas de atualização de origens de dados baseadas no Power Query PPDF](connect-power-query.md#troubleshoot-ppdf-power-query-based-data-source-refresh-issues).
+
+Para as origens de dados anexadas, a ingestão de dados consome os dados mais recentes disponíveis dessa origem de dados.
 
 Aceda a **Admin** > **Sistema** > [**Agenda**](schedule-refresh.md) para configurar atualizações agendadas pelo sistema das suas origens de dados ingeridas.
 
@@ -76,5 +78,37 @@ Para atualizar uma origem de dados a pedido:
 1. Selecione os origem de dados que pretende atualizar e selecione **Atualizar**. A origem dos dados é agora ativada para uma atualização manual. Atualizar uma origem de dados irá atualizar tanto o esquema da entidade como os dados para todas as entidades especificadas na origem de dados.
 
 1. Selecione o estado para abrir o painel **Detalhes do progresso** e ver o progresso. Para cancelar a tarefa, selecione **Cancelar tarefa** na parte inferior do painel.
+
+## <a name="corrupt-data-sources"></a>Origens de dados danificadas
+
+Os dados que estão a ser ingeridos poderão ter registos danificados, o que poderá fazer com que o processo de ingestão de dados seja concluído com erros ou avisos.
+
+> [!NOTE]
+> Se a ingestão de dados for concluída com erros, o processamento subsequente (tal como a unificação ou a criação de atividades) que tira partido desta origem de dados serão ignorados. Se a ingestão foi concluída com avisos, o processamento subsequente continua, mas alguns dos registos poderão não ser incluídos.
+
+Estes erros podem ser vistos nos detalhes da tarefa.
+
+:::image type="content" source="media/corrupt-task-error.png" alt-text="Detalhe da tarefa a mostrar um erro de dados danificados.":::
+
+Os registos danificados são mostrados em entidades criadas pelo sistema.
+
+### <a name="fix-corrupt-data"></a>Corrigir dados danificados
+
+1. Para ver os dados danificados, aceda a **Dados** > **Entidades** e procure as entidades danificadas na secção **Sistema**. O esquema de nomenclatura de entidades danificadas: "DataSourceName_EntityName_corrupt".
+
+1. Selecione uma entidade danificada e, em seguida, o separador **Dados**.
+
+1. Identifique os campos danificados num registo e a razão.
+
+   :::image type="content" source="media/corruption-reason.png" alt-text="Razão do corrompimento." lightbox="media/corruption-reason.png":::
+
+   > [!NOTE]
+   > **Dados** > **Entidades** só mostram uma parte dos registos danificados. Para ver todos os registos danificados, exporte os ficheiros para um contentor na conta de armazenamento utilizando o [processo de exportação do Customer Insights](export-destinations.md). Se tiver utilizado a sua própria conta de armazenamento, também pode ver a pasta do Customer Insights na sua conta de armazenamento.
+
+1. Corrija os dados danificados. Por exemplo, para origens de dados do Azure Data Lake, [corrija os dados no Data Lake Storage ou atualize os tipos de dados no ficheiro manifest/model.json](connect-common-data-model.md#common-reasons-for-ingestion-errors-or-corrupt-data). Para origens de dados do Power Query, corrija os dados no ficheiro de origem e [corrija o tipo de dados no passo de transformação](connect-power-query.md#data-type-does-not-match-data) na página **Power Query – Editar consultas**.
+
+Após a próxima atualização da origem de dados, os registos corrigidos são ingeridos para o Customer Insights e transmitidos para processos a jusante.
+
+Por exemplo, uma coluna de "aniversário" tem o tipo de dados definido como "data". Um registo de cliente tem o seu aniversário introduzido como "01/01/19777". O sistema sinaliza este registo como danificado. Altere o aniversário no sistema de origem para "1977". Após uma atualização automatizada de origens de dados, o campo tem agora um formato válido e o registo é removido da entidade danificada.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

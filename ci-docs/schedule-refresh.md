@@ -1,7 +1,7 @@
 ---
 title: Atualização de dados de sistema
 description: Agendar a hora a que o sistema deve ser atualizado
-ms.date: 08/09/2022
+ms.date: 09/27/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
@@ -11,19 +11,19 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: 949ea071ca41127b0c45488d5d7af3f6aa4e1c35
-ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
+ms.openlocfilehash: 4aac02b570357d2086f7a9d7340b0e4837157a0b
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "9395970"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610342"
 ---
 # <a name="schedule-system-refresh"></a>Atualização de dados de sistema
 
 Agende as atualizações automáticas de todas as suas [origens de dados ingeridas](data-sources.md). As atualizações automáticas ajudam a garantir que as atualizações das suas origens de dados são refletidas nos perfis de clientes unificados.
 
 > [!NOTE]
-> As origens de dados do Power Query geridas por si atualizam as suas próprias agendas. Para agendar a atualização de origens de dados do Power Query geridas por si, configure as definições de atualização nessa origem de dados específica na página **Origens de dados**.
+> As origens de dados do Power Query geridas por si atualizam as suas próprias agendas. Para agendar a atualização de origens de dados do Power Query geridas por si, configure as definições de atualização nessa origem de dados específica na página **Origens de dados**. Alinhe a temporização com a agenda de atualização de dados a jusante para que as atualizações não ocorram todas ao mesmo tempo.
 > :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Definições de atualização do fluxo de dados.":::
 
 ## <a name="set-system-refresh-schedule"></a>Definir agendamento da atualização do sistema

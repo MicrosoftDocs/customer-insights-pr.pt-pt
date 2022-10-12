@@ -1,7 +1,7 @@
 ---
 title: Ligar a uma pasta do Common Data Model com uma conta Azure Data Lake
 description: Trabalhe com dados do Common Data Model utilizando Azure Data Lake Storage.
-ms.date: 07/27/2022
+ms.date: 09/29/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
-ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
+ms.openlocfilehash: c12603b9ed8a814356a0f8d0137e97afc749b87c
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "9396105"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609962"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Ligar a dados no Azure Data Lake Storage
 
@@ -43,6 +43,10 @@ Ingerir dados para o Dynamics 365 Customer Insights utilizando a sua conta do Az
 - O utilizador que configura a ligação de origem de dados necessita do mínimo de permissões de contribuidor de dados de armazenamento de blobs na conta de armazenamento.
 
 - Os dados no Data Lake Storage devem seguir o padrão do Common Data Model para armazenamento dos seus dados e ter o manifesto do Common Data Model para representar o esquema dos ficheiros de dados (*.csv ou *.parquet). O manifesto tem de fornecer os detalhes das entidades, tais como colunas de entidade e tipos de dados, bem como a localização do ficheiro de dados e o tipo de ficheiro. Para mais informações, consulte sobre [O manifesto do Common Data Model](/common-data-model/sdk/manifest). Se o manifesto não estiver presente, os Utilizadores administradores com o acesso de Proprietário de Dados de Blob de Armazenamento ou de Contribuidor de Dados de Blob de Armazenamento podem definir o esquema durante a ingestão dos dados.
+
+## <a name="recommendations"></a>Recomendações
+
+Para um desempenho ideal, o Customer Insights recomenda que o tamanho de uma partição seja de 1 GB ou menos e o número de ficheiros de partição numa pasta não pode exceder 1000.
 
 ## <a name="connect-to-azure-data-lake-storage"></a>Ligar ao Azure Data Lake Storage
 
@@ -199,5 +203,101 @@ Pode atualizar a opção *Ligar a conta de armazenamento utilizando*. Para obter
 1. Clique em **Guardar** para aplicar as alterações e regressar à página **Origens de dados**.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Razões comuns para erros de ingestão ou dados danificados
+
+Durante a ingestão de dados, algumas das razões mais comuns para que um registo possa ser considerado danificado incluem:
+
+- Os tipos de dados e os valores de campo não corresponderem entre o ficheiro de origem e o esquema
+- O número de colunas no ficheiro de origem não corresponde ao esquema
+- Os campos contêm carateres que fazem com que as colunas se desviem em comparação ao esquema esperado. Por exemplo: aspas mal formatadas, aspas não fechadas, carateres de nova linha ou carateres com separadores.
+- Faltam ficheiros de partição
+- Se existirem as colunas datetime/date/datetimeoffset, o respetivo formato tem de ser especificado no esquema se não seguir o formato padrão.
+
+### <a name="schema-or-data-type-mismatch"></a>Erro de correspondência de esquema ou de tipo de dados
+
+Se os dados não se conformarem com o esquema, o processo de ingestão é concluído com erros. Corrija os dados de origem ou o esquema e volte a ingerir os dados.
+
+### <a name="partition-files-are-missing"></a>Faltam ficheiros de partição
+
+- Se a ingestão tiver sido bem sucedida sem quaisquer registos danificados, mas não vir quaisquer dados, edite o ficheiro model.json ou manifest.json para se certificar de que são especificadas partições. Em seguida, [atualize a origem de dados](data-sources.md#refresh-data-sources).
+
+- Se a ingestão de dados ocorrer ao mesmo tempo que as origens de dados estão a ser atualizadas durante uma atualização automática da agenda, os ficheiros de partição poderão estar vazios ou não disponíveis para processamento pelo Customer Insights. Para alinhar com a agenda de atualização a jusante, altere a [agenda de atualização do sistema](schedule-refresh.md) ou a agenda de atualização para a origem de dados. Alinhe a temporização de modo a que as atualizações não ocorram de uma só vez e fornece os dados mais recentes a serem processados no Customer Insights.
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Campos datetime no formato errado
+
+Os campos datetime na entidade não estão em formato ISO 8601 ou en-US. O formato datetime predefinido no Customer Insights está no formato en-US. Todos os campos datetime numa entidade devem estar no mesmo formato. O Customer Insights suporta outros formatos, desde que as anotações ou caraterísticas sejam feitas ao nível da origem ou da entidade no model ou manifest.json. Por exemplo: 
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  Num manifest.json, o formato datetime pode ser especificado ao nível da entidade ou ao nível do atributo. Ao nível da entidade, utilize "exhibitsTraits" na entidade no *.manifest.cdm.json para definir o formato datetime. Ao nível do atributo, utilize "appliedTraits" no atributo em the entityname.cdm.json.
+
+**Manifest.json ao nível da entidade**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entity.json ao nível do atributo**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

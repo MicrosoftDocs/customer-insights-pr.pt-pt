@@ -1,23 +1,23 @@
 ---
 title: Guia de exemplo de predição de valor vitalício do cliente (CLV)
 description: Utilize este guia de exemplo para experimentar o modelo de predição de valor vitalício do cliente.
-ms.date: 03/31/2022
+ms.date: 09/15/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 2013533ed225a396d21e51e63297d7608ce58ac6
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: fec43b279326daa17fb179181f5e310c99d48bb7
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051651"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609652"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Guia de exemplo de predição de valor vitalício do cliente (CLV)
 
-Este guia irá orientá-lo através de exemplo de ponta a ponta da Predição de valor vitalício do cliente (CLV) no Customer Insights utilizando dados de exemplo.
+Este guia orienta-o através de exemplo de ponto a ponto da predição de Valor vitalício do cliente (CLV) no Customer Insights utilizando dados de amostra. Recomendamos-lhe que esta predição [num ambiente novo](manage-environments.md).
 
 ## <a name="scenario"></a>Cenário
 
@@ -25,20 +25,19 @@ A Contoso é uma empresa que produz máquinas de café, bem como café de alta q
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Pelo menos, [Permissões de contribuinte](permissions.md) no Customer Insights.
-- Recomendamos-lhe que implemente as seguintes etapas [num ambiente novo](manage-environments.md).
+- Pelo menos [Permissões do contribuinte](permissions.md).
 
 ## <a name="task-1---ingest-data"></a>Tarefa 1 - Ingerir dados
 
-Reveja os artigos [sobre a ingestão de dados](data-sources.md) e a [importação de origens de dados utilizando conectores do Power Query](connect-power-query.md). A seguinte informação pressupõe que está familiarizado com a ingestão de dados em geral.
+Reveja os artigos [sobre a ingestão de dados](data-sources.md) e [ligar a uma origem de dados do Power Query](connect-power-query.md). As seguintes informações pressupõem que está familiarizado com a ingestão de dados em geral.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingerir dados de clientes a partir da plataforma eCommerce
 
-1. Criar uma origem de dados com o nome **eCommerce**, escolha a opção de importação, e selecione o conetor **Texto/CSV**.
+1. Crie uma origem de dados do Power Query com o nome **eCommerce** e selecione o conetor **Texto/CSV**.
 
-1. Introduza o URL para contactos de eCommerce [https://aka.ms/ciadclasscontacts](https://aka.ms/ciadclasscontacts).
+1. Introduza o URL para contactos de eCommerce https://aka.ms/ciadclasscontacts.
 
-1. Ao editar os dados, selecione  **Transformar**  e, em seguida,  **Utilizar primeira fila como cabeçalho**.
+1. Ao editar os dados, selecione **Transformar** e, em seguida, **Utilizar primeira fila como cabeçalho**.
 
 1. Atualizar o tipo de dados para as colunas listadas abaixo:
    - **DateOfBirth**: Data
@@ -46,7 +45,7 @@ Reveja os artigos [sobre a ingestão de dados](data-sources.md) e a [importaçã
 
    :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Transformar data de nascimento em data.":::
 
-1. No campo "Nome" no painel da direita, altere o nome da sua origem de dados de **Consulta** para **eCommerceContacts**
+1. No campo **Nome** no painel da direita, altere o nome da sua origem de dados para **eCommerceContacts**
 
 1. **Guardar** a origem dos dados.
 
@@ -56,126 +55,136 @@ Reveja os artigos [sobre a ingestão de dados](data-sources.md) e a [importaçã
 
 1. Introduza o URL para dados de **Compras online** https://aka.ms/ciadclassonline.
 
-1. Ao editar os dados, selecione **Transformar** e depois **Usar primeira fila como cabeçalho**.
+1. Ao editar os dados, selecione **Transformar** e, em seguida, **Utilizar primeira fila como cabeçalho**.
 
 1. Atualizar o tipo de dados para as colunas listadas abaixo:
    - **PurchasedOn**: Data/Hora
    - **TotalPrice**: Moeda
 
-1. No campo **Nome** no painel lateral, mude o nome da sua origem de dados de **Consulta** para **eCommercePurchases**.
+1. No campo **Nome** no painel lateral, mude o nome da sua origem de dados para **eCommercePurchases**.
 
 1. **Guardar** a origem dos dados.
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Ingerir dados de clientes a partir do esquema de fidelidade
 
-1. Criar uma origem de dados com o nome **LoyaltyScheme**, escolha a opção de importação, e selecione o conetor **Texto/CSV**.
+1. Crie uma origem de dados com o nome **LoyaltyScheme** e selecione o conetor **Texto/CSV**.
 
-1. Introduza o URL para contactos de eCommerce https://aka.ms/ciadclasscustomerloyalty.
+1. Introduza o URL para clientes fidelizados https://aka.ms/ciadclasscustomerloyalty.
 
-1. Ao editar os dados, selecione **Transformar** e depois **Usar primeira fila como cabeçalho**.
+1. Ao editar os dados, selecione **Transformar** e, em seguida, **Utilizar primeira fila como cabeçalho**.
 
 1. Atualizar o tipo de dados para as colunas listadas abaixo:
    - **DateOfBirth**: Data
    - **RewardsPoints**: Número inteiro
    - **CreatedOn**: Data/Hora
 
-1. No campo **Nome** no painel da direita, altere o nome da sua origem de dados de **Consulta** para **loyCustomers**.
+1. No campo **Nome** no painel da direita, altere o nome da sua origem de dados para **loyCustomers**.
 
 1. **Guardar** a origem dos dados.
 
 ### <a name="ingest-customer-data-from-website-reviews"></a>Ingerir dados de clientes a partir de avaliações de websites
 
-1. Criar uma origem de dados com o nome **Website**, escolha a opção de importação, e selecione o conetor **Texto/CSV**.
+1. Crie uma origem de dados com o nome **Website** e selecione o conetor **Texto/CSV**.
 
-1. Introduza o URL para contactos de eCommerce https://aka.ms/CI-ILT/WebReviews.
+1. Introduza o URL para as críticas ao site https://aka.ms/CI-ILT/WebReviews.
 
-1. Ao editar os dados, selecione **Transformar** e depois **Usar primeira fila como cabeçalho**.
+1. Ao editar os dados, selecione **Transformar** e, em seguida, **Utilizar primeira fila como cabeçalho**.
 
 1. Atualizar o tipo de dados para as colunas listadas abaixo:
-
    - **ReviewRating**: número Decimal
    - **ReviewDate**: Data
 
-1. No campo "Nome" no painel direito, mude o nome da sua origem de dados de **Consulta** para **Revisão**.
+1. No campo **Nome** no painel direito, mude o nome da sua origem de dados para **Críticas**.
 
 1. **Guardar** a origem dos dados.
 
 ## <a name="task-2---data-unification"></a>Tarefa 2 - Unificação de dados
 
+Reveja o artigo [sobre unificação de dados](data-unification.md). As seguintes informações pressupõem que está familiarizado com a unificação de dados em geral.
+
 [!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
-## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Tarefa 3 – Configurar a predição de valor vitalício do cliente
+## <a name="task-3---create-transaction-history-activity"></a>Tarefa 3 – Criar atividade do histórico de transações
 
-Com os perfis de clientes unificados no lugar, podemos agora executar a predição de valor vitalício do cliente. Para passos detalhados, consulte [predição do Valor Vitalício do Cliente](predict-customer-lifetime-value.md).
+Reveja o artigo [sobre atividades do cliente](activities.md). As seguintes informações pressupõem que está familiarizado com a criação de atividades em geral.
 
-1. Aceda a  **Inteligência**  > **Predições**  e selecione o **Modelo de valor vitalício do cliente**.
+1. Crie uma atividade denominada **eCommercePurchases** com a entidade *eCommercePurchases:eCommerce* e a respetiva chave primária, **PurchaseId**.
 
-1. Veja as informações no painel lateral e selecione **Começar**.
+1. Crie uma relação entre *eCommercePurchases:eCommerce* e *eCommerceContacts:eCommerce* com o **ContactID** como a chave externa para ligar as duas entidades.
+
+1. Selecione **TotalPrice** para **EventActivity** e **PurchasedOn** para **TimeStamp**.
+
+1. Selecione **SalesOrderLine** para o **Tipo de Atividade** e mapeie semanticamente os dados de atividade.
+
+1. Execute a atividade.
+
+1. Adicione outra atividade e mapeie os respetivos nomes dos campos para os campos correspondentes:
+   - **Entidade de atividade**: Reviews:Website
+   - **Chave primária**: ReviewId
+   - **Carimbo de data/hora**: ReviewDate
+   - **Atividade de evento**: ActivityTypeDisplay
+   - **Detalhe adicional**: ReviewRating
+   - **Tipo de atividade**: Review
+
+1. Execute a atividade.
+
+## <a name="task-4---configure-customer-lifetime-value-prediction"></a>Tarefa 4 – Configurar a predição de valor vitalício do cliente
+
+Com os perfis de clientes unificados em vigor e a atividade criada, execute a predição de valor vitalício do cliente (CLV). Para passos detalhados, consulte [predição do Valor Vitalício do Cliente](predict-customer-lifetime-value.md).
+
+1. Aceda a **Inteligência** > **Predições**.
+
+1. No separador **Criar**, selecione **Utilizar modelo** no mosaico **Valor vitalício do cliente**.
+
+1. Selecione **Introdução**.
 
 1. Nomeie o modelo **Predição de CLV de eCommerce OOB** e a entidade de saída  **OOBeCommerceCLVPrediction**.
 
-1. Defina preferências de modelo para o modelo CLV:
-   - **Período de tempo da predição**: **12 meses ou 1 ano**. Esta definição define até onde no futuro pretende prever o valor vitalício do cliente.
-   - **Clientes ativos**: especifique o que clientes ativos significam para o seu negócio. Defina o intervalo de tempo histórico em que um cliente tem de ter tido, pelo menos, uma transação para ser considerado ativo. O modelo apenas irá prever o CLV para clientes ativos. Escolha entre deixar o modelo calcular o período de tempo com base em dados de transações históricos ou fornecer um intervalo de tempo específico. Neste guia de exemplo, **deixámos o modelo calcular o intervalo de compra**, que é a opção predefinida.
-   - **Clientes de valor elevado**: defina clientes de valor elevado como um percentil de clientes que mais pagam. O modelo utiliza esta entrada para fornecer resultados que se adequam à sua definição de negócio de clientes de valor elevado. Pode escolher deixar o modelo definir os clientes de valor elevado. Utiliza uma regra heurística que deriva o percentil. Também pode definir clientes de valor elevado como um percentil de clientes que mais pagam futuros. Neste guia de exemplo, definimos manualmente clientes de valor elevado como **30%** dos clientes que pagam ativos e selecionamos **Seguinte**.
+1. Definir preferências de modelo:
+   - **Período de tempo da predição**: **12 meses ou 1 ano** para definir até onde pretende prever o CLV.
+   - **Clientes ativos**: **Permite que o modelo calcule o intervalo de compras**, o qual é intervalo de tempo em que um cliente deve ter tido pelo menos uma transação a considerar ativa.
+   - **Clientes de alto valor**: defina manualmente clientes de alto valor como **principais 30% de clientes ativos**.
 
     :::image type="content" source="media/clv-model-preferences.png" alt-text="Passo de preferências na experiência guiada para o modelo CLV.":::
 
+1. Selecione **Seguinte**.
+
 1. No passo **Dados Exigidos**, selecione **Adicionar dados** para fornecer os dados do histórico de transações.
 
-1. Adicione e entidade **eCommercePurchases : eCommerce** e mapeie os atributos que são exigidos pelo modelo:
-   - ID da Transação: eCommerce.eCommercePurchases.PurchaseId
-   - Data da transação: eCommerce.eCommercePurchases.PurchasedOn
-   - Montante da transação: eCommerce.eCommercePurchases.TotalPrice
-   - ID do Produto: eCommerce.eCommercePurchases.ProductId
+    :::image type="content" source="media/clv-model-required.png" alt-text="Adicionar passo de dados obrigatórios na experiência guiada para o modelo CLV.":::
+
+1. Selecione **SalesOrderLine** e a entidade eCommercePurchases e selecione **Seguinte**. Os dados obrigatórios são preenchidos automaticamente a partir da atividade. Selecione **Guardar** e, em seguida, **Seguinte**.
+
+1. O passo **Dados adicionais (opcional)** permite-lhe adicionar mais dados de atividade do cliente para obter mais informações para interações com o cliente. Para este exemplo, selecione **Adicionar dados** e adicione a atividade de revisão Web.
 
 1. Selecione **Seguinte**.
 
-1. Configure a relação entre a entidade **eCommercePurchases : eCommerce** e  **eCommerceContacts : eCommerce**.
+1. No passo **Atualizações de dados**, selecione **Mensal** para a agenda do modelo.
 
-1. O passo **Dados adicionais (opcional)** permite-lhe adicionar mais dados de atividade do cliente. Estes dados podem ajudar a obter mais informações sobre as interações do cliente com o seu negócio, o que pode contribuir para o CLV. Adicionar interações chave do cliente, como o histórico de registos Web, registos de suporte ao cliente ou recompensas do programa pode melhorar a precisão das predições. Selecione **Adicionar dados** para incluir mais dados de atividade do cliente.
+1. Selecione **Seguinte**.
 
-1. Adicione a entidade de atividade do cliente e mapeie os respetivos nomes dos campos para os campos correspondentes exigidos pelo modelo:
-   - Entidade de atividade do cliente: Reviews:Website
-   - Chave primária: Website.Reviews.ReviewId
-   - Carimbo de data/hora: Website.Reviews.ReviewDate
-   - Evento (nome da atividade): Website.Reviews.ActivityTypeDisplay
-   - Detalhes (montante ou valor): Website.Reviews.ReviewRating
+1. Depois de rever todos os detalhes, selecione **Guardar e Executar**.
 
-1. Selecione **Seguinte** e configure a atividade e a relação entre os dados de transação e os dados do cliente:  
-   - Tipo de atividade: escolha um existente
-   - Etiqueta de atividade: Review
-   - Etiqueta correspondente: Website.Reviews.UserId
-   - Entidade de cliente: eCommerceContacts:eCommerce
-   - Relação: WebsiteReviews
+## <a name="task-5---review-model-results-and-explanations"></a>Tarefa 5 - Rever resultados do modelo e explicações
 
-1. Selecione **Seguinte** para definir o agendar do modelo.
+Deixe o modelo completar a formação e a pontuação dos dados. Reveja as [resultados do modelo e explicações do CLV](predict-customer-lifetime-value.md#view-prediction-results).
 
-   O modelo precisa de treinar regularmente para aprender novos padrões quando há novos dados ingeridos. Para este exemplo, escolha **Mensalmente**.
-
-1. Depois de rever todos os detalhes, selecione  **Guardar e Executar**.
-
-## <a name="task-4---review-model-results-and-explanations"></a>Tarefa 4 - Rever resultados do modelo e explicações
-
-Deixe o modelo completar a formação e a pontuação dos dados. Em seguida, pode rever os resultados e explicações do modelo CLV. Para obter mais informações, consulte [Rever um estado de predição e resultados](predict-customer-lifetime-value.md#review-prediction-status-and-results).
-
-## <a name="task-5---create-a-segment-of-high-value-customers"></a>Tarefa 5 – Criar um segmento de clientes de valor elevado
+## <a name="task-6---create-a-segment-of-high-value-customers"></a>Tarefa 6 – Criar um segmento de clientes de valor elevado
 
 A execução do modelo cria uma nova entidade, que é listada em **Dados** > **Entidades**. Pode criar um novo segmento de cliente baseado na entidade criada pelo modelo.
 
-1. Aceda a **Segmentos**. 
+1. Na página de resultados, selecione **Criar segmento**.
 
-1. Selecione  **Novo** e escolha **Criar a partir de** > **Inteligência**.
+1. Crie uma regra utilizando a entidade **OOBeCommerceCLVPrediction** e defina o segmento:
+   - **Campo**: CLVScore
+   - **Operador**: maior do que
+   - **Valor**: 1500
 
-   ![Criar um segmento com a saída do modelo.](media/segment-intelligence.png)
+1. Selecione **Guardar** e **Execute** o segmento.
 
-1. Selecione a entidade  **OOBeCommerceCLVPrediction** e defina o segmento:
-  - Campo: CLVScore
-  - Operador: maior do que
-  - Valor: 1500
+Tem agora um segmento que identifica clientes que se prevê gerarem mais de 1500$ de receitas nos próximos 12 meses. Este segmento é atualizado dinamicamente se mais dados forem ingeridos. Para obter mais informações, veja [Criar e gerir segmentos](segments.md).
 
-1. Selecione **Rever** e **Guarde** o segmento.
+> [!TIP]
+> Também pode criar um segmento para um modelo de predição a partir da página **Segmentos** selecionando **Novo** e escolhendo **Criar a partir** > **Inteligência**. Para mais informações, consulte [Criar um novo segmento com segmentos rápidos](segment-quick.md).
 
-Tem agora um segmento que identifica clientes que se prevê gerarem mais de 1500$ de receitas nos próximos 12 meses. Este segmento é atualizado dinamicamente se mais dados forem ingeridos.
-
-Para obter mais informações, veja [Criar e gerir segmentos](segments.md).
+[!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
-title: Predição de valor vitalício do cliente (CLV)
+title: Prever valor vitalício do cliente (CLV)
 description: Prever o potencial de receita para clientes ativos no futuro.
-ms.date: 07/21/2022
+ms.date: 09/30/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,74 +13,63 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: b6f6665d906cc96688efe84035336f64d2a39303
-ms.sourcegitcommit: 80d8436d8c940f1267e6f26b221b8d7ce02ed26b
+ms.openlocfilehash: f27462ac327027e50e23387ac9f75a671db9a86d
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9186454"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610388"
 ---
-# <a name="customer-lifetime-value-clv-prediction"></a>Predição de valor vitalício do cliente (CLV)
+# <a name="predict-customer-lifetime-value-clv"></a>Prever valor vitalício do cliente (CLV)
 
-Preveja o valor potencial (receita) que os clientes ativos individuais irão trazer para o seu negócio através de um período de tempo definido no futuro. Esta funcionalidade pode ajudá-lo a alcançar vários objetivos:
+Preveja o valor potencial (receita) que os clientes ativos individuais irão trazer para o seu negócio através de um período de tempo definido no futuro. Esta predição ajuda-o a:
 
-- Identifique clientes de alto valor e processe esta informação
-- Criar segmentos de clientes estratégicos com base no seu valor potencial para executar campanhas personalizadas com vendas, marketing e esforços de suporte direcionados
-- Oriente o desenvolvimento do produto focando-se em funcionalidades que aumentam o valor do cliente
-- Otimize a estratégia de vendas ou de marketing e aloque o orçamento com mais precisão para a divulgação do cliente
-- Reconheça e dê prémios a clientes de alto valor através de programas de fidelização ou recompensas
+- Identificar clientes de alto valor e processar estas informações.
+- Criar segmentos de clientes estratégicos com base no seu valor potencial para executar campanhas personalizadas com vendas, marketing e esforços de suporte direcionados.
+- Orientar o desenvolvimento do produto focando-se em caraterísticas que aumentam o valor do cliente.
+- Otimizar a estratégia de vendas ou de marketing e alocar o orçamento com mais precisão para a divulgação do cliente.
+- Reconhecer e dar prémios a clientes de alto valor através de programas de fidelização ou recompensas.
+
+Determinar o significado de CLV para a sua empresa. Suportamos a predição de CLV baseada em transações. O valor previsto de um cliente baseia-se no histórico de transações comerciais. Considere criar vários modelos com diferentes preferências de entrada e compare os resultados do modelo para ver qual o cenário de modelo que melhor se adequa às necessidades do seu negócio.
+
+> [!TIP]
+> Experimente o predição de CLV utilizando dados de amostra: [Guia de amostra de predição do Valor Vitalício do Cliente (CLV)](sample-guide-predict-clv.md).
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Antes de começar, reflita o que o CLV significa para o seu negócio. Atualmente, suportamos a predição de CLV baseada em transações. O valor previsto de um cliente baseia-se no histórico de transações comerciais. Para criar a predição, precisa de, pelo menos, permissões de [Contribuinte](permissions.md).
-
-Uma vez que configurar e executar um modelo de CLV não demora muito tempo, considere criar vários modelos com diferentes preferências de entrada e compare os resultados do modelo para ver qual o cenário de modelo que melhor se adequa às necessidades do seu negócio.
-
-### <a name="data-requirements"></a>Requisitos de dados
-
-São necessários os seguintes dados, e onde marcados como opcionais, recomendados para um maior desempenho do modelo. Quanto mais dados o modelo puder processar, mais precisa será a predição. Por isso, encorajamo-lo a ingerir mais dados de atividade do cliente, se disponíveis.
-
-- Identificador de Cliente: identificador exclusivo para combinar transações com um cliente individual
-
-- Histórico de Transações: registo de transações históricas com esquema de dados semânticos abaixo
-    - **ID da Transação**: identificador exclusivo de cada transação
-    - **Data da transação**: data, de preferência um carimbo de hora de cada transação
-    - **Montante da transação**: valor monetário (por exemplo, receitas ou margem de lucro) de cada transação
-    - **Etiqueta atribuída a devoluções** (opcional): valor booleano significando se a transação é uma devolução 
-    - **ID do produto** (opcional): ID do produto envolvido na transação
-
-- Dados adicionais (opcional), por exemplo
-    - Atividades Web: histórico de visitas ao site, histórico de e-mails
-    - Atividades de fidelização: acumulação de pontos de recompensa de fidelidade e histórico de redenção
-    - Registo de suporte ao cliente, chamada de serviço, reclamação ou histórico de devoluções
-    - Informações de perfil de cliente
-- Dados sobre as atividades do cliente (opcional):
-    - Identificadores de atividade para distinguir atividades do mesmo tipo
-    - Identificadores de clientes para mapear atividades para os seus clientes
-    - Informações de atividade que contêm o nome e a data da atividade
-    - O esquema de dados semânticos para atividades inclui:
-        - **Chave primária**: um identificador exclusivo para uma atividade
-        - **Carimbo de data/hora**: a data e a hora do evento identificadas pela chave primária
-        - **Evento (nome da atividade)**: o nome do evento que pretende utilizar
-        - **Detalhes (montante ou valor)**: detalhes sobre a atividade do cliente
-
-- Características de dados sugeridos:
-    - Dados históricos suficientes: pelo menos, um ano de dados transacionais. De preferência, dois a três anos de dados transacionais para prever CLV por um ano.
-    - Compras múltiplas por cliente: idealmente, pelo menos, duas a três transações por ID de cliente, de preferência em várias datas.
-    - Número de clientes: pelo menos, 100 clientes exclusivos, de preferência mais de 10.000 clientes. O modelo falhará com menos de 100 clientes e dados históricos insuficientes
-    - Conclusão de dados: menos de 20% dos valores em falta nos campos obrigatórios nos dados de entrada
+- Pelo menos, permissões de [Contribuidor](permissions.md)
+- Pelo menos, 100 clientes exclusivos, de preferência mais de 10.000 clientes
+- Identificador de Cliente: um identificador exclusivo para combinar transações com um cliente individual
+- Pelo menos, um anos de histórico de transações. de preferência, dois a três anos. Idealmente, pelo menos, duas a três transações por ID de cliente, de preferência em várias datas. O histórico de transações tem de incluir:
+  - **ID da Transação**: identificador exclusivo de cada transação
+  - **Data da transação**: data, ou carimbo de data/hora de cada transação
+  - **Montante da transação**: valor monetário (por exemplo, receitas ou margem de lucro) de cada transação
+  - **Etiqueta atribuída a devoluções**: valor true/false booleano que significa se a transação é uma devolução
+  - **ID do produto**: ID do Produto envolvido na transação
+- Dados sobre as atividades do cliente:
+  - **Chave primária**: identificador exclusivo para uma atividade
+  - **Carimbo de data/hora**: data e hora do evento identificadas pela chave primária
+  - **Evento (nome da atividade)**: nome do evento que pretende utilizar
+  - **Detalhes (montante ou valor)**: detalhes sobre a atividade do cliente
+- Dados adicionais, tais como:
+  - Atividades Web: histórico de visitas ao site ou histórico de e-mails
+  - Atividades de fidelização: acumulação de pontos de recompensa de fidelidade e histórico de redenção
+  - Registo de suporte ao cliente: chamada de serviço, reclamação ou histórico de devoluções
+  - Informações de perfil de cliente
+- Menos de 20% de valores em falta em campos obrigatórios
 
 > [!NOTE]
-> - O modelo requer o histórico de transações dos seus clientes. Atualmente, apenas uma entidade de histórico de transações pode ser configurada. Se existirem várias entidades de compra/transação, pode uni-las no Power Query antes de começar a ingestão de dados.
-> - Para dados de atividade de cliente adicionais (opcional), no entanto, pode adicionar as entidades de atividade de cliente que quiser para consideração pelo modelo.
+> Apenas uma entidade de histórico de transações pode ser configurada. Se existirem várias entidades de compra ou de transação, pode combiná-las no Power Query antes da ingestão de dados.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Criar um predição do Valor Vitalício do Cliente
 
+Selecione **Guardar rascunho** a qualquer momento para guardar a predição como rascunho. A predição de rascunho é apresentada no separador **A minhas predições**.
+
 1. Aceda a **Inteligência** > **Predições**.
 
-1. Selecione o mosaico **Valor vitalício do cliente** e selecione **Utilizar modelo**. 
+1. No separador **Criar**, selecione **Utilizar modelo** no mosaico **Valor vitalício do cliente**.
 
-1. No painel **Valor vitalício do Cliente**, selecione **Começar**.
+1. Selecione **Introdução**.
 
 1. **Nomeie este modelo** e o **Nome da entidade de saída** para distingui-los de outros modelos ou entidades.
 
@@ -88,66 +77,56 @@ São necessários os seguintes dados, e onde marcados como opcionais, recomendad
 
 ### <a name="define-model-preferences"></a>Definir preferências de modelo
 
-1. Defina um **Período de tempo de predição** para definir até onde pretende prever o CLV.    
-   Por predefinição, a unidade é definida como meses. Pode mudá-lo para anos para que seja mais longe no futuro.
+1. Defina um **Período de tempo de predição** para definir até onde pretende prever o CLV. Por predefinição, a unidade é definida como meses.
 
    > [!TIP]
-   > Para prever com precisão o CLV para o período de tempo definido, precisa de um período comparável de dados históricos. Por exemplo, se quiser prever CLV para os próximos 12 meses, recomenda-se que tenha pelo menos 18 a 24 meses de dados históricos.
+   > Para prever com precisão o CLV para o período de tempo definido, é necessário um período comparável de dados históricos. Por exemplo, se quiser prever CLV para os próximos 12 meses, tenha, pelo menos, 18 a 24 meses de dados históricos.
 
-1. Especifique o que **Clientes ativos** significa para o seu negócio. Defina o intervalo de tempo em que um cliente deve ter tido pelo menos uma transação a considerar ativa. O modelo apenas irá prever o CLV para clientes ativos. 
+1. Defina o intervalo de tempo em que um cliente deve ter tido pelo menos uma transação a considerar ativa. O modelo apenas prevê o CLV para **Clientes ativos**.
    - **Deixe o modelo calcular o intervalo de compra (recomendado)**: o modelo analisa os seus dados e determina um período de tempo baseado em compras históricas.
-   - **Definir o intervalo manualmente**: se tiver uma definição de negócio específica de um cliente ativo, escolha esta opção e defina o período de tempo em conformidade.
+   - **Definir intervalo manualmente**: período de tempo para a sua definição de um cliente ativo.
 
-1. Defina o percentil de **Cliente de alto valor** para permitir que o modelo forneça resultados que se encaixem na definição de negócio.
-    - **Cálculo do modelo (recomendado)**: o modelo analisa os seus dados e determina o que um cliente de alto valor pode ser para o seu negócio com base no histórico de transações dos seus clientes. O modelo usa uma regra heurística (inspirada na regra 80/20 ou princípio pareto) para encontrar a proporção de clientes de alto valor. A percentagem de clientes que contribuíram para uma receita acumulada de 80% para o seu negócio no período histórico são considerados clientes de alto valor. Normalmente, menos de 30% a 40% de clientes contribuem para uma receita acumulada de 80%. No entanto, este número pode variar dependendo do seu negócio e do seu setor.    
-    - **Percentagem dos principais clientes ativos**: defina clientes de alto valor para o seu negócio como um percentil dos principais clientes pagadores ativos. Por exemplo, pode usar esta opção para definir clientes de alto valor como principais 20% dos futuros clientes pagadores.
+1. Defina a percentil do **Cliente de alto valor**.
+    - **Cálculo do modelo (recomendado)**: o modelo utiliza a regra 80/20. A percentagem de clientes que contribuíram para uma receita acumulada de 80% para o seu negócio no período histórico são considerados clientes de alto valor. Normalmente, menos de 30% a 40% de clientes contribuem para uma receita acumulada de 80%. No entanto, este número pode variar dependendo do seu negócio e do seu setor.
+    - **Percentagem dos clientes ativos principais**: percentil específico para um cliente de alto valor. Por exemplo, introduza **25** para definir clientes de alto valor como os principais 25% dos futuros clientes pagadores.
 
     Se o seu negócio define clientes de alto valor de uma forma diferente, [diga-nos, pois gostaríamos de saber](https://go.microsoft.com/fwlink/?linkid=2074172).
 
-1. Selecione **Seguinte** e avance para o passo seguinte.
+1. Selecione **Seguinte**.
 
 ### <a name="add-required-data"></a>Adicionar dados necessários
 
-1. No passo **Dados obrigatórios**, selecione **Adicionar dados** para o **Histórico de transações do cliente** e escolha a entidade que fornece as informações do histórico de transações conforme descrito nos [pré-requisitos](#prerequisites).
+1. Selecione **Adicionar dados** para **Histórico de transações do cliente**.
 
-1. Mapear os campos semânticos a atributos dentro da sua entidade de histórico de compras e selecione **Seguinte**.
+1. Selecione o tipo de atividade semântica **SalesOrder** ou **SalesOrderLine** que contém o histórico de transações. Se a atividade não tiver sido configurada, selecione **aqui** e crie-a.
 
-   :::image type="content" source="media/clv-add-customer-data-mapping.png" alt-text="Imagem do passo de configuração para mapear atributos de dados para dados obrigatórios.":::
- 
-1. Se os campos abaixo não estiverem povoados, configure a relação da sua entidade de histórico de compras para a entidade *Cliente* e selecione **Guardar**.
-    1. Selecione a entidade de histórico de transações.
-    1. Selecione o campo que identifica um cliente na entidade de histórico de compras. Tem de se relacionar com o ID do cliente primário da sua entidade Cliente.
-    1. Selecione a entidade que corresponde à sua entidade principal de cliente.
-    1. Introduza um nome que descreva a relação.
+1. Em **Atividades**, se os atributos de atividade foram mapeados semanticamente quando a atividade foi criada, escolha os atributos ou a entidade específicos em que gostaria que o cálculo se focasse. Se o mapeamento semântico não ocorrer, selecione **Editar** e mapeie os dados.
+  
+   :::image type="content" source="media/CLV-add-required.PNG" alt-text="Adicionar dados obrigatórios ao modelo de CLV":::
 
-      :::image type="content" source="media/clv-add-customer-data-relationship.png" alt-text="Imagem do passo de configuração para definir a relação com a entidade de cliente.":::
+1. Selecione **Seguinte** e reveja os atributos necessários para este modelo.
 
-1. Selecione **Seguinte**.
+1. Selecione **Guardar**.
+
+1. Adicione mais atividades ou selecione **Seguinte**.
 
 ### <a name="add-optional-activity-data"></a>Adicionar dados de atividade opcionais
 
 Os dados que refletem as principais interações do cliente (como Web, suporte ao cliente e registos de eventos) adicionam contexto aos registos de transações. Mais padrões encontrados nos dados da atividade do seu cliente podem melhorar a precisão das predições.
 
-1. No passo **Dados adicionais (opcional),** selecione **Adicionar dados** em **Fomentar informações do modelo com dados de atividade adicionais**. Escolha a entidade de atividade de cliente que fornece as informações de atividade de cliente, conforme descrito nos [pré-requisitos](#prerequisites).
+1. Selecione **Adicionar dados** sob **Fomentar informações do modelo com dados de atividade adicionais**.
 
-1. Mapear os campos semânticos a atributos dentro da sua entidade de atividade do cliente e selecione **Seguinte**.
+1. Selecione um tipo de atividade que corresponda ao tipo de atividade do cliente que está a adicionar. Se a atividade não tiver sido configurada, selecione **aqui** e crie-a.
 
-   :::image type="content" source="media/clv-additional-data-mapping.png" alt-text="Imagem do passo de configuração para mapear campos para dados adicionais.":::
+1. Em **Atividades**, se os atributos de atividade foram mapeados quando a atividade foi criada, escolha os atributos ou a entidade específicos em que gostaria que o cálculo se focasse. Se o mapeamento não ocorrer, selecione **Editar** e mapeie os dados.
 
-1. Selecione um tipo de atividade que corresponda ao tipo de atividade do cliente que está a adicionar. Escolha entre os tipos de atividade existentes ou adicione um novo tipo de atividade.
-
-1. Configure a relação da sua entidade de atividade de cliente com a entidade *Cliente*.
-
-    1. Selecione o campo que identifica o cliente na tabela de atividades do cliente. Pode estar diretamente relacionado com o ID do cliente principal da sua entidade *Cliente*.
-    1. Selecione a entidade *Cliente* que corresponde à sua entidade principal *Cliente*.
-    1. Introduza um nome que descreva a relação.
-
-   :::image type="content" source="media/clv-additional-data.png" alt-text="Imagem do passo no fluxo de configuração para adicionar dados adicionais e configurar a atividade com exemplos preenchidos.":::
+1. Selecione **Seguinte** e reveja os atributos necessários para este modelo.
 
 1. Selecione **Guardar**.
-    Adicione mais dados se houver outras atividades de cliente que pretende incluir.
 
-1. Adicione dados de cliente opcionais ou selecione **Seguinte**.
+1. Selecione **Seguinte**.
+
+1. [Adicione dados opcionais de clientes](#add-optional-customer-data) ou selecione **Seguinte** e aceda a [Definir agenda de atualização](#set-update-schedule).
 
 ### <a name="add-optional-customer-data"></a>Adicionar dados de cliente opcionais
 
@@ -156,91 +135,79 @@ Selecione a partir dos 18 atributos de perfil de cliente utilizados comummente p
 Por exemplo: a Contoso Coffee pretende prever o valor vitalício dos clientes para visar os clientes de elevado valor com uma oferta personalizada relacionada com o lançamento da nova máquina de café. A Contoso utiliza o modelo CLV e adiciona os 18 atributos de perfil de cliente para ver quais os fatores que influenciam os seus clientes de maior valor. Concluem que a localização do cliente é o fator mais influente para estes clientes.
 Com estas informações, organizam um evento local para o lançamento da máquina de café e fazem uma parceria com fornecedores locais para fazerem ofertas personalizadas e oferecerem uma experiência especial no evento. Sem estas informações, a Contoso poderá ter enviado apenas e-mails de marketing genéricos e perdido a oportunidade de personalizar para este segmento local dos seus clientes de elevado valor.
 
-1. No passo **Dados adicionais (opcional),** selecione **Adicionar dados** em **Fomentar ainda mais informações do modelo com dados adicionais do cliente**.
+1. Selecione **Adicionar dados** sob **Fomentar ainda mais informações do modelo com dados adicionais do cliente**.
 
-1. Para **Entidade**, escolha **Cliente : CustomerInsights** para selecionar a tabela de perfis de clientes unificada que mapeia com os dados de atributo de cliente. Para **ID de cliente**, escolha **System.Customer.CustomerId**.
+1. Para **Entidade**, escolha **Cliente: CustomerInsights** para selecionar o perfil de cliente unificado que mapeia para dados de atributo do cliente. Para **ID de cliente**, escolha **System.Customer.CustomerId**.
 
 1. Mapeie mais campos se os dados estiverem disponíveis nos seus perfis de cliente unificados.
 
    :::image type="content" source="media/clv-optional-customer-profile-mapping.png" alt-text="Exemplo de campos mapeados para dados de perfil de cliente.":::
 
-1. Selecione **Guardar** depois de mapear os atributos que o modelo deve utilizar para ajudar a prever o valor vitalício do cliente.
+1. Selecione **Guardar**.
 
 1. Selecione **Seguinte**.
 
 ### <a name="set-update-schedule"></a>Definir agenda de atualização
 
-1. Na passo **Agenda da atualização de dados**, escolha a frequência para reeducar o modelo com base nos dados mais recentes. Esta definição é importante para atualizar a precisão das previsões à medida que novos dados são ingeridos no Customer Insights. A maioria das empresas pode reeducar uma vez por mês e obter uma boa precisão para a sua previsão.
+1. Escolha a frequência para reeducar o modelo com base nos dados mais recentes. Esta definição é importante para atualizar a precisão das previsões à medida que novos dados são ingeridos para o Customer Insights. A maioria das empresas pode reeducar uma vez por mês e obter uma boa precisão para a sua previsão.
 
 1. Selecione **Seguinte**.
 
 ### <a name="review-and-run-the-model-configuration"></a>Rever e executar a configuração do modelo
 
-1. Na passo **Rever os detalhes do modelo**, valide a configuração da predição. Pode voltar a qualquer parte da configuração de previsão selecionando **Editar** por abaixo do valor indicado. Também pode selecionar um passo de configuração a partir do indicador de progresso.
+O passo **Rever e executar** mostra um resumo da configuração e fornece uma oportunidade de efetuar alterações antes de criar a predição.
 
-1. Se todos os valores estiverem configurados corretamente, selecione **Guardar e executar** para começar a executar o modelo. No separador **As minhas predições**, pode ver o estado do processo de predição. O processo pode demorar várias horas a ser concluído dependendo da quantidade de dados utilizados na previsão.
+1. Selecione **Editar** em qualquer um dos passos para rever e efetuar quaisquer alterações.
 
-## <a name="review-prediction-status-and-results"></a>Rever o estado e resultados da predição
+1. Se estiver satisfeito com as suas seleções, selecione **Guardar e executar** para começar a executar o modelo. Selecionar **Concluído**. O separador **As minhas predições** é apresentado enquanto a predição está a ser criada. O processo pode demorar várias horas a ser concluído dependendo da quantidade de dados utilizados na previsão.
 
-### <a name="review-prediction-status"></a>Rever estado da predição
+[!INCLUDE [progress-details](includes/progress-details-pane.md)]
 
-1.  Aceda a **Inteligência** > **Predições** e selecione o separador **As minhas predições**.
-2.  Selecione a predição que pretende rever.
+## <a name="view-prediction-results"></a>Ver resultados da predição
 
-- **Nome da predição**: nome da predição fornecida na sua criação.
-- **Tipo de predição**: tipo de modelo utilizado para a predição
-- **Entidade de saída**: nome da entidade para armazenar a saída da predição. Vá a **Dados** > **Entidades** para encontrar a entidade com este nome.
-- **Campo previsto**: este campo é povoado apenas para alguns tipos de predições, e não é usado na predição do valor vitalício do cliente.
-- **Estado**: estado da execução da predição.
-    - **Em fila**: a predição está à espera que outros processos completem.
-    - **A atualizar**: a predição está atualmente em execução para criar resultados que fluirão para a entidade de saída.
-    - **Falhou**: a execução da predição falhou. [Rever os registos](manage-predictions.md#troubleshoot-a-failed-prediction) para mais detalhes.
-    - **Sucesso**: a predição foi bem sucedida. Selecione **Ver** sob as reticências verticais para rever os resultados predição.
-- **Editada**: a data da em que a configuração para a predição foi alterada.
-- **Última atualização**: a data em que a predição foi atualizada resulta na entidade de saída.
+1. Aceda a **Inteligência** > **Predições**.
 
-### <a name="review-prediction-results"></a>Rever os resultados da predição
-
-1. Aceda a **Inteligência** > **Predições** e selecione o separador **As minhas predições**.
-
-1. Selecione as predição para as quais pretende rever os resultados.
+1. No separador **As minhas predições**, selecione a predição que pretende ver.
 
 Existem três secções primárias de dados dentro da página de resultados.
 
-- **Desempenho do modelo de preparação**: A, B ou C são níveis possíveis. Este nível indica o desempenho da predição e pode ajudá-lo a tomar a decisão de utilizar os resultados armazenados na entidade de saída. Selecione **Saber mais sobre esta pontuação** para entender melhor as métricas de desempenho do modelo subjacente e como o nível do desempenho final do modelo foi derivado.
+- **Desempenho do modelo de preparação**: as notas A, B e C indicam o desempenho da predição e podem ajudá-lo a tomar a decisão de utilizar os resultados armazenados na entidade de saída.
   
   :::image type="content" source="media/clv-model-score.png" alt-text="Imagem da caixa de informação de nível do modelo com o nível A.":::
 
-  Utilizando a definição de clientes de alto valor fornecidos ao configurar a predição, o sistema avalia o desempenho do modelo de IA na predição dos clientes de alto valor em comparação com um modelo de base.    
+  O Customer Insights avalia o desempenho do modelo de IA em prever os clientes de alto valor em comparação com um modelo de linha de base.
 
   Os níveis são determinados com base nas seguintes regras:
   - **A** quando o modelo previu com precisão, pelo menos, 5% mais clientes de alto valor em comparação com o modelo de base.
   - **B** quando o modelo previu com precisão entre 0% a 5% mais clientes de alto valor em comparação com o modelo de base.
   - **C** quando o modelo previu com precisão menos clientes de alto valor em comparação com o modelo de base.
-
-  O painel **Classificação do modelo** mostra mais detalhes sobre o desempenho do modelo de IA e o modelo de base. O modelo de base utiliza uma abordagem não baseada em IA para calcular o valor vitalício do cliente baseado principalmente em compras históricas feitas pelos clientes.     
-  A fórmula padrão utilizada para calcular o CLV pelo modelo de base:    
-
-  _**CLV para cada cliente** = Compra média mensal feita pelo cliente na janela de cliente ativo * Número de meses no período de predição de CLV * Taxa de retenção geral de todos os clientes*_
-
-  O modelo de IA é comparado com o modelo de base com base em duas métricas de desempenho do modelo.
   
-  - **Taxa de sucesso na predição de clientes de valor elevado**
+  Selecione [**Conhecer esta classificação**](#learn-about-the-score) para abrir o painel **Classificação do modelo** mostra mais detalhes sobre o desempenho do modelo de IA e o modelo de linha de base. Irá ajudá-lo a entender melhor as métricas de desempenho do modelo subjacente e como a nota do desempenho final do modelo foi derivado. O modelo de base utiliza uma abordagem não baseada em IA para calcular o valor vitalício do cliente baseado principalmente em compras históricas feitas pelos clientes.
 
-    Veja a diferença na predição de clientes de alto valor utilizando o modelo de IA em comparação com o modelo de base. Por exemplo, uma taxa de sucesso de 84% significa que de todos os clientes de alto valor nos dados de preparação, o modelo de IA foi capaz de capturar com precisão 84%. Em seguida, comparamos esta taxa de sucesso com a taxa de sucesso do modelo de base para reportar a mudança relativa. Este valor é usado para atribuir um nível ao modelo.
+- **Valor de clientes por percentil**: clientes de baixo valor e de alto valor são apresentados num gráfico. Paire o cursor sobre as barras no histograma para ver o número de clientes em cada grupo e a média de CLV desse grupo. Opcionalmente, pode [criar segmentos de clientes](prediction-based-segment.md) com base nas suas previsões de CLV.
+  
+   :::image type="content" source="media/CLV-value-percent.png" alt-text="Valor dos clientes por percentil para o modelo de CLV":::
 
-  - **Métricas de erro**
-    
-    Outra métrica permite rever o desempenho geral do modelo em termos de erro na predição de valores futuros. Utilizamos a métrica geral do Erro do Desvio da Raiz Quadrada Média (RMSE) para avaliar este erro. A RMSE é uma forma padrão de medir o erro de um modelo na predição de dados quantitativos. A RMSE do modelo de IA é comparado com a RMSE do modelo de base e a diferença relativa é reportada.
+- **Fatores mais influentes**: vários fatores são considerados ao criar a sua predição de CLV com base nos dados de entrada fornecidos ao modelo de IA. Cada um dos fatores tem a sua importância calculada para as previsões agregadas que um modelo cria. Utilize estes fatores para ajudar a validar os resultados da sua predição. Estes fatores também fornecem mais informações sobre os fatores mais influentes que contribuíram para a predição de CLV em todos os seus clientes.
+  
+   :::image type="content" source="media/CLV-influence-factors.png" alt-text="Fatores mais influentes para o modelo de CLV":::
 
-  O modelo de IA dá prioridade à classificação precisa dos clientes de acordo com o valor que trazem para o seu negócio. Assim, apenas a taxa de sucesso da predição de clientes de alto valor é usada para obter o nível final do modelo. A métrica RMSE é sensível a valores atípicos. Em cenários em que tem uma pequena percentagem de clientes com valores de compra extraordinariamente elevados, a métrica geral da RMSE pode não dar a imagem completa do desempenho do modelo.   
+### <a name="learn-about-the-score"></a>Conhecer a classificação
 
-- **Valor dos clientes por percentil**: utilizando a sua definição de clientes de alto valor, os clientes são agrupados em baixo valor e valor elevado, com base nas suas predições de CLV, e mostrados num gráfico. Pairando sobre as barras no histograma, pode ver o número de clientes em cada grupo e a média de CLV desse grupo. Estes dados podem ajudar se pretender [criar segmentos de clientes](segments.md) com base nas suas previsões de CLV.
+A fórmula padrão utilizada para calcular o CLV pelo modelo de base:
 
-- **Fatores mais influentes**: vários fatores são considerados ao criar a sua predição de CLV com base nos dados de entrada fornecidos ao modelo de IA. Cada um dos fatores tem a sua importância calculada para as previsões agregadas que um modelo cria. Pode utilizar estes fatores para ajudar a validar os resultados da sua previsão. Estes fatores também fornecem mais informações sobre os fatores mais influentes que contribuíram para a predição de CLV em todos os seus clientes.
+ _**CLV para cada cliente** = Compra média mensal feita pelo cliente na janela de cliente ativo * Número de meses no período de predição de CLV * Taxa de retenção geral de todos os clientes_
 
-## <a name="manage-predictions"></a>Gerir predições
+O modelo de IA é comparado com o modelo de base com base em duas métricas de desempenho do modelo.
+  
+- **Taxa de sucesso na predição de clientes de valor elevado**
 
-É possível otimizar, resolver problemas, atualizar ou eliminar predições. Reveja um relatório de capacidade de utilização de dados de entrada para saber como tornar uma predição mais rápida e fiável. Para mais informações, consulte [Gerir predições](manage-predictions.md).
+  Veja a diferença na predição de clientes de alto valor utilizando o modelo de IA em comparação com o modelo de base. Por exemplo, uma taxa de sucesso de 84% significa que de todos os clientes de alto valor nos dados de preparação, o modelo de IA foi capaz de capturar com precisão 84%. Em seguida, comparamos esta taxa de sucesso com a taxa de sucesso do modelo de base para reportar a mudança relativa. Este valor é usado para atribuir um nível ao modelo.
+
+- **Métricas de erro**
+
+  Consulte o desempenho geral do modelo em termos de erro na predição de valores futuros. Utilizamos a métrica geral do Erro do Desvio da Raiz Quadrada Média (RMSE) para avaliar este erro. A RMSE é uma forma padrão de medir o erro de um modelo na predição de dados quantitativos. A RMSE do modelo de IA é comparado com a RMSE do modelo de base e a diferença relativa é reportada.
+
+O modelo de IA dá prioridade à classificação precisa dos clientes de acordo com o valor que trazem para o seu negócio. Assim, apenas a taxa de sucesso da predição de clientes de alto valor é usada para obter o nível final do modelo. A métrica RMSE é sensível a valores atípicos. Em cenários em que tem uma pequena percentagem de clientes com valores de compra extraordinariamente elevados, a métrica geral da RMSE pode não dar a imagem completa do desempenho do modelo.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

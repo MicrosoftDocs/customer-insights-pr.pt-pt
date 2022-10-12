@@ -1,7 +1,7 @@
 ---
 title: Ligar a uma origem de dados do Power Query (contém vídeo)
 description: Ingerir dados através de um conector do Power Query (contém vídeo).
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
-ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
+ms.openlocfilehash: 4cc7e57dfb0f8d050e91adc441c24e849882f5d8
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "9463279"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609910"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Ligar a uma origem de dados do Power Query
 
@@ -43,16 +43,17 @@ Normalmente, a adição de origens de dados baseada em conectores do Power Query
 
 1. Selecione **Transformar dados**.
 
-1. O diálogo **Power Query – Editar consultas** permite-lhe rever e refinar os dados. As entidades que os sistemas identificaram na sua origem de dados ligada aparecem no painel esquerdo.
+1. Reveja e refine os seus dados na página **Power Query – Editar consultas**. As entidades que os sistemas identificaram na sua origem de dados ligada aparecem no painel esquerdo.
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="Diálogo Editar consultas":::
 
-1. Também pode transformar os seus dados. Selecione uma entidade para edição ou transformação. Utilize as opções na janela do Power Query para aplicar transformações. Cada transformação é listada sob **Passos aplicados**. O Power Query fornece inúmeras opções de [transformação pré-criadas](/power-query/power-query-what-is-power-query#transformations).
+1. Transformar os seus dados. Selecione uma entidade para edição ou transformação. Utilize as opções na janela do Power Query para aplicar transformações. Cada transformação é listada sob **Passos aplicados**. O Power Query fornece inúmeras opções de [transformação pré-criadas](/power-query/power-query-what-is-power-query#transformations).
 
-   Recomendamos que utilize as seguintes transformações:
-
-   - Se estiver a ingerir dados a partir de um ficheiro CSV, a primeira linha contém frequentemente cabeçalhos. Vá a **Transformar** e selecione **Utilizar a primeira linha como cabeçalhos**.
-   - Certifique-se de que o tipo de dados está definido de forma adequada. Por exemplo, para campos de data, selecione um tipo de data.
+   > [!IMPORTANT]
+   > Recomendamos que utilize as seguintes transformações:
+   >
+   > - Se estiver a ingerir dados a partir de um ficheiro CSV, a primeira linha contém frequentemente cabeçalhos. Vá a **Transformar** e selecione **Utilizar a primeira linha como cabeçalhos**.
+   > - Certifique-se de que o tipo de dados está definido de forma adequada e que corresponde aos dados. Por exemplo, para campos de data, selecione um tipo de data.
 
 1. Para adicionar entidades adicionais à sua origem de dados no diálogo **Editar consultas**, vá a **Base** e selecione **Obter dados**. Repita os passos 5 a 10 até ter adicionado todas as entidades para esta origem de dados. Se tiver uma base de dados que inclua vários conjuntos de dados, cada conjunto é a sua própria entidade.
 
@@ -102,5 +103,51 @@ Os gateways de dados de um ambiente Power BI ou Power Apps existente estarão vi
 1. Selecione **Guardar** para aplicar as alterações e regressar à página **Origens de dados**.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Razões comuns para erros de ingestão ou dados danificados
+
+### <a name="data-type-does-not-match-data"></a>O tipo de dados não corresponde aos dados
+
+A falta de correspondência do tipo de dados mais comum ocorre quando um campo de data não está definido com o formato de data correto.
+
+Os dados podem ser corrigidos na origem e podem ser ingeridos novamente. Ou corrija a transformação no Customer Insights. Para corrigir a transformação:
+
+1. Aceda a **Dados** > **Origens de dados**.
+
+1. Junto à origem de dados com os dados corrompidos, selecione **Editar**.
+
+1. Selecione **Seguinte**.
+
+1. Selecione cada uma das consultas e procure pelas transformações aplicadas dentro de "Passos Aplicados" que estejam incorretos ou colunas de data que não tenham sido transformadas com um formato de data.
+
+   :::image type="content" source="media/PQ_corruped_date.png" alt-text="Power Query – Edição a mostrar o formato de data incorreto":::
+
+1. Altere o tipo de data para corresponder corretamente aos dados.
+
+1. Selecione **Guardar**. A origem de dados é atualizada.
+
+## <a name="troubleshoot-ppdf-power-query-based-data-source-refresh-issues"></a>Resolução de problemas de atualização de origem de dados baseada no Power Query PPDF
+
+Se os dados estiverem obsoletos ou se receber erros após uma atualização da origem de dados, efetue os seguintes passos:
+
+1. Navegue para [Power Platform](https://make.powerapps.com).
+
+1. Selecione o **Ambiente** para a sua instância do Customer Insights.
+
+1. Navegue para o **Fluxos de dados**.
+
+1. Para o fluxo de dados que corresponde à origem de dados no Customer Insights, selecione as reticências verticais (&vellip;) e, em seguida, selecione **Mostrar histórico de atualizações**.
+
+1. Se o **Estado** do fluxo de dados for **Êxito**, a propriedade da origem de dados baseada no Power Query poderá ter alterado:
+
+   1. Reveja a agenda de atualização a partir do histórico de atualizações.
+   1. Defina a agenda do novo proprietário e guarde as definições.
+
+1. Se o **Estado** do fluxo de dados for **Falhado**:
+
+   1. Transfira o ficheiro do histórico de atualizações.
+   1. Reveja o ficheiro transferido pelo motivo da falha.
+   1. Se não for possível resolver o erro, selecione **?** para abrir um pedido de suporte. Inclua o ficheiro do histórico de atualizações transferido.
+
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
