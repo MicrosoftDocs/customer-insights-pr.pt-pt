@@ -2,7 +2,7 @@
 title: Condições de correspondência para a unificação de dados
 description: Fazer corresponder entidades para criar perfis unificados de clientes.
 recommendations: false
-ms.date: 07/27/2022
+ms.date: 10/07/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: bbd2c5f441b85460250c11f02358ea67260278d6
+ms.sourcegitcommit: 52ea58c872b10f1e6f9d120be93df93cca1a12dd
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304671"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "9721535"
 ---
 # <a name="match-conditions-for-data-unification"></a>Condições de correspondência para a unificação de dados
 
@@ -130,12 +130,12 @@ Por exemplo, se a sua regra de correspondência combinar apelido, cidade e data 
 
 ### <a name="specify-custom-match-conditions"></a>Especificar condições de correspondência personalizadas
 
-Poderá especificar as condições que substituem a lógica de correspondência predefinida. Estão disponíveis quatro opções:
+Especifique condições que substituam a lógica de correspondência predefinida. Estão disponíveis quatro opções:
 
 |Opção  |Description |Exemplo  |
 |---------|---------|---------|
-|Corresponder sempre     | Define valores sempre correspondentes.         |  Corresponde sempre a *Mike* e *MikeR*.       |
-|Nunca corresponder     | Define valores que nunca correspondem.        | Nunca corresponde com *John* e *Jonathan*.        |
+|Corresponder sempre     | Define valores para as chaves primárias que são sempre correspondidas.         |  Corresponda sempre a linha com a chave primária *12345* à linha com a chave primária *54321*.       |
+|Nunca corresponder     | Define valores para as chaves primárias que nunca correspondem.        | Nunca corresponda a linha com a chave primária *12345* à linha com a chave primária *54321*.        |
 |Ignorar            | Define valores que o sistema deve sempre ignorar na fase de correspondência. |  Ignora os valores *11111* e *Unknown* durante a correspondência.        |
 |Mapeamento de aliases    | Define valores que o sistema deve considerar como um mesmo valor.         | Considera *Joe* igual a *Joseph*.        |
 
@@ -143,17 +143,18 @@ Poderá especificar as condições que substituem a lógica de correspondência 
 
    :::image type="content" source="media/m3_match_custom.png" alt-text="Botão personalizado":::
 
-1. Escolha o **Tipo de personalização** e selecione **Transferir modelo**. É necessário um modelo separado para cada opção de correspondência.
+1. Escolha o **Tipo de personalização** e selecione **Transferir modelo**. Mude o nome do modelo sem utilizar espaços. Utilize um modelo separado para cada opção de correspondência.
 
-1. Abra o ficheiro de modelo transferido e preencha os detalhes. O modelo contém campos para especificar a entidade e os valores de chave primária da entidade que serão utilizados na correspondência personalizada. Por exemplo, se pretender que a chave primária *12345* da entidade *Vendas* corresponda sempre à chave primária *34567* da entidade *Contacto*, preencha o modelo:
-    - Entidade1: Vendas
-    - Entity1Key: 12345
-    - Entidade2: Contacto
-    - Entity2Key: 34567
+1. Abra o ficheiro de modelo transferido e preencha os detalhes. O modelo contém campos para especificar a entidade e os valores de chave primária da entidade que serão utilizados na correspondência personalizada. Os nomes das entidades são sensíveis a maiúsculas e minúsculas. Por exemplo, se pretender que a chave primária *12345* da entidade *Vendas* corresponda sempre à chave primária *34567* da entidade *Contacto*, preencha o modelo:
+   - Entidade1: Vendas
+   - Entity1Key: 12345
+   - Entidade2: Contacto
+   - Entity2Key: 34567
 
    O mesmo ficheiro de modelo pode especificar registos de correspondência personalizados de várias entidades.
 
-   Se pretender especificar a correspondência personalizada para a eliminação de duplicados numa entidade, forneça a mesma entidade que a Entidade1 e a Entidade2 e defina os diferentes valores chave primários.
+   > [!NOTE]
+   > Se pretender especificar a correspondência personalizada para a eliminação de duplicados numa entidade, forneça a mesma entidade que a Entidade1 e a Entidade2 e defina os diferentes valores chave primários. Tem de definir, pelo menos, uma regra de eliminação de duplicados para que a entidade utilize a correspondência personalizada.
 
 1. Depois de adicionar todas as substituições, guarde o ficheiro de modelo.
 
@@ -169,6 +170,8 @@ Poderá especificar as condições que substituem a lógica de correspondência 
    - Para **Ignorar** ou **Mapeamento de aliases**, selecione **Editar** numa regra de correspondência existente ou crie uma nova regra. No menu pendente Normalizações, escolha a opção **Ignorar personalizado** ou **Mapeamento de aliases** e selecione **Concluído**.
 
 1. Selecione **Concluído** no painel **Personalizado** para aplicar a configuração de correspondência personalizada.
+
+   Cada ficheiro de modelo ingerido tem a sua própria origem de dados. Se forem detetados registo que necessitem de tratamento de correspondência especial, atualize a origem de dados apropriada. A atualização será utilizada durante o próximo processo de unificação. Por exemplo, identifica gémeos com quase o mesmo nome, que moram no mesmo endereço que tinha sido unido como uma pessoa. Atualize a origem de dados para identificar os gémeos como registos separados, exclusivos.
 
 > [!div class="nextstepaction"]
 > [Passo seguinte: Unificar campos](merge-entities.md)
