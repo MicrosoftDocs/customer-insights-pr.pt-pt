@@ -8,12 +8,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: fd7498ecf17ef8a3a8f22dcc49ae204bef88b47f
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: a46623e609665f8031f223593a6644147e5209d8
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196592"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725092"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Exportar segmentos para o Google Ads (pré-visualização)
 
@@ -30,6 +30,7 @@ Exporte segmentos de perfis de clientes unificados para uma lista de audiência 
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
+- A ligação privada, em combinação com o Traga o seu próprio armazenamento (BYOS) não é suportada.
 - Exporte até de 1 milhão de perfis de clientes por exportação para o Google Ads, que pode demorar até 30 minutos a concluir dadas as limitações do lado do fornecedor.
 - Apenas segmentos.
 - A correspondência no Google Ads pode demorar até 48 horas.

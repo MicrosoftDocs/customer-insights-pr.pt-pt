@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d7c8d6f0121fe18a6c886ba3776109a1a592ef33
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 61435030254638965fbeb7980312e73695416aa2
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195350"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724803"
 ---
 # <a name="export-segments-to-criteo-preview"></a>Exportar segmentos para o Criteo (pré-visualização)
 
@@ -27,6 +27,7 @@ Exporte segmentos de perfis de cliente unificados para gerar campanhas, fornecer
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
+- A ligação privada, em combinação com o Traga o seu próprio armazenamento (BYOS) não é suportada.
 - Até 1 milhão de perfis de cliente por exportação para o Criteo, o que pode demorar até 30 minutos a concluir. O número de perfis de cliente que pode exportar para o Criteo depende do seu contrato com o Criteo.
 - Apenas segmentos.
 
@@ -65,8 +66,6 @@ Exporte segmentos de perfis de cliente unificados para gerar campanhas, fornecer
 1. Introduza um nome para a exportação.
 
 1. Na secção **Correspondência de dados**, no campo **E-mail**, selecione o campo que representa o endereço de e-mail de um cliente.
-
-1. Opcionalmente, exporte o **ID do Anunciante** e o **Nome**.
 
 1. Selecione os segmentos que quer exportar.
 

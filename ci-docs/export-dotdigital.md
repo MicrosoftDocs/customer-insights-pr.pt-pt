@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: cabaea84e31f8fe97bc558a8dca8d93bc40f43b7
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 8f3e3378dce9177c6645b91140884ae135540243
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196086"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725000"
 ---
 # <a name="export-segments-to-dotdigital-preview"></a>Exportar segmentos para a DotDigital (pré-visualização)
 
@@ -28,6 +28,7 @@ Exportar segmentos de perfis unificados de clientes para a DotDigital e utilizá
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
+- A ligação privada, em combinação com o Traga o seu próprio armazenamento (BYOS) não é suportada.
 - Até de 1 milhão de perfis de clientes por exportação para o DotDigital, que pode demorar até três horas a concluir dadas as limitações do lado do fornecedor. O número de perfis de cliente que pode exportar para o DotDigital depende do seu contrato com o DotDigital.
 - Apenas segmentos.
 

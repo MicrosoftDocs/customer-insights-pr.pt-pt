@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2f52eb8196e057f934c8d2b5ac0518ce121606b6
-ms.sourcegitcommit: 003c1929f730d7d505c108aba84f6269f4c98978
+ms.openlocfilehash: a3967008ec166cb6f099659b0791f1318126c0da
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "9655281"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725230"
 ---
 # <a name="export-segments-to-braze-preview"></a>Exportar segmentos para o Braze (pré-visualização)
 
@@ -29,6 +29,7 @@ Exporte segmentos do unified customer profiles para o Braze e utilize-os para at
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
+- A ligação privada, em combinação com o Traga o seu próprio armazenamento (BYOS) não é suportada.
 - Até 1 milhão de perfis de cliente para o Braze, que pode demorar até 40 minutos a concluir. O número de perfis de cliente que pode exportar para o Braze depende do seu contrato com o Braze.
 - Apenas segmentos.
 - O Azure Private Link não é suportado para a exportação do Braze.
